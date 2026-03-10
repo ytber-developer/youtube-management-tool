@@ -96,8 +96,12 @@ class AdsenseService {
       // Pending / under review indicators (English + Vietnamese variants)
       if (
         check.low.includes('we are reviewing your information') ||
+        check.low.includes('we are reviewing your info') ||
         check.low.includes('we are reviewing') ||
         check.low.includes('we are reviewing your') ||
+        check.low.includes("we're reviewing your information") ||
+        check.low.includes("we're reviewing your info") ||
+        check.low.includes("we're reviewing") ||
         check.low.includes('đang chờ') ||
         check.low.includes('chúng tôi đang xem xét thông tin của bạn') ||
         // Non-accented fallback

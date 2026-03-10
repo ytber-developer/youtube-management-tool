@@ -1,0 +1,24 @@
+{
+  "name": "facebook-reels-scraper-extension",
+  "version": "1.0.0",
+  "description": "Browser extension to scrape Facebook Reels and export to CSV",
+  "author": "Your Name",
+  "license": "MIT",
+  "scripts": {
+    "build": "echo 'Extension ready to use!'",
+    "package": "zip -r facebook-reels-scraper.zip . -x '*.git*' -x 'node_modules/*' -x 'package*.json' -x '*.md' -x 'icons/HOW_TO_CREATE_ICONS.md'"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "your-repo-url"
+  },
+  "keywords": [
+    "facebook",
+    "reels",
+    "scraper",
+    "browser-extension",
+    "chrome-extension",
+    "firefox-addon"
+  ]
+}

@@ -1,0 +1,16 @@
+# Example proxy list (for testing only - replace with real proxies)
+
+# Residential proxies (BEST for YouTube)
+# http://username:password@residential-proxy-1.example.com:8080
+# http://username:password@residential-proxy-2.example.com:8080
+
+# Mobile proxies (EXCELLENT for YouTube)
+# http://username:password@mobile-proxy-1.example.com:8080
+# http://username:password@mobile-proxy-2.example.com:8080
+
+# ISP proxies (GOOD for YouTube)
+# http://username:password@isp-proxy-1.example.com:8080
+# http://username:password@isp-proxy-2.example.com:8080
+
+# ⚠️  Replace with your real proxies before using!
+# Get proxies from: Bright Data, Smartproxy, Oxylabs, etc.

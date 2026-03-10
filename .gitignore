@@ -1,0 +1,14 @@
+node_modules/
+.env
+database.sqlite
+*.log
+.DS_Store
+uploads/
+2fa-setup-results.json
+accounts-updated.csv
+.agent/
+downloads/
+/avatars
+browser-profiles/
+fb-cookies.json
+/tool-management-account-ytb

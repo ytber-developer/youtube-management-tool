@@ -1,0 +1,332 @@
+{
+  "comments": [
+    {
+      "text": "Great video! Really helpful content 👍",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "Thanks for sharing this!",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "Amazing content, keep it up! 🔥",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "This is exactly what I was looking for!",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "Very informative, learned a lot from this video",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "Awesome work! Subscribed! 🎉",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "Can't wait for more videos like this!",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "Thanks for making this so easy to understand",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "This helped me a lot, thank you!",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "Quality content right here 💯",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "Really appreciate the effort you put into this",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "Best explanation I've seen so far",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "This is gold! Thanks for sharing",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "Excellent video, very well done!",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "Love your content! Keep going 💪",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "So helpful, thank you so much!",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "This is amazing! Shared with my friends",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "Very useful information, thanks!",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "Great tutorial, easy to follow",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "This made my day! Thank you 😊",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "Wow, this is impressive!",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "Very well explained, thanks!",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "This is so useful! Bookmarked",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "Perfect timing, I needed this!",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "Great job on this video! 👏",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "Nice work! Looking forward to more",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "This helped me solve my problem, thanks!",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "Fantastic content, highly recommended",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "I learned so much from this video!",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "Thank you for this valuable information",
+      "category": "positive",
+      "language": "en"
+    },
+    {
+      "text": "Interesting!",
+      "category": "neutral",
+      "language": "en"
+    },
+    {
+      "text": "Cool video",
+      "category": "neutral",
+      "language": "en"
+    },
+    {
+      "text": "Thanks",
+      "category": "neutral",
+      "language": "en"
+    },
+    {
+      "text": "Nice",
+      "category": "neutral",
+      "language": "en"
+    },
+    {
+      "text": "Good video",
+      "category": "neutral",
+      "language": "en"
+    },
+    {
+      "text": "Noted",
+      "category": "neutral",
+      "language": "en"
+    },
+    {
+      "text": "👍",
+      "category": "neutral",
+      "language": "emoji"
+    },
+    {
+      "text": "🔥",
+      "category": "neutral",
+      "language": "emoji"
+    },
+    {
+      "text": "❤️",
+      "category": "neutral",
+      "language": "emoji"
+    },
+    {
+      "text": "👏",
+      "category": "neutral",
+      "language": "emoji"
+    },
+    {
+      "text": "First! 🎉",
+      "category": "neutral",
+      "language": "en"
+    },
+    {
+      "text": "Early!",
+      "category": "neutral",
+      "language": "en"
+    },
+    {
+      "text": "Watching from [Country]! 🌍",
+      "category": "neutral",
+      "language": "en"
+    },
+    {
+      "text": "Who's watching in 2026?",
+      "category": "neutral",
+      "language": "en"
+    },
+    {
+      "text": "Anyone else here from [Source]?",
+      "category": "neutral",
+      "language": "en"
+    }
+  ],
+  "comment_templates": [
+    "This is {adjective}! {emotion}",
+    "Thanks for {action}",
+    "{greeting}! {feedback}",
+    "{feedback} Keep it up!",
+    "Really {adjective} content",
+    "{emotion} Subscribed!",
+    "Love this! {feedback}",
+    "{feedback} Thanks!",
+    "Wow, {feedback}",
+    "{adjective} video! {emotion}"
+  ],
+  "variables": {
+    "adjective": [
+      "amazing",
+      "awesome",
+      "great",
+      "excellent",
+      "fantastic",
+      "incredible",
+      "wonderful",
+      "brilliant",
+      "outstanding",
+      "impressive"
+    ],
+    "emotion": [
+      "😊",
+      "🔥",
+      "👍",
+      "💯",
+      "❤️",
+      "🎉",
+      "👏",
+      "💪",
+      "⭐",
+      "✨"
+    ],
+    "action": [
+      "sharing this",
+      "making this video",
+      "the helpful content",
+      "the great explanation",
+      "this tutorial",
+      "the detailed guide",
+      "this information",
+      "your hard work"
+    ],
+    "greeting": [
+      "Hey",
+      "Hello",
+      "Hi there",
+      "Yo",
+      "What's up"
+    ],
+    "feedback": [
+      "Very helpful",
+      "So useful",
+      "Really informative",
+      "Great content",
+      "Love it",
+      "This is gold",
+      "Perfect timing",
+      "Exactly what I needed",
+      "Well done",
+      "Nicely explained"
+    ]
+  },
+  "question_comments": [
+    "How did you do that at {timestamp}?",
+    "Can you make a tutorial about {topic}?",
+    "What tool did you use for this?",
+    "Where can I learn more about this?",
+    "Do you have a course on this?",
+    "What's the next step after this?",
+    "Can you explain {topic} in more detail?",
+    "Is there a part 2 coming?",
+    "How long did this take to make?",
+    "What equipment do you use?"
+  ],
+  "specific_praise": [
+    "The editing on this is top notch! 🎬",
+    "Your voice is so clear and easy to listen to",
+    "Love the pacing of this video",
+    "The graphics really helped me understand",
+    "Your explanation style is perfect",
+    "I appreciate how you broke this down step by step",
+    "The examples you used were really helpful",
+    "This is so much better than other tutorials",
+    "You made this look so easy!",
+    "The quality of your videos keeps getting better"
+  ],
+  "engagement_comments": [
+    "Who else is binge watching this channel?",
+    "This channel is so underrated!",
+    "Why doesn't this have more views?",
+    "This deserves to go viral!",
+    "Everyone should watch this",
+    "Sharing this with everyone I know",
+    "This needs more attention",
+    "How is this free content?!",
+    "Better than paid courses I've taken",
+    "This is the best channel for [topic]"
+  ]
+}

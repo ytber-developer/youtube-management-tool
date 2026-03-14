@@ -311,7 +311,8 @@ class GoogleAuthService {
         'input[value="I understand"]',
         'input.MK9CEd.MVpUfe',
         'button[jsname="M2UYVd"]',
-        '#confirm'
+        '#confirm',
+        'button[jsname="LgbsSe"]'
       ];
 
       let confirmClicked = false;
@@ -319,15 +320,79 @@ class GoogleAuthService {
         try {
           const confirmButton = await page.$(selector);
           if (confirmButton) {
-            console.log('✅ Tìm thấy nút "Tôi hiểu", đang click...');
+            console.log('✅ Tìm thấy nút xác nhận, đang click...');
             await confirmButton.click();
-            await new Promise(r => setTimeout(r, 2000));
-            console.log('✅ Đã click "Tôi hiểu"');
+
+            // After clicking try to detect successful dismissal: wait for navigation or for the welcome heading to disappear
+            try {
+              await Promise.race([
+                page.waitForNavigation({ waitUntil: 'networkidle2', timeout: 8000 }).catch(() => null),
+                page.waitForFunction(() => {
+                  const heading = document.querySelector('#headingText') || document.querySelector('h2.x9zgF');
+                  return !heading || (heading && (heading.offsetParent === null));
+                }, { timeout: 8000 }).catch(() => null)
+              ]);
+            } catch (e) {
+              // ignore
+            }
+
+            // Always wait a short buffer to avoid immediate redirect which sometimes causes errors
+            await new Promise(r => setTimeout(r, 5000));
+
+            console.log('✅ Đã click nút xác nhận');
             confirmClicked = true;
             break;
           }
         } catch (e) {
           // Continue to next selector
+        }
+      }
+
+      if (!confirmClicked) {
+        // Try to find the button by its visible text (covers the provided HTML with span text)
+        const clickedByText = await page.evaluate(() => {
+          const rawTargets = ['i understand', 'tôi hiểu', 'i get it', 'got it', 'toi hieu'];
+          const targets = rawTargets.map(t => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase());
+          const norm = (s) => (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toLowerCase();
+
+          const selectors = ['button', 'div[role="button"]', '#gaplustosNext', 'div[jsname="Njthtb"]', 'div.TNTaPb', 'div.VfPpkd-dgl2Hf-ppHlrf-sM5MNb'];
+
+          for (const sel of selectors) {
+            const elems = Array.from(document.querySelectorAll(sel));
+            for (const el of elems) {
+              const span = el.querySelector('span');
+              const text = span ? span.textContent : el.textContent || '';
+              const ntext = norm(text);
+              if (!ntext) continue;
+              for (const t of targets) {
+                if (ntext.includes(t)) {
+                  try { el.click(); } catch (e) {}
+                  return true;
+                }
+              }
+            }
+          }
+
+          return false;
+        });
+
+        if (clickedByText) {
+          // After clicking via page.evaluate, we still need to wait in Node context for the UI to dismiss
+          try {
+            await Promise.race([
+              page.waitForNavigation({ waitUntil: 'networkidle2', timeout: 8000 }).catch(() => null),
+              page.waitForFunction(() => {
+                const heading = document.querySelector('#headingText') || document.querySelector('h2.x9zgF');
+                return !heading || (heading && (heading.offsetParent === null));
+              }, { timeout: 8000 }).catch(() => null)
+            ]);
+          } catch (e) {}
+
+          // Buffer to avoid immediate redirect
+          await new Promise(r => setTimeout(r, 5000));
+
+          console.log('✅ Đã click nút xác nhận (bằng nội dung văn bản, bao gồm tiếng Việt)');
+          confirmClicked = true;
         }
       }
 

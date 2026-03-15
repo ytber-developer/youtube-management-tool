@@ -57,7 +57,7 @@ exports.getAccounts = async (req, res) => {
     // Query database with pagination
     const { count, rows } = await AccountYoutube.findAndCountAll({
       where: whereCondition,
-      attributes: ['id', 'email', 'channel_name', 'channel_link', 'is_authenticator', 'is_create_channel', 'is_upload_avatar', 'avatar_url', 'image_name'],
+      attributes: ['id', 'email', 'channel_name', 'channel_link', 'is_authenticator', 'is_create_channel', 'is_upload_avatar', 'avatar_url', 'image_name', 'code_authenticators'],
       limit: limitNum,
       offset: offset,
       // Order by creation date ascending so older records appear first
@@ -74,7 +74,8 @@ exports.getAccounts = async (req, res) => {
       isCreateChannel: account.is_create_channel || false,
       isUploadAvatar: account.is_upload_avatar || false,
       avatarUrl: account.avatar_url || '',
-      imageName: account.image_name || ''
+      imageName: account.image_name || '',
+      twofa: account.code_authenticators || ''
     }));
 
     // Use helper function for response

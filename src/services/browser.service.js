@@ -168,6 +168,18 @@ class BrowserService {
           }
         }
 
+        // If a real persisted profile exists for this email, prefer it over a temp profile
+        if (email) {
+          try {
+            if (sessionService.hasProfile(email)) {
+              if (useTempProfile) console.log('ℹ️ Real profile found for', email, '- overriding CHROME_USE_TEMP_PROFILE and using persisted profile');
+              useTempProfile = false;
+            }
+          } catch (e) {
+            // ignore
+          }
+        }
+
         // Build args dynamically so we can avoid adding sandbox/unupported flags on macOS system Chrome
         const baseArgs = [
           '--disable-blink-features=AutomationControlled',
@@ -216,14 +228,44 @@ class BrowserService {
           userDataDirToUse = tempProfilePath;
         }
 
-        if (email && !useTempProfile) {
+        if (email) {
+          // Prefer an explicit persistent profile directory under browser-profiles for this email
           const profilePath = sessionService.getProfilePath(email);
-          if (profilePath) {
-            userDataDirToUse = profilePath;
-            console.log(`📂 Using profile: ${profilePath}`);
+          try {
+            if (profilePath && require('fs').existsSync(profilePath)) {
+              userDataDirToUse = profilePath;
+              useTempProfile = false; // persist, do not use temp
+              console.log(`📂 Using persistent profile for [${email}]: ${profilePath} (overriding temp profile if set)`);
+            } else if (profilePath) {
+              // Profile path was returned but doesn't exist yet - attempt to create it so profile becomes persistent
+              try {
+                require('fs').mkdirSync(profilePath, { recursive: true });
+                userDataDirToUse = profilePath;
+                useTempProfile = false;
+                console.log(`📂 Created and using profile directory for [${email}]: ${profilePath}`);
+              } catch (mkdirErr) {
+                console.warn(`⚠️ Could not create persistent profile dir ${profilePath}:`, mkdirErr.message);
+                // Fall back to temp profile if available
+                if (useTempProfile && tempProfilePath) {
+                  userDataDirToUse = tempProfilePath;
+                  console.log(`⚠️ Falling back to temporary profile for [${email}]: ${tempProfilePath}`);
+                }
+              }
+            } else if (useTempProfile && tempProfilePath) {
+              // No profilePath configured, and env requests temp profile
+              userDataDirToUse = tempProfilePath;
+              console.log(`⚠️ Using temporary profile for [${email}] to avoid SingletonLock conflicts`);
+            }
+          } catch (e) {
+            // If anything unexpected happens, fall back sensibly
+            console.warn('⚠️ Profile selection error:', e.message);
+            if (useTempProfile && tempProfilePath) userDataDirToUse = tempProfilePath;
           }
-        } else if (email && useTempProfile) {
-          console.log(`⚠️ Using temporary profile instead of real profile for [${email}] to avoid SingletonLock conflicts`);
+        } else {
+          // Not launching with an email/profile; honor temp profile setting if requested
+          if (useTempProfile && tempProfilePath) {
+            userDataDirToUse = tempProfilePath;
+          }
         }
 
         launchOptions.userDataDir = userDataDirToUse;
@@ -243,7 +285,42 @@ class BrowserService {
           
           // Apply anti-detection measures to existing tab
           await this.applyAntiDetection(page);
-        } else {
+
+          // Auto-save cookies when navigating to important Google/YouTube pages (throttled)
+          try {
+            if (!this._lastSavedCookies) this._lastSavedCookies = new Map();
+            page.on('framenavigated', async (frame) => {
+              try {
+                const url = frame.url();
+                if (!url) return;
+                const keyHosts = ['studio.youtube.com', 'myaccount.google.com', 'accounts.google.com', 'youtube.com'];
+                const matched = keyHosts.some(h => url.includes(h));
+                if (!matched) return;
+                
+                const last = this._lastSavedCookies.get(email) || 0;
+                const now = Date.now();
+                // Throttle saves to once every 10 seconds per profile
+                if (now - last < 10000) return;
+                this._lastSavedCookies.set(email, now);
+                
+                // Attempt to save cookies for this profile
+                if (browser && typeof browser.saveProfileCookies === 'function') {
+                  try {
+                    const saved = await browser.saveProfileCookies(email);
+                    if (saved) console.log(`💾 Auto-saved cookies for ${email} after navigation to ${url}`);
+                  } catch (e) {
+                    console.warn('⚠️ Auto-save cookies failed:', e.message);
+                  }
+                }
+              } catch (e) {
+                // ignore
+              }
+            });
+          } catch (e) {
+            // ignore
+          }
+
+         } else {
           // No tabs exist, create new one
           page = await this.createPage(browser);
           console.log(`✅ Created new first tab`);
@@ -255,6 +332,41 @@ class BrowserService {
             browser: browser,
             pages: [page]
           });
+
+          // Attempt to load saved cookies for this profile, if any
+          try {
+            const savedCookies = sessionService.loadCookies(email);
+            if (savedCookies && Array.isArray(savedCookies) && savedCookies.length > 0) {
+              console.log(`🔁 Loading saved cookies for ${email} (${savedCookies.length} cookies)`);
+              try {
+                // Best-effort: navigate to cookie domain before setting cookies
+                try {
+                  const firstCookie = savedCookies.find(c => c.domain || c.url);
+                  if (firstCookie) {
+                    const domain = firstCookie.domain ? (firstCookie.domain.startsWith('.') ? firstCookie.domain.slice(1) : firstCookie.domain) : null;
+                    const url = firstCookie.url || (domain ? `https://${domain}/` : null);
+                    if (url) {
+                      try {
+                        await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 8000 });
+                      } catch (navErr) {
+                        // ignore navigation errors
+                      }
+                    }
+                  }
+                } catch (e) {
+                  // ignore
+                }
+
+                // Set cookies on the page
+                await page.setCookie(...savedCookies);
+                console.log('✅ Cookies set on page');
+              } catch (setErr) {
+                console.warn('⚠️ Failed to set cookies on page:', setErr.message);
+              }
+            }
+          } catch (err) {
+            // ignore
+          }
 
           // Clean up when browser closes
           browser.on('disconnected', () => {
@@ -275,6 +387,24 @@ class BrowserService {
          }
 
         console.log(`✅ Browser launched successfully`);
+
+        // After launch, provide a helper to save cookies after successful login
+        const self = this;
+        browser.saveProfileCookies = async function(emailToSave) {
+          try {
+            if (!emailToSave) return false;
+            const pages = await browser.pages();
+            if (!pages || pages.length === 0) return false;
+            const targetPage = pages[0];
+            const cookies = await targetPage.cookies();
+            sessionService.saveCookies(emailToSave, cookies);
+            return true;
+          } catch (err) {
+            console.error('❌ Failed to save profile cookies:', err.message);
+            return false;
+          }
+        };
+
         return {
           browser: browser,
           page: page,

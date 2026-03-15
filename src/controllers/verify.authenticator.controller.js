@@ -543,28 +543,29 @@ async function setupSingleAccountWithBrowser(account, options = {}) {
       
     } else {
       // ✅ Import mode: Fresh browser without profile
-      console.log(`🆕 Fresh browser (no profile) for [${account.email}]`);
+      // NOTE: Use profile path under browser-profiles so session/cookies are persisted
+      console.log(`🆕 Import mode: launching browser with profile persistence for [${account.email}] (will not reuse existing running browser)`);
       
       const launchResult = await browserService.launchBrowser(
-        headless, 
-        null,        // No profile
-        3,           // retries
-        false        // Don't reuse
+        headless,
+        account.email, // Use email so profile is stored in browser-profiles
+        3,              // retries
+        false           // Don't reuse running browser (open new browser using profile path)
       );
-      
-      browser = launchResult.browser;
-      const page = launchResult.page;
-      
-      const result = await setupSingleAccount(browser, account, { 
-        profileEmail: null  // No profile
-      });
-      
-      // Always close browser in import mode
-      await browser.close();
-      console.log(`✅ [${account.email}] Browser closed`);
-      
-      return result;
-    }
+       
+       browser = launchResult.browser;
+       const page = launchResult.page;
+       
+       const result = await setupSingleAccount(browser, account, { 
+         profileEmail: null  // No profile
+       });
+       
+       // Always close browser in import mode
+       await browser.close();
+       console.log(`✅ [${account.email}] Browser closed`);
+       
+       return result;
+     }
     
   } catch (error) {
     console.error(`❌ [${account.email}] Error:`, error.message);
@@ -641,6 +642,15 @@ async function setupSingleAccount(browser, account, options = {}) {
       } else {
         console.log('🔐 Đang login...');
         await googleAuthService.login(page, account.email, account.password);
+        // Persist cookies after login so session is saved to profile
+        try {
+          if (browser && typeof browser.saveProfileCookies === 'function') {
+            await browser.saveProfileCookies(account.email);
+            console.log('💾 Saved profile cookies after login');
+          }
+        } catch (e) {
+          console.warn('⚠️ Failed to save profile cookies:', e.message);
+        }
       }
       
       console.log('🔍 Navigate đến 2FA settings...');
@@ -720,6 +730,14 @@ async function setupSingleAccount(browser, account, options = {}) {
       } else {
         console.log('🔐 Đang login...');
         await googleAuthService.login(page, account.email, account.password);
+        try {
+          if (browser && typeof browser.saveProfileCookies === 'function') {
+            await browser.saveProfileCookies(account.email);
+            console.log('💾 Saved profile cookies after login');
+          }
+        } catch (e) {
+          console.warn('⚠️ Failed to save profile cookies:', e.message);
+        }
       }
       
       console.log('✅ Login success, ready to check channel');
@@ -734,8 +752,16 @@ async function setupSingleAccount(browser, account, options = {}) {
       } else {
         console.log('🔐 Đang login...');
         await googleAuthService.login(page, account.email, account.password);
+        try {
+          if (browser && typeof browser.saveProfileCookies === 'function') {
+            await browser.saveProfileCookies(account.email);
+            console.log('💾 Saved profile cookies after login');
+          }
+        } catch (e) {
+          console.warn('⚠️ Failed to save profile cookies:', e.message);
+        }
       }
-      
+
       await googleAuthService.navigateTo2FASettings(page);
 
       const clickedAuth = await authenticatorService.clickAuthenticatorLink(page);

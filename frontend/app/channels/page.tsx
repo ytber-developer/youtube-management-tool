@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { RefreshCw, Search, ChevronLeft, ChevronRight, ExternalLink, Upload, X, FileText, RotateCw, Download, Chrome, Image as ImageIcon, Edit2, Check } from 'lucide-react';
+import { RefreshCw, Search, ChevronLeft, ChevronRight, ExternalLink, Upload, X, FileText, RotateCw, Download, Chrome, Image as ImageIcon, Edit2, Check, Copy } from 'lucide-react';
 import { buildApiUrl, API_ENDPOINTS } from '@/lib/constants';
 import { accountsAPI } from '@/lib/api';
 
@@ -15,6 +15,7 @@ interface Channel {
   isUploadAvatar?: boolean;
   avatarUrl?: string;
   imageName?: string;
+  twofa?: string; // optional authenticator secret / code saved in backend
 }
 
 interface Pagination {
@@ -52,6 +53,8 @@ export default function ListChannelsPage() {
   // Edit avatar URL state
   const [editingAvatarId, setEditingAvatarId] = useState<number | null>(null);
   const [avatarUrlInput, setAvatarUrlInput] = useState<string>('');
+  
+  // 2FA: codes are shown directly (no reveal/hide toggle)
   
   // Pagination & Search
   const [pagination, setPagination] = useState<Pagination>({
@@ -436,6 +439,16 @@ export default function ListChannelsPage() {
     }
   };
 
+  const copy2FA = async (code: string | undefined) => {
+    if (!code) return;
+    try {
+      await navigator.clipboard.writeText(code);
+      alert('✅ Mã 2FA đã được sao chép vào clipboard');
+    } catch (e) {
+      alert('⚠️ Không thể copy 2FA');
+    }
+  };
+
   return (
     <div className="p-6">
       {/* Compact Header */}
@@ -649,14 +662,25 @@ export default function ListChannelsPage() {
                       )}
                     </td>
                     <td className="px-4 py-2.5 text-center">
-                      {channel.isAuthenticator ? (
-                        <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-green-100 text-green-700 text-xs font-bold">
-                          ✓
-                        </span>
+                      {channel.twofa ? (
+                        <div className="inline-flex items-center gap-2">
+                          <div className="text-xs font-mono px-2 py-1 bg-gray-50 border border-gray-200 rounded">
+                            {channel.twofa}
+                          </div>
+                          <button
+                            onClick={() => copy2FA(channel.twofa)}
+                            className="inline-flex items-center justify-center w-6 h-6 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 transition-colors"
+                            title="Copy mã 2FA"
+                          >
+                            <Copy size={12} />
+                          </button>
+                        </div>
                       ) : (
-                        <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-red-100 text-red-700 text-xs font-bold">
-                          ✗
-                        </span>
+                        (channel.isAuthenticator) ? (
+                          <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-green-100 text-green-700 text-xs font-bold">✓</span>
+                        ) : (
+                          <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-red-100 text-red-700 text-xs font-bold">✗</span>
+                        )
                       )}
                     </td>
                     <td className="px-4 py-2.5 text-center">

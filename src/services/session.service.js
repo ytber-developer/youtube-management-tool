@@ -119,6 +119,44 @@ class SessionService {
     calculateSize(profilePath);
     return (totalSize / (1024 * 1024)).toFixed(2); // MB
   }
+
+  /**
+   * Save cookies JSON to profile directory for an email
+   * @param {string} email
+   * @param {Array} cookies
+   */
+  saveCookies(email, cookies) {
+    try {
+      const profilePath = this.getProfilePath(email);
+      if (!fs.existsSync(profilePath)) {
+        fs.mkdirSync(profilePath, { recursive: true });
+      }
+      const filePath = path.join(profilePath, 'cookies.json');
+      fs.writeFileSync(filePath, JSON.stringify(cookies, null, 2), 'utf8');
+      console.log(`💾 Saved cookies for ${email} to ${filePath}`);
+      return true;
+    } catch (err) {
+      console.error(`❌ Failed to save cookies for ${email}:`, err.message);
+      return false;
+    }
+  }
+
+  /**
+   * Load cookies JSON from profile directory for an email
+   * @param {string} email
+   * @returns {Array|null}
+   */
+  loadCookies(email) {
+    try {
+      const filePath = path.join(this.getProfilePath(email), 'cookies.json');
+      if (!fs.existsSync(filePath)) return null;
+      const raw = fs.readFileSync(filePath, 'utf8');
+      return JSON.parse(raw);
+    } catch (err) {
+      console.error(`❌ Failed to load cookies for ${email}:`, err.message);
+      return null;
+    }
+  }
 }
 
 module.exports = new SessionService();

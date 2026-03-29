@@ -284,7 +284,7 @@ class BrowserService {
           console.log(`✅ Using existing first tab`);
           
           // Apply anti-detection measures to existing tab
-          await this.applyAntiDetection(page);
+          // await this.applyAntiDetection(page);
 
           // Auto-save cookies when navigating to important Google/YouTube pages (throttled)
           try {
@@ -320,11 +320,7 @@ class BrowserService {
             // ignore
           }
 
-         } else {
-          // No tabs exist, create new one
-          page = await this.createPage(browser);
-          console.log(`✅ Created new first tab`);
-        }
+         }
 
         // Track browser and page
         if (email) {

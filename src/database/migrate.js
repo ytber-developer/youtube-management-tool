@@ -5,13 +5,12 @@ const { sequelize } = require('../models');
 
 async function ensureMigrationsTable() {
   try {
-    await sequelize.query(`
-      CREATE TABLE IF NOT EXISTS migrations (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        name VARCHAR(255) NOT NULL UNIQUE,
-        executed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-      )
-    `);
+    const { DataTypes } = require('sequelize');
+    await sequelize.getQueryInterface().createTable('migrations', {
+      id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+      name: { type: DataTypes.STRING(255), allowNull: false, unique: true },
+      executed_at: { type: DataTypes.DATE, allowNull: true }
+    }, { ifNotExists: true });
   } catch (error) {
     console.error('❌ Error creating migrations table:', error.message);
     throw error;
@@ -28,8 +27,8 @@ async function getExecutedMigrations() {
 }
 
 async function recordMigration(name) {
-  await sequelize.query('INSERT INTO migrations (name) VALUES (?)', {
-    replacements: [name]
+  await sequelize.query('INSERT INTO migrations (name, executed_at) VALUES (?, ?)', {
+    replacements: [name, new Date().toISOString()]
   });
 }
 

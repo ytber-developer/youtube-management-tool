@@ -129,6 +129,17 @@ export interface BatchUploadResult {
   error?: string;
 }
 
+export interface UploadedVideosResponse {
+  success: boolean;
+  data: any[];
+  pagination: {
+    page: number;
+    limit: number;
+    total: number;
+    totalPages: number;
+  };
+}
+
 export interface BatchUploadResponse {
   success: boolean;
   message: string;
@@ -421,12 +432,36 @@ export const adsenseAPI = {
   }
 };
 
+export interface SetupStatus {
+  connected: boolean;
+  totalMigrations: number;
+  executedMigrations: number;
+  pendingMigrations: number;
+  migrations: { name: string; executed_at: string }[];
+}
+
+export interface MigrateResponse {
+  success: boolean;
+  message: string;
+  data: { migrated: string[]; message: string };
+}
+
+// Setup API
+export const setupAPI = {
+  getStatus: (): Promise<{ success: boolean; data: SetupStatus }> =>
+    request(API_ENDPOINTS.SETUP.STATUS),
+
+  migrate: (): Promise<MigrateResponse> =>
+    request(API_ENDPOINTS.SETUP.MIGRATE, { method: 'POST' }),
+};
+
 // Export a combined API object
 export const api = {
   watch: watchAPI,
   accounts: accountsAPI,
   upload: uploadAPI,
   adsense: adsenseAPI,
+  setup: setupAPI,
 };
 
 export default api;

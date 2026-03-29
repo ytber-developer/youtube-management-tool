@@ -1,7 +1,5 @@
 require('dotenv').config();
-const path = require('path');
-const fs = require('fs');
-const { sequelize } = require('../models');
+const { runMigrations } = require('../services/migrate.service');
 
 async function ensureMigrationsTable() {
   try {
@@ -89,90 +87,18 @@ async function undoLastMigration() {
 }
 
 async function migrate() {
+async function main() {
   try {
     console.log('🚀 Running migrations...\n');
-    
-    // Ensure migrations table exists
-    await ensureMigrationsTable();
-    
-    const migrationsDir = path.join(__dirname, 'migrations');
-    
-    if (!fs.existsSync(migrationsDir)) {
-      console.log('⚠️  No migrations folder found');
-      process.exit(0);
+    const result = await runMigrations();
+
+    if (result.migrated.length === 0) {
+      console.log('✅', result.message);
+    } else {
+      result.migrated.forEach(f => console.log(`✅ Completed: ${f}`));
+      console.log(`\n🎉 ${result.message}`);
     }
 
-    const migrationFiles = fs.readdirSync(migrationsDir)
-      .filter(file => file.endsWith('.js'))
-      .sort();
-
-    if (migrationFiles.length === 0) {
-      console.log('⚠️  No migration files found');
-      process.exit(0);
-    }
-
-    const executedMigrations = await getExecutedMigrations();
-    
-    if (process.argv.includes('--fresh')) {
-      // Run down for all executed migrations in reverse order
-      console.log('🔄 Running fresh migration (dropping all tables)...\n');
-      
-      for (let i = executedMigrations.length - 1; i >= 0; i--) {
-        const migrationName = executedMigrations[i];
-        const migrationPath = path.join(migrationsDir, migrationName);
-        
-        if (fs.existsSync(migrationPath)) {
-          console.log(`📝 Rolling back: ${migrationName}`);
-          
-          // Clear require cache to ensure fresh module load
-          delete require.cache[require.resolve(migrationPath)];
-          
-          const migration = require(migrationPath);
-          
-          if (migration.down) {
-            // Pass both queryInterface and Sequelize (with DataTypes)
-            const { DataTypes } = require('sequelize');
-            const SequelizeWithDataTypes = { ...DataTypes, QueryTypes: require('sequelize').QueryTypes };
-            await migration.down(sequelize.getQueryInterface(), SequelizeWithDataTypes);
-            await removeMigrationRecord(migrationName);
-            console.log(`✅ Rolled back: ${migrationName}\n`);
-          }
-        }
-      }
-      
-      // Drop migrations table
-      await sequelize.query('DROP TABLE IF EXISTS migrations');
-      await ensureMigrationsTable();
-    }
-
-    const executedAfterFresh = await getExecutedMigrations();
-    const pendingMigrations = migrationFiles.filter(file => !executedAfterFresh.includes(file));
-
-    if (pendingMigrations.length === 0) {
-      console.log('✅ No pending migrations');
-      process.exit(0);
-    }
-
-    console.log(`Found ${pendingMigrations.length} pending migration(s):\n`);
-
-    for (const file of pendingMigrations) {
-      console.log(`📝 Running: ${file}`);
-      const migrationPath = path.join(migrationsDir, file);
-      
-      // Clear require cache to ensure fresh module load
-      delete require.cache[require.resolve(migrationPath)];
-      
-      const migration = require(migrationPath);
-      
-      // Pass both queryInterface and Sequelize (with DataTypes)
-      const { DataTypes } = require('sequelize');
-      const SequelizeWithDataTypes = { ...DataTypes, QueryTypes: require('sequelize').QueryTypes };
-      await migration.up(sequelize.getQueryInterface(), SequelizeWithDataTypes);
-      await recordMigration(file);
-      console.log(`✅ Completed: ${file}\n`);
-    }
-    
-    console.log('🎉 All migrations completed successfully!');
     process.exit(0);
   } catch (error) {
     console.error('❌ Migration failed:', error.message);
@@ -181,9 +107,4 @@ async function migrate() {
   }
 }
 
-// Check command line arguments
-if (process.argv.includes('--undo')) {
-  undoLastMigration();
-} else {
-  migrate();
-}
+main();

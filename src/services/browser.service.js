@@ -621,7 +621,7 @@ class BrowserService {
 
   async createPage(browser) {
     const page = await browser.newPage();
-    await this.applyAntiDetection(page);
+    // await this.applyAntiDetection(page);
     return page;
   }
 

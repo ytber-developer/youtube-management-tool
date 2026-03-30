@@ -1,5 +1,5 @@
-node_modules/
 .env
+*.db
 database.sqlite
 *.log
 .DS_Store
@@ -12,3 +12,4 @@ downloads/
 browser-profiles/
 fb-cookies.json
 /tool-management-account-ytb
+node_modules/

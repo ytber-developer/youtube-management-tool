@@ -22,6 +22,10 @@ export const API_ENDPOINTS = {
   },
   AUTHENTICATOR: '/api/v1/authenticator',
   AUTHENTICATOR_RETRY: (id: number) => `/api/v1/authenticator/retry/${id}`,
+  SETUP: {
+    STATUS: '/api/v1/setup/status',
+    MIGRATE: '/api/v1/setup/migrate',
+  },
 };
 
 export const buildApiUrl = (endpoint: string): string => {

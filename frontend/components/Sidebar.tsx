@@ -2,12 +2,13 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { 
-  PlayCircle, 
+import {
+  PlayCircle,
   List,
   Video,
   Upload,
-  FileText
+  FileText,
+  Settings
 } from 'lucide-react'
 
 const navigation = [
@@ -16,6 +17,7 @@ const navigation = [
   { name: 'Check AdSense', href: '/check-adsense', icon: FileText },
   { name: 'Tăng lượt xem', href: '/boost-views', icon: PlayCircle },
   { name: 'Video đã tải', href: '/videos', icon: Video },
+  { name: 'Setup & DB', href: '/setup', icon: Settings },
 ]
 
 export function Sidebar() {

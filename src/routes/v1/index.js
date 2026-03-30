@@ -8,6 +8,7 @@ const loginRoutes = require('./login.routes');
 const uploadRoutes = require('./upload.routes');
 const accountsRoutes = require('./accounts.routes');
 const facebookReelRoutes = require('../facebook.reel.routes');
+const setupRoutes = require('./setup.routes');
 
 // Mount routes
 router.use('/authenticator', verifyRoutes);
@@ -17,5 +18,6 @@ router.use('/login', loginRoutes);
 router.use('/upload', uploadRoutes);
 router.use('/accounts', accountsRoutes);
 router.use('/facebook', facebookReelRoutes);
+router.use('/setup', setupRoutes);
 
 module.exports = router;

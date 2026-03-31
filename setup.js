@@ -14,8 +14,10 @@ const fs = require('fs');
 
 const PORT = 4321;
 const ROOT = __dirname;
-const ENV_FILE = path.join(ROOT, '.env');
-const ENV_EXAMPLE = path.join(ROOT, '.env.example');
+const ENV_PAIRS = [
+  { src: path.join(ROOT, '.env.example'),          dest: path.join(ROOT, '.env'),          label: 'root' },
+  { src: path.join(ROOT, 'frontend/.env.example'), dest: path.join(ROOT, 'frontend/.env'), label: 'frontend' },
+];
 
 // SSE clients
 const sseClients = {};
@@ -38,21 +40,22 @@ function runCommand(jobId, cmd, args) {
 
 function runEnvCopy(jobId) {
   return new Promise((resolve) => {
-    sendSSE(jobId, { type: 'start', cmd: 'copy .env.example → .env' });
+    sendSSE(jobId, { type: 'start', cmd: 'copy .env.example → .env (root + frontend)' });
     try {
-      if (fs.existsSync(ENV_FILE)) {
-        sendSSE(jobId, { type: 'stdout', text: '.env đã tồn tại, bỏ qua.\n' });
-        sendSSE(jobId, { type: 'done', code: 0 });
-        return resolve(0);
+      for (const { src, dest, label } of ENV_PAIRS) {
+        if (fs.existsSync(dest)) {
+          sendSSE(jobId, { type: 'stdout', text: `[${label}] .env đã tồn tại, bỏ qua.\n` });
+          continue;
+        }
+        if (!fs.existsSync(src)) {
+          sendSSE(jobId, { type: 'stderr', text: `[${label}] Không tìm thấy .env.example!\n` });
+          sendSSE(jobId, { type: 'done', code: 1 });
+          return resolve(1);
+        }
+        fs.copyFileSync(src, dest);
+        sendSSE(jobId, { type: 'stdout', text: `[${label}] ✔ Đã copy .env.example → .env\n` });
       }
-      if (!fs.existsSync(ENV_EXAMPLE)) {
-        sendSSE(jobId, { type: 'stderr', text: 'Không tìm thấy file .env.example!\n' });
-        sendSSE(jobId, { type: 'done', code: 1 });
-        return resolve(1);
-      }
-      fs.copyFileSync(ENV_EXAMPLE, ENV_FILE);
-      sendSSE(jobId, { type: 'stdout', text: '✔ Đã copy .env.example → .env\n' });
-      sendSSE(jobId, { type: 'stdout', text: '⚠ Nhớ chỉnh sửa .env trước khi start app!\n' });
+      sendSSE(jobId, { type: 'stdout', text: '\n⚠ Nhớ chỉnh sửa .env trước khi start app!\n' });
       sendSSE(jobId, { type: 'done', code: 0 });
       resolve(0);
     } catch (err) {
@@ -258,11 +261,12 @@ async function checkEnvStatus() {
     tag.style.display = 'inline-block';
     if (d.exists) {
       tag.className = 'tag tag-exists';
-      tag.textContent = '✓ .env có rồi';
+      tag.textContent = '✓ root + frontend';
       setDot(0, 'ok');
     } else {
+      const missing = d.statuses.filter(s => !s.exists).map(s => s.label).join(', ');
       tag.className = 'tag tag-missing';
-      tag.textContent = '✗ Chưa có .env';
+      tag.textContent = '✗ Thiếu: ' + missing;
       setDot(0, 'idle');
     }
   } catch {}
@@ -282,10 +286,11 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  // Check if .env exists
+  // Check if .env files exist
   if (url.pathname === '/check-env') {
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ exists: fs.existsSync(ENV_FILE) }));
+    const statuses = ENV_PAIRS.map(({ dest, label }) => ({ label, exists: fs.existsSync(dest) }));
+    res.end(JSON.stringify({ exists: statuses.every(s => s.exists), statuses }));
     return;
   }
 

@@ -56,6 +56,13 @@ router.post('/:id/close-browser', accountsController.closeBrowser);
 router.put('/:id/avatar-url', accountsController.updateAvatarUrl);
 
 /**
+ * @route   DELETE /api/v1/accounts
+ * @desc    Delete all accounts
+ * @access  Public
+ */
+router.delete('/', accountsController.deleteAllAccounts);
+
+/**
  * @route   DELETE /api/v1/accounts/:id
  * @desc    Delete account by id
  * @access  Public

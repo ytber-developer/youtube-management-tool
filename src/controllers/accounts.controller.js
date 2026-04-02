@@ -541,6 +541,20 @@ exports.updateAvatarUrl = async (req, res) => {
 };
 
 /**
+ * Delete all accounts
+ * DELETE /api/v1/accounts
+ */
+exports.deleteAllAccounts = async (req, res) => {
+  try {
+    const deletedCount = await AccountYoutube.destroy({ where: {}, truncate: false });
+    return res.json({ success: true, message: `Đã xóa ${deletedCount} kênh`, data: { deletedCount } });
+  } catch (error) {
+    console.error('❌ Error deleting all accounts:', error);
+    return res.status(500).json({ success: false, message: 'Failed to delete all accounts', error: error.message });
+  }
+};
+
+/**
  * Delete account by id
  */
 exports.deleteAccount = async (req, res) => {

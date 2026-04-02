@@ -5,7 +5,8 @@ export const API_ENDPOINTS = {
     LIST: '/api/v1/accounts',
     EXPORT: '/api/v1/accounts/export',
     OPEN_BROWSER: (id: number) => `/api/v1/accounts/${id}/open-browser`,
-    DELETE: (id: number) => `/api/v1/accounts/${id}`
+    DELETE: (id: number) => `/api/v1/accounts/${id}`,
+    DELETE_ALL: '/api/v1/accounts'
   },
   WATCH: {
     BATCH: '/api/v1/watch/video',

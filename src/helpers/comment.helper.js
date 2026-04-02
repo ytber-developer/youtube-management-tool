@@ -133,6 +133,21 @@ class CommentHelper {
       comment = comment.replace('{feedback}', feedback);
     }
 
+    // Vietnamese variable replacements
+    const viKeys = ['adjective_vi', 'action_vi', 'greeting_vi', 'feedback_vi'];
+    for (const key of viKeys) {
+      if (comment.includes(`{${key}}`) && data.variables[key]?.length) {
+        const val = data.variables[key][Math.floor(Math.random() * data.variables[key].length)];
+        comment = comment.replace(`{${key}}`, val);
+      }
+    }
+
+    // Replace leftover emotion placeholder
+    if (comment.includes('{emotion}') && data.variables.emotion?.length) {
+      const emotion = data.variables.emotion[Math.floor(Math.random() * data.variables.emotion.length)];
+      comment = comment.replace('{emotion}', emotion);
+    }
+
     return comment;
   }
 

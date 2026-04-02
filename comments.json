@@ -1,230 +1,73 @@
 {
   "comments": [
-    {
-      "text": "Great video! Really helpful content 👍",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "Thanks for sharing this!",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "Amazing content, keep it up! 🔥",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "This is exactly what I was looking for!",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "Very informative, learned a lot from this video",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "Awesome work! Subscribed! 🎉",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "Can't wait for more videos like this!",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "Thanks for making this so easy to understand",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "This helped me a lot, thank you!",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "Quality content right here 💯",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "Really appreciate the effort you put into this",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "Best explanation I've seen so far",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "This is gold! Thanks for sharing",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "Excellent video, very well done!",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "Love your content! Keep going 💪",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "So helpful, thank you so much!",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "This is amazing! Shared with my friends",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "Very useful information, thanks!",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "Great tutorial, easy to follow",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "This made my day! Thank you 😊",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "Wow, this is impressive!",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "Very well explained, thanks!",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "This is so useful! Bookmarked",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "Perfect timing, I needed this!",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "Great job on this video! 👏",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "Nice work! Looking forward to more",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "This helped me solve my problem, thanks!",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "Fantastic content, highly recommended",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "I learned so much from this video!",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "Thank you for this valuable information",
-      "category": "positive",
-      "language": "en"
-    },
-    {
-      "text": "Interesting!",
-      "category": "neutral",
-      "language": "en"
-    },
-    {
-      "text": "Cool video",
-      "category": "neutral",
-      "language": "en"
-    },
-    {
-      "text": "Thanks",
-      "category": "neutral",
-      "language": "en"
-    },
-    {
-      "text": "Nice",
-      "category": "neutral",
-      "language": "en"
-    },
-    {
-      "text": "Good video",
-      "category": "neutral",
-      "language": "en"
-    },
-    {
-      "text": "Noted",
-      "category": "neutral",
-      "language": "en"
-    },
-    {
-      "text": "👍",
-      "category": "neutral",
-      "language": "emoji"
-    },
-    {
-      "text": "🔥",
-      "category": "neutral",
-      "language": "emoji"
-    },
-    {
-      "text": "❤️",
-      "category": "neutral",
-      "language": "emoji"
-    },
-    {
-      "text": "👏",
-      "category": "neutral",
-      "language": "emoji"
-    },
-    {
-      "text": "First! 🎉",
-      "category": "neutral",
-      "language": "en"
-    },
-    {
-      "text": "Early!",
-      "category": "neutral",
-      "language": "en"
-    },
-    {
-      "text": "Watching from [Country]! 🌍",
-      "category": "neutral",
-      "language": "en"
-    },
-    {
-      "text": "Who's watching in 2026?",
-      "category": "neutral",
-      "language": "en"
-    },
-    {
-      "text": "Anyone else here from [Source]?",
-      "category": "neutral",
-      "language": "en"
-    }
+    { "text": "Great video! Really helpful content 👍", "category": "positive", "language": "en" },
+    { "text": "Thanks for sharing this!", "category": "positive", "language": "en" },
+    { "text": "Amazing content, keep it up! 🔥", "category": "positive", "language": "en" },
+    { "text": "This is exactly what I was looking for!", "category": "positive", "language": "en" },
+    { "text": "Very informative, learned a lot from this video", "category": "positive", "language": "en" },
+    { "text": "Awesome work! Subscribed! 🎉", "category": "positive", "language": "en" },
+    { "text": "Can't wait for more videos like this!", "category": "positive", "language": "en" },
+    { "text": "Thanks for making this so easy to understand", "category": "positive", "language": "en" },
+    { "text": "This helped me a lot, thank you!", "category": "positive", "language": "en" },
+    { "text": "Quality content right here 💯", "category": "positive", "language": "en" },
+    { "text": "Really appreciate the effort you put into this", "category": "positive", "language": "en" },
+    { "text": "Best explanation I've seen so far", "category": "positive", "language": "en" },
+    { "text": "This is gold! Thanks for sharing", "category": "positive", "language": "en" },
+    { "text": "Excellent video, very well done!", "category": "positive", "language": "en" },
+    { "text": "Love your content! Keep going 💪", "category": "positive", "language": "en" },
+    { "text": "So helpful, thank you so much!", "category": "positive", "language": "en" },
+    { "text": "Great tutorial, easy to follow", "category": "positive", "language": "en" },
+    { "text": "This made my day! Thank you 😊", "category": "positive", "language": "en" },
+    { "text": "Very well explained, thanks!", "category": "positive", "language": "en" },
+    { "text": "Fantastic content, highly recommended", "category": "positive", "language": "en" },
+    { "text": "I learned so much from this video!", "category": "positive", "language": "en" },
+    { "text": "Thank you for this valuable information", "category": "positive", "language": "en" },
+
+    { "text": "Video hay quá, cảm ơn bạn đã chia sẻ! 🔥", "category": "positive", "language": "vi" },
+    { "text": "Nội dung rất bổ ích, học được nhiều thứ 👍", "category": "positive", "language": "vi" },
+    { "text": "Kênh này thật sự chất lượng, sub ngay rồi!", "category": "positive", "language": "vi" },
+    { "text": "Xem xong thấy hiểu hơn nhiều, cảm ơn bạn!", "category": "positive", "language": "vi" },
+    { "text": "Tuyệt vời! Tiếp tục ra video nhé 💪", "category": "positive", "language": "vi" },
+    { "text": "Giải thích dễ hiểu lắm, cảm ơn nhiều!", "category": "positive", "language": "vi" },
+    { "text": "Đây đúng là thứ mình đang tìm kiếm!", "category": "positive", "language": "vi" },
+    { "text": "Hay quá trời! Share cho bạn bè xem liền 😍", "category": "positive", "language": "vi" },
+    { "text": "Mình xem đi xem lại mấy lần vẫn không chán 🎉", "category": "positive", "language": "vi" },
+    { "text": "Thật sự rất hữu ích, cảm ơn bạn rất nhiều!", "category": "positive", "language": "vi" },
+    { "text": "Làm thêm nhiều video như thế này nha bạn ơi!", "category": "positive", "language": "vi" },
+    { "text": "Giải thích cặn kẽ lắm, dễ hiểu hơn nhiều tài liệu khác", "category": "positive", "language": "vi" },
+    { "text": "Kênh xịn quá, đăng ký ngay không do dự! 💯", "category": "positive", "language": "vi" },
+    { "text": "Video chất lượng cao, cảm ơn bạn đã bỏ công làm!", "category": "positive", "language": "vi" },
+    { "text": "Hay lắm! Mình đã áp dụng thử và thấy hiệu quả", "category": "positive", "language": "vi" },
+    { "text": "Cảm ơn bạn đã tạo ra nội dung bổ ích như thế này!", "category": "positive", "language": "vi" },
+    { "text": "Xem video này thấy giải quyết được vấn đề của mình ngay 👏", "category": "positive", "language": "vi" },
+    { "text": "Nội dung thực tế và hữu ích, keep it up bạn nhé!", "category": "positive", "language": "vi" },
+    { "text": "Bạn giải thích hay hơn nhiều thầy cô ở trường 😄", "category": "positive", "language": "vi" },
+    { "text": "Video này nên có nhiều view hơn mới xứng!", "category": "positive", "language": "vi" },
+
+    { "text": "Interesting!", "category": "neutral", "language": "en" },
+    { "text": "Cool video", "category": "neutral", "language": "en" },
+    { "text": "Thanks", "category": "neutral", "language": "en" },
+    { "text": "Nice", "category": "neutral", "language": "en" },
+    { "text": "Good video", "category": "neutral", "language": "en" },
+    { "text": "Noted", "category": "neutral", "language": "en" },
+    { "text": "First! 🎉", "category": "neutral", "language": "en" },
+    { "text": "Early!", "category": "neutral", "language": "en" },
+    { "text": "Who's watching in 2026?", "category": "neutral", "language": "en" },
+    { "text": "👍", "category": "neutral", "language": "emoji" },
+    { "text": "🔥", "category": "neutral", "language": "emoji" },
+    { "text": "❤️", "category": "neutral", "language": "emoji" },
+    { "text": "👏", "category": "neutral", "language": "emoji" },
+    { "text": "💯", "category": "neutral", "language": "emoji" },
+    { "text": "😍", "category": "neutral", "language": "emoji" },
+
+    { "text": "Hay!", "category": "neutral", "language": "vi" },
+    { "text": "Cảm ơn bạn!", "category": "neutral", "language": "vi" },
+    { "text": "Tốt lắm!", "category": "neutral", "language": "vi" },
+    { "text": "Đỉnh quá 🔥", "category": "neutral", "language": "vi" },
+    { "text": "Xịn lắm!", "category": "neutral", "language": "vi" },
+    { "text": "Hay ghê!", "category": "neutral", "language": "vi" },
+    { "text": "Ai xem năm 2026 không? 😄", "category": "neutral", "language": "vi" },
+    { "text": "Đầu tiên vào xem nè 🎉", "category": "neutral", "language": "vi" }
   ],
   "comment_templates": [
     "This is {adjective}! {emotion}",
@@ -236,62 +79,22 @@
     "Love this! {feedback}",
     "{feedback} Thanks!",
     "Wow, {feedback}",
-    "{adjective} video! {emotion}"
+    "{adjective} video! {emotion}",
+    "Video {adjective_vi} lắm! {emotion}",
+    "Cảm ơn vì đã {action_vi}! {emotion}",
+    "{greeting_vi}! {feedback_vi}",
+    "{feedback_vi} nhé bạn ơi!"
   ],
   "variables": {
-    "adjective": [
-      "amazing",
-      "awesome",
-      "great",
-      "excellent",
-      "fantastic",
-      "incredible",
-      "wonderful",
-      "brilliant",
-      "outstanding",
-      "impressive"
-    ],
-    "emotion": [
-      "😊",
-      "🔥",
-      "👍",
-      "💯",
-      "❤️",
-      "🎉",
-      "👏",
-      "💪",
-      "⭐",
-      "✨"
-    ],
-    "action": [
-      "sharing this",
-      "making this video",
-      "the helpful content",
-      "the great explanation",
-      "this tutorial",
-      "the detailed guide",
-      "this information",
-      "your hard work"
-    ],
-    "greeting": [
-      "Hey",
-      "Hello",
-      "Hi there",
-      "Yo",
-      "What's up"
-    ],
-    "feedback": [
-      "Very helpful",
-      "So useful",
-      "Really informative",
-      "Great content",
-      "Love it",
-      "This is gold",
-      "Perfect timing",
-      "Exactly what I needed",
-      "Well done",
-      "Nicely explained"
-    ]
+    "adjective": ["amazing", "awesome", "great", "excellent", "fantastic", "incredible", "wonderful", "brilliant", "outstanding", "impressive"],
+    "adjective_vi": ["hay", "tuyệt", "xịn", "chất", "đỉnh", "bổ ích", "hữu ích", "thú vị"],
+    "emotion": ["😊", "🔥", "👍", "💯", "❤️", "🎉", "👏", "💪", "⭐", "✨"],
+    "action": ["sharing this", "making this video", "the helpful content", "the great explanation", "this tutorial", "the detailed guide", "this information", "your hard work"],
+    "action_vi": ["chia sẻ video này", "làm video này", "tạo nội dung hay như vậy", "hướng dẫn tận tình", "bỏ công sức làm video"],
+    "greeting": ["Hey", "Hello", "Hi there", "Yo"],
+    "greeting_vi": ["Chào bạn", "Ôi", "Wow", "Trời ơi"],
+    "feedback": ["Very helpful", "So useful", "Really informative", "Great content", "Love it", "This is gold", "Perfect timing", "Exactly what I needed", "Well done", "Nicely explained"],
+    "feedback_vi": ["Rất hữu ích", "Bổ ích quá", "Hay lắm", "Tuyệt vời", "Đúng thứ mình cần", "Giải thích dễ hiểu", "Nội dung chất lượng", "Xem là hiểu ngay"]
   },
   "question_comments": [
     "How did you do that at {timestamp}?",
@@ -300,10 +103,13 @@
     "Where can I learn more about this?",
     "Do you have a course on this?",
     "What's the next step after this?",
-    "Can you explain {topic} in more detail?",
     "Is there a part 2 coming?",
     "How long did this take to make?",
-    "What equipment do you use?"
+    "Bạn làm điều này như thế nào vậy?",
+    "Bạn có thể làm video về {topic} không?",
+    "Có phần 2 không bạn ơi?",
+    "Mình có thể học thêm ở đâu vậy bạn?",
+    "Bạn dùng công cụ gì để làm cái này vậy?"
   ],
   "specific_praise": [
     "The editing on this is top notch! 🎬",
@@ -313,9 +119,13 @@
     "Your explanation style is perfect",
     "I appreciate how you broke this down step by step",
     "The examples you used were really helpful",
-    "This is so much better than other tutorials",
     "You made this look so easy!",
-    "The quality of your videos keeps getting better"
+    "The quality of your videos keeps getting better",
+    "Cách dựng video của bạn rất chuyên nghiệp! 🎬",
+    "Giọng bạn dễ nghe lắm, nghe mãi không chán",
+    "Ví dụ bạn đưa ra rất dễ hiểu",
+    "Bạn giải thích từng bước rất rõ ràng",
+    "Chất lượng video ngày càng tốt hơn!"
   ],
   "engagement_comments": [
     "Who else is binge watching this channel?",
@@ -323,10 +133,14 @@
     "Why doesn't this have more views?",
     "This deserves to go viral!",
     "Everyone should watch this",
-    "Sharing this with everyone I know",
-    "This needs more attention",
     "How is this free content?!",
     "Better than paid courses I've taken",
-    "This is the best channel for [topic]"
+    "Ai cũng đang xem kênh này không?",
+    "Kênh này bị underrated quá đi!",
+    "Sao video này ít view vậy trời?",
+    "Xứng đáng viral lắm bạn ơi!",
+    "Mọi người nên xem video này!",
+    "Miễn phí mà chất lượng cao thế này?!",
+    "Còn hay hơn khóa học trả tiền mình từng học"
   ]
 }

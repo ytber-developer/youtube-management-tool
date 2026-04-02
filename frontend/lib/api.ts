@@ -302,6 +302,17 @@ export const accountsAPI = {
     return response.json();
   },
 
+  // Delete all accounts
+  deleteAllAccounts: async (): Promise<any> => {
+    const url = buildApiUrl(API_ENDPOINTS.ACCOUNTS.DELETE_ALL);
+    const response = await fetch(url, { method: 'DELETE' });
+    if (!response.ok) {
+      const error = await response.json().catch(() => ({ message: 'Delete all accounts failed' }));
+      throw new Error(error.message || `HTTP ${response.status}`);
+    }
+    return response.json();
+  },
+
   // Delete account by ID
   deleteAccount: async (accountId: number): Promise<any> => {
     const url = buildApiUrl(API_ENDPOINTS.ACCOUNTS.DELETE(accountId));

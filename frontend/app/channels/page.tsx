@@ -60,7 +60,7 @@ export default function ListChannelsPage() {
   const [pagination, setPagination] = useState<Pagination>({
     total: 0,
     page: 1,
-    limit: 50,
+    limit: 200,
     totalPages: 0,
     hasNext: false,
     hasPrev: false
@@ -420,6 +420,24 @@ export default function ListChannelsPage() {
     setAvatarUrlInput('');
   };
 
+  const handleDeleteAll = async () => {
+    const confirmed = confirm(`Xóa TẤT CẢ ${pagination.total} kênh?\n\nHành động này không thể hoàn tác!`);
+    if (!confirmed) return;
+
+    try {
+      const result = await accountsAPI.deleteAllAccounts();
+      if (result.success) {
+        alert(`✅ ${result.message}`);
+        fetchChannels();
+      } else {
+        throw new Error(result.message || 'Delete all failed');
+      }
+    } catch (error: any) {
+      console.error('Delete all accounts failed:', error);
+      alert(`❌ Delete all failed: ${error.message}`);
+    }
+  };
+
   const handleDeleteAccount = async (id: number, email: string) => {
     const confirmed = confirm(`Xác nhận xóa account ${email} (ID: ${id})?`);
     if (!confirmed) return;
@@ -458,6 +476,14 @@ export default function ListChannelsPage() {
           <p className="text-sm text-gray-500 mt-1">Danh sách tất cả kênh YouTube</p>
         </div>
         <div className="flex gap-2">
+          <button
+            onClick={handleDeleteAll}
+            className="flex items-center gap-1.5 px-3 py-2 text-sm bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+            title="Xóa tất cả kênh"
+          >
+            <X size={16} />
+            Xóa tất cả
+          </button>
           <button
             onClick={handleRetryUploadAvatars}
             disabled={uploadingAvatars}
@@ -770,27 +796,26 @@ export default function ListChannelsPage() {
                       </button>
                     </td>
                     <td className="px-4 py-2.5 text-center">
-                      {(!channel.isAuthenticator || !channel.isCreateChannel) ? (
-                        <button
-                          onClick={() => handleRetryVerify(channel.id)}
-                          disabled={retryingId === channel.id}
-                          className="inline-flex items-center gap-1 px-2.5 py-1 text-xs bg-orange-100 text-orange-700 rounded hover:bg-orange-200 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                          title="Retry verify authenticator and create channel"
-                        >
-                          <RotateCw size={12} className={retryingId === channel.id ? 'animate-spin' : ''} />
-                          {retryingId === channel.id ? 'Đang xử lý...' : 'Retry'}
-                        </button>
-                      ) : (
-                        <div className="flex items-center justify-center gap-1">
+                      <div className="flex items-center justify-center gap-1">
+                        {(!channel.isAuthenticator || !channel.isCreateChannel) && (
                           <button
-                            onClick={() => handleDeleteAccount(channel.id, channel.email)}
-                            className="inline-flex items-center gap-1 px-2.5 py-1 text-xs bg-red-100 text-red-700 rounded hover:bg-red-200 transition-colors"
-                            title="Delete account"
+                            onClick={() => handleRetryVerify(channel.id)}
+                            disabled={retryingId === channel.id}
+                            className="inline-flex items-center gap-1 px-2.5 py-1 text-xs bg-orange-100 text-orange-700 rounded hover:bg-orange-200 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                            title="Retry verify authenticator and create channel"
                           >
-                            Xóa
+                            <RotateCw size={12} className={retryingId === channel.id ? 'animate-spin' : ''} />
+                            {retryingId === channel.id ? 'Đang xử lý...' : 'Retry'}
                           </button>
-                        </div>
-                      )}
+                        )}
+                        <button
+                          onClick={() => handleDeleteAccount(channel.id, channel.email)}
+                          className="inline-flex items-center gap-1 px-2.5 py-1 text-xs bg-red-100 text-red-700 rounded hover:bg-red-200 transition-colors"
+                          title="Delete account"
+                        >
+                          Xóa
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 ))

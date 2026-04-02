@@ -19,12 +19,15 @@ export default function BoostViewsPage() {
   const [totalPages, setTotalPages] = useState<number | null>(null);
   const [totalCount, setTotalCount] = useState<number | null>(null);
   const [loadingAccounts, setLoadingAccounts] = useState<boolean>(false);
+  const [searchQuery, setSearchQuery] = useState<string>('');
 
   const [formData, setFormData] = useState({
     videoUrl: '',
     duration: 60,
     useAccounts: true,
     autoSubscribe: true,
+    autoLike: true,
+    autoComment: false,
     humanBehavior: true,
   });
 
@@ -86,6 +89,15 @@ export default function BoostViewsPage() {
     });
   };
 
+  const selectAllChannels = () => {
+    const allIds = channels.map((ch: any) => ch.id || ch._id || ch.email || ch.channelId || JSON.stringify(ch));
+    setSelectedChannels(allIds);
+  };
+
+  const deselectAllChannels = () => {
+    setSelectedChannels([]);
+  };
+
   const loadMore = async () => {
     // append next page if available
     const next = (totalPages && page >= totalPages) ? null : page + 1;
@@ -135,109 +147,59 @@ export default function BoostViewsPage() {
   };
 
   return (
-    <div className="p-8 max-w-4xl mx-auto">
+    <div className="p-6 max-w-5xl mx-auto">
       {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">Tăng lượt xem</h1>
-        <p className="text-gray-600 mt-2">Tăng lượt xem và tương tác cho video YouTube của bạn</p>
+      <div className="mb-4">
+        <h1 className="text-2xl font-bold text-gray-900">Tăng lượt xem</h1>
       </div>
 
       {/* Form */}
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
-        <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Video URL */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              URL Video <span className="text-red-500">*</span>
-            </label>
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 mb-4">
+        <form onSubmit={handleSubmit}>
+          {/* URL + options on one row */}
+          <div className="flex items-center gap-3 mb-3">
             <input
               type="url"
               required
               value={formData.videoUrl}
               onChange={(e) => setFormData({ ...formData, videoUrl: e.target.value })}
               placeholder="https://www.youtube.com/watch?v=..."
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="flex-1 px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
+            <button
+              type="submit"
+              disabled={loading}
+              className="flex items-center gap-1.5 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors whitespace-nowrap"
+            >
+              {loading ? (
+                <><Loader2 className="animate-spin" size={15} /> Đang chạy...</>
+              ) : (
+                <><PlayCircle size={15} /> Bắt đầu</>
+              )}
+            </button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Duration only (tabs/batch removed) */}
-            <div className="md:col-span-2">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Thời lượng xem (giây)
+          {/* Checkboxes inline */}
+          <div className="flex flex-wrap gap-x-5 gap-y-1.5">
+            {[
+              { id: 'useAccounts', label: 'Dùng tài khoản', key: 'useAccounts' },
+              { id: 'autoSubscribe', label: 'Auto subscribe (25%)', key: 'autoSubscribe' },
+              { id: 'autoLike', label: 'Auto like (15%)', key: 'autoLike' },
+              { id: 'autoComment', label: 'Auto comment (5%)', key: 'autoComment' },
+              { id: 'humanBehavior', label: 'Human behavior', key: 'humanBehavior' },
+            ].map(({ id, label, key }) => (
+              <label key={id} htmlFor={id} className="flex items-center gap-1.5 cursor-pointer">
+                <input
+                  type="checkbox"
+                  id={id}
+                  checked={(formData as any)[key]}
+                  onChange={(e) => setFormData({ ...formData, [key]: e.target.checked })}
+                  className="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded"
+                />
+                <span className="text-xs text-gray-600">{label}</span>
               </label>
-              <input
-                type="number"
-                min="10"
-                max="300"
-                value={formData.duration}
-                onChange={(e) => setFormData({ ...formData, duration: parseInt(e.target.value) })}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-              <p className="text-xs text-gray-500 mt-1">Thời gian xem video</p>
-            </div>
+            ))}
           </div>
-
-          {/* Checkboxes */}
-          <div className="space-y-3">
-            <div className="flex items-center">
-              <input
-                type="checkbox"
-                id="useAccounts"
-                checked={formData.useAccounts}
-                onChange={(e) => setFormData({ ...formData, useAccounts: e.target.checked })}
-                className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-              />
-              <label htmlFor="useAccounts" className="ml-2 text-sm text-gray-700">
-                Sử dụng tài khoản đã import
-              </label>
-            </div>
-
-            <div className="flex items-center">
-              <input
-                type="checkbox"
-                id="autoSubscribe"
-                checked={formData.autoSubscribe}
-                onChange={(e) => setFormData({ ...formData, autoSubscribe: e.target.checked })}
-                className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-              />
-              <label htmlFor="autoSubscribe" className="ml-2 text-sm text-gray-700">
-                Tự động đăng ký kênh
-              </label>
-            </div>
-
-            <div className="flex items-center">
-              <input
-                type="checkbox"
-                id="humanBehavior"
-                checked={formData.humanBehavior}
-                onChange={(e) => setFormData({ ...formData, humanBehavior: e.target.checked })}
-                className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-              />
-              <label htmlFor="humanBehavior" className="ml-2 text-sm text-gray-700">
-                Bật hành vi giống người (Độ trễ ngẫu nhiên, di chuyển chuột)
-              </label>
-            </div>
-          </div>
-
-          {/* Submit Button */}
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-          >
-            {loading ? (
-              <>
-                <Loader2 className="animate-spin" size={20} />
-                Đang khởi động chiến dịch...
-              </>
-            ) : (
-              <>
-                <PlayCircle size={20} />
-                Bắt đầu chiến dịch tăng view
-              </>
-            )}
-          </button>
         </form>
       </div>
 
@@ -298,42 +260,109 @@ export default function BoostViewsPage() {
 
       {/* Channel selection */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
-        <div className="flex items-start justify-between mb-3">
+        {/* Header row */}
+        <div className="flex items-center justify-between mb-3">
           <div>
-            <h3 className="font-medium text-gray-800">Chọn kênh (mỗi lần mở 3 tab để xem)</h3>
-            <p className="text-xs text-gray-500">Chọn các tài khoản/kênh sẽ được dùng để xem video. Mặc định mở 3 tab/tại lượt chạy.</p>
+            <h3 className="font-medium text-gray-800">Chọn kênh để buff view</h3>
+            <p className="text-xs text-gray-500">Mỗi kênh = 1 lượt xem. Chọn càng nhiều kênh thì càng nhiều view.</p>
           </div>
-
           <div className="flex items-center gap-2">
-            <button type="button" onClick={goToPrev} disabled={page <= 1 || loadingAccounts} className="px-3 py-1 bg-gray-100 rounded disabled:opacity-50">Prev</button>
-            <div className="text-sm text-gray-600">Page {page}{totalPages ? ` / ${totalPages}` : ''}</div>
-            <button type="button" onClick={goToNext} disabled={(totalPages != null && page >= totalPages) || loadingAccounts} className="px-3 py-1 bg-gray-100 rounded disabled:opacity-50">Next</button>
-            <button type="button" onClick={loadMore} disabled={loadingAccounts || (totalPages != null && page >= totalPages)} className="px-3 py-1 bg-blue-50 text-blue-700 rounded">Load more</button>
+            <button
+              type="button"
+              onClick={selectAllChannels}
+              disabled={loadingAccounts || channels.length === 0}
+              className="px-3 py-1.5 bg-green-50 text-green-700 border border-green-200 rounded-lg text-sm font-medium hover:bg-green-100 disabled:opacity-50 transition-colors"
+            >
+              Chọn tất cả ({channels.length})
+            </button>
+            <button
+              type="button"
+              onClick={deselectAllChannels}
+              disabled={selectedChannels.length === 0}
+              className="px-3 py-1.5 bg-red-50 text-red-600 border border-red-200 rounded-lg text-sm font-medium hover:bg-red-100 disabled:opacity-50 transition-colors"
+            >
+              Bỏ chọn
+            </button>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 max-h-48 overflow-auto">
-          {loadingAccounts && <div className="text-sm text-gray-500">Đang tải danh sách kênh...</div>}
-          {!loadingAccounts && channels.length === 0 && <div className="text-sm text-gray-500">Không có kênh</div>}
-
-          {channels.map((ch: any) => {
-            const id = ch.id || ch._id || ch.email || ch.channelId || JSON.stringify(ch);
-            const label = ch.email || ch.name || ch.displayName || ch.channelId || id;
-            return (
-              <label key={id} className="flex items-center gap-2 p-2 border rounded hover:bg-gray-50">
-                <input
-                  type="checkbox"
-                  checked={selectedChannels.includes(id)}
-                  onChange={() => toggleChannel(id)}
-                  className="w-4 h-4 text-blue-600 border-gray-300 rounded"
-                />
-                <span className="text-sm text-gray-700 truncate">{label}</span>
-              </label>
-            );
-          })}
+        {/* Search + pagination row */}
+        <div className="flex items-center gap-2 mb-3">
+          <input
+            type="text"
+            placeholder="Tìm kiếm email..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="flex-1 px-3 py-1.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <button type="button" onClick={goToPrev} disabled={page <= 1 || loadingAccounts} className="px-3 py-1.5 bg-gray-100 rounded-lg text-sm disabled:opacity-40 hover:bg-gray-200">←</button>
+          <span className="text-sm text-gray-500 whitespace-nowrap">Trang {page}{totalPages ? ` / ${totalPages}` : ''}</span>
+          <button type="button" onClick={goToNext} disabled={(totalPages != null && page >= totalPages) || loadingAccounts} className="px-3 py-1.5 bg-gray-100 rounded-lg text-sm disabled:opacity-40 hover:bg-gray-200">→</button>
+          <button type="button" onClick={loadMore} disabled={loadingAccounts || (totalPages != null && page >= totalPages)} className="px-3 py-1.5 bg-blue-50 text-blue-700 border border-blue-200 rounded-lg text-sm hover:bg-blue-100 disabled:opacity-40 transition-colors">Tải thêm</button>
         </div>
 
-        <div className="mt-3 text-sm text-gray-600">Đã chọn: {selectedChannels.length} kênh</div>
+        {/* Channel grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1.5 max-h-96 overflow-y-auto pr-1">
+          {loadingAccounts && (
+            <div className="col-span-3 text-sm text-gray-400 text-center py-6">Đang tải danh sách kênh...</div>
+          )}
+          {!loadingAccounts && channels.length === 0 && (
+            <div className="col-span-3 text-sm text-gray-400 text-center py-6">Không có kênh nào</div>
+          )}
+
+          {channels
+            .filter((ch: any) => {
+              if (!searchQuery.trim()) return true;
+              const label = ch.email || ch.name || ch.displayName || ch.channelId || '';
+              return label.toLowerCase().includes(searchQuery.toLowerCase());
+            })
+            .map((ch: any) => {
+              const id = ch.id || ch._id || ch.email || ch.channelId || JSON.stringify(ch);
+              const label = ch.email || ch.name || ch.displayName || ch.channelId || id;
+              const isSelected = selectedChannels.includes(id);
+              return (
+                <label
+                  key={id}
+                  className={`flex items-center gap-2 px-3 py-2 border rounded-lg cursor-pointer transition-colors ${
+                    isSelected
+                      ? 'bg-blue-50 border-blue-300 text-blue-800'
+                      : 'hover:bg-gray-50 border-gray-200 text-gray-700'
+                  }`}
+                >
+                  <input
+                    type="checkbox"
+                    checked={isSelected}
+                    onChange={() => toggleChannel(id)}
+                    className="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded flex-shrink-0"
+                  />
+                  <span className="text-xs truncate">{label}</span>
+                </label>
+              );
+            })}
+        </div>
+
+        {/* Footer */}
+        <div className="mt-3 flex items-center justify-between text-sm border-t pt-3">
+          <div className="flex items-center gap-2">
+            <span className={`font-semibold ${selectedChannels.length > 0 ? 'text-blue-700' : 'text-gray-400'}`}>
+              Đã chọn: {selectedChannels.length} kênh
+            </span>
+            {totalCount && (
+              <span className="text-gray-400">/ {totalCount} tổng</span>
+            )}
+            {selectedChannels.length > 0 && selectedChannels.length === channels.length && (
+              <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium">Tất cả trang này</span>
+            )}
+          </div>
+          {searchQuery && (
+            <span className="text-xs text-gray-400">
+              Hiển thị {channels.filter((ch: any) => {
+                const label = ch.email || ch.name || ch.displayName || ch.channelId || '';
+                return label.toLowerCase().includes(searchQuery.toLowerCase());
+              }).length} kết quả
+            </span>
+          )}
+        </div>
       </div>
 
       {/* Info Section */}

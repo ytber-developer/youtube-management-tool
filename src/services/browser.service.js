@@ -190,7 +190,6 @@ class BrowserService {
           '--no-default-browser-check',
           '--disable-infobars',
           // ===== CRITICAL: Remove automation flags =====
-          '--disable-web-security',
           '--disable-features=IsolateOrigins,site-per-process',
           '--disable-site-isolation-trials',
           '--disable-features=ChromeWhatsNewUI',

@@ -85,4 +85,19 @@ async function getStatus() {
   }
 }
 
-module.exports = { runMigrations, getStatus };
+async function pullSource() {
+  const { exec } = require('child_process');
+  const rootDir = path.join(__dirname, '../../');
+
+  return new Promise((resolve, reject) => {
+    exec('git pull', { cwd: rootDir }, (error, stdout, stderr) => {
+      if (error) {
+        reject(new Error(stderr || error.message));
+        return;
+      }
+      resolve({ output: stdout.trim() || stderr.trim(), message: 'Pull source thành công' });
+    });
+  });
+}
+
+module.exports = { runMigrations, getStatus, pullSource };

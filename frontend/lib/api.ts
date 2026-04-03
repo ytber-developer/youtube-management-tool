@@ -464,6 +464,9 @@ export const setupAPI = {
 
   migrate: (): Promise<MigrateResponse> =>
     request(API_ENDPOINTS.SETUP.MIGRATE, { method: 'POST' }),
+
+  pull: (): Promise<{ success: boolean; data: { output: string; message: string } }> =>
+    request(API_ENDPOINTS.SETUP.PULL, { method: 'POST' }),
 };
 
 // Export a combined API object

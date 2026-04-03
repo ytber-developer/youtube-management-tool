@@ -2,13 +2,15 @@
 
 import { useState, useEffect } from 'react'
 import { setupAPI, SetupStatus } from '@/lib/api'
-import { Database, CheckCircle, AlertCircle, RefreshCw, Play } from 'lucide-react'
+import { Database, CheckCircle, AlertCircle, RefreshCw, Play, GitPullRequest } from 'lucide-react'
 
 export default function SetupPage() {
   const [status, setStatus] = useState<SetupStatus | null>(null)
   const [loadingStatus, setLoadingStatus] = useState(true)
   const [migrating, setMigrating] = useState(false)
   const [result, setResult] = useState<{ success: boolean; message: string; migrated?: string[] } | null>(null)
+  const [pulling, setPulling] = useState(false)
+  const [pullResult, setPullResult] = useState<{ success: boolean; message: string; output?: string } | null>(null)
 
   const fetchStatus = async () => {
     setLoadingStatus(true)
@@ -23,6 +25,19 @@ export default function SetupPage() {
   }
 
   useEffect(() => { fetchStatus() }, [])
+
+  const handlePull = async () => {
+    setPulling(true)
+    setPullResult(null)
+    try {
+      const res = await setupAPI.pull()
+      setPullResult({ success: res.success, message: res.data.message, output: res.data.output })
+    } catch (err: any) {
+      setPullResult({ success: false, message: err.message || 'Pull failed' })
+    } finally {
+      setPulling(false)
+    }
+  }
 
   const handleMigrate = async () => {
     setMigrating(true)
@@ -100,6 +115,45 @@ export default function SetupPage() {
           </div>
         ) : (
           <p className="text-sm text-red-500">Không lấy được trạng thái</p>
+        )}
+      </div>
+
+      {/* Pull Source */}
+      <div className="bg-white rounded-lg shadow-md p-6">
+        <h2 className="text-lg font-semibold text-gray-900 mb-2">Cập nhật Source Code</h2>
+        <p className="text-sm text-gray-600 mb-4">
+          Kéo code mới nhất từ remote repository về server.
+        </p>
+
+        <button
+          onClick={handlePull}
+          disabled={pulling}
+          className="flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-60 disabled:cursor-not-allowed transition-colors font-medium"
+        >
+          {pulling ? (
+            <RefreshCw className="w-5 h-5 animate-spin" />
+          ) : (
+            <GitPullRequest className="w-5 h-5" />
+          )}
+          {pulling ? 'Đang pull...' : 'Pull Source'}
+        </button>
+
+        {pullResult && (
+          <div className={`mt-4 p-4 rounded-lg flex items-start gap-3 ${pullResult.success ? 'bg-green-50 border border-green-200' : 'bg-red-50 border border-red-200'}`}>
+            {pullResult.success ? (
+              <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+            ) : (
+              <AlertCircle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
+            )}
+            <div>
+              <p className={`font-medium text-sm ${pullResult.success ? 'text-green-800' : 'text-red-800'}`}>
+                {pullResult.message}
+              </p>
+              {pullResult.output && (
+                <pre className="mt-2 text-xs text-gray-600 font-mono whitespace-pre-wrap">{pullResult.output}</pre>
+              )}
+            </div>
+          </div>
         )}
       </div>
 

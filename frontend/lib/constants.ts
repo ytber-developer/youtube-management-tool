@@ -12,6 +12,15 @@ export const API_ENDPOINTS = {
     BATCH: '/api/v1/watch/video',
     BATCH_ACCOUNTS: '/api/v1/watch/batch-accounts',
   },
+  CAMPAIGNS: {
+    LIST: '/api/v1/campaigns',
+    CREATE: '/api/v1/campaigns',
+    GET: (id: number) => `/api/v1/campaigns/${id}`,
+    PAUSE: (id: number) => `/api/v1/campaigns/${id}/pause`,
+    RESUME: (id: number) => `/api/v1/campaigns/${id}/resume`,
+    STOP: (id: number) => `/api/v1/campaigns/${id}/stop`,
+    DELETE: (id: number) => `/api/v1/campaigns/${id}`,
+  },
   UPLOAD: {
     DOWNLOAD_AND_UPLOAD: '/api/v1/upload/download-and-upload',
     BATCH_UPLOAD: '/api/v1/upload/batch-upload',
@@ -26,6 +35,7 @@ export const API_ENDPOINTS = {
   SETUP: {
     STATUS: '/api/v1/setup/status',
     MIGRATE: '/api/v1/setup/migrate',
+    PULL: '/api/v1/setup/pull',
   },
 };
 

@@ -54,10 +54,14 @@ app.use((err, req, res, next) => {
 const startServer = async () => {
   try {
     await sequelize.authenticate();
-    
+
     // Removed auto-sync to avoid "Too many keys" error
     // Run migrations manually with: npm run migrate
-    
+
+    // Start campaign cron (every 5 minutes)
+    const { startCron } = require('./services/campaign.service');
+    startCron();
+
     app.listen(PORT, () => {
       console.log(`🚀 Server running on http://localhost:${PORT}`);
     });

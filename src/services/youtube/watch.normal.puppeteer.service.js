@@ -271,63 +271,64 @@ class WatchNormalPuppeteerService {
     try {
       console.log('💬 [VIDEO] Commenting...');
 
-      if (humanBehavior) await this.sleep(this.randomDelay(2000, 4000));
+      if (humanBehavior) await this.sleep(this.randomDelay(1500, 3000));
 
-      // Scroll to comments section
+      // Scroll 60% trang để trigger lazy-load comments
+      await page.evaluate(() => window.scrollTo({ top: document.body.scrollHeight * 0.6, behavior: 'smooth' }));
+      await this.sleep(2000);
+
+      // Scroll simplebox vào giữa màn hình
       await page.evaluate(() => {
-        const comments = document.querySelector('ytd-comments#comments');
-        if (comments) comments.scrollIntoView({ behavior: 'smooth' });
-        else window.scrollTo({ top: 800, behavior: 'smooth' });
+        const box = document.querySelector('ytd-comment-simplebox-renderer');
+        if (box) box.scrollIntoView({ behavior: 'smooth', block: 'center' });
       });
-      await this.sleep(this.randomDelay(2000, 3000));
+      await this.sleep(1500);
 
-      // Click comment placeholder
-      const placeholderSelectors = [
-        '#placeholder-area',
-        'ytd-comments#comments #simplebox-placeholder'
-      ];
-
-      let clicked = false;
-      for (const selector of placeholderSelectors) {
-        const el = await page.$(selector);
-        if (el) {
-          await el.click();
-          clicked = true;
-          break;
+      // Chờ #placeholder-area không bị hidden (YouTube lazy-load)
+      try {
+        await page.waitForSelector('#placeholder-area:not([hidden])', { timeout: 8000 });
+      } catch (e) {
+        // Fallback: thử click simplebox-placeholder
+        const fallback = await page.$('#simplebox-placeholder');
+        if (!fallback) {
+          console.log('⚠️  [VIDEO] Comment placeholder not found');
+          return;
         }
+        await fallback.click();
+        await this.sleep(1000);
       }
 
-      if (!clicked) {
-        console.log('⚠️  [VIDEO] Comment box not found');
-        return;
-      }
+      await page.click('#placeholder-area');
+      await this.sleep(this.randomDelay(800, 1200));
 
-      await this.sleep(this.randomDelay(1000, 1500));
-
-      const commentInput = await page.$('#contenteditable-root');
-      if (!commentInput) {
-        console.log('⚠️  [VIDEO] Comment input not found');
+      // Chờ contenteditable-root sẵn sàng
+      try {
+        await page.waitForSelector('#contenteditable-root[contenteditable="true"]', { timeout: 5000 });
+      } catch (e) {
+        console.log('⚠️  [VIDEO] Comment input not ready');
         return;
       }
 
       const commentText = commentHelper.getSmartComment();
       console.log(`📝 Typing: "${commentText}"`);
 
-      await commentInput.click();
+      await page.click('#contenteditable-root');
+      await this.sleep(300);
+
       await page.keyboard.type(commentText, {
-        delay: humanBehavior ? this.randomDelay(50, 120) : 0
+        delay: humanBehavior ? this.randomDelay(60, 130) : 10
       });
 
-      if (humanBehavior) await this.sleep(this.randomDelay(1500, 2500));
+      if (humanBehavior) await this.sleep(this.randomDelay(1000, 2000));
 
-      const submitBtn = await page.$('#submit-button button');
-      if (submitBtn) {
-        const isDisabled = await page.evaluate(el => el.disabled, submitBtn);
-        if (!isDisabled) {
-          await submitBtn.click();
-          console.log('✅ [VIDEO] Comment posted!');
-          if (humanBehavior) await this.sleep(this.randomDelay(1000, 2000));
-        }
+      // Submit — chờ button active
+      try {
+        await page.waitForSelector('#submit-button button[aria-disabled="false"]', { timeout: 3000 });
+        await page.click('#submit-button button');
+        console.log('✅ [VIDEO] Comment posted!');
+        if (humanBehavior) await this.sleep(this.randomDelay(1000, 1500));
+      } catch (e) {
+        console.log('⚠️  [VIDEO] Submit button not ready:', e.message);
       }
 
     } catch (error) {

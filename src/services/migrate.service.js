@@ -90,7 +90,7 @@ async function pullSource() {
   const rootDir = path.join(__dirname, '../../');
 
   return new Promise((resolve, reject) => {
-    exec('git pull', { cwd: rootDir }, (error, stdout, stderr) => {
+    exec('git pull origin main', { cwd: rootDir }, (error, stdout, stderr) => {
       if (error) {
         reject(new Error(stderr || error.message));
         return;

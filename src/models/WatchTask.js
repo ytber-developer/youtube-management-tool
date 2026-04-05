@@ -10,7 +10,8 @@ const WatchTask = sequelize.define('WatchTask', {
   status: { type: DataTypes.STRING, allowNull: false, defaultValue: 'pending' },
   error: { type: DataTypes.TEXT, allowNull: true },
   started_at: { type: DataTypes.DATE, allowNull: true },
-  finished_at: { type: DataTypes.DATE, allowNull: true }
+  finished_at: { type: DataTypes.DATE, allowNull: true },
+  actual_duration_seconds: { type: DataTypes.INTEGER, allowNull: true, defaultValue: 0 }
 }, {
   tableName: 'watch_tasks',
   timestamps: true

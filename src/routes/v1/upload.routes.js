@@ -80,4 +80,24 @@ router.post('/batch-upload-files', uploadVideo.array('video', 15), uploadControl
  */
 router.get('/videos', uploadController.getUploadedVideos);
 
+/**
+ * @route POST /api/v1/upload/campaigns
+ * @desc Tao upload campaign (cron xu ly tung video theo thu tu, 1 campaign/lan)
+ */
+router.post('/campaigns', uploadController.createUploadCampaign);
+
+/**
+ * @route GET /api/v1/upload/campaigns
+ * @desc Danh sach upload campaigns voi progress
+ * @query { status?, page?, limit? }
+ */
+router.get('/campaigns', uploadController.getUploadCampaigns);
+
+/**
+ * @route PATCH /api/v1/upload/campaigns/:id/status
+ * @desc Hold / release / cancel a campaign
+ * @body { action: 'hold' | 'release' | 'cancel' }
+ */
+router.patch('/campaigns/:id/status', uploadController.updateUploadCampaignStatus);
+
 module.exports = router;

@@ -96,50 +96,102 @@ class VideoDownloadService {
       // Click nút tìm video
       await this.clickSearchButton(page);
 
+      // Intercept network responses to catch video stream URLs before they load
+      let capturedVideoUrl = null;
+      page.on('response', async (response) => {
+        const url = response.url();
+        try {
+          const ct = response.headers()['content-type'] || '';
+          if (!capturedVideoUrl && (
+            (url.includes('fbcdn.net') && (url.includes('.mp4') || ct.startsWith('video/'))) ||
+            ct.startsWith('video/mp4')
+          )) {
+            capturedVideoUrl = url;
+            console.log(`   🎯 Network: captured video URL: ${url.substring(0, 120)}`);
+          }
+        } catch (e) { /* ignore */ }
+      });
+
       // Đợi kết quả
       await this.waitForResult(page);
 
-      // Try to extract a direct download URL from the page and download via axios (faster, bypasses Chrome SafeBrowsing)
-      let downloadedFile = null;
+      // Chụp screenshot để debug layout hiện tại của fbdown.to
       try {
-        const directUrl = await page.evaluate(() => {
-          // common selectors / heuristics
-          const selCandidates = [
-            'a.download-link-fb',
-            'a.button.download-link-fb',
-            'a[href*="fbcdn.net"]',
-            'a[href$=".mp4"]',
-            'a[href*="dl.snapcdn"]'
-          ];
+        await page.screenshot({ path: 'debug-fbdown-result.png', fullPage: true });
+        console.log('   📸 Screenshot saved: debug-fbdown-result.png');
+      } catch (e) { /* ignore */ }
 
-          for (const sel of selCandidates) {
-            const el = document.querySelector(sel);
-            if (el && el.href) return el.href;
-          }
+      // Log tất cả links tìm được để debug
+      const allLinks = await page.evaluate(() => {
+        return Array.from(document.querySelectorAll('a')).map(a => ({
+          href: a.href,
+          text: a.textContent.trim().substring(0, 80),
+          className: a.className
+        })).filter(a => a.href && a.href.startsWith('http'));
+      });
+      console.log(`   🔗 Links found on page (${allLinks.length}):`);
+      allLinks.forEach(l => console.log(`      [${l.className}] ${l.text} → ${l.href.substring(0, 120)}`));
 
-          // fallback: any anchor with mp4 or fbcdn
-          const all = Array.from(document.querySelectorAll('a'));
-          const found = all.find(a => a.href && (a.href.includes('fbcdn.net') || a.href.endsWith('.mp4') || a.href.includes('dl.snapcdn')));
-          return found ? found.href : null;
-        });
+      // Also log buttons for debug
+      const allButtons = await page.evaluate(() => {
+        return Array.from(document.querySelectorAll('button')).map(b => ({
+          text: b.textContent.trim().substring(0, 80),
+          className: b.className,
+          onclick: (b.getAttribute('onclick') || '').substring(0, 80)
+        }));
+      });
+      console.log(`   🔘 Buttons found on page (${allButtons.length}):`);
+      allButtons.forEach(b => console.log(`      [${b.className}] "${b.text}" onclick="${b.onclick}"`));
 
-        if (directUrl) {
-          console.log('   ℹ️ Found direct link on page, attempting axios download');
+      let downloadedFile = null;
+
+      // Strategy 1: Check if direct link already visible in DOM
+      let directUrl = await this.extractDirectLink(page);
+      if (directUrl) {
+        console.log(`   ✅ Found direct link in DOM: ${directUrl.substring(0, 100)}`);
+        try {
           downloadedFile = await this.downloadWithAxios(directUrl, outputFileName, page);
+        } catch (err) {
+          console.warn('   ⚠️ Axios download failed:', err.message);
+          downloadedFile = null;
         }
-      } catch (err) {
-        console.warn('   ⚠️ Axios download attempt failed:', err.message);
-        downloadedFile = null;
       }
 
-      // Fallback: nếu không có direct link hoặc axios fail -> đợi Chrome download như cũ
+      // Strategy 2: Click HD download/render button, then wait for link to appear
       if (!downloadedFile) {
-        console.log('   ℹ️ Falling back to browser download - waiting for downloaded file in folder');
+        console.log('   ℹ️ Clicking HD download button to generate link...');
+        try {
+          await this.clickDownloadButton(page, quality);
+          // After clicking, wait for a direct link to appear (Render may take time)
+          directUrl = await this.waitForDirectLink(page, 20000);
+          if (directUrl) {
+            console.log(`   ✅ Direct link appeared after button click: ${directUrl.substring(0, 100)}`);
+            downloadedFile = await this.downloadWithAxios(directUrl, outputFileName, page);
+          }
+        } catch (err) {
+          console.warn('   ⚠️ Click+wait for link failed:', err.message);
+        }
+      }
+
+      // Strategy 3: Use captured network URL from response interception
+      if (!downloadedFile && capturedVideoUrl) {
+        console.log(`   ℹ️ Using captured network URL: ${capturedVideoUrl.substring(0, 100)}`);
+        try {
+          downloadedFile = await this.downloadWithAxios(capturedVideoUrl, outputFileName, page);
+        } catch (err) {
+          console.warn('   ⚠️ Axios download from network URL failed:', err.message);
+          downloadedFile = null;
+        }
+      }
+
+      // Strategy 4: Fallback — wait for Chrome browser to download the file
+      if (!downloadedFile) {
+        console.log('   ℹ️ Falling back to browser download...');
         downloadedFile = await this.waitForDownload(outputFileName);
       }
 
       if (!downloadedFile) {
-        throw new Error('Download timeout');
+        throw new Error('Download timeout - no video file received');
       }
 
       console.log(`✅ Tải thành công: ${downloadedFile.fileName} (${downloadedFile.sizeMB} MB)`);
@@ -332,6 +384,47 @@ class VideoDownloadService {
         description: 'Facebook Video'
       };
     }
+  }
+
+  /**
+   * Extract a direct video download URL from the current page DOM
+   */
+  async extractDirectLink(page) {
+    return page.evaluate(() => {
+      const all = Array.from(document.querySelectorAll('a'));
+
+      // Priority: fbcdn.net (Facebook CDN), known CDN domains, .mp4 extension
+      const priority = all.find(a => a.href && (
+        a.href.includes('fbcdn.net') ||
+        a.href.includes('snapcdn') ||
+        a.href.includes('dl.snapinsta') ||
+        a.href.match(/\.(mp4|webm|mov)(\?|$)/i)
+      ));
+      if (priority) return priority.href;
+
+      // Fallback: download text
+      const byText = all.find(a => {
+        const t = (a.textContent || '').toLowerCase().trim();
+        return a.href && a.href.startsWith('http') && (
+          t === 'download' || t.includes('hd') || t.includes('720') ||
+          t.includes('download video') || t.includes('save video')
+        );
+      });
+      return byText ? byText.href : null;
+    });
+  }
+
+  /**
+   * Poll for a direct video link to appear in the DOM (after clicking Render/Download button)
+   */
+  async waitForDirectLink(page, maxWaitMs = 20000) {
+    const startTime = Date.now();
+    while (Date.now() - startTime < maxWaitMs) {
+      const url = await this.extractDirectLink(page).catch(() => null);
+      if (url) return url;
+      await new Promise(r => setTimeout(r, 1500));
+    }
+    return null;
   }
 
   /**

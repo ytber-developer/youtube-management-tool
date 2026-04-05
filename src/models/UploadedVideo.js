@@ -7,6 +7,17 @@ const UploadedVideo = sequelize.define('UploadedVideo', {
     primaryKey: true,
     autoIncrement: true
   },
+  campaign_id: {
+    type: DataTypes.INTEGER,
+    allowNull: true,
+    comment: 'FK to upload_campaigns'
+  },
+  order_index: {
+    type: DataTypes.INTEGER,
+    allowNull: true,
+    defaultValue: 0,
+    comment: 'Order within a campaign (0-based)'
+  },
   account_youtube_id: {
     type: DataTypes.INTEGER,
     allowNull: false
@@ -55,6 +66,11 @@ const UploadedVideo = sequelize.define('UploadedVideo', {
     type: DataTypes.DATE,
     allowNull: true,
     comment: 'Scheduled publish date/time'
+  },
+  scheduled_start_at: {
+    type: DataTypes.DATE,
+    allowNull: true,
+    comment: 'When the server should start this upload (null = process ASAP)'
   },
   status: {
     type: DataTypes.ENUM('pending', 'downloading', 'downloaded', 'uploading', 'completed', 'failed', 'skipped'),

@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { Upload, CheckCircle, XCircle, Loader2, Search, ChevronDown, FileVideo, Link2 } from 'lucide-react';
-import { api, type Account, type BatchUploadVideoItem, type BatchUploadResult } from '@/lib/api';
+import { Upload, CheckCircle, XCircle, Loader2, Search, ChevronDown, FileVideo, Link2, Clock, Trash2, RefreshCw, ChevronUp } from 'lucide-react';
+import { api, type Account, type BatchUploadVideoItem, type BatchUploadResult, type UploadCampaign } from '@/lib/api';
 
 export default function UploadVideoPage() {
   const [channels, setChannels] = useState<Account[]>([]);
@@ -10,17 +10,10 @@ export default function UploadVideoPage() {
   const [uploadMode, setUploadMode] = useState<'url' | 'file'>('url');
   const [urlsText, setUrlsText] = useState('');
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
-  // Track concurrent upload jobs so multiple channels can upload simultaneously
   const [uploads, setUploads] = useState<Array<{
-    id: number;
-    channelId: number;
-    channelName?: string;
-    mode: 'url' | 'file';
-    itemCount: number;
-    status: 'uploading' | 'success' | 'failed';
-    message?: string;
-    results?: BatchUploadResult[];
-    startedAt: number;
+    id: number; channelId: number; channelName?: string; mode: 'url' | 'file';
+    itemCount: number; status: 'uploading' | 'success' | 'failed'; message?: string;
+    results?: BatchUploadResult[]; startedAt: number;
   }>>([]);
   const [results, setResults] = useState<BatchUploadResult[] | null>(null);
   const [loadingChannels, setLoadingChannels] = useState(true);
@@ -28,20 +21,32 @@ export default function UploadVideoPage() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [globalVisibility, setGlobalVisibility] = useState<'public' | 'unlisted' | 'private'>('public');
   const [globalScheduleDate, setGlobalScheduleDate] = useState('');
+  const [scheduleMode, setScheduleMode] = useState<'now' | 'later'>('now');
+  const [scheduledStartAt, setScheduledStartAt] = useState('');
+  // Upload campaigns
+  const [campaigns, setCampaigns] = useState<UploadCampaign[]>([]);
+  const [campaignsLoading, setCampaignsLoading] = useState(false);
+  const [expandedCampaigns, setExpandedCampaigns] = useState<Set<number>>(new Set());
   const dropdownRef = useRef<HTMLDivElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     loadChannels();
+    loadCampaigns();
   }, []);
 
+  // Auto-refresh every 30s when any campaign is active
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsDropdownOpen(false);
-      }
-    };
+    const hasActive = campaigns.some(c => c.status === 'new' || c.status === 'running');
+    if (!hasActive) return;
+    const timer = setInterval(loadCampaigns, 30000);
+    return () => clearInterval(timer);
+  }, [campaigns]);
 
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) setIsDropdownOpen(false);
+    };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
@@ -49,249 +54,163 @@ export default function UploadVideoPage() {
   const loadChannels = async () => {
     try {
       setLoadingChannels(true);
-      const response = await api.accounts.getAccounts({ limit: 1000 });
-      setChannels(response.data);
-    } catch (error) {
-      console.error('Failed to load channels:', error);
-    } finally {
-      setLoadingChannels(false);
-    }
+      const res = await api.accounts.getAccounts({ limit: 1000 });
+      setChannels(res.data);
+    } catch (e) { /* ignore */ } finally { setLoadingChannels(false); }
   };
 
-  // Validate HTTP/HTTPS URL
-  const isValidHttpUrl = (s: string) => {
+  const loadCampaigns = async () => {
     try {
-      const u = new URL(s);
-      return (u.protocol === 'http:' || u.protocol === 'https:');
-    } catch (e) {
-      return false;
-    }
+      setCampaignsLoading(true);
+      const res = await api.upload.getUploadCampaigns({ limit: 50 });
+      setCampaigns(res.data || []);
+    } catch (e) { /* ignore */ } finally { setCampaignsLoading(false); }
   };
 
-  // Parse lines into video items supporting optional "url|title" format
+  const updateCampaignStatus = async (id: number, action: 'hold' | 'release' | 'cancel') => {
+    const labels = { hold: 'tạm dừng', release: 'tiếp tục', cancel: 'hủy' };
+    if (!confirm(`Bạn có chắc muốn ${labels[action]} campaign này?`)) return;
+    try {
+      await api.upload.updateUploadCampaignStatus(id, action);
+      await loadCampaigns();
+    } catch (e: any) { alert(e?.message || 'Failed'); }
+  };
+
+  const toggleExpand = (id: number) => {
+    setExpandedCampaigns(prev => {
+      const s = new Set(prev);
+      s.has(id) ? s.delete(id) : s.add(id);
+      return s;
+    });
+  };
+
+  const isValidHttpUrl = (s: string) => {
+    try { const u = new URL(s); return u.protocol === 'http:' || u.protocol === 'https:'; }
+    catch { return false; }
+  };
+
   const parseVideoItems = (text: string): Array<{ sourceUrl: string; title?: string | null }> => {
     if (!text) return [];
-
-    return text
-      .split('\n')
-      .map(line => line.trim())
-      .filter(line => line.length > 0)
-      .map(line => {
-        // Split at first '|' only — allow '|' inside title
-        const pipeIndex = line.indexOf('|');
-        if (pipeIndex >= 0) {
-          const urlPart = line.slice(0, pipeIndex).trim();
-          const titlePart = line.slice(pipeIndex + 1).trim();
-          return { sourceUrl: urlPart, title: titlePart === '' ? null : titlePart };
-        }
-        return { sourceUrl: line, title: null };
-      })
-      .filter(item => item.sourceUrl && isValidHttpUrl(item.sourceUrl));
+    return text.split('\n').map(l => l.trim()).filter(Boolean).map(line => {
+      const p = line.indexOf('|');
+      if (p >= 0) {
+        const url = line.slice(0, p).trim();
+        const title = line.slice(p + 1).trim();
+        return { sourceUrl: url, title: title || null };
+      }
+      return { sourceUrl: line, title: null };
+    }).filter(i => isValidHttpUrl(i.sourceUrl));
   };
-
-  // Backwards-compatible small helper: return just URLs (used nowhere now but kept for clarity)
-  const extractUrls = (text: string): string[] => parseVideoItems(text).map(i => i.sourceUrl);
 
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(e.target.files || []);
-    
-    if (files.length > 15) {
-      alert('Tối đa 15 files mỗi lần upload');
-      return;
-    }
-
-    // Validate file types (video only)
-    const validFiles = files.filter(file => {
-      const isVideo = file.type.startsWith('video/');
-      if (!isVideo) {
-        alert(`File "${file.name}" không phải là video`);
-      }
-      return isVideo;
-    });
-
-    setSelectedFiles(validFiles);
+    if (files.length > 15) { alert('Tối đa 15 files'); return; }
+    setSelectedFiles(files.filter(f => { const ok = f.type.startsWith('video/'); if (!ok) alert(`"${f.name}" không phải video`); return ok; }));
   };
 
-  const removeFile = (index: number) => {
-    setSelectedFiles(prev => prev.filter((_, i) => i !== index));
-  };
-
-  const formatFileSize = (bytes: number): string => {
-    if (bytes === 0) return '0 Bytes';
-    const k = 1024;
-    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+  const formatFileSize = (bytes: number) => {
+    if (!bytes) return '0 Bytes';
+    const k = 1024, sizes = ['Bytes', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     return Math.round(bytes / Math.pow(k, i) * 100) / 100 + ' ' + sizes[i];
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    if (!selectedChannel) {
-      alert('Vui lòng chọn kênh YouTube');
-      return;
-    }
+    if (!selectedChannel) { alert('Vui lòng chọn kênh YouTube'); return; }
 
-    // Validate based on upload mode
     if (uploadMode === 'url') {
       const videoItems = parseVideoItems(urlsText);
+      if (!videoItems.length) { alert('Vui lòng nhập ít nhất 1 URL'); return; }
+      if (videoItems.length > 15) { alert('Tối đa 15 URLs'); return; }
 
-      if (videoItems.length === 0) {
-        alert('Vui lòng nhập ít nhất 1 URL video (mỗi URL trên 1 dòng)');
+      // ── Hẹn giờ: tạo campaign, cron sẽ xử lý tuần tự ─────────────────────
+      if (scheduleMode === 'later') {
+        if (!scheduledStartAt) { alert('Vui lòng chọn thời gian bắt đầu upload'); return; }
+        try {
+          const res = await api.upload.createUploadCampaign({
+            id: selectedChannel,
+            scheduledStartAt,
+            visibility: globalVisibility,
+            scheduleDate: globalScheduleDate || undefined,
+            videos: videoItems.map(i => ({ sourceUrl: i.sourceUrl, title: i.title || undefined })),
+          });
+          if (res.success) {
+            setUrlsText('');
+            setScheduledStartAt('');
+            alert(res.message);
+            await loadCampaigns();
+          } else {
+            alert(res.message || 'Tạo campaign thất bại');
+          }
+        } catch (err: any) { alert(err?.message || 'Failed'); }
         return;
       }
 
-      if (videoItems.length > 15) {
-        alert('Tối đa 15 videos mỗi lần upload. Bạn đã nhập ' + videoItems.length + ' URLs');
-        return;
-      }
-
-      // create upload job and run asynchronously
+      // ── Upload ngay (batch, không qua queue) ───────────────────────────────
       setResults(null);
       const jobId = Date.now();
       const channelName = selectedChannelData?.channelName;
-      const job = {
-        id: jobId,
-        channelId: selectedChannel,
-        channelName,
-        mode: 'url' as const,
-        itemCount: videoItems.length,
-        status: 'uploading' as const,
-        message: 'Đang upload...',
-        results: undefined,
-        startedAt: Date.now()
-      };
-      setUploads(prev => [job, ...prev]);
+      setUploads(prev => [{ id: jobId, channelId: selectedChannel, channelName, mode: 'url', itemCount: videoItems.length, status: 'uploading', message: 'Đang upload...', startedAt: Date.now() }, ...prev]);
 
       (async () => {
         try {
-          // Build videos array from parsed lines (support optional per-line title)
-          const videos: BatchUploadVideoItem[] = videoItems.map(item => ({
-            sourceUrl: item.sourceUrl,
-            title: item.title || undefined,
-            visibility: globalVisibility,
-            scheduleDate: globalScheduleDate || undefined,
-          }));
-
-          // Call batch upload API
-          const response = await api.upload.batchUpload({
-            id: selectedChannel as number,
-            videos,
-          });
-
-          // update job
-          setUploads(prev => prev.map(j => j.id === jobId ? {
-            ...j,
-            status: 'success',
-            message: 'Hoàn tất',
-            results: response.data?.results || []
-          } : j));
-
-          // also update global results display to show last batch results
-          setResults(response.data?.results || []);
-
-          if (response.success && response.data?.summary.success) {
-            setUrlsText('');
-          }
-        } catch (error: any) {
-          setUploads(prev => prev.map(j => j.id === jobId ? ({ ...j, status: 'failed', message: error?.message || 'Upload failed' }) : j));
-          setResults(prev => prev); // keep previous results
-          // also show simple alert
-          alert(error?.message || 'Upload failed');
+          const videos: BatchUploadVideoItem[] = videoItems.map(i => ({ sourceUrl: i.sourceUrl, title: i.title || undefined, visibility: globalVisibility, scheduleDate: globalScheduleDate || undefined }));
+          const res = await api.upload.batchUpload({ id: selectedChannel, videos });
+          setUploads(prev => prev.map(j => j.id === jobId ? { ...j, status: 'success', message: 'Hoàn tất', results: res.data?.results || [] } : j));
+          setResults(res.data?.results || []);
+          if (res.success) setUrlsText('');
+        } catch (err: any) {
+          setUploads(prev => prev.map(j => j.id === jobId ? { ...j, status: 'failed', message: err?.message || 'Failed' } : j));
+          alert(err?.message || 'Upload failed');
         }
       })();
+
     } else {
-      // Upload files from computer
-      if (selectedFiles.length === 0) {
-        alert('Vui lòng chọn ít nhất 1 file video');
-        return;
-      }
+      // File upload
+      if (!selectedFiles.length) { alert('Vui lòng chọn ít nhất 1 file'); return; }
+      if (selectedFiles.length > 15) { alert('Tối đa 15 files'); return; }
 
-      if (selectedFiles.length > 15) {
-        alert('Tối đa 15 files mỗi lần upload');
-        return;
-      }
-
-      // create job and run async
       const jobId = Date.now();
       const channelName = selectedChannelData?.channelName;
-      const job = {
-        id: jobId,
-        channelId: selectedChannel as number,
-        channelName,
-        mode: 'file' as const,
-        itemCount: selectedFiles.length,
-        status: 'uploading' as const,
-        message: 'Đang upload...',
-        results: undefined,
-        startedAt: Date.now()
-      };
-      setUploads(prev => [job, ...prev]);
+      setUploads(prev => [{ id: jobId, channelId: selectedChannel, channelName, mode: 'file', itemCount: selectedFiles.length, status: 'uploading', message: 'Đang upload...', startedAt: Date.now() }, ...prev]);
 
       (async () => {
         try {
           const formData = new FormData();
-          formData.append('id', (selectedChannel as number).toString());
+          formData.append('id', selectedChannel.toString());
           formData.append('visibility', globalVisibility);
-          if (globalScheduleDate) {
-            formData.append('scheduleDate', globalScheduleDate);
-          }
-
-          selectedFiles.forEach((file) => {
-            formData.append('video', file);
-          });
-
-          const response = await api.upload.batchUploadFiles(formData);
-
-          setUploads(prev => prev.map(j => j.id === jobId ? ({
-            ...j,
-            status: 'success',
-            message: 'Hoàn tất',
-            results: response.data?.results || []
-          }) : j));
-
-          setResults(response.data?.results || []);
-
-          if (response.success && response.data?.summary.success) {
-            setSelectedFiles([]);
-            if (fileInputRef.current) fileInputRef.current.value = '';
-          }
-        } catch (error: any) {
-          setUploads(prev => prev.map(j => j.id === jobId ? ({ ...j, status: 'failed', message: error?.message || 'Upload failed' }) : j));
-          alert(error?.message || 'Upload failed');
+          if (globalScheduleDate) formData.append('scheduleDate', globalScheduleDate);
+          selectedFiles.forEach(f => formData.append('video', f));
+          const res = await api.upload.batchUploadFiles(formData);
+          setUploads(prev => prev.map(j => j.id === jobId ? { ...j, status: 'success', message: 'Hoàn tất', results: res.data?.results || [] } : j));
+          setResults(res.data?.results || []);
+          if (res.success) { setSelectedFiles([]); if (fileInputRef.current) fileInputRef.current.value = ''; }
+        } catch (err: any) {
+          setUploads(prev => prev.map(j => j.id === jobId ? { ...j, status: 'failed', message: err?.message || 'Failed' } : j));
+          alert(err?.message || 'Upload failed');
         }
       })();
     }
   };
 
-  const getMinDateTime = () => {
-    const now = new Date();
-    now.setHours(now.getHours() + 2);
-    return now.toISOString().slice(0, 16);
-  };
+  const getMinDateTime = () => { const d = new Date(); d.setHours(d.getHours() + 2); return d.toISOString().slice(0, 16); };
 
-  const filteredChannels = channels.filter(channel => {
-    const query = searchQuery.toLowerCase();
-    const channelName = (channel.channelName || '').toLowerCase();
-    const email = (channel.email || '').toLowerCase();
-    return channelName.includes(query) || email.includes(query);
+  const filteredChannels = channels.filter(c => {
+    const q = searchQuery.toLowerCase();
+    return (c.channelName || '').toLowerCase().includes(q) || (c.email || '').toLowerCase().includes(q);
   });
 
   const selectedChannelData = channels.find(c => c.id === selectedChannel);
   const urlCount = parseVideoItems(urlsText).length;
-  const fileCount = selectedFiles.length;
-  const itemCount = uploadMode === 'url' ? urlCount : fileCount;
-  const successCount = results?.filter(r => r.success).length || 0;
-  const totalCount = results?.length || 0;
+  const itemCount = uploadMode === 'url' ? urlCount : selectedFiles.length;
 
   return (
     <div className="p-6 max-w-5xl mx-auto">
       <div className="mb-6">
         <h1 className="text-3xl font-bold text-gray-900">🎬 Upload Video</h1>
         <p className="text-sm text-gray-600 mt-2">
-          Upload tối đa <span className="font-semibold text-blue-600">15 videos</span> cùng lúc.{' '}
-          <span className="font-semibold">Nhập URLs</span> để tải từ TikTok, Facebook... hoặc{' '}
-          <span className="font-semibold">Chọn files</span> từ máy tính.
+          <span className="font-semibold">Upload ngay</span> hoặc <span className="font-semibold">hẹn giờ</span> — mỗi campaign upload tuần tự từng video, chỉ 1 campaign chạy tại 1 thời điểm.
         </p>
       </div>
 
@@ -299,87 +218,48 @@ export default function UploadVideoPage() {
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Channel Selection */}
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
-              🎯 Kênh YouTube
-            </label>
+            <label className="block text-sm font-semibold text-gray-700 mb-2">🎯 Kênh YouTube</label>
             {loadingChannels ? (
               <div className="flex items-center justify-center py-8">
                 <Loader2 className="w-6 h-6 animate-spin text-blue-600" />
-                <span className="ml-2 text-sm text-gray-600">Đang tải danh sách kênh...</span>
+                <span className="ml-2 text-sm text-gray-600">Đang tải...</span>
               </div>
             ) : (
               <div className="relative" ref={dropdownRef}>
-                <button
-                  type="button"
-                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-white text-left flex items-center justify-between hover:bg-gray-50 hover:border-blue-400 transition-all"
-                >
+                <button type="button" onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg text-sm bg-white text-left flex items-center justify-between hover:bg-gray-50 hover:border-blue-400 transition-all">
                   {selectedChannelData ? (
                     <div className="flex-1 min-w-0">
-                      <div className="font-semibold text-gray-900 truncate">
-                        {selectedChannelData.channelName || 'Chưa có tên kênh'}
-                      </div>
-                      <div className="text-xs text-gray-500 truncate mt-0.5">
-                        {selectedChannelData.email}
-                      </div>
+                      <div className="font-semibold text-gray-900 truncate">{selectedChannelData.channelName || 'Chưa có tên kênh'}</div>
+                      <div className="text-xs text-gray-500 truncate mt-0.5">{selectedChannelData.email}</div>
                     </div>
-                  ) : (
-                    <span className="text-gray-500">-- Chọn kênh YouTube --</span>
-                  )}
-                  <ChevronDown className={`w-5 h-5 text-gray-400 ml-2 transition-transform ${isDropdownOpen ? 'transform rotate-180' : ''}`} />
+                  ) : <span className="text-gray-500">-- Chọn kênh YouTube --</span>}
+                  <ChevronDown className={`w-5 h-5 text-gray-400 ml-2 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
                 </button>
-
                 {isDropdownOpen && (
                   <div className="absolute z-20 w-full mt-2 bg-white border-2 border-gray-300 rounded-lg shadow-xl max-h-96 overflow-hidden">
                     <div className="p-3 border-b-2 border-gray-200 sticky top-0 bg-white">
                       <div className="relative">
-                        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-                        <input
-                          type="text"
-                          value={searchQuery}
-                          onChange={(e) => setSearchQuery(e.target.value)}
-                          placeholder="Tìm kiếm kênh hoặc email..."
-                          className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                          onClick={(e) => e.stopPropagation()}
-                        />
+                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                        <input type="text" value={searchQuery} onChange={e => setSearchQuery(e.target.value)} placeholder="Tìm kênh hoặc email..."
+                          className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md text-sm" onClick={e => e.stopPropagation()} />
                       </div>
                     </div>
-
                     <div className="max-h-72 overflow-y-auto">
                       {filteredChannels.length === 0 ? (
-                        <div className="px-4 py-8 text-center text-sm text-gray-500">
-                          Không tìm thấy kênh nào
-                        </div>
-                      ) : (
-                        filteredChannels.map((channel) => (
-                          <button
-                            key={channel.id}
-                            type="button"
-                            onClick={() => {
-                              setSelectedChannel(channel.id);
-                              setIsDropdownOpen(false);
-                              setSearchQuery('');
-                            }}
-                            className={`w-full px-4 py-3 text-left hover:bg-blue-50 transition-colors border-b border-gray-100 last:border-b-0 ${
-                              selectedChannel === channel.id ? 'bg-blue-50' : ''
-                            }`}
-                          >
-                            <div className="flex items-start justify-between gap-2">
-                              <div className="flex-1 min-w-0">
-                                <div className="font-medium text-gray-900 text-sm truncate">
-                                  {channel.channelName || 'Chưa có tên kênh'}
-                                </div>
-                                <div className="text-xs text-gray-500 truncate mt-0.5">
-                                  {channel.email}
-                                </div>
-                              </div>
-                              {selectedChannel === channel.id && (
-                                <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                              )}
+                        <div className="px-4 py-8 text-center text-sm text-gray-500">Không tìm thấy kênh</div>
+                      ) : filteredChannels.map(ch => (
+                        <button key={ch.id} type="button" onClick={() => { setSelectedChannel(ch.id); setIsDropdownOpen(false); setSearchQuery(''); }}
+                          className={`w-full px-4 py-3 text-left hover:bg-blue-50 border-b border-gray-100 last:border-b-0 ${selectedChannel === ch.id ? 'bg-blue-50' : ''}`}>
+                          <div className="flex items-start justify-between gap-2">
+                            <div className="flex-1 min-w-0">
+                              <div className="font-medium text-gray-900 text-sm truncate">{ch.channelName || 'Chưa có tên kênh'}</div>
+                              <div className="text-xs text-gray-500 truncate mt-0.5">{ch.email}</div>
                             </div>
-                          </button>
-                        ))
-                      )}
+                            {selectedChannel === ch.id && <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />}
+                          </div>
+                        </button>
+                      ))}
                     </div>
                   </div>
                 )}
@@ -387,239 +267,128 @@ export default function UploadVideoPage() {
             )}
           </div>
 
-          {/* Upload Mode Selection */}
+          {/* Upload Mode */}
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-3">
-              📋 Chọn cách upload
-            </label>
+            <label className="block text-sm font-semibold text-gray-700 mb-3">📋 Chọn cách upload</label>
             <div className="grid grid-cols-2 gap-4">
-              <button
-                type="button"
-                onClick={() => {
-                  setUploadMode('url');
-                  setResults(null);
-                }}
-                className={`p-4 rounded-lg border-2 transition-all ${
-                  uploadMode === 'url'
-                    ? 'bg-blue-50 border-blue-600 shadow-md'
-                    : 'bg-white border-gray-300 hover:border-blue-400'
-                }`}
-              >
-                <div className="flex items-center gap-3">
-                  <Link2 className={`w-6 h-6 ${uploadMode === 'url' ? 'text-blue-600' : 'text-gray-400'}`} />
-                  <div className="text-left">
-                    <div className={`font-semibold ${uploadMode === 'url' ? 'text-blue-900' : 'text-gray-700'}`}>
-                      Nhập URLs
-                    </div>
-                    <div className="text-xs text-gray-500 mt-0.5">
-                      Tải video từ TikTok, Facebook, Instagram...
+              {(['url', 'file'] as const).map(mode => (
+                <button key={mode} type="button" onClick={() => { setUploadMode(mode); setResults(null); }}
+                  className={`p-4 rounded-lg border-2 transition-all ${uploadMode === mode ? 'bg-blue-50 border-blue-600 shadow-md' : 'bg-white border-gray-300 hover:border-blue-400'}`}>
+                  <div className="flex items-center gap-3">
+                    {mode === 'url' ? <Link2 className={`w-6 h-6 ${uploadMode === 'url' ? 'text-blue-600' : 'text-gray-400'}`} /> : <FileVideo className={`w-6 h-6 ${uploadMode === 'file' ? 'text-blue-600' : 'text-gray-400'}`} />}
+                    <div className="text-left">
+                      <div className={`font-semibold ${uploadMode === mode ? 'text-blue-900' : 'text-gray-700'}`}>{mode === 'url' ? 'Nhập URLs' : 'Chọn Files'}</div>
+                      <div className="text-xs text-gray-500 mt-0.5">{mode === 'url' ? 'TikTok, Facebook, Instagram...' : 'Upload file từ máy tính (tối đa 15)'}</div>
                     </div>
                   </div>
-                </div>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => {
-                  setUploadMode('file');
-                  setResults(null);
-                }}
-                className={`p-4 rounded-lg border-2 transition-all ${
-                  uploadMode === 'file'
-                    ? 'bg-blue-50 border-blue-600 shadow-md'
-                    : 'bg-white border-gray-300 hover:border-blue-400'
-                }`}
-              >
-                <div className="flex items-center gap-3">
-                  <FileVideo className={`w-6 h-6 ${uploadMode === 'file' ? 'text-blue-600' : 'text-gray-400'}`} />
-                  <div className="text-left">
-                    <div className={`font-semibold ${uploadMode === 'file' ? 'text-blue-900' : 'text-gray-700'}`}>
-                      Chọn Files
-                    </div>
-                    <div className="text-xs text-gray-500 mt-0.5">
-                      Upload video từ máy tính (tối đa 15 files)
-                    </div>
-                  </div>
-                </div>
-              </button>
+                </button>
+              ))}
             </div>
           </div>
 
-          {/* URLs Input or File Picker */}
+          {/* URL input */}
           {uploadMode === 'url' ? (
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">
-                🔗 Danh sách URLs {urlCount > 0 && (
-                  <span className={`ml-2 text-xs font-medium px-2 py-1 rounded ${
-                    urlCount > 15 ? 'bg-red-100 text-red-700' : 'bg-blue-100 text-blue-700'
-                  }`}>
-                    {urlCount}/15 videos
-                  </span>
-                )}
+                🔗 Danh sách URLs
+                {urlCount > 0 && <span className={`ml-2 text-xs font-medium px-2 py-1 rounded ${urlCount > 15 ? 'bg-red-100 text-red-700' : 'bg-blue-100 text-blue-700'}`}>{urlCount}/15</span>}
               </label>
-              <textarea
-                value={urlsText}
-                onChange={(e) => setUrlsText(e.target.value)}
-                placeholder={`Nhập URLs của video (mỗi URL trên 1 dòng, tối đa 15 URLs). Ghi chú: bạn có thể truyền kèm tiêu đề bằng cú pháp:\nhttps://...| Your title here\nNếu không có '|' tiêu đề sẽ được lấy từ metadata hoặc để trống.
-
-Ví dụ:
-https://www.facebook.com/reel/123456789
-https://www.tiktok.com/@user/video/123456789
-https://www.instagram.com/reel/ABC123/
-https://drive.google.com/file/d/...
-`}
-                rows={12}
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm font-mono resize-none"
-                required
-              />
-              <p className="text-xs text-gray-500 mt-2">
-                ✅ Hỗ trợ: Facebook, TikTok, Instagram, Twitter, Google Drive, và nhiều nền tảng khác
-              </p>
+              <textarea value={urlsText} onChange={e => setUrlsText(e.target.value)} rows={10}
+                placeholder={`Mỗi URL trên 1 dòng. Hỗ trợ cú pháp: URL|Tiêu đề\n\nhttps://www.facebook.com/reel/...\nhttps://www.tiktok.com/@user/video/...\nhttps://www.facebook.com/reel/...|Tiêu đề tùy chọn`}
+                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg text-sm font-mono resize-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
             </div>
           ) : (
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">
-                📁 Chọn video files {fileCount > 0 && (
-                  <span className={`ml-2 text-xs font-medium px-2 py-1 rounded ${
-                    fileCount > 15 ? 'bg-red-100 text-red-700' : 'bg-blue-100 text-blue-700'
-                  }`}>
-                    {fileCount}/15 files
-                  </span>
-                )}
+                📁 Chọn video files
+                {selectedFiles.length > 0 && <span className={`ml-2 text-xs font-medium px-2 py-1 rounded ${selectedFiles.length > 15 ? 'bg-red-100 text-red-700' : 'bg-blue-100 text-blue-700'}`}>{selectedFiles.length}/15</span>}
               </label>
-              
-              <input
-                ref={fileInputRef}
-                type="file"
-                accept="video/*"
-                multiple
-                onChange={handleFileSelect}
-                className="hidden"
-                id="file-upload"
-              />
-              
-              <label
-                htmlFor="file-upload"
-                className="flex flex-col items-center justify-center w-full h-40 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-blue-400 hover:bg-blue-50 transition-all"
-              >
-                <FileVideo className="w-12 h-12 text-gray-400 mb-2" />
+              <input ref={fileInputRef} type="file" accept="video/*" multiple onChange={handleFileSelect} className="hidden" id="file-upload" />
+              <label htmlFor="file-upload" className="flex flex-col items-center justify-center w-full h-36 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-blue-400 hover:bg-blue-50 transition-all">
+                <FileVideo className="w-10 h-10 text-gray-400 mb-2" />
                 <span className="text-sm font-medium text-gray-700">Click để chọn files</span>
-                <span className="text-xs text-gray-500 mt-1">Hoặc kéo thả files vào đây</span>
-                <span className="text-xs text-gray-400 mt-2">Tối đa 15 files, định dạng video (.mp4, .mov, .avi...)</span>
+                <span className="text-xs text-gray-400 mt-1">Tối đa 15 files .mp4 .mov .avi</span>
               </label>
-
               {selectedFiles.length > 0 && (
-                <div className="mt-4 space-y-2">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-medium text-gray-700">
-                      {selectedFiles.length} file{selectedFiles.length > 1 ? 's' : ''} đã chọn
-                    </span>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setSelectedFiles([]);
-                        if (fileInputRef.current) fileInputRef.current.value = '';
-                      }}
-                      className="text-xs text-red-600 hover:text-red-800 font-medium"
-                    >
-                      Xóa tất cả
-                    </button>
-                  </div>
-                  <div className="max-h-60 overflow-y-auto space-y-2 border border-gray-200 rounded-lg p-3">
-                    {selectedFiles.map((file, index) => (
-                      <div
-                        key={index}
-                        className="flex items-center justify-between p-2 bg-gray-50 rounded border border-gray-200 hover:bg-gray-100 transition-colors"
-                      >
-                        <div className="flex items-center gap-2 flex-1 min-w-0">
-                          <FileVideo className="w-4 h-4 text-blue-600 flex-shrink-0" />
-                          <div className="flex-1 min-w-0">
-                            <div className="text-sm font-medium text-gray-900 truncate">
-                              {file.name}
-                            </div>
-                            <div className="text-xs text-gray-500">
-                              {formatFileSize(file.size)}
-                            </div>
-                          </div>
-                        </div>
-                        <button
-                          type="button"
-                          onClick={() => removeFile(index)}
-                          className="ml-2 text-red-600 hover:text-red-800 flex-shrink-0"
-                        >
-                          <XCircle className="w-5 h-5" />
-                        </button>
+                <div className="mt-3 space-y-1 max-h-48 overflow-y-auto border border-gray-200 rounded-lg p-2">
+                  {selectedFiles.map((f, i) => (
+                    <div key={i} className="flex items-center justify-between p-2 bg-gray-50 rounded">
+                      <div className="flex items-center gap-2 min-w-0">
+                        <FileVideo className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                        <span className="text-sm text-gray-800 truncate">{f.name}</span>
+                        <span className="text-xs text-gray-400 flex-shrink-0">{formatFileSize(f.size)}</span>
                       </div>
-                    ))}
-                  </div>
+                      <button type="button" onClick={() => setSelectedFiles(prev => prev.filter((_, j) => j !== i))} className="ml-2 text-red-500 hover:text-red-700">
+                        <XCircle className="w-4 h-4" />
+                      </button>
+                    </div>
+                  ))}
                 </div>
               )}
             </div>
           )}
 
-          {/* Global Settings */}
-          <div className="border-t-2 border-gray-200 pt-6">
-            <h3 className="text-sm font-semibold text-gray-700 mb-4">⚙️ Cài đặt chung cho tất cả videos</h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Visibility */}
+          {/* Settings */}
+          <div className="border-t-2 border-gray-200 pt-6 space-y-5">
+            <h3 className="text-sm font-semibold text-gray-700">⚙️ Cài đặt</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div>
-                <label className="block text-sm font-medium text-gray-600 mb-2">
-                  Chế độ hiển thị
-                </label>
+                <label className="block text-sm font-medium text-gray-600 mb-2">Chế độ hiển thị</label>
                 <div className="grid grid-cols-3 gap-2">
-                  {(['public', 'unlisted', 'private'] as const).map((vis) => (
-                    <button
-                      key={vis}
-                      type="button"
-                      onClick={() => setGlobalVisibility(vis)}
-                      className={`px-3 py-2 rounded-md border-2 text-xs font-medium transition-all ${
-                        globalVisibility === vis
-                          ? 'bg-blue-600 text-white border-blue-600 shadow-md'
-                          : 'bg-white text-gray-700 border-gray-300 hover:border-blue-400'
-                      }`}
-                    >
-                      {vis === 'public' && '�� Public'}
-                      {vis === 'unlisted' && '🔗 Unlisted'}
-                      {vis === 'private' && '🔒 Private'}
+                  {(['public', 'unlisted', 'private'] as const).map(vis => (
+                    <button key={vis} type="button" onClick={() => setGlobalVisibility(vis)}
+                      className={`px-3 py-2 rounded-md border-2 text-xs font-medium transition-all ${globalVisibility === vis ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-gray-700 border-gray-300 hover:border-blue-400'}`}>
+                      {vis === 'public' ? '🌐 Public' : vis === 'unlisted' ? '🔗 Unlisted' : '🔒 Private'}
                     </button>
                   ))}
                 </div>
               </div>
-
-              {/* Schedule Date */}
               <div>
-                <label className="block text-sm font-medium text-gray-600 mb-2">
-                  Lên lịch đăng (tùy chọn)
-                </label>
-                <input
-                  type="datetime-local"
-                  value={globalScheduleDate}
-                  onChange={(e) => setGlobalScheduleDate(e.target.value)}
-                  min={getMinDateTime()}
-                  className="w-full px-3 py-2 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
-                />
-                <p className="text-xs text-gray-500 mt-1">
-                  Để trống để đăng ngay
-                </p>
+                <label className="block text-sm font-medium text-gray-600 mb-2">Ngày YouTube đăng (tuỳ chọn)</label>
+                <input type="datetime-local" value={globalScheduleDate} onChange={e => setGlobalScheduleDate(e.target.value)} min={getMinDateTime()}
+                  className="w-full px-3 py-2 border-2 border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-500" />
+                <p className="text-xs text-gray-400 mt-1">Để trống = đăng ngay sau khi upload</p>
               </div>
+            </div>
+
+            {/* Upload timing */}
+            <div>
+              <label className="block text-sm font-medium text-gray-600 mb-2">⏰ Thời điểm upload</label>
+              <div className="grid grid-cols-2 gap-3">
+                <button type="button" onClick={() => setScheduleMode('now')}
+                  className={`p-3 rounded-lg border-2 text-sm font-medium flex items-center justify-center gap-2 transition-all ${scheduleMode === 'now' ? 'bg-green-50 border-green-600 text-green-800 shadow-md' : 'bg-white border-gray-300 text-gray-700 hover:border-green-400'}`}>
+                  <Upload className="w-4 h-4" /> Upload ngay
+                </button>
+                <button type="button" onClick={() => setScheduleMode('later')} disabled={uploadMode === 'file'}
+                  className={`p-3 rounded-lg border-2 text-sm font-medium flex items-center justify-center gap-2 transition-all disabled:opacity-40 disabled:cursor-not-allowed ${scheduleMode === 'later' ? 'bg-orange-50 border-orange-500 text-orange-800 shadow-md' : 'bg-white border-gray-300 text-gray-700 hover:border-orange-400'}`}>
+                  <Clock className="w-4 h-4" /> Hẹn giờ
+                </button>
+              </div>
+              {scheduleMode === 'later' && (
+                <div className="mt-3 p-4 bg-orange-50 border-2 border-orange-200 rounded-lg">
+                  <label className="block text-sm font-medium text-orange-800 mb-2">🕐 Server bắt đầu upload lúc</label>
+                  <input type="datetime-local" value={scheduledStartAt} onChange={e => setScheduledStartAt(e.target.value)} min={new Date().toISOString().slice(0, 16)}
+                    className="w-full px-3 py-2 border-2 border-orange-300 rounded-md text-sm bg-white focus:ring-2 focus:ring-orange-400" required={scheduleMode === 'later'} />
+                  <p className="text-xs text-orange-600 mt-2">
+                    Cron chạy mỗi 5 phút. Các video trong campaign được upload <strong>tuần tự</strong> từng cái một. Chỉ 1 campaign chạy tại 1 thời điểm.
+                  </p>
+                </div>
+              )}
             </div>
           </div>
 
-          {/* Submit Button */}
-          <button
-            type="submit"
-            disabled={!selectedChannel || itemCount === 0 || itemCount > 15}
-            className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 disabled:from-gray-300 disabled:to-gray-400 disabled:cursor-not-allowed transition-all flex items-center justify-center text-base shadow-lg disabled:shadow-none"
-          >
-            <>
-              <Upload className="w-5 h-5 mr-2" />
-              Upload {itemCount} {uploadMode === 'url' ? 'Video' : 'File'}{itemCount > 1 ? 's' : ''}
-            </>
-           </button>
-         </form>
+          {/* Submit */}
+          <button type="submit" disabled={!selectedChannel || itemCount === 0 || itemCount > 15 || (scheduleMode === 'later' && !scheduledStartAt)}
+            className={`w-full text-white px-6 py-4 rounded-lg font-semibold flex items-center justify-center gap-2 text-base shadow-lg disabled:shadow-none disabled:cursor-not-allowed transition-all ${
+              scheduleMode === 'later'
+                ? 'bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 disabled:from-gray-300 disabled:to-gray-400'
+                : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 disabled:from-gray-300 disabled:to-gray-400'
+            }`}>
+            {scheduleMode === 'later' ? <><Clock className="w-5 h-5" /> Tạo campaign {itemCount} video{itemCount > 1 ? 's' : ''}</> : <><Upload className="w-5 h-5" /> Upload ngay {itemCount} {uploadMode === 'url' ? 'video' : 'file'}{itemCount > 1 ? 's' : ''}</>}
+          </button>
+        </form>
 
-        {/* Active upload jobs */}
+        {/* Immediate upload jobs */}
         {uploads.length > 0 && (
           <div className="mt-6 space-y-2">
             {uploads.map(job => (
@@ -629,22 +398,126 @@ https://drive.google.com/file/d/...
                     {job.mode === 'url' ? 'URL upload' : 'File upload'} • {job.channelName || job.channelId}
                     <div className="text-xs text-gray-600">{job.itemCount} items • {job.status}</div>
                   </div>
-                  <div className="text-sm font-medium">
-                    {job.status === 'uploading' && <Loader2 className="w-4 h-4 animate-spin text-blue-600" />}
-                    {job.status === 'success' && <CheckCircle className="w-4 h-4 text-green-600" />}
-                    {job.status === 'failed' && <XCircle className="w-4 h-4 text-red-600" />}
-                  </div>
+                  {job.status === 'uploading' && <Loader2 className="w-4 h-4 animate-spin text-blue-600" />}
+                  {job.status === 'success' && <CheckCircle className="w-4 h-4 text-green-600" />}
+                  {job.status === 'failed' && <XCircle className="w-4 h-4 text-red-600" />}
                 </div>
-                {job.message && <div className="text-xs text-gray-700 mt-2 font-mono">{job.message}</div>}
                 {job.results && job.results.length > 0 && (
-                  <div className="text-xs text-gray-700 mt-2">
-                    {job.results.map(r => (
-                      <div key={r.index} className="truncate">#{r.index} - {r.message}</div>
-                    ))}
+                  <div className="text-xs text-gray-700 mt-2 space-y-0.5">
+                    {job.results.map(r => <div key={r.index} className="truncate">#{r.index} {r.success ? '✅' : '❌'} {r.message}</div>)}
                   </div>
                 )}
               </div>
             ))}
+          </div>
+        )}
+      </div>
+
+      {/* Upload Campaigns */}
+      <div className="mt-6 bg-white rounded-lg shadow-md border border-gray-200 p-6">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-bold text-gray-900 flex items-center gap-2">
+            <Clock className="w-5 h-5 text-orange-500" />
+            Upload Campaigns
+            {campaigns.length > 0 && <span className="text-sm font-medium bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full">{campaigns.length}</span>}
+          </h2>
+          <button onClick={loadCampaigns} disabled={campaignsLoading} className="flex items-center gap-1.5 text-sm text-gray-600 hover:text-gray-900 px-3 py-1.5 rounded-md border border-gray-300 hover:bg-gray-50">
+            <RefreshCw className={`w-4 h-4 ${campaignsLoading ? 'animate-spin' : ''}`} /> Refresh
+          </button>
+        </div>
+
+        {campaigns.length === 0 ? (
+          <div className="text-center py-8 text-gray-400 text-sm">Chưa có campaign nào</div>
+        ) : (
+          <div className="space-y-3">
+            {campaigns.map(c => {
+              const isExpanded = expandedCampaigns.has(c.id);
+              const statusCfg = {
+                new: { bg: 'bg-yellow-50 border-yellow-300', badge: 'bg-yellow-100 text-yellow-800', label: 'Chờ' },
+                running: { bg: 'bg-blue-50 border-blue-300', badge: 'bg-blue-100 text-blue-800', label: 'Đang chạy' },
+                pending: { bg: 'bg-gray-50 border-gray-300', badge: 'bg-gray-100 text-gray-600', label: 'Tạm dừng' },
+                done: { bg: 'bg-green-50 border-green-300', badge: 'bg-green-100 text-green-800', label: 'Hoàn tất' },
+              }[c.status] || { bg: 'bg-gray-50 border-gray-300', badge: 'bg-gray-100 text-gray-600', label: c.status };
+
+              const pct = c.total_videos > 0 ? Math.round((c.completedVideos / c.total_videos) * 100) : 0;
+
+              return (
+                <div key={c.id} className={`rounded-lg border-2 ${statusCfg.bg}`}>
+                  {/* Header */}
+                  <div className="p-4">
+                    <div className="flex items-start justify-between gap-2">
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${statusCfg.badge}`}>{statusCfg.label}</span>
+                          <span className="text-xs text-gray-500">#{c.id}</span>
+                          {c.status === 'running' && <Loader2 className="w-3.5 h-3.5 animate-spin text-blue-600" />}
+                          {c.account?.channel_name && <span className="text-xs text-gray-600 font-medium">{c.account.channel_name}</span>}
+                        </div>
+                        <div className="mt-1 text-sm font-semibold text-gray-800 truncate">{c.name}</div>
+                        <div className="flex items-center gap-3 mt-1 text-xs text-gray-500 flex-wrap">
+                          <span>{c.completedVideos}/{c.total_videos} videos</span>
+                          {c.failedVideos > 0 && <span className="text-red-600">{c.failedVideos} lỗi</span>}
+                          {c.scheduled_start_at && <span>⏰ {new Date(c.scheduled_start_at).toLocaleString('vi-VN')}</span>}
+                        </div>
+                        {/* Progress bar */}
+                        {c.status !== 'new' && (
+                          <div className="mt-2 h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                            <div className="h-full bg-blue-500 rounded-full transition-all" style={{ width: `${pct}%` }} />
+                          </div>
+                        )}
+                      </div>
+                      <div className="flex items-center gap-1 flex-shrink-0">
+                        {c.status === 'running' && (
+                          <button onClick={() => updateCampaignStatus(c.id, 'hold')} title="Tạm dừng" className="p-1.5 text-yellow-600 hover:bg-yellow-100 rounded transition-colors text-xs font-medium px-2">Pause</button>
+                        )}
+                        {c.status === 'pending' && (
+                          <button onClick={() => updateCampaignStatus(c.id, 'release')} title="Tiếp tục" className="p-1.5 text-green-600 hover:bg-green-100 rounded transition-colors text-xs font-medium px-2">Resume</button>
+                        )}
+                        {(c.status === 'new' || c.status === 'pending') && (
+                          <button onClick={() => updateCampaignStatus(c.id, 'cancel')} title="Hủy campaign" className="p-1.5 text-red-500 hover:bg-red-100 rounded transition-colors">
+                            <Trash2 className="w-4 h-4" />
+                          </button>
+                        )}
+                        <button onClick={() => toggleExpand(c.id)} className="p-1.5 text-gray-500 hover:bg-gray-200 rounded transition-colors">
+                          {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Expanded: video list */}
+                  {isExpanded && (
+                    <div className="border-t border-gray-200 divide-y divide-gray-100">
+                      {(c.videos || []).sort((a, b) => a.order_index - b.order_index).map(v => {
+                        const vCfg = {
+                          pending: { icon: '⏳', color: 'text-gray-500' },
+                          downloading: { icon: '📥', color: 'text-blue-600' },
+                          uploading: { icon: '📤', color: 'text-purple-600' },
+                          completed: { icon: '✅', color: 'text-green-600' },
+                          failed: { icon: '❌', color: 'text-red-600' },
+                          skipped: { icon: '⏭️', color: 'text-gray-400' },
+                        }[v.status] || { icon: '•', color: 'text-gray-400' };
+
+                        return (
+                          <div key={v.id} className="px-4 py-2.5 flex items-center gap-3">
+                            <span className="text-base flex-shrink-0">{vCfg.icon}</span>
+                            <div className="flex-1 min-w-0">
+                              <div className="text-xs font-medium text-gray-700 truncate">{v.title || v.source_url}</div>
+                              {v.title && <div className="text-xs text-gray-400 truncate">{v.source_url}</div>}
+                              {v.error_message && <div className="text-xs text-red-500 truncate">{v.error_message}</div>}
+                            </div>
+                            {v.video_url && (
+                              <a href={v.video_url} target="_blank" rel="noopener noreferrer" className="text-xs text-blue-600 hover:underline flex-shrink-0">Xem</a>
+                            )}
+                            {(v.status === 'downloading' || v.status === 'uploading') && <Loader2 className="w-3.5 h-3.5 animate-spin text-blue-600 flex-shrink-0" />}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         )}
       </div>

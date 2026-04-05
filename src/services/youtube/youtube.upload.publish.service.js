@@ -266,27 +266,34 @@ class YoutubeUploadPublishService {
         // Processing bị delay: "Processing delayed up to a few hours"
         const isProcessingDelayed = /Processing delayed/i.test(txt) || /delayed up to/i.test(txt) || /Xử lý bị trì hoãn/i.test(txt);
 
-        // Có thể đóng khi: upload xong HOẶC đang SD HOẶC processing delayed (không còn % uploading)
-        const canClose = !isUploading && (isUploadComplete || isProcessingSD || isProcessingDelayed);
+        // Video đã publish xong — YouTube hiển thị "Video published" dialog / share dialog
+        const isVideoPublished = /Video published/i.test(txt) || /Video đã đăng/i.test(txt);
+        const hasShareDialog = !!document.querySelector('ytcp-video-share-dialog');
+
+        // Có thể đóng khi không còn uploading VÀ một trong các trạng thái "done"
+        const canClose = !isUploading && (isUploadComplete || isProcessingSD || isProcessingDelayed || isVideoPublished || hasShareDialog);
 
         const pctMatch = txt.match(/Uploading\s+(\d+)\s*%/i) || txt.match(/Đang tải lên\s+(\d+)\s*%/i);
         const pct = pctMatch ? parseInt(pctMatch[1], 10) : null;
 
-        return { isUploading, isUploadComplete, isProcessingSD, isProcessingDelayed, canClose, pct };
+        return { isUploading, isUploadComplete, isProcessingSD, isProcessingDelayed, isVideoPublished, hasShareDialog, canClose, pct };
       });
 
       const elapsed = Math.floor((Date.now() - closeStart) / 1000);
-      console.log(`   post-publish [${elapsed}s]: uploading=${status.isUploading}(${status.pct ?? '-'}%), uploadComplete=${status.isUploadComplete}, processingSD=${status.isProcessingSD}, processingDelayed=${status.isProcessingDelayed}, canClose=${status.canClose}`);
+      console.log(`   post-publish [${elapsed}s]: uploading=${status.isUploading}(${status.pct ?? '-'}%), uploadComplete=${status.isUploadComplete}, processingSD=${status.isProcessingSD}, processingDelayed=${status.isProcessingDelayed}, videoPublished=${status.isVideoPublished}, shareDialog=${status.hasShareDialog}, canClose=${status.canClose}`);
 
       if (status.canClose) {
         // Thử click Close
         closeClicked = await page.evaluate(() => {
           const trySelectors = [
+            // Button bên trong custom element #close-button (footer)
+            '#close-button button',
+            // Icon button bên trong close icon (header)
+            '#close-icon-button button',
             'button[aria-label="Close"]',
             'button[aria-label="Đóng"]',
             'button[title="Close"]',
             'button[title="Đóng"]',
-            '#close-button'
           ];
           for (const sel of trySelectors) {
             try {

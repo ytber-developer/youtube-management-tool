@@ -1,112 +1,109 @@
 /**
  * Campaign Service
- * Manages watch campaigns with sequential video processing.
- * Cron runs every 5 minutes — picks 3 pending tasks for current video,
- * runs them concurrently, then advances to next video when all done.
+ *
+ * Task model: cross-product — every account watches every video.
+ *   N accounts × M videos = N×M batch
+ *   For each video: process batch_size accounts at a time, sequentially.
+ *   After all accounts finish video[i] → advance to video[i+1].
+ *
+ * Campaign statuses:
+ *   new     — just created, waiting in queue
+ *   running — currently being processed (max 1 at a time)
+ *   pending — manually held by user, skipped by cron
+ *   done    — completed
+ *
+ * Cron logic each tick:
+ *   1. If any WatchTask is status=running globally → skip (tabs still open)
+ *   2. Find the single 'running' campaign → process it
+ *   3. If none, promote oldest 'new' campaign → running
+ *   4. 'pending' campaigns are never auto-promoted
  */
 
 const cron = require('node-cron');
-const { Op } = require('sequelize');
 const WatchCampaign = require('../models/WatchCampaign');
 const WatchTask = require('../models/WatchTask');
 const { AccountYoutube } = require('../models');
 const watchController = require('../controllers/watch.controller');
 
-const BATCH_SIZE = 3;
-const MAX_DURATION = 120; // 2 minutes max
-
 let cronJob = null;
 let isProcessing = false;
 
+// ─── Task generation ──────────────────────────────────────────────────────────
+
 /**
- * Generate tasks for a campaign (account × video cross product, sequential by video)
+ * 1-to-1: account[i] → video[i % numVideos]
+ * 10 accounts, 3 videos → 10 tasks, each account watches exactly 1 video.
+ * Consecutive tasks naturally cover all URLs: acc1→v1, acc2→v2, acc3→v3, acc4→v1...
+ * No duplicate accounts in a batch → no Chrome profile lock conflicts.
  */
 async function generateTasks(campaign) {
   const videoUrls = campaign.video_urls;
   const accountIds = campaign.account_ids;
+  const numVideos = videoUrls.length;
 
-  const tasks = [];
-  for (let vIdx = 0; vIdx < videoUrls.length; vIdx++) {
-    for (const accountId of accountIds) {
-      tasks.push({
-        campaign_id: campaign.id,
-        account_id: accountId,
-        video_url: videoUrls[vIdx],
-        video_index: vIdx,
-        status: 'pending'
-      });
-    }
-  }
+  const tasks = accountIds.map((accountId, i) => ({
+    campaign_id: campaign.id,
+    account_id: accountId,
+    video_url: videoUrls[i % numVideos],
+    video_index: i % numVideos,
+    status: 'pending'
+  }));
 
   await WatchTask.bulkCreate(tasks);
-  console.log(`✅ [Campaign ${campaign.id}] Generated ${tasks.length} tasks (${videoUrls.length} videos × ${accountIds.length} accounts)`);
+  console.log(`✅ [Campaign ${campaign.id}] Generated ${tasks.length} tasks (${accountIds.length} accounts → ${numVideos} videos, 1-to-1 round-robin)`);
 }
 
+// ─── Campaign processor ───────────────────────────────────────────────────────
+
 /**
- * Process one batch for a running campaign
+ * Process next batch for a campaign.
+ * Tasks are 1-to-1 (account[i] → video[i % N]), so picking batchSize consecutive
+ * pending tasks in id order naturally covers all video URLs without duplicate accounts.
+ *
+ * Example: 3 videos, 10 accounts, batch_size=3
+ *   Batch 1: acc1→v1, acc2→v2, acc3→v3
+ *   Batch 2: acc4→v1, acc5→v2, acc6→v3
+ *   Batch 3: acc7→v1, acc8→v2, acc9→v3
+ *   Batch 4: acc10→v1
  */
 async function processCampaign(campaign) {
-  const videoUrls = campaign.video_urls;
-  const currentIdx = campaign.current_video_index;
+  const numVideos = campaign.video_urls.length;
+  const batchSize = campaign.batch_size || 5;
 
-  // Safety: campaign already finished
-  if (currentIdx >= videoUrls.length) {
+  const totalPending = await WatchTask.count({
+    where: { campaign_id: campaign.id, status: 'pending' }
+  });
+  if (totalPending === 0) {
     await campaign.update({ status: 'done' });
-    console.log(`🏁 [Campaign ${campaign.id}] All videos done`);
+    console.log(`🏁 [Campaign ${campaign.id}] All tasks done`);
     return;
   }
 
-  // Check if any tasks for current video are still running
-  const runningCount = await WatchTask.count({
-    where: { campaign_id: campaign.id, video_index: currentIdx, status: 'running' }
-  });
-  if (runningCount > 0) {
-    console.log(`⏳ [Campaign ${campaign.id}] Video ${currentIdx + 1} — ${runningCount} tasks still running, skipping tick`);
-    return;
-  }
-
-  // Check if all tasks for current video are done/failed
-  const pendingCount = await WatchTask.count({
-    where: { campaign_id: campaign.id, video_index: currentIdx, status: 'pending' }
-  });
-
-  if (pendingCount === 0) {
-    // Advance to next video
-    const nextIdx = currentIdx + 1;
-    if (nextIdx >= videoUrls.length) {
-      await campaign.update({ status: 'done', current_video_index: nextIdx });
-      console.log(`🏁 [Campaign ${campaign.id}] Completed all ${videoUrls.length} videos`);
-    } else {
-      await campaign.update({ current_video_index: nextIdx });
-      console.log(`➡️  [Campaign ${campaign.id}] Advancing to video ${nextIdx + 1}/${videoUrls.length}`);
-    }
-    return;
-  }
-
-  // Pick next batch of pending tasks
-  const tasks = await WatchTask.findAll({
-    where: { campaign_id: campaign.id, video_index: currentIdx, status: 'pending' },
-    limit: BATCH_SIZE,
+  // Pick next batchSize pending tasks in creation order — no interleaving needed
+  const batch = await WatchTask.findAll({
+    where: { campaign_id: campaign.id, status: 'pending' },
+    limit: batchSize,
     order: [['id', 'ASC']]
   });
 
-  if (tasks.length === 0) return;
+  if (batch.length === 0) return;
 
-  console.log(`\n🚀 [Campaign ${campaign.id}] Video ${currentIdx + 1}/${videoUrls.length}: running ${tasks.length} tasks...`);
+  const videoIndicesInBatch = [...new Set(batch.map(t => t.video_index + 1))];
+  const doneCount = await WatchTask.count({ where: { campaign_id: campaign.id, status: 'done' } });
+  const total = await WatchTask.count({ where: { campaign_id: campaign.id } });
+  console.log(`\n🚀 [Campaign ${campaign.id}] Batch: ${batch.length} tabs — videos [${videoIndicesInBatch.join(', ')}/${numVideos}] — progress ${doneCount}/${total}`);
 
-  // Mark as running
   await WatchTask.update(
     { status: 'running', started_at: new Date() },
-    { where: { id: tasks.map(t => t.id) } }
+    { where: { id: batch.map(t => t.id) } }
   );
 
-  // Fetch accounts for these tasks
-  const accountIds = tasks.map(t => t.account_id);
+  const accountIds = batch.map(t => t.account_id);
   const accounts = await AccountYoutube.findAll({ where: { id: accountIds } });
   const accountMap = Object.fromEntries(accounts.map(a => [a.id, a]));
 
   const options = campaign.options || {};
-  const duration = Math.min(campaign.max_duration, MAX_DURATION);
+  const durationSeconds = (campaign.watch_duration_minutes || 5) * 60;
 
   const watchOptions = {
     humanBehavior: options.humanBehavior !== false,
@@ -116,21 +113,22 @@ async function processCampaign(campaign) {
     autoComment: !!options.autoComment
   };
 
-  // Run batch concurrently
-  const promises = tasks.map(task => {
+  const promises = batch.map(task => {
     const account = accountMap[task.account_id] || null;
-    return watchController.watchInSingleTab(task.video_url, duration, account, task.id, watchOptions, null)
+    return watchController.watchInSingleTab(task.video_url, durationSeconds, account, task.id, watchOptions, null)
       .then(async (result) => {
         await task.update({
-          status: result.success ? 'done' : 'failed',
-          error: result.error || null,
-          finished_at: new Date()
+          status: 'done',
+          finished_at: new Date(),
+          actual_duration_seconds: result.actualDuration || 0
         });
-        console.log(`${result.success ? '✅' : '❌'} [Campaign ${campaign.id}] Task ${task.id} (account ${task.account_id}) → ${result.success ? 'done' : result.error}`);
+        const label = account ? account.email : `acc#${task.account_id}`;
+        console.log(`✅ [Campaign ${campaign.id}] ${label} video[${task.video_index}] → ${result.actualDuration || 0}s`);
       })
       .catch(async (err) => {
-        await task.update({ status: 'failed', error: err.message, finished_at: new Date() });
-        console.error(`❌ [Campaign ${campaign.id}] Task ${task.id} error: ${err.message}`);
+        // Browser closed or crashed mid-watch — still count as done
+        await task.update({ status: 'done', finished_at: new Date(), actual_duration_seconds: 0 });
+        console.warn(`⚠️  [Campaign ${campaign.id}] Task ${task.id} interrupted (${err.message}) — marked done`);
       });
   });
 
@@ -138,9 +136,8 @@ async function processCampaign(campaign) {
   console.log(`✅ [Campaign ${campaign.id}] Batch done\n`);
 }
 
-/**
- * Main cron tick — runs every 5 minutes
- */
+// ─── Cron tick ────────────────────────────────────────────────────────────────
+
 async function cronTick() {
   if (isProcessing) {
     console.log('⏭️  [Cron] Previous tick still running, skipping');
@@ -150,17 +147,32 @@ async function cronTick() {
   isProcessing = true;
 
   try {
-    const runningCampaigns = await WatchCampaign.findAll({
-      where: { status: 'running' }
-    });
-
-    if (runningCampaigns.length === 0) return;
-
-    console.log(`\n⏰ [Cron] Tick — ${runningCampaigns.length} active campaign(s)`);
-
-    for (const campaign of runningCampaigns) {
-      await processCampaign(campaign);
+    // If any task is still running globally (e.g. Chrome tabs still open), skip
+    const globalRunning = await WatchTask.count({ where: { status: 'running' } });
+    if (globalRunning > 0) {
+      console.log(`⏳ [Cron] ${globalRunning} task(s) still running globally — skipping tick`);
+      return;
     }
+
+    // Find the single active running campaign
+    let campaign = await WatchCampaign.findOne({ where: { status: 'running' } });
+
+    // No running campaign — promote oldest 'new' to running
+    if (!campaign) {
+      const next = await WatchCampaign.findOne({
+        where: { status: 'new' },
+        order: [['createdAt', 'ASC']]
+      });
+      if (!next) return; // nothing queued
+
+      await next.update({ status: 'running' });
+      campaign = await WatchCampaign.findByPk(next.id);
+      console.log(`\n▶️  [Cron] Starting campaign ${campaign.id} "${campaign.name}"`);
+    }
+
+    console.log(`\n⏰ [Cron] Processing campaign ${campaign.id} "${campaign.name}"`);
+    await processCampaign(campaign);
+
   } catch (err) {
     console.error('❌ [Cron] Error:', err.message);
   } finally {
@@ -169,26 +181,42 @@ async function cronTick() {
 }
 
 /**
- * Start the cron job (called once on server startup)
+ * Called once on server startup.
+ * If the server crashed mid-run, tasks stuck in 'running' will block the cron forever.
+ * Reset them back to 'pending' so they get retried in the next tick.
  */
+async function recoverStuckTasks() {
+  const stuckTasks = await WatchTask.count({ where: { status: 'running' } });
+  if (stuckTasks === 0) return;
+
+  await WatchTask.update(
+    { status: 'pending', started_at: null },
+    { where: { status: 'running' } }
+  );
+  console.log(`♻️  [Recovery] Reset ${stuckTasks} stuck task(s) → pending`);
+}
+
 function startCron() {
   if (cronJob) return;
   cronJob = cron.schedule('*/5 * * * *', cronTick);
   console.log('✅ Campaign cron started (every 5 minutes)');
 }
 
+// ─── Public API ───────────────────────────────────────────────────────────────
+
 /**
- * Create a new campaign and generate tasks
+ * Create campaign with status 'new' (queued, not auto-started).
  */
-async function createCampaign({ name, videoUrls, accountIds, options = {} }) {
+async function createCampaign({ name, videoUrls, accountIds, options = {}, watchDurationMinutes = 5 }) {
+  const batchSize = Math.min(videoUrls.length, 5);
   const campaign = await WatchCampaign.create({
     name,
     video_urls: videoUrls,
     account_ids: accountIds,
-    batch_size: BATCH_SIZE,
-    max_duration: MAX_DURATION,
+    batch_size: batchSize,
+    watch_duration_minutes: watchDurationMinutes,
     options,
-    status: 'running',
+    status: 'new',
     current_video_index: 0
   });
 
@@ -197,25 +225,73 @@ async function createCampaign({ name, videoUrls, accountIds, options = {} }) {
 }
 
 /**
- * Get campaign with progress summary
+ * Get campaign with full progress: per-video + per-account task details.
  */
 async function getCampaignProgress(id) {
   const campaign = await WatchCampaign.findByPk(id);
   if (!campaign) return null;
 
   const videoUrls = campaign.video_urls;
-  const totalTasks = await WatchTask.count({ where: { campaign_id: id } });
-  const doneTasks = await WatchTask.count({ where: { campaign_id: id, status: 'done' } });
-  const failedTasks = await WatchTask.count({ where: { campaign_id: id, status: 'failed' } });
-  const runningTasks = await WatchTask.count({ where: { campaign_id: id, status: 'running' } });
 
-  // Per-video progress
-  const videoProgress = await Promise.all(videoUrls.map(async (url, idx) => {
-    const total = await WatchTask.count({ where: { campaign_id: id, video_index: idx } });
-    const done = await WatchTask.count({ where: { campaign_id: id, video_index: idx, status: 'done' } });
-    const failed = await WatchTask.count({ where: { campaign_id: id, video_index: idx, status: 'failed' } });
-    return { url, index: idx, total, done, failed, pending: total - done - failed };
-  }));
+  const allTasks = await WatchTask.findAll({
+    where: { campaign_id: id },
+    order: [['video_index', 'ASC'], ['id', 'ASC']]
+  });
+
+  const accountIds = [...new Set(allTasks.map(t => t.account_id))];
+  const accounts = await AccountYoutube.findAll({
+    where: { id: accountIds },
+    attributes: ['id', 'email', 'channel_name']
+  });
+  const accountMap = Object.fromEntries(accounts.map(a => [a.id, a]));
+
+  const batchByVideo = {};
+  for (const task of allTasks) {
+    if (!batchByVideo[task.video_index]) batchByVideo[task.video_index] = [];
+    batchByVideo[task.video_index].push(task);
+  }
+
+  const videoProgress = videoUrls.map((url, idx) => {
+    const batch = batchByVideo[idx] || [];
+    const done = batch.filter(t => t.status === 'done').length;
+    const failed = batch.filter(t => t.status === 'failed').length;
+    const running = batch.filter(t => t.status === 'running').length;
+    const total = batch.length;
+    const totalWatchSeconds = batch.reduce((sum, t) => sum + (t.actual_duration_seconds || 0), 0);
+
+    const taskDetails = batch.map(t => {
+      const acc = accountMap[t.account_id];
+      return {
+        taskId: t.id,
+        accountId: t.account_id,
+        email: acc ? acc.email : `acc#${t.account_id}`,
+        channelName: acc ? acc.channel_name : null,
+        status: t.status,
+        actualDurationSeconds: t.actual_duration_seconds || 0,
+        error: t.error || null,
+        startedAt: t.started_at,
+        finishedAt: t.finished_at
+      };
+    });
+
+    return {
+      url,
+      index: idx,
+      total,
+      done,
+      failed,
+      running,
+      pending: total - done - failed - running,
+      totalWatchSeconds,
+      tasks: taskDetails
+    };
+  });
+
+  const totalTasks = allTasks.length;
+  const doneTasks = allTasks.filter(t => t.status === 'done').length;
+  const failedTasks = allTasks.filter(t => t.status === 'failed').length;
+  const runningTasks = allTasks.filter(t => t.status === 'running').length;
+  const totalWatchSeconds = allTasks.reduce((sum, t) => sum + (t.actual_duration_seconds || 0), 0);
 
   return {
     ...campaign.toJSON(),
@@ -224,13 +300,11 @@ async function getCampaignProgress(id) {
     failedTasks,
     runningTasks,
     pendingTasks: totalTasks - doneTasks - failedTasks - runningTasks,
+    totalWatchSeconds,
     videoProgress
   };
 }
 
-/**
- * Pause / resume / stop campaign
- */
 async function updateCampaignStatus(id, status) {
   const campaign = await WatchCampaign.findByPk(id);
   if (!campaign) throw new Error('Campaign not found');
@@ -238,4 +312,4 @@ async function updateCampaignStatus(id, status) {
   return campaign;
 }
 
-module.exports = { startCron, createCampaign, getCampaignProgress, updateCampaignStatus };
+module.exports = { startCron, recoverStuckTasks, createCampaign, getCampaignProgress, updateCampaignStatus };

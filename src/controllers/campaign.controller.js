@@ -22,11 +22,16 @@ class CampaignController {
         return res.status(400).json({ success: false, message: 'No valid YouTube URLs provided' });
       }
 
+      const watchDurationMinutes = parseInt(req.body.watchDurationMinutes, 10) || 5;
+      const batchSize = parseInt(req.body.batchSize, 10) || 5;
+
       const campaign = await campaignService.createCampaign({
         name: name || `Campaign ${new Date().toLocaleString('vi-VN')}`,
         videoUrls: validUrls,
         accountIds,
-        options: options || {}
+        options: options || {},
+        watchDurationMinutes,
+        batchSize
       });
 
       const progress = await campaignService.getCampaignProgress(campaign.id);
@@ -58,19 +63,27 @@ class CampaignController {
     }
   }
 
-  async pause(req, res) {
+  // Set campaign to 'pending' — won't be auto-promoted by cron
+  async hold(req, res) {
     try {
-      await campaignService.updateCampaignStatus(req.params.id, 'paused');
-      res.json({ success: true, message: 'Campaign paused' });
+      const campaign = await WatchCampaign.findByPk(req.params.id);
+      if (!campaign) return res.status(404).json({ success: false, message: 'Not found' });
+      if (campaign.status === 'done') return res.status(400).json({ success: false, message: 'Cannot hold a completed campaign' });
+      await campaign.update({ status: 'pending' });
+      res.json({ success: true, message: 'Campaign held (pending)' });
     } catch (err) {
       res.status(500).json({ success: false, message: err.message });
     }
   }
 
-  async resume(req, res) {
+  // Release from 'pending' back to 'new' so cron can pick it up
+  async release(req, res) {
     try {
-      await campaignService.updateCampaignStatus(req.params.id, 'running');
-      res.json({ success: true, message: 'Campaign resumed' });
+      const campaign = await WatchCampaign.findByPk(req.params.id);
+      if (!campaign) return res.status(404).json({ success: false, message: 'Not found' });
+      if (campaign.status !== 'pending') return res.status(400).json({ success: false, message: 'Campaign is not pending' });
+      await campaign.update({ status: 'new' });
+      res.json({ success: true, message: 'Campaign released (queued as new)' });
     } catch (err) {
       res.status(500).json({ success: false, message: err.message });
     }

@@ -16,15 +16,15 @@ const WatchCampaign = sequelize.define('WatchCampaign', {
     get() { try { return JSON.parse(this.getDataValue('account_ids')); } catch { return []; } },
     set(val) { this.setDataValue('account_ids', JSON.stringify(val)); }
   },
-  batch_size: { type: DataTypes.INTEGER, allowNull: false, defaultValue: 3 },
-  max_duration: { type: DataTypes.INTEGER, allowNull: false, defaultValue: 120 },
+  batch_size: { type: DataTypes.INTEGER, allowNull: false, defaultValue: 5 },
+  watch_duration_minutes: { type: DataTypes.INTEGER, allowNull: false, defaultValue: 5 },
   options: {
     type: DataTypes.TEXT,
     allowNull: true,
     get() { try { return JSON.parse(this.getDataValue('options')); } catch { return {}; } },
     set(val) { this.setDataValue('options', JSON.stringify(val)); }
   },
-  status: { type: DataTypes.STRING, allowNull: false, defaultValue: 'pending' },
+  status: { type: DataTypes.STRING, allowNull: false, defaultValue: 'new' },
   current_video_index: { type: DataTypes.INTEGER, allowNull: false, defaultValue: 0 }
 }, {
   tableName: 'watch_campaigns',

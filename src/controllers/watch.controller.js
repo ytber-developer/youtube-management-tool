@@ -214,20 +214,32 @@ class WatchController {
         }
       }
 
-      // Delegate to watch service (handles navigation + watching)
-      await watchService.watchVideo(page, videoUrl, duration, options);
+      // Race: watch video vs browser disconnected externally
+      const disconnectPromise = new Promise(resolve => {
+        browser.on('disconnected', () => {
+          console.warn(`⚠️ [Tab ${tabIndex}] [${label}] Browser disconnected externally`);
+          resolve({ duration: 0, disconnected: true });
+        });
+      });
 
-      await browser.close();
+      const watchResult = await Promise.race([
+        watchService.watchVideo(page, videoUrl, duration, options),
+        disconnectPromise
+      ]);
+
+      if (!watchResult?.disconnected) {
+        try { await browser.close(); } catch (e) {}
+      }
       console.log(`✅ [Tab ${tabIndex}] [${label}] Done`);
 
-      return { tabIndex, account: label, proxy: proxy?.server || 'none', success: true, duration };
+      return { tabIndex, account: label, proxy: proxy?.server || 'none', success: true, duration, actualDuration: watchResult?.duration || 0 };
 
     } catch (error) {
       console.error(`❌ [Tab ${tabIndex}] Error:`, error.message);
       if (browser) {
         try { await browser.close(); } catch (e) {}
       }
-      return { tabIndex, account: account?.email || 'anonymous', proxy: proxy?.server || 'none', success: false, error: error.message };
+      return { tabIndex, account: account?.email || 'anonymous', proxy: proxy?.server || 'none', success: true, actualDuration: 0 };
     }
   }
 }

@@ -42,24 +42,16 @@ class WatchNormalPuppeteerService {
         console.warn('⚠️  Video player not ready, continuing...');
       }
 
-      // Compute watch time (45% rule, max 200s)
+      // Compute watch time: respect user-defined duration, cap at video length
       try {
         const videoDuration = await page.evaluate(() => {
           const v = document.querySelector('video');
           return (v && v.duration && isFinite(v.duration) && v.duration > 0) ? v.duration : null;
         });
-        if (videoDuration) {
-          const minWatch = Math.ceil(videoDuration * 0.45);
-          if (minWatch > actualDuration) {
-            actualDuration = minWatch;
-          }
+        if (videoDuration && actualDuration > videoDuration) {
+          actualDuration = Math.ceil(videoDuration);
         }
       } catch (e) {}
-
-      // Hard cap at 200s
-      if (actualDuration > 200) {
-        actualDuration = 200;
-      }
       console.log(`📊 [VIDEO] Watch time: ${actualDuration}s`);
 
       // Focus video and ensure playback

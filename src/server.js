@@ -58,9 +58,19 @@ const startServer = async () => {
     // Removed auto-sync to avoid "Too many keys" error
     // Run migrations manually with: npm run migrate
 
+    // Recovery: reset any tasks/campaigns stuck in 'running' from a previous crash
+    const { startCron, recoverStuckTasks } = require('./services/campaign.service');
+    await recoverStuckTasks();
+
     // Start campaign cron (every 5 minutes)
-    const { startCron } = require('./services/campaign.service');
     startCron();
+
+    // Recovery: reset upload jobs stuck in downloading/uploading from a previous crash
+    const { startUploadCron, recoverStuckUploads } = require('./services/upload.queue.service');
+    await recoverStuckUploads();
+
+    // Start upload queue cron (every 5 minutes, processes 1 job at a time)
+    startUploadCron();
 
     app.listen(PORT, () => {
       console.log(`🚀 Server running on http://localhost:${PORT}`);

@@ -114,6 +114,43 @@ export interface BatchUploadVideoItem {
   scheduleDate?: string;
 }
 
+export interface CreateUploadCampaignRequest {
+  id?: number;
+  email?: string;
+  name?: string;
+  scheduledStartAt?: string;
+  visibility?: 'public' | 'unlisted' | 'private';
+  scheduleDate?: string;
+  videos: Array<{ sourceUrl: string; title?: string; description?: string }>;
+}
+
+export interface UploadCampaignVideo {
+  id: number;
+  order_index: number;
+  title: string | null;
+  source_url: string;
+  status: 'pending' | 'downloading' | 'uploading' | 'completed' | 'failed' | 'skipped';
+  video_url: string | null;
+  error_message: string | null;
+  uploaded_at: string | null;
+}
+
+export interface UploadCampaign {
+  id: number;
+  name: string;
+  email: string;
+  status: 'new' | 'running' | 'pending' | 'done';
+  scheduled_start_at: string | null;
+  total_videos: number;
+  completedVideos: number;
+  failedVideos: number;
+  pendingVideos: number;
+  activeVideos: number;
+  videos: UploadCampaignVideo[];
+  account?: { id: number; email: string; channel_name: string | null };
+  createdAt: string;
+}
+
 export interface BatchUploadRequest {
   id?: number;
   email?: string;
@@ -129,9 +166,27 @@ export interface BatchUploadResult {
   error?: string;
 }
 
+export interface UploadedVideo {
+  id: number;
+  account_youtube_id: number;
+  email: string;
+  video_url: string | null;
+  title: string | null;
+  source_url: string | null;
+  video_visibility: 'public' | 'unlisted' | 'private';
+  schedule_date: string | null;
+  scheduled_start_at: string | null;
+  status: 'pending' | 'downloading' | 'uploading' | 'completed' | 'failed' | 'skipped';
+  error_message: string | null;
+  uploaded_at: string | null;
+  created_at: string;
+  updated_at: string;
+  account?: { id: number; email: string; channel_name: string | null; channel_link: string | null };
+}
+
 export interface UploadedVideosResponse {
   success: boolean;
-  data: any[];
+  data: UploadedVideo[];
   pagination: {
     page: number;
     limit: number;
@@ -398,6 +453,38 @@ export const uploadAPI = {
       throw new Error(error.message || `HTTP ${response.status}`);
     }
 
+    return response.json();
+  },
+
+  // Create upload campaign (cron processes videos sequentially, 1 campaign at a time)
+  createUploadCampaign: (data: CreateUploadCampaignRequest): Promise<{ success: boolean; message: string; data?: { id: number; name: string; status: string; totalVideos: number; scheduledStartAt: string | null } }> => {
+    return request(API_ENDPOINTS.UPLOAD.CAMPAIGNS, {
+      method: 'POST',
+      body: JSON.stringify(data),
+    });
+  },
+
+  // Get upload campaigns with progress
+  getUploadCampaigns: (params?: { status?: string; page?: number; limit?: number }): Promise<{ success: boolean; data: UploadCampaign[]; pagination: { page: number; limit: number; total: number; totalPages: number } }> => {
+    const searchParams = new URLSearchParams();
+    if (params?.status) searchParams.append('status', params.status);
+    if (params?.page) searchParams.append('page', params.page.toString());
+    if (params?.limit) searchParams.append('limit', params.limit.toString());
+    return request(`${API_ENDPOINTS.UPLOAD.CAMPAIGNS}?${searchParams.toString()}`);
+  },
+
+  // Hold / release / cancel a campaign
+  updateUploadCampaignStatus: async (id: number, action: 'hold' | 'release' | 'cancel'): Promise<{ success: boolean; data: { id: number; status: string } }> => {
+    const url = buildApiUrl(API_ENDPOINTS.UPLOAD.CAMPAIGN_STATUS(id));
+    const response = await fetch(url, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action }),
+    });
+    if (!response.ok) {
+      const error = await response.json().catch(() => ({ message: 'Update failed' }));
+      throw new Error(error.message || `HTTP ${response.status}`);
+    }
     return response.json();
   },
 };

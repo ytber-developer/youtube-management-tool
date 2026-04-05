@@ -1,10 +1,22 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { PlayCircle, AlertCircle, Loader2, Pause, Square, Trash2, RefreshCw, ChevronDown, ChevronUp } from 'lucide-react';
+import { PlayCircle, AlertCircle, Loader2, PauseCircle, Square, Trash2, RefreshCw, ChevronDown, ChevronUp, Clock } from 'lucide-react';
 import { buildApiUrl, API_ENDPOINTS } from '@/lib/constants';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
+
+interface TaskDetail {
+  taskId: number;
+  accountId: number;
+  email: string;
+  channelName: string | null;
+  status: 'pending' | 'running' | 'done' | 'failed';
+  actualDurationSeconds: number;
+  error: string | null;
+  startedAt: string | null;
+  finishedAt: string | null;
+}
 
 interface VideoProgress {
   url: string;
@@ -12,20 +24,26 @@ interface VideoProgress {
   total: number;
   done: number;
   failed: number;
+  running: number;
   pending: number;
+  totalWatchSeconds: number;
+  tasks: TaskDetail[];
 }
 
 interface Campaign {
   id: number;
   name: string;
-  status: 'pending' | 'running' | 'paused' | 'done';
+  status: 'new' | 'running' | 'pending' | 'done';
   video_urls: string[];
   current_video_index: number;
+  batch_size: number;
+  watch_duration_minutes: number;
   totalTasks: number;
   doneTasks: number;
   failedTasks: number;
   runningTasks: number;
   pendingTasks: number;
+  totalWatchSeconds: number;
   videoProgress: VideoProgress[];
   createdAt: string;
 }
@@ -33,18 +51,28 @@ interface Campaign {
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
 const statusColor: Record<string, string> = {
+  new:     'bg-gray-100 text-gray-600',
   running: 'bg-blue-100 text-blue-700',
-  paused:  'bg-yellow-100 text-yellow-700',
+  pending: 'bg-yellow-100 text-yellow-700',
   done:    'bg-green-100 text-green-700',
-  pending: 'bg-gray-100 text-gray-600',
 };
 
 const statusLabel: Record<string, string> = {
+  new:     'Hàng chờ',
   running: 'Đang chạy',
-  paused:  'Tạm dừng',
+  pending: 'Tạm giữ',
   done:    'Hoàn thành',
-  pending: 'Chờ',
 };
+
+function formatWatchTime(seconds: number): string {
+  if (seconds <= 0) return '0s';
+  const h = Math.floor(seconds / 3600);
+  const m = Math.floor((seconds % 3600) / 60);
+  const s = seconds % 60;
+  if (h > 0) return `${h}g ${m}p`;
+  if (m > 0) return `${m}p ${s}s`;
+  return `${s}s`;
+}
 
 function ProgressBar({ value, total, color = 'bg-blue-500' }: { value: number; total: number; color?: string }) {
   const pct = total > 0 ? Math.round((value / total) * 100) : 0;
@@ -62,7 +90,7 @@ function ProgressBar({ value, total, color = 'bg-blue-500' }: { value: number; t
 
 function CampaignCard({ campaign, onAction, onDelete }: {
   campaign: Campaign;
-  onAction: (id: number, action: 'pause' | 'resume' | 'stop') => void;
+  onAction: (id: number, action: 'hold' | 'release' | 'stop') => void;
   onDelete: (id: number) => void;
 }) {
   const [expanded, setExpanded] = useState(false);
@@ -78,20 +106,23 @@ function CampaignCard({ campaign, onAction, onDelete }: {
           <span className="text-sm font-medium text-gray-800 truncate">{campaign.name}</span>
         </div>
         <div className="flex items-center gap-1 flex-shrink-0">
-          {campaign.status === 'running' && (
-            <button onClick={() => onAction(campaign.id, 'pause')} title="Tạm dừng"
+          {/* new/running → có thể hold */}
+          {(campaign.status === 'new' || campaign.status === 'running') && (
+            <button onClick={() => onAction(campaign.id, 'hold')} title="Tạm giữ (pending)"
               className="p-1.5 text-yellow-600 hover:bg-yellow-50 rounded-lg transition-colors">
-              <Pause size={14} />
+              <PauseCircle size={14} />
             </button>
           )}
-          {campaign.status === 'paused' && (
-            <button onClick={() => onAction(campaign.id, 'resume')} title="Tiếp tục"
+          {/* pending → release về new */}
+          {campaign.status === 'pending' && (
+            <button onClick={() => onAction(campaign.id, 'release')} title="Đưa vào hàng chờ"
               className="p-1.5 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors">
               <PlayCircle size={14} />
             </button>
           )}
-          {(campaign.status === 'running' || campaign.status === 'paused') && (
-            <button onClick={() => onAction(campaign.id, 'stop')} title="Dừng"
+          {/* new/running/pending → stop */}
+          {(campaign.status === 'new' || campaign.status === 'running' || campaign.status === 'pending') && (
+            <button onClick={() => onAction(campaign.id, 'stop')} title="Dừng hẳn"
               className="p-1.5 text-red-500 hover:bg-red-50 rounded-lg transition-colors">
               <Square size={14} />
             </button>
@@ -112,39 +143,109 @@ function CampaignCard({ campaign, onAction, onDelete }: {
       {/* Overall progress */}
       <div>
         <div className="flex justify-between text-xs text-gray-500 mb-1">
-          <span>Tổng tiến độ: {campaign.doneTasks}/{campaign.totalTasks} tasks</span>
-          {campaign.failedTasks > 0 && <span className="text-red-500">{campaign.failedTasks} lỗi</span>}
+          <span>Tổng tiến độ: {campaign.doneTasks}/{campaign.totalTasks} video</span>
+          <div className="flex items-center gap-2">
+            {campaign.totalWatchSeconds > 0 && (
+              <span className="flex items-center gap-1 text-green-600 font-medium">
+                <Clock size={11} /> {formatWatchTime(campaign.totalWatchSeconds)}
+              </span>
+            )}
+            {campaign.failedTasks > 0 && <span className="text-red-500">{campaign.failedTasks} lỗi</span>}
+          </div>
         </div>
         <ProgressBar value={campaign.doneTasks} total={campaign.totalTasks} />
       </div>
 
-      {/* Video info */}
-      <div className="text-xs text-gray-500">
-        Video {Math.min(campaign.current_video_index + 1, campaign.video_urls.length)}/{campaign.video_urls.length}
+      {/* Meta info */}
+      <div className="flex items-center gap-3 text-xs text-gray-500">
+        <span>{campaign.video_urls.length} video · {campaign.watch_duration_minutes}p/video · {campaign.batch_size} link/batch</span>
         {campaign.status === 'running' && campaign.runningTasks > 0 && (
-          <span className="ml-2 text-blue-600">· {campaign.runningTasks} đang xem</span>
+          <span className="text-blue-600">· {campaign.runningTasks} đang xem</span>
         )}
       </div>
 
-      {/* Expanded: per-video breakdown */}
+      {/* Expanded: per-video breakdown with task details */}
       {expanded && (
-        <div className="border-t pt-3 space-y-2">
-          {campaign.videoProgress.map((vp) => (
-            <div key={vp.index}>
-              <div className="flex justify-between text-xs mb-1">
-                <span className={`font-medium ${vp.index === campaign.current_video_index ? 'text-blue-700' : 'text-gray-500'}`}>
-                  {vp.index === campaign.current_video_index && campaign.status === 'running' ? '▶ ' : ''}
-                  Video {vp.index + 1}: <span className="font-mono text-gray-400">{vp.url.slice(0, 40)}...</span>
-                </span>
-                <span className="text-gray-400">{vp.done}/{vp.total}</span>
+        <div className="border-t pt-3 space-y-4">
+          {campaign.videoProgress.map((vp) => {
+            const batchSize = campaign.batch_size || 5;
+            const isCurrentBatch = vp.index >= campaign.current_video_index &&
+              vp.index < campaign.current_video_index + batchSize;
+
+            return (
+              <div key={vp.index} className="space-y-1.5">
+                {/* Video header */}
+                <div className="flex justify-between items-center text-xs gap-2">
+                  <span className={`font-semibold ${isCurrentBatch && campaign.status === 'running' ? 'text-blue-700' : 'text-gray-600'}`}>
+                    {isCurrentBatch && campaign.status === 'running' ? '▶ ' : ''}
+                    Video {vp.index + 1}
+                    <span className="ml-1.5 font-normal font-mono text-gray-400">{vp.url.slice(0, 40)}…</span>
+                  </span>
+                  <div className="flex items-center gap-2 flex-shrink-0 text-gray-400">
+                    {vp.totalWatchSeconds > 0 && (
+                      <span className="flex items-center gap-0.5 text-green-600 font-medium">
+                        <Clock size={10} />{formatWatchTime(vp.totalWatchSeconds)}
+                      </span>
+                    )}
+                    <span>{vp.done}/{vp.total}</span>
+                  </div>
+                </div>
+                <ProgressBar
+                  value={vp.done}
+                  total={vp.total}
+                  color={vp.done === vp.total && vp.total > 0 ? 'bg-green-500' : isCurrentBatch ? 'bg-blue-500' : 'bg-gray-300'}
+                />
+
+                {/* Per-task / per-channel details */}
+                {vp.tasks.length > 0 && (
+                  <div className="mt-1 space-y-0.5">
+                    {vp.tasks.map((task) => (
+                      <div key={task.taskId}
+                        className={`flex items-center justify-between px-2 py-1 rounded text-xs ${
+                          task.status === 'done'    ? 'bg-green-50' :
+                          task.status === 'running' ? 'bg-blue-50' :
+                          task.status === 'failed'  ? 'bg-red-50' :
+                          'bg-gray-50'
+                        }`}>
+                        <div className="flex items-center gap-1.5 min-w-0">
+                          <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${
+                            task.status === 'done'    ? 'bg-green-500' :
+                            task.status === 'running' ? 'bg-blue-500 animate-pulse' :
+                            task.status === 'failed'  ? 'bg-red-400' :
+                            'bg-gray-300'
+                          }`} />
+                          <span className="truncate text-gray-700 font-medium">
+                            {task.channelName || task.email}
+                          </span>
+                          {task.channelName && (
+                            <span className="text-gray-400 truncate hidden sm:inline">{task.email}</span>
+                          )}
+                        </div>
+                        <div className="flex items-center gap-2 flex-shrink-0 ml-2">
+                          {task.status === 'done' && task.actualDurationSeconds > 0 && (
+                            <span className="text-green-600 flex items-center gap-0.5">
+                              <Clock size={9} />{formatWatchTime(task.actualDurationSeconds)}
+                            </span>
+                          )}
+                          {task.status === 'failed' && task.error && (
+                            <span className="text-red-400 truncate max-w-[120px]" title={task.error}>{task.error.slice(0, 30)}</span>
+                          )}
+                          <span className={`font-medium ${
+                            task.status === 'done'    ? 'text-green-600' :
+                            task.status === 'running' ? 'text-blue-600' :
+                            task.status === 'failed'  ? 'text-red-500' :
+                            'text-gray-400'
+                          }`}>
+                            {task.status === 'done' ? 'Xong' : task.status === 'running' ? 'Đang xem' : task.status === 'failed' ? 'Lỗi' : 'Chờ'}
+                          </span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
-              <ProgressBar
-                value={vp.done}
-                total={vp.total}
-                color={vp.index < campaign.current_video_index ? 'bg-green-500' : vp.index === campaign.current_video_index ? 'bg-blue-500' : 'bg-gray-300'}
-              />
-            </div>
-          ))}
+            );
+          })}
         </div>
       )}
     </div>
@@ -168,6 +269,7 @@ export default function BoostViewsPage() {
 
   // Form
   const [videoUrlsText, setVideoUrlsText] = useState('');
+  const [watchDurationMinutes, setWatchDurationMinutes] = useState(5);
   const [options, setOptions] = useState({
     autoSubscribe: true,
     autoLike: true,
@@ -213,10 +315,7 @@ export default function BoostViewsPage() {
 
   useEffect(() => {
     fetchCampaigns();
-    // Auto-refresh every 15s if any running campaign
-    const interval = setInterval(() => {
-      fetchCampaigns();
-    }, 15000);
+    const interval = setInterval(fetchCampaigns, 15000);
     return () => clearInterval(interval);
   }, [fetchCampaigns]);
 
@@ -265,6 +364,7 @@ export default function BoostViewsPage() {
         body: JSON.stringify({
           videoUrls,
           accountIds: selectedChannels.map(id => (isNaN(Number(id)) ? id : Number(id))),
+          watchDurationMinutes,
           options
         })
       });
@@ -282,11 +382,11 @@ export default function BoostViewsPage() {
 
   // ── Campaign actions ────────────────────────────────────────────────────────
 
-  const handleAction = async (id: number, action: 'pause' | 'resume' | 'stop') => {
-    const url = action === 'pause'
-      ? buildApiUrl(API_ENDPOINTS.CAMPAIGNS.PAUSE(id))
-      : action === 'resume'
-      ? buildApiUrl(API_ENDPOINTS.CAMPAIGNS.RESUME(id))
+  const handleAction = async (id: number, action: 'hold' | 'release' | 'stop') => {
+    const url = action === 'hold'
+      ? buildApiUrl(API_ENDPOINTS.CAMPAIGNS.HOLD(id))
+      : action === 'release'
+      ? buildApiUrl(API_ENDPOINTS.CAMPAIGNS.RELEASE(id))
       : buildApiUrl(API_ENDPOINTS.CAMPAIGNS.STOP(id));
     await fetch(url, { method: 'POST' });
     await fetchCampaigns();
@@ -299,6 +399,7 @@ export default function BoostViewsPage() {
 
   // ── Render ──────────────────────────────────────────────────────────────────
 
+  const videoCount = videoUrlsText.split('\n').filter(l => l.trim()).length;
   const runningCount = campaigns.filter(c => c.status === 'running').length;
 
   return (
@@ -336,11 +437,24 @@ export default function BoostViewsPage() {
               placeholder={"https://www.youtube.com/watch?v=...\nhttps://www.youtube.com/watch?v=...\nhttps://www.youtube.com/shorts/..."}
               className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono resize-none"
             />
-            {videoUrlsText && (
+            {videoCount > 0 && (
               <p className="text-xs text-gray-400 mt-1">
-                {videoUrlsText.split('\n').filter(l => l.trim()).length} URL — chạy tuần tự, video trước done mới qua video sau
+                {videoCount} video · mỗi video dùng 1 profile riêng · batch tối đa {Math.min(videoCount, 5)} link/lần
               </p>
             )}
+          </div>
+
+          {/* Duration */}
+          <div className="flex items-center gap-2">
+            <label className="text-xs font-medium text-gray-600 whitespace-nowrap">Thời gian xem (phút):</label>
+            <input
+              type="number"
+              min={1}
+              max={60}
+              value={watchDurationMinutes}
+              onChange={e => setWatchDurationMinutes(Math.max(1, parseInt(e.target.value) || 1))}
+              className="w-16 px-2 py-1.5 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-center"
+            />
           </div>
 
           {/* Options + Submit */}
@@ -381,6 +495,9 @@ export default function BoostViewsPage() {
         <div className="flex items-center justify-between mb-2">
           <span className="text-xs font-medium text-gray-600">
             Tài khoản <span className={`font-semibold ${selectedChannels.length > 0 ? 'text-blue-600' : 'text-gray-400'}`}>({selectedChannels.length} đã chọn{totalCount ? ` / ${totalCount}` : ''})</span>
+            {videoCount > 0 && selectedChannels.length > 0 && (
+              <span className="ml-2 text-gray-400">— mỗi video 1 profile, tuần tự theo thứ tự</span>
+            )}
           </span>
           <div className="flex gap-1.5">
             <button type="button" onClick={selectAll} disabled={filteredChannels.length === 0}
@@ -411,6 +528,7 @@ export default function BoostViewsPage() {
             const id = String(ch.id || ch._id || ch.email);
             const label = ch.email || ch.name || id;
             const selected = selectedChannels.includes(id);
+            const assignedVideoIdx = selected ? selectedChannels.indexOf(id) : -1;
             return (
               <label key={id}
                 className={`flex items-center gap-1.5 px-2 py-1.5 border rounded-lg cursor-pointer transition-colors text-xs ${
@@ -418,7 +536,10 @@ export default function BoostViewsPage() {
                 }`}>
                 <input type="checkbox" checked={selected} onChange={() => toggleChannel(id)}
                   className="w-3 h-3 text-blue-600 border-gray-300 rounded flex-shrink-0" />
-                <span className="truncate">{label}</span>
+                <span className="truncate flex-1">{label}</span>
+                {selected && assignedVideoIdx < videoCount && (
+                  <span className="text-blue-400 text-[10px] flex-shrink-0">V{assignedVideoIdx + 1}</span>
+                )}
               </label>
             );
           })}

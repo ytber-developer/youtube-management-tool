@@ -186,7 +186,9 @@ class UploadController {
             email: account.email,
             video_url: result.data.videoUrl,
             title: title || uploadedFile.originalname,
-            source_url: 'uploaded-file'
+            source_url: 'uploaded-file',
+            status: 'completed',
+            uploaded_at: new Date()
           });
         }
       } 
@@ -438,7 +440,9 @@ class UploadController {
                 email: account.email,
                 video_url: uploadResult.data?.videoUrl,
                 title: uploadTitle,
-                source_url: downloadResult.sourceUrl
+                source_url: downloadResult.sourceUrl,
+                status: 'completed',
+                uploaded_at: new Date()
               });
             } catch (dbErr) {
               console.warn(`⚠️  Failed to save UploadedVideo record: ${dbErr.message}`);
@@ -720,6 +724,157 @@ class UploadController {
         message: 'Internal server error',
         error: error.message
       });
+    }
+  }
+
+  /**
+   * POST /api/v1/upload/campaigns
+   * Tạo upload campaign (xử lý qua cron, 1 campaign / 1 thời điểm)
+   * Body: {
+   *   id?: number, email?: string,
+   *   name?: string,
+   *   scheduledStartAt?: string (ISO - khi server bắt đầu),
+   *   visibility?: string,
+   *   scheduleDate?: string (ISO - ngày YouTube publish),
+   *   videos: [{ sourceUrl, title?, description? }]
+   * }
+   */
+  async createUploadCampaign(req, res) {
+    try {
+      const { id, email, name, scheduledStartAt, visibility, scheduleDate, videos } = req.body;
+      const { createUploadCampaign } = require('../services/upload.queue.service');
+
+      if (!id && !email) {
+        return res.status(400).json({ success: false, message: 'Cần truyền id hoặc email của account' });
+      }
+      if (!videos || !Array.isArray(videos) || videos.length === 0) {
+        return res.status(400).json({ success: false, message: 'Cần truyền mảng videos (tối thiểu 1)' });
+      }
+      for (let i = 0; i < videos.length; i++) {
+        if (!videos[i].sourceUrl) {
+          return res.status(400).json({ success: false, message: `Video ${i + 1}: sourceUrl là bắt buộc` });
+        }
+      }
+
+      const where = id ? { id } : { email };
+      const account = await AccountYoutube.findOne({ where });
+      if (!account) {
+        return res.status(404).json({ success: false, message: 'Không tìm thấy account' });
+      }
+
+      const scheduledAt = scheduledStartAt ? new Date(scheduledStartAt) : null;
+      const campaignName = name || `Upload ${videos.length} video(s) - ${new Date().toLocaleString('vi-VN')}`;
+
+      const campaign = await createUploadCampaign({
+        name: campaignName,
+        accountId: account.id,
+        email: account.email,
+        scheduledStartAt: scheduledAt,
+        videos,
+        options: { visibility: visibility || 'public', scheduleDate: scheduleDate || null }
+      });
+
+      const timeLabel = scheduledAt ? scheduledAt.toLocaleString('vi-VN') : 'ASAP';
+
+      return res.status(201).json({
+        success: true,
+        message: `Campaign #${campaign.id} đã tạo — ${videos.length} video(s) sẽ upload lúc ${timeLabel}`,
+        data: {
+          id: campaign.id,
+          name: campaign.name,
+          status: campaign.status,
+          totalVideos: campaign.total_videos,
+          scheduledStartAt: campaign.scheduled_start_at
+        }
+      });
+
+    } catch (error) {
+      console.error('❌ Create upload campaign error:', error);
+      return res.status(500).json({ success: false, message: 'Internal server error', error: error.message });
+    }
+  }
+
+  /**
+   * GET /api/v1/upload/campaigns
+   * Danh sách upload campaigns với progress
+   * @query { status?: string, page?: number, limit?: number }
+   */
+  async getUploadCampaigns(req, res) {
+    try {
+      const { UploadCampaign } = require('../models');
+      const { status, page = 1, limit = 20 } = req.query;
+      const offset = (parseInt(page) - 1) * parseInt(limit);
+
+      const whereClause = status ? { status } : {};
+
+      const { count, rows } = await UploadCampaign.findAndCountAll({
+        where: whereClause,
+        limit: parseInt(limit),
+        offset,
+        order: [['createdAt', 'DESC']],
+        include: [
+          { model: AccountYoutube, as: 'account', attributes: ['id', 'email', 'channel_name'], required: false },
+          { model: UploadedVideo, as: 'videos', attributes: ['id', 'order_index', 'title', 'source_url', 'status', 'video_url', 'error_message', 'uploaded_at'], required: false }
+        ]
+      });
+
+      // Compute progress counts per campaign
+      const data = rows.map(c => {
+        const videos = c.videos || [];
+        return {
+          ...c.toJSON(),
+          completedVideos: videos.filter(v => v.status === 'completed').length,
+          failedVideos: videos.filter(v => v.status === 'failed').length,
+          pendingVideos: videos.filter(v => v.status === 'pending').length,
+          activeVideos: videos.filter(v => v.status === 'downloading' || v.status === 'uploading').length,
+        };
+      });
+
+      return res.json({
+        success: true,
+        data,
+        pagination: {
+          page: parseInt(page),
+          limit: parseInt(limit),
+          total: count,
+          totalPages: Math.ceil(count / parseInt(limit))
+        }
+      });
+
+    } catch (error) {
+      console.error('❌ Get upload campaigns error:', error);
+      return res.status(500).json({ success: false, message: 'Internal server error', error: error.message });
+    }
+  }
+
+  /**
+   * PATCH /api/v1/upload/campaigns/:id/hold   → status = pending
+   * PATCH /api/v1/upload/campaigns/:id/release → status = new
+   * DELETE /api/v1/upload/campaigns/:id        → status = done (cancel)
+   */
+  async updateUploadCampaignStatus(req, res) {
+    try {
+      const { UploadCampaign } = require('../models');
+      const { id } = req.params;
+      const { action } = req.body; // 'hold' | 'release' | 'cancel'
+
+      const campaign = await UploadCampaign.findByPk(id);
+      if (!campaign) {
+        return res.status(404).json({ success: false, message: 'Campaign not found' });
+      }
+
+      const statusMap = { hold: 'pending', release: 'new', cancel: 'done' };
+      const newStatus = statusMap[action];
+      if (!newStatus) {
+        return res.status(400).json({ success: false, message: 'action must be hold | release | cancel' });
+      }
+
+      await campaign.update({ status: newStatus });
+      return res.json({ success: true, data: { id: campaign.id, status: newStatus } });
+
+    } catch (error) {
+      console.error('❌ Update campaign status error:', error);
+      return res.status(500).json({ success: false, message: 'Internal server error', error: error.message });
     }
   }
 

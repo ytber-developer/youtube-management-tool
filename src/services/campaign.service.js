@@ -24,6 +24,7 @@ const WatchCampaign = require('../models/WatchCampaign');
 const WatchTask = require('../models/WatchTask');
 const { AccountYoutube } = require('../models');
 const watchController = require('../controllers/watch.controller');
+const { sleep, randomDelay } = require('../helpers/timing.helper');
 
 let cronJob = null;
 let isProcessing = false;
@@ -113,9 +114,17 @@ async function processCampaign(campaign) {
     autoComment: !!options.autoComment
   };
 
-  const promises = batch.map(task => {
+  // Stagger task starts: each account waits a random offset before launching.
+  // Prevents N views hitting the same video at the exact same second,
+  // which YouTube flags as an unnatural spike.
+  const STAGGER_MIN_MS = 15_000; // 15s
+  const STAGGER_MAX_MS = 60_000; // 60s
+
+  const promises = batch.map((task, index) => {
     const account = accountMap[task.account_id] || null;
-    return watchController.watchInSingleTab(task.video_url, durationSeconds, account, task.id, watchOptions, null)
+    const startDelay = index === 0 ? 0 : randomDelay(STAGGER_MIN_MS, STAGGER_MAX_MS) * index;
+    return sleep(startDelay)
+      .then(() => watchController.watchInSingleTab(task.video_url, durationSeconds, account, task.id, watchOptions, null))
       .then(async (result) => {
         await task.update({
           status: 'done',
@@ -126,7 +135,6 @@ async function processCampaign(campaign) {
         console.log(`✅ [Campaign ${campaign.id}] ${label} video[${task.video_index}] → ${result.actualDuration || 0}s`);
       })
       .catch(async (err) => {
-        // Browser closed or crashed mid-watch — still count as done
         await task.update({ status: 'done', finished_at: new Date(), actual_duration_seconds: 0 });
         console.warn(`⚠️  [Campaign ${campaign.id}] Task ${task.id} interrupted (${err.message}) — marked done`);
       });

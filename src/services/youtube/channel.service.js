@@ -332,9 +332,52 @@ class ChannelService {
   }
 
   /**
+   * Check for phone verification popup and attempt to skip it.
+   * Returns an error result object if verification is required and cannot be skipped,
+   * or null if everything is fine to proceed.
+   * @param {Page} page
+   * @param {string} context - Label for log messages (e.g. 'initial' or 'after create click')
+   * @returns {Promise<{created: false, message: string, requiresPhoneVerification: true}|null>}
+   */
+  async _handlePhoneVerification(page, context = '') {
+    const label = context ? ` (${context})` : '';
+    console.log(`🔍 Checking for phone verification popup${label}...`);
+    const phoneCheck = await this.checkPhoneVerificationPopup(page);
+
+    if (!phoneCheck.isPhoneVerification) return null;
+
+    console.log('⚠️  Phone verification popup detected!');
+
+    if (!phoneCheck.canSkip) {
+      console.log('❌ Phone verification required without skip option');
+      return {
+        created: false,
+        message: `Phone verification required${label} - no skip option available. Please verify manually.`,
+        requiresPhoneVerification: true
+      };
+    }
+
+    console.log('🔄 Attempting to skip phone verification...');
+    const skipped = await this.skipPhoneVerification(page);
+
+    if (!skipped) {
+      console.log('❌ Could not skip phone verification');
+      return {
+        created: false,
+        message: `Phone verification required${label} - cannot skip automatically. Please verify manually.`,
+        requiresPhoneVerification: true
+      };
+    }
+
+    console.log('✅ Successfully skipped phone verification');
+    await new Promise(r => setTimeout(r, 2000));
+    return null;
+  }
+
+  /**
    * Create YouTube channel with retry logic
-   * @param {Page} page 
-   * @param {string} channelName 
+   * @param {Page} page
+   * @param {string} channelName
    * @returns {Promise<{created: boolean, channelName: string, message?: string, channelExists?: boolean}>}
    */
   async createChannel(page, channelName) {
@@ -350,36 +393,8 @@ class ChannelService {
       await new Promise(r => setTimeout(r, 3000));
 
       // Check for phone verification popup first
-      console.log('🔍 Checking for phone verification popup...');
-      const phoneCheck = await this.checkPhoneVerificationPopup(page);
-      
-      if (phoneCheck.isPhoneVerification) {
-        console.log('⚠️  Phone verification popup detected!');
-        
-        if (phoneCheck.canSkip) {
-          console.log('🔄 Attempting to skip phone verification...');
-          const skipped = await this.skipPhoneVerification(page);
-          
-          if (skipped) {
-            console.log('✅ Successfully skipped phone verification');
-            await new Promise(r => setTimeout(r, 2000));
-          } else {
-            console.log('❌ Could not skip phone verification');
-            return {
-              created: false,
-              message: 'Phone verification required - cannot skip automatically. Please verify manually.',
-              requiresPhoneVerification: true
-            };
-          }
-        } else {
-          console.log('❌ Phone verification required without skip option');
-          return {
-            created: false,
-            message: 'Phone verification required - no skip option available. Please verify manually.',
-            requiresPhoneVerification: true
-          };
-        }
-      }
+      const phoneError = await this._handlePhoneVerification(page, 'initial');
+      if (phoneError) return phoneError;
 
       // Check if channel already exists
       console.log('🔍 Checking if channel already exists...');
@@ -388,7 +403,7 @@ class ChannelService {
       if (channelExists) {
         console.log('⚠️  Dialog "Get advanced features" detected - Channel already exists');
         await this.clickCancelDialog(page);
-        
+
         return {
           created: false,
           message: 'Channel already exists (advanced features verification required)',
@@ -409,36 +424,8 @@ class ChannelService {
       await new Promise(r => setTimeout(r, 5000));
 
       // Check for phone verification popup again (can appear after clicking create)
-      console.log('🔍 Checking for phone verification popup (after create click)...');
-      const phoneCheck2 = await this.checkPhoneVerificationPopup(page);
-      
-      if (phoneCheck2.isPhoneVerification) {
-        console.log('⚠️  Phone verification popup detected after clicking create!');
-        
-        if (phoneCheck2.canSkip) {
-          console.log('🔄 Attempting to skip phone verification...');
-          const skipped = await this.skipPhoneVerification(page);
-          
-          if (skipped) {
-            console.log('✅ Successfully skipped phone verification');
-            await new Promise(r => setTimeout(r, 2000));
-          } else {
-            console.log('❌ Could not skip phone verification');
-            return {
-              created: false,
-              message: 'Phone verification required after clicking create - cannot skip. Please verify manually.',
-              requiresPhoneVerification: true
-            };
-          }
-        } else {
-          console.log('❌ Phone verification required without skip option');
-          return {
-            created: false,
-            message: 'Phone verification required after clicking create - no skip option. Please verify manually.',
-            requiresPhoneVerification: true
-          };
-        }
-      }
+      const phoneError2 = await this._handlePhoneVerification(page, 'after create click');
+      if (phoneError2) return phoneError2;
 
       // Find and enter channel name
       console.log('✏️  Đang nhập tên channel...');

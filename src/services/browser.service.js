@@ -2,7 +2,12 @@ const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 const sessionService = require('./session.service');
 
-puppeteer.use(StealthPlugin());
+// Disable the navigator.webdriver evasion — it adds
+// --disable-blink-features=AutomationControlled which is unsupported in Chrome 120+.
+// We override navigator.webdriver via evaluateOnNewDocument instead (see launchBrowser).
+const stealth = StealthPlugin();
+stealth.enabledEvasions.delete('navigator.webdriver');
+puppeteer.use(stealth);
 
 class BrowserService {
   constructor() {
@@ -182,21 +187,15 @@ class BrowserService {
 
         // Build args dynamically so we can avoid adding sandbox/unupported flags on macOS system Chrome
         const baseArgs = [
-          '--disable-blink-features=AutomationControlled',
           '--disable-dev-shm-usage',
           '--window-size=1200,900',
-          '--disable-features=TranslateUI',
           '--no-first-run',
           '--no-default-browser-check',
-          '--disable-infobars',
-          // ===== CRITICAL: Remove automation flags =====
-          '--disable-features=IsolateOrigins,site-per-process',
-          '--disable-site-isolation-trials',
-          '--disable-features=ChromeWhatsNewUI',
+          '--disable-features=TranslateUI,ChromeWhatsNewUI',
           // Language
           '--lang=en-US,en',
-          // User agent hints
-          `--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36`
+          // User agent — kept in sync with recent Chrome stable to avoid version mismatch detection
+          `--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36`
         ];
 
         // By default, avoid adding sandbox-disabling flags when launching the real Google Chrome on macOS
@@ -281,9 +280,13 @@ class BrowserService {
           // Use the first existing tab (most reliable for anti-detection)
           page = pages[0];
           console.log(`✅ Using existing first tab`);
-          
-          // Apply anti-detection measures to existing tab
-          // await this.applyAntiDetection(page);
+
+          // Override navigator.webdriver via JS (replaces the StealthPlugin evasion
+          // that used the now-unsupported --disable-blink-features=AutomationControlled flag)
+          await page.evaluateOnNewDocument(() => {
+            Object.defineProperty(navigator, 'webdriver', { get: () => false });
+            delete navigator.__proto__.webdriver;
+          });
 
           // Auto-save cookies when navigating to important Google/YouTube pages (throttled)
           try {

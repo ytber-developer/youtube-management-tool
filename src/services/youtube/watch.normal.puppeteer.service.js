@@ -1,14 +1,7 @@
 const commentHelper = require('../../helpers/comment.helper');
+const { sleep, randomDelay } = require('../../helpers/timing.helper');
 
 class WatchNormalPuppeteerService {
-
-  sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-
-  randomDelay(min = 1000, max = 3000) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
 
   /**
    * Watch regular YouTube video with human-like behavior
@@ -28,7 +21,7 @@ class WatchNormalPuppeteerService {
       console.log(`\n🎬 [VIDEO] Navigating to: ${videoUrl}`);
 
       if (humanBehavior) {
-        await this.sleep(this.randomDelay(2000, 5000));
+        await sleep(randomDelay(2000, 5000));
       }
 
       await page.goto(videoUrl, { waitUntil: 'networkidle2', timeout: 60000 });
@@ -36,7 +29,7 @@ class WatchNormalPuppeteerService {
       // Wait for video player
       try {
         await page.waitForSelector('video', { timeout: 30000 });
-        await this.sleep(this.randomDelay(1000, 2000));
+        await sleep(randomDelay(1000, 2000));
         console.log('✅ Video player ready');
       } catch (e) {
         console.warn('⚠️  Video player not ready, continuing...');
@@ -62,7 +55,7 @@ class WatchNormalPuppeteerService {
           const x = box ? box.x + box.width / 2 : 640;
           const y = box ? box.y + box.height / 2 : 360;
           await page.mouse.move(x, y, { steps: 8 });
-          await this.sleep(this.randomDelay(300, 800));
+          await sleep(randomDelay(300, 800));
         }
 
         const isPlaying = await page.evaluate(() => {
@@ -76,7 +69,7 @@ class WatchNormalPuppeteerService {
             if (v && v.paused) { try { v.play(); } catch (e) {} }
           });
           console.log('▶️  Requested play');
-          await this.sleep(this.randomDelay(500, 1200));
+          await sleep(randomDelay(500, 1200));
         }
       } catch (e) {
         console.log('ℹ️  Could not focus video');
@@ -85,11 +78,11 @@ class WatchNormalPuppeteerService {
       // Dismiss popups
       try {
         const consentBtn = await page.$('button[aria-label*="Accept"], button[aria-label*="Agree"]');
-        if (consentBtn) { await consentBtn.click(); await this.sleep(500); }
+        if (consentBtn) { await consentBtn.click(); await sleep(500); }
         const skipBtn = await page.$('tp-yt-paper-dialog button.yt-button-renderer');
-        if (skipBtn) { await skipBtn.click(); await this.sleep(500); }
+        if (skipBtn) { await skipBtn.click(); await sleep(500); }
         await page.keyboard.press('Escape');
-        await this.sleep(300);
+        await sleep(300);
       } catch (e) {}
 
       // Auto subscribe + like early (before main watch loop)
@@ -102,7 +95,7 @@ class WatchNormalPuppeteerService {
 
       // Use random duration if enabled (still capped at 200s)
       if (randomDuration) {
-        actualDuration = Math.min(this.randomDelay(30, 180), 200);
+        actualDuration = Math.min(randomDelay(30, 180), 200);
         console.log(`🎲 Random duration: ${actualDuration}s`);
       }
 
@@ -111,7 +104,7 @@ class WatchNormalPuppeteerService {
       if (humanBehavior) {
         await this.simulateVideoWatching(page, actualDuration);
       } else {
-        await this.sleep(actualDuration * 1000);
+        await sleep(actualDuration * 1000);
       }
 
       // Auto comment after watching
@@ -130,7 +123,9 @@ class WatchNormalPuppeteerService {
   }
 
   /**
-   * Simulate human behavior while watching
+   * Simulate human behavior while watching.
+   * Tracks video.currentTime every 5s to detect pauses and recover them,
+   * ensuring YouTube's heartbeat requests keep firing throughout.
    */
   async simulateVideoWatching(page, durationInSeconds) {
     console.log('🎭 [VIDEO] Simulating human behavior...');
@@ -138,6 +133,8 @@ class WatchNormalPuppeteerService {
     const startTime = Date.now();
     const actions = [];
     let volumeAdjusted = false;
+    let lastCurrentTime = -1;
+    let staleTicks = 0; // how many consecutive 5s ticks the video hasn't advanced
 
     while (Date.now() - startTime < durationInSeconds * 1000) {
       const elapsedSeconds = Math.floor((Date.now() - startTime) / 1000);
@@ -146,28 +143,62 @@ class WatchNormalPuppeteerService {
       if (remainingTime <= 0) break;
 
       try {
+        // --- Heartbeat check: verify video is actually advancing ---
+        const videoState = await page.evaluate(() => {
+          const v = document.querySelector('video');
+          if (!v) return null;
+          return { currentTime: v.currentTime, paused: v.paused, ended: v.ended };
+        }).catch(() => null);
+
+        if (videoState) {
+          if (videoState.ended) {
+            console.log('ℹ️  [VIDEO] Video ended early');
+            break;
+          }
+          if (videoState.paused || videoState.currentTime === lastCurrentTime) {
+            staleTicks++;
+            if (staleTicks >= 2) {
+              // Video stalled — try to resume
+              console.log('⚠️  [VIDEO] Video stalled, attempting resume...');
+              await page.evaluate(() => {
+                const v = document.querySelector('video');
+                if (v && v.paused) v.play().catch(() => {});
+              });
+              // Dismiss "Continue watching?" or similar dialogs
+              await page.keyboard.press('Space');
+              await sleep(800);
+              staleTicks = 0;
+              actions.push('resume');
+            }
+          } else {
+            staleTicks = 0;
+          }
+          lastCurrentTime = videoState.currentTime;
+        }
+
+        // --- Human behavior actions ---
         // Adjust volume once between 40-45s
         if (!volumeAdjusted && elapsedSeconds >= 40 && elapsedSeconds <= 45) {
           const key = Math.random() < 0.5 ? 'ArrowUp' : 'ArrowDown';
           await page.keyboard.press(key);
           actions.push('volume');
           volumeAdjusted = true;
-          await this.sleep(1000);
+          await sleep(1000);
           continue;
         }
 
         if (Math.random() < 0.4) {
           // Scroll (40%)
-          const scrollAmount = this.randomDelay(100, 300);
+          const scrollAmount = randomDelay(100, 300);
           await page.evaluate((amount) => {
             window.scrollBy({ top: amount, behavior: 'smooth' });
           }, scrollAmount);
           actions.push('scroll');
-          await this.sleep(this.randomDelay(2000, 3000));
+          await sleep(randomDelay(2000, 3000));
         } else {
-          // Watch (60%)
-          const watchTime = Math.min(this.randomDelay(2, 4), remainingTime);
-          await this.sleep(watchTime * 1000);
+          // Watch (60%) — sleep in 5s ticks so heartbeat check runs regularly
+          const watchTime = Math.min(5, remainingTime);
+          await sleep(watchTime * 1000);
           actions.push('watch');
         }
 
@@ -184,7 +215,7 @@ class WatchNormalPuppeteerService {
     try {
       console.log('📺 [VIDEO] Subscribing...');
 
-      if (humanBehavior) await this.sleep(this.randomDelay(1000, 2000));
+      if (humanBehavior) await sleep(randomDelay(1000, 2000));
 
       const selectors = [
         '#subscribe-button-shape button[aria-label*="Subscribe"]',
@@ -199,7 +230,7 @@ class WatchNormalPuppeteerService {
         if (text === 'subscribe') {
           await btn.click();
           console.log('✅ [VIDEO] Subscribed!');
-          if (humanBehavior) await this.sleep(this.randomDelay(500, 1000));
+          if (humanBehavior) await sleep(randomDelay(500, 1000));
           return;
         } else {
           console.log('ℹ️  [VIDEO] Already subscribed');
@@ -220,13 +251,13 @@ class WatchNormalPuppeteerService {
     try {
       console.log('👍 [VIDEO] Liking...');
 
-      if (humanBehavior) await this.sleep(this.randomDelay(1000, 2000));
+      if (humanBehavior) await sleep(randomDelay(1000, 2000));
 
       await page.evaluate(() => {
         const btn = document.querySelector('like-button-view-model button');
         if (btn) btn.scrollIntoView({ behavior: 'smooth', block: 'center' });
       });
-      await this.sleep(500);
+      await sleep(500);
 
       const selectors = [
         'like-button-view-model button[aria-label*="like"]',
@@ -242,7 +273,7 @@ class WatchNormalPuppeteerService {
         if (!ariaLabel.toLowerCase().includes('dislike')) {
           await btn.click();
           console.log('✅ [VIDEO] Liked!');
-          if (humanBehavior) await this.sleep(this.randomDelay(500, 1000));
+          if (humanBehavior) await sleep(randomDelay(500, 1000));
           return;
         } else {
           console.log('ℹ️  [VIDEO] Already liked');
@@ -263,18 +294,18 @@ class WatchNormalPuppeteerService {
     try {
       console.log('💬 [VIDEO] Commenting...');
 
-      if (humanBehavior) await this.sleep(this.randomDelay(1500, 3000));
+      if (humanBehavior) await sleep(randomDelay(1500, 3000));
 
       // Scroll 60% trang để trigger lazy-load comments
       await page.evaluate(() => window.scrollTo({ top: document.body.scrollHeight * 0.6, behavior: 'smooth' }));
-      await this.sleep(2000);
+      await sleep(2000);
 
       // Scroll simplebox vào giữa màn hình
       await page.evaluate(() => {
         const box = document.querySelector('ytd-comment-simplebox-renderer');
         if (box) box.scrollIntoView({ behavior: 'smooth', block: 'center' });
       });
-      await this.sleep(1500);
+      await sleep(1500);
 
       // Chờ #placeholder-area không bị hidden (YouTube lazy-load)
       try {
@@ -287,11 +318,11 @@ class WatchNormalPuppeteerService {
           return;
         }
         await fallback.click();
-        await this.sleep(1000);
+        await sleep(1000);
       }
 
       await page.click('#placeholder-area');
-      await this.sleep(this.randomDelay(800, 1200));
+      await sleep(randomDelay(800, 1200));
 
       // Chờ contenteditable-root sẵn sàng
       try {
@@ -305,20 +336,20 @@ class WatchNormalPuppeteerService {
       console.log(`📝 Typing: "${commentText}"`);
 
       await page.click('#contenteditable-root');
-      await this.sleep(300);
+      await sleep(300);
 
       await page.keyboard.type(commentText, {
-        delay: humanBehavior ? this.randomDelay(60, 130) : 10
+        delay: humanBehavior ? randomDelay(60, 130) : 10
       });
 
-      if (humanBehavior) await this.sleep(this.randomDelay(1000, 2000));
+      if (humanBehavior) await sleep(randomDelay(1000, 2000));
 
       // Submit — chờ button active
       try {
         await page.waitForSelector('#submit-button button[aria-disabled="false"]', { timeout: 3000 });
         await page.click('#submit-button button');
         console.log('✅ [VIDEO] Comment posted!');
-        if (humanBehavior) await this.sleep(this.randomDelay(1000, 1500));
+        if (humanBehavior) await sleep(randomDelay(1000, 1500));
       } catch (e) {
         console.log('⚠️  [VIDEO] Submit button not ready:', e.message);
       }

@@ -464,6 +464,17 @@ export const uploadAPI = {
     });
   },
 
+  // Create upload campaign from local files (multipart)
+  createUploadCampaignFiles: async (formData: FormData): Promise<{ success: boolean; message: string; data?: { id: number; name: string; status: string; totalVideos: number; scheduledStartAt: string | null } }> => {
+    const url = buildApiUrl(API_ENDPOINTS.UPLOAD.CAMPAIGNS_FILES);
+    const response = await fetch(url, { method: 'POST', body: formData });
+    if (!response.ok) {
+      const error = await response.json().catch(() => ({ message: 'Upload failed' }));
+      throw new Error(error.message || `HTTP ${response.status}`);
+    }
+    return response.json();
+  },
+
   // Get upload campaigns with progress
   getUploadCampaigns: (params?: { status?: string; page?: number; limit?: number }): Promise<{ success: boolean; data: UploadCampaign[]; pagination: { page: number; limit: number; total: number; totalPages: number } }> => {
     const searchParams = new URLSearchParams();

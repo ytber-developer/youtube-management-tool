@@ -171,6 +171,31 @@ export default function UploadVideoPage() {
       if (!selectedFiles.length) { alert('Vui lòng chọn ít nhất 1 file'); return; }
       if (selectedFiles.length > 15) { alert('Tối đa 15 files'); return; }
 
+      // ── Hẹn giờ: upload files lên server, tạo campaign ────────────────────
+      if (scheduleMode === 'later') {
+        if (!scheduledStartAt) { alert('Vui lòng chọn thời gian bắt đầu upload'); return; }
+        try {
+          const formData = new FormData();
+          formData.append('id', selectedChannel.toString());
+          formData.append('scheduledStartAt', scheduledStartAt);
+          formData.append('visibility', globalVisibility);
+          if (globalScheduleDate) formData.append('scheduleDate', globalScheduleDate);
+          selectedFiles.forEach(f => formData.append('video', f));
+          const res = await api.upload.createUploadCampaignFiles(formData);
+          if (res.success) {
+            setSelectedFiles([]);
+            if (fileInputRef.current) fileInputRef.current.value = '';
+            setScheduledStartAt('');
+            alert(res.message);
+            await loadCampaigns();
+          } else {
+            alert(res.message || 'Tạo campaign thất bại');
+          }
+        } catch (err: any) { alert(err?.message || 'Failed'); }
+        return;
+      }
+
+      // ── Upload ngay ────────────────────────────────────────────────────────
       const jobId = Date.now();
       const channelName = selectedChannelData?.channelName;
       setUploads(prev => [{ id: jobId, channelId: selectedChannel, channelName, mode: 'file', itemCount: selectedFiles.length, status: 'uploading', message: 'Đang upload...', startedAt: Date.now() }, ...prev]);
@@ -359,8 +384,8 @@ export default function UploadVideoPage() {
                   className={`p-3 rounded-lg border-2 text-sm font-medium flex items-center justify-center gap-2 transition-all ${scheduleMode === 'now' ? 'bg-green-50 border-green-600 text-green-800 shadow-md' : 'bg-white border-gray-300 text-gray-700 hover:border-green-400'}`}>
                   <Upload className="w-4 h-4" /> Upload ngay
                 </button>
-                <button type="button" onClick={() => setScheduleMode('later')} disabled={uploadMode === 'file'}
-                  className={`p-3 rounded-lg border-2 text-sm font-medium flex items-center justify-center gap-2 transition-all disabled:opacity-40 disabled:cursor-not-allowed ${scheduleMode === 'later' ? 'bg-orange-50 border-orange-500 text-orange-800 shadow-md' : 'bg-white border-gray-300 text-gray-700 hover:border-orange-400'}`}>
+                <button type="button" onClick={() => setScheduleMode('later')}
+                  className={`p-3 rounded-lg border-2 text-sm font-medium flex items-center justify-center gap-2 transition-all ${scheduleMode === 'later' ? 'bg-orange-50 border-orange-500 text-orange-800 shadow-md' : 'bg-white border-gray-300 text-gray-700 hover:border-orange-400'}`}>
                   <Clock className="w-4 h-4" /> Hẹn giờ
                 </button>
               </div>

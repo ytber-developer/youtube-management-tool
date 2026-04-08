@@ -22,7 +22,8 @@ export default function UploadVideoPage() {
   const [globalVisibility, setGlobalVisibility] = useState<'public' | 'unlisted' | 'private'>('public');
   const [globalScheduleDate, setGlobalScheduleDate] = useState('');
   const [scheduleMode, setScheduleMode] = useState<'now' | 'later'>('now');
-  const [scheduledStartAt, setScheduledStartAt] = useState('');
+  const [videoSchedules, setVideoSchedules] = useState<Record<number, string>>({});
+  const [urlRows, setUrlRows] = useState<Array<{ url: string; title: string; scheduledAt: string }>>([{ url: '', title: '', scheduledAt: '' }]);
   // Upload campaigns
   const [campaigns, setCampaigns] = useState<UploadCampaign[]>([]);
   const [campaignsLoading, setCampaignsLoading] = useState(false);
@@ -124,20 +125,24 @@ export default function UploadVideoPage() {
       if (!videoItems.length) { alert('Vui lòng nhập ít nhất 1 URL'); return; }
       if (videoItems.length > 15) { alert('Tối đa 15 URLs'); return; }
 
-      // ── Hẹn giờ: tạo campaign, cron sẽ xử lý tuần tự ─────────────────────
+      // ── Hẹn giờ: đọc từ urlRows ────────────────────────────────────────────
       if (scheduleMode === 'later') {
-        if (!scheduledStartAt) { alert('Vui lòng chọn thời gian bắt đầu upload'); return; }
+        const validRows = urlRows.filter(r => isValidHttpUrl(r.url));
+        if (!validRows.length) { alert('Vui lòng nhập ít nhất 1 URL hợp lệ'); return; }
+        if (validRows.length > 15) { alert('Tối đa 15 URLs'); return; }
         try {
           const res = await api.upload.createUploadCampaign({
             id: selectedChannel,
-            scheduledStartAt,
             visibility: globalVisibility,
             scheduleDate: globalScheduleDate || undefined,
-            videos: videoItems.map(i => ({ sourceUrl: i.sourceUrl, title: i.title || undefined })),
+            videos: validRows.map(r => ({
+              sourceUrl: r.url,
+              title: r.title || undefined,
+              scheduledStartAt: r.scheduledAt || undefined,
+            })),
           });
           if (res.success) {
-            setUrlsText('');
-            setScheduledStartAt('');
+            setUrlRows([{ url: '', title: '', scheduledAt: '' }]);
             alert(res.message);
             await loadCampaigns();
           } else {
@@ -173,19 +178,20 @@ export default function UploadVideoPage() {
 
       // ── Hẹn giờ: upload files lên server, tạo campaign ────────────────────
       if (scheduleMode === 'later') {
-        if (!scheduledStartAt) { alert('Vui lòng chọn thời gian bắt đầu upload'); return; }
         try {
           const formData = new FormData();
           formData.append('id', selectedChannel.toString());
-          formData.append('scheduledStartAt', scheduledStartAt);
           formData.append('visibility', globalVisibility);
           if (globalScheduleDate) formData.append('scheduleDate', globalScheduleDate);
-          selectedFiles.forEach(f => formData.append('video', f));
+          selectedFiles.forEach((f, i) => {
+            formData.append('video', f);
+            if (videoSchedules[i]) formData.append(`scheduledStartAt_${i}`, videoSchedules[i]);
+          });
           const res = await api.upload.createUploadCampaignFiles(formData);
           if (res.success) {
             setSelectedFiles([]);
             if (fileInputRef.current) fileInputRef.current.value = '';
-            setScheduledStartAt('');
+            setVideoSchedules({});
             alert(res.message);
             await loadCampaigns();
           } else {
@@ -228,7 +234,10 @@ export default function UploadVideoPage() {
 
   const selectedChannelData = channels.find(c => c.id === selectedChannel);
   const urlCount = parseVideoItems(urlsText).length;
-  const itemCount = uploadMode === 'url' ? urlCount : selectedFiles.length;
+  const urlRowCount = urlRows.filter(r => isValidHttpUrl(r.url)).length;
+  const itemCount = uploadMode === 'url'
+    ? (scheduleMode === 'later' ? urlRowCount : urlCount)
+    : selectedFiles.length;
 
   return (
     <div className="p-6 max-w-5xl mx-auto">
@@ -314,13 +323,55 @@ export default function UploadVideoPage() {
           {/* URL input */}
           {uploadMode === 'url' ? (
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
-                🔗 Danh sách URLs
-                {urlCount > 0 && <span className={`ml-2 text-xs font-medium px-2 py-1 rounded ${urlCount > 15 ? 'bg-red-100 text-red-700' : 'bg-blue-100 text-blue-700'}`}>{urlCount}/15</span>}
-              </label>
-              <textarea value={urlsText} onChange={e => setUrlsText(e.target.value)} rows={10}
-                placeholder={`Mỗi URL trên 1 dòng. Hỗ trợ cú pháp: URL|Tiêu đề\n\nhttps://www.facebook.com/reel/...\nhttps://www.tiktok.com/@user/video/...\nhttps://www.facebook.com/reel/...|Tiêu đề tùy chọn`}
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg text-sm font-mono resize-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+              <div className="flex items-center justify-between mb-2">
+                <label className="text-sm font-semibold text-gray-700">
+                  🔗 Danh sách URLs
+                  {scheduleMode === 'later'
+                    ? urlRows.filter(r => isValidHttpUrl(r.url)).length > 0 && <span className={`ml-2 text-xs font-medium px-2 py-1 rounded ${urlRows.filter(r => isValidHttpUrl(r.url)).length > 15 ? 'bg-red-100 text-red-700' : 'bg-blue-100 text-blue-700'}`}>{urlRows.filter(r => isValidHttpUrl(r.url)).length}/15</span>
+                    : urlCount > 0 && <span className={`ml-2 text-xs font-medium px-2 py-1 rounded ${urlCount > 15 ? 'bg-red-100 text-red-700' : 'bg-blue-100 text-blue-700'}`}>{urlCount}/15</span>
+                  }
+                </label>
+              </div>
+
+              {scheduleMode === 'now' ? (
+                <textarea value={urlsText} onChange={e => setUrlsText(e.target.value)} rows={10}
+                  placeholder={`Mỗi URL trên 1 dòng. Hỗ trợ cú pháp: URL|Tiêu đề\n\nhttps://www.facebook.com/reel/...\nhttps://www.tiktok.com/@user/video/...\nhttps://www.facebook.com/reel/...|Tiêu đề tùy chọn`}
+                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg text-sm font-mono resize-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+              ) : (
+                <div className="space-y-2">
+                  <div className="grid text-xs font-medium text-gray-400 px-1 pb-1" style={{ gridTemplateColumns: '1fr 150px 185px 28px' }}>
+                    <span>URL video</span><span>Tiêu đề (tuỳ chọn)</span><span>⏰ Thời gian upload</span><span></span>
+                  </div>
+                  {urlRows.map((row, i) => (
+                    <div key={i} className="grid gap-2 items-center" style={{ gridTemplateColumns: '1fr 150px 185px 28px' }}>
+                      <input type="url" value={row.url}
+                        onChange={e => setUrlRows(prev => prev.map((r, j) => j === i ? { ...r, url: e.target.value } : r))}
+                        placeholder="https://www.facebook.com/reel/..."
+                        className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg text-xs focus:ring-2 focus:ring-blue-500 focus:border-blue-500 font-mono" />
+                      <input type="text" value={row.title}
+                        onChange={e => setUrlRows(prev => prev.map((r, j) => j === i ? { ...r, title: e.target.value } : r))}
+                        placeholder="Tên video..."
+                        className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg text-xs focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                      <input type="datetime-local" value={row.scheduledAt}
+                        onChange={e => setUrlRows(prev => prev.map((r, j) => j === i ? { ...r, scheduledAt: e.target.value } : r))}
+                        min={new Date().toISOString().slice(0, 16)}
+                        className="w-full px-2 py-2 border-2 border-orange-300 rounded-lg text-xs focus:ring-2 focus:ring-orange-400 focus:border-orange-400 bg-orange-50" />
+                      <button type="button"
+                        onClick={() => setUrlRows(prev => prev.length === 1 ? [{ url: '', title: '', scheduledAt: '' }] : prev.filter((_, j) => j !== i))}
+                        className="text-red-400 hover:text-red-600 flex items-center justify-center">
+                        <XCircle className="w-4 h-4" />
+                      </button>
+                    </div>
+                  ))}
+                  {urlRows.length < 15 && (
+                    <button type="button"
+                      onClick={() => setUrlRows(prev => [...prev, { url: '', title: '', scheduledAt: '' }])}
+                      className="w-full py-2 border-2 border-dashed border-gray-300 rounded-lg text-xs text-gray-500 hover:border-blue-400 hover:text-blue-600 transition-all">
+                      + Thêm video
+                    </button>
+                  )}
+                </div>
+              )}
             </div>
           ) : (
             <div>
@@ -335,15 +386,21 @@ export default function UploadVideoPage() {
                 <span className="text-xs text-gray-400 mt-1">Tối đa 15 files .mp4 .mov .avi</span>
               </label>
               {selectedFiles.length > 0 && (
-                <div className="mt-3 space-y-1 max-h-48 overflow-y-auto border border-gray-200 rounded-lg p-2">
+                <div className="mt-3 space-y-1 border border-gray-200 rounded-lg p-2 bg-gray-50">
+                  {scheduleMode === 'later' && (
+                    <p className="text-xs font-medium text-orange-700 mb-2 px-1">⏰ Thời gian upload cho từng file (để trống = upload sớm nhất)</p>
+                  )}
                   {selectedFiles.map((f, i) => (
-                    <div key={i} className="flex items-center justify-between p-2 bg-gray-50 rounded">
-                      <div className="flex items-center gap-2 min-w-0">
-                        <FileVideo className="w-4 h-4 text-blue-600 flex-shrink-0" />
-                        <span className="text-sm text-gray-800 truncate">{f.name}</span>
-                        <span className="text-xs text-gray-400 flex-shrink-0">{formatFileSize(f.size)}</span>
-                      </div>
-                      <button type="button" onClick={() => setSelectedFiles(prev => prev.filter((_, j) => j !== i))} className="ml-2 text-red-500 hover:text-red-700">
+                    <div key={i} className={`flex items-center gap-2 p-2 rounded ${scheduleMode === 'later' ? 'bg-white border border-orange-100' : 'bg-white'}`}>
+                      <FileVideo className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                      <span className="text-sm text-gray-800 truncate flex-1 min-w-0">{f.name}</span>
+                      <span className="text-xs text-gray-400 flex-shrink-0">{formatFileSize(f.size)}</span>
+                      {scheduleMode === 'later' && (
+                        <input type="datetime-local" value={videoSchedules[i] || ''} onChange={e => setVideoSchedules(prev => ({ ...prev, [i]: e.target.value }))}
+                          min={new Date().toISOString().slice(0, 16)}
+                          className="flex-shrink-0 text-xs px-2 py-1 border border-orange-300 rounded bg-white focus:ring-1 focus:ring-orange-400 focus:outline-none" />
+                      )}
+                      <button type="button" onClick={() => { setSelectedFiles(prev => prev.filter((_, j) => j !== i)); setVideoSchedules(prev => { const n = { ...prev }; delete n[i]; return n; }); }} className="ml-1 text-red-500 hover:text-red-700 flex-shrink-0">
                         <XCircle className="w-4 h-4" />
                       </button>
                     </div>
@@ -390,20 +447,15 @@ export default function UploadVideoPage() {
                 </button>
               </div>
               {scheduleMode === 'later' && (
-                <div className="mt-3 p-4 bg-orange-50 border-2 border-orange-200 rounded-lg">
-                  <label className="block text-sm font-medium text-orange-800 mb-2">🕐 Server bắt đầu upload lúc</label>
-                  <input type="datetime-local" value={scheduledStartAt} onChange={e => setScheduledStartAt(e.target.value)} min={new Date().toISOString().slice(0, 16)}
-                    className="w-full px-3 py-2 border-2 border-orange-300 rounded-md text-sm bg-white focus:ring-2 focus:ring-orange-400" required={scheduleMode === 'later'} />
-                  <p className="text-xs text-orange-600 mt-2">
-                    Cron chạy mỗi 5 phút. Các video trong campaign được upload <strong>tuần tự</strong> từng cái một. Chỉ 1 campaign chạy tại 1 thời điểm.
-                  </p>
-                </div>
+                <p className="mt-2 text-xs text-orange-600 bg-orange-50 border border-orange-200 rounded p-2">
+                  Nhập thời gian upload riêng cho từng video bên dưới. Cron chạy mỗi phút, upload <strong>tuần tự</strong> từng cái. Chỉ 1 campaign chạy tại 1 thời điểm.
+                </p>
               )}
             </div>
           </div>
 
           {/* Submit */}
-          <button type="submit" disabled={!selectedChannel || itemCount === 0 || itemCount > 15 || (scheduleMode === 'later' && !scheduledStartAt)}
+          <button type="submit" disabled={!selectedChannel || itemCount === 0 || itemCount > 15}
             className={`w-full text-white px-6 py-4 rounded-lg font-semibold flex items-center justify-center gap-2 text-base shadow-lg disabled:shadow-none disabled:cursor-not-allowed transition-all ${
               scheduleMode === 'later'
                 ? 'bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 disabled:from-gray-300 disabled:to-gray-400'

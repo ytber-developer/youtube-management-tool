@@ -86,16 +86,27 @@ async function cronTick() {
 // ─── Campaign processor ───────────────────────────────────────────────────────
 
 async function processCampaign(campaign) {
-  // Find next pending video in this campaign
+  // Find next pending video that is due (no schedule or schedule <= now)
   const video = await UploadedVideo.findOne({
-    where: { campaign_id: campaign.id, status: 'pending' },
+    where: {
+      campaign_id: campaign.id,
+      status: 'pending',
+      [Op.or]: [
+        { scheduled_start_at: null },
+        { scheduled_start_at: { [Op.lte]: new Date() } }
+      ]
+    },
     order: [['order_index', 'ASC'], ['id', 'ASC']]
   });
 
   if (!video) {
-    // All videos finished
-    await campaign.update({ status: 'done' });
-    console.log(`🏁 [UploadQueue] Campaign #${campaign.id} all done`);
+    // Check if any videos are still pending but not yet due (future schedule)
+    const pendingCount = await UploadedVideo.count({ where: { campaign_id: campaign.id, status: 'pending' } });
+    if (pendingCount === 0) {
+      await campaign.update({ status: 'done' });
+      console.log(`🏁 [UploadQueue] Campaign #${campaign.id} all done`);
+    }
+    // else: pending videos exist but none are due yet — keep campaign running
     return;
   }
 
@@ -230,13 +241,19 @@ async function recoverStuckUploads() {
 /**
  * Create a new upload campaign with video tasks.
  */
-async function createUploadCampaign({ name, accountId, email, scheduledStartAt, videos, options = {} }) {
+async function createUploadCampaign({ name, accountId, email, videos, options = {} }) {
+  // Campaign scheduled_start_at = earliest per-video schedule (null = ASAP)
+  const videoSchedules = videos.map(v => v.scheduledStartAt).filter(Boolean);
+  const campaignScheduledAt = videoSchedules.length > 0
+    ? new Date(Math.min(...videoSchedules.map(s => new Date(s).getTime())))
+    : null;
+
   const campaign = await UploadCampaign.create({
     name,
     account_youtube_id: accountId,
     email,
     status: 'new',
-    scheduled_start_at: scheduledStartAt || null,
+    scheduled_start_at: campaignScheduledAt,
     options,
     total_videos: videos.length
   });
@@ -253,7 +270,7 @@ async function createUploadCampaign({ name, accountId, email, scheduledStartAt, 
       video_description: v.description || null,
       video_visibility: options.visibility || 'public',
       schedule_date: options.scheduleDate || null,
-      scheduled_start_at: scheduledStartAt || null,
+      scheduled_start_at: v.scheduledStartAt ? new Date(v.scheduledStartAt) : null,
       status: 'pending'
     }))
   );

@@ -741,7 +741,7 @@ class UploadController {
    */
   async createUploadCampaign(req, res) {
     try {
-      const { id, email, name, scheduledStartAt, visibility, scheduleDate, videos } = req.body;
+      const { id, email, name, visibility, scheduleDate, videos } = req.body;
       const { createUploadCampaign } = require('../services/upload.queue.service');
 
       if (!id && !email) {
@@ -762,19 +762,19 @@ class UploadController {
         return res.status(404).json({ success: false, message: 'Không tìm thấy account' });
       }
 
-      const scheduledAt = scheduledStartAt ? new Date(scheduledStartAt) : null;
       const campaignName = name || `Upload ${videos.length} video(s) - ${new Date().toLocaleString('vi-VN')}`;
 
       const campaign = await createUploadCampaign({
         name: campaignName,
         accountId: account.id,
         email: account.email,
-        scheduledStartAt: scheduledAt,
-        videos,
+        videos, // each video may have scheduledStartAt
         options: { visibility: visibility || 'public', scheduleDate: scheduleDate || null }
       });
 
-      const timeLabel = scheduledAt ? scheduledAt.toLocaleString('vi-VN') : 'ASAP';
+      const timeLabel = campaign.scheduled_start_at
+        ? new Date(campaign.scheduled_start_at).toLocaleString('vi-VN')
+        : 'ASAP';
 
       return res.status(201).json({
         success: true,
@@ -807,7 +807,7 @@ class UploadController {
    */
   async createUploadCampaignFiles(req, res) {
     try {
-      const { id, email, name, scheduledStartAt, visibility, scheduleDate } = req.body;
+      const { id, email, name, visibility, scheduleDate } = req.body;
       const { createUploadCampaign } = require('../services/upload.queue.service');
       const fs = require('fs');
 
@@ -826,29 +826,30 @@ class UploadController {
       const where = id ? { id } : { email };
       const account = await AccountYoutube.findOne({ where });
       if (!account) {
-        // Clean up uploaded files
         files.forEach(f => { try { if (fs.existsSync(f.path)) fs.unlinkSync(f.path); } catch (e) { /* ignore */ } });
         return res.status(404).json({ success: false, message: 'Không tìm thấy account' });
       }
 
-      const scheduledAt = scheduledStartAt ? new Date(scheduledStartAt) : null;
       const campaignName = name || `Upload ${files.length} file(s) - ${new Date().toLocaleString('vi-VN')}`;
 
-      const videos = files.map(f => ({
+      // Per-file schedules sent as scheduledStartAt_0, scheduledStartAt_1, ...
+      const videos = files.map((f, i) => ({
         localFilePath: f.path,
-        title: f.originalname.replace(/\.[^/.]+$/, '') // filename without extension as title
+        title: f.originalname.replace(/\.[^/.]+$/, ''),
+        scheduledStartAt: req.body[`scheduledStartAt_${i}`] || null
       }));
 
       const campaign = await createUploadCampaign({
         name: campaignName,
         accountId: account.id,
         email: account.email,
-        scheduledStartAt: scheduledAt,
         videos,
         options: { visibility: visibility || 'public', scheduleDate: scheduleDate || null }
       });
 
-      const timeLabel = scheduledAt ? scheduledAt.toLocaleString('vi-VN') : 'ASAP';
+      const timeLabel = campaign.scheduled_start_at
+        ? new Date(campaign.scheduled_start_at).toLocaleString('vi-VN')
+        : 'ASAP';
 
       return res.status(201).json({
         success: true,

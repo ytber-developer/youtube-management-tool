@@ -118,10 +118,9 @@ export interface CreateUploadCampaignRequest {
   id?: number;
   email?: string;
   name?: string;
-  scheduledStartAt?: string;
   visibility?: 'public' | 'unlisted' | 'private';
   scheduleDate?: string;
-  videos: Array<{ sourceUrl: string; title?: string; description?: string }>;
+  videos: Array<{ sourceUrl: string; title?: string; description?: string; scheduledStartAt?: string }>;
 }
 
 export interface UploadCampaignVideo {

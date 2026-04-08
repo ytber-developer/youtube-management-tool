@@ -30,6 +30,7 @@ export const API_ENDPOINTS = {
     DOWNLOADS: '/api/v1/upload/downloads',
     VIDEOS: '/api/v1/upload/videos',
     CAMPAIGNS: '/api/v1/upload/campaigns',
+    CAMPAIGNS_FILES: '/api/v1/upload/campaigns/files',
     CAMPAIGN_STATUS: (id: number) => `/api/v1/upload/campaigns/${id}/status`,
   },
   AUTHENTICATOR: '/api/v1/authenticator',

@@ -795,6 +795,80 @@ class UploadController {
   }
 
   /**
+   * POST /api/v1/upload/campaigns/files
+   * Tạo upload campaign từ files upload thẳng từ máy tính
+   * Multipart form-data:
+   *   - video[]: files (tối đa 15)
+   *   - id?: number, email?: string
+   *   - scheduledStartAt?: string (ISO)
+   *   - visibility?: string
+   *   - scheduleDate?: string (ISO)
+   *   - name?: string
+   */
+  async createUploadCampaignFiles(req, res) {
+    try {
+      const { id, email, name, scheduledStartAt, visibility, scheduleDate } = req.body;
+      const { createUploadCampaign } = require('../services/upload.queue.service');
+      const fs = require('fs');
+
+      if (!id && !email) {
+        return res.status(400).json({ success: false, message: 'Cần truyền id hoặc email của account' });
+      }
+
+      const files = req.files || [];
+      if (files.length === 0) {
+        return res.status(400).json({ success: false, message: 'Không tìm thấy file nào' });
+      }
+      if (files.length > 15) {
+        return res.status(400).json({ success: false, message: 'Tối đa 15 files' });
+      }
+
+      const where = id ? { id } : { email };
+      const account = await AccountYoutube.findOne({ where });
+      if (!account) {
+        // Clean up uploaded files
+        files.forEach(f => { try { if (fs.existsSync(f.path)) fs.unlinkSync(f.path); } catch (e) { /* ignore */ } });
+        return res.status(404).json({ success: false, message: 'Không tìm thấy account' });
+      }
+
+      const scheduledAt = scheduledStartAt ? new Date(scheduledStartAt) : null;
+      const campaignName = name || `Upload ${files.length} file(s) - ${new Date().toLocaleString('vi-VN')}`;
+
+      const videos = files.map(f => ({
+        localFilePath: f.path,
+        title: f.originalname.replace(/\.[^/.]+$/, '') // filename without extension as title
+      }));
+
+      const campaign = await createUploadCampaign({
+        name: campaignName,
+        accountId: account.id,
+        email: account.email,
+        scheduledStartAt: scheduledAt,
+        videos,
+        options: { visibility: visibility || 'public', scheduleDate: scheduleDate || null }
+      });
+
+      const timeLabel = scheduledAt ? scheduledAt.toLocaleString('vi-VN') : 'ASAP';
+
+      return res.status(201).json({
+        success: true,
+        message: `Campaign #${campaign.id} đã tạo — ${files.length} file(s) sẽ upload lúc ${timeLabel}`,
+        data: {
+          id: campaign.id,
+          name: campaign.name,
+          status: campaign.status,
+          totalVideos: campaign.total_videos,
+          scheduledStartAt: campaign.scheduled_start_at
+        }
+      });
+
+    } catch (error) {
+      console.error('❌ Create upload campaign (files) error:', error);
+      return res.status(500).json({ success: false, message: 'Internal server error', error: error.message });
+    }
+  }
+
+  /**
    * GET /api/v1/upload/campaigns
    * Danh sách upload campaigns với progress
    * @query { status?: string, page?: number, limit?: number }

@@ -82,9 +82,16 @@ router.get('/videos', uploadController.getUploadedVideos);
 
 /**
  * @route POST /api/v1/upload/campaigns
- * @desc Tao upload campaign (cron xu ly tung video theo thu tu, 1 campaign/lan)
+ * @desc Tao upload campaign tu URLs (cron xu ly tung video theo thu tu, 1 campaign/lan)
  */
 router.post('/campaigns', uploadController.createUploadCampaign);
+
+/**
+ * @route POST /api/v1/upload/campaigns/files
+ * @desc Tao upload campaign tu files upload tu may tinh
+ * @multipart form-data: video[] (files), id, scheduledStartAt, visibility, scheduleDate, name
+ */
+router.post('/campaigns/files', uploadVideo.array('video', 15), uploadController.createUploadCampaignFiles);
 
 /**
  * @route GET /api/v1/upload/campaigns

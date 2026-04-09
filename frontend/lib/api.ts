@@ -128,10 +128,19 @@ export interface UploadCampaignVideo {
   order_index: number;
   title: string | null;
   source_url: string;
+  sourceUrl?: string;
   status: 'pending' | 'downloading' | 'uploading' | 'completed' | 'failed' | 'skipped';
   video_url: string | null;
+  videoUrl?: string | null;
   error_message: string | null;
+  errorMessage?: string | null;
   uploaded_at: string | null;
+  scheduled_start_at?: string | null;
+  scheduledStartAt?: string | null;
+  schedule_date?: string | null;
+  scheduleDate?: string | null;
+  local_file_path?: string | null;
+  localFilePath?: string | null;
 }
 
 export interface UploadCampaign {

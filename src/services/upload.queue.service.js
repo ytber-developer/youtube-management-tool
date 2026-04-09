@@ -287,8 +287,8 @@ async function createUploadCampaign({ name, accountId, email, videos, options = 
 
 function startUploadCron() {
   if (cronJob) return;
-  cronJob = cron.schedule('*/3 * * * *', cronTick);
-  console.log('✅ Upload queue cron started (every 3 minutes)');
+  cronJob = cron.schedule('*/2 * * * *', cronTick);
+  console.log('✅ Upload queue cron started (every 2 minutes)');
 }
 
 module.exports = { startUploadCron, recoverStuckUploads, createUploadCampaign };

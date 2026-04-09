@@ -24,6 +24,8 @@ export default function UploadVideoPage() {
   const [scheduleMode, setScheduleMode] = useState<'now' | 'later'>('now');
   const [videoSchedules, setVideoSchedules] = useState<Record<number, string>>({});
   const [urlRows, setUrlRows] = useState<Array<{ url: string; title: string; scheduledAt: string }>>([{ url: '', title: '', scheduledAt: '' }]);
+  // Track validation errors for free-text datetime inputs. Keys: 'global', 'url-<i>', 'file-<i>'
+  const [dateErrors, setDateErrors] = useState<Record<string, string>>({});
   // Upload campaigns
   const [campaigns, setCampaigns] = useState<UploadCampaign[]>([]);
   const [campaignsLoading, setCampaignsLoading] = useState(false);
@@ -115,6 +117,89 @@ export default function UploadVideoPage() {
     return Math.round(bytes / Math.pow(k, i) * 100) / 100 + ' ' + sizes[i];
   };
 
+  // Parse user-entered datetime strings into an ISO UTC string.
+  // Supports formats like:
+  //  - "MM/DD/YYYY HH:mm AM/PM"  (e.g. 04/08/2026 01:15 AM)
+  //  - "DD/MM/YYYY HH:mm" (will be treated as DD/MM when month > 12 ambiguous)
+  //  //  - ISO-ish strings accepted by Date()
+  const parseUserDateTime = (s?: string): string | null => {
+    if (!s) return null;
+    const raw = s.trim();
+
+    // Try Date.parse first (covers ISO, browser-friendly formats)
+    const parsed = new Date(raw);
+    if (!isNaN(parsed.getTime())) return parsed.toISOString();
+
+    // Try common slash format with optional AM/PM
+    const m = raw.match(/^\s*(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})\s+(\d{1,2}):(\d{2})(?:\s*([AaPp][Mm]))?\s*$/);
+    if (m) {
+      let part1 = parseInt(m[1], 10); // could be month or day
+      let part2 = parseInt(m[2], 10);
+      const year = parseInt(m[3], 10);
+      let hour = parseInt(m[4], 10);
+      const minute = parseInt(m[5], 10);
+      const ampm = m[6];
+
+      if (ampm) {
+        const am = /am/i.test(ampm);
+        const pm = /pm/i.test(ampm);
+        if (am && hour === 12) hour = 0;
+        if (pm && hour < 12) hour += 12;
+      }
+
+      // Heuristic: if first part > 12, treat as DD/MM, else treat as MM/DD
+      let day: number, month: number;
+      if (part1 > 12) {
+        day = part1; month = part2;
+      } else {
+        // ambiguous - assume MM/DD (US) because that's common in examples like 04/08
+        month = part1; day = part2;
+      }
+
+      // Create local Date (interpreted in user's local timezone) and convert to ISO
+      const dt = new Date(year, month - 1, day, hour, minute, 0);
+      if (!isNaN(dt.getTime())) return dt.toISOString();
+    }
+
+    // Try space-separated: YYYY-MM-DD HH:mm
+    const m2 = raw.match(/^(\d{4})-(\d{2})-(\d{2})[ T](\d{1,2}):(\d{2})$/);
+    if (m2) {
+      const y = parseInt(m2[1], 10), mo = parseInt(m2[2], 10), d = parseInt(m2[3], 10);
+      const hh = parseInt(m2[4], 10), mm = parseInt(m2[5], 10);
+      const dt = new Date(y, mo - 1, d, hh, mm, 0);
+      if (!isNaN(dt.getTime())) return dt.toISOString();
+    }
+
+    return null;
+  };
+
+  // Validate a free-text date/time and return helpful error message (and ISO if valid)
+  const parseAndValidate = (s?: string): { iso: string | null; error: string | null } => {
+    if (!s || !s.trim()) return { iso: null, error: null };
+    const raw = s.trim();
+
+    // Quick sanity: reject clearly invalid repeats like '21:425' (minute > 59)
+    const hhmmMatch = raw.match(/(\d{1,2}):(\d{1,3})/);
+    if (hhmmMatch) {
+      const hh = parseInt(hhmmMatch[1], 10);
+      const mm = parseInt(hhmmMatch[2], 10);
+      if (isNaN(hh) || isNaN(mm)) return { iso: null, error: 'Giờ/phút không hợp lệ' };
+      if (hh < 0 || hh > 23) return { iso: null, error: 'Giờ phải trong khoảng 0-23' };
+      if (mm < 0 || mm > 59) return { iso: null, error: 'Phút phải trong khoảng 0-59' };
+    }
+
+    const iso = parseUserDateTime(raw);
+    if (iso) {
+      const ts = new Date(iso).getTime();
+      // treat any time strictly before now as invalid (past)
+      if (ts < Date.now()) return { iso: null, error: 'Thời gian phải là tương lai (không được ở quá khứ)' };
+      return { iso, error: null };
+    }
+
+    // If it's not parseable, give a friendly hint
+    return { iso: null, error: 'Không nhận diện được định dạng. Ví dụ hợp lệ: "2026-04-09 21:15" hoặc "04/09/2026 09:15 PM"' };
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!selectedChannel) { alert('Vui lòng chọn kênh YouTube'); return; }
@@ -127,15 +212,16 @@ export default function UploadVideoPage() {
       if (scheduleMode === 'later') {
         const validRows = urlRows.filter(r => isValidHttpUrl(r.url));
         if (!validRows.length) { alert('Vui lòng nhập ít nhất 1 URL hợp lệ'); return; }
+        if (validRows.length > 15) { alert('Tối đa 15 URLs'); return; }
         try {
           const res = await api.upload.createUploadCampaign({
             id: selectedChannel,
             visibility: globalVisibility,
-            scheduleDate: globalScheduleDate || undefined,
+            scheduleDate: globalScheduleDate ? parseUserDateTime(globalScheduleDate) || undefined : undefined,
             videos: validRows.map(r => ({
               sourceUrl: r.url,
               title: r.title || undefined,
-              scheduledStartAt: r.scheduledAt ? withVN7Offset(r.scheduledAt) : undefined,
+              scheduledStartAt: r.scheduledAt ? (parseUserDateTime(r.scheduledAt) || undefined) : undefined,
             })),
           });
           if (res.success) {
@@ -178,16 +264,17 @@ export default function UploadVideoPage() {
           const formData = new FormData();
           formData.append('id', selectedChannel.toString());
           formData.append('visibility', globalVisibility);
-          if (globalScheduleDate) formData.append('scheduleDate', globalScheduleDate);
+          if (globalScheduleDate) formData.append('scheduleDate', parseUserDateTime(globalScheduleDate) || globalScheduleDate);
           selectedFiles.forEach((f, i) => {
             formData.append('video', f);
-            if (videoSchedules[i]) formData.append(`scheduledStartAt_${i}`, withVN7Offset(videoSchedules[i]));
+            if (videoSchedules[i]) formData.append(`scheduledStartAt_${i}`, parseUserDateTime(videoSchedules[i]) || videoSchedules[i]);
           });
           const res = await api.upload.createUploadCampaignFiles(formData);
           if (res.success) {
             setSelectedFiles([]);
             if (fileInputRef.current) fileInputRef.current.value = '';
             setVideoSchedules({});
+            setDateErrors({});
             alert(res.message);
             await loadCampaigns();
           } else {
@@ -207,7 +294,7 @@ export default function UploadVideoPage() {
           const formData = new FormData();
           formData.append('id', selectedChannel.toString());
           formData.append('visibility', globalVisibility);
-          if (globalScheduleDate) formData.append('scheduleDate', globalScheduleDate);
+          if (globalScheduleDate) formData.append('scheduleDate', parseUserDateTime(globalScheduleDate) || globalScheduleDate);
           selectedFiles.forEach(f => formData.append('video', f));
           const res = await api.upload.batchUploadFiles(formData);
           setUploads(prev => prev.map(j => j.id === jobId ? { ...j, status: 'success', message: 'Hoàn tất', results: res.data?.results || [] } : j));
@@ -354,24 +441,37 @@ export default function UploadVideoPage() {
                         onChange={e => setUrlRows(prev => prev.map((r, j) => j === i ? { ...r, title: e.target.value } : r))}
                         placeholder="Tên video..."
                         className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg text-xs focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
-                      <input type="datetime-local" value={row.scheduledAt}
-                        onChange={e => setUrlRows(prev => prev.map((r, j) => j === i ? { ...r, scheduledAt: e.target.value } : r))}
-                        min={toVN7(new Date())}
-                        className="w-full px-2 py-2 border-2 border-orange-300 rounded-lg text-xs focus:ring-2 focus:ring-orange-400 focus:border-orange-400 bg-orange-50" />
+
+                      {/* scheduledAt + inline error in a small column wrapper */}
+                      <div className="w-full">
+                        <input type="text" value={row.scheduledAt}
+                          onChange={e => {
+                            const v = e.target.value;
+                            setUrlRows(prev => prev.map((r, j) => j === i ? { ...r, scheduledAt: v } : r));
+                            const { error } = parseAndValidate(v);
+                            setDateErrors(prev => ({ ...prev, [`url-${i}`]: error || '' }));
+                          }}
+                          placeholder="YYYY-MM-DD HH:mm"
+                          className="w-full px-3 py-2 border-2 border-orange-300 rounded-lg text-xs focus:ring-2 focus:ring-orange-400 focus:border-orange-400 bg-orange-50" />
+                        {dateErrors[`url-${i}`] && <div className="text-xs text-red-500 mt-1">{dateErrors[`url-${i}`]}</div>}
+                      </div>
+
                       <button type="button"
-                        onClick={() => setUrlRows(prev => prev.length === 1 ? [{ url: '', title: '', scheduledAt: '' }] : prev.filter((_, j) => j !== i))}
+                        onClick={() => {
+                          setUrlRows(prev => prev.length === 1 ? [{ url: '', title: '', scheduledAt: '' }] : prev.filter((_, j) => j !== i));
+                          setDateErrors(prev => { const n = { ...prev }; delete n[`url-${i}`]; return n; });
+                        }}
                         className="text-red-400 hover:text-red-600 flex items-center justify-center">
                         <XCircle className="w-4 h-4" />
                       </button>
                     </div>
                   ))}
-                  {(
-                    <button type="button"
-                      onClick={() => setUrlRows(prev => [...prev, { url: '', title: '', scheduledAt: '' }])}
-                      className="w-full py-2 border-2 border-dashed border-gray-300 rounded-lg text-xs text-gray-500 hover:border-blue-400 hover:text-blue-600 transition-all">
-                      + Thêm video
-                    </button>
-                  )}
+
+                  <button type="button"
+                    onClick={() => setUrlRows(prev => [...prev, { url: '', title: '', scheduledAt: '' }])}
+                    className="w-full py-2 border-2 border-dashed border-gray-300 rounded-lg text-xs text-gray-500 hover:border-blue-400 hover:text-blue-600 transition-all">
+                    + Thêm video
+                  </button>
                 </div>
               )}
             </div>
@@ -398,9 +498,17 @@ export default function UploadVideoPage() {
                       <span className="text-sm text-gray-800 truncate flex-1 min-w-0">{f.name}</span>
                       <span className="text-xs text-gray-400 flex-shrink-0">{formatFileSize(f.size)}</span>
                       {scheduleMode === 'later' && (
-                        <input type="datetime-local" value={videoSchedules[i] || ''} onChange={e => setVideoSchedules(prev => ({ ...prev, [i]: e.target.value }))}
-                          min={toVN7(new Date())}
-                          className="flex-shrink-0 text-xs px-2 py-1 border border-orange-300 rounded bg-white focus:ring-1 focus:ring-orange-400 focus:outline-none" />
+                        <>
+                          <input type="text" value={videoSchedules[i] || ''} onChange={e => {
+                              const v = e.target.value;
+                              setVideoSchedules(prev => ({ ...prev, [i]: v }));
+                              const { error } = parseAndValidate(v);
+                              setDateErrors(prev => ({ ...prev, [`file-${i}`]: error || '' }));
+                            }}
+                            placeholder="YYYY-MM-DD HH:mm"
+                            className="flex-shrink-0 text-xs px-2 py-1 border border-orange-300 rounded bg-white focus:ring-1 focus:ring-orange-400 focus:outline-none" />
+                          {dateErrors[`file-${i}`] && <div className="text-xs text-red-500 ml-2">{dateErrors[`file-${i}`]}</div>}
+                        </>
                       )}
                       <button type="button" onClick={() => { setSelectedFiles(prev => prev.filter((_, j) => j !== i)); setVideoSchedules(prev => { const n = { ...prev }; delete n[i]; return n; }); }} className="ml-1 text-red-500 hover:text-red-700 flex-shrink-0">
                         <XCircle className="w-4 h-4" />
@@ -429,9 +537,14 @@ export default function UploadVideoPage() {
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-600 mb-2">Ngày YouTube đăng (tuỳ chọn)</label>
-                <input type="datetime-local" value={globalScheduleDate} onChange={e => setGlobalScheduleDate(e.target.value)} min={getMinDateTime()}
+                <input type="text" value={globalScheduleDate} onChange={e => {
+                    const v = e.target.value;
+                    setGlobalScheduleDate(v);
+                    const { error } = parseAndValidate(v);
+                    setDateErrors(prev => ({ ...prev, global: error || '' }));
+                  }} placeholder="YYYY-MM-DD HH:mm"
                   className="w-full px-3 py-2 border-2 border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-500" />
-                <p className="text-xs text-gray-400 mt-1">Để trống = đăng ngay sau khi upload</p>
+                {dateErrors.global && <div className="text-xs text-red-500 mt-1">{dateErrors.global}</div>}
               </div>
             </div>
 
@@ -567,7 +680,7 @@ export default function UploadVideoPage() {
                   {/* Expanded: video list */}
                   {isExpanded && (
                     <div className="border-t border-gray-200 divide-y divide-gray-100">
-                      {(c.videos || []).sort((a, b) => (a.orderIndex ?? a.order_index ?? 0) - (b.orderIndex ?? b.order_index ?? 0)).map(v => {
+                      {(c.videos || []).sort((a, b) => (a.order_index ?? 0) - (b.order_index ?? 0)).map(v => {
                         const vCfg = {
                           pending: { icon: '⏳', color: 'text-gray-500' },
                           downloading: { icon: '📥', color: 'text-blue-600' },

@@ -889,15 +889,32 @@ class UploadController {
         order: [['createdAt', 'DESC']],
         include: [
           { model: AccountYoutube, as: 'account', attributes: ['id', 'email', 'channel_name'], required: false },
-          { model: UploadedVideo, as: 'videos', attributes: ['id', 'order_index', 'title', 'source_url', 'status', 'video_url', 'error_message', 'uploaded_at'], required: false }
+          // include scheduling and local file info so frontend can show details
+          { model: UploadedVideo, as: 'videos', attributes: ['id', 'order_index', 'title', 'source_url', 'status', 'video_url', 'error_message', 'uploaded_at', 'scheduled_start_at', 'schedule_date', 'local_file_path'], required: false }
         ]
       });
 
-      // Compute progress counts per campaign
+      // Compute progress counts per campaign and expose detailed per-video info
       const data = rows.map(c => {
-        const videos = c.videos || [];
+        const rawVideos = c.videos || [];
+        const videos = rawVideos.map(v => ({
+          id: v.id,
+          orderIndex: v.order_index,
+          title: v.title,
+          sourceUrl: v.source_url,
+          status: v.status,
+          videoUrl: v.video_url,
+          errorMessage: v.error_message,
+          uploadedAt: v.uploaded_at,
+          // scheduling and local path
+          scheduledStartAt: v.scheduled_start_at,
+          scheduleDate: v.schedule_date,
+          localFilePath: v.local_file_path
+        }));
+
         return {
           ...c.toJSON(),
+          videos,
           completedVideos: videos.filter(v => v.status === 'completed').length,
           failedVideos: videos.filter(v => v.status === 'failed').length,
           pendingVideos: videos.filter(v => v.status === 'pending').length,

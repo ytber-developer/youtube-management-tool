@@ -187,17 +187,7 @@ export default function UploadVideoPage() {
             formData.append('video', f);
             if (videoSchedules[i]) formData.append(`scheduledStartAt_${i}`, videoSchedules[i]);
           });
-
-          // Direct fetch fallback (api.upload.createUploadCampaignFiles may be undefined at runtime)
-          const res = await (async () => {
-            const response = await fetch('/api/v1/upload/campaigns/files', { method: 'POST', body: formData });
-            if (!response.ok) {
-              const err = await response.json().catch(() => ({ message: 'Upload failed' }));
-              throw new Error(err.message || `HTTP ${response.status}`);
-            }
-            return response.json();
-          })();
-
+          const res = await api.upload.createUploadCampaignFiles(formData);
           if (res.success) {
             setSelectedFiles([]);
             if (fileInputRef.current) fileInputRef.current.value = '';

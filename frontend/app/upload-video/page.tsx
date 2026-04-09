@@ -187,7 +187,17 @@ export default function UploadVideoPage() {
             formData.append('video', f);
             if (videoSchedules[i]) formData.append(`scheduledStartAt_${i}`, videoSchedules[i]);
           });
-          const res = await api.upload.createUploadCampaignFiles(formData);
+
+          // Direct fetch fallback (api.upload.createUploadCampaignFiles may be undefined at runtime)
+          const res = await (async () => {
+            const response = await fetch('/api/v1/upload/campaigns/files', { method: 'POST', body: formData });
+            if (!response.ok) {
+              const err = await response.json().catch(() => ({ message: 'Upload failed' }));
+              throw new Error(err.message || `HTTP ${response.status}`);
+            }
+            return response.json();
+          })();
+
           if (res.success) {
             setSelectedFiles([]);
             if (fileInputRef.current) fileInputRef.current.value = '';
@@ -565,7 +575,7 @@ export default function UploadVideoPage() {
                   {/* Expanded: video list */}
                   {isExpanded && (
                     <div className="border-t border-gray-200 divide-y divide-gray-100">
-                      {(c.videos || []).sort((a, b) => a.order_index - b.order_index).map(v => {
+                      {(c.videos || []).sort((a, b) => (a.orderIndex ?? a.order_index ?? 0) - (b.orderIndex ?? b.order_index ?? 0)).map(v => {
                         const vCfg = {
                           pending: { icon: '⏳', color: 'text-gray-500' },
                           downloading: { icon: '📥', color: 'text-blue-600' },
@@ -575,16 +585,46 @@ export default function UploadVideoPage() {
                           skipped: { icon: '⏭️', color: 'text-gray-400' },
                         }[v.status] || { icon: '•', color: 'text-gray-400' };
 
+                        // Support both snake_case (older API) and camelCase (controller mapping)
+                        const id = v.id;
+                        const title = v.title || v.sourceUrl || v.source_url || '';
+                        const sourceUrl = v.sourceUrl || v.source_url || '';
+                        const errorMessage = v.errorMessage || v.error_message || null;
+                        const scheduledStartAt = v.scheduledStartAt || v.scheduled_start_at || null;
+                        const scheduleDate = v.scheduleDate || v.schedule_date || null;
+                        const localFilePath = v.localFilePath || v.local_file_path || null;
+                        const videoUrl = v.videoUrl || v.video_url || null;
+
+                        const uploadTimeLabel = scheduledStartAt ? new Date(scheduledStartAt).toLocaleString('vi-VN') : 'ASAP';
+                        const publishTimeLabel = scheduleDate ? new Date(scheduleDate).toLocaleString('vi-VN') : (v.video_visibility || v.video_visibility === 'public' ? 'After upload' : '—');
+
+                        const copyPath = async (p: string | null) => {
+                          if (!p) return;
+                          try { await navigator.clipboard.writeText(p); alert('Đã copy đường dẫn file'); }
+                          catch { alert('Không thể copy'); }
+                        };
+
                         return (
-                          <div key={v.id} className="px-4 py-2.5 flex items-center gap-3">
+                          <div key={id} className="px-4 py-2.5 flex items-center gap-3">
                             <span className="text-base flex-shrink-0">{vCfg.icon}</span>
                             <div className="flex-1 min-w-0">
-                              <div className="text-xs font-medium text-gray-700 truncate">{v.title || v.source_url}</div>
-                              {v.title && <div className="text-xs text-gray-400 truncate">{v.source_url}</div>}
-                              {v.error_message && <div className="text-xs text-red-500 truncate">{v.error_message}</div>}
+                              <div className="text-xs font-medium text-gray-700 truncate">{title}</div>
+                              {title && sourceUrl && <div className="text-xs text-gray-400 truncate">{sourceUrl}</div>}
+
+                              <div className="mt-1 flex items-center gap-3 text-xs text-gray-500 flex-wrap">
+                                <div className="px-2 py-0.5 bg-gray-100 rounded">Upload: <span className="font-medium text-gray-700">{uploadTimeLabel}</span></div>
+                                <div className="px-2 py-0.5 bg-gray-100 rounded">Publish: <span className="font-medium text-gray-700">{publishTimeLabel}</span></div>
+                                {localFilePath && (
+                                  <button type="button" onClick={() => copyPath(localFilePath)} className="px-2 py-0.5 bg-white border rounded text-xs text-gray-600 hover:bg-gray-50">
+                                    {localFilePath.length > 40 ? `${localFilePath.slice(0, 30)}...${localFilePath.slice(-8)}` : localFilePath}
+                                  </button>
+                                )}
+                              </div>
+
+                              {errorMessage && <div className="text-xs text-red-500 truncate mt-1">{errorMessage}</div>}
                             </div>
-                            {v.video_url && (
-                              <a href={v.video_url} target="_blank" rel="noopener noreferrer" className="text-xs text-blue-600 hover:underline flex-shrink-0">Xem</a>
+                            {videoUrl && (
+                              <a href={videoUrl} target="_blank" rel="noopener noreferrer" className="text-xs text-blue-600 hover:underline flex-shrink-0">Xem</a>
                             )}
                             {(v.status === 'downloading' || v.status === 'uploading') && <Loader2 className="w-3.5 h-3.5 animate-spin text-blue-600 flex-shrink-0" />}
                           </div>

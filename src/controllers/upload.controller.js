@@ -259,12 +259,6 @@ class UploadController {
         });
       }
 
-      if (videos.length > 15) {
-        return res.status(400).json({
-          success: false,
-          message: 'Tối đa 15 videos mỗi lần upload'
-        });
-      }
 
       // Validate each video has sourceUrl
       for (let i = 0; i < videos.length; i++) {
@@ -551,12 +545,6 @@ class UploadController {
         });
       }
 
-      if (files.length > 15) {
-        return res.status(400).json({
-          success: false,
-          message: 'Tối đa 15 files mỗi lần upload'
-        });
-      }
 
       // Tìm account
       const where = id ? { id } : { email };
@@ -762,7 +750,8 @@ class UploadController {
         return res.status(404).json({ success: false, message: 'Không tìm thấy account' });
       }
 
-      const campaignName = name || `Upload ${videos.length} video(s) - ${new Date().toLocaleString('vi-VN')}`;
+      const vnNow = new Date(Date.now() + 7 * 60 * 60 * 1000).toISOString().slice(0, 16).replace('T', ' ');
+      const campaignName = name || `Upload ${videos.length} video(s) - ${vnNow}`;
 
       const campaign = await createUploadCampaign({
         name: campaignName,
@@ -772,9 +761,7 @@ class UploadController {
         options: { visibility: visibility || 'public', scheduleDate: scheduleDate || null }
       });
 
-      const timeLabel = campaign.scheduled_start_at
-        ? new Date(campaign.scheduled_start_at).toLocaleString('vi-VN')
-        : 'ASAP';
+      const timeLabel = campaign.scheduled_start_at || 'ASAP';
 
       return res.status(201).json({
         success: true,
@@ -819,9 +806,6 @@ class UploadController {
       if (files.length === 0) {
         return res.status(400).json({ success: false, message: 'Không tìm thấy file nào' });
       }
-      if (files.length > 15) {
-        return res.status(400).json({ success: false, message: 'Tối đa 15 files' });
-      }
 
       const where = id ? { id } : { email };
       const account = await AccountYoutube.findOne({ where });
@@ -830,7 +814,8 @@ class UploadController {
         return res.status(404).json({ success: false, message: 'Không tìm thấy account' });
       }
 
-      const campaignName = name || `Upload ${files.length} file(s) - ${new Date().toLocaleString('vi-VN')}`;
+      const vnNow = new Date(Date.now() + 7 * 60 * 60 * 1000).toISOString().slice(0, 16).replace('T', ' ');
+      const campaignName = name || `Upload ${files.length} file(s) - ${vnNow}`;
 
       // Per-file schedules sent as scheduledStartAt_0, scheduledStartAt_1, ...
       const videos = files.map((f, i) => ({
@@ -847,9 +832,7 @@ class UploadController {
         options: { visibility: visibility || 'public', scheduleDate: scheduleDate || null }
       });
 
-      const timeLabel = campaign.scheduled_start_at
-        ? new Date(campaign.scheduled_start_at).toLocaleString('vi-VN')
-        : 'ASAP';
+      const timeLabel = campaign.scheduled_start_at || 'ASAP';
 
       return res.status(201).json({
         success: true,

@@ -30,6 +30,15 @@ const VideoDownloadService = require('./video.download.service');
 let cronJob = null;
 let isProcessing = false;
 
+const VN_OFFSET_MS = 7 * 60 * 60 * 1000;
+// "YYYY-MM-DDTHH:mm:ss" in VN time — used for DB storage and WHERE comparisons
+const vnNow = () => new Date(Date.now() + VN_OFFSET_MS).toISOString().slice(0, 19);
+// Convert any parseable datetime string (incl. +07:00 from frontend) → VN naive string
+const toVNString = (s) => {
+  if (!s) return null;
+  return new Date(new Date(s).getTime() + VN_OFFSET_MS).toISOString().slice(0, 19);
+};
+
 // ─── Cron tick ────────────────────────────────────────────────────────────────
 
 async function cronTick() {
@@ -41,8 +50,7 @@ async function cronTick() {
   isProcessing = true;
 
   try {
-    // Log current server time (ISO/UTC) to help debug timezone issues
-    console.log(`🕒 [UploadQueue] cron tick - server now: ${new Date().toISOString()}`);
+    console.log(`🕒 [UploadQueue] cron tick - VN now: ${vnNow()}`);
 
     // If any video is actively downloading/uploading → skip (browser still open)
     const activeCount = await UploadedVideo.count({
@@ -59,14 +67,8 @@ async function cronTick() {
     // No running campaign — promote oldest due 'new' campaign
     if (!campaign) {
       const next = await UploadCampaign.findOne({
-        where: {
-          status: 'new',
-          [Op.or]: [
-            { scheduled_start_at: null },
-            { scheduled_start_at: { [Op.lte]: new Date() } }
-          ]
-        },
-        order: [['scheduled_start_at', 'ASC'], ['createdAt', 'ASC']]
+        where: { status: 'new' },
+        order: [['createdAt', 'ASC']]
       });
 
       if (!next) return; // nothing queued
@@ -88,28 +90,29 @@ async function cronTick() {
 
 // ─── Campaign processor ───────────────────────────────────────────────────────
 
+const DONE_STATUSES = ['completed', 'failed', 'skipped'];
+
 async function processCampaign(campaign) {
-  // Find next pending video that is due (no schedule or schedule <= now)
   const video = await UploadedVideo.findOne({
     where: {
       campaign_id: campaign.id,
       status: 'pending',
       [Op.or]: [
         { scheduled_start_at: null },
-        { scheduled_start_at: { [Op.lte]: new Date() } }
+        { scheduled_start_at: { [Op.lte]: vnNow() } }
       ]
     },
     order: [['order_index', 'ASC'], ['id', 'ASC']]
   });
 
   if (!video) {
-    // Check if any videos are still pending but not yet due (future schedule)
-    const pendingCount = await UploadedVideo.count({ where: { campaign_id: campaign.id, status: 'pending' } });
-    if (pendingCount === 0) {
+    const remainingCount = await UploadedVideo.count({
+      where: { campaign_id: campaign.id, status: { [Op.notIn]: DONE_STATUSES } }
+    });
+    if (remainingCount === 0) {
       await campaign.update({ status: 'done' });
       console.log(`🏁 [UploadQueue] Campaign #${campaign.id} all done`);
     }
-    // else: pending videos exist but none are due yet — keep campaign running
     return;
   }
 
@@ -256,8 +259,7 @@ async function createUploadCampaign({ name, accountId, email, videos, options = 
     account_youtube_id: accountId,
     email,
     status: 'new',
-    // store as ISO string (UTC) to avoid ambiguity in SQLite storage/comparison
-    scheduled_start_at: campaignScheduledAt ? new Date(campaignScheduledAt).toISOString() : null,
+    scheduled_start_at: campaignScheduledAt ? toVNString(campaignScheduledAt.toISOString()) : null,
     options,
     total_videos: videos.length
   });
@@ -274,8 +276,7 @@ async function createUploadCampaign({ name, accountId, email, videos, options = 
       video_description: v.description || null,
       video_visibility: options.visibility || 'public',
       schedule_date: options.scheduleDate || null,
-      // normalize per-video scheduled start to ISO/UTC
-      scheduled_start_at: v.scheduledStartAt ? new Date(v.scheduledStartAt).toISOString() : null,
+      scheduled_start_at: v.scheduledStartAt ? toVNString(v.scheduledStartAt) : null,
       status: 'pending'
     }))
   );
@@ -286,8 +287,8 @@ async function createUploadCampaign({ name, accountId, email, videos, options = 
 
 function startUploadCron() {
   if (cronJob) return;
-  cronJob = cron.schedule('* * * * *', cronTick);
-  console.log('✅ Upload queue cron started (every 1 minute)');
+  cronJob = cron.schedule('*/3 * * * *', cronTick);
+  console.log('✅ Upload queue cron started (every 3 minutes)');
 }
 
 module.exports = { startUploadCron, recoverStuckUploads, createUploadCampaign };

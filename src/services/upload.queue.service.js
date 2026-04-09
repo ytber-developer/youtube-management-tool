@@ -41,6 +41,9 @@ async function cronTick() {
   isProcessing = true;
 
   try {
+    // Log current server time (ISO/UTC) to help debug timezone issues
+    console.log(`🕒 [UploadQueue] cron tick - server now: ${new Date().toISOString()}`);
+
     // If any video is actively downloading/uploading → skip (browser still open)
     const activeCount = await UploadedVideo.count({
       where: { status: { [Op.in]: ['downloading', 'uploading'] } }
@@ -253,7 +256,8 @@ async function createUploadCampaign({ name, accountId, email, videos, options = 
     account_youtube_id: accountId,
     email,
     status: 'new',
-    scheduled_start_at: campaignScheduledAt,
+    // store as ISO string (UTC) to avoid ambiguity in SQLite storage/comparison
+    scheduled_start_at: campaignScheduledAt ? new Date(campaignScheduledAt).toISOString() : null,
     options,
     total_videos: videos.length
   });
@@ -270,7 +274,8 @@ async function createUploadCampaign({ name, accountId, email, videos, options = 
       video_description: v.description || null,
       video_visibility: options.visibility || 'public',
       schedule_date: options.scheduleDate || null,
-      scheduled_start_at: v.scheduledStartAt ? new Date(v.scheduledStartAt) : null,
+      // normalize per-video scheduled start to ISO/UTC
+      scheduled_start_at: v.scheduledStartAt ? new Date(v.scheduledStartAt).toISOString() : null,
       status: 'pending'
     }))
   );

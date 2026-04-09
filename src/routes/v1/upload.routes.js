@@ -71,7 +71,7 @@ router.post('/batch-upload', uploadController.batchUpload);
  *   - video_0, video_1, ..., video_N: video files
  *   - fileCount: number - Số lượng files
  */
-router.post('/batch-upload-files', uploadVideo.array('video', 15), uploadController.batchUploadFiles);
+router.post('/batch-upload-files', uploadVideo.array('video'), uploadController.batchUploadFiles);
 
 /**
  * @route GET /api/v1/upload/videos
@@ -91,7 +91,7 @@ router.post('/campaigns', uploadController.createUploadCampaign);
  * @desc Tao upload campaign tu files upload tu may tinh
  * @multipart form-data: video[] (files), id, scheduledStartAt, visibility, scheduleDate, name
  */
-router.post('/campaigns/files', uploadVideo.array('video', 15), uploadController.createUploadCampaignFiles);
+router.post('/campaigns/files', uploadVideo.array('video'), uploadController.createUploadCampaignFiles);
 
 /**
  * @route GET /api/v1/upload/campaigns

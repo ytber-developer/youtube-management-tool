@@ -188,8 +188,9 @@ async function uploadVideo(video, account, options) {
       });
       console.log(`   ✅ Uploaded: ${uploadResult.data?.videoUrl}`);
     } else {
-      await video.update({ status: 'failed', error_message: uploadResult.message });
-      console.log(`   ❌ Upload failed: ${uploadResult.message}`);
+      const errMsg = uploadResult.error || uploadResult.message;
+      await video.update({ status: 'failed', error_message: errMsg });
+      console.log(`   ❌ Upload failed: ${errMsg}`);
     }
 
   } catch (err) {

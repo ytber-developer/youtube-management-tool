@@ -61,72 +61,57 @@ async function cronTick() {
       return;
     }
 
-    // Find the single running campaign
-    let campaign = await UploadCampaign.findOne({ where: { status: 'running' } });
+    // Find next due video across all campaigns: null scheduled = run immediately, past scheduled = overdue
+    const video = await UploadedVideo.findOne({
+      where: {
+        status: 'pending',
+        [Op.or]: [
+          { scheduled_start_at: null },
+          { scheduled_start_at: { [Op.lte]: vnNow() } }
+        ]
+      },
+      order: [['campaign_id', 'ASC'], ['order_index', 'ASC'], ['id', 'ASC']]
+    });
 
-    // No running campaign — promote oldest due 'new' campaign
-    if (!campaign) {
-      const next = await UploadCampaign.findOne({
-        where: { status: 'new' },
-        order: [['createdAt', 'ASC']]
-      });
-
-      if (!next) return; // nothing queued
-
-      await next.update({ status: 'running' });
-      campaign = await UploadCampaign.findByPk(next.id);
-      console.log(`\n▶️  [UploadQueue] Starting campaign #${campaign.id} "${campaign.name}"`);
+    if (!video) {
+      console.log('💤 [UploadQueue] No due videos');
+      return;
     }
 
-    console.log(`\n⏰ [UploadQueue] Processing campaign #${campaign.id} "${campaign.name}"`);
-    await processCampaign(campaign);
+    const campaign = await UploadCampaign.findByPk(video.campaign_id);
+    if (!campaign) {
+      await video.update({ status: 'failed', error_message: 'Campaign not found' });
+      return;
+    }
+
+    if (campaign.status === 'new') {
+      await campaign.update({ status: 'running' });
+    }
+
+    console.log(`\n📹 [UploadQueue] Video #${video.id} "${video.title || video.source_url}" (campaign #${campaign.id})`);
+
+    const account = await AccountYoutube.findByPk(campaign.account_youtube_id);
+    if (!account) {
+      await video.update({ status: 'failed', error_message: 'Account not found' });
+      return;
+    }
+
+    await uploadVideo(video, account, campaign.options || {});
+
+    // Mark campaign done if all videos finished
+    const remaining = await UploadedVideo.count({
+      where: { campaign_id: campaign.id, status: { [Op.notIn]: ['completed', 'failed', 'skipped'] } }
+    });
+    if (remaining === 0) {
+      await campaign.update({ status: 'done' });
+      console.log(`🏁 [UploadQueue] Campaign #${campaign.id} all done`);
+    }
 
   } catch (err) {
     console.error('❌ [UploadQueue] Cron error:', err.message);
   } finally {
     isProcessing = false;
   }
-}
-
-// ─── Campaign processor ───────────────────────────────────────────────────────
-
-const DONE_STATUSES = ['completed', 'failed', 'skipped'];
-
-async function processCampaign(campaign) {
-  const video = await UploadedVideo.findOne({
-    where: {
-      campaign_id: campaign.id,
-      status: 'pending',
-      [Op.or]: [
-        { scheduled_start_at: null },
-        { scheduled_start_at: { [Op.lte]: vnNow() } }
-      ]
-    },
-    order: [['order_index', 'ASC'], ['id', 'ASC']]
-  });
-
-  if (!video) {
-    const remainingCount = await UploadedVideo.count({
-      where: { campaign_id: campaign.id, status: { [Op.notIn]: DONE_STATUSES } }
-    });
-    if (remainingCount === 0) {
-      await campaign.update({ status: 'done' });
-      console.log(`🏁 [UploadQueue] Campaign #${campaign.id} all done`);
-    }
-    return;
-  }
-
-  const doneCount = await UploadedVideo.count({ where: { campaign_id: campaign.id, status: { [Op.in]: ['completed', 'failed', 'skipped'] } } });
-  console.log(`   📹 [Campaign #${campaign.id}] Video ${doneCount + 1}/${campaign.total_videos}: "${video.title || video.source_url}"`);
-
-  const account = await AccountYoutube.findByPk(campaign.account_youtube_id);
-  if (!account) {
-    await video.update({ status: 'failed', error_message: 'Account not found' });
-    return;
-  }
-
-  const options = campaign.options || {};
-  await uploadVideo(video, account, options);
 }
 
 // ─── Video uploader ───────────────────────────────────────────────────────────

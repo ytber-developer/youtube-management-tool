@@ -1011,6 +1011,48 @@ class UploadController {
       });
     }
   }
+  /**
+   * DELETE /api/v1/upload/campaigns/:campaignId/videos/:videoId
+   * Xóa 1 video khỏi campaign (chỉ khi chưa completed)
+   */
+  async deleteUploadVideo(req, res) {
+    try {
+      const { UploadCampaign } = require('../models');
+      const fs = require('fs');
+      const { campaignId, videoId } = req.params;
+
+      const video = await UploadedVideo.findOne({
+        where: { id: videoId, campaign_id: campaignId }
+      });
+      if (!video) {
+        return res.status(404).json({ success: false, message: 'Video not found' });
+      }
+      if (video.status === 'completed') {
+        return res.status(400).json({ success: false, message: 'Không thể xóa video đã upload xong' });
+      }
+
+      // Xóa file local nếu có
+      if (video.local_file_path) {
+        try { if (fs.existsSync(video.local_file_path)) fs.unlinkSync(video.local_file_path); } catch (e) { /* ignore */ }
+      }
+
+      await video.destroy();
+
+      // Nếu campaign không còn video pending nào → mark done
+      const remaining = await UploadedVideo.count({
+        where: { campaign_id: campaignId, status: { [Op.notIn]: ['completed', 'failed', 'skipped'] } }
+      });
+      const campaign = await UploadCampaign.findByPk(campaignId);
+      if (campaign && remaining === 0 && campaign.status !== 'done') {
+        await campaign.update({ status: 'done' });
+      }
+
+      return res.json({ success: true, message: 'Đã xóa video' });
+    } catch (error) {
+      console.error('❌ Delete upload video error:', error);
+      return res.status(500).json({ success: false, message: 'Internal server error', error: error.message });
+    }
+  }
 }
 
 module.exports = new UploadController();

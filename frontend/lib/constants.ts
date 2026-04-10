@@ -32,6 +32,7 @@ export const API_ENDPOINTS = {
     CAMPAIGNS: '/api/v1/upload/campaigns',
     CAMPAIGNS_FILES: '/api/v1/upload/campaigns/files',
     CAMPAIGN_STATUS: (id: number) => `/api/v1/upload/campaigns/${id}/status`,
+    CAMPAIGN_VIDEO_DELETE: (campaignId: number, videoId: number) => `/api/v1/upload/campaigns/${campaignId}/videos/${videoId}`,
   },
   AUTHENTICATOR: '/api/v1/authenticator',
   AUTHENTICATOR_RETRY: (id: number) => `/api/v1/authenticator/retry/${id}`,

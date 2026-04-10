@@ -107,4 +107,10 @@ router.get('/campaigns', uploadController.getUploadCampaigns);
  */
 router.patch('/campaigns/:id/status', uploadController.updateUploadCampaignStatus);
 
+/**
+ * @route DELETE /api/v1/upload/campaigns/:campaignId/videos/:videoId
+ * @desc Xóa 1 video khỏi campaign (chỉ cho video chưa completed)
+ */
+router.delete('/campaigns/:campaignId/videos/:videoId', uploadController.deleteUploadVideo);
+
 module.exports = router;

@@ -79,6 +79,14 @@ export default function UploadVideoPage() {
     } catch (e: any) { alert(e?.message || 'Failed'); }
   };
 
+  const deleteVideo = async (campaignId: number, videoId: number, videoTitle: string) => {
+    if (!confirm(`Xóa video "${videoTitle || videoId}" khỏi campaign?`)) return;
+    try {
+      await api.upload.deleteUploadVideo(campaignId, videoId);
+      await loadCampaigns();
+    } catch (e: any) { alert(e?.message || 'Xóa thất bại'); }
+  };
+
   const toggleExpand = (id: number) => {
     setExpandedCampaigns(prev => {
       const s = new Set(prev);
@@ -732,6 +740,11 @@ export default function UploadVideoPage() {
                               <a href={videoUrl} target="_blank" rel="noopener noreferrer" className="text-xs text-blue-600 hover:underline flex-shrink-0">Xem</a>
                             )}
                             {(v.status === 'downloading' || v.status === 'uploading') && <Loader2 className="w-3.5 h-3.5 animate-spin text-blue-600 flex-shrink-0" />}
+                            {v.status !== 'completed' && (
+                              <button type="button" onClick={() => deleteVideo(c.id, id, title)} title="Xoa video" className="p-1 text-red-400 hover:text-red-600 hover:bg-red-50 rounded flex-shrink-0 transition-colors">
+                                <Trash2 className="w-3.5 h-3.5" />
+                              </button>
+                            )}
                           </div>
                         );
                       })}

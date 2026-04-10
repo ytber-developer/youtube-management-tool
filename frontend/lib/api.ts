@@ -506,6 +506,17 @@ export const uploadAPI = {
     }
     return response.json();
   },
+
+  // Xóa 1 video khỏi campaign
+  deleteUploadVideo: async (campaignId: number, videoId: number): Promise<{ success: boolean; message: string }> => {
+    const url = buildApiUrl(API_ENDPOINTS.UPLOAD.CAMPAIGN_VIDEO_DELETE(campaignId, videoId));
+    const response = await fetch(url, { method: 'DELETE' });
+    if (!response.ok) {
+      const error = await response.json().catch(() => ({ message: 'Delete failed' }));
+      throw new Error(error.message || `HTTP ${response.status}`);
+    }
+    return response.json();
+  },
 };
 
 // AdSense API

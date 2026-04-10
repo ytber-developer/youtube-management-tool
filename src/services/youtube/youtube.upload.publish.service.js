@@ -154,6 +154,7 @@ class YoutubeUploadPublishService {
         if (txt.includes('Copyright claim')) errorMessages.push('Copyright claim');
         if (txt.includes('Upload failed')) errorMessages.push('Upload failed');
         if (txt.includes('Video rejected')) errorMessages.push('Video rejected');
+        if (txt.includes('Daily upload limit reached')) errorMessages.push('Daily upload limit reached');
         try {
           if (/Checks complete[\s\S]*Copyright-protected content found/i.test(txt))
             errorMessages.push('Copyright-protected content found');

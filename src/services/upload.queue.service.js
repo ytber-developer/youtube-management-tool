@@ -173,7 +173,8 @@ async function uploadVideo(video, account, options) {
         description: video.video_description,
         visibility: options.visibility || video.video_visibility || 'public',
         scheduleDate: options.scheduleDate || video.schedule_date
-      }
+      },
+      { closeBrowser: true }
     );
 
     _deleteFile(filePath);

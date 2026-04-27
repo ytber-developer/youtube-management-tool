@@ -40,10 +40,11 @@ exports.checkAdsense = async (req, res) => {
       const outFile = path.join(os.tmpdir(), `adsense-results-${Date.now()}.csv`);
 
       // Build CSV header
-      const headers = ['email','status','success','message'];
+      const headers = ['email','status','success','message','publisher_id'];
       const rows = results.map(r => {
         const safeMsg = (r.message || '').replace(/"/g, '""');
-        return `"${r.email}","${r.status}","${r.success ? 'true' : 'false'}","${safeMsg}"`;
+        const pub = (r.publisherId || '').replace(/"/g, '""');
+        return `"${r.email}","${r.status}","${r.success ? 'true' : 'false'}","${safeMsg}","${pub}"`;
       });
       const csvContent = headers.join(',') + '\n' + rows.join('\n');
       require('fs').writeFileSync(outFile, csvContent, 'utf-8');

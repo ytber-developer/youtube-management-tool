@@ -23,7 +23,10 @@ export default function UploadVideoPage() {
   const [globalScheduleDate, setGlobalScheduleDate] = useState('');
   const [scheduleMode, setScheduleMode] = useState<'now' | 'later'>('now');
   const [videoSchedules, setVideoSchedules] = useState<Record<number, string>>({});
+  const [fileSchedulesText, setFileSchedulesText] = useState('');
   const [urlRows, setUrlRows] = useState<Array<{ url: string; title: string; scheduledAt: string }>>([{ url: '', title: '', scheduledAt: '' }]);
+  const [urlScheduleText, setUrlScheduleText] = useState('none');
+  const [urlBulkText, setUrlBulkText] = useState('');
   // Track validation errors for free-text datetime inputs. Keys: 'global', 'url-<i>', 'file-<i>'
   const [dateErrors, setDateErrors] = useState<Record<string, string>>({});
   // Upload campaigns
@@ -115,7 +118,15 @@ export default function UploadVideoPage() {
 
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(e.target.files || []);
-    setSelectedFiles(files.filter(f => { const ok = f.type.startsWith('video/'); if (!ok) alert(`"${f.name}" không phải video`); return ok; }));
+    const good = files.filter(f => { const ok = f.type.startsWith('video/'); if (!ok) alert(`"${f.name}" không phải video`); return ok; });
+    setSelectedFiles(good);
+    // Initialize fileSchedulesText to preserve any existing schedule per index if present,
+    // otherwise default to 'none' per file.
+    setFileSchedulesText(prev => {
+      const prevLines = prev.split('\n').map(l => l.trim()).filter(() => true);
+      const lines = good.map((_, i) => (prevLines[i] ? prevLines[i] : 'none'));
+      return lines.join('\n');
+    });
   };
 
   const formatFileSize = (bytes: number) => {
@@ -213,27 +224,48 @@ export default function UploadVideoPage() {
     if (!selectedChannel) { alert('Vui lòng chọn kênh YouTube'); return; }
 
     if (uploadMode === 'url') {
-      const videoItems = parseVideoItems(urlsText);
-      if (!videoItems.length) { alert('Vui lòng nhập ít nhất 1 URL'); return; }
-
       // ── Hẹn giờ: đọc từ urlRows ────────────────────────────────────────────
       if (scheduleMode === 'later') {
-        const validRows = urlRows.filter(r => isValidHttpUrl(r.url));
-        if (!validRows.length) { alert('Vui lòng nhập ít nhất 1 URL hợp lệ'); return; }
-        if (validRows.length > 15) { alert('Tối đa 15 URLs'); return; }
+        const urlLines = urlBulkText.split('\n').map(l => l.trim()).filter(Boolean);
+        const schedLines = urlScheduleText.split('\n').map(l => l.trim());
+
+        if (!urlLines.length) { alert('Vui lòng nhập ít nhất 1 URL'); return; }
+        if (urlLines.length > 15) { alert('Tối đa 15 URLs'); return; }
+        if (schedLines.length !== urlLines.length) {
+          alert(`Số dòng thời gian (${schedLines.length}) phải bằng số URL (${urlLines.length})`);
+          return;
+        }
+
+        // Validate schedule lines
+        for (let i = 0; i < schedLines.length; i++) {
+          const t = schedLines[i];
+          if (!t) { alert(`Dòng thời gian ${i + 1} trống — nhập 'none' hoặc thời gian hợp lệ`); return; }
+          if (t.toLowerCase() === 'none') continue;
+          const { iso, error } = parseAndValidate(t);
+          if (error || !iso) { alert(`Dòng thời gian ${i + 1} không hợp lệ: ${error || 'Không nhận diện được'}`); return; }
+        }
+
+        const videos = urlLines.map((line, i) => {
+          const p = line.indexOf('|');
+          const sourceUrl = p >= 0 ? line.slice(0, p).trim() : line;
+          const title = p >= 0 ? line.slice(p + 1).trim() : undefined;
+          const t = schedLines[i];
+          const scheduledStartAt = t.toLowerCase() === 'none' ? undefined : (parseUserDateTime(t) || undefined);
+          return { sourceUrl, title: title || undefined, scheduledStartAt };
+        }).filter(v => isValidHttpUrl(v.sourceUrl));
+
+        if (!videos.length) { alert('Không có URL hợp lệ'); return; }
+
         try {
           const res = await api.upload.createUploadCampaign({
             id: selectedChannel,
             visibility: globalVisibility,
             scheduleDate: globalScheduleDate ? parseUserDateTime(globalScheduleDate) || undefined : undefined,
-            videos: validRows.map(r => ({
-              sourceUrl: r.url,
-              title: r.title || undefined,
-              scheduledStartAt: r.scheduledAt ? (parseUserDateTime(r.scheduledAt) || undefined) : undefined,
-            })),
+            videos,
           });
           if (res.success) {
-            setUrlRows([{ url: '', title: '', scheduledAt: '' }]);
+            setUrlBulkText('');
+            setUrlScheduleText('none');
             alert(res.message);
             await loadCampaigns();
           } else {
@@ -244,6 +276,8 @@ export default function UploadVideoPage() {
       }
 
       // ── Upload ngay (batch, không qua queue) ───────────────────────────────
+      const videoItems = parseVideoItems(urlsText);
+      if (!videoItems.length) { alert('Vui lòng nhập ít nhất 1 URL'); return; }
       setResults(null);
       const jobId = Date.now();
       const channelName = selectedChannelData?.channelName;
@@ -269,13 +303,33 @@ export default function UploadVideoPage() {
       // ── Hẹn giờ: upload files lên server, tạo campaign ────────────────────
       if (scheduleMode === 'later') {
         try {
+          // Parse schedules from textarea
+          const lines = fileSchedulesText.split('\n').map(l => l.trim());
+          if (lines.length !== selectedFiles.length) {
+            alert(`Số dòng trong ô thời gian (${lines.length}) phải bằng số file (${selectedFiles.length})`);
+            return;
+          }
+
+          // Validate each line: allow 'none' or valid future datetime
+          for (let i = 0; i < lines.length; i++) {
+            const t = lines[i];
+            if (!t) { alert(`Dòng ${i + 1} trống — nhập 'none' hoặc thời gian hợp lệ`); return; }
+            if (t.toLowerCase() === 'none') continue;
+            const { iso, error } = parseAndValidate(t);
+            if (error || !iso) { alert(`Dòng ${i + 1} không hợp lệ: ${error || 'Không nhận diện được thời gian'}`); return; }
+          }
+
           const formData = new FormData();
           formData.append('id', selectedChannel.toString());
           formData.append('visibility', globalVisibility);
           if (globalScheduleDate) formData.append('scheduleDate', parseUserDateTime(globalScheduleDate) || globalScheduleDate);
           selectedFiles.forEach((f, i) => {
             formData.append('video', f);
-            if (videoSchedules[i]) formData.append(`scheduledStartAt_${i}`, parseUserDateTime(videoSchedules[i]) || videoSchedules[i]);
+            const t = lines[i];
+            if (t.toLowerCase() !== 'none') {
+              const iso = parseUserDateTime(t) || t;
+              formData.append(`scheduledStartAt_${i}`, iso);
+            }
           });
           const res = await api.upload.createUploadCampaignFiles(formData);
           if (res.success) {
@@ -331,7 +385,7 @@ export default function UploadVideoPage() {
 
   const selectedChannelData = channels.find(c => c.id === selectedChannel);
   const urlCount = parseVideoItems(urlsText).length;
-  const urlRowCount = urlRows.filter(r => isValidHttpUrl(r.url)).length;
+  const urlRowCount = urlBulkText.split('\n').map(l => l.trim()).filter(l => isValidHttpUrl(l.split('|')[0].trim())).length;
   const itemCount = uploadMode === 'url'
     ? (scheduleMode === 'later' ? urlRowCount : urlCount)
     : selectedFiles.length;
@@ -435,51 +489,47 @@ export default function UploadVideoPage() {
                   placeholder={`Mỗi URL trên 1 dòng. Hỗ trợ cú pháp: URL|Tiêu đề\n\nhttps://www.facebook.com/reel/...\nhttps://www.tiktok.com/@user/video/...\nhttps://www.facebook.com/reel/...|Tiêu đề tùy chọn`}
                   className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg text-sm font-mono resize-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
               ) : (
-                <div className="space-y-2">
-                  <div className="grid text-xs font-medium text-gray-400 px-1 pb-1" style={{ gridTemplateColumns: '1fr 150px 185px 28px' }}>
-                    <span>URL video</span><span>Tiêu đề (tuỳ chọn)</span><span>⏰ Thời gian upload</span><span></span>
+                <div className="grid grid-cols-2 gap-4">
+                  {/* Left: URL list */}
+                  <div>
+                    <label className="block text-xs font-medium text-gray-600 mb-1">🔗 Danh sách URLs (mỗi dòng 1 URL, hỗ trợ URL|Tiêu đề)</label>
+                    <textarea value={urlBulkText} onChange={e => setUrlBulkText(e.target.value)} rows={10}
+                      placeholder={`https://www.facebook.com/reel/...\nhttps://www.tiktok.com/@user/video/...|Tiêu đề`}
+                      className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg text-xs font-mono resize-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
                   </div>
-                  {urlRows.map((row, i) => (
-                    <div key={i} className="grid gap-2 items-center" style={{ gridTemplateColumns: '1fr 150px 185px 28px' }}>
-                      <input type="url" value={row.url}
-                        onChange={e => setUrlRows(prev => prev.map((r, j) => j === i ? { ...r, url: e.target.value } : r))}
-                        placeholder="https://www.facebook.com/reel/..."
-                        className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg text-xs focus:ring-2 focus:ring-blue-500 focus:border-blue-500 font-mono" />
-                      <input type="text" value={row.title}
-                        onChange={e => setUrlRows(prev => prev.map((r, j) => j === i ? { ...r, title: e.target.value } : r))}
-                        placeholder="Tên video..."
-                        className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg text-xs focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
-
-                      {/* scheduledAt + inline error in a small column wrapper */}
-                      <div className="w-full">
-                        <input type="text" value={row.scheduledAt}
-                          onChange={e => {
-                            const v = e.target.value;
-                            setUrlRows(prev => prev.map((r, j) => j === i ? { ...r, scheduledAt: v } : r));
-                            const { error } = parseAndValidate(v);
-                            setDateErrors(prev => ({ ...prev, [`url-${i}`]: error || '' }));
-                          }}
-                          placeholder="YYYY-MM-DD HH:mm"
-                          className="w-full px-3 py-2 border-2 border-orange-300 rounded-lg text-xs focus:ring-2 focus:ring-orange-400 focus:border-orange-400 bg-orange-50" />
-                        {dateErrors[`url-${i}`] && <div className="text-xs text-red-500 mt-1">{dateErrors[`url-${i}`]}</div>}
-                      </div>
-
-                      <button type="button"
-                        onClick={() => {
-                          setUrlRows(prev => prev.length === 1 ? [{ url: '', title: '', scheduledAt: '' }] : prev.filter((_, j) => j !== i));
-                          setDateErrors(prev => { const n = { ...prev }; delete n[`url-${i}`]; return n; });
-                        }}
-                        className="text-red-400 hover:text-red-600 flex items-center justify-center">
-                        <XCircle className="w-4 h-4" />
-                      </button>
-                    </div>
-                  ))}
-
-                  <button type="button"
-                    onClick={() => setUrlRows(prev => [...prev, { url: '', title: '', scheduledAt: '' }])}
-                    className="w-full py-2 border-2 border-dashed border-gray-300 rounded-lg text-xs text-gray-500 hover:border-blue-400 hover:text-blue-600 transition-all">
-                    + Thêm video
-                  </button>
+                  {/* Right: Schedule per URL */}
+                  <div>
+                    <label className="block text-xs font-medium text-gray-600 mb-1">⏰ Thời gian upload (1 dòng = 1 URL; nhập 'none' = upload ngay)</label>
+                    <textarea value={urlScheduleText} onChange={e => {
+                      const v = e.target.value;
+                      setUrlScheduleText(v);
+                      const urlLines = urlBulkText.split('\n').map(l => l.trim()).filter(Boolean);
+                      const schedLines = v.split('\n').map(l => l.trim());
+                      const newErrs: Record<string, string> = {};
+                      if (schedLines.length !== urlLines.length) {
+                        newErrs.url_sched_count = `Số dòng (${schedLines.length}) phải bằng số URL (${urlLines.length})`;
+                      } else {
+                        schedLines.forEach((t, idx) => {
+                          if (!t) { newErrs[`urlsched-${idx}`] = 'Trống — nhập "none" hoặc thời gian'; return; }
+                          if (t.toLowerCase() === 'none') return;
+                          const { error } = parseAndValidate(t);
+                          if (error) newErrs[`urlsched-${idx}`] = `Dòng ${idx + 1}: ${error}`;
+                        });
+                      }
+                      setDateErrors(prev => {
+                        const n = { ...prev };
+                        delete n.url_sched_count;
+                        Object.keys(n).filter(k => k.startsWith('urlsched-')).forEach(k => delete n[k]);
+                        return { ...n, ...newErrs };
+                      });
+                    }} rows={10}
+                      placeholder={`none\nnone\n2026-04-29 21:00`}
+                      className="w-full px-3 py-2 border-2 border-orange-300 rounded-lg text-xs font-mono resize-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400 bg-orange-50" />
+                    {dateErrors.url_sched_count && <div className="text-xs text-red-500 mt-1">{dateErrors.url_sched_count}</div>}
+                    {Object.entries(dateErrors).filter(([k]) => k.startsWith('urlsched-')).map(([k, v]) => (
+                      <div key={k} className="text-xs text-red-500">{v}</div>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
@@ -498,31 +548,54 @@ export default function UploadVideoPage() {
               {selectedFiles.length > 0 && (
                 <div className="mt-3 space-y-1 border border-gray-200 rounded-lg p-2 bg-gray-50">
                   {scheduleMode === 'later' && (
-                    <p className="text-xs font-medium text-orange-700 mb-2 px-1">⏰ Thời gian upload cho từng file (để trống = upload sớm nhất)</p>
+                    <p className="text-xs font-medium text-orange-700 mb-2 px-1">⏰ Thời gian upload cho từng file (mỗi dòng tương ứng 1 file; nhập 'none' = upload sớm nhất)</p>
                   )}
                   {selectedFiles.map((f, i) => (
-                    <div key={i} className={`flex items-center gap-2 p-2 rounded ${scheduleMode === 'later' ? 'bg-white border border-orange-100' : 'bg-white'}`}>
+                    <div key={i} className={`flex items-center gap-2 p-2 rounded bg-white`}>
                       <FileVideo className="w-4 h-4 text-blue-600 flex-shrink-0" />
                       <span className="text-sm text-gray-800 truncate flex-1 min-w-0">{f.name}</span>
                       <span className="text-xs text-gray-400 flex-shrink-0">{formatFileSize(f.size)}</span>
-                      {scheduleMode === 'later' && (
-                        <>
-                          <input type="text" value={videoSchedules[i] || ''} onChange={e => {
-                              const v = e.target.value;
-                              setVideoSchedules(prev => ({ ...prev, [i]: v }));
-                              const { error } = parseAndValidate(v);
-                              setDateErrors(prev => ({ ...prev, [`file-${i}`]: error || '' }));
-                            }}
-                            placeholder="YYYY-MM-DD HH:mm"
-                            className="flex-shrink-0 text-xs px-2 py-1 border border-orange-300 rounded bg-white focus:ring-1 focus:ring-orange-400 focus:outline-none" />
-                          {dateErrors[`file-${i}`] && <div className="text-xs text-red-500 ml-2">{dateErrors[`file-${i}`]}</div>}
-                        </>
-                      )}
-                      <button type="button" onClick={() => { setSelectedFiles(prev => prev.filter((_, j) => j !== i)); setVideoSchedules(prev => { const n = { ...prev }; delete n[i]; return n; }); }} className="ml-1 text-red-500 hover:text-red-700 flex-shrink-0">
+                      <button type="button" onClick={() => { setSelectedFiles(prev => prev.filter((_, j) => j !== i)); setFileSchedulesText(prev => {
+                          const lines = prev.split('\n'); lines.splice(i, 1); return lines.join('\n');
+                        }); setDateErrors(prev => { const n = { ...prev }; delete n[`file-${i}`]; return n; }); }} className="ml-1 text-red-500 hover:text-red-700 flex-shrink-0">
                         <XCircle className="w-4 h-4" />
                       </button>
                     </div>
                   ))}
+
+                  {/* Single textarea for file schedules */}
+                  {scheduleMode === 'later' && (
+                    <div className="mt-3">
+                      <label className="block text-xs font-medium text-gray-600 mb-1">Thời gian upload cho files (1 dòng = 1 file)</label>
+                      <textarea value={fileSchedulesText} onChange={e => {
+                        const v = e.target.value;
+                        setFileSchedulesText(v);
+                        const lines = v.split('\n');
+                        // validate count
+                        if (lines.length !== selectedFiles.length) {
+                          setDateErrors(prev => ({ ...prev, file_text_count: `Số dòng (${lines.length}) phải bằng số file (${selectedFiles.length})` }));
+                        } else {
+                          setDateErrors(prev => { const n = { ...prev }; delete n.file_text_count; return n; });
+                        }
+                        // per-line validation
+                        const newErrs: Record<string,string> = {};
+                        lines.forEach((ln, idx) => {
+                          const t = ln.trim();
+                          if (!t) { newErrs[`file-${idx}`] = 'Phải nhập giá trị hoặc "none"'; return; }
+                          if (t.toLowerCase() === 'none') { return; }
+                          const { error } = parseAndValidate(t);
+                          if (error) newErrs[`file-${idx}`] = error;
+                        });
+                        setDateErrors(prev => ({ ...prev, ...newErrs }));
+                      }} rows={Math.max(3, selectedFiles.length)} placeholder={`Nhập 1 dòng cho mỗi file.
+Ví dụ:
+none
+2026-04-09 21:15
+none`} className="w-full px-3 py-2 border-2 border-orange-300 rounded-lg text-xs focus:ring-2 focus:ring-orange-400 focus:border-orange-400 bg-orange-50 font-mono" />
+                      {dateErrors.file_text_count && <div className="text-xs text-red-500 mt-1">{dateErrors.file_text_count}</div>}
+                      <div className="mt-2 text-xs text-gray-500">Ghi chú: nhập 'none' để upload sớm nhất cho file đó.</div>
+                    </div>
+                  )}
                 </div>
               )}
             </div>

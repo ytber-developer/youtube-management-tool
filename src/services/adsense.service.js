@@ -11,7 +11,8 @@ class AdsenseService {
       success: false,
       status: 'fail',
       message: '',
-      screenshotBase64: null
+      screenshotBase64: null,
+      publisherId: null
     };
 
     let browser;
@@ -66,6 +67,26 @@ class AdsenseService {
       try {
         console.log(`🔎 AdSense page text length=${check.low.length}. Snippet:\n${check.textSnippet.slice(0,300)}`);
       } catch (e) { /* ignore logging errors */ }
+
+      // Attempt to extract publisher id (e.g. pub-9601990410876556) from current URL or page links
+      try {
+        let pubId = null;
+        const curUrl = page.url ? page.url() : null;
+        if (curUrl) {
+          const m = curUrl.match(/(pub-\d+)/);
+          if (m) pubId = m[1];
+        }
+        if (!pubId) {
+          const hrefs = await page.evaluate(() => Array.from(document.querySelectorAll('a[href]'), a => a.href));
+          for (const h of hrefs) {
+            const mm = h.match(/(pub-\d+)/);
+            if (mm) { pubId = mm[1]; break; }
+          }
+        }
+        result.publisherId = pubId;
+      } catch (e) {
+        result.publisherId = null;
+      }
 
       // Map known phrases to statuses
       // Priority: login failures handled above -> 'die'

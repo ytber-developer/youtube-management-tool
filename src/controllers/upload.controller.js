@@ -2,6 +2,72 @@ const youtubeUploadService = require('../services/youtube.upload.service');
 const VideoDownloadService = require('../services/video.download.service');
 const { AccountYoutube, UploadedVideo } = require('../models');
 const { Op } = require('sequelize');
+const fs = require('fs');
+const path = require('path');
+
+/**
+ * Delete local file/folder referenced by UploadedVideo.local_file_path.
+ * - Supports absolute and relative paths
+ * - Removes empty parent folders (bounded) under uploads/videos or downloads
+ */
+function deleteLocalVideoFile(rawPath) {
+  if (!rawPath) return { deleted: false, found: false, path: null };
+
+  const normalized = String(rawPath).trim();
+  if (!normalized) return { deleted: false, found: false, path: null };
+
+  const candidates = [normalized];
+  if (!path.isAbsolute(normalized)) {
+    candidates.push(path.resolve(process.cwd(), normalized));
+  }
+
+  let targetFile = null;
+  for (const candidate of candidates) {
+    if (fs.existsSync(candidate)) {
+      targetFile = candidate;
+      break;
+    }
+  }
+
+  if (!targetFile) {
+    return { deleted: false, found: false, path: normalized };
+  }
+
+  try {
+    const stat = fs.statSync(targetFile);
+    if (stat.isFile()) {
+      fs.unlinkSync(targetFile);
+    } else if (stat.isDirectory()) {
+      fs.rmSync(targetFile, { recursive: true, force: true });
+    } else {
+      return { deleted: false, found: true, path: targetFile, error: 'Unsupported file type' };
+    }
+  } catch (err) {
+    return { deleted: false, found: true, path: targetFile, error: err.message };
+  }
+
+  // Cleanup empty parent folders up to uploads/videos or downloads
+  try {
+    const stopDirs = [
+      path.resolve(process.cwd(), 'uploads', 'videos'),
+      path.resolve(process.cwd(), 'downloads')
+    ];
+
+    let parent = path.dirname(targetFile);
+    for (let depth = 0; depth < 5; depth++) {
+      if (stopDirs.includes(parent)) break;
+      if (!fs.existsSync(parent) || !fs.statSync(parent).isDirectory()) break;
+      const items = fs.readdirSync(parent);
+      if (items.length > 0) break;
+      fs.rmdirSync(parent);
+      parent = path.dirname(parent);
+    }
+  } catch (e) {
+    // ignore cleanup folder errors
+  }
+
+  return { deleted: true, found: true, path: targetFile };
+}
 
 class UploadController {
 
@@ -941,7 +1007,46 @@ class UploadController {
         return res.status(404).json({ success: false, message: 'Campaign not found' });
       }
 
-      const statusMap = { hold: 'pending', release: 'new', cancel: 'done' };
+      if (action === 'cancel') {
+        // Cancel = hard delete campaign + all videos, and cleanup local files
+        const videos = await UploadedVideo.findAll({
+          where: { campaign_id: id },
+          attributes: ['id', 'local_file_path']
+        });
+
+        const fileCleanupResults = videos.map((v) => deleteLocalVideoFile(v.local_file_path));
+        const fileErrors = fileCleanupResults.filter((r) => r.error);
+
+        if (fileErrors.length > 0) {
+          return res.status(500).json({
+            success: false,
+            message: 'Không thể dọn một số file local khi cancel campaign',
+            data: {
+              campaignId: Number(id),
+              errors: fileErrors.slice(0, 20)
+            }
+          });
+        }
+
+        const deletedFiles = fileCleanupResults.filter((r) => r.deleted).length;
+        const missingFiles = fileCleanupResults.filter((r) => !r.found).length;
+        const deletedVideos = await UploadedVideo.destroy({ where: { campaign_id: id } });
+        await campaign.destroy();
+
+        return res.json({
+          success: true,
+          message: 'Campaign đã được xóa',
+          data: {
+            id: Number(id),
+            status: 'deleted',
+            deletedVideos,
+            deletedFiles,
+            missingFiles
+          }
+        });
+      }
+
+      const statusMap = { hold: 'pending', release: 'new' };
       const newStatus = statusMap[action];
       if (!newStatus) {
         return res.status(400).json({ success: false, message: 'action must be hold | release | cancel' });
@@ -1021,7 +1126,6 @@ class UploadController {
   async deleteUploadVideo(req, res) {
     try {
       const { UploadCampaign } = require('../models');
-      const fs = require('fs');
       const { campaignId, videoId } = req.params;
 
       const video = await UploadedVideo.findOne({
@@ -1034,9 +1138,13 @@ class UploadController {
         return res.status(400).json({ success: false, message: 'Không thể xóa video đã upload xong' });
       }
 
-      // Xóa file local nếu có
-      if (video.local_file_path) {
-        try { if (fs.existsSync(video.local_file_path)) fs.unlinkSync(video.local_file_path); } catch (e) { /* ignore */ }
+      const fileDeleteResult = deleteLocalVideoFile(video.local_file_path);
+      if (fileDeleteResult.error) {
+        return res.status(500).json({
+          success: false,
+          message: `Không thể xóa file local: ${fileDeleteResult.error}`,
+          data: { localFilePath: video.local_file_path, resolvedPath: fileDeleteResult.path }
+        });
       }
 
       await video.destroy();
@@ -1050,7 +1158,18 @@ class UploadController {
         await campaign.update({ status: 'done' });
       }
 
-      return res.json({ success: true, message: 'Đã xóa video' });
+      return res.json({
+        success: true,
+        message: 'Đã xóa video',
+        data: {
+          localFile: {
+            requestedPath: video.local_file_path || null,
+            resolvedPath: fileDeleteResult.path,
+            found: fileDeleteResult.found,
+            deleted: fileDeleteResult.deleted
+          }
+        }
+      });
     } catch (error) {
       console.error('❌ Delete upload video error:', error);
       return res.status(500).json({ success: false, message: 'Internal server error', error: error.message });

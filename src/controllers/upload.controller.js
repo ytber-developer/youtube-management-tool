@@ -300,7 +300,10 @@ class UploadController {
         try {
           // Create separate download service instance for each video (separate email folder)
           const downloadService = new VideoDownloadService(`${account.email}-${videoNum}`);
-          const downloadResult = await downloadService.downloadVideo(video.sourceUrl);
+          const downloadResult = await downloadService.downloadVideo(video.sourceUrl, {
+            // Allow Google Drive links that require signed-in session on this account
+            profileEmail: account.email
+          });
 
           if (!downloadResult.success) {
             console.log(`   ❌ [${videoNum}/${videos.length}] Download failed: ${downloadResult.message}`);

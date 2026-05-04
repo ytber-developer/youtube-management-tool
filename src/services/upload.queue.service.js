@@ -130,7 +130,11 @@ async function uploadVideo(video, account, options) {
 
     try {
       const downloadService = new VideoDownloadService(account.email);
-      const result = await downloadService.downloadVideo(video.source_url);
+      const result = await downloadService.downloadVideo(video.source_url, {
+        // For Google Drive links, try downloading with the target account profile
+        // so both public and account-only shared links can work.
+        profileEmail: account.email
+      });
 
       if (!result.success) {
         await video.update({ status: 'failed', error_message: result.message || 'Download failed' });

@@ -63,6 +63,14 @@ router.put('/:id/avatar-url', accountsController.updateAvatarUrl);
 router.delete('/', accountsController.deleteAllAccounts);
 
 /**
+ * @route   DELETE /api/v1/accounts/bulk
+ * @desc    Delete multiple accounts by ids
+ * @body    { ids: number[] }
+ * @access  Public
+ */
+router.delete('/bulk', accountsController.deleteAccountsBulk);
+
+/**
  * @route   DELETE /api/v1/accounts/:id
  * @desc    Delete account by id
  * @access  Public
@@ -77,4 +85,3 @@ router.delete('/:id', accountsController.deleteAccount);
 router.post('/adsense/check', upload.fields([{ name: 'file', maxCount: 1 }]), adsenseController.checkAdsense);
 
 module.exports = router;
-

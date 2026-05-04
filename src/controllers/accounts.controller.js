@@ -2,6 +2,7 @@ const { AccountYoutube } = require('../models');
 const { Op } = require('sequelize');
 const { successListResponse, errorResponse } = require('../helpers/response.helper');
 const csvService = require('../services/csv.service');
+const sessionService = require('../services/session.service');
 
 /**
  * Get accounts list with pagination and search
@@ -272,6 +273,39 @@ ${rows.join('\n')}`;
  * Track open browsers by email to prevent duplicate opens
  */
 const openBrowsers = new Map();
+
+/**
+ * Cleanup runtime resources for an account email:
+ * - close active browser (if any)
+ * - delete persisted profile folder
+ */
+async function cleanupAccountResources(email) {
+  const result = {
+    email,
+    browserClosed: false,
+    profileDeleted: false,
+    warnings: []
+  };
+
+  // 1) Close browser if active
+  try {
+    const browserService = require('../services/browser.service');
+    result.browserClosed = await browserService.closeBrowser(email);
+  } catch (e) {
+    result.warnings.push(`close-browser: ${e.message}`);
+  }
+
+  // 2) Delete profile folder
+  try {
+    const hadProfile = sessionService.hasProfile(email);
+    sessionService.deleteProfile(email);
+    result.profileDeleted = hadProfile;
+  } catch (e) {
+    result.warnings.push(`delete-profile: ${e.message}`);
+  }
+
+  return result;
+}
 
 /**
  * Open browser fresh for account (no profile, login from scratch)
@@ -546,11 +580,109 @@ exports.updateAvatarUrl = async (req, res) => {
  */
 exports.deleteAllAccounts = async (req, res) => {
   try {
+    const accounts = await AccountYoutube.findAll({
+      attributes: ['email']
+    });
+
+    const cleanupResults = await Promise.all(
+      accounts.map((account) => cleanupAccountResources(account.email))
+    );
+
     const deletedCount = await AccountYoutube.destroy({ where: {}, truncate: false });
-    return res.json({ success: true, message: `Đã xóa ${deletedCount} kênh`, data: { deletedCount } });
+    const deletedProfiles = cleanupResults.filter((r) => r.profileDeleted).length;
+    const warnings = cleanupResults.filter((r) => r.warnings.length > 0);
+
+    return res.json({
+      success: true,
+      message: `Đã xóa ${deletedCount} kênh`,
+      data: {
+        deletedCount,
+        deletedProfiles,
+        warningsCount: warnings.length,
+        warnings: warnings.slice(0, 20)
+      }
+    });
   } catch (error) {
     console.error('❌ Error deleting all accounts:', error);
     return res.status(500).json({ success: false, message: 'Failed to delete all accounts', error: error.message });
+  }
+};
+
+/**
+ * Delete multiple accounts by ids
+ * DELETE /api/v1/accounts/bulk
+ * Body: { ids: number[] }
+ */
+exports.deleteAccountsBulk = async (req, res) => {
+  try {
+    const ids = req.body?.ids;
+
+    if (!Array.isArray(ids) || ids.length === 0) {
+      return res.status(400).json({
+        success: false,
+        message: 'ids (array) is required'
+      });
+    }
+
+    const normalizedIds = [...new Set(
+      ids
+        .map((id) => Number(id))
+        .filter((id) => Number.isInteger(id) && id > 0)
+    )];
+
+    if (normalizedIds.length === 0) {
+      return res.status(400).json({
+        success: false,
+        message: 'No valid account IDs provided'
+      });
+    }
+
+    const accounts = await AccountYoutube.findAll({
+      where: { id: normalizedIds },
+      attributes: ['id', 'email']
+    });
+
+    if (accounts.length === 0) {
+      return res.status(404).json({
+        success: false,
+        message: 'No matching accounts found'
+      });
+    }
+
+    const foundIds = accounts.map((a) => a.id);
+    const notFoundIds = normalizedIds.filter((id) => !foundIds.includes(id));
+
+    // Cleanup browser/profile for matched accounts before delete
+    const cleanupResults = await Promise.all(
+      accounts.map((a) => cleanupAccountResources(a.email))
+    );
+
+    const deletedCount = await AccountYoutube.destroy({
+      where: { id: foundIds }
+    });
+    const deletedProfiles = cleanupResults.filter((r) => r.profileDeleted).length;
+    const warnings = cleanupResults.filter((r) => r.warnings.length > 0);
+
+    return res.json({
+      success: true,
+      message: `Đã xóa ${deletedCount} kênh`,
+      data: {
+        requestedCount: normalizedIds.length,
+        deletedCount,
+        deletedIds: foundIds,
+        notFoundIds,
+        deletedProfiles,
+        warningsCount: warnings.length,
+        warnings: warnings.slice(0, 20)
+      }
+    });
+  } catch (error) {
+    console.error('❌ Error deleting accounts in bulk:', error);
+    return res.status(500).json({
+      success: false,
+      message: 'Failed to bulk delete accounts',
+      error: error.message
+    });
   }
 };
 
@@ -569,18 +701,20 @@ exports.deleteAccount = async (req, res) => {
       return res.status(404).json({ success: false, message: `Account with ID ${id} not found` });
     }
 
-    // Close browser if open for this account
-    try {
-      const browserService = require('../services/browser.service');
-      await browserService.closeBrowser(account.email);
-    } catch (e) {
-      console.warn('Warning: failed to close browser for account during delete', e.message);
-    }
+    const cleanupResult = await cleanupAccountResources(account.email);
 
     // Delete account record
     await account.destroy();
 
-    return res.json({ success: true, message: `Account ${account.email} deleted` });
+    return res.json({
+      success: true,
+      message: `Account ${account.email} deleted`,
+      data: {
+        browserClosed: cleanupResult.browserClosed,
+        profileDeleted: cleanupResult.profileDeleted,
+        warnings: cleanupResult.warnings
+      }
+    });
   } catch (error) {
     console.error('❌ Error deleting account:', error);
     return res.status(500).json({ success: false, message: 'Failed to delete account', error: error.message });

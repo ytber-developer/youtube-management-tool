@@ -463,7 +463,7 @@ export default function UploadVideoPage() {
                     {mode === 'url' ? <Link2 className={`w-6 h-6 ${uploadMode === 'url' ? 'text-blue-600' : 'text-gray-400'}`} /> : <FileVideo className={`w-6 h-6 ${uploadMode === 'file' ? 'text-blue-600' : 'text-gray-400'}`} />}
                     <div className="text-left">
                       <div className={`font-semibold ${uploadMode === mode ? 'text-blue-900' : 'text-gray-700'}`}>{mode === 'url' ? 'Nhập URLs' : 'Chọn Files'}</div>
-                      <div className="text-xs text-gray-500 mt-0.5">{mode === 'url' ? 'TikTok, Facebook, Instagram...' : 'Upload file từ máy tính (tối đa 15)'}</div>
+                      <div className="text-xs text-gray-500 mt-0.5">{mode === 'url' ? 'TikTok, Facebook, Instagram, Google Drive...' : 'Upload file từ máy tính (tối đa 15)'}</div>
                     </div>
                   </div>
                 </button>
@@ -486,15 +486,15 @@ export default function UploadVideoPage() {
 
               {scheduleMode === 'now' ? (
                 <textarea value={urlsText} onChange={e => setUrlsText(e.target.value)} rows={10}
-                  placeholder={`Mỗi URL trên 1 dòng. Hỗ trợ cú pháp: URL|Tiêu đề\n\nhttps://www.facebook.com/reel/...\nhttps://www.tiktok.com/@user/video/...\nhttps://www.facebook.com/reel/...|Tiêu đề tùy chọn`}
+                  placeholder={`Mỗi URL trên 1 dòng. Hỗ trợ cú pháp: URL|Tiêu đề\n\nhttps://www.facebook.com/reel/...\nhttps://www.tiktok.com/@user/video/...\nhttps://drive.google.com/file/d/FILE_ID/view\nhttps://www.facebook.com/reel/...|Tiêu đề tùy chọn`}
                   className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg text-sm font-mono resize-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
               ) : (
                 <div className="grid grid-cols-2 gap-4">
                   {/* Left: URL list */}
                   <div>
-                    <label className="block text-xs font-medium text-gray-600 mb-1">🔗 Danh sách URLs (mỗi dòng 1 URL, hỗ trợ URL|Tiêu đề)</label>
+                    <label className="block text-xs font-medium text-gray-600 mb-1">🔗 Danh sách URLs (mỗi dòng 1 URL, hỗ trợ URL|Tiêu đề; gồm cả Google Drive)</label>
                     <textarea value={urlBulkText} onChange={e => setUrlBulkText(e.target.value)} rows={10}
-                      placeholder={`https://www.facebook.com/reel/...\nhttps://www.tiktok.com/@user/video/...|Tiêu đề`}
+                      placeholder={`https://www.facebook.com/reel/...\nhttps://drive.google.com/file/d/FILE_ID/view|Tiêu đề`}
                       className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg text-xs font-mono resize-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
                   </div>
                   {/* Right: Schedule per URL */}

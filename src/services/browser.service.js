@@ -2,6 +2,26 @@ const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 const sessionService = require('./session.service');
 
+// Suppress TargetCloseError spam from puppeteer-extra-plugin-stealth.
+// This happens when stealth tries to inject scripts into short-lived tabs/popups
+// (e.g. YouTube service workers, background targets) that close before injection completes.
+// These errors are harmless and do not affect functionality.
+process.on('unhandledRejection', (reason) => {
+  if (!reason) return;
+  const isTargetClose =
+    (reason.constructor && reason.constructor.name === 'TargetCloseError') ||
+    (reason.message && (
+      reason.message.includes('Session closed') ||
+      reason.message.includes('Target closed') ||
+      reason.message.includes('Most likely the page has been closed')
+    ));
+  if (isTargetClose) {
+    // Silently ignore — this is a known stealth plugin issue with short-lived pages
+    return;
+  }
+  console.error('❌ Unhandled Rejection:', reason);
+});
+
 // Disable the navigator.webdriver evasion — it adds
 // --disable-blink-features=AutomationControlled which is unsupported in Chrome 120+.
 // We override navigator.webdriver via evaluateOnNewDocument instead (see launchBrowser).

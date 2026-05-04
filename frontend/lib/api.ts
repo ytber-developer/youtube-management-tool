@@ -386,6 +386,23 @@ export const accountsAPI = {
     }
     return response.json();
   },
+
+  // Delete multiple accounts by IDs
+  deleteAccountsBulk: async (accountIds: number[]): Promise<any> => {
+    const url = buildApiUrl(API_ENDPOINTS.ACCOUNTS.DELETE_BULK);
+    const response = await fetch(url, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ ids: accountIds }),
+    });
+    if (!response.ok) {
+      const error = await response.json().catch(() => ({ message: 'Bulk delete accounts failed' }));
+      throw new Error(error.message || `HTTP ${response.status}`);
+    }
+    return response.json();
+  },
 };
 
 // Upload API
@@ -596,4 +613,3 @@ export const api = {
 };
 
 export default api;
-

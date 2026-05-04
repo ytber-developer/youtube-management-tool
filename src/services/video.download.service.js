@@ -30,7 +30,12 @@ class VideoDownloadService {
     const googleDriveService = require('./google.drive.service');
     if (googleDriveService.isGoogleDriveUrl(videoUrl)) {
       console.log(`\n📥 Phát hiện Google Drive URL`);
-      return await googleDriveService.downloadFromDrive(videoUrl, this.downloadDir);
+      const driveProfileEmail = options.profileEmail
+        ? options.profileEmail
+        : (this.email ? this.email.replace(/-\d+$/, '') : null);
+      return await googleDriveService.downloadFromDrive(videoUrl, this.downloadDir, {
+        profileEmail: driveProfileEmail
+      });
     }
 
     // Nếu không phải Google Drive, tải từ Facebook

@@ -17,7 +17,8 @@ class GoogleDriveService {
      * @param {string} downloadPath - Thư mục lưu file
      * @returns {Promise<object>} - Kết quả download
      */
-    async downloadFromDrive(driveUrl, downloadPath) {
+    async downloadFromDrive(driveUrl, downloadPath, options = {}) {
+        const { profileEmail = null } = options;
         let browser = null;
         let page = null;
         let browserResult = null;
@@ -25,13 +26,21 @@ class GoogleDriveService {
         try {
             console.log(`\n📥 Tải video từ Google Drive`);
             console.log(`   URL: ${driveUrl}`);
+            if (profileEmail) {
+                console.log(`   👤 Sử dụng profile: ${profileEmail}`);
+            }
 
             // Tạo thư mục nếu chưa tồn tại
             if (!fs.existsSync(downloadPath)) {
                 fs.mkdirSync(downloadPath, { recursive: true });
             }
 
-            browserResult = await browserService.launchBrowser(false, null, 3, false);
+            browserResult = await browserService.launchBrowser(
+                false,
+                profileEmail,
+                3,
+                !!profileEmail
+            );
             browser = browserResult.browser;
             page = browserResult.page;
 
@@ -313,30 +322,34 @@ class GoogleDriveService {
                 await new Promise(r => setTimeout(r, 10000));
             }
 
-            // Bây giờ mới close browser - dùng try-catch để bắt lỗi
-            console.log('   🔒 Đóng browser...');
-            try {
-                // Disconnect CDP session trước
-                await client.detach();
-            } catch (e) {
-                // Ignore
-            }
-
-            try {
-                await browser.close();
-                console.log('   ✅ Browser đã đóng thành công');
-            } catch (closeError) {
-                console.log('   ⚠️ Lỗi khi đóng browser:', closeError.message);
-                // Force kill browser process nếu cần
+            if (!profileEmail) {
+                // Bây giờ mới close browser - dùng try-catch để bắt lỗi
+                console.log('   🔒 Đóng browser...');
                 try {
-                    const browserProcess = browser.process();
-                    if (browserProcess) {
-                        browserProcess.kill('SIGKILL');
-                        console.log('   ✅ Force killed browser process');
-                    }
-                } catch (killError) {
+                    // Disconnect CDP session trước
+                    await client.detach();
+                } catch (e) {
                     // Ignore
                 }
+
+                try {
+                    await browser.close();
+                    console.log('   ✅ Browser đã đóng thành công');
+                } catch (closeError) {
+                    console.log('   ⚠️ Lỗi khi đóng browser:', closeError.message);
+                    // Force kill browser process nếu cần
+                    try {
+                        const browserProcess = browser.process();
+                        if (browserProcess) {
+                            browserProcess.kill('SIGKILL');
+                            console.log('   ✅ Force killed browser process');
+                        }
+                    } catch (killError) {
+                        // Ignore
+                    }
+                }
+            } else {
+                console.log('   ♻️ Giữ browser profile mở để tái sử dụng phiên đăng nhập');
             }
 
             // Tạo title từ filename (bỏ extension)
@@ -356,7 +369,17 @@ class GoogleDriveService {
 
         } catch (error) {
             console.error(`❌ Lỗi: ${error.message}`);
-            if (browser) await browser.close();
+            if (browser) {
+                try {
+                    if (!profileEmail) {
+                        await browser.close();
+                    } else {
+                        console.log('   ♻️ Giữ browser profile mở sau lỗi để debug/tái sử dụng');
+                    }
+                } catch (e) {
+                    // ignore
+                }
+            }
             return { success: false, message: error.message };
         }
     }

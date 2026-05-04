@@ -30,6 +30,7 @@ interface Pagination {
 export default function ListChannelsPage() {
   const [channels, setChannels] = useState<Channel[]>([]);
   const [loading, setLoading] = useState(false);
+  const [selectedChannelIds, setSelectedChannelIds] = useState<number[]>([]);
   
   // Import Modal
   const [showImportModal, setShowImportModal] = useState(false);
@@ -75,6 +76,12 @@ export default function ListChannelsPage() {
     fetchChannels();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pagination.page, search, searchBy, filterStatus]);
+
+  // Keep selection scoped to currently visible rows
+  useEffect(() => {
+    const visibleIds = new Set(channels.map((c) => c.id));
+    setSelectedChannelIds((prev) => prev.filter((id) => visibleIds.has(id)));
+  }, [channels]);
 
   const fetchChannels = async () => {
     setLoading(true);
@@ -446,6 +453,7 @@ export default function ListChannelsPage() {
       const result = await accountsAPI.deleteAccount(id);
       if (result.success) {
         alert(`✅ ${result.message}`);
+        setSelectedChannelIds((prev) => prev.filter((item) => item !== id));
         // Refresh list
         fetchChannels();
       } else {
@@ -454,6 +462,63 @@ export default function ListChannelsPage() {
     } catch (error: any) {
       console.error('Delete account failed:', error);
       alert(`❌ Delete failed: ${error.message}`);
+    }
+  };
+
+  const toggleSelectChannel = (id: number) => {
+    setSelectedChannelIds((prev) => (
+      prev.includes(id)
+        ? prev.filter((item) => item !== id)
+        : [...prev, id]
+    ));
+  };
+
+  const toggleSelectAllVisible = () => {
+    const visibleIds = channels.map((c) => c.id);
+    const isAllSelected = visibleIds.length > 0 && visibleIds.every((id) => selectedChannelIds.includes(id));
+
+    if (isAllSelected) {
+      setSelectedChannelIds([]);
+      return;
+    }
+
+    setSelectedChannelIds(visibleIds);
+  };
+
+  const handleDeleteSelected = async () => {
+    if (selectedChannelIds.length === 0) {
+      alert('Vui lòng chọn ít nhất 1 kênh để xóa');
+      return;
+    }
+
+    const selectedEmails = channels
+      .filter((channel) => selectedChannelIds.includes(channel.id))
+      .map((channel) => channel.email);
+
+    const previewEmails = selectedEmails.slice(0, 5).join('\n');
+    const moreCount = Math.max(0, selectedEmails.length - 5);
+    const previewText = selectedEmails.length > 0
+      ? `\n\nMột số account sẽ xóa:\n${previewEmails}${moreCount > 0 ? `\n... và ${moreCount} account khác` : ''}`
+      : '';
+
+    const confirmed = confirm(
+      `Xác nhận xóa ${selectedChannelIds.length} kênh đã chọn?` +
+      `${previewText}\n\nHành động này không thể hoàn tác!`
+    );
+    if (!confirmed) return;
+
+    try {
+      const result = await accountsAPI.deleteAccountsBulk(selectedChannelIds);
+      if (result.success) {
+        alert(`✅ ${result.message}`);
+        setSelectedChannelIds([]);
+        fetchChannels();
+      } else {
+        throw new Error(result.message || 'Bulk delete failed');
+      }
+    } catch (error: any) {
+      console.error('Bulk delete accounts failed:', error);
+      alert(`❌ Bulk delete failed: ${error.message}`);
     }
   };
 
@@ -467,6 +532,8 @@ export default function ListChannelsPage() {
     }
   };
 
+  const allVisibleSelected = channels.length > 0 && channels.every((channel) => selectedChannelIds.includes(channel.id));
+
   return (
     <div className="p-6">
       {/* Compact Header */}
@@ -476,6 +543,15 @@ export default function ListChannelsPage() {
           <p className="text-sm text-gray-500 mt-1">Danh sách tất cả kênh YouTube</p>
         </div>
         <div className="flex gap-2">
+          <button
+            onClick={handleDeleteSelected}
+            disabled={selectedChannelIds.length === 0}
+            className="flex items-center gap-1.5 px-3 py-2 text-sm bg-red-500 text-white rounded-lg hover:bg-red-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            title="Xóa các kênh đã chọn"
+          >
+            <X size={16} />
+            Xóa đã chọn ({selectedChannelIds.length})
+          </button>
           <button
             onClick={handleDeleteAll}
             className="flex items-center gap-1.5 px-3 py-2 text-sm bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
@@ -639,6 +715,15 @@ export default function ListChannelsPage() {
           <table className="w-full">
             <thead className="bg-gray-50 border-b border-gray-200">
               <tr>
+                <th className="px-3 py-2.5 text-center text-xs font-semibold text-gray-700 w-10">
+                  <input
+                    type="checkbox"
+                    checked={allVisibleSelected}
+                    onChange={toggleSelectAllVisible}
+                    title="Chọn tất cả dòng đang hiển thị"
+                    className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                  />
+                </th>
                 <th className="px-4 py-2.5 text-left text-xs font-semibold text-gray-700">Email</th>
                 <th className="px-4 py-2.5 text-left text-xs font-semibold text-gray-700">Tên kênh</th>
                 <th className="px-4 py-2.5 text-left text-xs font-semibold text-gray-700">Link</th>
@@ -652,14 +737,14 @@ export default function ListChannelsPage() {
             <tbody className="divide-y divide-gray-100">
               {loading ? (
                 <tr>
-                  <td colSpan={8} className="px-4 py-8 text-center text-gray-500">
+                  <td colSpan={9} className="px-4 py-8 text-center text-gray-500">
                     <RefreshCw className="animate-spin mx-auto mb-2" size={20} />
                     <div className="text-sm">Đang tải kênh...</div>
                   </td>
                 </tr>
               ) : channels.length === 0 ? (
                 <tr>
-                  <td colSpan={8} className="px-4 py-8 text-center text-sm text-gray-500">
+                  <td colSpan={9} className="px-4 py-8 text-center text-sm text-gray-500">
                     {search 
                       ? 'Không tìm thấy kênh nào phù hợp.' 
                       : filterStatus !== 'all'
@@ -670,6 +755,15 @@ export default function ListChannelsPage() {
               ) : (
                 channels.map((channel) => (
                   <tr key={channel.id} className="hover:bg-gray-50 transition-colors">
+                    <td className="px-3 py-2.5 text-center">
+                      <input
+                        type="checkbox"
+                        checked={selectedChannelIds.includes(channel.id)}
+                        onChange={() => toggleSelectChannel(channel.id)}
+                        title={`Chọn ${channel.email}`}
+                        className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                      />
+                    </td>
                     <td className="px-4 py-2.5 text-xs text-gray-900">{channel.email}</td>
                     <td className="px-4 py-2.5 text-xs text-gray-900">{channel.channelName || '-'}</td>
                     <td className="px-4 py-2.5 text-xs">

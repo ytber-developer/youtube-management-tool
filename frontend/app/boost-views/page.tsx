@@ -461,9 +461,9 @@ export default function BoostViewsPage() {
           <div className="flex items-center justify-between gap-4">
             <div className="flex flex-wrap gap-x-4 gap-y-1.5">
               {[
-                { key: 'autoSubscribe', label: 'Subscribe (25%)' },
-                { key: 'autoLike',      label: 'Like (15%)' },
-                { key: 'autoComment',   label: 'Comment (5%)' },
+                { key: 'autoSubscribe', label: 'Subscribe' },
+                { key: 'autoLike',      label: 'Like' },
+                { key: 'autoComment',   label: 'Comment' },
                 { key: 'humanBehavior', label: 'Human behavior' },
               ].map(({ key, label }) => (
                 <label key={key} className="flex items-center gap-1.5 cursor-pointer">

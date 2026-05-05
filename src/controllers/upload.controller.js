@@ -1,9 +1,9 @@
 const youtubeUploadService = require('../services/youtube.upload.service');
 const VideoDownloadService = require('../services/video.download.service');
 const { AccountYoutube, UploadedVideo } = require('../models');
-const { Op } = require('sequelize');
-const fs = require('fs');
 const path = require('path');
+const fs = require('fs');
+const { Op } = require('sequelize');
 
 /**
  * Delete local file/folder referenced by UploadedVideo.local_file_path.
@@ -70,6 +70,100 @@ function deleteLocalVideoFile(rawPath) {
 }
 
 class UploadController {
+  async scanFolderVideos(req, res) {
+    try {
+      const { folderPath } = req.body || {};
+      if (!folderPath || typeof folderPath !== 'string') {
+        return res.status(400).json({ success: false, message: 'folderPath là bắt buộc' });
+      }
+
+      const absFolder = path.resolve(folderPath.trim());
+      if (!fs.existsSync(absFolder)) {
+        return res.status(404).json({ success: false, message: 'Folder không tồn tại' });
+      }
+      if (!fs.statSync(absFolder).isDirectory()) {
+        return res.status(400).json({ success: false, message: 'Đường dẫn không phải folder' });
+      }
+
+      const exts = new Set(['.mp4', '.mov', '.avi', '.mkv', '.webm', '.m4v', '.flv']);
+      const files = fs.readdirSync(absFolder)
+        .filter(name => exts.has(path.extname(name).toLowerCase()))
+        .map(name => path.join(absFolder, name));
+
+      return res.json({
+        success: true,
+        message: `Tìm thấy ${files.length} video`,
+        data: { folderPath: absFolder, totalVideos: files.length, files }
+      });
+    } catch (error) {
+      console.error('❌ Scan folder videos error:', error);
+      return res.status(500).json({ success: false, message: 'Internal server error', error: error.message });
+    }
+  }
+
+  async createUploadCampaignFromFolder(req, res) {
+    try {
+      const { id, email, name, visibility, scheduleDate, folderPath, videos: inputVideos = null } = req.body || {};
+      const { createUploadCampaign } = require('../services/upload.queue.service');
+
+      if (!id && !email) {
+        return res.status(400).json({ success: false, message: 'Cần truyền id hoặc email của account' });
+      }
+      if (!folderPath || typeof folderPath !== 'string') {
+        return res.status(400).json({ success: false, message: 'folderPath là bắt buộc' });
+      }
+
+      const absFolder = path.resolve(folderPath.trim());
+      if (!fs.existsSync(absFolder) || !fs.statSync(absFolder).isDirectory()) {
+        return res.status(400).json({ success: false, message: 'Folder không hợp lệ' });
+      }
+
+      const exts = new Set(['.mp4', '.mov', '.avi', '.mkv', '.webm', '.m4v', '.flv']);
+      const videoPaths = fs.readdirSync(absFolder)
+        .filter(name => exts.has(path.extname(name).toLowerCase()))
+        .sort((a, b) => a.localeCompare(b))
+        .map(name => path.join(absFolder, name));
+
+      if (videoPaths.length === 0) {
+        return res.status(400).json({ success: false, message: 'Không có file video hợp lệ trong folder' });
+      }
+
+      const where = id ? { id } : { email };
+      const account = await AccountYoutube.findOne({ where });
+      if (!account) return res.status(404).json({ success: false, message: 'Không tìm thấy account' });
+
+      const videos = videoPaths.map((p) => {
+        const base = path.basename(p);
+        const matched = Array.isArray(inputVideos)
+          ? inputVideos.find(v => v && (v.filePath === p || v.fileName === base))
+          : null;
+        return {
+          localFilePath: p,
+          title: path.basename(p, path.extname(p)),
+          scheduledStartAt: matched?.scheduledStartAt || null
+        };
+      });
+
+      const vnNow = new Date(Date.now() + 7 * 60 * 60 * 1000).toISOString().slice(0, 16).replace('T', ' ');
+      const campaignName = name || `Upload folder ${videoPaths.length} file(s) - ${vnNow}`;
+      const campaign = await createUploadCampaign({
+        name: campaignName,
+        accountId: account.id,
+        email: account.email,
+        videos,
+        options: { visibility: visibility || 'public', scheduleDate: scheduleDate || null, deleteAfterUpload: true }
+      });
+
+      return res.status(201).json({
+        success: true,
+        message: `Campaign #${campaign.id} đã tạo từ folder — ${videoPaths.length} video`,
+        data: { id: campaign.id, name: campaign.name, status: campaign.status, totalVideos: campaign.total_videos, folderPath: absFolder, deleteAfterUpload: true }
+      });
+    } catch (error) {
+      console.error('❌ Create upload campaign from folder error:', error);
+      return res.status(500).json({ success: false, message: 'Internal server error', error: error.message });
+    }
+  }
 
   /**
    * POST /api/v1/upload/download
@@ -889,7 +983,7 @@ class UploadController {
       // Per-file schedules sent as scheduledStartAt_0, scheduledStartAt_1, ...
       const videos = files.map((f, i) => ({
         localFilePath: f.path,
-        title: f.originalname.replace(/\.[^/.]+$/, ''),
+        title: (req.body[`title_${i}`] || '').trim() || f.originalname.replace(/\.[^/.]+$/, ''),
         scheduledStartAt: req.body[`scheduledStartAt_${i}`] || null
       }));
 
@@ -898,7 +992,7 @@ class UploadController {
         accountId: account.id,
         email: account.email,
         videos,
-        options: { visibility: visibility || 'public', scheduleDate: scheduleDate || null }
+        options: { visibility: visibility || 'public', scheduleDate: scheduleDate || null, deleteAfterUpload: true }
       });
 
       const timeLabel = campaign.scheduled_start_at || 'ASAP';

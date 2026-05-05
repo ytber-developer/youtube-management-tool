@@ -500,6 +500,20 @@ export const uploadAPI = {
     return response.json();
   },
 
+  scanFolderVideos: (folderPath: string): Promise<{ success: boolean; message: string; data: { folderPath: string; totalVideos: number; files: string[] } }> => {
+    return request(API_ENDPOINTS.UPLOAD.FOLDER_SCAN, {
+      method: 'POST',
+      body: JSON.stringify({ folderPath }),
+    });
+  },
+
+  createUploadCampaignFromFolder: (data: { id?: number; email?: string; folderPath: string; name?: string; visibility?: 'public' | 'unlisted' | 'private'; scheduleDate?: string; deleteAfterUpload?: boolean; videos?: Array<{ filePath?: string; fileName?: string; scheduledStartAt?: string }> }): Promise<{ success: boolean; message: string; data?: { id: number; name: string; status: string; totalVideos: number; folderPath: string; deleteAfterUpload: boolean } }> => {
+    return request(API_ENDPOINTS.UPLOAD.CAMPAIGNS_FOLDER, {
+      method: 'POST',
+      body: JSON.stringify(data),
+    });
+  },
+
   // Get upload campaigns with progress
   getUploadCampaigns: (params?: { status?: string; page?: number; limit?: number }): Promise<{ success: boolean; data: UploadCampaign[]; pagination: { page: number; limit: number; total: number; totalPages: number } }> => {
     const searchParams = new URLSearchParams();

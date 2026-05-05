@@ -61,31 +61,52 @@ async function cronTick() {
       return;
     }
 
-    // Find next due video across all campaigns: null scheduled = run immediately, past scheduled = overdue
+    // Enforce strict campaign ordering:
+    // - Only 1 campaign runs at a time
+    // - Inside that campaign, only the first pending video (order_index ASC) can run
+    // - If that first pending video is not due yet, DO NOT skip to later videos
+    let campaign = await UploadCampaign.findOne({
+      where: { status: 'running' },
+      order: [['id', 'ASC']]
+    });
+
+    if (!campaign) {
+      campaign = await UploadCampaign.findOne({
+        where: {
+          status: 'new',
+          [Op.or]: [
+            { scheduled_start_at: null },
+            { scheduled_start_at: { [Op.lte]: vnNow() } }
+          ]
+        },
+        order: [['createdAt', 'ASC'], ['id', 'ASC']]
+      });
+      if (!campaign) {
+        console.log('💤 [UploadQueue] No due campaigns');
+        return;
+      }
+      await campaign.update({ status: 'running' });
+      console.log(`▶️  [UploadQueue] Campaign #${campaign.id} started`);
+    }
+
     const video = await UploadedVideo.findOne({
       where: {
-        status: 'pending',
-        [Op.or]: [
-          { scheduled_start_at: null },
-          { scheduled_start_at: { [Op.lte]: vnNow() } }
-        ]
+        campaign_id: campaign.id,
+        status: 'pending'
       },
-      order: [['campaign_id', 'ASC'], ['order_index', 'ASC'], ['id', 'ASC']]
+      order: [['order_index', 'ASC'], ['id', 'ASC']]
     });
 
     if (!video) {
-      console.log('💤 [UploadQueue] No due videos');
+      await campaign.update({ status: 'done' });
+      console.log(`🏁 [UploadQueue] Campaign #${campaign.id} all done`);
       return;
     }
 
-    const campaign = await UploadCampaign.findByPk(video.campaign_id);
-    if (!campaign) {
-      await video.update({ status: 'failed', error_message: 'Campaign not found' });
+    const due = !video.scheduled_start_at || video.scheduled_start_at <= vnNow();
+    if (!due) {
+      console.log(`⏳ [UploadQueue] Waiting schedule for campaign #${campaign.id}, video #${video.id}: ${video.scheduled_start_at}`);
       return;
-    }
-
-    if (campaign.status === 'new') {
-      await campaign.update({ status: 'running' });
     }
 
     console.log(`\n📹 [UploadQueue] Video #${video.id} "${video.title || video.source_url}" (campaign #${campaign.id})`);
@@ -181,7 +202,9 @@ async function uploadVideo(video, account, options) {
       { closeBrowser: true }
     );
 
-    _deleteFile(filePath);
+    if (options.deleteAfterUpload !== false) {
+      _deleteFile(filePath);
+    }
 
     if (uploadResult.success) {
       await video.update({
@@ -199,7 +222,9 @@ async function uploadVideo(video, account, options) {
     }
 
   } catch (err) {
-    _deleteFile(filePath);
+    if (options.deleteAfterUpload !== false) {
+      _deleteFile(filePath);
+    }
     await video.update({ status: 'failed', error_message: err.message });
     console.error(`   ❌ Upload error:`, err.message);
   }

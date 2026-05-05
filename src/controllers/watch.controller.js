@@ -193,15 +193,9 @@ class WatchController {
       if (account) {
         let skipLogin = false;
         try {
-          await page.goto('https://www.youtube.com/', { waitUntil: 'networkidle2', timeout: 15000 }).catch(() => {});
-          await new Promise(r => setTimeout(r, 800));
-
-          skipLogin = await page.evaluate(() => {
-            const avatar = document.querySelector('#avatar-btn, tp-yt-paper-icon-button#avatar-btn');
-            if (avatar) return true;
-            const bodyText = document.body?.innerText?.toLowerCase() || '';
-            return !bodyText.includes('sign in') && !bodyText.includes('đăng nhập');
-          });
+          // Use a strict Google session check instead of loose YouTube text heuristics.
+          // Heuristic can mis-detect and cause auto-subscribe to run while not signed in.
+          skipLogin = await googleAuthService.isLoggedIn(page);
 
           console.log(`🔐 [Tab ${tabIndex}] ${skipLogin ? 'Already signed in' : 'Need to login'} [${account.email}]`);
         } catch (e) {

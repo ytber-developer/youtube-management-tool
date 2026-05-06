@@ -93,7 +93,8 @@ router.post('/campaigns', uploadController.createUploadCampaign);
  */
 router.post('/campaigns/files', uploadVideo.array('video'), uploadController.createUploadCampaignFiles);
 router.post('/folder/scan', uploadController.scanFolderVideos);
-router.post('/campaigns/folder', uploadController.createUploadCampaignFromFolder);
+router.post('/campaigns/folder', uploadController.createUploadCampaignFromFolder.bind(uploadController));
+router.post('/campaigns/folder-path', uploadController.createUploadCampaignFromFolderPath.bind(uploadController));
 
 /**
  * @route GET /api/v1/upload/campaigns

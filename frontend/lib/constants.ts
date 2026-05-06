@@ -34,6 +34,7 @@ export const API_ENDPOINTS = {
     CAMPAIGNS_FILES: '/api/v1/upload/campaigns/files',
     FOLDER_SCAN: '/api/v1/upload/folder/scan',
     CAMPAIGNS_FOLDER: '/api/v1/upload/campaigns/folder',
+    CAMPAIGNS_FOLDER_PATH: '/api/v1/upload/campaigns/folder-path',
     CAMPAIGN_STATUS: (id: number) => `/api/v1/upload/campaigns/${id}/status`,
     CAMPAIGN_VIDEO_DELETE: (campaignId: number, videoId: number) => `/api/v1/upload/campaigns/${campaignId}/videos/${videoId}`,
   },

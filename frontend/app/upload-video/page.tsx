@@ -7,12 +7,15 @@ import { api, type Account, type BatchUploadVideoItem, type BatchUploadResult, t
 export default function UploadVideoPage() {
   const [channels, setChannels] = useState<Account[]>([]);
   const [selectedChannel, setSelectedChannel] = useState<number | null>(null);
-  const [uploadMode, setUploadMode] = useState<'url' | 'file' | 'folder'>('url');
+  const [uploadMode, setUploadMode] = useState<'url' | 'file' | 'folder' | 'folderPath'>('url');
   const [urlsText, setUrlsText] = useState('');
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
-  const [folderFiles, setFolderFiles] = useState<File[]>([]);
+  const [folderPath, setFolderPath] = useState('');
+  const [folderPathVideos, setFolderPathVideos] = useState<string[]>([]);
   const [folderSchedulesText, setFolderSchedulesText] = useState('');
   const [folderTitlesText, setFolderTitlesText] = useState('');
+  const [folderScanLoading, setFolderScanLoading] = useState(false);
+  const [folderScanError, setFolderScanError] = useState('');
   const [deleteAfterUpload, setDeleteAfterUpload] = useState(true);
   const [uploads, setUploads] = useState<Array<{
     id: number; channelId: number; channelName?: string; mode: 'url' | 'file';
@@ -39,6 +42,7 @@ export default function UploadVideoPage() {
   const [expandedCampaigns, setExpandedCampaigns] = useState<Set<number>>(new Set());
   const dropdownRef = useRef<HTMLDivElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const folderScanTimer = useRef<any>(null);
 
   useEffect(() => {
     loadChannels();
@@ -60,6 +64,23 @@ export default function UploadVideoPage() {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+
+  // Auto-scan when user types/pastes folder path (debounced)
+  useEffect(() => {
+    if (folderScanTimer.current) clearTimeout(folderScanTimer.current);
+    // Only auto-scan when non-empty
+    if (!folderPath || !folderPath.trim()) {
+      setFolderPathVideos([]);
+      setFolderSchedulesText('');
+      setFolderTitlesText('');
+      setFolderScanError('');
+      return;
+    }
+    folderScanTimer.current = setTimeout(() => {
+      scanFolderPath(folderPath.trim());
+    }, 700);
+    return () => { if (folderScanTimer.current) clearTimeout(folderScanTimer.current); };
+  }, [folderPath]);
 
   const loadChannels = async () => {
     try {
@@ -371,22 +392,17 @@ export default function UploadVideoPage() {
           alert(err?.message || 'Upload failed');
         }
       })();
-    } else {
-      if (!folderFiles.length) { alert('Vui lòng chọn folder chứa video'); return; }
+    } else if (uploadMode === 'folderPath') {
+      if (!folderPath.trim()) { alert('Vui lòng nhập đường dẫn folder'); return; }
+      if (!folderPathVideos.length) { alert('Vui lòng quét folder trước'); return; }
       if (scheduleMode !== 'later') {
-        alert('Mode folder hiện hỗ trợ theo campaign (hẹn giờ). Hãy chọn "Hẹn giờ".');
+        alert('Mode Folder Path chạy theo campaign. Hãy chọn "Hẹn giờ".');
         return;
       }
       const lines = folderSchedulesText.split('\n').map(l => l.trim());
       const titleLines = folderTitlesText.split('\n').map(l => l.trim());
-      if (lines.length !== folderFiles.length) {
-        alert(`Số dòng hẹn giờ (${lines.length}) phải bằng số video (${folderFiles.length})`);
-        return;
-      }
-      if (titleLines.length !== folderFiles.length) {
-        alert(`Số dòng tiêu đề (${titleLines.length}) phải bằng số video (${folderFiles.length})`);
-        return;
-      }
+      if (lines.length !== folderPathVideos.length) { alert(`Số dòng hẹn giờ (${lines.length}) phải bằng số video (${folderPathVideos.length})`); return; }
+      if (titleLines.length !== folderPathVideos.length) { alert(`Số dòng tiêu đề (${titleLines.length}) phải bằng số video (${folderPathVideos.length})`); return; }
       for (let i = 0; i < lines.length; i++) {
         const t = lines[i];
         if (!t) { alert(`Dòng ${i + 1} trống — nhập 'none' hoặc thời gian hợp lệ`); return; }
@@ -396,21 +412,88 @@ export default function UploadVideoPage() {
       }
 
       try {
-        const formData = new FormData();
-        formData.append('id', selectedChannel.toString());
-        formData.append('visibility', globalVisibility);
-        formData.append('deleteAfterUpload', deleteAfterUpload ? 'true' : 'false');
-        if (globalScheduleDate) formData.append('scheduleDate', parseUserDateTime(globalScheduleDate) || globalScheduleDate);
-        folderFiles.forEach((f, i) => {
-          formData.append('video', f);
-          formData.append(`title_${i}`, titleLines[i] || f.name.replace(/\.[^/.]+$/, ''));
+        // Build JSON payload expected by the new /campaigns/folder-path endpoint
+        const videos = folderPathVideos.map((f, i) => {
+          const rawName = (f.split('/').pop() || '');
+          const fnameNoExt = rawName.replace(/\.[^/.]+$/, '');
+          const titleRaw = (titleLines[i] || '').trim();
+          const title = (!titleRaw || titleRaw.toLowerCase() === 'default') ? fnameNoExt : titleRaw;
           const t = lines[i];
-          if (t.toLowerCase() !== 'none') {
-            const iso = parseUserDateTime(t) || t;
-            formData.append(`scheduledStartAt_${i}`, iso);
-          }
+          const scheduledStartAt = t.toLowerCase() === 'none' ? undefined : (parseUserDateTime(t) || t);
+          return {
+            filePath: f,
+            fileName: rawName,
+            title,
+            scheduledStartAt,
+          };
         });
-        const res = await api.upload.createUploadCampaignFiles(formData);
+
+        const payload = {
+          id: selectedChannel,
+          folderPath: folderPath.trim(),
+          visibility: globalVisibility,
+          scheduleDate: globalScheduleDate ? (parseUserDateTime(globalScheduleDate) || globalScheduleDate) : undefined,
+          deleteAfterUpload: !!deleteAfterUpload,
+          videos,
+        } as any;
+
+        const res = await api.upload.createUploadCampaignFromFolderPath(payload);
+        if (res.success) {
+          alert(res.message);
+          await loadCampaigns();
+        } else {
+          alert(res.message || 'Tạo campaign thất bại');
+        }
+      } catch (err: any) {
+        alert(err?.message || 'Failed');
+      }
+      return;
+    } else {
+      // Legacy/fallback: treat same as folderPath (ensure we call the new JSON endpoint rather than sending FormData)
+      if (!folderPath.trim()) { alert('Vui lòng nhập đường dẫn folder'); return; }
+      if (!folderPathVideos.length) { alert('Vui lòng quét folder trước'); return; }
+      if (scheduleMode !== 'later') {
+        alert('Mode Folder Path chạy theo campaign. Hãy chọn "Hẹn giờ".');
+        return;
+      }
+      const lines = folderSchedulesText.split('\n').map(l => l.trim());
+      const titleLines = folderTitlesText.split('\n').map(l => l.trim());
+      if (lines.length !== folderPathVideos.length) { alert(`Số dòng hẹn giờ (${lines.length}) phải bằng số video (${folderPathVideos.length})`); return; }
+      if (titleLines.length !== folderPathVideos.length) { alert(`Số dòng tiêu đề (${titleLines.length}) phải bằng số video (${folderPathVideos.length})`); return; }
+      for (let i = 0; i < lines.length; i++) {
+        const t = lines[i];
+        if (!t) { alert(`Dòng ${i + 1} trống — nhập 'none' hoặc thời gian hợp lệ`); return; }
+        if (t.toLowerCase() === 'none') continue;
+        const { iso, error } = parseAndValidate(t);
+        if (error || !iso) { alert(`Dòng ${i + 1} không hợp lệ: ${error || 'Không nhận diện được'}`); return; }
+      }
+
+      try {
+        const videos = folderPathVideos.map((f, i) => {
+          const rawName = (f.split('/').pop() || '');
+          const fnameNoExt = rawName.replace(/\.[^/.]+$/, '');
+          const titleRaw = (titleLines[i] || '').trim();
+          const title = (!titleRaw || titleRaw.toLowerCase() === 'default') ? fnameNoExt : titleRaw;
+          const t = lines[i];
+          const scheduledStartAt = t.toLowerCase() === 'none' ? undefined : (parseUserDateTime(t) || t);
+          return {
+            filePath: f,
+            fileName: rawName,
+            title,
+            scheduledStartAt,
+          };
+        });
+
+        const payload = {
+          id: selectedChannel,
+          folderPath: folderPath.trim(),
+          visibility: globalVisibility,
+          scheduleDate: globalScheduleDate ? (parseUserDateTime(globalScheduleDate) || globalScheduleDate) : undefined,
+          deleteAfterUpload: !!deleteAfterUpload,
+          videos,
+        } as any;
+
+        const res = await api.upload.createUploadCampaignFromFolderPath(payload);
         if (res.success) {
           alert(res.message);
           await loadCampaigns();
@@ -431,6 +514,41 @@ export default function UploadVideoPage() {
   const formatVN7Display = (iso: string) => new Date(iso).toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh' });
   const getMinDateTime = () => { const d = new Date(); d.setHours(d.getHours() + 2); return toVN7(d); };
 
+  // Scan folder path helper (can be called manually or via debounce on input)
+  const scanFolderPath = async (pathToScan?: string) => {
+    const p = (pathToScan || folderPath || '').trim();
+    if (!p) {
+      setFolderPathVideos([]);
+      setFolderSchedulesText('');
+      setFolderTitlesText('');
+      setFolderScanError('');
+      return;
+    }
+    try {
+      setFolderScanLoading(true);
+      setFolderScanError('');
+      const res = await api.upload.scanFolderVideos(p);
+      if (res && res.success) {
+        const files = res.data?.files || [];
+        setFolderPathVideos(files);
+        setFolderSchedulesText(files.map(() => 'none').join('\n'));
+        setFolderTitlesText(files.map(f => (f.split('/').pop() || '').replace(/\.[^/.]+$/, '')).join('\n'));
+      } else {
+        setFolderPathVideos([]);
+        setFolderSchedulesText('');
+        setFolderTitlesText('');
+        setFolderScanError(res?.message || 'Scan thất bại');
+      }
+    } catch (e: any) {
+      setFolderPathVideos([]);
+      setFolderSchedulesText('');
+      setFolderTitlesText('');
+      setFolderScanError(e?.message || 'Scan thất bại');
+    } finally {
+      setFolderScanLoading(false);
+    }
+  };
+
   const filteredChannels = channels.filter(c => {
     const q = searchQuery.toLowerCase();
     return (c.channelName || '').toLowerCase().includes(q) || (c.email || '').toLowerCase().includes(q);
@@ -443,7 +561,9 @@ export default function UploadVideoPage() {
     ? (scheduleMode === 'later' ? urlRowCount : urlCount)
     : uploadMode === 'file'
       ? selectedFiles.length
-      : folderFiles.length;
+      : uploadMode === 'folderPath'
+        ? folderPathVideos.length
+        : 0;
 
   return (
     <div className="p-6 max-w-5xl mx-auto">
@@ -511,7 +631,7 @@ export default function UploadVideoPage() {
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-3">📋 Chọn cách upload</label>
             <div className="grid grid-cols-2 gap-4">
-              {(['url', 'file', 'folder'] as const).map(mode => (
+              {(['url', 'file', 'folderPath'] as const).map(mode => (
                 <button key={mode} type="button" onClick={() => { setUploadMode(mode); setResults(null); }}
                   className={`p-4 rounded-lg border-2 transition-all ${uploadMode === mode ? 'bg-blue-50 border-blue-600 shadow-md' : 'bg-white border-gray-300 hover:border-blue-400'}`}>
                   <div className="flex items-center gap-3">
@@ -523,7 +643,7 @@ export default function UploadVideoPage() {
                         {mode === 'url' ? 'Nhập URLs' : mode === 'file' ? 'Chọn Files' : 'Folder Path'}
                       </div>
                       <div className="text-xs text-gray-500 mt-0.5">
-                        {mode === 'url' ? 'TikTok, Facebook, Instagram, Google Drive...' : mode === 'file' ? 'Upload file từ máy tính (tối đa 15)' : 'Quét video từ folder local trên server'}
+                        {mode === 'url' ? 'TikTok, Facebook, Instagram, Google Drive...' : mode === 'file' ? 'Upload file từ máy tính (tối đa 15)' : 'Nhập đường dẫn local và đọc trực tiếp file gốc'}
                       </div>
                     </div>
                   </div>
@@ -532,7 +652,7 @@ export default function UploadVideoPage() {
             </div>
           </div>
 
-          {/* URL input */}
+          {/* URL / File / Folder Path input */}
           {uploadMode === 'url' ? (
             <div>
               <div className="flex items-center justify-between mb-2">
@@ -662,66 +782,59 @@ none`} className="w-full px-3 py-2 border-2 border-orange-300 rounded-lg text-xs
             </div>
           ) : (
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">📂 Chọn folder video</label>
-              <input
-                type="file"
-                // @ts-ignore webkitdirectory is supported in Chromium browsers
-                webkitdirectory="true"
-                multiple
-                accept="video/*"
-                onChange={(e) => {
-                  const files = Array.from(e.target.files || []).filter(f => f.type.startsWith('video/'));
-                  setFolderFiles(files);
-                  setFolderSchedulesText(prev => {
-                    const prevLines = prev.split('\n').map(l => l.trim());
-                    return files.map((_, i) => prevLines[i] || 'none').join('\n');
-                  });
-                  setFolderTitlesText(prev => {
-                    const prevLines = prev.split('\n').map(l => l.trim());
-                    return files.map((f, i) => prevLines[i] || f.name.replace(/\.[^/.]+$/, '')).join('\n');
-                  });
-                }}
-                className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg text-sm"
-              />
-              <div className="mt-2 text-xs text-gray-600">
-                Tìm thấy: <span className="font-semibold">{folderFiles.length}</span> video
+              <label className="block text-sm font-semibold text-gray-700 mb-2">📂 Folder Path (local)</label>
+              <div className="flex gap-2">
+                <input
+                  type="text"
+                  value={folderPath}
+                  onChange={e => setFolderPath(e.target.value)}
+                  placeholder="/Users/you/Videos/to-upload"
+                  className="flex-1 px-3 py-2 border-2 border-gray-300 rounded-lg text-sm"
+                />
+                <button
+                  type="button"
+                  onClick={async () => { await scanFolderPath(folderPath.trim()); }}
+                  className="px-3 py-2 rounded-lg bg-blue-600 text-white text-sm"
+                >Quét</button>
               </div>
-              {folderFiles.length > 0 && (
-                <div className="mt-2 border border-gray-200 rounded-lg bg-gray-50 p-2 max-h-40 overflow-y-auto">
-                  <div className="text-xs font-medium text-gray-600 mb-1">Danh sách file trong folder đang chọn:</div>
-                  <div className="space-y-1">
-                    {folderFiles.map((f, i) => (
-                      <div key={`${f.name}-${i}`} className="text-xs text-gray-700 truncate">
-                        {i + 1}. {f.webkitRelativePath || f.name}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-              {folderFiles.length > 0 && (
+              <div className="mt-2 text-xs">
+                {folderScanLoading ? (
+                  <span className="text-gray-600">Đang quét...</span>
+                ) : folderScanError ? (
+                  <span className="text-red-500">Lỗi: {folderScanError}</span>
+                ) : (
+                  <span className="text-gray-600">Tìm thấy: <span className="font-semibold">{folderPathVideos.length}</span> video</span>
+                )}
+              </div>
+
+              {folderPathVideos.length > 0 && (
                 <div className="mt-3">
-                  <label className="block text-xs font-medium text-gray-600 mb-1">📝 Tiêu đề từng video (1 dòng = 1 video)</label>
+                  <label className="block text-xs font-medium text-gray-600 mb-1">📝 Tiêu đề từng video (1 dòng = 1 video; nhập 'default' để dùng tên file)</label>
                   <textarea
                     value={folderTitlesText}
                     onChange={e => setFolderTitlesText(e.target.value)}
-                    rows={Math.max(3, folderFiles.length)}
+                    rows={Math.max(3, folderPathVideos.length)}
                     className="w-full px-3 py-2 border-2 border-blue-300 rounded-lg text-xs font-mono resize-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 bg-blue-50 mb-2"
-                    placeholder={`Title video 1\nTitle video 2\nTitle video 3`}
-                  />
-                  <label className="block text-xs font-medium text-gray-600 mb-1">⏰ Lịch upload từng video (1 dòng = 1 video, `none` = upload ngay)</label>
+                    placeholder={`default
+default
+Tiêu đề tùy chọn cho mỗi file`} />
+
+                  <label className="block text-xs font-medium text-gray-600 mb-1">⏰ Lịch upload từng video (1 dòng = 1 video; nhập 'none' = upload ngay)</label>
                   <textarea
                     value={folderSchedulesText}
                     onChange={e => setFolderSchedulesText(e.target.value)}
-                    rows={Math.max(3, folderFiles.length)}
+                    rows={Math.max(3, folderPathVideos.length)}
                     className="w-full px-3 py-2 border-2 border-orange-300 rounded-lg text-xs font-mono resize-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400 bg-orange-50"
-                    placeholder={`none\n2026-05-06 21:00\nnone`}
-                  />
+                    placeholder={`none\nnone\n2026-05-06 21:00`} />
+
+                  {folderTitlesText.split('\n').map(l => l.trim()).filter(Boolean).length !== folderPathVideos.length && (
+                    <div className="text-xs text-red-500 mt-1">Số dòng tiêu đề ({folderTitlesText.split('\n').length}) phải bằng số video ({folderPathVideos.length}) — nếu muốn dùng tên file, ghi 'default'.</div>
+                  )}
+                  {folderSchedulesText.split('\n').map(l => l.trim()).filter(() => true).length !== folderPathVideos.length && (
+                    <div className="text-xs text-red-500 mt-1">Số dòng lịch ({folderSchedulesText.split('\n').length}) phải bằng số video ({folderPathVideos.length}) — ghi 'none' để upload ngay.</div>
+                  )}
                 </div>
               )}
-              <label className="mt-3 flex items-center gap-2 text-sm text-gray-700">
-                <input type="checkbox" checked={deleteAfterUpload} onChange={e => setDeleteAfterUpload(e.target.checked)} />
-                Xóa file sau khi upload thành công
-              </label>
             </div>
           )}
 
@@ -847,7 +960,7 @@ none`} className="w-full px-3 py-2 border-2 border-orange-300 rounded-lg text-xs
                         <div className="flex items-center gap-2 flex-wrap">
                           <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${statusCfg.badge}`}>{statusCfg.label}</span>
                           <span className="text-xs text-gray-500">#{c.id}</span>
-                          {c.status === 'running' && <Loader2 className="w-3.5 h-3.5 animate-spin text-blue-600" />}
+                          {c.status === 'running' && <span className="animate-pulse text-xs text-blue-600">Đang chạy...</span>}
                           {c.account?.channel_name && <span className="text-xs text-gray-600 font-medium">{c.account.channel_name}</span>}
                         </div>
                         <div className="mt-1 text-sm font-semibold text-gray-800 truncate">{c.name}</div>

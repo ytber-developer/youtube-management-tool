@@ -165,6 +165,17 @@ class UploadController {
     }
   }
 
+  // New wrapper: same behavior but exposed at /campaigns/folder-path for clarity
+  async createUploadCampaignFromFolderPath(req, res) {
+    // Delegate to existing implementation without relying on `this` being bound by Express
+    try {
+      return await UploadController.prototype.createUploadCampaignFromFolder.call(this, req, res);
+    } catch (err) {
+      // Fallback: if prototype call fails, attempt direct invocation (safe since method doesn't use `this`)
+      return await this.createUploadCampaignFromFolder(req, res);
+    }
+  }
+
   /**
    * POST /api/v1/upload/download
    * Tải video từ URL (TikTok, Facebook, etc.) qua taivideo.vn

@@ -139,7 +139,8 @@ class UploadController {
           : null;
         return {
           localFilePath: p,
-          title: path.basename(p, path.extname(p)),
+          // Use provided title if present in inputVideos, otherwise fall back to filename without extension
+          title: (matched && matched.title) ? String(matched.title).trim() : path.basename(p, path.extname(p)),
           scheduledStartAt: matched?.scheduledStartAt || null
         };
       });
@@ -460,65 +461,58 @@ class UploadController {
       const VideoDownloadService = require('../services/video.download.service');
       const youtubeUploadService = require('../services/youtube.upload.service');
 
-      // ========== PHASE 1: DOWNLOAD ALL VIDEOS IN PARALLEL ==========
-      console.log(`\n📥 PHASE 1: DOWNLOADING ${videos.length} VIDEOS IN PARALLEL...`);
+      // ========== PHASE 1: DOWNLOAD ALL VIDEOS ==========
+      console.log(`\n📥 PHASE 1: DOWNLOADING ${videos.length} VIDEOS...`);
       console.log(`⏱️  Start time: ${new Date().toLocaleString()}\n`);
 
-      const downloadPromises = videos.map(async (video, index) => {
-        const videoNum = index + 1;
-        console.log(`   [${videoNum}/${videos.length}] Starting download: ${video.sourceUrl}`);
+      // Helper: detect Google Drive links which require a logged-in session
+      const isDriveLink = (u) => typeof u === 'string' && (u.includes('drive.google.com') || u.includes('docs.google.com') || u.includes('drive.googleusercontent.com'));
 
-        try {
-          // Create separate download service instance for each video (separate email folder)
-          const downloadService = new VideoDownloadService(`${account.email}-${videoNum}`);
-          const downloadResult = await downloadService.downloadVideo(video.sourceUrl, {
-            // Allow Google Drive links that require signed-in session on this account
-            profileEmail: account.email
-          });
+      let downloadResults = [];
 
-          if (!downloadResult.success) {
-            console.log(`   ❌ [${videoNum}/${videos.length}] Download failed: ${downloadResult.message}`);
-            return {
-              index: videoNum,
-              sourceUrl: video.sourceUrl,
-              success: false,
-              phase: 'download',
-              message: downloadResult.message,
-              error: downloadResult.error,
-              videoDetails: video
-            };
+      // If any Drive link present, download sequentially using a single VideoDownloadService instance
+      if (videos.some(v => isDriveLink(v.sourceUrl))) {
+        console.log('   ⚠️ Detected Google Drive links - using sequential download with a single logged-in service');
+        const downloadService = new VideoDownloadService(account.email);
+        for (let index = 0; index < videos.length; index++) {
+          const video = videos[index];
+          const videoNum = index + 1;
+          console.log(`   [${videoNum}/${videos.length}] Starting download: ${video.sourceUrl}`);
+          try {
+            const downloadResult = await downloadService.downloadVideo(video.sourceUrl, { profileEmail: account.email });
+            if (!downloadResult.success) {
+              console.log(`   ❌ [${videoNum}/${videos.length}] Download failed: ${downloadResult.message}`);
+              downloadResults.push({ index: videoNum, sourceUrl: video.sourceUrl, success: false, phase: 'download', message: downloadResult.message, error: downloadResult.error, videoDetails: video });
+              continue;
+            }
+            console.log(`   ✅ [${videoNum}/${videos.length}] Download complete: ${downloadResult.data.filePath}`);
+            downloadResults.push({ index: videoNum, sourceUrl: video.sourceUrl, success: true, phase: 'download', filePath: downloadResult.data.filePath, title: video.title || downloadResult.data.title, description: video.description || downloadResult.data.description, videoDetails: video, downloadService });
+          } catch (error) {
+            console.error(`   ❌ [${videoNum}/${videos.length}] Download error:`, error.message);
+            downloadResults.push({ index: videoNum, sourceUrl: video.sourceUrl, success: false, phase: 'download', message: 'Download failed', error: error.message, videoDetails: video });
           }
-
-          console.log(`   ✅ [${videoNum}/${videos.length}] Download complete: ${downloadResult.data.filePath}`);
-
-          return {
-            index: videoNum,
-            sourceUrl: video.sourceUrl,
-            success: true,
-            phase: 'download',
-            filePath: downloadResult.data.filePath,
-            title: video.title || downloadResult.data.title,
-            description: video.description || downloadResult.data.description,
-            videoDetails: video,
-            downloadService // Keep reference to delete file later
-          };
-
-        } catch (error) {
-          console.error(`   ❌ [${videoNum}/${videos.length}] Download error:`, error.message);
-          return {
-            index: videoNum,
-            sourceUrl: video.sourceUrl,
-            success: false,
-            phase: 'download',
-            message: 'Download failed',
-            error: error.message,
-            videoDetails: video
-          };
         }
-      });
-
-      // Wait for all downloads to complete
-      const downloadResults = await Promise.all(downloadPromises);
+      } else {
+        // Non-Drive links: download in parallel (existing behavior)
+        const downloadPromises = videos.map(async (video, index) => {
+          const videoNum = index + 1;
+          console.log(`   [${videoNum}/${videos.length}] Starting download: ${video.sourceUrl}`);
+          try {
+            const downloadService = new VideoDownloadService(`${account.email}-${videoNum}`);
+            const downloadResult = await downloadService.downloadVideo(video.sourceUrl, { profileEmail: account.email });
+            if (!downloadResult.success) {
+              console.log(`   ❌ [${videoNum}/${videos.length}] Download failed: ${downloadResult.message}`);
+              return { index: videoNum, sourceUrl: video.sourceUrl, success: false, phase: 'download', message: downloadResult.message, error: downloadResult.error, videoDetails: video };
+            }
+            console.log(`   ✅ [${videoNum}/${videos.length}] Download complete: ${downloadResult.data.filePath}`);
+            return { index: videoNum, sourceUrl: video.sourceUrl, success: true, phase: 'download', filePath: downloadResult.data.filePath, title: video.title || downloadResult.data.title, description: video.description || downloadResult.data.description, videoDetails: video, downloadService };
+          } catch (error) {
+            console.error(`   ❌ [${videoNum}/${videos.length}] Download error:`, error.message);
+            return { index: videoNum, sourceUrl: video.sourceUrl, success: false, phase: 'download', message: 'Download failed', error: error.message, videoDetails: video };
+          }
+        });
+        downloadResults = await Promise.all(downloadPromises);
+      }
 
       const downloadSuccess = downloadResults.filter(r => r.success).length;
       const downloadFailed = downloadResults.length - downloadSuccess;

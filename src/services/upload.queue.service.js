@@ -61,57 +61,82 @@ async function cronTick() {
       return;
     }
 
-    // Enforce strict campaign ordering:
-    // - Only 1 campaign runs at a time
-    // - Inside that campaign, only the first pending video (order_index ASC) can run
-    // - If that first pending video is not due yet, DO NOT skip to later videos
-    let campaign = await UploadCampaign.findOne({
-      where: { status: 'running' },
-      order: [['id', 'ASC']]
+    // New behavior: ignore campaign ordering, pick a pending video globally.
+    // Priority: oldest ASAP (scheduled_start_at IS NULL) by createdAt, else pending video with scheduled_start_at closest to current VN time.
+    let video = null;
+    // 1) Oldest ASAP
+    video = await UploadedVideo.findOne({
+      where: { status: 'pending', scheduled_start_at: null },
+      order: [['created_at', 'ASC'], ['id', 'ASC']]
     });
 
-    if (!campaign) {
-      campaign = await UploadCampaign.findOne({
-        where: {
-          status: 'new',
-          [Op.or]: [
-            { scheduled_start_at: null },
-            { scheduled_start_at: { [Op.lte]: vnNow() } }
-          ]
-        },
-        order: [['createdAt', 'ASC'], ['id', 'ASC']]
-      });
-      if (!campaign) {
-        console.log('💤 [UploadQueue] No due campaigns');
-        return;
-      }
-      await campaign.update({ status: 'running' });
-      console.log(`▶️  [UploadQueue] Campaign #${campaign.id} started`);
-    }
-
-    const video = await UploadedVideo.findOne({
-      where: {
-        campaign_id: campaign.id,
-        status: 'pending'
-      },
-      order: [['order_index', 'ASC'], ['id', 'ASC']]
-    });
+    let campaign = null;
 
     if (!video) {
-      await campaign.update({ status: 'done' });
-      console.log(`🏁 [UploadQueue] Campaign #${campaign.id} all done`);
+      // 2) Nearest scheduled
+      const scheduledVideos = await UploadedVideo.findAll({
+        where: {
+          status: 'pending',
+          scheduled_start_at: { [Op.ne]: null }
+        }
+      });
+
+      if (!scheduledVideos || scheduledVideos.length === 0) {
+        console.log('💤 [UploadQueue] No pending videos');
+        return;
+      }
+
+      const nowStr = vnNow();
+      let best = null;
+      let bestDiff = Infinity;
+
+      for (const v of scheduledVideos) {
+        const s = v.scheduled_start_at;
+        try {
+          const diff = Math.abs(Date.parse(s) - Date.parse(nowStr));
+          if (!isNaN(diff) && diff < bestDiff) {
+            bestDiff = diff;
+            best = v;
+          }
+        } catch (e) {
+          // ignore parse errors
+        }
+      }
+
+      if (best) video = best;
+      else video = scheduledVideos[0]; // fallback
+    }
+
+    if (!video) {
+      console.log('💤 [UploadQueue] No pending videos found');
       return;
     }
 
-    const due = !video.scheduled_start_at || video.scheduled_start_at <= vnNow();
-    if (!due) {
-      console.log(`⏳ [UploadQueue] Waiting schedule for campaign #${campaign.id}, video #${video.id}: ${video.scheduled_start_at}`);
+    // Load related campaign (if any) to get options and for later completion checks
+    if (video.campaign_id) campaign = await UploadCampaign.findByPk(video.campaign_id);
+
+    // We intentionally DO NOT change campaign.status here — running is not tracked at campaign level any more
+
+    console.log(`\n📹 [UploadQueue] Video #${video.id} "${video.title || video.source_url}" (campaign #${campaign ? campaign.id : 'N/A'})`);
+
+    // Ensure we have the account (video may carry account_youtube_id)
+    const accountId = video.account_youtube_id || (campaign && campaign.account_youtube_id);
+    if (!accountId) {
+      await video.update({ status: 'failed', error_message: 'Account not found' });
       return;
     }
 
-    console.log(`\n📹 [UploadQueue] Video #${video.id} "${video.title || video.source_url}" (campaign #${campaign.id})`);
+    // If the video belongs to a campaign, mark that campaign as running (for UI/monitoring)
+    if (campaign && campaign.status !== 'running') {
+      try {
+        await campaign.update({ status: 'running' });
+        console.log(`▶️  [UploadQueue] Marked campaign #${campaign.id} as running`);
+      } catch (e) {
+        console.warn(`⚠️  Failed to mark campaign #${campaign.id} running: ${e.message}`);
+      }
+    }
 
-    const account = await AccountYoutube.findByPk(campaign.account_youtube_id);
+    const account = await AccountYoutube.findByPk(accountId);
     if (!account) {
       await video.update({ status: 'failed', error_message: 'Account not found' });
       return;
@@ -119,13 +144,19 @@ async function cronTick() {
 
     await uploadVideo(video, account, campaign.options || {});
 
-    // Mark campaign done if all videos finished
-    const remaining = await UploadedVideo.count({
-      where: { campaign_id: campaign.id, status: { [Op.notIn]: ['completed', 'failed', 'skipped'] } }
-    });
-    if (remaining === 0) {
-      await campaign.update({ status: 'done' });
-      console.log(`🏁 [UploadQueue] Campaign #${campaign.id} all done`);
+    // If video belonged to a campaign, mark campaign done when no pending videos remain
+    if (campaign) {
+      const remaining = await UploadedVideo.count({
+        where: { campaign_id: campaign.id, status: { [Op.notIn]: ['completed', 'failed', 'skipped'] } }
+      });
+      if (remaining === 0) {
+        try {
+          await campaign.update({ status: 'done' });
+          console.log(`🏁 [UploadQueue] Campaign #${campaign.id} all done`);
+        } catch (e) {
+          console.warn(`⚠️ Failed to mark campaign #${campaign.id} done: ${e.message}`);
+        }
+      }
     }
 
   } catch (err) {
@@ -264,11 +295,15 @@ async function recoverStuckUploads() {
  * Create a new upload campaign with video tasks.
  */
 async function createUploadCampaign({ name, accountId, email, videos, options = {} }) {
-  // Campaign scheduled_start_at = earliest per-video schedule (null = ASAP)
+  // If ANY video has no scheduledStartAt (ASAP), treat campaign as ASAP (null)
+  const hasASAP = videos.some(v => !v.scheduledStartAt);
   const videoSchedules = videos.map(v => v.scheduledStartAt).filter(Boolean);
-  const campaignScheduledAt = videoSchedules.length > 0
-    ? new Date(Math.min(...videoSchedules.map(s => new Date(s).getTime())))
-    : null;
+  const campaignScheduledAt = hasASAP
+    ? null
+    : (videoSchedules.length > 0
+      ? new Date(Math.min(...videoSchedules.map(s => new Date(s).getTime())))
+      : null
+    );
 
   const campaign = await UploadCampaign.create({
     name,

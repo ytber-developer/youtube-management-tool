@@ -211,6 +211,34 @@ class GoogleDriveService {
             // Kiểm tra tab hiện tại trước
             await handleConfirmPage(page);
 
+            // Additionally: listen for same-tab navigations/responses that may show the "Download anyway" confirm page
+            // Some Drive flows reuse the same tab instead of opening a new target — detect those and handle them.
+            const sameTabHandler = async (frame) => {
+                try {
+                    const url = (typeof frame === 'string') ? frame : (frame && frame.url ? frame.url() : null);
+                    const pageUrl = (page && page.url) ? page.url() : null;
+                    if ((pageUrl && (pageUrl.includes('drive.usercontent.google.com') || pageUrl.includes('export=download'))) ||
+                        (url && (url.includes('drive.usercontent.google.com') || url.includes('export=download')))) {
+                        await handleConfirmPage(page);
+                    }
+                } catch (e) { /* ignore */ }
+            };
+
+            const respHandler = async (resp) => {
+                try {
+                    const rurl = resp.url();
+                    const headers = resp.headers ? resp.headers() : {};
+                    if (!rurl) return;
+                    if (rurl.includes('drive.usercontent.google.com') || rurl.includes('export=download') ||
+                        (headers && Object.keys(headers).some(h => h.toLowerCase() === 'content-disposition'))) {
+                        await handleConfirmPage(page);
+                    }
+                } catch (e) { /* ignore */ }
+            };
+
+            page.on('framenavigated', sameTabHandler);
+            page.on('response', respHandler);
+
             // Lắng nghe tab mới (tối đa 10s)
             const tabWaitPromise = new Promise(resolve => {
                 const handler = async (target) => {
@@ -240,6 +268,10 @@ class GoogleDriveService {
 
             // Đợi tabWait và đảm bảo không còn .crdownload
             await tabWaitPromise;
+
+            // Remove same-tab listeners
+            try { page.off('framenavigated', sameTabHandler); } catch (e) { /* ignore */ }
+            try { page.off('response', respHandler); } catch (e) { /* ignore */ }
 
             if (cdpDownloadFailed) throw new Error('Download bị hủy bởi CDP');
 

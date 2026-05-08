@@ -73,28 +73,28 @@ async function cronTick() {
     let campaign = null;
 
     if (!video) {
-      // 2) Nearest scheduled
+      // 2) Nearest scheduled (ONLY consider scheduled times >= now)
+      const nowStr = vnNow();
       const scheduledVideos = await UploadedVideo.findAll({
         where: {
           status: 'pending',
-          scheduled_start_at: { [Op.ne]: null }
+          scheduled_start_at: { [Op.gte]: nowStr }
         }
       });
 
       if (!scheduledVideos || scheduledVideos.length === 0) {
-        console.log('💤 [UploadQueue] No pending videos');
+        console.log('💤 [UploadQueue] No upcoming scheduled videos (>= now)');
         return;
       }
 
-      const nowStr = vnNow();
+      // Pick the soonest upcoming scheduled time (smallest positive diff)
       let best = null;
       let bestDiff = Infinity;
-
       for (const v of scheduledVideos) {
         const s = v.scheduled_start_at;
         try {
-          const diff = Math.abs(Date.parse(s) - Date.parse(nowStr));
-          if (!isNaN(diff) && diff < bestDiff) {
+          const diff = Date.parse(s) - Date.parse(nowStr); // >=0 per query
+          if (!isNaN(diff) && diff >= 0 && diff < bestDiff) {
             bestDiff = diff;
             best = v;
           }
@@ -104,7 +104,7 @@ async function cronTick() {
       }
 
       if (best) video = best;
-      else video = scheduledVideos[0]; // fallback
+      else video = scheduledVideos[0]; // fallback (shouldn't normally happen)
     }
 
     if (!video) {

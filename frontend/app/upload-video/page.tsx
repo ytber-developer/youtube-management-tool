@@ -255,7 +255,7 @@ export default function UploadVideoPage() {
         const schedLines = urlScheduleText.trimEnd().split('\n').map(l => l.trim());
 
         if (!urlLines.length) { alert('Vui lòng nhập ít nhất 1 URL'); return; }
-        if (urlLines.length > 15) { alert('Tối đa 15 URLs'); return; }
+        // removed limit of 15 URLs to allow unlimited Drive URL uploads
         if (schedLines.length !== urlLines.length) {
           alert(`Số dòng thời gian (${schedLines.length}) phải bằng số URL (${urlLines.length})`);
           return;

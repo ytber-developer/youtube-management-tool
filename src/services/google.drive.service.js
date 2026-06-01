@@ -2,6 +2,7 @@ const browserService = require('./browser.service');
 const path = require('path');
 const fs = require('fs');
 const axios = require('axios');
+const googleAuthService = require('./google.auth.service');
 
 class GoogleDriveService {
 
@@ -77,6 +78,39 @@ class GoogleDriveService {
             const browserResult = await browserService.launchBrowser(false, profileEmail, 3, !!profileEmail);
             browser = browserResult.browser;
             const page = browserResult.page;
+
+            // If a profileEmail is provided, ensure we are signed in to Google/Drive before opening the file preview
+            if (profileEmail) {
+                try {
+                    console.log(`   🔐 Kiểm tra trạng thái đăng nhập Google cho ${profileEmail}...`);
+                    await page.goto('https://drive.google.com', { waitUntil: 'networkidle2', timeout: 30000 });
+                    await new Promise(r => setTimeout(r, 1500));
+
+                    const needsLogin = await page.evaluate(() => {
+                        // Detect common signs of not being signed in
+                        if (document.querySelector('input[type="email"]')) return true;
+                        if (document.querySelector('a[href*="ServiceLogin"], a[href*="accounts.google.com"]')) return true;
+                        // Some Drive flows show a sign-in button or large sign-in prompt
+                        if (Array.from(document.querySelectorAll('button, a')).some(el => (el.textContent || '').toLowerCase().includes('sign in'))) return true;
+                        return false;
+                    });
+
+                    if (needsLogin) {
+                        console.log('   🔐 Chưa đăng nhập Drive — thực hiện login (sử dụng stored account if available)');
+                        try {
+                            await googleAuthService.login(page, profileEmail);
+                            await new Promise(r => setTimeout(r, 1500));
+                            console.log('   ✅ Đã đăng nhập Drive (hoặc chọn account)');
+                        } catch (loginErr) {
+                            console.log(`   ⚠️ Lỗi khi đăng nhập Drive: ${loginErr.message}`);
+                        }
+                    } else {
+                        console.log('   ✅ Đã đăng nhập Google Drive (session ok)');
+                    }
+                } catch (e) {
+                    console.log(`   ⚠️ Không thể kiểm tra/đăng nhập Drive: ${e.message}`);
+                }
+            }
 
             // Cấu hình CDP download
             client = await page.target().createCDPSession();

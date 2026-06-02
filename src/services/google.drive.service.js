@@ -50,66 +50,40 @@ class GoogleDriveService {
             if (!fileId) throw new Error('Không thể trích xuất File ID từ URL Google Drive');
             console.log(`   File ID: ${fileId}`);
 
-            // ── Bước 1: Thử HTTP flow (chỉ khi không dùng profile) ────────────
-            if (!profileEmail) {
-                console.log('   ⚡ Thử download qua HTTP trước khi mở browser...');
-                try {
-                    const httpResult = await this.downloadPublicDriveFile(fileId, downloadPath);
-                    if (httpResult && httpResult.success) {
-                        console.log(`   ✅ HTTP download thành công: ${httpResult.fileName}`);
-                        return {
-                            success: true,
-                            message: 'Tải video từ Google Drive thành công (via HTTP)',
-                            data: {
-                                originalUrl: driveUrl,
-                                title: httpResult.fileName.replace(/\.[^/.]+$/, ''),
-                                description: httpResult.fileName.replace(/\.[^/.]+$/, ''),
-                                filePath: httpResult.filePath,
-                                fileName: httpResult.fileName
-                            }
-                        };
-                    }
-                } catch (httpErr) {
-                    console.log('   ⚠️ HTTP download thất bại, fallback sang browser:', httpErr.message);
-                }
-            }
-
-            // ── Bước 2: Mở browser ────────────────────────────────────────────
+            // ALWAYS open browser/profile first so we can check Google Drive login and perform browser-based
+            // download reliably (supports private/long files and ensures session is valid).
             const browserResult = await browserService.launchBrowser(false, profileEmail, 3, !!profileEmail);
             browser = browserResult.browser;
             const page = browserResult.page;
 
-            // If a profileEmail is provided, ensure we are signed in to Google/Drive before opening the file preview
-            if (profileEmail) {
-                try {
-                    console.log(`   🔐 Kiểm tra trạng thái đăng nhập Google cho ${profileEmail}...`);
-                    await page.goto('https://drive.google.com', { waitUntil: 'networkidle2', timeout: 30000 });
-                    await new Promise(r => setTimeout(r, 1500));
+            // Kiểm tra trạng thái đăng nhập Drive cho cả trường hợp có hoặc không có profileEmail.
+            try {
+                console.log(`   🔐 Kiểm tra trạng thái đăng nhập Google Drive (mở profile)...`);
+                await page.goto('https://drive.google.com', { waitUntil: 'networkidle2', timeout: 30000 });
+                await new Promise(r => setTimeout(r, 1500));
 
-                    const needsLogin = await page.evaluate(() => {
-                        // Detect common signs of not being signed in
-                        if (document.querySelector('input[type="email"]')) return true;
-                        if (document.querySelector('a[href*="ServiceLogin"], a[href*="accounts.google.com"]')) return true;
-                        // Some Drive flows show a sign-in button or large sign-in prompt
-                        if (Array.from(document.querySelectorAll('button, a')).some(el => (el.textContent || '').toLowerCase().includes('sign in'))) return true;
-                        return false;
-                    });
+                const needsLogin = await page.evaluate(() => {
+                    if (document.querySelector('input[type="email"]')) return true;
+                    if (document.querySelector('a[href*="ServiceLogin"], a[href*="accounts.google.com"]')) return true;
+                    if (Array.from(document.querySelectorAll('button, a')).some(el => (el.textContent || '').toLowerCase().includes('sign in'))) return true;
+                    return false;
+                });
 
-                    if (needsLogin) {
-                        console.log('   🔐 Chưa đăng nhập Drive — thực hiện login (sử dụng stored account if available)');
-                        try {
-                            await googleAuthService.login(page, profileEmail);
-                            await new Promise(r => setTimeout(r, 1500));
-                            console.log('   ✅ Đã đăng nhập Drive (hoặc chọn account)');
-                        } catch (loginErr) {
-                            console.log(`   ⚠️ Lỗi khi đăng nhập Drive: ${loginErr.message}`);
-                        }
-                    } else {
-                        console.log('   ✅ Đã đăng nhập Google Drive (session ok)');
+                if (needsLogin) {
+                    console.log('   🔐 Chưa đăng nhập Drive — thực hiện login (sử dụng stored account nếu có)');
+                    try {
+                        await googleAuthService.login(page, profileEmail);
+                        await new Promise(r => setTimeout(r, 1500));
+                        console.log('   ✅ Đã đăng nhập Drive (hoặc chọn account)');
+                    } catch (loginErr) {
+                        console.log(`   ⚠️ Lỗi khi đăng nhập Drive: ${loginErr.message}`);
+                        // Nếu login thất bại, chúng ta vẫn cố gắng tiếp tục — public HTTP fallback sẽ được thử sau khi browser flow thất bại.
                     }
-                } catch (e) {
-                    console.log(`   ⚠️ Không thể kiểm tra/đăng nhập Drive: ${e.message}`);
+                } else {
+                    console.log('   ✅ Đã đăng nhập Google Drive (session ok)');
                 }
+            } catch (e) {
+                console.log(`   ⚠️ Không thể kiểm tra/đăng nhập Drive: ${e.message}`);
             }
 
             // Cấu hình CDP download
@@ -150,9 +124,60 @@ class GoogleDriveService {
 
             // ── Bước 3: Lấy tên file từ trang preview ────────────────────────
             const previewUrl = `https://drive.google.com/file/d/${fileId}/view`;
-            await page.goto(previewUrl, { waitUntil: 'domcontentloaded', timeout: 30000 });
-            await new Promise(r => setTimeout(r, 2000));
-            const fileName = await this.extractFileName(page, fileId);
+
+            // Try to open preview, but handle cases where Drive returns an accounts/verify page
+            let previewAttempts = 0;
+            let fileName = null;
+            while (previewAttempts < 3) {
+                previewAttempts++;
+                await page.goto(previewUrl, { waitUntil: 'domcontentloaded', timeout: 30000 });
+                await new Promise(r => setTimeout(r, 2000));
+
+                // Detect if Google responded with a login/verify flow instead of the preview
+                const needsAuth = await page.evaluate(() => {
+                    const url = location.href || '';
+                    if (url.includes('accounts.google.com') || url.includes('/signin') || url.includes('/confirmidentifier') || url.includes('/challenge')) return true;
+                    if (document.querySelector('input[type="email"]')) return true;
+                    // Common verify headings
+                    const headings = Array.from(document.querySelectorAll('h1, h2, h3, div')).map(n => (n.textContent || '').toLowerCase());
+                    if (headings.some(t => t.includes("verify it's you") || t.includes('verify your identity') || t.includes('xác minh'))) return true;
+                    return false;
+                });
+
+                if (needsAuth) {
+                    console.log(`   🔒 Preview opened but Google requires authentication/verification (attempt ${previewAttempts})`);
+                    if (profileEmail) {
+                        try {
+                            console.log(`   🔐 Thực hiện login cho ${profileEmail} để hoàn tất xác thực...`);
+                            await googleAuthService.login(page, profileEmail);
+                            await new Promise(r => setTimeout(r, 1500));
+                            console.log('   ✅ Đã cố gắng xác thực, thử lại preview...');
+                            continue; // retry preview
+                        } catch (loginErr) {
+                            console.log(`   ⚠️ Login/verify failed: ${loginErr.message}`);
+                            // If login failed, break and let normal flow handle error
+                            break;
+                        }
+                    } else {
+                        throw new Error('Google yêu cầu đăng nhập/xác thực nhưng không có profileEmail để thực hiện login');
+                    }
+                }
+
+                // If we reach here, preview looks like a normal Drive preview — extract filename
+                try {
+                    fileName = await this.extractFileName(page, fileId);
+                } catch (e) {
+                    // ignore and let outer handler throw if needed
+                }
+
+                if (fileName) break;
+            }
+
+            if (!fileName) {
+                // Final attempt to get title even if preview needed extra navigation
+                try { fileName = await this.extractFileName(page, fileId); } catch (e) { /* ignore */ }
+            }
+
             console.log(`   Tên file: ${fileName}`);
 
             // ── Bước 4: Trigger download (3 cách, dừng khi thành công) ────────
@@ -199,7 +224,7 @@ class GoogleDriveService {
                         await page.goto(directUrl, { waitUntil: 'domcontentloaded', timeout: 15000 });
                         triggered = true;
                     } catch (navErr) {
-                        if (navErr.message.includes('ERR_ABORTED')) {
+                        if (navErr.message && navErr.message.includes('ERR_ABORTED')) {
                             triggered = true; // ERR_ABORTED = download đang bắt đầu
                         }
                     }
@@ -289,18 +314,14 @@ class GoogleDriveService {
                 setTimeout(() => { browser.off('targetcreated', handler); resolve(); }, 10000);
             });
 
-            // Đợi download hoàn tất (CDP) hoặc phát hiện file trên filesystem, tối đa 10 phút
+            // Đợi download hoàn tất qua CDP, tối đa 10 phút
             const MAX_WAIT_MS = 600000;
-            const fsDetectPromise = this._waitForFileOnDisk(downloadPath, MAX_WAIT_MS);
 
-            // Chạy song song: lắng nghe tab mới + đợi download xong
             await Promise.race([
                 cdpDonePromise,
-                fsDetectPromise,
                 new Promise((_, rej) => setTimeout(() => rej(new Error('Download timeout 10 phút')), MAX_WAIT_MS))
             ]);
 
-            // Đợi tabWait và đảm bảo không còn .crdownload
             await tabWaitPromise;
 
             // Remove same-tab listeners
@@ -341,524 +362,212 @@ class GoogleDriveService {
      * Polling filesystem để phát hiện file download bắt đầu xuất hiện (.crdownload / video mới)
      * @private
      */
-    _waitForFileOnDisk(downloadPath, maxWaitMs = 600000) {
-        const videoExts = ['.mp4', '.webm', '.mov', '.mkv', '.avi', '.m4v', '.flv', '.wmv'];
-        const existingFiles = new Set(
-            fs.readdirSync(downloadPath).filter(f => !f.endsWith('.crdownload') && !f.endsWith('.part'))
-        );
-        const startTime = Date.now();
+    _waitForFileOnDisk(downloadPath, maxWaitMs = 600000, abort = {}) {
+        return new Promise((resolve, reject) => {
+            const startTime = Date.now();
+            const checkInterval = 1000;
 
-        return new Promise((resolve) => {
             const check = () => {
-                if (Date.now() - startTime > maxWaitMs) { resolve(null); return; }
-                try {
-                    const files = fs.readdirSync(downloadPath);
-                    const cr = files.find(f => f.endsWith('.crdownload') || f.endsWith('.part'));
-                    const newVideo = files.find(f =>
-                        videoExts.some(ext => f.toLowerCase().endsWith(ext)) &&
-                        !f.endsWith('.crdownload') && !f.endsWith('.part') &&
-                        !existingFiles.has(f)
-                    );
-                    if (cr || newVideo) { resolve(cr || newVideo); return; }
-                } catch (e) { /* ignore */ }
-                setTimeout(check, 1000);
+                if (abort.stopped) return; // dừng polling nếu đã abort
+
+                const files = fs.readdirSync(downloadPath);
+                const videoFile = files.find(f => f.endsWith('.mp4') || f.endsWith('.mkv') || f.endsWith('.webm'));
+                const crdownloadFile = files.find(f => f.endsWith('.crdownload'));
+
+                if (videoFile) {
+                    const filePath = path.join(downloadPath, videoFile);
+                    const stats = fs.statSync(filePath);
+                    const fileSizeMB = stats.size / (1024 * 1024);
+                    resolve({ filePath, fileName: videoFile, sizeMB: fileSizeMB });
+                    return;
+                } else if (crdownloadFile) {
+                    console.log(`   ⏳ Phát hiện file tạm thời: ${crdownloadFile} - có thể đang tải`);
+                } else {
+                    console.log('   ⏳ Đang chờ file xuất hiện trên đĩa...');
+                }
+
+                if (Date.now() - startTime > maxWaitMs) {
+                    reject(new Error('Hết thời gian chờ phát hiện file trên đĩa'));
+                } else {
+                    setTimeout(check, checkInterval);
+                }
             };
+
             check();
         });
     }
 
     /**
-     * Đợi file hoàn tất (không còn .crdownload) và trả về thông tin file
+     * Lấy thông tin file đã tải xong (không còn .crdownload)
      * @private
      */
-    async _getCompletedFile(downloadPath, maxWaitMs = 120000) {
-        const videoExts = ['.mp4', '.webm', '.mov', '.mkv', '.avi', '.m4v', '.flv', '.wmv'];
-        const existingBefore = new Set(
-            // snapshot thời điểm gọi (có thể đã có file từ trước)
-        );
+    async _getCompletedFile(downloadPath, maxWaitMs = 600000) {
         const startTime = Date.now();
+        const checkInterval = 1000;
 
-        while (Date.now() - startTime < maxWaitMs) {
+        const check = () => {
             const files = fs.readdirSync(downloadPath);
-            const inProgress = files.filter(f => f.endsWith('.crdownload') || f.endsWith('.part'));
+            const videoFile = files.find(f => f.endsWith('.mp4') || f.endsWith('.mkv') || f.endsWith('.webm'));
 
-            if (inProgress.length > 0) {
-                const dlPath = path.join(downloadPath, inProgress[0]);
-                try {
-                    const sz = fs.statSync(dlPath).size;
-                    if (Date.now() - startTime > 3000) {
-                        console.log(`   📥 Đang tải: ${(sz / 1024 / 1024).toFixed(1)} MB (${inProgress[0]})`);
-                    }
-                } catch (e) { /* ignore */ }
-                await new Promise(r => setTimeout(r, 2000));
-                continue;
-            }
-
-            // Không còn .crdownload — tìm file video mới
-            const candidates = files.filter(f =>
-                videoExts.some(ext => f.toLowerCase().endsWith(ext)) &&
-                !f.endsWith('.crdownload') && !f.endsWith('.part')
-            );
-
-            if (candidates.length > 0) {
-                // Lấy file có mtime mới nhất
-                const newest = candidates
-                    .map(f => ({ name: f, mtime: fs.statSync(path.join(downloadPath, f)).mtimeMs }))
-                    .sort((a, b) => b.mtime - a.mtime)[0];
-
-                const filePath = path.join(downloadPath, newest.name);
+            if (videoFile) {
+                const filePath = path.join(downloadPath, videoFile);
                 const stats = fs.statSync(filePath);
-
-                if (stats.size < 10000) { await new Promise(r => setTimeout(r, 1000)); continue; }
-
-                // Đợi 1s để chắc chắn file ổn định
-                await new Promise(r => setTimeout(r, 1000));
-                const stats2 = fs.statSync(filePath);
-                if (stats.size === stats2.size) {
-                    return { filePath, fileName: newest.name, sizeMB: (stats2.size / 1024 / 1024).toFixed(2) };
-                }
+                const fileSizeMB = stats.size / (1024 * 1024);
+                return { filePath, fileName: videoFile, sizeMB: fileSizeMB };
             }
 
-            await new Promise(r => setTimeout(r, 1000));
-        }
-
-        return null;
-    }
-
-    /**
-     * Download public/shared Google Drive file via HTTP (confirm-token flow).
-     * Returns { success, filePath, fileName }
-     */
-    async downloadPublicDriveFile(fileId, downloadPath) {
-        const baseUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
-        const client = axios.create({ timeout: 120000, maxRedirects: 5, validateStatus: null });
-
-        const streamToString = (stream, maxBytes = 1024 * 1024) => new Promise((resolve, reject) => {
-            let data = '';
-            let received = 0;
-            stream.on('data', chunk => {
-                received += chunk.length;
-                if (received <= maxBytes) data += chunk.toString('utf8');
-            });
-            stream.on('end', () => resolve(data));
-            stream.on('error', reject);
-        });
-
-        const getFileNameFromHeaders = (headers) => {
-            const cd = headers && (headers['content-disposition'] || headers['Content-Disposition']);
-            if (!cd) return null;
-            const m = cd.match(/filename\*?=([^;]+)/i);
-            if (m && m[1]) {
-                let fname = m[1].trim();
-                // Remove UTF-8'' prefix
-                fname = fname.replace(/^UTF-8''/, '').replace(/^"|"$/g, '');
-                try { return decodeURIComponent(fname); } catch (e) { return fname; }
+            if (Date.now() - startTime > maxWaitMs) {
+                throw new Error('Không tìm thấy file hoàn tất sau khi download');
             }
+
             return null;
         };
 
-        try {
-            // Initial request - try stream
-            const initial = await client.get(baseUrl, { responseType: 'stream' });
+        // Kiểm tra ngay lần đầu
+        let result = check();
+        if (result) return result;
 
-            const contentType = (initial.headers['content-type'] || '').toLowerCase();
-
-            // If response is not HTML -> treat as file stream
-            if (!contentType.includes('text/html')) {
-                const filename = getFileNameFromHeaders(initial.headers) || `${fileId}`;
-                const destPath = path.join(downloadPath, filename);
-                const writer = fs.createWriteStream(destPath);
-                initial.data.pipe(writer);
-                await new Promise((resolve, reject) => writer.on('finish', resolve).on('error', reject));
-                return { success: true, filePath: destPath, fileName: filename };
-            }
-
-            // Otherwise parse HTML to find confirm token or download link
-            const html = await streamToString(initial.data, 1024 * 1024); // read up to 1MB
-
-            // Try common patterns for confirm token or direct href
-            let confirmToken = null;
-            let directHref = null;
-
-            // Pattern: confirm=TOKEN
-            const mConfirm = html.match(/confirm=([0-9A-Za-z_-]+)/);
-            if (mConfirm) confirmToken = mConfirm[1];
-
-            // Pattern: name="confirm" value="TOKEN"
-            if (!confirmToken) {
-                const mInput = html.match(/name="confirm" value="([^"]+)"/);
-                if (mInput) confirmToken = mInput[1];
-            }
-
-            // Pattern: uc-download-link href
-            if (!confirmToken) {
-                const mHref = html.match(/id="uc-download-link"[^>]*href="([^"]+)"/);
-                if (mHref) directHref = mHref[1];
-            }
-
-            // Build final download URL
-            let finalUrl = baseUrl;
-            if (directHref) {
-                if (directHref.startsWith('/')) finalUrl = `https://drive.google.com${directHref}`;
-                else finalUrl = directHref;
-            } else if (confirmToken) {
-                finalUrl = `${baseUrl}&confirm=${confirmToken}`;
-            }
-
-            // Try to include cookies from initial response if any
-            const setCookie = initial.headers['set-cookie'];
-            const headers = {};
-            if (setCookie && Array.isArray(setCookie) && setCookie.length > 0) {
-                headers['Cookie'] = setCookie.map(c => c.split(';')[0]).join('; ');
-            }
-
-            // Final stream
-            const finalResp = await client.get(finalUrl, { responseType: 'stream', headers });
-            const filename = getFileNameFromHeaders(finalResp.headers) || (html && (html.match(/<title>([^<]+)<\/title>/) || [])[1]) || `${fileId}`;
-            const sanitized = String(filename).replace(/[\/:\\?%*|"<>]/g, '_');
-            const destPath = path.join(downloadPath, sanitized);
-
-            const writer2 = fs.createWriteStream(destPath);
-            finalResp.data.pipe(writer2);
-            await new Promise((resolve, reject) => writer2.on('finish', resolve).on('error', reject));
-
-            return { success: true, filePath: destPath, fileName: sanitized };
-
-        } catch (err) {
-            return { success: false, message: err.message || String(err) };
-        }
-    }
-
-    /**
-     * Trích xuất File ID từ Google Drive URL
-     */
-    extractFileId(url) {
-        // https://drive.google.com/file/d/FILE_ID/view
-        // https://drive.google.com/open?id=FILE_ID
-        // https://docs.google.com/file/d/FILE_ID
-
-        let match = url.match(/\/file\/d\/([^\/]+)/);
-        if (match) return match[1];
-
-        match = url.match(/[?&]id=([^&]+)/);
-        if (match) return match[1];
-
-        match = url.match(/\/d\/([^\/]+)/);
-        if (match) return match[1];
-
-        return null;
-    }
-
-    /**
-     * Lấy tên file từ trang Google Drive
-     */
-    async extractFileName(page, fileId) {
-        const fileName = await page.evaluate(() => {
-            // Thử lấy từ title
-            const titleEl = document.querySelector('title');
-            if (titleEl) {
-                const title = titleEl.textContent;
-                // Title thường có dạng "filename.mp4 - Google Drive"
-                const match = title.match(/^(.+?)\s*-\s*Google Drive/);
-                if (match) return match[1].trim();
-            }
-
-            // Thử lấy từ meta tag
-            const metaTitle = document.querySelector('meta[property="og:title"]');
-            if (metaTitle) {
-                return metaTitle.getAttribute('content');
-            }
-
-            return null;
-        });
-
-        return fileName || `google-drive-${fileId}.mp4`;
-    }
-
-    /**
-     * Đợi file download hoàn tất
-     * @param {string} downloadPath - Thư mục download
-     */
-    async waitForDownloadWithCDP(downloadPath) {
-        const maxWait = 600000; // 10 phút cho file lớn
-        const startTime = Date.now();
-        let lastLogTime = 0;
-        let downloadStarted = false;
-        let crdownloadFileName = null; // Track tên file .crdownload để biết khi nào nó thành file thật
-
-        // Ghi nhận các file đã có sẵn trước khi download (CHỈ file không phải .crdownload/.part)
-        const existingFiles = new Set(
-            fs.readdirSync(downloadPath).filter(f =>
-                !f.endsWith('.crdownload') && !f.endsWith('.part')
-            )
-        );
-
-        console.log(`   📁 Existing files in download folder: ${existingFiles.size}`);
-
-        while (Date.now() - startTime < maxWait) {
-            const currentFiles = fs.readdirSync(downloadPath);
-            const now = Date.now();
-
-            // Kiểm tra file đang download (.crdownload hoặc .part)
-            const downloadingFiles = currentFiles.filter(f =>
-                f.endsWith('.crdownload') || f.endsWith('.part')
-            );
-
-            // Đánh dấu download đã bắt đầu nếu thấy file .crdownload
-            if (downloadingFiles.length > 0 && !downloadStarted) {
-                downloadStarted = true;
-                crdownloadFileName = downloadingFiles[0];
-                console.log(`   ✅ Phát hiện download bắt đầu: ${crdownloadFileName}`);
-            }
-
-            // Log tiến độ download mỗi 5 giây
-            if (downloadingFiles.length > 0 && (now - lastLogTime > 5000)) {
+        return new Promise((resolve, reject) => {
+            const interval = setInterval(() => {
                 try {
-                    const dlPath = path.join(downloadPath, downloadingFiles[0]);
-                    const dlStats = fs.statSync(dlPath);
-                    const elapsedSec = Math.round((now - startTime) / 1000);
-                    console.log(`   📥 Đang download: ${(dlStats.size / (1024 * 1024)).toFixed(2)} MB (${elapsedSec}s)`);
-                    lastLogTime = now;
-                } catch { /* ignore */ }
-            }
+                    const res = check();
+                    if (res) {
+                        clearInterval(interval);
+                        resolve(res);
+                    }
+                } catch (e) {
+                    clearInterval(interval);
+                    reject(e);
+                }
+            }, checkInterval);
+        });
+    }
 
-            // CÁCH 1: Tìm file video mới (không có trong existingFiles ban đầu)
-            const videoExtensions = ['.mp4', '.webm', '.mov', '.mkv', '.avi', '.m4v', '.flv', '.wmv'];
-            const videoFiles = currentFiles.filter(f => {
-                const hasVideoExt = videoExtensions.some(ext => f.toLowerCase().endsWith(ext));
-                const isNotDownloading = !f.endsWith('.crdownload') && !f.endsWith('.part');
-                const isNew = !existingFiles.has(f);
-                return hasVideoExt && isNotDownloading && isNew;
+    /**
+     * Trích xuất File ID từ URL Google Drive
+     * - Hỗ trợ nhiều định dạng URL khác nhau
+     * - Ví dụ: https://drive.google.com/file/d/FILE_ID/view?usp=sharing
+     */
+    extractFileId(driveUrl) {
+        const regex = /[\/]d\/([a-zA-Z0-9_-]+)/;
+        const match = driveUrl.match(regex);
+        return (match && match.length > 1) ? match[1] : null;
+    }
+
+    /**
+     * Tải file từ Google Drive bằng HTTP (cho public link)
+     * - Sử dụng confirm-token flow nếu cần
+     */
+    async downloadPublicDriveFile(fileId, downloadPath) {
+        try {
+            // Bước 1: Gửi yêu cầu lần đầu để lấy confirm token (nếu cần)
+            const initialResponse = await axios.get(`https://drive.google.com/uc?export=download&id=${fileId}`, {
+                maxRedirects: 0, // Không tự động chuyển hướng
+                validateStatus: (status) => status === 302 || status === 403 // Chỉ chấp nhận 302 (Found) hoặc 403 (Forbidden)
             });
 
-            // CÁCH 2: Nếu biết tên file .crdownload, kiểm tra xem file thật đã xuất hiện chưa
-            // VD: "video.mp4.crdownload" -> "video.mp4"
-            let expectedFileName = null;
-            if (crdownloadFileName) {
-                expectedFileName = crdownloadFileName
-                    .replace('.crdownload', '')
-                    .replace('.part', '');
+            // Kiểm tra xem có cần xác nhận không (302 Found với location là trang xác nhận)
+            if (initialResponse.status === 302 && initialResponse.headers.location && initialResponse.headers.location.includes('confirm=')) {
+                const confirmToken = initialResponse.headers.location.split('confirm=')[1].split('&')[0];
+                console.log(`   🔑 Phát hiện confirm token: ${confirmToken}`);
+
+                // Bước 2: Gửi yêu cầu lần hai với confirm token
+                const fileResponse = await axios.get(`https://drive.google.com/uc?export=download&id=${fileId}&confirm=${confirmToken}`, {
+                    responseType: 'stream'
+                });
+
+                // Lưu file về đĩa
+                const fileName = this.getFileNameFromResponseHeaders(fileResponse.headers) || `video_${fileId}.mp4`;
+                const filePath = path.join(downloadPath, fileName);
+                const writer = fs.createWriteStream(filePath);
+
+                fileResponse.data.pipe(writer);
+
+                return new Promise((resolve, reject) => {
+                    writer.on('finish', () => {
+                        console.log(`   ✅ Tải xong: ${fileName}`);
+                        resolve({ success: true, fileName, filePath });
+                    });
+                    writer.on('error', (err) => {
+                        console.error(`   ❌ Lỗi khi lưu file: ${err.message}`);
+                        reject({ success: false, message: err.message });
+                    });
+                });
+            } else if (initialResponse.status === 403) {
+                // Nếu nhận được 403 Forbidden, có thể là do link không công khai
+                throw new Error('Không thể tải file: Link Google Drive không công khai hoặc yêu cầu xác thực');
+            } else {
+                throw new Error(`Lỗi không xác định khi tải file: ${initialResponse.statusText}`);
             }
-
-            // Kiểm tra download hoàn tất
-            if (downloadingFiles.length === 0) {
-                // Ưu tiên 1: Kiểm tra file từ .crdownload đã rename
-                if (expectedFileName && currentFiles.includes(expectedFileName)) {
-                    const filePath = path.join(downloadPath, expectedFileName);
-                    try {
-                        const stats = fs.statSync(filePath);
-                        if (stats.size > 100000) {
-                            // Đợi 1 giây để đảm bảo file ổn định
-                            await new Promise(r => setTimeout(r, 1000));
-                            const stats2 = fs.statSync(filePath);
-
-                            if (stats.size === stats2.size) {
-                                console.log(`   ✅ File đã download hoàn tất (từ .crdownload): ${expectedFileName}`);
-                                return {
-                                    filePath: filePath,
-                                    fileName: expectedFileName,
-                                    sizeMB: (stats2.size / (1024 * 1024)).toFixed(2)
-                                };
-                            }
-                        }
-                    } catch { /* ignore */ }
-                }
-
-                // Ưu tiên 2: Kiểm tra file video mới
-                if (videoFiles.length > 0) {
-                    const fileName = videoFiles[0];
-                    const filePath = path.join(downloadPath, fileName);
-
-                    try {
-                        const stats = fs.statSync(filePath);
-                        if (stats.size > 100000) {
-                            await new Promise(r => setTimeout(r, 1000));
-                            const stats2 = fs.statSync(filePath);
-
-                            if (stats.size === stats2.size) {
-                                console.log(`   ✅ File đã download hoàn tất (video mới): ${fileName}`);
-                                return {
-                                    filePath: filePath,
-                                    fileName: fileName,
-                                    sizeMB: (stats2.size / (1024 * 1024)).toFixed(2)
-                                };
-                            }
-                        }
-                    } catch { /* ignore */ }
-                }
-
-                // Ưu tiên 3: Nếu downloadStarted và không còn .crdownload, tìm bất kỳ file mới nào
-                if (downloadStarted) {
-                    const newFiles = currentFiles.filter(f =>
-                        !existingFiles.has(f) &&
-                        !f.endsWith('.crdownload') &&
-                        !f.endsWith('.part')
-                    );
-
-                    if (newFiles.length > 0) {
-                        const fileName = newFiles[0];
-                        const filePath = path.join(downloadPath, fileName);
-
-                        try {
-                            const stats = fs.statSync(filePath);
-                            if (stats.size > 100000) {
-                                await new Promise(r => setTimeout(r, 1000));
-                                const stats2 = fs.statSync(filePath);
-
-                                if (stats.size === stats2.size) {
-                                    console.log(`   ✅ File đã download hoàn tất (file mới): ${fileName}`);
-                                    return {
-                                        filePath: filePath,
-                                        fileName: fileName,
-                                        sizeMB: (stats2.size / (1024 * 1024)).toFixed(2)
-                                    };
-                                }
-                            }
-                        } catch { /* ignore */ }
-                    }
-                }
-            }
-
-            await new Promise(r => setTimeout(r, 1000)); // Giảm từ 2s xuống 1s để detect nhanh hơn
+        } catch (error) {
+            console.error(`❌ Lỗi tải file từ Google Drive: ${error.message}`);
+            return { success: false, message: error.message };
         }
+    }
 
+    /**
+     * Lấy tên file từ response headers (nếu có)
+     */
+    getFileNameFromResponseHeaders(headers) {
+        const disposition = headers['content-disposition'] || headers['Content-Disposition'];
+        if (disposition) {
+            // Try RFC5987 / UTF-8'' style first
+            const rfc5987 = disposition.match(/filename\*=(?:UTF-8'')?([^;\n]+)/i);
+            if (rfc5987 && rfc5987[1]) {
+                let fname = rfc5987[1].trim();
+                fname = fname.replace(/^"|"$/g, '');
+                try { return decodeURIComponent(fname); } catch (e) { return fname; }
+            }
+
+            // Fallback to basic filename="..." or filename=...
+            const basic = disposition.match(/filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/i);
+            if (basic && basic[1]) {
+                let fname = basic[1].trim();
+                // remove optional surrounding quotes
+                if ((fname.startsWith('"') && fname.endsWith('"')) || (fname.startsWith("'") && fname.endsWith("'"))) {
+                    fname = fname.slice(1, -1);
+                }
+                try { return decodeURIComponent(fname); } catch (e) { return fname; }
+            }
+        }
         return null;
     }
 
     /**
-     * Đợi file download hoàn tất (fallback method)
+     * Lấy tiêu đề video từ trang preview của Google Drive
+     * - Thử nhiều cách để lấy tiêu đề chính xác
      */
-    async waitForDownload(downloadPath) {
-        const maxWait = 600000; // 10 phút cho file lớn
-        const startTime = Date.now();
-        let lastLogTime = 0;
-        let downloadStarted = false;
+    async extractFileName(page, fileId) {
+        // Các selector tiềm năng cho tên file
+        const selectors = [
+            'h1.title', // Tiêu đề chính (trang preview)
+            'div.uc-title', // Tiêu đề phụ (nếu có)
+            'div#doc-entity:has(iframe)' // Tiêu đề trong iframe (nếu có)
+        ];
 
-        // Ghi nhận các file đã có sẵn trước khi download
-        const existingFiles = new Set(fs.readdirSync(downloadPath));
-
-        console.log('   ⏳ Đang đợi download bắt đầu...');
-
-        while (Date.now() - startTime < maxWait) {
-            const currentFiles = fs.readdirSync(downloadPath);
-            const now = Date.now();
-
-            // Kiểm tra file đang download (.crdownload hoặc .part)
-            const downloadingFiles = currentFiles.filter(f =>
-                f.endsWith('.crdownload') || f.endsWith('.part')
-            );
-
-            if (downloadingFiles.length > 0 && !downloadStarted) {
-                downloadStarted = true;
-                console.log('   ✅ Download đã bắt đầu!');
-            }
-
-            // Log tiến độ download mỗi 5 giây
-            if (downloadingFiles.length > 0 && (now - lastLogTime > 5000)) {
-                try {
-                    const dlPath = path.join(downloadPath, downloadingFiles[0]);
-                    const dlStats = fs.statSync(dlPath);
-                    const elapsedSec = Math.round((now - startTime) / 1000);
-                    console.log(`   📥 Đang download: ${(dlStats.size / (1024 * 1024)).toFixed(2)} MB (${elapsedSec}s)`);
-                    lastLogTime = now;
-                } catch { /* ignore */ }
-            }
-
-            // Tìm file video mới (không phải file đang download)
-            const videoFiles = currentFiles.filter(f =>
-                (f.endsWith('.mp4') || f.endsWith('.webm') || f.endsWith('.mov') || f.endsWith('.mkv') || f.endsWith('.avi')) &&
-                !f.endsWith('.crdownload') && !f.endsWith('.part') &&
-                !existingFiles.has(f) // Chỉ xét file mới
-            );
-
-            for (const fileName of videoFiles) {
-                const filePath = path.join(downloadPath, fileName);
-
-                try {
-                    const stats = fs.statSync(filePath);
-
-                    // File phải có kích thước tối thiểu
-                    if (stats.size < 100000) continue;
-
-                    // Đợi 3 giây để chắc chắn file đã download xong
-                    console.log(`   🔍 Đang kiểm tra file: ${fileName} (${(stats.size / (1024 * 1024)).toFixed(2)} MB)`);
-                    await new Promise(r => setTimeout(r, 3000));
-
-                    const stats2 = fs.statSync(filePath);
-
-                    // Nếu size không đổi sau 3 giây = download xong
-                    if (stats.size === stats2.size) {
-                        // Đợi thêm 2 giây để chắc chắn file đã được ghi hoàn toàn
-                        await new Promise(r => setTimeout(r, 2000));
-
-                        const finalStats = fs.statSync(filePath);
-                        if (stats2.size === finalStats.size) {
-                            console.log(`   ✅ File đã download hoàn tất!`);
-                            return {
-                                filePath: filePath,
-                                fileName: fileName,
-                                sizeMB: (finalStats.size / (1024 * 1024)).toFixed(2)
-                            };
-                        }
-                    }
-                } catch (err) {
-                    // File có thể đang bị lock, tiếp tục đợi
+        // Thử lấy tên file từ các selector
+        for (const selector of selectors) {
+            try {
+                const titleElement = await page.$(selector);
+                if (titleElement) {
+                    let fileName = await page.evaluate(el => el.textContent.trim(), titleElement);
+                    fileName = fileName.replace(/\.[^/.]+$/, ''); // Xóa phần mở rộng nếu có
+                    return fileName;
                 }
-            }
-
-            // Nếu đã có file .crdownload nhưng giờ không còn, và có file video mới
-            // => download hoàn tất
-            if (downloadStarted && downloadingFiles.length === 0 && videoFiles.length > 0) {
-                const fileName = videoFiles[0];
-                const filePath = path.join(downloadPath, fileName);
-                const stats = fs.statSync(filePath);
-
-                if (stats.size > 100000) {
-                    // Đợi 2 giây để chắc chắn
-                    await new Promise(r => setTimeout(r, 2000));
-                    const finalStats = fs.statSync(filePath);
-
-                    if (stats.size === finalStats.size) {
-                        console.log(`   ✅ File đã download hoàn tất (from .crdownload)!`);
-                        return {
-                            filePath: filePath,
-                            fileName: fileName,
-                            sizeMB: (finalStats.size / (1024 * 1024)).toFixed(2)
-                        };
-                    }
-                }
-            }
-
-            await new Promise(r => setTimeout(r, 2000));
-        }
-
-        return null;
-    }
-
-    /**
-     * Trích xuất confirm-token từ nội dung phản hồi
-     */
-    extractConfirmToken(responseData) {
-        const html = responseData.toString();
-        const match = html.match(/confirm=([a-zA-Z0-9_-]+)/);
-        return match ? match[1] : null;
-    }
-
-    /**
-     * Lấy tên file từ response headers
-     */
-    getFileNameFromResponseHeaders(headers, fileId) {
-        // Kiểm tra header Content-Disposition để lấy tên file
-        const contentDisposition = headers['content-disposition'];
-        if (contentDisposition) {
-            const fileNameMatch = contentDisposition.match(/filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/);
-            if (fileNameMatch) {
-                return fileNameMatch[1].replace(/['"]/g, '').trim();
+            } catch (e) {
+                // ignore
             }
         }
 
-        // Nếu không có tên file trong header, dùng fileId làm tên tạm
-        return `downloaded-file-${fileId}.bin`;
+        // Nếu không tìm thấy, thử lấy từ URL của trang
+        try {
+            const urlFileName = fileId; // Mặc định là fileId
+            return urlFileName;
+        } catch (e) {
+            // ignore
+        }
+
+        return 'unknown_file';
     }
 }
 

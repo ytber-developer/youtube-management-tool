@@ -17,7 +17,17 @@ class GoogleAuthService {
       await page.waitForNavigation({ waitUntil: 'networkidle2', timeout: 60000 });
       
       await new Promise(r => setTimeout(r, 2000));
-      
+
+      // ── Handle "Verify it's you" / confirmidentifier ───────────────────────
+      // Google redirects here when the profile session expired but email is known.
+      // Easiest fix: navigate to the fresh sign-in URL to start login from scratch.
+      if (page.url().includes('confirmidentifier')) {
+        console.log('🔒 Detected "Verify it\'s you" page — re-navigating to fresh sign-in...');
+        await page.goto(targetUrl, { waitUntil: 'networkidle2', timeout: 60000 });
+        await new Promise(r => setTimeout(r, 2000));
+        console.log('   ✅ Re-navigated, continuing login from scratch...');
+      }
+
       // Check if on AccountChooser page first
       const currentUrl = page.url();
       if (currentUrl.includes('accountchooser') || currentUrl.includes('AccountChooser')) {

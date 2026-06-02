@@ -3,6 +3,23 @@ const path = require('path');
 const fs = require('fs');
 const axios = require('axios');
 const googleAuthService = require('./google.auth.service');
+const { AccountYoutube } = require('../models');
+
+/**
+ * Lấy password + twofa của account từ DB theo email
+ */
+async function _getCredentials(email) {
+    if (!email) return { password: null, twofa: null };
+    try {
+        const account = await AccountYoutube.findOne({ where: { email } });
+        return {
+            password: account?.password || null,
+            twofa: account?.twofa || account?.code_authenticators || null
+        };
+    } catch (e) {
+        return { password: null, twofa: null };
+    }
+}
 
 class GoogleDriveService {
 
@@ -56,33 +73,47 @@ class GoogleDriveService {
             browser = browserResult.browser;
             const page = browserResult.page;
 
-            // Kiểm tra trạng thái đăng nhập Drive cho cả trường hợp có hoặc không có profileEmail.
+            // Lấy credentials từ DB để login khi cần
+            const creds = profileEmail ? await _getCredentials(profileEmail) : { password: null, twofa: null };
+
+            /**
+             * Helper: thực hiện login đầy đủ (email + password + 2fa).
+             * Throw nếu không có password (không thể tự động login).
+             */
+            const doLogin = async () => {
+                if (!profileEmail) throw new Error('Không có profileEmail để thực hiện login');
+                if (!creds.password) throw new Error(`Không tìm thấy password trong DB cho account ${profileEmail}`);
+                await googleAuthService.login(page, profileEmail, creds.password, creds.twofa, 'https://drive.google.com');
+                await new Promise(r => setTimeout(r, 2000));
+            };
+
+            // Kiểm tra trạng thái đăng nhập Drive và login nếu cần (TRƯỚC khi mở file)
             try {
-                console.log(`   🔐 Kiểm tra trạng thái đăng nhập Google Drive (mở profile)...`);
+                console.log(`   🔐 Kiểm tra trạng thái đăng nhập Google Drive...`);
                 await page.goto('https://drive.google.com', { waitUntil: 'networkidle2', timeout: 30000 });
                 await new Promise(r => setTimeout(r, 1500));
 
                 const needsLogin = await page.evaluate(() => {
+                    const url = location.href || '';
+                    if (url.includes('accounts.google.com')) return true;
                     if (document.querySelector('input[type="email"]')) return true;
-                    if (document.querySelector('a[href*="ServiceLogin"], a[href*="accounts.google.com"]')) return true;
-                    if (Array.from(document.querySelectorAll('button, a')).some(el => (el.textContent || '').toLowerCase().includes('sign in'))) return true;
+                    if (document.querySelector('a[href*="ServiceLogin"]')) return true;
+                    if (Array.from(document.querySelectorAll('button, a')).some(el => (el.textContent || '').toLowerCase() === 'sign in')) return true;
                     return false;
                 });
 
                 if (needsLogin) {
-                    console.log('   🔐 Chưa đăng nhập Drive — thực hiện login (sử dụng stored account nếu có)');
-                    try {
-                        await googleAuthService.login(page, profileEmail);
-                        await new Promise(r => setTimeout(r, 1500));
-                        console.log('   ✅ Đã đăng nhập Drive (hoặc chọn account)');
-                    } catch (loginErr) {
-                        console.log(`   ⚠️ Lỗi khi đăng nhập Drive: ${loginErr.message}`);
-                        // Nếu login thất bại, chúng ta vẫn cố gắng tiếp tục — public HTTP fallback sẽ được thử sau khi browser flow thất bại.
-                    }
+                    console.log('   🔐 Chưa đăng nhập Drive — thực hiện login...');
+                    await doLogin(); // throw nếu thiếu password → rơi vào catch bên dưới
+                    console.log('   ✅ Đã đăng nhập Drive');
                 } else {
-                    console.log('   ✅ Đã đăng nhập Google Drive (session ok)');
+                    console.log('   ✅ Session Drive còn hạn');
                 }
             } catch (e) {
+                // Nếu doLogin throw vì thiếu password → không thể tiếp tục
+                if (e.message.includes('password') || e.message.includes('profileEmail')) {
+                    throw e;
+                }
                 console.log(`   ⚠️ Không thể kiểm tra/đăng nhập Drive: ${e.message}`);
             }
 
@@ -145,21 +176,14 @@ class GoogleDriveService {
                 });
 
                 if (needsAuth) {
-                    console.log(`   🔒 Preview opened but Google requires authentication/verification (attempt ${previewAttempts})`);
-                    if (profileEmail) {
-                        try {
-                            console.log(`   🔐 Thực hiện login cho ${profileEmail} để hoàn tất xác thực...`);
-                            await googleAuthService.login(page, profileEmail);
-                            await new Promise(r => setTimeout(r, 1500));
-                            console.log('   ✅ Đã cố gắng xác thực, thử lại preview...');
-                            continue; // retry preview
-                        } catch (loginErr) {
-                            console.log(`   ⚠️ Login/verify failed: ${loginErr.message}`);
-                            // If login failed, break and let normal flow handle error
-                            break;
-                        }
-                    } else {
-                        throw new Error('Google yêu cầu đăng nhập/xác thực nhưng không có profileEmail để thực hiện login');
+                    console.log(`   🔒 Drive preview yêu cầu xác thực (lần ${previewAttempts})`);
+                    try {
+                        console.log(`   🔐 Thực hiện login lại cho ${profileEmail}...`);
+                        await doLogin();
+                        console.log('   ✅ Login xong, thử lại preview...');
+                        continue;
+                    } catch (loginErr) {
+                        throw new Error(`Drive yêu cầu xác thực nhưng login thất bại: ${loginErr.message}`);
                     }
                 }
 

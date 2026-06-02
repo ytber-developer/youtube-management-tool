@@ -32,9 +32,12 @@ class GoogleDriveService {
 
     /**
      * Tải video từ Google Drive
-     * - Với public link (không có profileEmail): thử HTTP confirm-token flow trước, nếu fail mới mở browser
-     * - Với private link (có profileEmail): dùng browser với profile đã đăng nhập
-     * - Dùng CDP event để biết chính xác khi nào download hoàn tất, không cần polling dư thừa
+     *
+     * Flow:
+     *  1. Thử HTTP download trực tiếp (không cần browser / login) — đủ cho public file nhỏ.
+     *  2. Nếu Google trả về trang xác nhận virus-scan (file lớn) → parse confirm token rồi thử lại.
+     *  3. Nếu vẫn fail (private link, v.v.) và có profileEmail → mở browser với profile,
+     *     kiểm tra / thực hiện login nếu cần, rồi trigger download qua CDP.
      */
     async downloadFromDrive(driveUrl, downloadPath, options = {}) {
         const { profileEmail = null } = options;
@@ -47,12 +50,9 @@ class GoogleDriveService {
                 console.log('   ♻️ Giữ browser profile mở để tái sử dụng phiên đăng nhập');
                 return;
             }
-            try { if (client) await client.detach(); } catch (e) { /* ignore */ }
-            try {
-                await browser.close();
-                console.log('   ✅ Browser đã đóng');
-            } catch (e) {
-                try { browser.process()?.kill('SIGKILL'); } catch (_) { /* ignore */ }
+            try { if (client) await client.detach(); } catch (_) {}
+            try { await browser.close(); } catch (e) {
+                try { browser.process()?.kill('SIGKILL'); } catch (_) {}
             }
         };
 
@@ -67,312 +67,177 @@ class GoogleDriveService {
             if (!fileId) throw new Error('Không thể trích xuất File ID từ URL Google Drive');
             console.log(`   File ID: ${fileId}`);
 
-            // ALWAYS open browser/profile first so we can check Google Drive login and perform browser-based
-            // download reliably (supports private/long files and ensures session is valid).
-            const browserResult = await browserService.launchBrowser(false, profileEmail, 3, !!profileEmail);
+            // ── Bước 1: Thử HTTP download (không cần browser) ──────────────────
+            console.log('   ⚡ Thử HTTP download...');
+            const httpResult = await this._httpDownload(fileId, downloadPath);
+            if (httpResult) {
+                console.log(`   ✅ HTTP download thành công: ${httpResult.fileName}`);
+                const title = httpResult.fileName.replace(/\.[^/.]+$/, '');
+                return {
+                    success: true,
+                    message: 'Tải video từ Google Drive thành công (HTTP)',
+                    data: { originalUrl: driveUrl, title, description: title, filePath: httpResult.filePath, fileName: httpResult.fileName }
+                };
+            }
+
+            // ── Bước 2: Fallback — mở browser với profile ──────────────────────
+            if (!profileEmail) {
+                throw new Error('HTTP download thất bại và không có profileEmail để mở browser');
+            }
+
+            console.log('   🌐 HTTP thất bại — mở browser với profile...');
+            const browserResult = await browserService.launchBrowser(false, profileEmail, 3, true);
             browser = browserResult.browser;
             const page = browserResult.page;
 
-            // Lấy credentials từ DB để login khi cần
-            const creds = profileEmail ? await _getCredentials(profileEmail) : { password: null, twofa: null };
-
-            /**
-             * Helper: thực hiện login đầy đủ (email + password + 2fa).
-             * Throw nếu không có password (không thể tự động login).
-             */
+            // Lấy credentials để login nếu session hết hạn
+            const creds = await _getCredentials(profileEmail);
             const doLogin = async () => {
-                if (!profileEmail) throw new Error('Không có profileEmail để thực hiện login');
-                if (!creds.password) throw new Error(`Không tìm thấy password trong DB cho account ${profileEmail}`);
+                if (!creds.password) throw new Error(`Không có password trong DB cho ${profileEmail}`);
                 await googleAuthService.login(page, profileEmail, creds.password, creds.twofa, 'https://drive.google.com');
                 await new Promise(r => setTimeout(r, 2000));
             };
 
-            // Kiểm tra trạng thái đăng nhập Drive và login nếu cần (TRƯỚC khi mở file)
-            try {
-                console.log(`   🔐 Kiểm tra trạng thái đăng nhập Google Drive...`);
-                await page.goto('https://drive.google.com', { waitUntil: 'networkidle2', timeout: 30000 });
-                await new Promise(r => setTimeout(r, 1500));
-
-                const needsLogin = await page.evaluate(() => {
-                    const url = location.href || '';
-                    if (url.includes('accounts.google.com')) return true;
-                    if (document.querySelector('input[type="email"]')) return true;
-                    if (document.querySelector('a[href*="ServiceLogin"]')) return true;
-                    if (Array.from(document.querySelectorAll('button, a')).some(el => (el.textContent || '').toLowerCase() === 'sign in')) return true;
-                    return false;
-                });
-
-                if (needsLogin) {
-                    console.log('   🔐 Chưa đăng nhập Drive — thực hiện login...');
-                    await doLogin(); // throw nếu thiếu password → rơi vào catch bên dưới
-                    console.log('   ✅ Đã đăng nhập Drive');
-                } else {
-                    console.log('   ✅ Session Drive còn hạn');
-                }
-            } catch (e) {
-                // Nếu doLogin throw vì thiếu password → không thể tiếp tục
-                if (e.message.includes('password') || e.message.includes('profileEmail')) {
-                    throw e;
-                }
-                console.log(`   ⚠️ Không thể kiểm tra/đăng nhập Drive: ${e.message}`);
+            // Kiểm tra session Drive
+            console.log('   🔐 Kiểm tra session Drive...');
+            await page.goto('https://drive.google.com', { waitUntil: 'networkidle2', timeout: 30000 });
+            await new Promise(r => setTimeout(r, 1500));
+            const notLoggedIn = await page.evaluate(() => location.href.includes('accounts.google.com'));
+            if (notLoggedIn) {
+                console.log('   🔐 Session hết hạn — thực hiện login...');
+                await doLogin();
+                console.log('   ✅ Đã login');
+            } else {
+                console.log('   ✅ Session còn hạn');
             }
 
             // Cấu hình CDP download
             client = await page.target().createCDPSession();
-            await client.send('Browser.setDownloadBehavior', {
-                behavior: 'allow',
-                downloadPath: downloadPath,
-                eventsEnabled: true
-            });
+            await client.send('Browser.setDownloadBehavior', { behavior: 'allow', downloadPath, eventsEnabled: true });
 
-            // Track trạng thái download qua CDP — dùng Promise để resolve ngay khi xong
             let cdpDownloadDone = false;
             let cdpDownloadFailed = false;
-            let cdpResolve = null;
+            let cdpResolve;
             const cdpDonePromise = new Promise(resolve => { cdpResolve = resolve; });
+            let cdpFileName = null;
 
             client.on('Browser.downloadWillBegin', (event) => {
-                console.log(`   📥 CDP: Download bắt đầu — ${event.suggestedFilename}`);
+                cdpFileName = event.suggestedFilename;
+                console.log(`   📥 CDP: Download bắt đầu — ${cdpFileName}`);
             });
-
             client.on('Browser.downloadProgress', (event) => {
-                if (event.totalBytes > 0) {
+                if (event.totalBytes > 0 && event.receivedBytes > 0) {
                     const pct = Math.round((event.receivedBytes / event.totalBytes) * 100);
-                    if (pct % 25 === 0) {
-                        console.log(`   📥 ${pct}% (${(event.receivedBytes / 1024 / 1024).toFixed(1)} / ${(event.totalBytes / 1024 / 1024).toFixed(1)} MB)`);
-                    }
+                    if (pct % 25 === 0) console.log(`   📥 ${pct}% (${(event.receivedBytes/1024/1024).toFixed(1)} / ${(event.totalBytes/1024/1024).toFixed(1)} MB)`);
                 }
-                if (event.state === 'completed') {
-                    console.log('   ✅ CDP: Download hoàn tất!');
-                    cdpDownloadDone = true;
-                    cdpResolve && cdpResolve('completed');
-                } else if (event.state === 'canceled') {
-                    console.log('   ❌ CDP: Download bị hủy!');
-                    cdpDownloadFailed = true;
-                    cdpResolve && cdpResolve('canceled');
-                }
+                if (event.state === 'completed') { cdpDownloadDone = true; cdpResolve('completed'); }
+                else if (event.state === 'canceled') { cdpDownloadFailed = true; cdpResolve('canceled'); }
             });
 
-            // ── Bước 3: Lấy tên file từ trang preview ────────────────────────
+            // Mở preview, retry nếu gặp trang auth
             const previewUrl = `https://drive.google.com/file/d/${fileId}/view`;
-
-            // Try to open preview, but handle cases where Drive returns an accounts/verify page
-            let previewAttempts = 0;
-            let fileName = null;
-            while (previewAttempts < 3) {
-                previewAttempts++;
+            for (let attempt = 1; attempt <= 3; attempt++) {
                 await page.goto(previewUrl, { waitUntil: 'domcontentloaded', timeout: 30000 });
                 await new Promise(r => setTimeout(r, 2000));
-
-                // Detect if Google responded with a login/verify flow instead of the preview
                 const needsAuth = await page.evaluate(() => {
-                    const url = location.href || '';
-                    if (url.includes('accounts.google.com') || url.includes('/signin') || url.includes('/confirmidentifier') || url.includes('/challenge')) return true;
-                    if (document.querySelector('input[type="email"]')) return true;
-                    // Common verify headings
-                    const headings = Array.from(document.querySelectorAll('h1, h2, h3, div')).map(n => (n.textContent || '').toLowerCase());
-                    if (headings.some(t => t.includes("verify it's you") || t.includes('verify your identity') || t.includes('xác minh'))) return true;
-                    return false;
+                    const u = location.href;
+                    return u.includes('accounts.google.com') || u.includes('confirmidentifier') || u.includes('/challenge');
                 });
-
                 if (needsAuth) {
-                    console.log(`   🔒 Drive preview yêu cầu xác thực (lần ${previewAttempts})`);
-                    try {
-                        console.log(`   🔐 Thực hiện login lại cho ${profileEmail}...`);
-                        await doLogin();
-                        console.log('   ✅ Login xong, thử lại preview...');
-                        continue;
-                    } catch (loginErr) {
-                        throw new Error(`Drive yêu cầu xác thực nhưng login thất bại: ${loginErr.message}`);
-                    }
+                    if (attempt === 3) throw new Error('Drive vẫn yêu cầu xác thực sau 3 lần login');
+                    console.log(`   🔒 Trang auth (lần ${attempt}) — login lại...`);
+                    await doLogin();
+                } else {
+                    break;
                 }
-
-                // If we reach here, preview looks like a normal Drive preview — extract filename
-                try {
-                    fileName = await this.extractFileName(page, fileId);
-                } catch (e) {
-                    // ignore and let outer handler throw if needed
-                }
-
-                if (fileName) break;
             }
 
-            if (!fileName) {
-                // Final attempt to get title even if preview needed extra navigation
-                try { fileName = await this.extractFileName(page, fileId); } catch (e) { /* ignore */ }
-            }
-
-            console.log(`   Tên file: ${fileName}`);
-
-            // ── Bước 4: Trigger download (3 cách, dừng khi thành công) ────────
-            console.log('   Đang trigger download...');
-            let triggered = false;
-
-            // Cách 1: nút Download trực tiếp
-            triggered = await page.evaluate(() => {
+            // Trigger download
+            console.log('   🖱️ Trigger download...');
+            let triggered = await page.evaluate(() => {
                 const btn = document.querySelector('[aria-label="Download"], [data-tooltip="Download"], div[aria-label*="ownload"]');
                 if (btn) { btn.click(); return true; }
                 return false;
             });
-            if (triggered) console.log('   ✅ Trigger: nút Download trực tiếp');
 
-            // Cách 2: menu More actions → Download
             if (!triggered) {
-                await page.evaluate(() => {
-                    const menu = document.querySelector('[aria-label="More actions"], [data-tooltip="More actions"]');
-                    if (menu) menu.click();
-                });
+                // Menu More actions
+                await page.evaluate(() => { const m = document.querySelector('[aria-label="More actions"]'); if (m) m.click(); });
                 await new Promise(r => setTimeout(r, 1000));
                 triggered = await page.evaluate(() => {
-                    for (const item of document.querySelectorAll('[role="menuitem"], [role="option"]')) {
+                    for (const item of document.querySelectorAll('[role="menuitem"]')) {
                         if (item.textContent.toLowerCase().includes('download')) { item.click(); return true; }
                     }
                     return false;
                 });
-                if (triggered) console.log('   ✅ Trigger: menu → Download');
             }
 
-            // Cách 3: inject link click vào trang
             if (!triggered) {
+                // Direct URL
                 const directUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
                 try {
-                    await page.evaluate((url) => {
-                        const a = document.createElement('a');
-                        a.href = url; a.download = ''; a.style.display = 'none';
-                        document.body.appendChild(a); a.click(); document.body.removeChild(a);
-                    }, directUrl);
-                    triggered = true;
-                    console.log('   ✅ Trigger: inject link click');
-                } catch (e) {
-                    try {
-                        await page.goto(directUrl, { waitUntil: 'domcontentloaded', timeout: 15000 });
-                        triggered = true;
-                    } catch (navErr) {
-                        if (navErr.message && navErr.message.includes('ERR_ABORTED')) {
-                            triggered = true; // ERR_ABORTED = download đang bắt đầu
-                        }
-                    }
-                    if (triggered) console.log('   ✅ Trigger: navigate direct URL');
-                }
+                    await page.goto(directUrl, { waitUntil: 'domcontentloaded', timeout: 15000 });
+                } catch (e) { /* ERR_ABORTED = download started */ }
+                triggered = true;
             }
 
-            if (!triggered) throw new Error('Không thể trigger download — không tìm thấy nút download nào');
-
-            // ── Bước 5: Xử lý trang xác nhận file lớn (nếu có) ─────────────
-            // Google Drive có thể mở tab mới với trang "Download anyway"
+            // Handle "Download anyway" confirm page
             const handleConfirmPage = async (pg) => {
                 try {
                     const url = pg.url();
-                    if (!url.includes('drive.usercontent.google.com') && !url.includes('export=download')) return false;
-                    console.log(`   🔔 Trang xác nhận file lớn: ${url.substring(0, 80)}...`);
-                    // Cũng set download behavior cho tab mới
+                    if (!url.includes('drive.usercontent.google.com') && !url.includes('export=download')) return;
+                    console.log('   🔔 Trang xác nhận file lớn — click Download anyway...');
                     try {
                         const nc = await pg.target().createCDPSession();
                         await nc.send('Browser.setDownloadBehavior', { behavior: 'allow', downloadPath, eventsEnabled: true });
-                    } catch (e) { /* ignore */ }
-                    try { await pg.waitForSelector('#uc-download-link, input[type="submit"]', { timeout: 8000, visible: true }); } catch (e) { /* ignore */ }
-                    const clicked = await pg.evaluate(() => {
+                    } catch (_) {}
+                    try { await pg.waitForSelector('#uc-download-link, input[type="submit"]', { timeout: 8000, visible: true }); } catch (_) {}
+                    await pg.evaluate(() => {
                         const byId = document.querySelector('#uc-download-link');
-                        if (byId) { byId.click(); return 'by-id'; }
+                        if (byId) return byId.click();
                         for (const inp of document.querySelectorAll('input[type="submit"]')) {
-                            if ((inp.value || '').toLowerCase().includes('download')) { inp.click(); return 'by-input'; }
+                            if ((inp.value||'').toLowerCase().includes('download')) return inp.click();
                         }
-                        const btn = [...document.querySelectorAll('a, button')].find(el => (el.textContent || '').toLowerCase().includes('download anyway'));
-                        if (btn) { btn.click(); return 'by-text'; }
+                        const btn = [...document.querySelectorAll('a,button')].find(el => (el.textContent||'').toLowerCase().includes('download anyway'));
+                        if (btn) return btn.click();
                         const form = document.querySelector('form');
-                        if (form) { form.submit(); return 'by-form'; }
-                        return null;
+                        if (form) form.submit();
                     });
-                    if (clicked) { console.log(`   ✅ Click "Download anyway" (${clicked})`); return true; }
-                    return false;
-                } catch (e) {
-                    console.log(`   ⚠️ handleConfirmPage error: ${e.message}`);
-                    return false;
-                }
+                } catch (_) {}
             };
 
-            // Kiểm tra tab hiện tại trước
             await handleConfirmPage(page);
 
-            // Additionally: listen for same-tab navigations/responses that may show the "Download anyway" confirm page
-            // Some Drive flows reuse the same tab instead of opening a new target — detect those and handle them.
-            const sameTabHandler = async (frame) => {
-                try {
-                    const url = (typeof frame === 'string') ? frame : (frame && frame.url ? frame.url() : null);
-                    const pageUrl = (page && page.url) ? page.url() : null;
-                    if ((pageUrl && (pageUrl.includes('drive.usercontent.google.com') || pageUrl.includes('export=download'))) ||
-                        (url && (url.includes('drive.usercontent.google.com') || url.includes('export=download')))) {
-                        await handleConfirmPage(page);
-                    }
-                } catch (e) { /* ignore */ }
-            };
-
-            const respHandler = async (resp) => {
-                try {
-                    const rurl = resp.url();
-                    const headers = resp.headers ? resp.headers() : {};
-                    if (!rurl) return;
-                    if (rurl.includes('drive.usercontent.google.com') || rurl.includes('export=download') ||
-                        (headers && Object.keys(headers).some(h => h.toLowerCase() === 'content-disposition'))) {
-                        await handleConfirmPage(page);
-                    }
-                } catch (e) { /* ignore */ }
-            };
-
-            page.on('framenavigated', sameTabHandler);
-            page.on('response', respHandler);
-
-            // Lắng nghe tab mới (tối đa 10s)
             const tabWaitPromise = new Promise(resolve => {
                 const handler = async (target) => {
-                    try {
-                        const np = await target.page();
-                        if (!np) return;
-                        await new Promise(r => setTimeout(r, 1500));
-                        await handleConfirmPage(np);
-                    } catch (e) { /* ignore */ }
-                    browser.off('targetcreated', handler);
-                    resolve();
+                    try { const np = await target.page(); if (np) { await new Promise(r => setTimeout(r, 1500)); await handleConfirmPage(np); } } catch (_) {}
+                    browser.off('targetcreated', handler); resolve();
                 };
                 browser.on('targetcreated', handler);
                 setTimeout(() => { browser.off('targetcreated', handler); resolve(); }, 10000);
             });
 
-            // Đợi download hoàn tất qua CDP, tối đa 10 phút
             const MAX_WAIT_MS = 600000;
-
             await Promise.race([
                 cdpDonePromise,
                 new Promise((_, rej) => setTimeout(() => rej(new Error('Download timeout 10 phút')), MAX_WAIT_MS))
             ]);
-
             await tabWaitPromise;
-
-            // Remove same-tab listeners
-            try { page.off('framenavigated', sameTabHandler); } catch (e) { /* ignore */ }
-            try { page.off('response', respHandler); } catch (e) { /* ignore */ }
 
             if (cdpDownloadFailed) throw new Error('Download bị hủy bởi CDP');
 
-            // Lấy file đã tải xong
-            const downloadedFile = await this._getCompletedFile(downloadPath, MAX_WAIT_MS);
-            if (!downloadedFile) throw new Error('Không tìm thấy file hoàn tất sau khi download');
+            const downloadedFile = await this._getCompletedFile(downloadPath, 30000);
+            if (!downloadedFile) throw new Error('Không tìm thấy file hoàn tất sau download');
 
-            console.log(`✅ Tải thành công: ${downloadedFile.fileName} (${downloadedFile.sizeMB} MB)`);
-
+            console.log(`✅ Tải thành công: ${downloadedFile.fileName} (${downloadedFile.sizeMB.toFixed(1)} MB)`);
             await closeBrowser();
 
-            const title = fileName.replace(/\.[^/.]+$/, '');
+            const finalName = cdpFileName || downloadedFile.fileName;
+            const title = finalName.replace(/\.[^/.]+$/, '');
             return {
                 success: true,
                 message: 'Tải video từ Google Drive thành công',
-                data: {
-                    originalUrl: driveUrl,
-                    title,
-                    description: title,
-                    filePath: downloadedFile.filePath,
-                    fileName: downloadedFile.fileName
-                }
+                data: { originalUrl: driveUrl, title, description: title, filePath: downloadedFile.filePath, fileName: downloadedFile.fileName }
             };
 
         } catch (error) {
@@ -380,6 +245,81 @@ class GoogleDriveService {
             await closeBrowser();
             return { success: false, message: error.message };
         }
+    }
+
+    /**
+     * HTTP download trực tiếp (public file).
+     * Tự xử lý virus-scan confirm token.
+     * Returns { fileName, filePath } nếu thành công, null nếu fail.
+     * @private
+     */
+    async _httpDownload(fileId, downloadPath) {
+        const baseUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+        try {
+            // Lần 1: gửi request, follow redirect để lấy cookies + confirm token nếu có
+            const resp1 = await axios.get(baseUrl, {
+                headers: { 'User-Agent': 'Mozilla/5.0' },
+                maxRedirects: 5,
+                validateStatus: s => s < 500,
+                responseType: 'arraybuffer'
+            });
+
+            // Nếu content-type là HTML → có thể là trang confirm (virus scan)
+            const ct1 = (resp1.headers['content-type'] || '').toLowerCase();
+            if (ct1.includes('text/html')) {
+                // Parse confirm token từ HTML
+                const html = Buffer.from(resp1.data).toString('utf8');
+                const tokenMatch = html.match(/[?&]confirm=([0-9A-Za-z_\-]+)/);
+                const uuidMatch = html.match(/[?&]uuid=([0-9A-Za-z_\-]+)/);
+                if (!tokenMatch) {
+                    console.log('   ⚠️ HTTP: Google trả về HTML, không tìm thấy confirm token');
+                    return null;
+                }
+                const confirm = tokenMatch[1];
+                const uuid = uuidMatch ? uuidMatch[1] : '';
+                const confirmUrl = `https://drive.usercontent.google.com/download?id=${fileId}&export=download&confirm=${confirm}${uuid ? `&uuid=${uuid}` : ''}`;
+                console.log(`   🔑 HTTP: confirm token found, retry download...`);
+
+                const resp2 = await axios.get(confirmUrl, {
+                    headers: { 'User-Agent': 'Mozilla/5.0', Referer: baseUrl },
+                    maxRedirects: 5,
+                    responseType: 'stream',
+                    validateStatus: s => s < 500
+                });
+
+                const ct2 = (resp2.headers['content-type'] || '').toLowerCase();
+                if (ct2.includes('text/html')) {
+                    console.log('   ⚠️ HTTP: vẫn nhận HTML sau confirm → cần browser (private file)');
+                    return null;
+                }
+                return await this._saveStream(resp2, fileId, downloadPath);
+            }
+
+            // Content OK — lưu file
+            const contentDisposition = resp1.headers['content-disposition'] || '';
+            if (!contentDisposition && ct1.includes('text/html')) return null;
+            const fileName = this.getFileNameFromResponseHeaders(resp1.headers) || `video_${fileId}.mp4`;
+            const filePath = require('path').join(downloadPath, fileName);
+            fs.writeFileSync(filePath, Buffer.from(resp1.data));
+            console.log(`   ✅ HTTP: lưu file ${fileName}`);
+            return { fileName, filePath };
+
+        } catch (e) {
+            console.log(`   ⚠️ HTTP download lỗi: ${e.message}`);
+            return null;
+        }
+    }
+
+    /** Lưu stream vào disk, trả về { fileName, filePath } @private */
+    async _saveStream(response, fileId, downloadPath) {
+        const fileName = this.getFileNameFromResponseHeaders(response.headers) || `video_${fileId}.mp4`;
+        const filePath = require('path').join(downloadPath, fileName);
+        const writer = fs.createWriteStream(filePath);
+        response.data.pipe(writer);
+        return new Promise((resolve, reject) => {
+            writer.on('finish', () => resolve({ fileName, filePath }));
+            writer.on('error', reject);
+        });
     }
 
     /**

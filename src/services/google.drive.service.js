@@ -33,11 +33,11 @@ class GoogleDriveService {
     /**
      * Tải video từ Google Drive
      *
-     * Flow:
-     *  1. Thử HTTP download trực tiếp (không cần browser / login) — đủ cho public file nhỏ.
-     *  2. Nếu Google trả về trang xác nhận virus-scan (file lớn) → parse confirm token rồi thử lại.
-     *  3. Nếu vẫn fail (private link, v.v.) và có profileEmail → mở browser với profile,
-     *     kiểm tra / thực hiện login nếu cần, rồi trigger download qua CDP.
+     * Flow (luôn dùng browser):
+     *  1. Mở browser với profile của profileEmail.
+     *  2. Kiểm tra session Drive — login nếu cần.
+     *  3. Mở link Drive và trigger download qua CDP.
+     *  4. Validate file sau khi tải xong.
      */
     async downloadFromDrive(driveUrl, downloadPath, options = {}) {
         const { profileEmail = null } = options;
@@ -46,20 +46,19 @@ class GoogleDriveService {
 
         const closeBrowser = async () => {
             if (!browser) return;
-            if (profileEmail) {
-                console.log('   ♻️ Giữ browser profile mở để tái sử dụng phiên đăng nhập');
-                return;
-            }
             try { if (client) await client.detach(); } catch (_) {}
             try { await browser.close(); } catch (e) {
                 try { browser.process()?.kill('SIGKILL'); } catch (_) {}
             }
+            browser = null;
         };
 
         try {
             console.log(`\n📥 Tải video từ Google Drive`);
             console.log(`   URL: ${driveUrl}`);
-            if (profileEmail) console.log(`   👤 Profile: ${profileEmail}`);
+
+            if (!profileEmail) throw new Error('Cần cung cấp profileEmail để tải từ Google Drive');
+            console.log(`   👤 Profile: ${profileEmail}`);
 
             if (!fs.existsSync(downloadPath)) fs.mkdirSync(downloadPath, { recursive: true });
 
@@ -67,59 +66,42 @@ class GoogleDriveService {
             if (!fileId) throw new Error('Không thể trích xuất File ID từ URL Google Drive');
             console.log(`   File ID: ${fileId}`);
 
-            // ── Bước 1: Thử HTTP download (không cần browser) ──────────────────
-            console.log('   ⚡ Thử HTTP download...');
-            const httpResult = await this._httpDownload(fileId, downloadPath);
-            if (httpResult) {
-                console.log(`   ✅ HTTP download thành công: ${httpResult.fileName}`);
-                const title = httpResult.fileName.replace(/\.[^/.]+$/, '');
-                return {
-                    success: true,
-                    message: 'Tải video từ Google Drive thành công (HTTP)',
-                    data: { originalUrl: driveUrl, title, description: title, filePath: httpResult.filePath, fileName: httpResult.fileName }
-                };
-            }
-
-            // ── Bước 2: Fallback — mở browser với profile ──────────────────────
-            if (!profileEmail) {
-                throw new Error('HTTP download thất bại và không có profileEmail để mở browser');
-            }
-
-            console.log('   🌐 HTTP thất bại — mở browser với profile...');
+            // ── Bước 1: Mở browser với profile ─────────────────────────────────
+            console.log('   🌐 Mở browser với profile...');
             const browserResult = await browserService.launchBrowser(false, profileEmail, 3, true);
             browser = browserResult.browser;
             const page = browserResult.page;
 
-            // Lấy credentials để login nếu session hết hạn
+            // ── Bước 2: Lấy credentials & kiểm tra / thực hiện login ────────────
             const creds = await _getCredentials(profileEmail);
             const doLogin = async () => {
                 if (!creds.password) throw new Error(`Không có password trong DB cho ${profileEmail}`);
+                console.log('   🔐 Đang đăng nhập Google...');
                 await googleAuthService.login(page, profileEmail, creds.password, creds.twofa, 'https://drive.google.com');
                 await new Promise(r => setTimeout(r, 2000));
+                console.log('   ✅ Đăng nhập thành công');
             };
 
-            // Kiểm tra session Drive
-            console.log('   🔐 Kiểm tra session Drive...');
+            console.log('   🔐 Kiểm tra session Google Drive...');
             await page.goto('https://drive.google.com', { waitUntil: 'networkidle2', timeout: 30000 });
             await new Promise(r => setTimeout(r, 1500));
             const notLoggedIn = await page.evaluate(() => location.href.includes('accounts.google.com'));
             if (notLoggedIn) {
-                console.log('   🔐 Session hết hạn — thực hiện login...');
+                console.log('   ⚠️ Chưa đăng nhập — thực hiện login...');
                 await doLogin();
-                console.log('   ✅ Đã login');
             } else {
                 console.log('   ✅ Session còn hạn');
             }
 
-            // Cấu hình CDP download
+            // ── Bước 3: Cấu hình CDP download ───────────────────────────────────
             client = await page.target().createCDPSession();
             await client.send('Browser.setDownloadBehavior', { behavior: 'allow', downloadPath, eventsEnabled: true });
 
-            let cdpDownloadDone = false;
             let cdpDownloadFailed = false;
             let cdpResolve;
             const cdpDonePromise = new Promise(resolve => { cdpResolve = resolve; });
             let cdpFileName = null;
+            let lastPct = -1;
 
             client.on('Browser.downloadWillBegin', (event) => {
                 cdpFileName = event.suggestedFilename;
@@ -128,15 +110,19 @@ class GoogleDriveService {
             client.on('Browser.downloadProgress', (event) => {
                 if (event.totalBytes > 0 && event.receivedBytes > 0) {
                     const pct = Math.round((event.receivedBytes / event.totalBytes) * 100);
-                    if (pct % 25 === 0) console.log(`   📥 ${pct}% (${(event.receivedBytes/1024/1024).toFixed(1)} / ${(event.totalBytes/1024/1024).toFixed(1)} MB)`);
+                    if (pct % 10 === 0 && pct !== lastPct) {
+                        lastPct = pct;
+                        console.log(`   📥 ${pct}% (${(event.receivedBytes/1024/1024).toFixed(1)} / ${(event.totalBytes/1024/1024).toFixed(1)} MB)`);
+                    }
                 }
-                if (event.state === 'completed') { cdpDownloadDone = true; cdpResolve('completed'); }
+                if (event.state === 'completed') { cdpResolve('completed'); }
                 else if (event.state === 'canceled') { cdpDownloadFailed = true; cdpResolve('canceled'); }
             });
 
-            // Mở preview, retry nếu gặp trang auth
+            // ── Bước 4: Mở trang preview Drive, retry nếu gặp trang auth ────────
             const previewUrl = `https://drive.google.com/file/d/${fileId}/view`;
             for (let attempt = 1; attempt <= 3; attempt++) {
+                console.log(`   🔗 Mở trang Drive (lần ${attempt})...`);
                 await page.goto(previewUrl, { waitUntil: 'domcontentloaded', timeout: 30000 });
                 await new Promise(r => setTimeout(r, 2000));
                 const needsAuth = await page.evaluate(() => {
@@ -144,7 +130,7 @@ class GoogleDriveService {
                     return u.includes('accounts.google.com') || u.includes('confirmidentifier') || u.includes('/challenge');
                 });
                 if (needsAuth) {
-                    if (attempt === 3) throw new Error('Drive vẫn yêu cầu xác thực sau 3 lần login');
+                    if (attempt === 3) throw new Error('Drive vẫn yêu cầu xác thực sau 3 lần thử — kiểm tra lại tài khoản');
                     console.log(`   🔒 Trang auth (lần ${attempt}) — login lại...`);
                     await doLogin();
                 } else {
@@ -152,16 +138,18 @@ class GoogleDriveService {
                 }
             }
 
-            // Trigger download
+            // ── Bước 5: Trigger download ─────────────────────────────────────────
             console.log('   🖱️ Trigger download...');
+
+            // Thử nút Download trên toolbar
             let triggered = await page.evaluate(() => {
                 const btn = document.querySelector('[aria-label="Download"], [data-tooltip="Download"], div[aria-label*="ownload"]');
                 if (btn) { btn.click(); return true; }
                 return false;
             });
 
+            // Thử menu "More actions"
             if (!triggered) {
-                // Menu More actions
                 await page.evaluate(() => { const m = document.querySelector('[aria-label="More actions"]'); if (m) m.click(); });
                 await new Promise(r => setTimeout(r, 1000));
                 triggered = await page.evaluate(() => {
@@ -172,16 +160,17 @@ class GoogleDriveService {
                 });
             }
 
+            // Fallback: điều hướng thẳng đến URL tải xuống
             if (!triggered) {
-                // Direct URL
+                console.log('   ⚠️ Không tìm thấy nút Download — dùng URL trực tiếp...');
                 const directUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
                 try {
                     await page.goto(directUrl, { waitUntil: 'domcontentloaded', timeout: 15000 });
-                } catch (e) { /* ERR_ABORTED = download started */ }
+                } catch (e) { /* ERR_ABORTED = download đã bắt đầu */ }
                 triggered = true;
             }
 
-            // Handle "Download anyway" confirm page
+            // Xử lý trang xác nhận file lớn ("Download anyway")
             const handleConfirmPage = async (pg) => {
                 try {
                     const url = pg.url();
@@ -196,9 +185,9 @@ class GoogleDriveService {
                         const byId = document.querySelector('#uc-download-link');
                         if (byId) return byId.click();
                         for (const inp of document.querySelectorAll('input[type="submit"]')) {
-                            if ((inp.value||'').toLowerCase().includes('download')) return inp.click();
+                            if ((inp.value || '').toLowerCase().includes('download')) return inp.click();
                         }
-                        const btn = [...document.querySelectorAll('a,button')].find(el => (el.textContent||'').toLowerCase().includes('download anyway'));
+                        const btn = [...document.querySelectorAll('a,button')].find(el => (el.textContent || '').toLowerCase().includes('download anyway'));
                         if (btn) return btn.click();
                         const form = document.querySelector('form');
                         if (form) form.submit();
@@ -217,7 +206,8 @@ class GoogleDriveService {
                 setTimeout(() => { browser.off('targetcreated', handler); resolve(); }, 10000);
             });
 
-            const MAX_WAIT_MS = 600000;
+            // ── Bước 6: Chờ download hoàn tất ───────────────────────────────────
+            const MAX_WAIT_MS = 600000; // 10 phút
             await Promise.race([
                 cdpDonePromise,
                 new Promise((_, rej) => setTimeout(() => rej(new Error('Download timeout 10 phút')), MAX_WAIT_MS))
@@ -226,10 +216,16 @@ class GoogleDriveService {
 
             if (cdpDownloadFailed) throw new Error('Download bị hủy bởi CDP');
 
+            // ── Bước 7: Lấy file & validate ─────────────────────────────────────
             const downloadedFile = await this._getCompletedFile(downloadPath, 30000);
             if (!downloadedFile) throw new Error('Không tìm thấy file hoàn tất sau download');
 
-            console.log(`✅ Tải thành công: ${downloadedFile.fileName} (${downloadedFile.sizeMB.toFixed(1)} MB)`);
+            if (!this._isValidVideoFile(downloadedFile.filePath)) {
+                fs.unlinkSync(downloadedFile.filePath);
+                throw new Error('File tải về không hợp lệ (không phải video) — có thể là trang lỗi HTML');
+            }
+
+            console.log(`   ✅ Tải thành công: ${downloadedFile.fileName} (${downloadedFile.sizeMB.toFixed(1)} MB)`);
             await closeBrowser();
 
             const finalName = cdpFileName || downloadedFile.fileName;
@@ -297,6 +293,11 @@ class GoogleDriveService {
                 const fileName = this.getFileNameFromResponseHeaders(resp1.headers) || `video_${fileId}.mp4`;
                 const filePath = path.join(downloadPath, fileName);
                 fs.writeFileSync(filePath, Buffer.from(resp1.data));
+                if (!this._isValidVideoFile(filePath)) {
+                    fs.unlinkSync(filePath);
+                    console.log('   ⚠️ HTTP: file trực tiếp không hợp lệ → fallback');
+                    return null;
+                }
                 console.log(`   ✅ HTTP: lưu file trực tiếp ${fileName}`);
                 return { fileName, filePath };
             }
@@ -352,16 +353,54 @@ class GoogleDriveService {
         }
     }
 
+    /** Kiểm tra file có phải video hợp lệ không (dùng magic bytes) @private */
+    _isValidVideoFile(filePath) {
+        try {
+            const buf = Buffer.alloc(12);
+            const fd = fs.openSync(filePath, 'r');
+            fs.readSync(fd, buf, 0, 12, 0);
+            fs.closeSync(fd);
+
+            // MP4: ftyp tại offset 4 (isom, mp42, avc1, dash, ...)
+            const ftyp = buf.slice(4, 8).toString('ascii');
+            if (ftyp === 'ftyp') return true;
+
+            // MKV: starts with 0x1A 0x45 0xDF 0xA3
+            if (buf[0] === 0x1A && buf[1] === 0x45 && buf[2] === 0xDF && buf[3] === 0xA3) return true;
+
+            // WebM: cũng dùng MKV container
+            // RIFF/AVI: starts with RIFF
+            if (buf.slice(0, 4).toString('ascii') === 'RIFF') return true;
+
+            // HTML: starts with <!DO or <htm or \n<!
+            const start = buf.slice(0, 5).toString('ascii').toLowerCase();
+            if (start.includes('<!do') || start.includes('<html') || start.includes('<?xml')) return false;
+
+            // Nếu file đủ lớn (>100KB) thì có thể chấp nhận
+            const stats = fs.statSync(filePath);
+            return stats.size > 100 * 1024;
+        } catch (e) {
+            return false;
+        }
+    }
+
     /** Lưu stream vào disk, trả về { fileName, filePath } @private */
     async _saveStream(response, fileId, downloadPath) {
         const fileName = this.getFileNameFromResponseHeaders(response.headers) || `video_${fileId}.mp4`;
-        const filePath = require('path').join(downloadPath, fileName);
+        const filePath = path.join(downloadPath, fileName);
         const writer = fs.createWriteStream(filePath);
-        response.data.pipe(writer);
-        return new Promise((resolve, reject) => {
-            writer.on('finish', () => resolve({ fileName, filePath }));
+        await new Promise((resolve, reject) => {
+            response.data.pipe(writer);
+            writer.on('finish', resolve);
             writer.on('error', reject);
         });
+        // Validate: nếu file không phải video hợp lệ → xóa và báo lỗi
+        if (!this._isValidVideoFile(filePath)) {
+            fs.unlinkSync(filePath);
+            console.log('   ⚠️ HTTP: file tải về không phải video hợp lệ (có thể là HTML/error page)');
+            return null;
+        }
+        return { fileName, filePath };
     }
 
     /**

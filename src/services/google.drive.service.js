@@ -256,53 +256,95 @@ class GoogleDriveService {
     async _httpDownload(fileId, downloadPath) {
         const baseUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
         try {
-            // Lần 1: gửi request, follow redirect để lấy cookies + confirm token nếu có
+            // Lần 1: gửi request, KHÔNG follow redirect để bắt Location header
             const resp1 = await axios.get(baseUrl, {
-                headers: { 'User-Agent': 'Mozilla/5.0' },
-                maxRedirects: 5,
+                headers: {
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36'
+                },
+                maxRedirects: 0,
                 validateStatus: s => s < 500,
                 responseType: 'arraybuffer'
             });
 
-            // Nếu content-type là HTML → có thể là trang confirm (virus scan)
-            const ct1 = (resp1.headers['content-type'] || '').toLowerCase();
-            if (ct1.includes('text/html')) {
-                // Parse confirm token từ HTML
-                const html = Buffer.from(resp1.data).toString('utf8');
-                const tokenMatch = html.match(/[?&]confirm=([0-9A-Za-z_\-]+)/);
-                const uuidMatch = html.match(/[?&]uuid=([0-9A-Za-z_\-]+)/);
-                if (!tokenMatch) {
-                    console.log('   ⚠️ HTTP: Google trả về HTML, không tìm thấy confirm token');
-                    return null;
+            // Google redirect trực tiếp về file (public nhỏ)
+            if (resp1.status === 302 || resp1.status === 301) {
+                const location = resp1.headers['location'];
+                if (location && !location.includes('accounts.google.com') && !location.includes('/signin')) {
+                    console.log('   🔗 HTTP: redirect trực tiếp → tải file...');
+                    const cookies = (resp1.headers['set-cookie'] || []).join('; ');
+                    const resp2 = await axios.get(location, {
+                        headers: {
+                            'User-Agent': 'Mozilla/5.0',
+                            ...(cookies ? { Cookie: cookies } : {})
+                        },
+                        maxRedirects: 5,
+                        responseType: 'stream',
+                        validateStatus: s => s < 500
+                    });
+                    const ct2 = (resp2.headers['content-type'] || '').toLowerCase();
+                    if (ct2.includes('text/html')) return null;
+                    return await this._saveStream(resp2, fileId, downloadPath);
                 }
-                const confirm = tokenMatch[1];
-                const uuid = uuidMatch ? uuidMatch[1] : '';
-                const confirmUrl = `https://drive.usercontent.google.com/download?id=${fileId}&export=download&confirm=${confirm}${uuid ? `&uuid=${uuid}` : ''}`;
-                console.log(`   🔑 HTTP: confirm token found, retry download...`);
+                // Redirect về trang login → file private
+                console.log('   ⚠️ HTTP: redirect về trang login → cần browser');
+                return null;
+            }
 
+            const ct1 = (resp1.headers['content-type'] || '').toLowerCase();
+
+            // Google trả về file trực tiếp (public nhỏ, không cần confirm)
+            if (!ct1.includes('text/html')) {
+                const fileName = this.getFileNameFromResponseHeaders(resp1.headers) || `video_${fileId}.mp4`;
+                const filePath = path.join(downloadPath, fileName);
+                fs.writeFileSync(filePath, Buffer.from(resp1.data));
+                console.log(`   ✅ HTTP: lưu file trực tiếp ${fileName}`);
+                return { fileName, filePath };
+            }
+
+            // Google trả về HTML (virus-scan confirm page cho file lớn)
+            const html = Buffer.from(resp1.data).toString('utf8');
+            const cookies = (resp1.headers['set-cookie'] || []).join('; ');
+
+            // Format mới: drive.usercontent.google.com/download?id=...&confirm=...&uuid=...
+            const usercontent = html.match(/href="(https:\/\/drive\.usercontent\.google\.com\/download[^"]+)"/);
+            if (usercontent) {
+                const confirmUrl = usercontent[1].replace(/&amp;/g, '&');
+                console.log('   🔑 HTTP: tìm thấy usercontent URL, tải file...');
                 const resp2 = await axios.get(confirmUrl, {
-                    headers: { 'User-Agent': 'Mozilla/5.0', Referer: baseUrl },
+                    headers: { 'User-Agent': 'Mozilla/5.0', Referer: baseUrl, ...(cookies ? { Cookie: cookies } : {}) },
                     maxRedirects: 5,
                     responseType: 'stream',
                     validateStatus: s => s < 500
                 });
-
                 const ct2 = (resp2.headers['content-type'] || '').toLowerCase();
                 if (ct2.includes('text/html')) {
-                    console.log('   ⚠️ HTTP: vẫn nhận HTML sau confirm → cần browser (private file)');
+                    console.log('   ⚠️ HTTP: vẫn nhận HTML sau confirm → private file');
                     return null;
                 }
                 return await this._saveStream(resp2, fileId, downloadPath);
             }
 
-            // Content OK — lưu file
-            const contentDisposition = resp1.headers['content-disposition'] || '';
-            if (!contentDisposition && ct1.includes('text/html')) return null;
-            const fileName = this.getFileNameFromResponseHeaders(resp1.headers) || `video_${fileId}.mp4`;
-            const filePath = require('path').join(downloadPath, fileName);
-            fs.writeFileSync(filePath, Buffer.from(resp1.data));
-            console.log(`   ✅ HTTP: lưu file ${fileName}`);
-            return { fileName, filePath };
+            // Format cũ: ?confirm=TOKEN trong URL
+            const tokenMatch = html.match(/[?&]confirm=([0-9A-Za-z_\-]+)/);
+            const uuidMatch = html.match(/[?&]uuid=([0-9A-Za-z_\-]+)/);
+            if (tokenMatch) {
+                const confirm = tokenMatch[1];
+                const uuid = uuidMatch ? uuidMatch[1] : '';
+                const confirmUrl = `https://drive.usercontent.google.com/download?id=${fileId}&export=download&confirm=${confirm}${uuid ? `&uuid=${uuid}` : ''}`;
+                console.log('   🔑 HTTP: confirm token (format cũ), tải file...');
+                const resp2 = await axios.get(confirmUrl, {
+                    headers: { 'User-Agent': 'Mozilla/5.0', Referer: baseUrl, ...(cookies ? { Cookie: cookies } : {}) },
+                    maxRedirects: 5,
+                    responseType: 'stream',
+                    validateStatus: s => s < 500
+                });
+                const ct2 = (resp2.headers['content-type'] || '').toLowerCase();
+                if (ct2.includes('text/html')) return null;
+                return await this._saveStream(resp2, fileId, downloadPath);
+            }
+
+            console.log('   ⚠️ HTTP: không tìm thấy confirm URL trong HTML → cần browser');
+            return null;
 
         } catch (e) {
             console.log(`   ⚠️ HTTP download lỗi: ${e.message}`);

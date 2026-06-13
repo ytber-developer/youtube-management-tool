@@ -98,21 +98,25 @@ class GoogleAuthService {
       }
       
       // Check if email input is present (not already on password page)
-      const hasEmailInput = await page.$('input[type="email"]');
-      
+      // Google updated email field from type="email" to type="text" with id="identifierId"
+      const EMAIL_SELECTOR = '#identifierId, input[name="identifier"], input[type="email"]';
+      const hasEmailInput = await page.$(EMAIL_SELECTOR);
+
       if (hasEmailInput) {
         // Email
         console.log('📧 Nhập email...');
-        await page.waitForSelector('input[type="email"]', { timeout: 20000 });
+        await page.waitForSelector(EMAIL_SELECTOR, { timeout: 20000 });
         await new Promise(r => setTimeout(r, 1000));
-        
+
         // Clear and type email
-        await page.click('input[type="email"]');
+        await page.click(EMAIL_SELECTOR);
         await page.evaluate(() => {
-          const input = document.querySelector('input[type="email"]');
+          const input = document.querySelector('#identifierId') ||
+                        document.querySelector('input[name="identifier"]') ||
+                        document.querySelector('input[type="email"]');
           if (input) input.value = '';
         });
-        await page.type('input[type="email"]', email, { delay: 100 });
+        await page.type(EMAIL_SELECTOR, email, { delay: 100 });
         
         // Click Next button
         await new Promise(r => setTimeout(r, 1500));
@@ -483,8 +487,10 @@ class GoogleAuthService {
           (heading.textContent.toLowerCase().includes('choose') ||
            heading.textContent.toLowerCase().includes('chọn tài khoản'));
         
-        // Check for email input (new login)
-        const hasEmailInput = !!document.querySelector('input[type="email"]');
+        // Check for email input (new login) — Google now uses type="text" with id="identifierId"
+        const hasEmailInput = !!(document.querySelector('#identifierId') ||
+                                  document.querySelector('input[name="identifier"]') ||
+                                  document.querySelector('input[type="email"]'));
         
         // Check for account list (already have sessions)
         const accountList = document.querySelectorAll('[data-identifier]');

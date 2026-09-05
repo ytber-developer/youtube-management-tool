@@ -3,6 +3,112 @@
  */
 class YoutubeUploadPublishService {
   /**
+   * Xử lý dialog xác nhận của YouTube khi bấm Publish/Schedule lúc checks chưa xong.
+   *
+   * YouTube hiện dialog "We're still checking your content" với 2 nút:
+   *   - "Go back"        → huỷ, quay lại form (KHÔNG được click)
+   *   - "Publish anyway" → vẫn đăng (đây là nút cần click)
+   *
+   * Nếu không click, dialog đứng yên vô thời hạn, video không bao giờ được đăng.
+   *
+   * @param {object} page - Puppeteer page
+   * @returns {Promise<boolean>} true nếu đã tìm thấy và click nút xác nhận
+   */
+  async handleStillCheckingDialog(page) {
+    const result = await page.evaluate(() => {
+      // Chỉ click các nút mang nghĩa "vẫn tiếp tục". Tuyệt đối không khớp
+      // "Go back" / "Quay lại" / "Cancel" / "Huỷ".
+      const PROCEED_LABELS = [
+        'publish anyway', 'schedule anyway', 'save anyway', 'upload anyway', 'continue anyway',
+        'vẫn đăng', 'vẫn xuất bản', 'vẫn lên lịch', 'vẫn lưu', 'vẫn tiếp tục'
+      ];
+
+      // getClientRects() thay vì offsetParent: dialog của YouTube dùng
+      // position:fixed, mà offsetParent luôn null với position:fixed.
+      const isVisible = (el) => {
+        if (!el || !el.getClientRects) return false;
+        if (el.hasAttribute && el.hasAttribute('hidden')) return false;
+        if (el.getClientRects().length === 0) return false;
+        const st = window.getComputedStyle(el);
+        return st.visibility !== 'hidden' && st.display !== 'none' && st.opacity !== '0';
+      };
+
+      const norm = (s) => (s || '').toLowerCase().replace(/\s+/g, ' ').trim();
+
+      // Nhãn hiển thị (để log)
+      const labelOf = (el) => {
+        const aria = (el.getAttribute && el.getAttribute('aria-label')) || '';
+        return norm(aria || el.textContent);
+      };
+
+      // Khớp trên cả aria-label lẫn text: YouTube có nút chỉ có text,
+      // cũng có nút aria-label khác hẳn text hiển thị.
+      const matches = (el) => {
+        const aria = norm(el.getAttribute && el.getAttribute('aria-label'));
+        const text = norm(el.textContent);
+        return PROCEED_LABELS.some(p => aria.includes(p) || text.includes(p));
+      };
+
+      // Ưu tiên click <button> gốc bên trong custom element (ytcp-button/ytcp-button-shape)
+      const clickTarget = (el) => (el.tagName === 'BUTTON' ? el : (el.querySelector('button') || el));
+
+      const BUTTON_SELECTOR = 'button, ytcp-button, tp-yt-paper-button, ytcp-button-shape';
+
+      // 1) Tìm trong phạm vi dialog trước — an toàn nhất
+      const dialogs = Array.from(document.querySelectorAll(
+        'tp-yt-paper-dialog, ytcp-confirmation-dialog-renderer, ytcp-dialog'
+      )).filter(isVisible);
+
+      for (const dlg of dialogs) {
+        for (const btn of Array.from(dlg.querySelectorAll(BUTTON_SELECTOR))) {
+          if (!isVisible(btn) || !matches(btn)) continue;
+          const target = clickTarget(btn);
+          target.click();
+          return { clicked: true, label: labelOf(target), scope: 'dialog' };
+        }
+      }
+
+      // 2) Fallback: YouTube đổi tên element dialog. Quét toàn trang nhưng vẫn
+      //    chỉ khớp các nhãn "anyway" — chuỗi này không xuất hiện ở nút thường.
+      for (const btn of Array.from(document.querySelectorAll(BUTTON_SELECTOR))) {
+        if (!isVisible(btn) || !matches(btn)) continue;
+        const target = clickTarget(btn);
+        target.click();
+        return { clicked: true, label: labelOf(target), scope: 'document' };
+      }
+
+      return { clicked: false };
+    });
+
+    if (result.clicked) {
+      console.log(`⚠️  YouTube đang kiểm tra nội dung — đã click "${result.label}" (scope: ${result.scope})`);
+      return true;
+    }
+    return false;
+  }
+
+  /**
+   * Poll dialog "still checking" trong một khoảng thời gian ngắn.
+   * Dialog xuất hiện kèm animation nên không có ngay sau khi click Publish.
+   *
+   * @param {object} page - Puppeteer page
+   * @param {object} options - { timeout, interval }
+   * @returns {Promise<boolean>} true nếu đã xử lý được dialog
+   */
+  async waitAndHandleStillCheckingDialog(page, { timeout = 15000, interval = 1000 } = {}) {
+    const start = Date.now();
+    while (Date.now() - start < timeout) {
+      try {
+        if (await this.handleStillCheckingDialog(page)) return true;
+      } catch (e) {
+        // Page có thể đang navigate — bỏ qua và thử lại
+      }
+      await new Promise(r => setTimeout(r, interval));
+    }
+    return false;
+  }
+
+  /**
    * Schedule video và lấy URL (thay vì publish ngay)
    */
   async scheduleVideo(page) {
@@ -81,6 +187,9 @@ class YoutubeUploadPublishService {
 
     console.log('✅ Đã click Schedule');
 
+    // Cùng dialog "still checking" như luồng Publish (nút là "Schedule anyway")
+    await this.waitAndHandleStillCheckingDialog(page, { timeout: 15000 });
+
     // Đợi dialog xác nhận schedule
     console.log('⏳ Đang đợi xác nhận schedule...');
 
@@ -133,17 +242,16 @@ class YoutubeUploadPublishService {
   /**
    * Publish video và lấy URL
    */
-  async publishVideo(page) {
+  async publishVideo(page, { maxPublishWait = 30 * 60 * 1000, maxCloseWait = 600000, stillCheckingTimeout = 15000 } = {}) {
     // ─────────────────────────────────────────────────────────────
     // Chờ nút Publish xuất hiện và không bị disabled (tối đa 30 phút)
     // - Video ngắn: upload nhanh, không có %, nút Publish enable ngay
     // - Video dài:  có "Uploading X%", sau đó YouTube xử lý SD rồi mới enable
     // ─────────────────────────────────────────────────────────────
     console.log('⏳ Đang chờ nút Publish sẵn sàng...');
-    const maxWait = 30 * 60 * 1000; // 30 phút
     const waitStart = Date.now();
 
-    while (Date.now() - waitStart < maxWait) {
+    while (Date.now() - waitStart < maxPublishWait) {
       const status = await page.evaluate(() => {
         const txt = document.body.innerText || '';
 
@@ -241,17 +349,29 @@ class YoutubeUploadPublishService {
 
     console.log('✅ Đã click Publish');
 
+    // YouTube có thể chặn bằng dialog "We're still checking your content"
+    // khi checks chưa xong → phải click "Publish anyway", nếu không video
+    // không bao giờ được đăng và luồng dưới sẽ treo tới hết timeout.
+    await this.waitAndHandleStillCheckingDialog(page, { timeout: stillCheckingTimeout });
+
     // Post-publish: chờ cho đến khi thấy "Upload complete" hoặc "up to SD" thì click Close
     // - Đang upload:  "Uploading 76% ... 18 seconds left"  → chờ tiếp
     // - Upload xong:  "Upload complete ... Processing will begin shortly" → có thể đóng
     // - Đang SD:      "Processing up to SD ... 3 minutes left" → có thể đóng
     // Tối đa 600s
     console.log('⏳ Chờ sau khi Publish: đợi "Upload complete" hoặc "up to SD" trước khi đóng...');
-    const maxCloseWait = 600000; // 600 seconds
     const closeStart = Date.now();
     let closeClicked = false;
+    // Có bao giờ nhìn thấy dấu hiệu YouTube đã nhận video hay chưa.
+    // Dùng để phân biệt "publish xong nhưng không tìm thấy nút Close"
+    // với "publish không bao giờ xảy ra" (ví dụ bị dialog chặn).
+    let sawPublishSignal = false;
 
     while (Date.now() - closeStart < maxCloseWait) {
+      // Dialog "still checking" có thể xuất hiện muộn (hoặc lần thứ hai) —
+      // kiểm tra ở mỗi vòng để không đứng chờ vô ích.
+      await this.handleStillCheckingDialog(page).catch(() => false);
+
       const status = await page.evaluate(() => {
         const txt = (document.body && document.body.innerText) ? document.body.innerText : '';
 
@@ -280,12 +400,24 @@ class YoutubeUploadPublishService {
         return { isUploading, isUploadComplete, isProcessingSD, isProcessingDelayed, isVideoPublished, hasShareDialog, canClose, pct };
       });
 
+      if (status.canClose) sawPublishSignal = true;
+
       const elapsed = Math.floor((Date.now() - closeStart) / 1000);
       console.log(`   post-publish [${elapsed}s]: uploading=${status.isUploading}(${status.pct ?? '-'}%), uploadComplete=${status.isUploadComplete}, processingSD=${status.isProcessingSD}, processingDelayed=${status.isProcessingDelayed}, videoPublished=${status.isVideoPublished}, shareDialog=${status.hasShareDialog}, canClose=${status.canClose}`);
 
       if (status.canClose) {
         // Thử click Close
         closeClicked = await page.evaluate(() => {
+          // offsetParent LUÔN null với element position:fixed — mà dialog của
+          // YouTube Studio là fixed. Dùng getClientRects() để kiểm tra visible.
+          const isVisible = (el) => {
+            if (!el || !el.getClientRects) return false;
+            if (el.hasAttribute && el.hasAttribute('hidden')) return false;
+            if (el.getClientRects().length === 0) return false;
+            const st = window.getComputedStyle(el);
+            return st.visibility !== 'hidden' && st.display !== 'none' && st.opacity !== '0';
+          };
+
           const trySelectors = [
             // Button bên trong custom element #close-button (footer)
             '#close-button button',
@@ -299,14 +431,14 @@ class YoutubeUploadPublishService {
           for (const sel of trySelectors) {
             try {
               const btn = document.querySelector(sel);
-              if (btn && !btn.hasAttribute('disabled') && btn.offsetParent !== null) { btn.click(); return true; }
+              if (btn && !btn.hasAttribute('disabled') && isVisible(btn)) { btn.click(); return true; }
             } catch (e) { /* ignore */ }
           }
           // Fallback: tìm theo text
           const btns = Array.from(document.querySelectorAll('button'));
           for (const b of btns) {
-            const t = (b.innerText || '').trim().toLowerCase();
-            if ((t === 'close' || t === 'đóng') && !b.hasAttribute('disabled') && b.offsetParent !== null) {
+            const t = (b.innerText || b.textContent || '').trim().toLowerCase();
+            if ((t === 'close' || t === 'đóng') && !b.hasAttribute('disabled') && isVisible(b)) {
               b.click(); return true;
             }
           }
@@ -332,8 +464,21 @@ class YoutubeUploadPublishService {
       }
     }
 
+    // Không hề thấy dấu hiệu nào cho thấy video đã được nhận → publish đã thất bại.
+    // Trước đây hàm này vẫn trả success:true, khiến campaign bị đánh dấu
+    // "Upload thành công" dù video không bao giờ lên kênh.
+    if (!sawPublishSignal) {
+      const secs = Math.floor((Date.now() - closeStart) / 1000);
+      console.error(`❌ Sau ${secs}s không thấy dấu hiệu video được publish (upload complete / processing / share dialog)`);
+      return {
+        success: false,
+        videoUrl: null,
+        error: `Publish không được xác nhận sau ${secs}s — video có thể đang bị dialog xác nhận của YouTube chặn`
+      };
+    }
+
     if (!closeClicked) {
-      console.log('⚠️ Timeout 600s hoặc không tìm được nút Close — tiếp tục lấy URL');
+      console.log('⚠️ Không tìm được nút Close — video đã publish, tiếp tục lấy URL');
     }
 
     // Chờ thêm 1s để UI ổn định trước khi lấy URL
@@ -377,15 +522,22 @@ class YoutubeUploadPublishService {
       attempt++;
       
       videoUrl = await page.evaluate(() => {
+        // YouTube Studio hiển thị link chia sẻ dạng rút gọn https://youtu.be/<id>,
+        // không phải youtube.com/watch — phải nhận cả 2 dạng.
+        const isVideoUrl = (u) =>
+          /youtube\.com\/(watch|shorts)/.test(u || '') || /youtu\.be\/[\w-]{6,}/.test(u || '');
+        const cleanUrl = (u) =>
+          (u || '').split('?feature=')[0].split('&feature=')[0].split('?si=')[0].split('&si=')[0];
+
         // PHƯƠNG PHÁP 1: Tìm <a id="share-url"> - ƯU TIÊN CAO NHẤT
         const shareUrlLink = document.querySelector('#share-url') || 
                             document.querySelector('a#share-url');
         if (shareUrlLink && shareUrlLink.href) {
           // Extract clean YouTube URL
           const href = shareUrlLink.href;
-          if (href.includes('youtube.com/watch') || href.includes('youtube.com/shorts')) {
-            // Remove feature=share parameter nếu có
-            return href.split('?feature=')[0].split('&feature=')[0];
+          if (isVideoUrl(href)) {
+            // Remove feature=share / si= parameter nếu có
+            return cleanUrl(href);
           }
         }
 
@@ -393,10 +545,10 @@ class YoutubeUploadPublishService {
         const shareDialog = document.querySelector('ytcp-video-share-dialog');
         if (shareDialog) {
           // Tìm <a> tag với href chứa youtube.com
-          const linkEls = shareDialog.querySelectorAll('a[href*="youtube.com"]');
+          const linkEls = shareDialog.querySelectorAll('a[href*="youtube.com"], a[href*="youtu.be"]');
           for (const link of linkEls) {
-            if (link.href && (link.href.includes('/watch') || link.href.includes('/shorts'))) {
-              return link.href.split('?feature=')[0].split('&feature=')[0];
+            if (link.href && isVideoUrl(link.href)) {
+              return cleanUrl(link.href);
             }
           }
 
@@ -405,8 +557,8 @@ class YoutubeUploadPublishService {
             shareDialog.querySelector('input[readonly]') ||
             shareDialog.querySelector('tp-yt-paper-input input');
 
-          if (linkInput && linkInput.value && linkInput.value.includes('youtube.com')) {
-            return linkInput.value.split('?feature=')[0].split('&feature=')[0];
+          if (linkInput && linkInput.value && isVideoUrl(linkInput.value)) {
+            return cleanUrl(linkInput.value);
           }
         }
 
@@ -439,18 +591,19 @@ class YoutubeUploadPublishService {
         }
 
         // PHƯƠNG PHÁP 6: Tìm tất cả links chứa youtube.com/watch
-        const allLinks = document.querySelectorAll('a[href*="youtube.com/watch"], a[href*="youtube.com/shorts"]');
+        const allLinks = document.querySelectorAll(
+          'a[href*="youtube.com/watch"], a[href*="youtube.com/shorts"], a[href*="youtu.be/"]');
         for (const link of allLinks) {
-          if (link.href && link.href.match(/youtube\.com\/(watch|shorts)/)) {
-            return link.href.split('?feature=')[0].split('&feature=')[0];
+          if (link.href && isVideoUrl(link.href)) {
+            return cleanUrl(link.href);
           }
         }
 
         // PHƯƠNG PHÁP 7: Tìm trong toàn bộ page inputs
         const allInputs = document.querySelectorAll('input[readonly], input[type="text"]');
         for (const input of allInputs) {
-          if (input.value && input.value.includes('youtube.com/watch')) {
-            return input.value.split('?feature=')[0].split('&feature=')[0];
+          if (input.value && isVideoUrl(input.value)) {
+            return cleanUrl(input.value);
           }
         }
 
@@ -500,15 +653,19 @@ class YoutubeUploadPublishService {
         
         // Try to get URL from clipboard or input again
         videoUrl = await page.evaluate(() => {
+          const cleanUrl = (u) =>
+            (u || '').split('?feature=')[0].split('&feature=')[0].split('?si=')[0].split('&si=')[0];
+
           const shareUrlLink = document.querySelector('#share-url');
           if (shareUrlLink && shareUrlLink.href) {
-            return shareUrlLink.href.split('?feature=')[0].split('&feature=')[0];
+            return cleanUrl(shareUrlLink.href);
           }
-          
+
           const linkInput = document.querySelector('input[readonly]') ||
                            document.querySelector('input[type="text"]');
-          if (linkInput && linkInput.value && linkInput.value.includes('youtube.com')) {
-            return linkInput.value.split('?feature=')[0].split('&feature=')[0];
+          if (linkInput && linkInput.value &&
+              (linkInput.value.includes('youtube.com') || linkInput.value.includes('youtu.be'))) {
+            return cleanUrl(linkInput.value);
           }
           
           return null;

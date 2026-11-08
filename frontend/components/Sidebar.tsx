@@ -8,7 +8,8 @@ import {
   Video,
   Upload,
   FileText,
-  Settings
+  Settings,
+  Globe
 } from 'lucide-react'
 
 const navigation = [
@@ -17,6 +18,7 @@ const navigation = [
   { name: 'Check AdSense', href: '/check-adsense', icon: FileText },
   { name: 'Tăng lượt xem', href: '/boost-views', icon: PlayCircle },
   { name: 'Video đã tải', href: '/videos', icon: Video },
+  { name: 'Proxy', href: '/proxies', icon: Globe },
   { name: 'Setup & DB', href: '/setup', icon: Settings },
 ]
 

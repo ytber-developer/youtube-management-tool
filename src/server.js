@@ -55,8 +55,14 @@ const startServer = async () => {
   try {
     await sequelize.authenticate();
 
-    // Removed auto-sync to avoid "Too many keys" error
-    // Run migrations manually with: npm run migrate
+    // Removed auto-sync to avoid "Too many keys" error.
+    // Tự chạy migration còn thiếu (chỉ thêm bảng/cột) để model không truy vấn
+    // cột chưa tồn tại sau khi git pull mà quên `npm run migrate`.
+    const { runMigrations } = require('./services/migrate.service');
+    const migrateResult = await runMigrations();
+    if (migrateResult.migrated.length > 0) {
+      console.log(`🗄️  Đã chạy migration: ${migrateResult.migrated.join(', ')}`);
+    }
 
     // Dọn bản sao video YouTube Studio còn sót trong IndexedDB của mọi profile.
     // Chạy trước khi cron khởi động để chắc chắn chưa có browser nào đang mở.

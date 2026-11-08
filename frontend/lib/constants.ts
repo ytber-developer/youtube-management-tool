@@ -38,6 +38,16 @@ export const API_ENDPOINTS = {
     CAMPAIGN_STATUS: (id: number) => `/api/v1/upload/campaigns/${id}/status`,
     CAMPAIGN_VIDEO_DELETE: (campaignId: number, videoId: number) => `/api/v1/upload/campaigns/${campaignId}/videos/${videoId}`,
   },
+  PROXIES: {
+    LIST: '/api/v1/proxies',
+    CREATE: '/api/v1/proxies',
+    UPDATE: (id: number) => `/api/v1/proxies/${id}`,
+    DELETE: (id: number) => `/api/v1/proxies/${id}`,
+    CHECK: (id: number) => `/api/v1/proxies/${id}/check`,
+    CHECK_ALL: '/api/v1/proxies/check-all',
+    ASSIGN: '/api/v1/proxies/assign',
+    AUTO_ASSIGN: '/api/v1/proxies/auto-assign',
+  },
   AUTHENTICATOR: '/api/v1/authenticator',
   AUTHENTICATOR_RETRY: (id: number) => `/api/v1/authenticator/retry/${id}`,
   SETUP: {

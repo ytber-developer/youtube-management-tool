@@ -83,6 +83,10 @@ class YoutubeUploadService {
         console.log('♻️  Reused existing browser tab');
       }
 
+      // Dọn bản sao video cũ mà Studio giữ trong IndexedDB trước khi upload video mới.
+      // An toàn vì queue chỉ upload 1 video/lần; page.goto ngay sau sẽ reload Studio.
+      await browserService.clearStudioUploadStorage(page);
+
       // BƯỚC 2: Truy cập YouTube Studio và kiểm tra đăng nhập
       console.log('🎬 Đang truy cập YouTube Studio...');
       await page.goto('https://studio.youtube.com', {
@@ -142,11 +146,16 @@ class YoutubeUploadService {
 
       // BƯỚC 9: Publish video
       console.log('🚀 Đang publish video...');
-      const publishResult = await publishHelper.publishVideo(page);
-      
+      const publishResult = await publishHelper.publishVideo(page, {
+        uploadTimeoutMs: this._getUploadTimeoutMs(videoPath)
+      });
+
       if (!publishResult.success) {
         throw new Error(publishResult.error || 'Failed to publish video');
       }
+
+      // Upload đã hoàn tất → xoá bản sao video trong IndexedDB trước khi đóng/reuse browser
+      await browserService.clearStudioUploadStorage(page);
 
       const videoUrl = publishResult.videoUrl || 'Processing...';
       if (publishResult.videoUrl) {
@@ -225,6 +234,24 @@ class YoutubeUploadService {
     }
 
     return result;
+  }
+
+  /**
+   * Thời gian tối đa chờ upload xong sau khi bấm Publish, tính theo dung lượng file.
+   * Giả định tốc độ upload tối thiểu UPLOAD_MIN_SPEED_KBPS (mặc định 512 KB/s).
+   * Ví dụ 1 GB ≈ 34 phút. Tối thiểu 10 phút, tối đa 4 giờ.
+   */
+  _getUploadTimeoutMs(videoPath) {
+    const MIN_MS = 10 * 60 * 1000;
+    const MAX_MS = 4 * 60 * 60 * 1000;
+    try {
+      const sizeBytes = fs.statSync(videoPath).size;
+      const speedKBps = Number(process.env.UPLOAD_MIN_SPEED_KBPS) || 512;
+      const ms = (sizeBytes / (speedKBps * 1024)) * 1000;
+      return Math.min(MAX_MS, Math.max(MIN_MS, Math.ceil(ms)));
+    } catch (e) {
+      return MIN_MS;
+    }
   }
 
   /**

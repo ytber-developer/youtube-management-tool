@@ -75,6 +75,58 @@ class SessionService {
   }
 
   /**
+   * Xoá bản sao video mà YouTube Studio lưu trong IndexedDB của profile.
+   *
+   * Studio chép toàn bộ file video được chọn vào IndexedDB (để resume upload),
+   * và chỉ tự xoá khi upload xong mà tab vẫn còn mở. Nếu browser bị đóng/crash
+   * giữa chừng, các file blob (mỗi file = 1 video, hàng trăm MB) nằm lại mãi.
+   *
+   * CHỈ gọi khi Chrome của profile này KHÔNG chạy. Cookie đăng nhập nằm ở
+   * Default/Network/Cookies nên không bị ảnh hưởng.
+   *
+   * @param {string} email - Account email
+   * @returns {number} - Số bytes đã giải phóng
+   */
+  clearStudioUploadCache(email) {
+    const indexedDbDir = path.join(this.getProfilePath(email), 'Default', 'IndexedDB');
+    if (!fs.existsSync(indexedDbDir)) return 0;
+
+    let freed = 0;
+    const dirSize = (p) => {
+      let total = 0;
+      try {
+        for (const entry of fs.readdirSync(p, { withFileTypes: true })) {
+          const full = path.join(p, entry.name);
+          if (entry.isDirectory()) total += dirSize(full);
+          else { try { total += fs.statSync(full).size; } catch (e) { /* ignore */ } }
+        }
+      } catch (e) { /* ignore */ }
+      return total;
+    };
+
+    let entries = [];
+    try { entries = fs.readdirSync(indexedDbDir); } catch (e) { return 0; }
+
+    for (const name of entries) {
+      if (!name.startsWith('https_studio.youtube.com_')) continue;
+      const target = path.join(indexedDbDir, name);
+      const size = dirSize(target);
+      try {
+        fs.rmSync(target, { recursive: true, force: true });
+        freed += size;
+      } catch (err) {
+        // Windows: file đang bị khoá (Chrome còn chạy) → bỏ qua, lần sau dọn tiếp
+        console.warn(`⚠️ Không xoá được ${target}: ${err.message}`);
+      }
+    }
+
+    if (freed > 0) {
+      console.log(`🧹 Đã dọn cache upload YouTube Studio cho [${email}]: ${(freed / (1024 * 1024)).toFixed(1)} MB`);
+    }
+    return freed;
+  }
+
+  /**
    * List all profiles
    * @returns {Array<string>} - List of profile directory names
    */

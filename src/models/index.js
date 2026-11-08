@@ -4,6 +4,11 @@ const UploadedVideo = require('./UploadedVideo');
 const UploadCampaign = require('./UploadCampaign');
 const WatchCampaign = require('./WatchCampaign');
 const WatchTask = require('./WatchTask');
+const Proxy = require('./Proxy');
+
+// Proxy ↔ AccountYoutube (mỗi account gắn cố định 1 proxy)
+Proxy.hasMany(AccountYoutube, { foreignKey: 'proxy_id', as: 'accounts' });
+AccountYoutube.belongsTo(Proxy, { foreignKey: 'proxy_id', as: 'proxy', constraints: false });
 
 // AccountYoutube ↔ UploadedVideo
 AccountYoutube.hasMany(UploadedVideo, { foreignKey: 'account_youtube_id', as: 'videos' });
@@ -26,5 +31,6 @@ module.exports = {
   UploadedVideo,
   UploadCampaign,
   WatchCampaign,
-  WatchTask
+  WatchTask,
+  Proxy
 };

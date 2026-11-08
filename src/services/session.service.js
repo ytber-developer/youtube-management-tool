@@ -144,7 +144,7 @@ class SessionService {
       }
     }
 
-    if (freed > 0) {
+    if (freed >= 1024 * 1024) {
       console.log(`🧹 Đã dọn cache upload YouTube Studio cho [${label}]: ${(freed / (1024 * 1024)).toFixed(1)} MB`);
     }
     return freed;

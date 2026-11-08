@@ -133,7 +133,7 @@ class YoutubeUploadPublishService {
   /**
    * Publish video và lấy URL
    */
-  async publishVideo(page) {
+  async publishVideo(page, options = {}) {
     // ─────────────────────────────────────────────────────────────
     // Chờ nút Publish xuất hiện và không bị disabled (tối đa 30 phút)
     // - Video ngắn: upload nhanh, không có %, nút Publish enable ngay
@@ -245,11 +245,12 @@ class YoutubeUploadPublishService {
     // - Đang upload:  "Uploading 76% ... 18 seconds left"  → chờ tiếp
     // - Upload xong:  "Upload complete ... Processing will begin shortly" → có thể đóng
     // - Đang SD:      "Processing up to SD ... 3 minutes left" → có thể đóng
-    // Tối đa 600s
-    console.log('⏳ Chờ sau khi Publish: đợi "Upload complete" hoặc "up to SD" trước khi đóng...');
-    const maxCloseWait = 600000; // 600 seconds
+    // Thời gian chờ tính theo dung lượng file (options.uploadTimeoutMs), mặc định 600s
+    const maxCloseWait = options.uploadTimeoutMs || 600000;
+    console.log(`⏳ Chờ sau khi Publish: đợi "Upload complete" hoặc "up to SD" trước khi đóng (tối đa ${Math.round(maxCloseWait / 1000)}s)...`);
     const closeStart = Date.now();
     let closeClicked = false;
+    let lastStatus = null;
 
     while (Date.now() - closeStart < maxCloseWait) {
       const status = await page.evaluate(() => {
@@ -280,6 +281,7 @@ class YoutubeUploadPublishService {
         return { isUploading, isUploadComplete, isProcessingSD, isProcessingDelayed, isVideoPublished, hasShareDialog, canClose, pct };
       });
 
+      lastStatus = status;
       const elapsed = Math.floor((Date.now() - closeStart) / 1000);
       console.log(`   post-publish [${elapsed}s]: uploading=${status.isUploading}(${status.pct ?? '-'}%), uploadComplete=${status.isUploadComplete}, processingSD=${status.isProcessingSD}, processingDelayed=${status.isProcessingDelayed}, videoPublished=${status.isVideoPublished}, shareDialog=${status.hasShareDialog}, canClose=${status.canClose}`);
 
@@ -333,7 +335,14 @@ class YoutubeUploadPublishService {
     }
 
     if (!closeClicked) {
-      console.log('⚠️ Timeout 600s hoặc không tìm được nút Close — tiếp tục lấy URL');
+      // Hết giờ mà vẫn đang "Uploading X%" → upload CHƯA xong. Không được báo thành công,
+      // vì đóng browser lúc này sẽ huỷ upload (video trên YouTube bị lỗi).
+      if (lastStatus && lastStatus.isUploading) {
+        const msg = `Upload chưa hoàn tất sau ${Math.round(maxCloseWait / 1000)}s (đang ở ${lastStatus.pct ?? '?'}%)`;
+        console.error(`❌ ${msg}`);
+        return { success: false, error: msg };
+      }
+      console.log(`⚠️ Timeout ${Math.round(maxCloseWait / 1000)}s hoặc không tìm được nút Close — tiếp tục lấy URL`);
     }
 
     // Chờ thêm 1s để UI ổn định trước khi lấy URL

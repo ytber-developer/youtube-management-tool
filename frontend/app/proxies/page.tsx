@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
-  Globe, Plus, ListPlus, RefreshCw, Loader2, Pencil, Trash2, Zap, X, Wand2, CheckCircle, XCircle, HelpCircle,
+  Globe, Plus, ListPlus, RefreshCw, Loader2, Pencil, Trash2, Zap, X, Wand2, CheckCircle, XCircle, HelpCircle, Search,
 } from 'lucide-react';
 import { accountsAPI, proxyAPI, Account, ProxyItem, ProxyProtocol } from '@/lib/api';
 
@@ -43,6 +43,8 @@ export default function ProxiesPage() {
 
   // Gán proxy
   const [search, setSearch] = useState('');
+  // all | with | without | active | dead | unknown | p:<proxyId>
+  const [proxyFilter, setProxyFilter] = useState('all');
   const [selected, setSelected] = useState<Set<number>>(new Set());
   const [bulkProxyId, setBulkProxyId] = useState<string>('');
   const [maxPerProxy, setMaxPerProxy] = useState(1);
@@ -112,8 +114,46 @@ export default function ProxiesPage() {
   const proxyById = useMemo(() => new Map(proxies.map(p => [p.id, p])), [proxies]);
   const filteredAccounts = useMemo(() => {
     const q = search.trim().toLowerCase();
-    return q ? accounts.filter(a => a.email.toLowerCase().includes(q) || (a.channelName || '').toLowerCase().includes(q)) : accounts;
-  }, [accounts, search]);
+    return accounts.filter(a => {
+      const p = a.proxyId ? proxyById.get(a.proxyId) : undefined;
+
+      // Lọc theo proxy
+      if (proxyFilter === 'with' && !p) return false;
+      if (proxyFilter === 'without' && p) return false;
+      if (['active', 'dead', 'unknown'].includes(proxyFilter) && (!p || p.status !== proxyFilter)) return false;
+      if (proxyFilter.startsWith('p:') && a.proxyId !== Number(proxyFilter.slice(2))) return false;
+
+      // Tìm theo email, tên kênh, hoặc thông tin proxy đang gắn (host, IP, ghi chú)
+      if (!q) return true;
+      const haystack = [
+        a.email, a.channelName,
+        p?.host, p ? `${p.host}:${p.port}` : '', p?.lastIp, p?.label, p?.country,
+      ].filter(Boolean).join(' ').toLowerCase();
+      return haystack.includes(q);
+    });
+  }, [accounts, search, proxyFilter, proxyById]);
+
+  const filterCounts = useMemo(() => {
+    const status = (a: Account) => (a.proxyId ? proxyById.get(a.proxyId)?.status : undefined);
+    return {
+      all: accounts.length,
+      with: accounts.filter(a => a.proxyId && proxyById.has(a.proxyId)).length,
+      without: accounts.filter(a => !a.proxyId || !proxyById.has(a.proxyId)).length,
+      active: accounts.filter(a => status(a) === 'active').length,
+      dead: accounts.filter(a => status(a) === 'dead').length,
+      unknown: accounts.filter(a => status(a) === 'unknown').length,
+    };
+  }, [accounts, proxyById]);
+
+  const isFiltering = !!search.trim() || proxyFilter !== 'all';
+  const clearFilters = () => { setSearch(''); setProxyFilter('all'); };
+
+  // Bấm "N account" ở bảng proxy → lọc danh sách account theo proxy đó
+  const showAccountsOfProxy = (proxyId: number) => {
+    setSearch('');
+    setProxyFilter(`p:${proxyId}`);
+    document.getElementById('assign-section')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   const toggle = (id: number) => setSelected(prev => {
     const next = new Set(prev);
@@ -300,9 +340,13 @@ export default function ProxiesPage() {
                     </td>
                     <td className="px-4 py-2">
                       {p.accounts.length === 0 ? <span className="text-gray-400">—</span> : (
-                        <span title={p.accounts.map(a => a.email).join('\n')} className={p.accounts.length > 1 ? 'text-amber-700' : ''}>
+                        <button
+                          onClick={() => showAccountsOfProxy(p.id)}
+                          title={`Xem các account dùng proxy này:\n${p.accounts.map(a => a.email).join('\n')}`}
+                          className={`underline decoration-dotted hover:text-blue-600 ${p.accounts.length > 1 ? 'text-amber-700' : ''}`}
+                        >
                           {p.accounts.length} account
-                        </span>
+                        </button>
                       )}
                     </td>
                     <td className="px-4 py-2">
@@ -340,7 +384,7 @@ export default function ProxiesPage() {
       </div>
 
       {/* Gán proxy cho account */}
-      <div className="bg-white rounded-lg shadow-sm border overflow-hidden">
+      <div id="assign-section" className="bg-white rounded-lg shadow-sm border overflow-hidden scroll-mt-4">
         <div className="px-5 py-3 border-b flex flex-wrap items-center justify-between gap-3">
           <h2 className="font-semibold">Gán proxy cho account <span className="text-gray-500 font-normal text-sm">({assignedCount}/{accounts.length} đã có proxy)</span></h2>
           <div className="flex items-center gap-2 text-sm">
@@ -357,8 +401,56 @@ export default function ProxiesPage() {
           </div>
         </div>
 
+        {/* Tìm kiếm + lọc */}
+        <div className="px-5 py-3 border-b flex flex-wrap items-center gap-2">
+          <div className="relative">
+            <Search className="w-4 h-4 text-gray-400 absolute left-2.5 top-1/2 -translate-y-1/2" />
+            <input
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              placeholder="Tìm email, tên kênh, host/IP proxy..."
+              className="border rounded pl-8 pr-3 py-1.5 text-sm w-72"
+            />
+          </div>
+          <div className="flex flex-wrap gap-1">
+            {([
+              ['all', 'Tất cả'],
+              ['with', 'Đã có proxy'],
+              ['without', 'Chưa có proxy'],
+              ['active', 'Proxy hoạt động'],
+              ['dead', 'Proxy lỗi'],
+              ['unknown', 'Proxy chưa kiểm tra'],
+            ] as const).map(([key, label]) => (
+              <button
+                key={key}
+                onClick={() => setProxyFilter(key)}
+                className={`px-2.5 py-1 rounded-full text-xs border transition-colors ${
+                  proxyFilter === key
+                    ? key === 'dead' ? 'bg-red-600 border-red-600 text-white' : 'bg-blue-600 border-blue-600 text-white'
+                    : 'bg-white text-gray-700 hover:bg-gray-50'
+                }`}
+              >
+                {label} <span className="opacity-75">({filterCounts[key]})</span>
+              </button>
+            ))}
+          </div>
+          <select
+            value={proxyFilter.startsWith('p:') ? proxyFilter : ''}
+            onChange={e => setProxyFilter(e.target.value || 'all')}
+            className="border rounded px-2 py-1 text-xs"
+          >
+            <option value="">Lọc theo 1 proxy…</option>
+            {proxies.map(p => <option key={p.id} value={`p:${p.id}`}>{proxyOptionLabel(p)}</option>)}
+          </select>
+          {isFiltering && (
+            <button onClick={clearFilters} className="inline-flex items-center gap-1 text-xs text-gray-600 hover:text-gray-900">
+              <X className="w-3.5 h-3.5" />Xoá lọc
+            </button>
+          )}
+          <span className="ml-auto text-xs text-gray-500">Hiển thị {filteredAccounts.length}/{accounts.length} account</span>
+        </div>
+
         <div className="px-5 py-3 border-b flex flex-wrap items-center gap-3 bg-gray-50">
-          <input value={search} onChange={e => setSearch(e.target.value)} placeholder="Tìm email / tên kênh..." className="border rounded px-3 py-1.5 text-sm w-64" />
           <span className="text-sm text-gray-600">Đã chọn {selected.size}</span>
           <select value={bulkProxyId} onChange={e => setBulkProxyId(e.target.value)} className="border rounded px-2 py-1.5 text-sm">
             <option value="">— Chọn proxy —</option>
@@ -380,6 +472,11 @@ export default function ProxiesPage() {
 
         {accounts.length === 0 ? (
           <div className="p-8 text-center text-sm text-gray-500">Chưa có account nào.</div>
+        ) : filteredAccounts.length === 0 ? (
+          <div className="p-8 text-center text-sm text-gray-500">
+            Không có account nào khớp bộ lọc.{' '}
+            <button onClick={clearFilters} className="text-blue-600 hover:underline">Xoá lọc</button>
+          </div>
         ) : (
           <div className="overflow-x-auto max-h-[600px]">
             <table className="min-w-full text-sm">

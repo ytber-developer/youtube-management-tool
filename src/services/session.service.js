@@ -88,7 +88,31 @@ class SessionService {
    * @returns {number} - Số bytes đã giải phóng
    */
   clearStudioUploadCache(email) {
-    const indexedDbDir = path.join(this.getProfilePath(email), 'Default', 'IndexedDB');
+    return this._clearStudioUploadCacheAt(this.getProfilePath(email), email);
+  }
+
+  /**
+   * Dọn cache upload YouTube Studio cho TẤT CẢ profile trong browser-profiles/.
+   * Gọi lúc khởi động server, trước khi cron mở browser nào.
+   * @returns {number} - Tổng số bytes đã giải phóng
+   */
+  clearAllStudioUploadCaches() {
+    let total = 0;
+    for (const name of this.listProfiles()) {
+      const profilePath = path.join(this.profilesDir, name);
+      try {
+        if (!fs.statSync(profilePath).isDirectory()) continue;
+        total += this._clearStudioUploadCacheAt(profilePath, name);
+      } catch (e) {
+        console.warn(`⚠️ Bỏ qua profile ${name}: ${e.message}`);
+      }
+    }
+    console.log(`🧹 Dọn cache upload YouTube Studio khi khởi động: giải phóng ${(total / (1024 * 1024)).toFixed(1)} MB`);
+    return total;
+  }
+
+  _clearStudioUploadCacheAt(profilePath, label) {
+    const indexedDbDir = path.join(profilePath, 'Default', 'IndexedDB');
     if (!fs.existsSync(indexedDbDir)) return 0;
 
     let freed = 0;
@@ -121,7 +145,7 @@ class SessionService {
     }
 
     if (freed > 0) {
-      console.log(`🧹 Đã dọn cache upload YouTube Studio cho [${email}]: ${(freed / (1024 * 1024)).toFixed(1)} MB`);
+      console.log(`🧹 Đã dọn cache upload YouTube Studio cho [${label}]: ${(freed / (1024 * 1024)).toFixed(1)} MB`);
     }
     return freed;
   }

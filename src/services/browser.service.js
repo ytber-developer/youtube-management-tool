@@ -1,6 +1,7 @@
 const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 const sessionService = require('./session.service');
+const proxyService = require('./proxy.service');
 
 // Suppress TargetCloseError spam from puppeteer-extra-plugin-stealth.
 // This happens when stealth tries to inject scripts into short-lived tabs/popups
@@ -71,8 +72,32 @@ class BrowserService {
    */
   async launchBrowser(headless = null, email = null, retries = 3, reuseIfOpen = true) {
     // Check if browser already open for this email and should reuse
+    // Proxy cố định của account (null = không dùng proxy)
+    let proxyRecord = null;
+    if (email) {
+      try {
+        proxyRecord = await proxyService.getProxyForEmail(email);
+      } catch (e) {
+        // Bảng proxies chưa có (chưa chạy migration) → chạy như không có proxy
+        console.warn('⚠️ Không đọc được proxy của account:', e.message);
+      }
+    }
+    const wantedProxyId = proxyRecord ? proxyRecord.id : null;
+
     if (reuseIfOpen && email) {
-      const isActive = await this.isBrowserActive(email);
+      let isActive = await this.isBrowserActive(email);
+
+      // Proxy của account đã đổi so với browser đang mở → phải mở lại browser,
+      // vì --proxy-server chỉ áp dụng lúc khởi động Chrome.
+      if (isActive) {
+        const currentProxyId = this.activeBrowsers.get(email).proxyId || null;
+        if (currentProxyId !== wantedProxyId) {
+          console.log(`🔁 Proxy của [${email}] đã đổi (${currentProxyId} → ${wantedProxyId}), đóng browser cũ để mở lại...`);
+          await this.closeBrowser(email);
+          isActive = false;
+        }
+      }
+
       if (isActive) {
         console.log(`🔄 Browser already open for [${email}], reusing first tab...`);
         const browserInfo = this.activeBrowsers.get(email);
@@ -124,6 +149,20 @@ class BrowserService {
 
     const profileInfo = email ? ` with profile [${email}]` : '';
     console.log(`🌐 Launching Chrome browser ${isHeadless ? '(headless)' : '(visible)'}${profileInfo}...`);
+
+    // Kiểm tra proxy trước khi mở Chrome: proxy chết thì báo lỗi rõ ràng ngay,
+    // thay vì để Google login treo tới hết timeout.
+    let chromeProxy = null;
+    if (proxyRecord) {
+      const display = proxyService.toDisplay(proxyRecord);
+      console.log(`🧭 Kiểm tra proxy ${display} cho [${email}]...`);
+      const check = await proxyService.checkProxy(proxyRecord);
+      if (!check.ok) {
+        throw new Error(`Proxy ${display} không kết nối được: ${check.error}`);
+      }
+      console.log(`✅ Proxy OK — IP ra ngoài: ${check.ip} (${check.latencyMs}ms)`);
+      chromeProxy = await proxyService.prepareChromeProxy(proxyRecord);
+    }
 
     for (let attempt = 1; attempt <= retries; attempt++) {
       try {
@@ -225,6 +264,15 @@ class BrowserService {
         if (!isSystemChromeOnMac || process.env.KEEP_SANDBOX_FLAGS === 'true') {
           // Only prepend sandbox-specific flags when not using system Chrome on macOS or when explicitly requested
           baseArgs.unshift('--no-sandbox', '--disable-setuid-sandbox');
+        }
+
+        if (chromeProxy) {
+          baseArgs.push(
+            `--proxy-server=${chromeProxy.serverUrl}`,
+            // Không cho WebRTC đi đường riêng → tránh lộ IP thật
+            '--force-webrtc-ip-handling-policy=disable_non_proxied_udp',
+            '--webrtc-ip-handling-policy=disable_non_proxied_udp'
+          );
         }
 
         const launchOptions = {
@@ -360,7 +408,8 @@ class BrowserService {
         if (email) {
           this.activeBrowsers.set(email, {
             browser: browser,
-            pages: [page]
+            pages: [page],
+            proxyId: wantedProxyId
           });
 
           // Attempt to load saved cookies for this profile, if any
@@ -402,6 +451,7 @@ class BrowserService {
           browser.on('disconnected', () => {
             console.log(`🔴 Browser closed for [${email}]`);
             this.activeBrowsers.delete(email);
+            if (chromeProxy) chromeProxy.close();
             // Cleanup temp profile if created
             try {
               const tmpPath = launchOptions._tempProfilePath;
@@ -446,6 +496,7 @@ class BrowserService {
           console.log(`   Retrying in 2 seconds...`);
           await new Promise(r => setTimeout(r, 2000));
         } else {
+          if (chromeProxy) await chromeProxy.close();
           throw error;
         }
       }

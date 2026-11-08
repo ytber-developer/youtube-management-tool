@@ -290,6 +290,18 @@ class BrowserService {
         // Preserve for cleanup handling later
         launchOptions._tempProfilePath = tempProfilePath;
 
+        // Dọn bản sao video YouTube Studio còn sót trong IndexedDB (từ các lần
+        // upload bị đóng browser/crash giữa chừng). Chỉ làm khi tiến trình này
+        // không có browser nào đang mở với profile đó.
+        if (email && !this.activeBrowsers.has(email) &&
+            userDataDirToUse === sessionService.getProfilePath(email)) {
+          try {
+            sessionService.clearStudioUploadCache(email);
+          } catch (e) {
+            console.warn('⚠️ Studio cache cleanup failed:', e.message);
+          }
+        }
+
         const browser = await puppeteer.launch(launchOptions);
         
         // Get existing pages (usually 1 blank tab is created automatically)
@@ -650,6 +662,31 @@ class BrowserService {
       await client.send('Network.clearBrowserCache');
     } catch (error) {
       // Ignore
+    }
+  }
+
+  /**
+   * Xoá IndexedDB của studio.youtube.com qua CDP (browser đang chạy).
+   * Đây là nơi Studio giữ bản sao video đã chọn để upload. Không đụng cookie
+   * nên không mất đăng nhập.
+   *
+   * KHÔNG gọi khi đang có upload dở dang — sẽ làm hỏng upload đó.
+   */
+  async clearStudioUploadStorage(page) {
+    let client = null;
+    try {
+      client = await page.createCDPSession();
+      await client.send('Storage.clearDataForOrigin', {
+        origin: 'https://studio.youtube.com',
+        storageTypes: 'indexeddb'
+      });
+      console.log('🧹 Cleared YouTube Studio IndexedDB (upload cache)');
+      return true;
+    } catch (error) {
+      console.warn('⚠️ Could not clear YouTube Studio IndexedDB:', error.message);
+      return false;
+    } finally {
+      if (client) { try { await client.detach(); } catch (e) { /* ignore */ } }
     }
   }
 

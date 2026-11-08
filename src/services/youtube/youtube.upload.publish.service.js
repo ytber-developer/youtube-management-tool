@@ -358,10 +358,11 @@ class YoutubeUploadPublishService {
     // - Đang upload:  "Uploading 76% ... 18 seconds left"  → chờ tiếp
     // - Upload xong:  "Upload complete ... Processing will begin shortly" → có thể đóng
     // - Đang SD:      "Processing up to SD ... 3 minutes left" → có thể đóng
-    // Tối đa 600s
-    console.log('⏳ Chờ sau khi Publish: đợi "Upload complete" hoặc "up to SD" trước khi đóng...');
+    // Thời gian chờ = maxCloseWait (caller tính theo dung lượng file), mặc định 600s
+    console.log(`⏳ Chờ sau khi Publish: đợi "Upload complete" hoặc "up to SD" trước khi đóng (tối đa ${Math.round(maxCloseWait / 1000)}s)...`);
     const closeStart = Date.now();
     let closeClicked = false;
+    let lastStatus = null;
     // Có bao giờ nhìn thấy dấu hiệu YouTube đã nhận video hay chưa.
     // Dùng để phân biệt "publish xong nhưng không tìm thấy nút Close"
     // với "publish không bao giờ xảy ra" (ví dụ bị dialog chặn).
@@ -400,6 +401,7 @@ class YoutubeUploadPublishService {
         return { isUploading, isUploadComplete, isProcessingSD, isProcessingDelayed, isVideoPublished, hasShareDialog, canClose, pct };
       });
 
+      lastStatus = status;
       if (status.canClose) sawPublishSignal = true;
 
       const elapsed = Math.floor((Date.now() - closeStart) / 1000);
@@ -462,6 +464,14 @@ class YoutubeUploadPublishService {
         // Không rõ trạng thái — chờ ngắn
         await new Promise(r => setTimeout(r, 5000));
       }
+    }
+
+    // Hết giờ mà vẫn đang "Uploading X%" → upload CHƯA xong. Không được báo thành công,
+    // vì đóng browser lúc này sẽ huỷ upload (video trên YouTube bị lỗi).
+    if (!closeClicked && lastStatus && lastStatus.isUploading) {
+      const msg = `Upload chưa hoàn tất sau ${Math.round(maxCloseWait / 1000)}s (đang ở ${lastStatus.pct ?? '?'}%)`;
+      console.error(`❌ ${msg}`);
+      return { success: false, videoUrl: null, error: msg };
     }
 
     // Không hề thấy dấu hiệu nào cho thấy video đã được nhận → publish đã thất bại.

@@ -58,6 +58,14 @@ const startServer = async () => {
     // Removed auto-sync to avoid "Too many keys" error
     // Run migrations manually with: npm run migrate
 
+    // Dọn bản sao video YouTube Studio còn sót trong IndexedDB của mọi profile.
+    // Chạy trước khi cron khởi động để chắc chắn chưa có browser nào đang mở.
+    try {
+      require('./services/session.service').clearAllStudioUploadCaches();
+    } catch (e) {
+      console.warn('⚠️ Studio cache cleanup on startup failed:', e.message);
+    }
+
     // Recovery: reset any tasks/campaigns stuck in 'running' from a previous crash
     const { startCron, recoverStuckTasks } = require('./services/campaign.service');
     await recoverStuckTasks();

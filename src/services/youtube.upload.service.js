@@ -147,7 +147,7 @@ class YoutubeUploadService {
       // BƯỚC 9: Publish video
       console.log('🚀 Đang publish video...');
       const publishResult = await publishHelper.publishVideo(page, {
-        uploadTimeoutMs: this._getUploadTimeoutMs(videoPath)
+        maxCloseWait: this._getUploadTimeoutMs(videoPath)
       });
 
       if (!publishResult.success) {

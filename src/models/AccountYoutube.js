@@ -75,6 +75,11 @@ const AccountYoutube = sequelize.define('AccountYoutube', {
   notes: {
     type: DataTypes.TEXT,
     allowNull: true
+  },
+  proxy_id: {
+    type: DataTypes.INTEGER,
+    allowNull: true,
+    comment: 'Proxy cố định gắn với account (null = không dùng proxy)'
   }
 }, {
   tableName: 'account_youtubes',

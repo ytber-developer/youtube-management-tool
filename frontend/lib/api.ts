@@ -37,6 +37,7 @@ export interface Account {
   isUploadAvatar?: boolean;
   avatarUrl?: string;
   imageName?: string;
+  proxyId?: number | null;
 }
 
 export interface AccountsResponse {
@@ -625,8 +626,76 @@ export const setupAPI = {
     request(API_ENDPOINTS.SETUP.PULL, { method: 'POST' }),
 };
 
+// Proxy types
+export type ProxyProtocol = 'http' | 'https' | 'socks5' | 'socks4';
+
+export interface ProxyItem {
+  id: number;
+  label: string;
+  protocol: ProxyProtocol;
+  host: string;
+  port: number;
+  username: string;
+  hasPassword: boolean;
+  country: string;
+  status: 'unknown' | 'active' | 'dead';
+  lastIp: string;
+  lastLatencyMs: number | null;
+  lastError: string;
+  lastCheckedAt: string | null;
+  display: string;
+  accounts: { id: number; email: string }[];
+}
+
+export interface ProxyInput {
+  protocol: ProxyProtocol;
+  host: string;
+  port: number | string;
+  username?: string;
+  password?: string;
+  label?: string;
+  country?: string;
+}
+
+interface ApiResult<T> {
+  success: boolean;
+  message?: string;
+  data: T;
+}
+
+// Proxy API
+export const proxyAPI = {
+  list: (): Promise<ApiResult<ProxyItem[]>> =>
+    request(API_ENDPOINTS.PROXIES.LIST),
+
+  create: (input: ProxyInput): Promise<ApiResult<{ created: ProxyItem[]; skipped: number; errors: any[] }>> =>
+    request(API_ENDPOINTS.PROXIES.CREATE, { method: 'POST', body: JSON.stringify(input) }),
+
+  createBulk: (lines: string, protocol: ProxyProtocol, country?: string): Promise<ApiResult<{ created: ProxyItem[]; skipped: number; errors: { line: number; value: string; error: string }[] }>> =>
+    request(API_ENDPOINTS.PROXIES.CREATE, { method: 'POST', body: JSON.stringify({ lines, protocol, country: country || null }) }),
+
+  update: (id: number, input: Partial<ProxyInput>): Promise<ApiResult<ProxyItem>> =>
+    request(API_ENDPOINTS.PROXIES.UPDATE(id), { method: 'PUT', body: JSON.stringify(input) }),
+
+  remove: (id: number): Promise<ApiResult<{ id: number }>> =>
+    request(API_ENDPOINTS.PROXIES.DELETE(id), { method: 'DELETE' }),
+
+  check: (id: number): Promise<ApiResult<ProxyItem>> =>
+    request(API_ENDPOINTS.PROXIES.CHECK(id), { method: 'POST' }),
+
+  checkAll: (): Promise<ApiResult<{ total: number; active: number; dead: number }>> =>
+    request(API_ENDPOINTS.PROXIES.CHECK_ALL, { method: 'POST' }),
+
+  assign: (accountIds: number[], proxyId: number | null): Promise<ApiResult<{ updated: number }>> =>
+    request(API_ENDPOINTS.PROXIES.ASSIGN, { method: 'POST', body: JSON.stringify({ accountIds, proxyId }) }),
+
+  autoAssign: (maxPerProxy: number): Promise<ApiResult<{ assigned: number; remaining: number }>> =>
+    request(API_ENDPOINTS.PROXIES.AUTO_ASSIGN, { method: 'POST', body: JSON.stringify({ maxPerProxy }) }),
+};
+
 // Export a combined API object
 export const api = {
+  proxy: proxyAPI,
   watch: watchAPI,
   accounts: accountsAPI,
   upload: uploadAPI,

@@ -1,0 +1,31 @@
+# Cấu hình gitleaks cho repo: dùng toàn bộ rule mặc định + thêm rule riêng
+# cho dữ liệu của tool (mật khẩu account, mã 2FA lưu trong code / dump DB).
+title = "youtube-management-tool"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "hardcoded-account-password"
+description = "Mật khẩu account viết thẳng trong code"
+regex = '''(?i)\b(password|passwd|pwd)["']?\s*[:=]\s*["']([^"'\s]{4,})["']'''
+secretGroup = 2
+keywords = ["password", "passwd", "pwd"]
+
+[[rules]]
+id = "totp-secret"
+description = "Mã 2FA (TOTP secret, base32) của account"
+regex = '''(?i)\b(code_authenticators|totp_?secret|twofa|2fa_?secret)["']?\s*[:=]\s*["']([A-Za-z2-7 ]{16,})["']'''
+secretGroup = 2
+keywords = ["code_authenticators", "totp", "twofa", "2fa"]
+
+[allowlist]
+description = "Giá trị ví dụ trong tài liệu"
+regexes = [
+  '''JBSWY3DPEHPK3PX[PQ]''',          # secret mẫu trong README (RFC ví dụ)
+  '''SecurePass\d+!''',               # mật khẩu mẫu trong README
+]
+paths = [
+  '''(^|/)\.env\.example$''',
+  '''^frontend/public/templates/''',
+]

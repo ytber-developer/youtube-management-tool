@@ -18,11 +18,16 @@ const morgan = require('morgan');
 const routes = require('./routes');
 const { sequelize } = require('./models');
 
+const { corsOptions, blockForeignOrigins } = require('./middlewares/security');
+
 const app = express();
 const PORT = process.env.PORT || 3000;
+// Mặc định chỉ nghe trên máy này. Đặt HOST=0.0.0.0 nếu thật sự cần mở cho máy khác trong mạng LAN.
+const HOST = process.env.HOST || '127.0.0.1';
 
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
+app.use(blockForeignOrigins);
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -86,8 +91,11 @@ const startServer = async () => {
     // Start upload queue cron (every 5 minutes, processes 1 job at a time)
     startUploadCron();
 
-    app.listen(PORT, () => {
-      console.log(`🚀 Server running on http://localhost:${PORT}`);
+    app.listen(PORT, HOST, () => {
+      console.log(`🚀 Server running on http://${HOST}:${PORT}`);
+      if (HOST !== '127.0.0.1' && HOST !== 'localhost' && HOST !== '::1') {
+        console.warn(`⚠️  API đang mở cho mạng ngoài (HOST=${HOST}) và KHÔNG có đăng nhập — chỉ dùng trong mạng tin cậy.`);
+      }
     });
   } catch (error) {
     console.error('❌ Error:', error.message);

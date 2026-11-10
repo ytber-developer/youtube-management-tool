@@ -640,6 +640,8 @@ export interface ProxyItem {
   country: string;
   status: 'unknown' | 'active' | 'dead';
   lastIp: string;
+  ipVersion: 4 | 6 | null;   // phiên bản IP ra ngoài (từ lần kiểm tra gần nhất)
+  hostIsIPv6: boolean;        // host proxy là địa chỉ IPv6
   lastLatencyMs: number | null;
   lastError: string;
   lastCheckedAt: string | null;

@@ -22,6 +22,18 @@ function StatusBadge({ p }: { p: ProxyItem }) {
   return <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-600"><HelpCircle className="w-3.5 h-3.5" />Chưa kiểm tra</span>;
 }
 
+function IpVersionBadge({ p }: { p: ProxyItem }) {
+  if (!p.ipVersion) return null;
+  const v6 = p.ipVersion === 6;
+  return (
+    <span className={`ml-1.5 px-1.5 py-0.5 rounded text-[10px] font-semibold ${v6 ? 'bg-purple-100 text-purple-700' : 'bg-slate-100 text-slate-600'}`}>
+      IPv{p.ipVersion}
+    </span>
+  );
+}
+
+const isIPv6Proxy = (p?: ProxyItem) => !!p && (p.ipVersion === 6 || p.hostIsIPv6);
+
 export default function ProxiesPage() {
   const [proxies, setProxies] = useState<ProxyItem[]>([]);
   const [accounts, setAccounts] = useState<Account[]>([]);
@@ -43,7 +55,7 @@ export default function ProxiesPage() {
 
   // Gán proxy
   const [search, setSearch] = useState('');
-  // all | with | without | active | dead | unknown | p:<proxyId>
+  // all | with | without | active | dead | unknown | ipv6 | p:<proxyId>
   const [proxyFilter, setProxyFilter] = useState('all');
   const [selected, setSelected] = useState<Set<number>>(new Set());
   const [bulkProxyId, setBulkProxyId] = useState<string>('');
@@ -121,6 +133,7 @@ export default function ProxiesPage() {
       if (proxyFilter === 'with' && !p) return false;
       if (proxyFilter === 'without' && p) return false;
       if (['active', 'dead', 'unknown'].includes(proxyFilter) && (!p || p.status !== proxyFilter)) return false;
+      if (proxyFilter === 'ipv6' && !isIPv6Proxy(p)) return false;
       if (proxyFilter.startsWith('p:') && a.proxyId !== Number(proxyFilter.slice(2))) return false;
 
       // Tìm theo email, tên kênh, hoặc thông tin proxy đang gắn (host, IP, ghi chú)
@@ -142,6 +155,7 @@ export default function ProxiesPage() {
       active: accounts.filter(a => status(a) === 'active').length,
       dead: accounts.filter(a => status(a) === 'dead').length,
       unknown: accounts.filter(a => status(a) === 'unknown').length,
+      ipv6: accounts.filter(a => isIPv6Proxy(a.proxyId ? proxyById.get(a.proxyId) : undefined)).length,
     };
   }, [accounts, proxyById]);
 
@@ -169,7 +183,7 @@ export default function ProxiesPage() {
   });
 
   const proxyOptionLabel = (p: ProxyItem) =>
-    `#${p.id} ${p.label ? `${p.label} — ` : ''}${p.host}:${p.port}${p.status === 'dead' ? ' (lỗi)' : ''} · ${p.accounts.length} acc`;
+    `#${p.id} ${p.label ? `${p.label} — ` : ''}${p.hostIsIPv6 ? `[${p.host}]` : p.host}:${p.port}${p.ipVersion ? ` · IPv${p.ipVersion}` : ''}${p.status === 'dead' ? ' (lỗi)' : ''} · ${p.accounts.length} acc`;
 
   const assignedCount = accounts.filter(a => a.proxyId).length;
 
@@ -226,7 +240,7 @@ export default function ProxiesPage() {
             </label>
             <label className="text-sm md:col-span-3">
               <span className="block text-gray-700 mb-1">Host *</span>
-              <input required value={form.host} onChange={e => setForm({ ...form, host: e.target.value.trim() })} placeholder="103.x.x.x hoặc proxy.example.com" className="w-full border rounded px-2 py-1.5 font-mono" />
+              <input required value={form.host} onChange={e => setForm({ ...form, host: e.target.value.trim() })} placeholder="103.x.x.x, 2001:db8::1 hoặc proxy.example.com" className="w-full border rounded px-2 py-1.5 font-mono" />
             </label>
             <label className="text-sm md:col-span-2">
               <span className="block text-gray-700 mb-1">Port *</span>
@@ -267,7 +281,8 @@ export default function ProxiesPage() {
           </div>
           <p className="text-xs text-gray-600">
             Mỗi dòng 1 proxy. Hỗ trợ: <code className="bg-gray-100 px-1">host:port:user:pass</code>, <code className="bg-gray-100 px-1">user:pass@host:port</code>,{' '}
-            <code className="bg-gray-100 px-1">host:port</code>, <code className="bg-gray-100 px-1">socks5://user:pass@host:port</code>. Dòng bắt đầu bằng # sẽ bị bỏ qua, proxy trùng tự bỏ qua.
+            <code className="bg-gray-100 px-1">host:port</code>, <code className="bg-gray-100 px-1">socks5://user:pass@host:port</code>.
+            Host IPv6 ghi trong ngoặc vuông: <code className="bg-gray-100 px-1">[2001:db8::1]:port:user:pass</code>. Dòng bắt đầu bằng # sẽ bị bỏ qua, proxy trùng tự bỏ qua.
           </p>
           <textarea
             value={bulkText}
@@ -335,7 +350,8 @@ export default function ProxiesPage() {
                       {p.status === 'dead' && p.lastError && <div className="text-xs text-red-600 mt-1 max-w-xs truncate" title={p.lastError}>{p.lastError}</div>}
                     </td>
                     <td className="px-4 py-2">
-                      {p.lastIp ? <span className="font-mono">{p.lastIp}</span> : <span className="text-gray-400">—</span>}
+                      {p.lastIp ? <span className="font-mono break-all">{p.lastIp}</span> : <span className="text-gray-400">—</span>}
+                      <IpVersionBadge p={p} />
                       {p.lastLatencyMs != null && <span className="text-xs text-gray-500 ml-1">({p.lastLatencyMs}ms)</span>}
                     </td>
                     <td className="px-4 py-2">
@@ -420,6 +436,7 @@ export default function ProxiesPage() {
               ['active', 'Proxy hoạt động'],
               ['dead', 'Proxy lỗi'],
               ['unknown', 'Proxy chưa kiểm tra'],
+              ['ipv6', 'Proxy IPv6'],
             ] as const).map(([key, label]) => (
               <button
                 key={key}

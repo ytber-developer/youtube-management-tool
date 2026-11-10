@@ -3,6 +3,12 @@ const { Proxy, AccountYoutube, sequelize } = require('../models');
 const { successResponse, errorResponse } = require('../helpers/response.helper');
 const proxyService = require('../services/proxy.service');
 
+/** Host nhập từ form: chấp nhận IPv6 có hoặc không có [] */
+function hostForUrl(host) {
+  const h = String(host || '').trim().replace(/^\[|\]$/g, '');
+  return proxyService.formatHost(h);
+}
+
 /** Dạng trả về cho client — KHÔNG gửi mật khẩu */
 function formatProxy(p, accounts = []) {
   return {
@@ -16,6 +22,8 @@ function formatProxy(p, accounts = []) {
     country: p.country || '',
     status: p.status,
     lastIp: p.last_ip || '',
+    ipVersion: proxyService.ipVersionOf(p.last_ip),
+    hostIsIPv6: p.host.includes(':'),
     lastLatencyMs: p.last_latency_ms,
     lastError: p.last_error || '',
     lastCheckedAt: p.last_checked_at,
@@ -71,7 +79,7 @@ exports.create = async (req, res) => {
     } else {
       const { host, port, username, password } = req.body || {};
       try {
-        const parsed = proxyService.parseProxyLine(`${protocol}://${host}:${port}`);
+        const parsed = proxyService.parseProxyLine(`${protocol}://${hostForUrl(host)}:${port}`);
         items.push({
           ...parsed,
           username: username || null,
@@ -120,7 +128,7 @@ exports.update = async (req, res) => {
     if (!proxy) return res.status(404).json({ success: false, message: 'Không tìm thấy proxy' });
 
     const { protocol, host, port, username, password, label, country } = req.body || {};
-    const parsed = proxyService.parseProxyLine(`${protocol || proxy.protocol}://${host || proxy.host}:${port || proxy.port}`);
+    const parsed = proxyService.parseProxyLine(`${protocol || proxy.protocol}://${hostForUrl(host || proxy.host)}:${port || proxy.port}`);
 
     const changes = {
       protocol: parsed.protocol,

@@ -14,13 +14,35 @@ const { HttpsProxyAgent } = require('https-proxy-agent');
 const { Proxy, AccountYoutube } = require('../models');
 
 const SUPPORTED_PROTOCOLS = ['http', 'https', 'socks5', 'socks4'];
-const IP_CHECK_URL = 'https://api.ipify.org?format=json';
+// api64 trả lời qua cả IPv4 lẫn IPv6 → kiểm tra được proxy chỉ đi ra bằng IPv6.
+// api.ipify.org (chỉ IPv4) giữ làm dự phòng khi api64 gặp sự cố.
+const IP_CHECK_URLS = [
+  'https://api64.ipify.org?format=json',
+  'https://api.ipify.org?format=json'
+];
+
+/** Host là địa chỉ IPv6 dạng literal (vd 2001:db8::1)? */
+function isIPv6Host(host) {
+  return typeof host === 'string' && host.includes(':');
+}
+
+/** Bọc IPv6 trong [] khi ghép vào URL / host:port */
+function formatHost(host) {
+  return isIPv6Host(host) ? `[${host}]` : host;
+}
+
+/** 4 | 6 | null — phiên bản IP ra ngoài của proxy */
+function ipVersionOf(ip) {
+  if (!ip) return null;
+  return ip.includes(':') ? 6 : 4;
+}
 
 /**
  * Parse 1 dòng proxy. Hỗ trợ:
  *   http://user:pass@host:port   socks5://host:port
  *   user:pass@host:port          host:port
  *   host:port:user:pass          (định dạng phổ biến của shop proxy VN)
+ *   [2001:db8::1]:port:user:pass, user:pass@[2001:db8::1]:port   (host IPv6 phải nằm trong [])
  * @param {string} line
  * @param {string} defaultProtocol - dùng khi dòng không ghi protocol
  * @returns {{protocol, host, port, username, password}}
@@ -42,7 +64,41 @@ function parseProxyLine(line, defaultProtocol = 'http') {
   }
 
   let host, port, username = null, password = null;
+
+  // Host IPv6 literal: bắt buộc nằm trong [] vì bản thân địa chỉ chứa dấu ":"
+  const lb = rest.indexOf('[');
+  const rb = rest.indexOf(']');
+  if (lb >= 0 || rb >= 0) {
+    if (lb < 0 || rb < lb) throw new Error(`Thiếu dấu [ ] quanh địa chỉ IPv6: ${raw}`);
+    const before = rest.slice(0, lb);   // '' hoặc 'user:pass@'
+    host = rest.slice(lb + 1, rb);
+    const after = rest.slice(rb + 1);   // ':port' hoặc ':port:user:pass'
+    if (!after.startsWith(':')) throw new Error(`Thiếu port sau địa chỉ IPv6: ${raw}`);
+    const afterParts = after.slice(1).split(':');
+    port = afterParts[0];
+    if (before) {
+      if (!before.endsWith('@')) throw new Error(`Không nhận ra định dạng: ${raw}`);
+      const auth = before.slice(0, -1);
+      const colon = auth.indexOf(':');
+      username = colon >= 0 ? auth.slice(0, colon) : auth;
+      password = colon >= 0 ? auth.slice(colon + 1) : null;
+    } else if (afterParts.length >= 3) {
+      username = afterParts[1];
+      password = afterParts.slice(2).join(':');
+    } else if (afterParts.length !== 1) {
+      throw new Error(`Không nhận ra định dạng: ${raw}`);
+    }
+    if (!/^[0-9a-f:.]+$/i.test(host) || !host.includes(':')) {
+      throw new Error(`Địa chỉ IPv6 không hợp lệ: ${host}`);
+    }
+    return finalize();
+  }
+
   const parts = rest.split(':');
+  // Nhiều dấu ":" mà không có [] và phần thứ 2 không phải port → nhiều khả năng là IPv6 thiếu []
+  if (parts.length > 4 && !/^\d+$/.test(parts[1]) && !rest.includes('@')) {
+    throw new Error(`Có vẻ là địa chỉ IPv6 — hãy ghi dạng [địa_chỉ]:port:user:pass. Dòng: ${raw}`);
+  }
   const looksHostPortUserPass = !protoMatch && parts.length >= 4 && /^\d+$/.test(parts[1]) && !parts[0].includes('@');
 
   if (looksHostPortUserPass) {
@@ -66,18 +122,21 @@ function parseProxyLine(line, defaultProtocol = 'http') {
     throw new Error(`Không nhận ra định dạng: ${raw}`);
   }
 
-  const portNum = parseInt(port, 10);
-  if (!host || !portNum || portNum < 1 || portNum > 65535) {
-    throw new Error(`Host/port không hợp lệ: ${raw}`);
-  }
+  return finalize();
 
-  return {
-    protocol,
-    host: host.trim(),
-    port: portNum,
-    username: username ? decodeURIComponent(username) : null,
-    password: password ? decodeURIComponent(password) : null
-  };
+  function finalize() {
+    const portNum = /^\d+$/.test(String(port || '').trim()) ? parseInt(port, 10) : NaN;
+    if (!host || !portNum || portNum < 1 || portNum > 65535) {
+      throw new Error(`Host/port không hợp lệ: ${raw}`);
+    }
+    return {
+      protocol,
+      host: host.trim().replace(/^\[|\]$/g, ''),
+      port: portNum,
+      username: username ? decodeURIComponent(username) : null,
+      password: password ? decodeURIComponent(password) : null
+    };
+  }
 }
 
 /** URL đầy đủ (có mật khẩu) của proxy — chỉ dùng nội bộ, không trả về client */
@@ -85,13 +144,13 @@ function toProxyUrl(proxy) {
   const auth = proxy.username
     ? `${encodeURIComponent(proxy.username)}:${encodeURIComponent(proxy.password || '')}@`
     : '';
-  return `${proxy.protocol}://${auth}${proxy.host}:${proxy.port}`;
+  return `${proxy.protocol}://${auth}${formatHost(proxy.host)}:${proxy.port}`;
 }
 
 /** Chuỗi hiển thị an toàn (không lộ mật khẩu) */
 function toDisplay(proxy) {
   const auth = proxy.username ? `${proxy.username}:***@` : '';
-  return `${proxy.protocol}://${auth}${proxy.host}:${proxy.port}`;
+  return `${proxy.protocol}://${auth}${formatHost(proxy.host)}:${proxy.port}`;
 }
 
 /**
@@ -124,7 +183,7 @@ async function startLocalBridge(proxy) {
 async function prepareChromeProxy(proxy) {
   const needsLocalBridge = !!proxy.username || proxy.protocol.startsWith('socks');
   if (!needsLocalBridge) {
-    return { serverUrl: `${proxy.protocol}://${proxy.host}:${proxy.port}`, close: async () => {} };
+    return { serverUrl: `${proxy.protocol}://${formatHost(proxy.host)}:${proxy.port}`, close: async () => {} };
   }
   const bridge = await startLocalBridge(proxy);
   return { serverUrl: bridge.url, close: bridge.close };
@@ -146,8 +205,20 @@ function describeStatus(status) {
   return map[status] || `Proxy trả về HTTP ${status}`;
 }
 
+/** Lỗi mạng (không có HTTP status) → thông báo dễ hiểu */
+function describeNetworkError(err, timeoutMs) {
+  if (err.code === 'ECONNABORTED' || /timeout/i.test(err.message)) {
+    return `Quá thời gian chờ (${Math.round(timeoutMs / 1000)}s) — proxy chậm hoặc không phản hồi`;
+  }
+  if (err.code === 'ECONNRESET' && /TLS|secure/i.test(err.message)) {
+    return 'Proxy nhận kết nối nhưng cắt ngang khi mở trang HTTPS — proxy có thể chưa kích hoạt / đã hết hạn, ' +
+      'chặn IP máy bạn (cần whitelist), hoặc không đi ra được loại IP của trang đích (ECONNRESET)';
+  }
+  return err.code ? `${err.code}: ${err.message}` : err.message;
+}
+
 /**
- * Kiểm tra proxy: gọi api.ipify.org qua proxy (đi đúng đường Chrome sẽ đi).
+ * Kiểm tra proxy: gọi api64.ipify.org qua proxy (đi đúng đường Chrome sẽ đi).
  * Cập nhật status/last_ip/last_latency_ms vào DB.
  * @param {Proxy} proxy - instance Sequelize
  * @returns {Promise<{ ok: boolean, ip?: string, latencyMs?: number, error?: string }>}
@@ -159,22 +230,34 @@ async function checkProxy(proxy, { timeoutMs = 15000 } = {}) {
   try {
     // Luôn đi qua cầu cục bộ + tunnel CONNECT — giống hệt cách Chrome dùng proxy
     bridge = await startLocalBridge(proxy);
-    const agent = new HttpsProxyAgent(bridge.url);
-    const resp = await axios.get(IP_CHECK_URL, {
-      httpsAgent: agent,
-      proxy: false,
-      timeout: timeoutMs
-    });
-    const ip = resp.data && resp.data.ip;
-    if (!ip) throw new Error('Không đọc được IP từ api.ipify.org');
-    result = { ok: true, ip, latencyMs: Date.now() - started };
+    let firstError = null;
+    for (const url of IP_CHECK_URLS) {
+      try {
+        const resp = await axios.get(url, {
+          httpsAgent: new HttpsProxyAgent(bridge.url),
+          proxy: false,
+          timeout: timeoutMs
+        });
+        const ip = resp.data && resp.data.ip;
+        if (!ip) throw new Error(`Không đọc được IP từ ${new URL(url).hostname}`);
+        result = { ok: true, ip, ipVersion: ipVersionOf(ip), latencyMs: Date.now() - started };
+        break;
+      } catch (err) {
+        if (!firstError) firstError = err;
+        // Sai mật khẩu / proxy chết thì thử trang khác cũng vô ích
+        const status = err.response && err.response.status;
+        if (status === 407 || status === 597 || status === 594 || status === 593) break;
+      }
+    }
+    if (!result) {
+      const err = firstError;
+      result = {
+        ok: false,
+        error: err.response ? describeStatus(err.response.status) : describeNetworkError(err, timeoutMs)
+      };
+    }
   } catch (err) {
-    const msg = err.response
-      ? describeStatus(err.response.status)
-      : (err.code === 'ECONNABORTED' || /timeout/i.test(err.message)
-        ? `Quá thời gian chờ (${Math.round(timeoutMs / 1000)}s) — proxy chậm hoặc không phản hồi`
-        : (err.code ? `${err.code}: ${err.message}` : err.message));
-    result = { ok: false, error: msg };
+    result = { ok: false, error: describeNetworkError(err, timeoutMs) };
   } finally {
     if (bridge) await bridge.close();
   }
@@ -203,6 +286,8 @@ async function getProxyForEmail(email) {
 
 module.exports = {
   parseProxyLine,
+  ipVersionOf,
+  formatHost,
   toProxyUrl,
   toDisplay,
   prepareChromeProxy,

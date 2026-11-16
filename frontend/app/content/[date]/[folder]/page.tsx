@@ -7,7 +7,7 @@ import { ArrowLeft, Copy, Check, Loader2, Mic, Download, X, ExternalLink, ImageO
 import { contentAPI, ContentAction, ContentDetail } from '@/lib/api';
 import { CHANNEL_META, ACTION_LABEL, StepDots, StageBadge, JobBar, fmtDuration, fmtDate } from '@/components/ContentStatus';
 
-const ACTIONS: ContentAction[] = ['images', 'slides', 'thumb', 'package', 'preview', 'tts', 'render'];
+const ACTIONS: ContentAction[] = ['build', 'images', 'slides', 'thumb', 'package', 'preview', 'tts', 'render'];
 
 function CopyBtn({ text, label = 'Copy' }: { text: string; label?: string }) {
   const [ok, setOk] = useState(false);
@@ -119,7 +119,7 @@ export default function ContentDetailPage() {
           <div className="flex flex-wrap gap-2 pt-1">
             {ACTIONS.map(a => (
               <button key={a} disabled={busy || (a === 'render' && !d.files['voice.mp3'])} onClick={() => run(a)}
-                className={`px-3 py-1.5 text-sm rounded border ${a === 'render' ? 'bg-blue-600 text-white border-blue-600 hover:bg-blue-700' : 'hover:bg-gray-50'} disabled:opacity-40 disabled:cursor-not-allowed`}>
+                className={`px-3 py-1.5 text-sm rounded border ${a === 'build' ? 'bg-green-600 text-white border-green-600 hover:bg-green-700 font-medium' : a === 'render' ? 'bg-blue-600 text-white border-blue-600 hover:bg-blue-700' : 'hover:bg-gray-50'} disabled:opacity-40 disabled:cursor-not-allowed`}>
                 {ACTION_LABEL[a]}
               </button>
             ))}
@@ -213,6 +213,7 @@ export default function ContentDetailPage() {
                     <span className="font-semibold text-gray-700">Cảnh {i + 1}</span>
                     <span className="px-1.5 bg-gray-100 rounded">{sc.visual.type}</span>
                     {missing && <span className="text-red-600 font-medium">thiếu ảnh</span>}
+                    {cr?.ai && <span className="px-1.5 rounded bg-purple-100 text-purple-700 font-medium" title="Tranh AI sinh trên máy — kiểm tra kỹ trước khi duyệt">AI</span>}
                   </div>
                   <div className="font-semibold" dangerouslySetInnerHTML={{ __html: sc.headline.replace(/<(?!\/?em>)[^>]*>/g, '') }} />
                   {sc.sub && <div className="text-gray-500 text-xs">{sc.sub}</div>}

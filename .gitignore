@@ -31,3 +31,4 @@ content/**/*.part.wav
 
 # Giọng đọc Kokoro (môi trường Python + mô hình tải về)
 .venv-tts/
+.venv-img/

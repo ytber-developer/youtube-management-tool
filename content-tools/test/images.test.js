@@ -11,3 +11,10 @@ test('matchScore keeps on-topic photos and rejects off-topic ones', () => {
   assert.ok(matchScore('person yawning', 'Woman yawning while reading a book') >= 0.5);
   assert.strictEqual(matchScore('puffed cheeks', 'Early Medieval Coin: Sceat of Series BII'), 0);
 });
+
+test('each visual type tries its free sources in order, NASA falls back to Commons, all end with AI', () => {
+  const { SOURCE_ORDER } = require('../lib/images');
+  assert.deepStrictEqual(SOURCE_ORDER.nasa, ['nasa', 'commons', 'ai']);
+  assert.deepStrictEqual(SOURCE_ORDER.science, ['commons', 'commons-relaxed', 'openverse', 'ai']);
+  assert.deepStrictEqual(SOURCE_ORDER.stock, ['pixabay', 'openverse', 'ai']);
+});

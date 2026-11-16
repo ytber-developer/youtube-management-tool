@@ -696,7 +696,7 @@ export const proxyAPI = {
 // ── Content pipeline (/content) ──────────────────────────────────────────────
 export type ContentStepState = 'done' | 'todo' | 'stale' | 'error';
 export type ContentStepKey = 'script' | 'images' | 'review' | 'slides' | 'preview' | 'voice' | 'final' | 'uploaded';
-export type ContentAction = 'images' | 'slides' | 'thumb' | 'package' | 'preview' | 'tts' | 'render';
+export type ContentAction = 'build' | 'images' | 'slides' | 'thumb' | 'package' | 'preview' | 'tts' | 'render';
 
 export interface ContentJob {
   id: number;
@@ -741,7 +741,7 @@ export interface ContentScene {
 
 export interface ContentDetail extends ContentVideo {
   script: { title: string; description: string; tags: string[]; thumbnail_text: string; scenes: ContentScene[]; sources: { title: string; url: string }[] };
-  credits: { scene: number; credit?: string; url?: string; source?: string; missing?: boolean; type?: string }[];
+  credits: { scene: number; credit?: string; url?: string; source?: string; missing?: boolean; type?: string; ai?: boolean }[];
   review: { imagesReviewed?: boolean; uploadedUrl?: string };
   narration: string | null;
   metadata: string | null;

@@ -62,6 +62,16 @@ const COMMANDS = {
     console.log(`🎙️  ${id}  voice.mp3 (${r.voice}, ${((Date.now() - t) / 1000).toFixed(0)}s)`);
     return COMMANDS.render(id, dir);
   },
+  // Làm hết mọi bước còn thiếu: ảnh (AI dự phòng) → slide → thumb → package → preview → giọng → video cuối
+  async build(id, dir) {
+    const t = Date.now();
+    let last = '';
+    const plan = await require('./lib/build').buildVideo(dir, {
+      onProgress: (_, m) => { const step = m.split(':')[0]; if (step !== last) { last = step; process.stdout.write(`   … ${id.slice(11)}  ${step}\n`); } },
+    });
+    console.log(`✅ ${id}  ${plan.length ? plan.join(' → ') : 'đã đủ'} (${((Date.now() - t) / 60000).toFixed(1)} phút)`);
+    return true;
+  },
   async thumb(id, dir) {
     console.log(`✅ ${id}  ${path.relative(process.cwd(), await require('./lib/thumb').render(dir))}`);
     return true;

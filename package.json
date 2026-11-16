@@ -24,7 +24,8 @@
     "lint": "echo \"Linting not configured yet\"",
     "docs": "echo \"Documentation available in README.md, WATCH_VIDEO_API.md, and frontend/API_REFERENCE.md\"",
     "content": "node content-tools/cli.js",
-    "test:content": "node --test content-tools/test/*.test.js"
+    "test:content": "node --test content-tools/test/*.test.js",
+    "content:setup": "node content-tools/setup.js"
   },
   "dependencies": {
     "adm-zip": "^0.5.16",

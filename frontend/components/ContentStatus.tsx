@@ -19,7 +19,7 @@ export const CHANNEL_META: Record<string, { name: string; badge: string }> = {
 };
 
 export const ACTION_LABEL: Record<string, string> = {
-  images: 'Lấy ảnh', slides: 'Dựng slide', thumb: 'Thumbnail', package: 'Đóng gói', preview: 'Dựng preview', tts: 'Tạo giọng (Kokoro) + render', render: 'Render video cuối',
+  build: 'Làm hết (tự động)', images: 'Lấy ảnh', slides: 'Dựng slide', thumb: 'Thumbnail', package: 'Đóng gói', preview: 'Dựng preview', tts: 'Tạo giọng (Kokoro) + render', render: 'Render video cuối',
 };
 
 const DOT: Record<string, string> = {

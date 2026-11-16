@@ -1,6 +1,6 @@
 /**
  * Giọng đọc offline (Kokoro-82M, Apache-2.0) — không tốn credit.
- * Cài: brew install espeak-ng; python3.12 -m venv .venv-tts; .venv-tts/bin/pip install "kokoro>=0.9.2" soundfile
+ * Cài: npm run content:setup
  */
 const fs = require('fs');
 const path = require('path');
@@ -8,8 +8,8 @@ const { spawn, execFile } = require('child_process');
 const CHANNELS = require('./channels');
 const { splitSentences } = require('./align');
 
-const ROOT = path.resolve(__dirname, '..', '..');
-const PYTHON = path.join(ROOT, '.venv-tts', 'bin', 'python');
+const { ROOT, venvPython } = require('./pyenv');
+const PYTHON = venvPython('.venv-tts');
 const SCRIPT = path.join(__dirname, '..', 'tts', 'kokoro_tts.py');
 
 function buildJob(script, out, { voice, speed } = {}) {

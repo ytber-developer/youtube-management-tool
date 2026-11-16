@@ -17,6 +17,7 @@ const ACTIONS = {
   package: (dir) => require(path.join(LIB, 'pack')).writeAll(dir),
   preview: (dir, p) => require(path.join(LIB, 'video')).renderPreview(dir, { onProgress: p }),
   render: (dir, p) => require(path.join(LIB, 'video')).renderFinal(dir, { onProgress: p }),
+  build: (dir, p) => require(path.join(LIB, 'build')).buildVideo(dir, { onProgress: p }),
   // Giọng Kokoro offline rồi render luôn video cuối
   tts: async (dir, p) => {
     await require(path.join(LIB, 'tts')).synthesize(dir, { onProgress: (x, m) => p(x * 0.4, m) });

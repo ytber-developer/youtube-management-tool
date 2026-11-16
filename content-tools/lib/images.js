@@ -1,9 +1,9 @@
 /**
  * Lấy ảnh cho từng cảnh theo script.json → images/sceneNN.jpg + credits.json
  * visual.type:
- *   nasa    → images.nasa.gov (ghi công NASA; ghim bằng visual.nasa_id)
- *   stock   → Pixabay (PIXABAY_API_KEY) → Openverse. KHÔNG dùng Wikimedia (hay lạc đề)
- *   science → Wikimedia Commons → Openverse
+ *   nasa    → images.nasa.gov (ghi công NASA; ghim bằng visual.nasa_id) → Wikimedia Commons → tranh AI
+ *   stock   → Pixabay (PIXABAY_API_KEY) → Openverse → tranh minh hoạ AI sinh trên máy (aigen.js). KHÔNG dùng Wikimedia
+ *   science → Wikimedia Commons (chặt → nới) → Openverse → tranh AI kiểu tượng trưng (không nhãn, không chi tiết giải phẫu)
  *   diagram | outro → bỏ qua (SVG vẽ tay / slide kênh)
  * Giấy phép cho phép: NASA, Public Domain, CC0, CC BY, Pixabay Content License.
  */
@@ -123,7 +123,7 @@ async function fetchNasa(query, used, outFile, pinnedId) {
 
 // ── Wikimedia Commons ────────────────────────────────────────────────────────
 let lastCommons = 0;
-async function fetchCommons(query, used, outFile) {
+async function fetchCommons(query, used, outFile, { minWidth = 1200, minScore = 0.6 } = {}) {
   const wait = 2500 - (Date.now() - lastCommons); if (wait > 0) await sleep(wait);
   lastCommons = Date.now();
   const d = await getJson('https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=30' +
@@ -133,9 +133,9 @@ async function fetchCommons(query, used, outFile) {
     const ii = p.imageinfo?.[0]; if (!ii) continue;
     const md = ii.extmetadata || {};
     const lic = stripHtml(md.LicenseShortName?.value);
-    if (!allowedLicense(lic) || !/jpe?g|png/.test(ii.mime || '') || used.has(p.title) || ii.width < 1200) continue;
+    if (!allowedLicense(lic) || !/jpe?g|png/.test(ii.mime || '') || used.has(p.title) || ii.width < minWidth) continue;
     const score = matchScore(query, [p.title, stripHtml(md.ObjectName?.value), stripHtml(md.ImageDescription?.value), stripHtml(md.Categories?.value)].join(' '));
-    if (score >= 0.6) cands.push({ p, ii, md, lic, score, landscape: ii.width / ii.height >= 1.2 });
+    if (score >= minScore) cands.push({ p, ii, md, lic, score, landscape: ii.width / ii.height >= 1.2 });
   }
   cands.sort((a, b) => (b.score - a.score) || (b.landscape - a.landscape));
   const c = cands[0];
@@ -180,23 +180,39 @@ async function fetchOpenverse(query, used, outFile) {
   return null;
 }
 
+// Thứ tự nguồn miễn phí cho từng loại cảnh ('ai' chạy theo lô ở fetchForVideo vì phải nạp mô hình)
+const SOURCE_ORDER = {
+  nasa: ['nasa', 'commons', 'ai'],
+  science: ['commons', 'commons-relaxed', 'openverse', 'ai'],
+  stock: ['pixabay', 'openverse', 'ai'],
+};
+const SOURCES = {
+  nasa: (q, used, out, v) => fetchNasa(q, used, out, v.nasa_id),
+  commons: (q, used, out) => fetchCommons(q, used, out),
+  'commons-relaxed': (q, used, out) => fetchCommons(q, used, out, { minWidth: 900, minScore: 0.5 }),
+  openverse: (q, used, out) => fetchOpenverse(q, used, out),
+  pixabay: (q, used, out) => fetchPixabay(q, used, out),
+};
+
 async function fetchOne(v, used, out) {
-  let info = null;
-  if (v.type === 'nasa') info = await fetchNasa(v.query, used, out, v.nasa_id);
-  else if (v.type === 'stock') info = (await fetchPixabay(v.query, used, out)) || (await fetchOpenverse(v.query, used, out));
-  else info = (await fetchCommons(v.query, used, out)) || (await fetchOpenverse(v.query, used, out));
-  if (!info && !v.nasa_id && v.query.split(' ').length > 3) { // thử lại với truy vấn ngắn hơn
-    const short = v.query.split(' ').slice(0, 3).join(' ');
-    info = v.type === 'nasa' ? await fetchNasa(short, used, out) : v.type === 'stock' ? await fetchPixabay(short, used, out) : await fetchCommons(short, used, out);
+  const order = (SOURCE_ORDER[v.type] || []).filter(k => SOURCES[k]);
+  if (v.nasa_id) return fetchNasa(v.query, used, out, v.nasa_id); // ảnh đã ghim luôn thắng
+  for (const k of order) {
+    const info = await SOURCES[k](v.query, used, out, v);
+    if (info) return info;
   }
-  return info;
+  if (v.query.split(' ').length > 3) { // thử lại với truy vấn ngắn hơn ở nguồn chính
+    const short = v.query.split(' ').slice(0, 3).join(' ');
+    return SOURCES[order[0]](short, used, out, {});
+  }
+  return null;
 }
 
 /**
  * @param {string} dir thư mục video
  * @param {{onProgress?: (p:number, msg:string)=>void, onlyMissing?: boolean}} opts
  */
-async function fetchForVideo(dir, { onProgress = () => {}, onlyMissing = true } = {}) {
+async function fetchForVideo(dir, { onProgress = () => {}, onlyMissing = true, ai = true } = {}) {
   const script = JSON.parse(fs.readFileSync(path.join(dir, 'script.json'), 'utf8'));
   const imgDir = path.join(dir, 'images'); fs.mkdirSync(imgDir, { recursive: true });
   const credFile = path.join(dir, 'credits.json');
@@ -216,9 +232,22 @@ async function fetchForVideo(dir, { onProgress = () => {}, onlyMissing = true } 
     else { missing.push(i + 1); credits.push({ scene: i + 1, type: v.type, query: v.query, missing: true }); }
     await sleep(300);
   }
+  // Cảnh đời thường không có ảnh miễn phí hợp lệ → tranh minh hoạ AI (một lô, nạp mô hình một lần)
+  const aigen = require('./aigen');
+  const aiScenes = missing.filter(n => SOURCE_ORDER[script.scenes[n - 1].visual.type]?.includes('ai'));
+  if (ai && aiScenes.length && aigen.available()) {
+    const jobs = aiScenes.map(n => ({ scene: n, out: path.join(imgDir, `scene${String(n).padStart(2, '0')}.jpg`), prompt: aigen.buildPrompt(script.scenes[n - 1], script.channel), seed: 1000 + n }));
+    const made = await aigen.generate(jobs, (p, m) => onProgress(0.5 + p / 2, m));
+    for (const j of jobs.filter(x => made.includes(x.scene))) {
+      const k = credits.findIndex(c => c.scene === j.scene);
+      const { w, h } = imageSize(j.out);
+      credits[k] = { scene: j.scene, type: script.scenes[j.scene - 1].visual.type, query: script.scenes[j.scene - 1].visual.query, file: path.relative(dir, j.out), ...aigen.creditFor(j), width: w, height: h };
+      missing.splice(missing.indexOf(j.scene), 1);
+    }
+  }
   fs.writeFileSync(credFile, JSON.stringify(credits, null, 2) + '\n');
   onProgress(1, missing.length ? `thiếu cảnh ${missing.join(', ')}` : 'đủ ảnh');
   return { ok: missing.length === 0, missing };
 }
 
-module.exports = { fetchForVideo, allowedLicense, matchScore, IMAGE_TYPES };
+module.exports = { fetchForVideo, fetchOne, allowedLicense, matchScore, IMAGE_TYPES, SOURCE_ORDER, ensureJpeg };

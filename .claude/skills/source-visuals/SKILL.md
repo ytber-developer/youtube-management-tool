@@ -44,6 +44,16 @@ npm run content -- slides <id>                     # re-render; missing visuals 
 
 Then open `slides/contact.jpg` (or the /content UI) and look at **every** slide.
 
+## Hand-picking an image (fastest way to fill a missing scene)
+
+```bash
+npm run content:search -- "goose bumps" --source commons --sheet <scratch>/s.jpg   # openverse | commons | nasa | all
+```
+Prints numbered candidates (allowed licenses only) with the pin line to paste, and `--sheet` renders numbered thumbnails — Read the sheet, pick by number. Then add the pin to the scene's `visual` and run `npm run content -- images <id>`:
+- `"nasa_id": "PIA12345"` · `"commons": "File:Goose bumps.jpg"` · `"openverse_id": "<uuid>"`
+
+Tips: short concrete queries (2–3 words) work best; Commons for medical terms ("cutis anserina", "rhinovirus"); Openverse for everyday life; NASA for space. Batch several searches in one Bash call, then view the sheets. Openverse sometimes returns 403 — retry later. Skip candidates with nudity, readable text/brands, celebrities or watermarks.
+
 ## Fixing a wrong image
 
 1. Make `visual.query` concrete and visual: "astronaut floating outside space station", not "weightlessness".

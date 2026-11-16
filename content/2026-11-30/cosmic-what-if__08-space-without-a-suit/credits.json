@@ -29,7 +29,15 @@
     "scene": 3,
     "type": "nasa",
     "query": "spacesuit layers cutaway",
-    "missing": true
+    "file": "images/scene03.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:EXTRAVEHICULAR (EV) (CUTAWAY VIEW) - SPACESUIT - MSC (s65-04970).jpg",
+    "title": "EXTRAVEHICULAR (EV) (CUTAWAY VIEW) - SPACESUIT - MSC (s65-04970)",
+    "credit": "NASA Johnson Space Center / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:EXTRAVEHICULAR_(EV)_(CUTAWAY_VIEW)_-_SPACESUIT_-_MSC_(s65-04970).jpg",
+    "width": 1920,
+    "height": 1537
   },
   {
     "scene": 4,

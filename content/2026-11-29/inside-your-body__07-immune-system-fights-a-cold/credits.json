@@ -17,7 +17,15 @@
     "scene": 2,
     "type": "science",
     "query": "rhinovirus illustration CDC",
-    "missing": true
+    "file": "images/scene02.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:HD.17.025 (12639376143).jpg",
+    "title": "HD.17.025 (12639376143)",
+    "credit": "ENERGY.GOV / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:HD.17.025_(12639376143).jpg",
+    "width": 1920,
+    "height": 1425
   },
   {
     "scene": 3,
@@ -73,7 +81,15 @@
     "scene": 8,
     "type": "stock",
     "query": "sick man in bed with tea",
-    "missing": true
+    "file": "images/scene08.jpg",
+    "source": "Openverse (flickr)",
+    "id": "7f056a69-b73a-405a-9702-cf94474a5fb7",
+    "title": "Jason sick in bed",
+    "credit": "merfam / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://www.flickr.com/photos/74288833@N00/3185716721",
+    "width": 1024,
+    "height": 768
   },
   {
     "scene": 9,
@@ -161,7 +177,15 @@
     "scene": 17,
     "type": "science",
     "query": "B lymphocyte illustration NIAID",
-    "missing": true
+    "file": "images/scene17.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Dividing B Cell (NIH BioArt 122 - 629225).png",
+    "title": "Dividing B Cell (NIH BioArt 122 - 629225)",
+    "credit": "Courtesy of NIAID Ryan Kissinger / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:Dividing_B_Cell_(NIH_BioArt_122_-_629225).png",
+    "width": 1581,
+    "height": 1113
   },
   {
     "scene": 18,
@@ -171,7 +195,15 @@
     "scene": 19,
     "type": "stock",
     "query": "healthy woman jogging in park",
-    "missing": true
+    "file": "images/scene19.jpg",
+    "source": "Openverse (flickr)",
+    "id": "a5959c72-aec5-4762-a8a8-0668864d5ef3",
+    "title": "Hyde Park Jogger",
+    "credit": "Waterford_Man / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://www.flickr.com/photos/47121377@N00/24162362020",
+    "width": 983,
+    "height": 878
   },
   {
     "scene": 20,

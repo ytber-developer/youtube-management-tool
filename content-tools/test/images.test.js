@@ -18,3 +18,11 @@ test('each visual type tries its free sources in order, NASA falls back to Commo
   assert.deepStrictEqual(SOURCE_ORDER.science, ['commons', 'commons-relaxed', 'openverse', 'ai']);
   assert.deepStrictEqual(SOURCE_ORDER.stock, ['pixabay', 'openverse', 'ai']);
 });
+
+test('a scene pinned to a Commons file or Openverse id uses that pin before any search', () => {
+  const { pinOf } = require('../lib/images');
+  assert.deepStrictEqual(pinOf({ type: 'stock', commons: 'File:Goose bumps.jpg' }), { source: 'commons', id: 'File:Goose bumps.jpg' });
+  assert.deepStrictEqual(pinOf({ type: 'stock', openverse_id: 'abc-123' }), { source: 'openverse', id: 'abc-123' });
+  assert.deepStrictEqual(pinOf({ type: 'nasa', nasa_id: 'PIA1' }), { source: 'nasa', id: 'PIA1' });
+  assert.strictEqual(pinOf({ type: 'stock', query: 'x' }), null);
+});

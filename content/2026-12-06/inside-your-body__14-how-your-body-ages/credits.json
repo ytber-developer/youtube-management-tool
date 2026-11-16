@@ -1,0 +1,274 @@
+[
+  {
+    "scene": 1,
+    "type": "stock",
+    "query": "elderly woman solving crossword puzzle",
+    "missing": true
+  },
+  {
+    "scene": 2,
+    "type": "stock",
+    "query": "many different clocks on wall",
+    "missing": true
+  },
+  {
+    "scene": 3,
+    "type": "science",
+    "query": "human cells microscopy nucleus stained",
+    "file": "images/scene03.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Characterization of cultured human airway epithelial basal cells.png",
+    "title": "Characterization of cultured human airway epithelial basal cells",
+    "credit": "Hackett NR, Shaykhiev R, Walters MS, Wang R, Zwick RK, Ferris B, et al. / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Characterization_of_cultured_human_airway_epithelial_basal_cells.png",
+    "width": 1920,
+    "height": 1454
+  },
+  {
+    "scene": 4,
+    "type": "science",
+    "query": "DNA double helix structure illustration",
+    "missing": true
+  },
+  {
+    "scene": 5,
+    "type": "science",
+    "query": "telomeres chromosomes fluorescent image",
+    "missing": true
+  },
+  {
+    "scene": 6,
+    "type": "stock",
+    "query": "shoelace aglet close up",
+    "missing": true
+  },
+  {
+    "scene": 7,
+    "type": "diagram"
+  },
+  {
+    "scene": 8,
+    "type": "science",
+    "query": "mitochondria electron micrograph",
+    "file": "images/scene08.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:A transmission electron micrograph showing a primary spermatocyte at late zygotene-early pachytene stage of the first meiotic division.png",
+    "title": "A transmission electron micrograph showing a primary spermatocyte at late zygotene-early pachytene stage of the first meiotic division",
+    "credit": "Lu Y, Aitken RJ, Lin M / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:A_transmission_electron_micrograph_showing_a_primary_spermatocyte_at_late_zygotene-early_pachytene_stage_of_the_first_meiotic_division.png",
+    "width": 1920,
+    "height": 1306
+  },
+  {
+    "scene": 9,
+    "type": "stock",
+    "query": "three generations family portrait",
+    "missing": true
+  },
+  {
+    "scene": 10,
+    "type": "stock",
+    "query": "young adults playing fast video game",
+    "missing": true
+  },
+  {
+    "scene": 11,
+    "type": "stock",
+    "query": "person juggling balls",
+    "missing": true
+  },
+  {
+    "scene": 12,
+    "type": "science",
+    "query": "skeletal muscle cross section histology",
+    "file": "images/scene12.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Muscle Tissue Cross Section Whole Skeletal Muscle (41915835902).jpg",
+    "title": "Muscle Tissue Cross Section Whole Skeletal Muscle (41915835902)",
+    "credit": "Berkshire Community College Bioscience Image Library / CC0",
+    "license": "CC0",
+    "url": "https://commons.wikimedia.org/wiki/File:Muscle_Tissue_Cross_Section_Whole_Skeletal_Muscle_(41915835902).jpg",
+    "width": 1920,
+    "height": 1082
+  },
+  {
+    "scene": 13,
+    "type": "stock",
+    "query": "older man lifting light dumbbells gym",
+    "missing": true
+  },
+  {
+    "scene": 14,
+    "type": "stock",
+    "query": "man holding phone at arm's length squinting",
+    "missing": true
+  },
+  {
+    "scene": 15,
+    "type": "science",
+    "query": "human eye anatomy lens cross section",
+    "file": "images/scene15.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Eye orbit anatomy anterior2.jpg",
+    "title": "Eye orbit anatomy anterior2",
+    "credit": "Patrick J. Lynch, medical illustrator / CC BY 2.5",
+    "license": "CC BY 2.5",
+    "url": "https://commons.wikimedia.org/wiki/File:Eye_orbit_anatomy_anterior2.jpg",
+    "width": 1920,
+    "height": 1259
+  },
+  {
+    "scene": 16,
+    "type": "stock",
+    "query": "two middle aged friends talking coffee",
+    "missing": true
+  },
+  {
+    "scene": 17,
+    "type": "science",
+    "query": "bone trabecular structure micro CT",
+    "missing": true
+  },
+  {
+    "scene": 18,
+    "type": "diagram"
+  },
+  {
+    "scene": 19,
+    "type": "science",
+    "query": "knee joint anatomy cartilage illustration",
+    "file": "images/scene19.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:917 Knee Joint.jpg",
+    "title": "917 Knee Joint",
+    "credit": "OpenStax College / CC BY 3.0",
+    "license": "CC BY 3.0",
+    "url": "https://commons.wikimedia.org/wiki/File:917_Knee_Joint.jpg",
+    "width": 1920,
+    "height": 1472
+  },
+  {
+    "scene": 20,
+    "type": "science",
+    "query": "human heart anatomy illustration",
+    "missing": true
+  },
+  {
+    "scene": 21,
+    "type": "diagram"
+  },
+  {
+    "scene": 22,
+    "type": "science",
+    "query": "aorta arteries anatomy illustration",
+    "missing": true
+  },
+  {
+    "scene": 23,
+    "type": "science",
+    "query": "skin layers cross section illustration",
+    "file": "images/scene23.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Skin- epidermis and dermis.jpg",
+    "title": "Skin- epidermis and dermis",
+    "credit": "Unknown Illustrator / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:Skin-_epidermis_and_dermis.jpg",
+    "width": 1920,
+    "height": 1546
+  },
+  {
+    "scene": 24,
+    "type": "stock",
+    "query": "older woman wrapped in blanket with tea",
+    "missing": true
+  },
+  {
+    "scene": 25,
+    "type": "stock",
+    "query": "older hands in sunlight close up",
+    "missing": true
+  },
+  {
+    "scene": 26,
+    "type": "science",
+    "query": "inner ear cochlea anatomy illustration",
+    "file": "images/scene26.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Anatomy of the ear, John Cunningham Saunders, 1806 Wellcome L0035338.jpg",
+    "title": "Anatomy of the ear, John Cunningham Saunders, 1806",
+    "credit": "Unknown author / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Anatomy_of_the_ear,_John_Cunningham_Saunders,_1806_Wellcome_L0035338.jpg",
+    "width": 1920,
+    "height": 2785
+  },
+  {
+    "scene": 27,
+    "type": "science",
+    "query": "human brain illustration top view",
+    "file": "images/scene27.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Brain; dissection showing the top of the brain, with the dur Wellcome V0008411.jpg",
+    "title": "Brain: dissection showing the top of the brain, with the dur",
+    "credit": "Unknown author / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Brain;_dissection_showing_the_top_of_the_brain,_with_the_dur_Wellcome_V0008411.jpg",
+    "width": 1920,
+    "height": 1938
+  },
+  {
+    "scene": 28,
+    "type": "science",
+    "query": "brain MRI comparison young older",
+    "missing": true
+  },
+  {
+    "scene": 29,
+    "type": "stock",
+    "query": "older couple talking with doctor",
+    "missing": true
+  },
+  {
+    "scene": 30,
+    "type": "stock",
+    "query": "older man reading newspaper library",
+    "missing": true
+  },
+  {
+    "scene": 31,
+    "type": "diagram"
+  },
+  {
+    "scene": 32,
+    "type": "stock",
+    "query": "smiling older friends laughing together",
+    "missing": true
+  },
+  {
+    "scene": 33,
+    "type": "stock",
+    "query": "elderly couple walking in park",
+    "missing": true
+  },
+  {
+    "scene": 34,
+    "type": "diagram"
+  },
+  {
+    "scene": 35,
+    "type": "diagram"
+  },
+  {
+    "scene": 36,
+    "type": "stock",
+    "query": "grandparent and grandchild laughing outdoors",
+    "missing": true
+  },
+  {
+    "scene": 37,
+    "type": "outro"
+  }
+]

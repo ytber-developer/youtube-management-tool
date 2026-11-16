@@ -1,0 +1,168 @@
+[
+  {
+    "scene": 1,
+    "type": "stock",
+    "query": "vanilla pudding dessert spoon close up",
+    "missing": true
+  },
+  {
+    "scene": 2,
+    "type": "stock",
+    "query": "sugar cubes syrup honey jar table",
+    "missing": true
+  },
+  {
+    "scene": 3,
+    "type": "stock",
+    "query": "soda cans and pastries on table",
+    "missing": true
+  },
+  {
+    "scene": 4,
+    "type": "stock",
+    "query": "reading nutrition facts label grocery store",
+    "missing": true
+  },
+  {
+    "scene": 5,
+    "type": "diagram"
+  },
+  {
+    "scene": 6,
+    "type": "stock",
+    "query": "spoonful of white sugar close up",
+    "file": "images/scene06.jpg",
+    "source": "Openverse (wordpress)",
+    "id": "922e7281-b34a-4587-8fae-7d09795d6eea",
+    "title": "A close-up of a cappuccino with foam art in a white mug, resting on a small wooden tray with a spoon and two brown sugar packets.",
+    "credit": "Alina Kakshapati / CC0",
+    "license": "CC0",
+    "url": "https://wordpress.org/photos/photo/18068db8e4/",
+    "width": 2048,
+    "height": 1536
+  },
+  {
+    "scene": 7,
+    "type": "science",
+    "query": "Streptococcus mutans bacteria electron micrograph",
+    "missing": true
+  },
+  {
+    "scene": 8,
+    "type": "diagram"
+  },
+  {
+    "scene": 9,
+    "type": "diagram"
+  },
+  {
+    "scene": 10,
+    "type": "science",
+    "query": "pancreas anatomy illustration",
+    "file": "images/scene10.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Pancreas (1).jpg",
+    "title": "Pancreas (1)",
+    "credit": "Unknown Illustrator / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:Pancreas_(1).jpg",
+    "width": 1920,
+    "height": 1127
+  },
+  {
+    "scene": 11,
+    "type": "stock",
+    "query": "scientist pipette laboratory research",
+    "missing": true
+  },
+  {
+    "scene": 12,
+    "type": "science",
+    "query": "human liver anatomy illustration",
+    "file": "images/scene12.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Liver Lobule (NIH BioArt 565).png",
+    "title": "Liver Lobule (NIH BioArt 565)",
+    "credit": "NIH NIAID / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Liver_Lobule_(NIH_BioArt_565).png",
+    "width": 1523,
+    "height": 816
+  },
+  {
+    "scene": 13,
+    "type": "diagram"
+  },
+  {
+    "scene": 14,
+    "type": "stock",
+    "query": "scientific journal papers on desk",
+    "missing": true
+  },
+  {
+    "scene": 15,
+    "type": "diagram"
+  },
+  {
+    "scene": 16,
+    "type": "stock",
+    "query": "doctor measuring blood pressure patient",
+    "missing": true
+  },
+  {
+    "scene": 17,
+    "type": "science",
+    "query": "human tongue taste buds micrograph",
+    "file": "images/scene17.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:1402 The Tongue.jpg",
+    "title": "1402 The Tongue",
+    "credit": "OpenStax / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:1402_The_Tongue.jpg",
+    "width": 1920,
+    "height": 1615
+  },
+  {
+    "scene": 18,
+    "type": "stock",
+    "query": "glass of soda cola ice",
+    "missing": true
+  },
+  {
+    "scene": 19,
+    "type": "stock",
+    "query": "raspberry drink glass",
+    "missing": true
+  },
+  {
+    "scene": 20,
+    "type": "stock",
+    "query": "person reaching for cookie jar",
+    "missing": true
+  },
+  {
+    "scene": 21,
+    "type": "diagram"
+  },
+  {
+    "scene": 22,
+    "type": "diagram"
+  },
+  {
+    "scene": 23,
+    "type": "stock",
+    "query": "family eating fresh fruit kitchen",
+    "missing": true
+  },
+  {
+    "scene": 24,
+    "type": "stock",
+    "query": "dietitian consultation office",
+    "missing": true
+  },
+  {
+    "scene": 25,
+    "type": "outro"
+  }
+]

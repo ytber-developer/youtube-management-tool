@@ -1,0 +1,244 @@
+[
+  {
+    "scene": 1,
+    "type": "stock",
+    "query": "old family photos childhood album",
+    "missing": true
+  },
+  {
+    "scene": 2,
+    "type": "science",
+    "query": "human brain lateral view illustration",
+    "file": "images/scene02.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Brain Lateral (NIH BioArt 60).png",
+    "title": "Brain Lateral (NIH BioArt 60)",
+    "credit": "Courtesy of NIAID Ryan Kissinger / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:Brain_Lateral_(NIH_BioArt_60).png",
+    "width": 1716,
+    "height": 1376
+  },
+  {
+    "scene": 3,
+    "type": "stock",
+    "query": "white laboratory rat",
+    "file": "images/scene03.jpg",
+    "source": "Openverse (wikimedia)",
+    "id": "29330b50-78eb-4cc2-8899-d2b8289851e4",
+    "title": "Laboratory (WRAMC DPW 09-3341-1), National Museum of Health and Medicine (3615116878)",
+    "credit": "National Museum of Health and Medicine / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://commons.wikimedia.org/w/index.php?curid=95962657",
+    "width": 1905,
+    "height": 1282
+  },
+  {
+    "scene": 4,
+    "type": "diagram"
+  },
+  {
+    "scene": 5,
+    "type": "diagram"
+  },
+  {
+    "scene": 6,
+    "type": "stock",
+    "query": "people meeting at party handshake",
+    "missing": true
+  },
+  {
+    "scene": 7,
+    "type": "science",
+    "query": "hippocampus anatomy illustration brain",
+    "file": "images/scene07.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:XBio illustration – Hippocampus.png",
+    "title": "XBio illustration – Hippocampus",
+    "credit": "explorebiology / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:XBio_illustration_%E2%80%93_Hippocampus.png",
+    "width": 1800,
+    "height": 1200
+  },
+  {
+    "scene": 8,
+    "type": "stock",
+    "query": "library card catalog drawers",
+    "missing": true
+  },
+  {
+    "scene": 9,
+    "type": "stock",
+    "query": "vintage hospital corridor black and white",
+    "missing": true
+  },
+  {
+    "scene": 10,
+    "type": "diagram"
+  },
+  {
+    "scene": 11,
+    "type": "stock",
+    "query": "hand drawing star with pencil",
+    "missing": true
+  },
+  {
+    "scene": 12,
+    "type": "diagram"
+  },
+  {
+    "scene": 13,
+    "type": "stock",
+    "query": "child learning to ride bicycle",
+    "missing": true
+  },
+  {
+    "scene": 14,
+    "type": "science",
+    "query": "prefrontal cortex brain illustration",
+    "file": "images/scene14.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Key brain regions in the central autonomic network (CAN).png",
+    "title": "Key brain regions in the central autonomic network (CAN)",
+    "credit": "Martin Iniguez, Antonio Jimenez-Marin, Asier Erramuzpe, Marian Acera, Beatriz Tijero, Ane Murueta-Goyena, Rocio Del Pino, Tamara Fernandez, Mar Carmona‑Abellan, Alberto Cabrera-Zubizarreta, Juan Carlos Gómez‑Esteban, Jesus M. Cortes & Inigo Gabilondo / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Key_brain_regions_in_the_central_autonomic_network_(CAN).png",
+    "width": 1345,
+    "height": 511
+  },
+  {
+    "scene": 15,
+    "type": "science",
+    "query": "neurons fluorescence microscopy brain cells",
+    "file": "images/scene15.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Two-photon microscopy of in vivo brain function.jpg",
+    "title": "Two-photon microscopy of in vivo brain function",
+    "credit": "Armen R Kherlopian, Ting Song, Qi Duan, Mathew A Neimark, Ming J Po, John K Gohagan and Andrew F Laine / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Two-photon_microscopy_of_in_vivo_brain_function.jpg",
+    "width": 1200,
+    "height": 873
+  },
+  {
+    "scene": 16,
+    "type": "stock",
+    "query": "laboratory mouse in researcher's gloved hands",
+    "missing": true
+  },
+  {
+    "scene": 17,
+    "type": "diagram"
+  },
+  {
+    "scene": 18,
+    "type": "science",
+    "query": "dentate gyrus hippocampus neurons microscopy",
+    "missing": true
+  },
+  {
+    "scene": 19,
+    "type": "stock",
+    "query": "person falling asleep reading book in bed",
+    "missing": true
+  },
+  {
+    "scene": 20,
+    "type": "diagram"
+  },
+  {
+    "scene": 21,
+    "type": "stock",
+    "query": "mouse sleeping curled up",
+    "missing": true
+  },
+  {
+    "scene": 22,
+    "type": "science",
+    "query": "synapse electron micrograph",
+    "file": "images/scene22.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:NFDI4BIOIMAGE Calendar September 2025.png",
+    "title": "NFDI4BIOIMAGE Calendar September 2025",
+    "credit": "Faber-Zuschratter, Heidi; Stöter, Torsten; Zuschratter, Werner (ORCID: 0000-0002-9845-6393); Hartig, Roland (ORCID: 0000-0002-3706-7458); Wilke, Markus / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:NFDI4BIOIMAGE_Calendar_September_2025.png",
+    "width": 1920,
+    "height": 1436
+  },
+  {
+    "scene": 23,
+    "type": "stock",
+    "query": "editing paper draft red pen",
+    "missing": true
+  },
+  {
+    "scene": 24,
+    "type": "stock",
+    "query": "person looking at old photograph nostalgic",
+    "missing": true
+  },
+  {
+    "scene": 25,
+    "type": "diagram"
+  },
+  {
+    "scene": 26,
+    "type": "stock",
+    "query": "two toy cars collision",
+    "missing": true
+  },
+  {
+    "scene": 27,
+    "type": "diagram"
+  },
+  {
+    "scene": 28,
+    "type": "stock",
+    "query": "empty courtroom witness stand",
+    "missing": true
+  },
+  {
+    "scene": 29,
+    "type": "stock",
+    "query": "old television in living room",
+    "missing": true
+  },
+  {
+    "scene": 30,
+    "type": "stock",
+    "query": "blurred photograph faded memory",
+    "missing": true
+  },
+  {
+    "scene": 31,
+    "type": "stock",
+    "query": "person looking at city skyline thinking future",
+    "missing": true
+  },
+  {
+    "scene": 32,
+    "type": "science",
+    "query": "brain connectome neural pathways illustration",
+    "file": "images/scene32.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Connectome extraction procedure.jpg",
+    "title": "Connectome extraction procedure",
+    "credit": "Hagmann P, Cammoun L, Gigandet X, Meuli R, Honey CJ, et al / CC BY 3.0",
+    "license": "CC BY 3.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Connectome_extraction_procedure.jpg",
+    "width": 1920,
+    "height": 1644
+  },
+  {
+    "scene": 33,
+    "type": "stock",
+    "query": "child running on beach sunset",
+    "missing": true
+  },
+  {
+    "scene": 34,
+    "type": "outro"
+  }
+]

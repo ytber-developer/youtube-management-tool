@@ -6,47 +6,86 @@
   "title": "What Happens to Your Body When You Hold Your Breath?",
   "thumbnail_text": "HOLD YOUR BREATH",
   "description": "Your lungs hold enough oxygen for about four minutes, so why do most people give up after one? The answer is carbon dioxide, a stubborn muscle, and a reflex you share with diving mammals.\n\nSources:\n- Frontiers in Physiology (2021), Large Lung Volumes Delay the Onset of the Physiological Breaking Point During Simulated Diving: https://pmc.ncbi.nlm.nih.gov/articles/PMC8511405\n- Scientific American, The Limits of Breath Holding: https://scientificamerican.com/article/the-limits-of-breath-holding\n\nThis video is for educational purposes only and is not medical advice.",
-  "tags": ["holding your breath", "breath hold", "human body", "carbon dioxide", "diaphragm", "diving reflex", "respiratory system", "physiology", "science explained", "inside your body"],
+  "tags": [
+    "holding your breath",
+    "breath hold",
+    "human body",
+    "carbon dioxide",
+    "diaphragm",
+    "diving reflex",
+    "respiratory system",
+    "physiology",
+    "science explained",
+    "inside your body"
+  ],
   "sources": [
-    { "title": "Frontiers in Physiology (2021) - Large Lung Volumes Delay the Onset of the Physiological Breaking Point During Simulated Diving", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8511405" },
-    { "title": "Scientific American - The Limits of Breath Holding", "url": "https://scientificamerican.com/article/the-limits-of-breath-holding" }
+    {
+      "title": "Frontiers in Physiology (2021) - Large Lung Volumes Delay the Onset of the Physiological Breaking Point During Simulated Diving",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8511405"
+    },
+    {
+      "title": "Scientific American - The Limits of Breath Holding",
+      "url": "https://scientificamerican.com/article/the-limits-of-breath-holding"
+    }
   ],
   "scenes": [
     {
       "narration": "Take a deep breath and hold it. Right now, your body is already starting a countdown, and the alarm it's waiting for might surprise you.",
       "headline": "HOLD YOUR <em>BREATH</em>",
       "sub": "Your body starts a countdown",
-      "visual": { "type": "stock", "query": "woman holding breath puffed cheeks", "note": "person with puffed cheeks holding their breath" }
+      "visual": {
+        "type": "stock",
+        "query": "woman holding breath puffed cheeks",
+        "note": "person with puffed cheeks holding their breath"
+      }
     },
     {
       "narration": "Your lungs hold enough oxygen to keep you going for about four minutes. Yet most people give up after roughly one. So if you're not out of oxygen, what makes you quit?",
       "headline": "FOUR MINUTES OF <em>OXYGEN</em>",
       "sub": "Most people quit after one",
-      "visual": { "type": "science", "query": "human lungs anatomy illustration", "note": "clean anatomical illustration of the lungs" }
+      "visual": {
+        "type": "science",
+        "query": "human lungs anatomy illustration",
+        "note": "clean anatomical illustration of the lungs"
+      }
     },
     {
       "narration": "Every second, your cells keep making carbon dioxide, and it builds up in your blood. Meanwhile, your breathing rhythm never stops. You're fighting it by holding your diaphragm still, and that strained muscle keeps sending louder and louder signals.",
       "headline": "THE REAL ALARM: <em>CARBON DIOXIDE</em>",
       "sub": "Plus a diaphragm that wants to move",
-      "visual": { "type": "diagram", "spec": "timeline of a breath hold: carbon dioxide level rising, oxygen level falling slowly, diaphragm signals growing, ending at a marked breaking point" }
+      "visual": {
+        "type": "diagram",
+        "spec": "timeline of a breath hold: carbon dioxide level rising, oxygen level falling slowly, diaphragm signals growing, ending at a marked breaking point"
+      }
     },
     {
       "narration": "Here's a twist. Dip your face in water while you hold your breath, and your heart slows down. It's called the diving response, a reflex thought to help your body save oxygen.",
       "headline": "YOUR HEART <em>SLOWS DOWN</em>",
       "sub": "The diving response",
-      "visual": { "type": "stock", "query": "swimmer underwater holding breath", "note": "calm swimmer underwater in a clear pool" }
+      "visual": {
+        "type": "stock",
+        "query": "swimmer underwater holding breath",
+        "note": "calm swimmer underwater in a clear pool"
+      }
     },
     {
       "narration": "Finally, you hit the breaking point. Your automatic rhythm wins, and air rushes back in. On dry land, for healthy adults, that happens long before oxygen runs dangerously low.",
       "headline": "THE <em>BREAKING POINT</em>",
       "sub": "Your automatic rhythm takes over",
-      "visual": { "type": "stock", "query": "man exhaling deep breath outdoors", "note": "person taking a big relieved breath" }
+      "visual": {
+        "type": "stock",
+        "query": "man exhaling deep breath outdoors",
+        "note": "person taking a big relieved breath",
+        "openverse_id": "9021a5e8-8f2f-45f1-a9dc-d87b03a9cbc2"
+      }
     },
     {
       "narration": "Follow Inside Your Body for more of the science of you.",
       "headline": "",
       "sub": "",
-      "visual": { "type": "outro" }
+      "visual": {
+        "type": "outro"
+      }
     }
   ]
 }

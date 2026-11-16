@@ -85,7 +85,15 @@
     "scene": 9,
     "type": "science",
     "query": "human digestive system anatomy illustration",
-    "missing": true
+    "file": "images/scene09.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Grant 1962 132.png",
+    "title": "Grant 1962 132",
+    "credit": "Grant, John Charles Boileau / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:Grant_1962_132.png",
+    "width": 1920,
+    "height": 1414
   },
   {
     "scene": 10,
@@ -133,7 +141,15 @@
     "scene": 13,
     "type": "stock",
     "query": "barista pouring drip coffee",
-    "missing": true
+    "file": "images/scene13.jpg",
+    "source": "Openverse (flickr)",
+    "id": "1583ed01-6553-4158-878b-087261c01550",
+    "title": "Pour Over Coffee",
+    "credit": "Zach_Woolf / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://www.flickr.com/photos/98088988@N07/22633805704",
+    "width": 1024,
+    "height": 683
   },
   {
     "scene": 14,
@@ -153,7 +169,15 @@
     "scene": 15,
     "type": "stock",
     "query": "empty coffee mug evening window",
-    "missing": true
+    "file": "images/scene15.jpg",
+    "source": "Openverse (flickr)",
+    "id": "0886047e-30f0-44f1-bb2f-08743e5fc5f8",
+    "title": "Coffee for one",
+    "credit": "jronaldlee / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://www.flickr.com/photos/37176760@N06/4657522179",
+    "width": 1024,
+    "height": 785
   },
   {
     "scene": 16,

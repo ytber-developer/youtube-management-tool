@@ -1,0 +1,180 @@
+[
+  {
+    "scene": 1,
+    "type": "stock",
+    "query": "person hand on chest heartbeat",
+    "missing": true
+  },
+  {
+    "scene": 2,
+    "type": "stock",
+    "query": "backyard swimming pool water",
+    "file": "images/scene02.jpg",
+    "source": "Openverse (wordpress)",
+    "id": "87acb23c-cb38-4c75-9bf7-fb3f63629a06",
+    "title": "Swimming Pool in a backyard with some chairs, table and a cooler.",
+    "credit": "Kuldeep / CC0",
+    "license": "CC0",
+    "url": "https://wordpress.org/photos/photo/7246594b85/",
+    "width": 2048,
+    "height": 1536
+  },
+  {
+    "scene": 3,
+    "type": "science",
+    "query": "human circulatory system arteries veins illustration",
+    "file": "images/scene03.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Anatomical diagram depicting the veins Wellcome L0032947.jpg",
+    "title": "Anatomical diagram depicting the veins",
+    "credit": "Unknown author / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Anatomical_diagram_depicting_the_veins_Wellcome_L0032947.jpg",
+    "width": 1920,
+    "height": 2577
+  },
+  {
+    "scene": 4,
+    "type": "science",
+    "query": "heart position in chest anatomy illustration",
+    "missing": true
+  },
+  {
+    "scene": 5,
+    "type": "diagram"
+  },
+  {
+    "scene": 6,
+    "type": "diagram"
+  },
+  {
+    "scene": 7,
+    "type": "diagram"
+  },
+  {
+    "scene": 8,
+    "type": "diagram"
+  },
+  {
+    "scene": 9,
+    "type": "science",
+    "query": "heart cross section ventricle wall anatomy",
+    "missing": true
+  },
+  {
+    "scene": 10,
+    "type": "science",
+    "query": "heart valves anatomy illustration",
+    "missing": true
+  },
+  {
+    "scene": 11,
+    "type": "diagram"
+  },
+  {
+    "scene": 12,
+    "type": "stock",
+    "query": "doctor stethoscope listening heart",
+    "missing": true
+  },
+  {
+    "scene": 13,
+    "type": "stock",
+    "query": "metronome close up",
+    "missing": true
+  },
+  {
+    "scene": 14,
+    "type": "diagram"
+  },
+  {
+    "scene": 15,
+    "type": "diagram"
+  },
+  {
+    "scene": 16,
+    "type": "diagram"
+  },
+  {
+    "scene": 17,
+    "type": "science",
+    "query": "cardiac conduction system Purkinje fibers diagram",
+    "missing": true
+  },
+  {
+    "scene": 18,
+    "type": "stock",
+    "query": "smartwatch heart rate display wrist",
+    "missing": true
+  },
+  {
+    "scene": 19,
+    "type": "science",
+    "query": "heart muscle tissue micrograph cardiomyocytes",
+    "missing": true
+  },
+  {
+    "scene": 20,
+    "type": "science",
+    "query": "coronary arteries anatomy illustration",
+    "file": "images/scene20.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Blausen 0152 CABG All.png",
+    "title": "Blausen 0152 CABG All",
+    "credit": "BruceBlaus. When using this image in external sources it can be cited as: Blausen.com staff (2014). \"Medical gallery of Blausen Medical 2014\". WikiJournal of Medicine 1 (2). DOI:10.15347/wjm/2014.010. ISSN 2002-4436. / CC BY 3.0",
+    "license": "CC BY 3.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Blausen_0152_CABG_All.png",
+    "width": 1920,
+    "height": 960
+  },
+  {
+    "scene": 21,
+    "type": "diagram"
+  },
+  {
+    "scene": 22,
+    "type": "stock",
+    "query": "old laboratory archive vintage science",
+    "missing": true
+  },
+  {
+    "scene": 23,
+    "type": "diagram"
+  },
+  {
+    "scene": 24,
+    "type": "science",
+    "query": "DNA double helix illustration",
+    "missing": true
+  },
+  {
+    "scene": 25,
+    "type": "stock",
+    "query": "pregnancy ultrasound screen heartbeat",
+    "missing": true
+  },
+  {
+    "scene": 26,
+    "type": "science",
+    "query": "human heart anatomical illustration front view",
+    "file": "images/scene26.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Internal organs, from the Daoist Canon, 15th century Chinese Wellcome L0034716.jpg",
+    "title": "Internal organs, from the Daoist Canon, 15th century Chinese",
+    "credit": "Unknown author / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Internal_organs,_from_the_Daoist_Canon,_15th_century_Chinese_Wellcome_L0034716.jpg",
+    "width": 1920,
+    "height": 1651
+  },
+  {
+    "scene": 27,
+    "type": "stock",
+    "query": "fingers checking pulse on wrist",
+    "missing": true
+  },
+  {
+    "scene": 28,
+    "type": "outro"
+  }
+]

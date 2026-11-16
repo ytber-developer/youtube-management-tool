@@ -3,7 +3,15 @@
     "scene": 1,
     "type": "stock",
     "query": "goosebumps on arm close up",
-    "missing": true
+    "file": "images/scene01.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Goose bumps.jpg",
+    "title": "Goose bumps",
+    "credit": "EverJean / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Goose_bumps.jpg",
+    "width": 1280,
+    "height": 960
   },
   {
     "scene": 2,
@@ -27,7 +35,15 @@
     "scene": 4,
     "type": "stock",
     "query": "fluffy bird puffed feathers winter",
-    "missing": true
+    "file": "images/scene04.jpg",
+    "source": "Openverse (flickr)",
+    "id": "6451bd03-fecb-48ea-b45e-71a063eb1c36",
+    "title": "MN_Winter Time",
+    "credit": "vastateparksstaff / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://www.flickr.com/photos/37922399@N05/32045348853",
+    "width": 1024,
+    "height": 681
   },
   {
     "scene": 5,
@@ -75,7 +91,15 @@
     "scene": 8,
     "type": "science",
     "query": "hair follicle microscope image",
-    "missing": true
+    "file": "images/scene08.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Blausen 0437 HairFollicleAnatomy.png",
+    "title": "Blausen 0437 HairFollicleAnatomy",
+    "credit": "BruceBlaus / CC BY 3.0",
+    "license": "CC BY 3.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Blausen_0437_HairFollicleAnatomy.png",
+    "width": 750,
+    "height": 1500
   },
   {
     "scene": 9,
@@ -85,13 +109,29 @@
     "scene": 10,
     "type": "stock",
     "query": "mouse in laboratory",
-    "missing": true
+    "file": "images/scene10.jpg",
+    "source": "Openverse (rawpixel)",
+    "id": "52539c67-fa27-4f6e-95c5-d781c8a94de6",
+    "title": "Laboratory mouse in testing",
+    "credit": "Unknown author / CC0",
+    "license": "CC0",
+    "url": "https://www.rawpixel.com/image/6082159/mouse",
+    "width": 1024,
+    "height": 683
   },
   {
     "scene": 11,
     "type": "stock",
     "query": "man looking at his forearm",
-    "missing": true
+    "file": "images/scene11.jpg",
+    "source": "Openverse (flickr)",
+    "id": "4a650d95-aafc-4a76-b6af-145e9af83183",
+    "title": "Rowley's arm hair",
+    "credit": "Jaymis / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://www.flickr.com/photos/49048289@N00/2957402640",
+    "width": 1024,
+    "height": 681
   },
   {
     "scene": 12,
@@ -111,7 +151,15 @@
     "scene": 13,
     "type": "stock",
     "query": "goosebumps skin music concert",
-    "missing": true
+    "file": "images/scene13.jpg",
+    "source": "Openverse (flickr)",
+    "id": "68ff9b1a-4e58-4b19-b4bb-d7ee70e781e2",
+    "title": "Hands in the air - in concert ( #CC )",
+    "credit": "marfis75 / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://www.flickr.com/photos/45409431@N00/3272079115",
+    "width": 1024,
+    "height": 683
   },
   {
     "scene": 14,

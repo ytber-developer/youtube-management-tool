@@ -145,7 +145,15 @@
     "scene": 14,
     "type": "nasa",
     "query": "dark nebula Bok globule",
-    "missing": true
+    "file": "images/scene14.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:\"Finger of God\" Bok globule in the Carina Nebula.jpg",
+    "title": "\"Finger of God\" Bok globule in the Carina Nebula",
+    "credit": "NASA, ESA, N. Smith (University of California, Berkeley), and The Hubble Heritage Team (STScI/AURA); credit for CTIO Image: N. Smith (University of California, Berkeley) and NOAO/AURA/NSF / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:%22Finger_of_God%22_Bok_globule_in_the_Carina_Nebula.jpg",
+    "width": 1280,
+    "height": 1024
   },
   {
     "scene": 15,
@@ -190,7 +198,15 @@
     "scene": 18,
     "type": "nasa",
     "query": "Super-Kamiokande detector",
-    "missing": true
+    "file": "images/scene18.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Neutrino detector - National Museum of Nature and Science, Tokyo - DSC07824.JPG",
+    "title": "Neutrino detector - National Museum of Nature and Science, Tokyo - DSC07824",
+    "credit": "Daderot / CC0",
+    "license": "CC0",
+    "url": "https://commons.wikimedia.org/wiki/File:Neutrino_detector_-_National_Museum_of_Nature_and_Science,_Tokyo_-_DSC07824.JPG",
+    "width": 1920,
+    "height": 2618
   },
   {
     "scene": 19,
@@ -329,7 +345,15 @@
     "scene": 32,
     "type": "nasa",
     "query": "Vera Rubin Observatory",
-    "missing": true
+    "file": "images/scene32.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Vera C Rubin Observatory in the Snow (IMG 0315-CC).jpg",
+    "title": "Vera C Rubin Observatory in the Snow (IMG 0315-CC)",
+    "credit": "NOIRLab/NSF/AURA/C. Corco / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Vera_C_Rubin_Observatory_in_the_Snow_(IMG_0315-CC).jpg",
+    "width": 1920,
+    "height": 1060
   },
   {
     "scene": 33,

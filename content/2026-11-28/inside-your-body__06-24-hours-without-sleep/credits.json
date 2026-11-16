@@ -3,7 +3,15 @@
     "scene": 1,
     "type": "stock",
     "query": "tired man awake at night bed",
-    "missing": true
+    "file": "images/scene01.jpg",
+    "source": "Openverse (flickr)",
+    "id": "d89f2963-1b2f-4aef-b6cc-6e9ce3619f0a",
+    "title": "Insomnia",
+    "credit": "Alyssa L. Miller / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://www.flickr.com/photos/34701044@N06/3628914665",
+    "width": 1024,
+    "height": 680
   },
   {
     "scene": 2,
@@ -41,19 +49,43 @@
     "scene": 5,
     "type": "stock",
     "query": "clock showing midnight",
-    "missing": true
+    "file": "images/scene05.jpg",
+    "source": "Openverse (flickr)",
+    "id": "ebd35320-c794-47b7-8220-204c85b77a3e",
+    "title": "timepiece prime time clock closeup watch",
+    "credit": "zoutedrop / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://www.flickr.com/photos/24028533@N03/2317065892",
+    "width": 1024,
+    "height": 683
   },
   {
     "scene": 6,
     "type": "stock",
     "query": "student studying late at night tired",
-    "missing": true
+    "file": "images/scene06.jpg",
+    "source": "Openverse (flickr)",
+    "id": "48a630fe-a7a2-403a-9e24-b4a2e4a147b6",
+    "title": "Late night studying",
+    "credit": "schmidtgergely / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://www.flickr.com/photos/22692983@N07/3529604186",
+    "width": 1024,
+    "height": 768
   },
   {
     "scene": 7,
     "type": "stock",
     "query": "man nodding off at computer",
-    "missing": true
+    "file": "images/scene07.jpg",
+    "source": "Openverse (flickr)",
+    "id": "33b8700c-1eb9-4848-889d-ee8f6c254099",
+    "title": "Asleep",
+    "credit": "cell105 / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://www.flickr.com/photos/76481380@N00/98055994",
+    "width": 1024,
+    "height": 768
   },
   {
     "scene": 8,
@@ -63,7 +95,15 @@
     "scene": 9,
     "type": "science",
     "query": "amygdala brain illustration",
-    "missing": true
+    "file": "images/scene09.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Key brain regions in the central autonomic network (CAN).png",
+    "title": "Key brain regions in the central autonomic network (CAN)",
+    "credit": "Martin Iniguez, Antonio Jimenez-Marin, Asier Erramuzpe, Marian Acera, Beatriz Tijero, Ane Murueta-Goyena, Rocio Del Pino, Tamara Fernandez, Mar Carmona‑Abellan, Alberto Cabrera-Zubizarreta, Juan Carlos Gómez‑Esteban, Jesus M. Cortes & Inigo Gabilondo / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Key_brain_regions_in_the_central_autonomic_network_(CAN).png",
+    "width": 1345,
+    "height": 511
   },
   {
     "scene": 10,
@@ -87,19 +127,43 @@
     "scene": 12,
     "type": "science",
     "query": "white blood cells illustration NIH",
-    "missing": true
+    "file": "images/scene12.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:White Pulp (NIH BioArt 575).png",
+    "title": "White Pulp (NIH BioArt 575)",
+    "credit": "NIH NIAID / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:White_Pulp_(NIH_BioArt_575).png",
+    "width": 1920,
+    "height": 1080
   },
   {
     "scene": 13,
     "type": "science",
     "query": "PET brain scan image",
-    "missing": true
+    "file": "images/scene13.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:PET scans of brain tumor using Sigma-2 Ligands.png",
+    "title": "PET scans of brain tumor using Sigma-2 Ligands",
+    "credit": "Shoghi KI, Xu J, Su Y, He J, Rowland D, et al. / CC0",
+    "license": "CC0",
+    "url": "https://commons.wikimedia.org/wiki/File:PET_scans_of_brain_tumor_using_Sigma-2_Ligands.png",
+    "width": 1371,
+    "height": 695
   },
   {
     "scene": 14,
     "type": "science",
     "query": "hippocampus brain illustration",
-    "missing": true
+    "file": "images/scene14.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:XBio illustration – Hippocampus.png",
+    "title": "XBio illustration – Hippocampus",
+    "credit": "explorebiology / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:XBio_illustration_%E2%80%93_Hippocampus.png",
+    "width": 1800,
+    "height": 1200
   },
   {
     "scene": 15,

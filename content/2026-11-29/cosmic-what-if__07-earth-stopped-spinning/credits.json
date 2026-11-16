@@ -3,7 +3,15 @@
     "scene": 1,
     "type": "nasa",
     "query": "Earth rotation DSCOVR EPIC",
-    "missing": true
+    "file": "images/scene01.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "GSFC_20171208_Archive_e000522",
+    "title": "epic_1b_20151022190018_00",
+    "credit": "NASA image from the DSCOVR EPIC team",
+    "license": "NASA (public domain)",
+    "url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000522",
+    "width": 1920,
+    "height": 1920
   },
   {
     "scene": 2,

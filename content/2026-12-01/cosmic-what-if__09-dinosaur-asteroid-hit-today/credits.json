@@ -121,7 +121,15 @@
     "scene": 12,
     "type": "nasa",
     "query": "North Dakota badlands",
-    "missing": true
+    "file": "images/scene12.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Doug Burgum horseback riding through the North Dakota Badlands on July 2, 2026 - 1.jpg",
+    "title": "Doug Burgum horseback riding through the North Dakota Badlands on July 2, 2026 - 1",
+    "credit": "U.S. Department of the Interior / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:Doug_Burgum_horseback_riding_through_the_North_Dakota_Badlands_on_July_2,_2026_-_1.jpg",
+    "width": 1920,
+    "height": 1280
   },
   {
     "scene": 13,
@@ -159,7 +167,15 @@
     "scene": 16,
     "type": "nasa",
     "query": "Cretaceous Paleogene boundary layer rock",
-    "missing": true
+    "file": "images/scene16.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Flysch Sediments in Basque region of Spain 2.jpg",
+    "title": "Flysch Sediments in Basque region of Spain 2",
+    "credit": "egizu https://www.flickr.com/people/egizu/ / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Flysch_Sediments_in_Basque_region_of_Spain_2.jpg",
+    "width": 1920,
+    "height": 1440
   },
   {
     "scene": 17,
@@ -178,19 +194,43 @@
     "scene": 18,
     "type": "nasa",
     "query": "fern forest",
-    "missing": true
+    "file": "images/scene18.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Olkhon Island, Fern, Forest floor, Lake Baikal, Russia.jpg",
+    "title": "Olkhon Island, Fern, Forest floor, Lake Baikal, Russia",
+    "credit": "Vyacheslav Argenberg / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Olkhon_Island,_Fern,_Forest_floor,_Lake_Baikal,_Russia.jpg",
+    "width": 1920,
+    "height": 1276
   },
   {
     "scene": 19,
     "type": "nasa",
     "query": "Yucatan sediment swirls MODIS",
-    "missing": true
+    "file": "images/scene19.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Sediment off the Yucatan Peninsula.jpg",
+    "title": "Sediment off the Yucatan Peninsula",
+    "credit": "NASA image courtesy the MODIS Rapid Response Team at NASA GSFC. / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:Sediment_off_the_Yucatan_Peninsula.jpg",
+    "width": 1920,
+    "height": 1600
   },
   {
     "scene": 20,
     "type": "nasa",
     "query": "cenote Yucatan",
-    "missing": true
+    "file": "images/scene20.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Cenote Ik Kil, Yucatan, Dec 2011 - 01.jpg",
+    "title": "Cenote Ik Kil, Yucatan, Dec 2011 - 01",
+    "credit": "Shinya Suzuki / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Cenote_Ik_Kil,_Yucatan,_Dec_2011_-_01.jpg",
+    "width": 1920,
+    "height": 1280
   },
   {
     "scene": 21,

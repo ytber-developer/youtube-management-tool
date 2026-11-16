@@ -50,7 +50,8 @@
       "visual": {
         "type": "stock",
         "query": "tired man awake at night bed",
-        "note": "person lying awake in a dark bedroom"
+        "note": "person lying awake in a dark bedroom",
+        "openverse_id": "d89f2963-1b2f-4aef-b6cc-6e9ce3619f0a"
       }
     },
     {
@@ -89,7 +90,8 @@
       "visual": {
         "type": "stock",
         "query": "clock showing midnight",
-        "note": "clock face at midnight"
+        "note": "clock face at midnight",
+        "openverse_id": "ebd35320-c794-47b7-8220-204c85b77a3e"
       }
     },
     {
@@ -99,7 +101,8 @@
       "visual": {
         "type": "stock",
         "query": "student studying late at night tired",
-        "note": "student slumped over books under a desk lamp"
+        "note": "student slumped over books under a desk lamp",
+        "openverse_id": "48a630fe-a7a2-403a-9e24-b4a2e4a147b6"
       }
     },
     {
@@ -109,7 +112,8 @@
       "visual": {
         "type": "stock",
         "query": "man nodding off at computer",
-        "note": "person nodding off in front of a screen"
+        "note": "person nodding off in front of a screen",
+        "openverse_id": "33b8700c-1eb9-4848-889d-ee8f6c254099"
       }
     },
     {

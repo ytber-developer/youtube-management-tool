@@ -147,6 +147,43 @@ async function fetchCommons(query, used, outFile, { minWidth = 1200, minScore = 
     credit: `${stripHtml(c.md.Artist?.value) || 'Unknown author'} / ${c.lic}`, license: c.lic, url: c.ii.descriptionurl, width: w, height: h };
 }
 
+// Ghim một file Commons cụ thể (visual.commons = "File:...") — vẫn kiểm tra giấy phép
+async function fetchCommonsFile(title, used, outFile) {
+  const d = await getJson('https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url|size|extmetadata|mime&iiurlwidth=1920'
+    + `&titles=${encodeURIComponent(title)}`);
+  const p = Object.values(d.query?.pages || {})[0];
+  const ii = p?.imageinfo?.[0];
+  if (!ii) throw new Error(`Không thấy ${title} trên Commons`);
+  const md = ii.extmetadata || {};
+  const lic = stripHtml(md.LicenseShortName?.value);
+  if (!allowedLicense(lic)) throw new Error(`${title}: giấy phép "${lic}" không được phép`);
+  await download(ii.thumburl || ii.url, outFile);
+  const { w, h } = imageSize(outFile);
+  used.add(p.title);
+  return { source: 'Wikimedia Commons', id: p.title, title: stripHtml(md.ObjectName?.value) || p.title.replace(/^File:/, ''),
+    credit: `${stripHtml(md.Artist?.value) || 'Unknown author'} / ${lic}`, license: lic, url: ii.descriptionurl, width: w, height: h };
+}
+
+// Ghim một ảnh Openverse cụ thể (visual.openverse_id)
+const ovLicense = (r) => (r.license === 'pdm' ? 'Public Domain Mark' : r.license === 'cc0' ? 'CC0' : `CC ${String(r.license).toUpperCase()} ${r.license_version || ''}`.trim());
+async function fetchOpenverseId(id, used, outFile) {
+  const r = await getJson(`https://api.openverse.org/v1/images/${encodeURIComponent(id)}/`);
+  const lic = ovLicense(r);
+  if (!allowedLicense(lic)) throw new Error(`Openverse ${id}: giấy phép "${lic}" không được phép`);
+  await download(r.url, outFile);
+  const { w, h } = imageSize(outFile);
+  used.add(`ov:${r.id}`);
+  return { source: `Openverse (${r.provider || r.source})`, id: r.id, title: r.title || id,
+    credit: `${r.creator || 'Unknown author'} / ${lic}`, license: lic, url: r.foreign_landing_url || r.url, width: w, height: h };
+}
+
+function pinOf(v = {}) {
+  if (v.nasa_id) return { source: 'nasa', id: v.nasa_id };
+  if (v.commons) return { source: 'commons', id: v.commons };
+  if (v.openverse_id) return { source: 'openverse', id: v.openverse_id };
+  return null;
+}
+
 // ── Pixabay ──────────────────────────────────────────────────────────────────
 async function fetchPixabay(query, used, outFile) {
   if (!process.env.PIXABAY_API_KEY) return null;
@@ -196,7 +233,9 @@ const SOURCES = {
 
 async function fetchOne(v, used, out) {
   const order = (SOURCE_ORDER[v.type] || []).filter(k => SOURCES[k]);
-  if (v.nasa_id) return fetchNasa(v.query, used, out, v.nasa_id); // ảnh đã ghim luôn thắng
+  const pin = pinOf(v); // ảnh đã ghim luôn thắng
+  if (pin) return pin.source === 'nasa' ? fetchNasa(v.query, used, out, pin.id)
+    : pin.source === 'commons' ? fetchCommonsFile(pin.id, used, out) : fetchOpenverseId(pin.id, used, out);
   for (const k of order) {
     const info = await SOURCES[k](v.query, used, out, v);
     if (info) return info;
@@ -225,7 +264,7 @@ async function fetchForVideo(dir, { onProgress = () => {}, onlyMissing = true, a
     onProgress(i / script.scenes.length, `cảnh ${i + 1}/${script.scenes.length}`);
     if (!IMAGE_TYPES.includes(v.type)) { credits.push({ scene: i + 1, type: v.type || 'none' }); continue; }
     const prev = old.find(c => c.scene === i + 1 && !c.missing && c.credit);
-    if (onlyMissing && prev && fs.existsSync(out) && (!v.nasa_id || prev.id === v.nasa_id)) { credits.push(prev); continue; }
+    if (onlyMissing && prev && fs.existsSync(out) && (!pinOf(v) || prev.id === pinOf(v).id)) { credits.push(prev); continue; }
     let info = null;
     try { info = await fetchOne(v, used, out); } catch (e) { info = null; onProgress(i / script.scenes.length, `cảnh ${i + 1}: ${e.message}`); }
     if (info) credits.push({ scene: i + 1, type: v.type, query: v.query, file: `images/scene${n}.jpg`, ...info });
@@ -250,4 +289,4 @@ async function fetchForVideo(dir, { onProgress = () => {}, onlyMissing = true, a
   return { ok: missing.length === 0, missing };
 }
 
-module.exports = { fetchForVideo, fetchOne, allowedLicense, matchScore, IMAGE_TYPES, SOURCE_ORDER, ensureJpeg };
+module.exports = { fetchForVideo, fetchOne, pinOf, allowedLicense, matchScore, IMAGE_TYPES, SOURCE_ORDER, ensureJpeg };

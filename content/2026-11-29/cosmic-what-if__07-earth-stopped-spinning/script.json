@@ -49,7 +49,8 @@
       "visual": {
         "type": "nasa",
         "query": "Earth rotation DSCOVR EPIC",
-        "note": "the full sunlit Earth from deep space"
+        "note": "the full sunlit Earth from deep space",
+        "nasa_id": "GSFC_20171208_Archive_e000522"
       }
     },
     {

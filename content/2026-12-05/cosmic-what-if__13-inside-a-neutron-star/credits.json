@@ -63,13 +63,29 @@
     "scene": 7,
     "type": "nasa",
     "query": "pulsar beams illustration",
-    "missing": true
+    "file": "images/scene07.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:GamRayEclipseG22.jpg",
+    "title": "GamRayEclipseG22",
+    "credit": "NASA/Sonoma State University, Aurore Simonnet / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:GamRayEclipseG22.jpg",
+    "width": 1800,
+    "height": 1200
   },
   {
     "scene": 8,
     "type": "nasa",
     "query": "Terzan 5 globular cluster",
-    "missing": true
+    "file": "images/scene08.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Terzan 1, Take 2 (potw2241a).jpg",
+    "title": "Terzan 1, Take 2 (potw2241a)",
+    "credit": "ESA/Hubble & NASA, R. Cohen / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Terzan_1,_Take_2_(potw2241a).jpg",
+    "width": 1920,
+    "height": 1526
   },
   {
     "scene": 9,
@@ -88,7 +104,15 @@
     "scene": 10,
     "type": "nasa",
     "query": "SGR 1806-20 magnetar flare",
-    "missing": true
+    "file": "images/scene10.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:SGR 1806-20 108530main cloudballPrint.jpg",
+    "title": "SGR 1806-20 108530main cloudballPrint",
+    "credit": "U Harvard / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:SGR_1806-20_108530main_cloudballPrint.jpg",
+    "width": 1920,
+    "height": 1296
   },
   {
     "scene": 11,
@@ -136,7 +160,15 @@
     "scene": 17,
     "type": "nasa",
     "query": "supercomputer NASA Pleiades",
-    "missing": true
+    "file": "images/scene17.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:NASA Pleiades Supercomputer (9616175099).jpg",
+    "title": "NASA Pleiades Supercomputer (9616175099)",
+    "credit": "Steve Jurvetson from Los Altos, USA / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:NASA_Pleiades_Supercomputer_(9616175099).jpg",
+    "width": 1920,
+    "height": 1273
   },
   {
     "scene": 18,
@@ -260,7 +292,15 @@
     "scene": 29,
     "type": "nasa",
     "query": "gold platinum kilonova illustration",
-    "missing": true
+    "file": "images/scene29.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Illustration of a Kilonova (2022-049).png",
+    "title": "Illustration of a Kilonova (2022-049)",
+    "credit": "ARTWORK: NASA, Joseph Olmsted (STScI) / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:Illustration_of_a_Kilonova_(2022-049).png",
+    "width": 1920,
+    "height": 1080
   },
   {
     "scene": 30,

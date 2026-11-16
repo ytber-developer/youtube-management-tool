@@ -6,111 +6,202 @@
   "title": "What Coffee Actually Does to Your Body",
   "thumbnail_text": "COFFEE ISN'T ENERGY",
   "description": "Coffee doesn't add energy to your body. It hides a tiredness signal your brain has been collecting all day. Follow one cup from the first sip to hours later, and see why the same coffee hits everyone differently.\n\nSources:\n- U.S. Food and Drug Administration, Spilling the Beans: How Much Caffeine is Too Much?: https://www.fda.gov/consumers/consumer-updates/spilling-beans-how-much-caffeine-too-much\n- MedlinePlus, Caffeine: https://medlineplus.gov/caffeine.html\n- Current Neuropharmacology (2015), Caffeine: Cognitive and Physical Performance Enhancer or Psychoactive Drug?: https://pmc.ncbi.nlm.nih.gov/articles/4462044/\n- Nutrients (2021), Caffeine as a Factor Influencing the Functioning of the Human Body: Friend or Foe?: https://pmc.ncbi.nlm.nih.gov/articles/PMC8467199\n- NHLBI, How Sleep Works: Your Sleep/Wake Cycle: https://www.nhlbi.nih.gov/health/sleep/sleep-wake-cycle\n- ScienceDaily (2009), NIH-funded study on astrocytes, adenosine and sleep pressure: https://www.sciencedaily.com/releases/2009/01/090128122814.htm\n\nThis video is for educational purposes only and is not medical advice.",
-  "tags": ["coffee", "caffeine", "what coffee does to your body", "adenosine", "sleep pressure", "caffeine half-life", "brain chemistry", "human body", "neuroscience", "science explained", "inside your body"],
+  "tags": [
+    "coffee",
+    "caffeine",
+    "what coffee does to your body",
+    "adenosine",
+    "sleep pressure",
+    "caffeine half-life",
+    "brain chemistry",
+    "human body",
+    "neuroscience",
+    "science explained",
+    "inside your body"
+  ],
   "sources": [
-    { "title": "U.S. Food and Drug Administration - Spilling the Beans: How Much Caffeine is Too Much?", "url": "https://www.fda.gov/consumers/consumer-updates/spilling-beans-how-much-caffeine-too-much" },
-    { "title": "MedlinePlus - Caffeine", "url": "https://medlineplus.gov/caffeine.html" },
-    { "title": "Current Neuropharmacology (2015) - Caffeine: Cognitive and Physical Performance Enhancer or Psychoactive Drug?", "url": "https://pmc.ncbi.nlm.nih.gov/articles/4462044/" },
-    { "title": "Nutrients (2021) - Caffeine as a Factor Influencing the Functioning of the Human Body: Friend or Foe?", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8467199" },
-    { "title": "NHLBI - How Sleep Works: Your Sleep/Wake Cycle", "url": "https://www.nhlbi.nih.gov/health/sleep/sleep-wake-cycle" },
-    { "title": "ScienceDaily (2009) - NIH-funded study on astrocytes, adenosine and sleep pressure", "url": "https://www.sciencedaily.com/releases/2009/01/090128122814.htm" }
+    {
+      "title": "U.S. Food and Drug Administration - Spilling the Beans: How Much Caffeine is Too Much?",
+      "url": "https://www.fda.gov/consumers/consumer-updates/spilling-beans-how-much-caffeine-too-much"
+    },
+    {
+      "title": "MedlinePlus - Caffeine",
+      "url": "https://medlineplus.gov/caffeine.html"
+    },
+    {
+      "title": "Current Neuropharmacology (2015) - Caffeine: Cognitive and Physical Performance Enhancer or Psychoactive Drug?",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/4462044/"
+    },
+    {
+      "title": "Nutrients (2021) - Caffeine as a Factor Influencing the Functioning of the Human Body: Friend or Foe?",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8467199"
+    },
+    {
+      "title": "NHLBI - How Sleep Works: Your Sleep/Wake Cycle",
+      "url": "https://www.nhlbi.nih.gov/health/sleep/sleep-wake-cycle"
+    },
+    {
+      "title": "ScienceDaily (2009) - NIH-funded study on astrocytes, adenosine and sleep pressure",
+      "url": "https://www.sciencedaily.com/releases/2009/01/090128122814.htm"
+    }
   ],
   "scenes": [
     {
       "narration": "Coffee doesn't actually give you energy. What it does is sneakier. It blocks the signal telling your brain how tired you are.",
       "headline": "COFFEE ISN'T <em>ENERGY</em>",
       "sub": "It hides a tiredness signal",
-      "visual": { "type": "stock", "query": "cup of black coffee on table", "note": "steaming cup of black coffee on a wooden table" }
+      "visual": {
+        "type": "stock",
+        "query": "cup of black coffee on table",
+        "note": "steaming cup of black coffee on a wooden table"
+      }
     },
     {
       "narration": "The star of your cup is caffeine, and coffee doesn't own it. Caffeine occurs naturally in more than sixty plants, including tea leaves, kola nuts, and the cacao pods that give us chocolate.",
       "headline": "FOUND IN <em>SIXTY-PLUS</em> PLANTS",
       "sub": "Coffee, tea, kola, cacao",
-      "visual": { "type": "stock", "query": "coffee beans tea leaves cacao pods", "note": "coffee beans, tea leaves, and cacao side by side" }
+      "visual": {
+        "type": "stock",
+        "query": "coffee beans tea leaves cacao pods",
+        "note": "coffee beans, tea leaves, and cacao side by side"
+      }
     },
     {
       "narration": "And we take in a lot of it. One review estimates the average person worldwide gets about seventy-six milligrams of caffeine a day. In the United States and Canada, it's closer to two hundred ten to two hundred thirty-eight.",
       "headline": "NORTH AMERICA LOVES <em>CAFFEINE</em>",
       "sub": "About three times the world average",
-      "visual": { "type": "stock", "query": "busy coffee shop morning line", "note": "people lined up at a coffee shop counter" }
+      "visual": {
+        "type": "stock",
+        "query": "busy coffee shop morning line",
+        "note": "people lined up at a coffee shop counter"
+      }
     },
     {
       "narration": "Start with the first sip. Caffeine is absorbed quickly from your gut into your bloodstream. From there it spreads into nearly every tissue in your body, and it slips easily past the barrier that protects your brain.",
       "headline": "STRAIGHT TO YOUR <em>BRAIN</em>",
       "sub": "It crosses the blood-brain barrier",
-      "visual": { "type": "diagram", "spec": "path of caffeine: mouth, stomach and small intestine, bloodstream, then crossing the blood-brain barrier into the brain" }
+      "visual": {
+        "type": "diagram",
+        "spec": "path of caffeine: mouth, stomach and small intestine, bloodstream, then crossing the blood-brain barrier into the brain"
+      }
     },
     {
       "narration": "Caffeine levels in your blood usually peak within about an hour. Many studies put it at thirty to sixty minutes, but it can range from fifteen minutes to two hours, depending on your body and whether you've just eaten.",
       "headline": "THE <em>PEAK</em> HITS FAST",
       "sub": "Usually within about an hour",
-      "visual": { "type": "diagram", "spec": "line graph of caffeine level in blood over time: rising to a peak around thirty to sixty minutes, shaded range from fifteen minutes to two hours, then slowly declining" }
+      "visual": {
+        "type": "diagram",
+        "spec": "line graph of caffeine level in blood over time: rising to a peak around thirty to sixty minutes, shaded range from fifteen minutes to two hours, then slowly declining"
+      }
     },
     {
       "narration": "To see what it does next, meet adenosine. While you're awake, this chemical gradually builds up in your brain. The more it accumulates, the stronger your urge to sleep. Scientists call this sleep pressure, and NIH-funded research in mice suggests support cells called astrocytes help release it.",
       "headline": "MEET <em>ADENOSINE</em>",
       "sub": "Your brain's sleep pressure signal",
-      "visual": { "type": "science", "query": "neurons brain cells microscope", "note": "microscope image of brain neurons" }
+      "visual": {
+        "type": "science",
+        "query": "neurons brain cells microscope",
+        "note": "microscope image of brain neurons"
+      }
     },
     {
       "narration": "Adenosine works by docking onto receptors on your brain cells, like a key in a lock. Caffeine fits into those same locks without turning them. It blocks the receptors, so the tiredness message can't get through.",
       "headline": "A KEY THAT <em>BLOCKS</em> THE LOCK",
       "sub": "Caffeine sits on adenosine receptors",
-      "visual": { "type": "diagram", "spec": "brain cell receptor shown as a lock; adenosine key fits and sends a tired signal; caffeine key fits but blocks the signal, so the receptor stays quiet" }
+      "visual": {
+        "type": "diagram",
+        "spec": "brain cell receptor shown as a lock; adenosine key fits and sends a tired signal; caffeine key fits but blocks the signal, so the receptor stays quiet"
+      }
     },
     {
       "narration": "With that brake released, your brain releases more of its own stimulating chemicals, like dopamine and noradrenaline. You feel more alert and awake. But caffeine doesn't stop adenosine from building up. It only hides the signal.",
       "headline": "THE <em>BRAKES</em> COME OFF",
       "sub": "More dopamine and noradrenaline",
-      "visual": { "type": "stock", "query": "woman working alert at laptop with coffee", "note": "focused person working at a laptop with a coffee mug" }
+      "visual": {
+        "type": "stock",
+        "query": "woman working alert at laptop with coffee",
+        "note": "focused person working at a laptop with a coffee mug"
+      }
     },
     {
       "narration": "The rest of your body notices too. Caffeine can raise your blood pressure. It increases the acid your stomach releases, which can lead to heartburn for some people. And it's a diuretic, so your body sends out more water.",
       "headline": "IT'S NOT JUST YOUR <em>BRAIN</em>",
       "sub": "Blood pressure, stomach acid, kidneys",
-      "visual": { "type": "science", "query": "human digestive system anatomy illustration", "note": "simple anatomy illustration of the stomach and digestive tract" }
+      "visual": {
+        "type": "science",
+        "query": "human digestive system anatomy illustration",
+        "note": "simple anatomy illustration of the stomach and digestive tract"
+      }
     },
     {
       "narration": "How long does it last? The effects can linger for four to six hours. Caffeine's half-life, the time your body needs to clear half of it, is often three to five hours, but it ranges from about two to twelve. That means an afternoon cup can still be circulating at bedtime.",
       "headline": "HOW LONG IT <em>LINGERS</em>",
       "sub": "Effects can last four to six hours",
-      "visual": { "type": "stock", "query": "afternoon sunlight office desk clock", "note": "office desk in afternoon light, suggesting hours passing" }
+      "visual": {
+        "type": "stock",
+        "query": "afternoon sunlight office desk clock",
+        "note": "office desk in afternoon light, suggesting hours passing"
+      }
     },
     {
       "narration": "Why such a huge range? Your liver does most of the work of breaking caffeine down, and its pace varies from person to person. Smokers clear caffeine almost twice as fast as nonsmokers, while pregnancy slows clearance down.",
       "headline": "YOUR <em>LIVER</em> SETS THE PACE",
       "sub": "Everyone clears caffeine differently",
-      "visual": { "type": "science", "query": "human liver anatomy illustration", "note": "clean anatomical illustration of the liver" }
+      "visual": {
+        "type": "science",
+        "query": "human liver anatomy illustration",
+        "note": "clean anatomical illustration of the liver"
+      }
     },
     {
       "narration": "That's why the same cup can leave one person buzzing and another ready for a nap. The FDA notes wide variation in how sensitive people are to caffeine and how quickly they get rid of it.",
       "headline": "SAME CUP, <em>DIFFERENT</em> EFFECT",
       "sub": "Sensitivity varies widely",
-      "visual": { "type": "stock", "query": "two friends drinking coffee cafe", "note": "two people sharing coffee, one energetic, one relaxed" }
+      "visual": {
+        "type": "stock",
+        "query": "two friends drinking coffee cafe",
+        "note": "two people sharing coffee, one energetic, one relaxed"
+      }
     },
     {
       "narration": "How much caffeine is in a cup varies a lot too. MedlinePlus lists about ninety-five to two hundred milligrams in an eight-ounce cup of coffee. Even decaf usually has two to fifteen. And for context, the FDA cites four hundred milligrams a day as an amount not generally linked to negative effects in healthy adults.",
       "headline": "WHAT'S IN A <em>CUP?</em>",
       "sub": "It varies more than you think",
-      "visual": { "type": "stock", "query": "barista pouring drip coffee", "note": "coffee being poured from a drip machine into a mug" }
+      "visual": {
+        "type": "stock",
+        "query": "barista pouring drip coffee",
+        "note": "coffee being poured from a drip machine into a mug",
+        "openverse_id": "1583ed01-6553-4158-878b-087261c01550"
+      }
     },
     {
       "narration": "The FDA also notes that too much caffeine can bring on a racing heart, anxiety, trouble sleeping, and headaches. Regular drinkers who suddenly go without may notice headaches, drowsiness, and irritability, which usually fade after a couple of days.",
       "headline": "WHEN THE BODY <em>PUSHES BACK</em>",
       "sub": "Too much, or suddenly none",
-      "visual": { "type": "stock", "query": "tired man rubbing eyes at desk", "note": "person rubbing their eyes, looking tired" }
+      "visual": {
+        "type": "stock",
+        "query": "tired man rubbing eyes at desk",
+        "note": "person rubbing their eyes, looking tired"
+      }
     },
     {
       "narration": "And when caffeine finally wears off, adenosine can reach its receptors again. The sleep pressure that kept building all day is still there, waiting. So coffee isn't fuel. It's more like tape over a warning light.",
       "headline": "TAPE OVER A <em>WARNING LIGHT</em>",
       "sub": "The tiredness never really left",
-      "visual": { "type": "stock", "query": "empty coffee mug evening window", "note": "empty mug by a window at dusk" }
+      "visual": {
+        "type": "stock",
+        "query": "empty coffee mug evening window",
+        "note": "empty mug by a window at dusk",
+        "openverse_id": "0886047e-30f0-44f1-bb2f-08743e5fc5f8"
+      }
     },
     {
       "narration": "Follow Inside Your Body for more of the science of you.",
       "headline": "",
       "sub": "",
-      "visual": { "type": "outro" }
+      "visual": {
+        "type": "outro"
+      }
     }
   ]
 }

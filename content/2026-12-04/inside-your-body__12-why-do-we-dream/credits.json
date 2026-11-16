@@ -1,0 +1,206 @@
+[
+  {
+    "scene": 1,
+    "type": "stock",
+    "query": "person sleeping in bed at night moonlight",
+    "missing": true
+  },
+  {
+    "scene": 2,
+    "type": "stock",
+    "query": "dark bedroom door slightly open night",
+    "missing": true
+  },
+  {
+    "scene": 3,
+    "type": "stock",
+    "query": "close up closed eyes sleeping face",
+    "missing": true
+  },
+  {
+    "scene": 4,
+    "type": "science",
+    "query": "EEG sleep recording polysomnography trace",
+    "missing": true
+  },
+  {
+    "scene": 5,
+    "type": "stock",
+    "query": "sleep lab patient electrodes monitoring",
+    "missing": true
+  },
+  {
+    "scene": 6,
+    "type": "diagram"
+  },
+  {
+    "scene": 7,
+    "type": "diagram"
+  },
+  {
+    "scene": 8,
+    "type": "science",
+    "query": "neuron synapse neurotransmitter illustration",
+    "missing": true
+  },
+  {
+    "scene": 9,
+    "type": "science",
+    "query": "thalamus brain anatomy illustration",
+    "file": "images/scene09.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Lawrence 1960 22.4.png",
+    "title": "Lawrence 1960 22.4",
+    "credit": "House, Earl Lawrence. Pansky, Ben. / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:Lawrence_1960_22.4.png",
+    "width": 1920,
+    "height": 1461
+  },
+  {
+    "scene": 10,
+    "type": "science",
+    "query": "brain sagittal section brainstem forebrain illustration",
+    "missing": true
+  },
+  {
+    "scene": 11,
+    "type": "stock",
+    "query": "old textbook pages library",
+    "missing": true
+  },
+  {
+    "scene": 12,
+    "type": "stock",
+    "query": "EEG cap electrodes head research",
+    "missing": true
+  },
+  {
+    "scene": 13,
+    "type": "diagram"
+  },
+  {
+    "scene": 14,
+    "type": "science",
+    "query": "brain activity map EEG topography",
+    "missing": true
+  },
+  {
+    "scene": 15,
+    "type": "stock",
+    "query": "person waking up morning bed thinking",
+    "missing": true
+  },
+  {
+    "scene": 16,
+    "type": "science",
+    "query": "Sigmund Freud portrait photograph public domain",
+    "file": "images/scene16.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:FreudFliess1890.jpg",
+    "title": "FreudFliess1890",
+    "credit": "AnonymousUnknown author / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:FreudFliess1890.jpg",
+    "width": 1920,
+    "height": 1954
+  },
+  {
+    "scene": 17,
+    "type": "stock",
+    "query": "old book open dictionary pages",
+    "missing": true
+  },
+  {
+    "scene": 18,
+    "type": "diagram"
+  },
+  {
+    "scene": 19,
+    "type": "stock",
+    "query": "foggy forest path at night",
+    "missing": true
+  },
+  {
+    "scene": 20,
+    "type": "stock",
+    "query": "person journaling by window morning light",
+    "missing": true
+  },
+  {
+    "scene": 21,
+    "type": "stock",
+    "query": "person awake in bed at night worried",
+    "missing": true
+  },
+  {
+    "scene": 22,
+    "type": "stock",
+    "query": "library shelves organized books",
+    "missing": true
+  },
+  {
+    "scene": 23,
+    "type": "stock",
+    "query": "pianist hands practicing piano keys",
+    "missing": true
+  },
+  {
+    "scene": 24,
+    "type": "stock",
+    "query": "hedge maze aerial view",
+    "missing": true
+  },
+  {
+    "scene": 25,
+    "type": "stock",
+    "query": "student napping on couch",
+    "missing": true
+  },
+  {
+    "scene": 26,
+    "type": "diagram"
+  },
+  {
+    "scene": 27,
+    "type": "science",
+    "query": "hippocampus brain illustration",
+    "file": "images/scene27.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:XBio illustration – Hippocampus.png",
+    "title": "XBio illustration – Hippocampus",
+    "credit": "explorebiology / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:XBio_illustration_%E2%80%93_Hippocampus.png",
+    "width": 1800,
+    "height": 1200
+  },
+  {
+    "scene": 28,
+    "type": "stock",
+    "query": "alarm clock morning bedside",
+    "missing": true
+  },
+  {
+    "scene": 29,
+    "type": "stock",
+    "query": "notebook pen on nightstand",
+    "missing": true
+  },
+  {
+    "scene": 30,
+    "type": "stock",
+    "query": "night sky stars over quiet house",
+    "missing": true
+  },
+  {
+    "scene": 31,
+    "type": "science",
+    "query": "neurons network fluorescence microscopy",
+    "missing": true
+  },
+  {
+    "scene": 32,
+    "type": "outro"
+  }
+]

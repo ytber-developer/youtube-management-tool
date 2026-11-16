@@ -37,7 +37,15 @@
     "scene": 5,
     "type": "nasa",
     "query": "Betelgeuse ALMA image",
-    "missing": true
+    "file": "images/scene05.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Orion the Hunter Watches Over ALMA.jpg",
+    "title": "Orion the Hunter Watches Over ALMA",
+    "credit": "ESO/B. Tafreshi (twanight.org) / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Orion_the_Hunter_Watches_Over_ALMA.jpg",
+    "width": 1920,
+    "height": 555
   },
   {
     "scene": 6,
@@ -60,7 +68,15 @@
     "scene": 8,
     "type": "nasa",
     "query": "supernova explosion illustration",
-    "missing": true
+    "file": "images/scene08.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Supernova Portrait Gallery (illustrations-montage-index-Supernova Portrait Gallery - 300).jpg",
+    "title": "Supernova Portrait Gallery (illustrations-montage-index-Supernova Portrait Gallery - 300)",
+    "credit": "NASA/SAO / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:Supernova_Portrait_Gallery_(illustrations-montage-index-Supernova_Portrait_Gallery_-_300).jpg",
+    "width": 1920,
+    "height": 1440
   },
   {
     "scene": 9,
@@ -79,7 +95,15 @@
     "scene": 10,
     "type": "nasa",
     "query": "Super-Kamiokande neutrino detector",
-    "missing": true
+    "file": "images/scene10.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Neutrino detector - National Museum of Nature and Science, Tokyo - DSC07824.JPG",
+    "title": "Neutrino detector - National Museum of Nature and Science, Tokyo - DSC07824",
+    "credit": "Daderot / CC0",
+    "license": "CC0",
+    "url": "https://commons.wikimedia.org/wiki/File:Neutrino_detector_-_National_Museum_of_Nature_and_Science,_Tokyo_-_DSC07824.JPG",
+    "width": 1920,
+    "height": 2618
   },
   {
     "scene": 11,
@@ -124,7 +148,15 @@
     "scene": 14,
     "type": "nasa",
     "query": "daytime Moon blue sky",
-    "missing": true
+    "file": "images/scene14.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Big Moon in Daytime (9105997796).jpg",
+    "title": "Big Moon in Daytime (9105997796)",
+    "credit": "denebola2025 from North Ogden, UT, USA / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Big_Moon_in_Daytime_(9105997796).jpg",
+    "width": 1920,
+    "height": 1440
   },
   {
     "scene": 15,
@@ -199,13 +231,29 @@
     "scene": 21,
     "type": "nasa",
     "query": "Betelgeuse dimming Hubble",
-    "missing": true
+    "file": "images/scene21.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Illustration of Outburst from Betelgeuse (2020-44-4724).png",
+    "title": "Illustration of Outburst from Betelgeuse (2020-44-4724)",
+    "credit": "NASA, ESA, and E. Wheatley (STScI) / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:Illustration_of_Outburst_from_Betelgeuse_(2020-44-4724).png",
+    "width": 1920,
+    "height": 854
   },
   {
     "scene": 22,
     "type": "nasa",
     "query": "Betelgeuse surface mass ejection illustration",
-    "missing": true
+    "file": "images/scene22.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Hubble Sees Red Supergiant Star Betelgeuse Slowly Recovering After Blowing Its Top (opo22037a).jpg",
+    "title": "Hubble Sees Red Supergiant Star Betelgeuse Slowly Recovering After Blowing Its Top (opo22037a)",
+    "credit": "NASA, ESA, E. Wheatley (STScI) / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Hubble_Sees_Red_Supergiant_Star_Betelgeuse_Slowly_Recovering_After_Blowing_Its_Top_(opo22037a).jpg",
+    "width": 1920,
+    "height": 1080
   },
   {
     "scene": 23,
@@ -224,13 +272,29 @@
     "scene": 24,
     "type": "nasa",
     "query": "Hubble Betelgeuse ultraviolet",
-    "missing": true
+    "file": "images/scene24.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Dim, but still distinct (potw2405a).jpg",
+    "title": "Dim, but still distinct (potw2405a)",
+    "credit": "ESA/Hubble & NASA, R. J. Foley (UC Santa Cruz) / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Dim,_but_still_distinct_(potw2405a).jpg",
+    "width": 1920,
+    "height": 1173
   },
   {
     "scene": 25,
     "type": "nasa",
     "query": "Betelgeuse companion star Gemini",
-    "missing": true
+    "file": "images/scene25.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:A Pantheon Above WIYN (iotw2333a).jpg",
+    "title": "A Pantheon Above WIYN (iotw2333a)",
+    "credit": "KPNO/NOIRLab/NSF/AURA/P. Horálek (Institute of Physics in Opava) / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:A_Pantheon_Above_WIYN_(iotw2333a).jpg",
+    "width": 1920,
+    "height": 1345
   },
   {
     "scene": 26,
@@ -288,7 +352,15 @@
     "scene": 30,
     "type": "nasa",
     "query": "Orion winter sky",
-    "missing": true
+    "file": "images/scene30.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Orion in Winter (46689068132).jpg",
+    "title": "Orion in Winter (46689068132)",
+    "credit": "Uroš Novina from Semič, Slovenia / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Orion_in_Winter_(46689068132).jpg",
+    "width": 1920,
+    "height": 1280
   },
   {
     "scene": 31,

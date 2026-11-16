@@ -1,6 +1,8 @@
 // Hằng số riêng của từng kênh — nguồn duy nhất cho validator, slide, metadata.
 module.exports = {
   WPM: 163,
+  // Lời đọc viết cho máy đọc (TTS) → chữ hiển thị trên phụ đề
+  CAPTION_DISPLAY: [[/\bSagittarius A star\b/g, 'Sagittarius A*'], [/\bVoyager One\b/g, 'Voyager 1']],
   'cosmic-what-if': {
     name: 'Cosmic What If',
     outro: 'Follow Cosmic What If for more mind-bending science.',

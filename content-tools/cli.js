@@ -42,6 +42,17 @@ const COMMANDS = {
     console.log(`✅ ${id}  narration.txt + metadata.md`);
     return true;
   },
+  async preview(id, dir) {
+    const r = await require('./lib/video').renderPreview(dir);
+    console.log(`✅ ${id}  preview.mp4 ${r.duration.toFixed(1)}s`);
+    return true;
+  },
+  async render(id, dir) {
+    if (!fs.existsSync(path.join(dir, 'voice.mp3'))) { console.log(`⏭️  ${id}  chưa có voice.mp3`); return true; }
+    const r = await require('./lib/video').renderFinal(dir);
+    console.log(`✅ ${id}  final.mp4 ${r.duration.toFixed(1)}s + captions.srt`);
+    return true;
+  },
   async thumb(id, dir) {
     console.log(`✅ ${id}  ${path.relative(process.cwd(), await require('./lib/thumb').render(dir))}`);
     return true;

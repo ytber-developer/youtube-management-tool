@@ -16,6 +16,7 @@ function copyNewer(from, to) {
     for (const f of fs.readdirSync(from)) n += copyNewer(path.join(from, f), path.join(to, f));
     return n;
   }
+  if (/\.(alt|tmp\.jpg|fallback\.jpg)$/.test(from)) return 0; // file tạm của công cụ cũ
   if (fs.existsSync(to) && fs.statSync(to).mtimeMs >= st.mtimeMs - 2) return 0; // sai số 2ms do utimes làm tròn
   fs.mkdirSync(path.dirname(to), { recursive: true });
   fs.copyFileSync(from, to);

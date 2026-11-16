@@ -27,6 +27,20 @@ const COMMANDS = {
     if (process.env.VERBOSE) for (const w of r.warnings) console.log(`     ⚠️ ${w}`);
     return r.ok;
   },
+  async images(id, dir) {
+    const r = await require('./lib/images').fetchForVideo(dir, { onlyMissing: !process.env.REFETCH });
+    console.log(`${r.ok ? '✅' : '⚠️ '} ${id}  ${r.ok ? 'đủ ảnh' : `thiếu cảnh ${r.missing.join(', ')}`}`);
+    return true; // thiếu ảnh không phải lỗi lệnh — xem trên trang /content
+  },
+  async slides(id, dir) {
+    const r = await require('./lib/slides').renderVideo(dir);
+    console.log(`✅ ${id}  ${r.count} slide${r.todo.length ? `  ⚠️ TODO cảnh ${r.todo.join(', ')}` : ''}`);
+    return true;
+  },
+  async thumb(id, dir) {
+    console.log(`✅ ${id}  ${path.relative(process.cwd(), await require('./lib/thumb').render(dir))}`);
+    return true;
+  },
 };
 
 async function main() {

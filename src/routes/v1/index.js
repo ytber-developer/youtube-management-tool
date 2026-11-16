@@ -11,6 +11,7 @@ const facebookReelRoutes = require('../facebook.reel.routes');
 const setupRoutes = require('./setup.routes');
 const campaignRoutes = require('./campaign.routes');
 const proxyRoutes = require('./proxy.routes');
+const contentRoutes = require('./content.routes');
 
 // Mount routes
 router.use('/authenticator', verifyRoutes);
@@ -23,5 +24,6 @@ router.use('/facebook', facebookReelRoutes);
 router.use('/setup', setupRoutes);
 router.use('/campaigns', campaignRoutes);
 router.use('/proxies', proxyRoutes);
+router.use('/content', contentRoutes);
 
 module.exports = router;

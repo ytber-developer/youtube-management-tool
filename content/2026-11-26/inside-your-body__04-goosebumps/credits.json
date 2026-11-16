@@ -1,0 +1,120 @@
+[
+  {
+    "scene": 1,
+    "type": "stock",
+    "query": "goosebumps on arm close up",
+    "missing": true
+  },
+  {
+    "scene": 2,
+    "type": "diagram"
+  },
+  {
+    "scene": 3,
+    "type": "stock",
+    "query": "startled woman watching movie",
+    "file": "images/scene03.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Frances (Appleton) Longfellow to Emmeline (Austin) Wadsworth, 22 August 1841 (4ae1bc0a-8d67-4b14-bf29-ac0d12b7e9c1).jpg",
+    "title": "Frances (Appleton) Longfellow to Emmeline (Austin) Wadsworth, 22 August 1841 (4ae1bc0a-8d67-4b14-bf29-ac0d12b7e9c1)",
+    "credit": "Fanny (Appleton) Longfellow (1817-1861) / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:Frances_(Appleton)_Longfellow_to_Emmeline_(Austin)_Wadsworth,_22_August_1841_(4ae1bc0a-8d67-4b14-bf29-ac0d12b7e9c1).jpg",
+    "width": 1920,
+    "height": 1267
+  },
+  {
+    "scene": 4,
+    "type": "stock",
+    "query": "fluffy bird puffed feathers winter",
+    "missing": true
+  },
+  {
+    "scene": 5,
+    "type": "stock",
+    "query": "cat with fur standing up",
+    "file": "images/scene05.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Ocelot cat fur skin coat, ripped up (1).jpg",
+    "title": "Ocelot cat fur skin coat, ripped up (1)",
+    "credit": "--Kürschner (talk) 06:28, 15 January 2010 (UTC) / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:Ocelot_cat_fur_skin_coat,_ripped_up_(1).jpg",
+    "width": 1920,
+    "height": 1362
+  },
+  {
+    "scene": 6,
+    "type": "stock",
+    "query": "person shivering in cold wind",
+    "file": "images/scene06.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Hindu Boy Returning After Holy Dip In Ganga - Makar Sankranti Observance - Kolkata 2018-01-14 6830.JPG",
+    "title": "Hindu Boy Returning After Holy Dip In Ganga - Makar Sankranti Observance - Kolkata 2018-01-14 6830",
+    "credit": "Biswarup Ganguly / CC BY 3.0",
+    "license": "CC BY 3.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Hindu_Boy_Returning_After_Holy_Dip_In_Ganga_-_Makar_Sankranti_Observance_-_Kolkata_2018-01-14_6830.JPG",
+    "width": 1920,
+    "height": 2880
+  },
+  {
+    "scene": 7,
+    "type": "stock",
+    "query": "woman listening to music with headphones eyes closed",
+    "file": "images/scene07.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Woman listening to hear heart with a stethoscope.jpg",
+    "title": "Woman listening to hear heart with a stethoscope",
+    "credit": "Shixart1985 / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Woman_listening_to_hear_heart_with_a_stethoscope.jpg",
+    "width": 1920,
+    "height": 1282
+  },
+  {
+    "scene": 8,
+    "type": "science",
+    "query": "hair follicle microscope image",
+    "missing": true
+  },
+  {
+    "scene": 9,
+    "type": "diagram"
+  },
+  {
+    "scene": 10,
+    "type": "stock",
+    "query": "mouse in laboratory",
+    "missing": true
+  },
+  {
+    "scene": 11,
+    "type": "stock",
+    "query": "man looking at his forearm",
+    "missing": true
+  },
+  {
+    "scene": 12,
+    "type": "stock",
+    "query": "people at concert enjoying music",
+    "file": "images/scene12.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Cariani - A Concert - Google Art Project.jpg",
+    "title": "A Concerttitle QS:P1476,en:\"A Concert\"label QS:Len,\"A Concert\"",
+    "credit": "Giovanni Cariani / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:Cariani_-_A_Concert_-_Google_Art_Project.jpg",
+    "width": 1920,
+    "height": 1342
+  },
+  {
+    "scene": 13,
+    "type": "stock",
+    "query": "goosebumps skin music concert",
+    "missing": true
+  },
+  {
+    "scene": 14,
+    "type": "outro"
+  }
+]

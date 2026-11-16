@@ -1,0 +1,194 @@
+[
+  {
+    "scene": 1,
+    "type": "stock",
+    "query": "woman blowing nose tissue on couch",
+    "file": "images/scene01.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:The Proclamation of Proclamations or the most glorious and memorable Peace that ever was proclaimed in this or any other Metropolis thoughout the World (BM 1868,0808.4305).jpg",
+    "title": "The Proclamation of Proclamations or the most glorious and memorable Peace that ever was proclaimed in this or any other Metropolis thoughout the World",
+    "credit": "After: Jefferyes Hamett O'Neale Published by: Edward Sumpter / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:The_Proclamation_of_Proclamations_or_the_most_glorious_and_memorable_Peace_that_ever_was_proclaimed_in_this_or_any_other_Metropolis_thoughout_the_World_(BM_1868,0808.4305).jpg",
+    "width": 1920,
+    "height": 1484
+  },
+  {
+    "scene": 2,
+    "type": "science",
+    "query": "rhinovirus illustration CDC",
+    "missing": true
+  },
+  {
+    "scene": 3,
+    "type": "stock",
+    "query": "family autumn walk park",
+    "file": "images/scene03.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:The Family of Preacher Reinier Halma in Langerak on the Lek (SM 2172).png",
+    "title": "The Family of Preacher Reinier Halma in Langerak on the Lek",
+    "credit": "Muller, Jacques / PDM-owner",
+    "license": "PDM-owner",
+    "url": "https://commons.wikimedia.org/wiki/File:The_Family_of_Preacher_Reinier_Halma_in_Langerak_on_the_Lek_(SM_2172).png",
+    "width": 1920,
+    "height": 1457
+  },
+  {
+    "scene": 4,
+    "type": "stock",
+    "query": "man sneezing into elbow",
+    "file": "images/scene04.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Sneeze.JPG",
+    "title": "Sneeze",
+    "credit": "James Gathany / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:Sneeze.JPG",
+    "width": 1920,
+    "height": 1284
+  },
+  {
+    "scene": 5,
+    "type": "diagram"
+  },
+  {
+    "scene": 6,
+    "type": "science",
+    "query": "airway epithelial cells cilia microscope",
+    "file": "images/scene06.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:SEM micrograph of influenza A virions infecting primary human airway organoid cultures showing differentiated cilia.jpg",
+    "title": "SEM micrograph of influenza A virions infecting primary human airway organoid cultures showing differentiated cilia",
+    "credit": "Phage1990 / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:SEM_micrograph_of_influenza_A_virions_infecting_primary_human_airway_organoid_cultures_showing_differentiated_cilia.jpg",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "scene": 7,
+    "type": "diagram"
+  },
+  {
+    "scene": 8,
+    "type": "stock",
+    "query": "sick man in bed with tea",
+    "missing": true
+  },
+  {
+    "scene": 9,
+    "type": "diagram"
+  },
+  {
+    "scene": 10,
+    "type": "science",
+    "query": "neutrophil white blood cell scanning electron micrograph NIH",
+    "file": "images/scene10.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Blausen 0909 WhiteBloodCells.png",
+    "title": "Blausen 0909 WhiteBloodCells",
+    "credit": "BruceBlaus. When using this image in external sources it can be cited as: Blausen.com staff (2014). \"Medical gallery of Blausen Medical 2014\". WikiJournal of Medicine 1 (2). DOI:10.15347/wjm/2014.010. ISSN 2002-4436. / CC BY 3.0",
+    "license": "CC BY 3.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Blausen_0909_WhiteBloodCells.png",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "scene": 11,
+    "type": "stock",
+    "query": "woman holding throat sore",
+    "file": "images/scene11.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:The ghost's or the taylor befrited &c &c a German story (BM 1868,0808.5919).jpg",
+    "title": "The ghost's or the taylor befrited &c &c a German story",
+    "credit": "Print made by: Isaac Cruikshank Published by: Stitch, Tom / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:The_ghost%27s_or_the_taylor_befrited_%26c_%26c_a_German_story_(BM_1868,0808.5919).jpg",
+    "width": 1920,
+    "height": 1373
+  },
+  {
+    "scene": 12,
+    "type": "diagram"
+  },
+  {
+    "scene": 13,
+    "type": "stock",
+    "query": "thermometer and tissues on nightstand",
+    "file": "images/scene13.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Kroger (49773894773).jpg",
+    "title": "Kroger (49773894773)",
+    "credit": "Dan Keck from Ohio / CC0",
+    "license": "CC0",
+    "url": "https://commons.wikimedia.org/wiki/File:Kroger_(49773894773).jpg",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "scene": 14,
+    "type": "science",
+    "query": "lymphocyte scanning electron micrograph",
+    "file": "images/scene14.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:HIV-1 virus particles colorized scanning electron micrograph - 411.jpg",
+    "title": "HIV-1 virus particles colorized scanning electron micrograph - 411",
+    "credit": "NIAID / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:HIV-1_virus_particles_colorized_scanning_electron_micrograph_-_411.jpg",
+    "width": 1920,
+    "height": 1493
+  },
+  {
+    "scene": 15,
+    "type": "diagram"
+  },
+  {
+    "scene": 16,
+    "type": "stock",
+    "query": "woman feeling better opening curtains morning",
+    "file": "images/scene16.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:... question of discretion.jpg",
+    "title": "... question of discretion",
+    "credit": "@VanveenJF / CC0",
+    "license": "CC0",
+    "url": "https://commons.wikimedia.org/wiki/File:..._question_of_discretion.jpg",
+    "width": 1920,
+    "height": 677
+  },
+  {
+    "scene": 17,
+    "type": "science",
+    "query": "B lymphocyte illustration NIAID",
+    "missing": true
+  },
+  {
+    "scene": 18,
+    "type": "diagram"
+  },
+  {
+    "scene": 19,
+    "type": "stock",
+    "query": "healthy woman jogging in park",
+    "missing": true
+  },
+  {
+    "scene": 20,
+    "type": "stock",
+    "query": "box of tissues on table",
+    "file": "images/scene20.jpg",
+    "source": "Openverse (wordpress)",
+    "id": "3f0866db-d5b8-4d06-ba6a-709cffa8e872",
+    "title": "Tissue box on a glass table in a veranda setting, with wicker chairs and green plants.",
+    "credit": "Riwaj Lamichhane / CC0",
+    "license": "CC0",
+    "url": "https://wordpress.org/photos/photo/7466a146f3/",
+    "width": 2048,
+    "height": 1148
+  },
+  {
+    "scene": 21,
+    "type": "outro"
+  }
+]

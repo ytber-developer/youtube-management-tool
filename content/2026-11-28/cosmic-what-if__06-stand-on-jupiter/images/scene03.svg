@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
+<defs><clipPath id="j3c"><circle cx="385" cy="360" r="290"/></clipPath><radialGradient id="j3e" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#7cc4ff"/><stop offset="0.6" stop-color="#4aa3ff"/><stop offset="1" stop-color="#1f5fb0"/></radialGradient></defs>
+<g clip-path="url(#j3c)">
+<rect x="95" y="70.0" width="580" height="64.8" fill="#d9a066"/>
+<rect x="95" y="133.8" width="580" height="67.7" fill="#f1d3a5"/>
+<rect x="95" y="200.5" width="580" height="67.7" fill="#d9a066"/>
+<rect x="95" y="267.2" width="580" height="76.4" fill="#f1d3a5"/>
+<rect x="95" y="342.6" width="580" height="47.4" fill="#e8c08a"/>
+<rect x="95" y="389.0" width="580" height="76.4" fill="#f1d3a5"/>
+<rect x="95" y="464.4" width="580" height="64.8" fill="#d9a066"/>
+<rect x="95" y="528.2" width="580" height="64.8" fill="#f1d3a5"/>
+<rect x="95" y="592.0" width="580" height="59.0" fill="#d9a066"/>
+</g>
+<ellipse cx="480" cy="470.2" rx="33.6" ry="22.0" fill="#c96a45" opacity="0.9"/>
+<circle cx="126.3" cy="360" r="24.9" fill="url(#j3e)" stroke="#ffffff" stroke-width="2"/>
+<circle cx="178.0" cy="360" r="24.9" fill="url(#j3e)" stroke="#ffffff" stroke-width="2"/>
+<circle cx="229.8" cy="360" r="24.9" fill="url(#j3e)" stroke="#ffffff" stroke-width="2"/>
+<circle cx="281.5" cy="360" r="24.9" fill="url(#j3e)" stroke="#ffffff" stroke-width="2"/>
+<circle cx="333.3" cy="360" r="24.9" fill="url(#j3e)" stroke="#ffffff" stroke-width="2"/>
+<circle cx="385.0" cy="360" r="24.9" fill="url(#j3e)" stroke="#ffffff" stroke-width="2"/>
+<circle cx="436.7" cy="360" r="24.9" fill="url(#j3e)" stroke="#ffffff" stroke-width="2"/>
+<circle cx="488.5" cy="360" r="24.9" fill="url(#j3e)" stroke="#ffffff" stroke-width="2"/>
+<circle cx="540.2" cy="360" r="24.9" fill="url(#j3e)" stroke="#ffffff" stroke-width="2"/>
+<circle cx="592.0" cy="360" r="24.9" fill="url(#j3e)" stroke="#ffffff" stroke-width="2"/>
+<circle cx="643.7" cy="360" r="24.9" fill="url(#j3e)" stroke="#ffffff" stroke-width="2"/>
+<circle cx="815" cy="360" r="25.9" fill="url(#j3e)"/>
+<text x="815.0" y="431.9" font-size="36" font-weight="800" fill="#ffffff" text-anchor="middle" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >Earth</text>
+<text x="385.0" y="44.0" font-size="40" font-weight="800" fill="#f1d3a5" text-anchor="middle" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >Jupiter</text>
+<text x="385.0" y="706.0" font-size="36" font-weight="800" fill="#ffb347" text-anchor="middle" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >11 Earths across</text>
+<text x="860.0" y="725.0" font-size="24" font-weight="600" fill="#c9c3ff" text-anchor="end" >to scale</text>
+</svg>

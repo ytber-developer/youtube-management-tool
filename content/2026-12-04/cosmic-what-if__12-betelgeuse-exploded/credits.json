@@ -1,0 +1,297 @@
+[
+  {
+    "scene": 1,
+    "type": "nasa",
+    "query": "Orion constellation Betelgeuse",
+    "file": "/Users/er_macbook_287/Documents/WorkSpace/research-and-development/ytb-content/cosmic-what-if/12-betelgeuse-exploded/images/scene01.jpg.alt",
+    "source": "NASA Image and Video Library",
+    "id": "PIA05546",
+    "title": "Stars in Orion as Seen from Mars",
+    "credit": "NASA/JPL/Cornell",
+    "url": "https://images.nasa.gov/details/PIA05546",
+    "width": 1024,
+    "height": 1024
+  },
+  {
+    "scene": 2,
+    "type": "nasa",
+    "query": "Orion Nebula Hubble",
+    "file": "images/scene02.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "0302062",
+    "title": "History of Hubble Space Telescope (HST)",
+    "credit": "NASA (MSFC)",
+    "url": "https://images.nasa.gov/details/0302062",
+    "width": 1920,
+    "height": 1600
+  },
+  {
+    "scene": 3,
+    "type": "diagram"
+  },
+  {
+    "scene": 4,
+    "type": "diagram"
+  },
+  {
+    "scene": 5,
+    "type": "nasa",
+    "query": "Betelgeuse ALMA image",
+    "missing": true
+  },
+  {
+    "scene": 6,
+    "type": "diagram"
+  },
+  {
+    "scene": 7,
+    "type": "nasa",
+    "query": "neutron star illustration",
+    "file": "images/scene07.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA23863",
+    "title": "Different Types of Neutron Stars (Illustration)",
+    "credit": "NASA/JPL-Caltech",
+    "url": "https://images.nasa.gov/details/PIA23863",
+    "width": 3334,
+    "height": 1875
+  },
+  {
+    "scene": 8,
+    "type": "nasa",
+    "query": "supernova explosion illustration",
+    "missing": true
+  },
+  {
+    "scene": 9,
+    "type": "nasa",
+    "query": "Sun Solar Dynamics Observatory",
+    "file": "images/scene09.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA21583",
+    "title": "Dynamic Loops in Profile",
+    "credit": "NASA/GSFC/Solar Dynamics Observatory",
+    "url": "https://images.nasa.gov/details/PIA21583",
+    "width": 2100,
+    "height": 1181
+  },
+  {
+    "scene": 10,
+    "type": "nasa",
+    "query": "Super-Kamiokande neutrino detector",
+    "missing": true
+  },
+  {
+    "scene": 11,
+    "type": "nasa",
+    "query": "SN 1987A Hubble",
+    "file": "images/scene11.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "GSFC_20171208_Archive_e001896",
+    "title": "NASA's Hubble Sees A New Supernova Remnant Light Up",
+    "credit": "NASA, ESA, and P. Challis (Harvard-Smithsonian Center for Astrophysics)",
+    "url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001896",
+    "width": 2382,
+    "height": 1816
+  },
+  {
+    "scene": 12,
+    "type": "nasa",
+    "query": "Gemini North telescope dome",
+    "file": "images/scene12.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "GSFC_20171208_Archive_e002172",
+    "title": "Artist's Concept of Exoplanet HR 8799b",
+    "credit": "NASA/Goddard Space Flight Center/ESA/G. Bacon (STScI)",
+    "url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e002172",
+    "width": 1280,
+    "height": 1024
+  },
+  {
+    "scene": 13,
+    "type": "nasa",
+    "query": "half moon",
+    "file": "/Users/er_macbook_287/Documents/WorkSpace/research-and-development/ytb-content/cosmic-what-if/12-betelgeuse-exploded/images/scene13.jpg.alt",
+    "source": "NASA Image and Video Library",
+    "id": "PIA12586",
+    "title": "Titan Changing Seasons",
+    "credit": "NASA/JPL/Space Science Institute",
+    "url": "https://images.nasa.gov/details/PIA12586",
+    "width": 1255,
+    "height": 1255
+  },
+  {
+    "scene": 14,
+    "type": "nasa",
+    "query": "daytime Moon blue sky",
+    "missing": true
+  },
+  {
+    "scene": 15,
+    "type": "nasa",
+    "query": "Orion constellation over observatory",
+    "file": "images/scene15.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "KSC-2009-5248",
+    "title": "KSC-2009-5248",
+    "credit": "NASA/Kim Shiflett",
+    "url": "https://images.nasa.gov/details/KSC-2009-5248",
+    "width": 1920,
+    "height": 1285
+  },
+  {
+    "scene": 16,
+    "type": "nasa",
+    "query": "ozone layer Earth limb",
+    "file": "images/scene16.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA09938",
+    "title": "AIRS Ozone Burden During Antarctic Winter: Time Series from 8/1/2005 to   9/30/2005",
+    "credit": "NASA/JPL",
+    "url": "https://images.nasa.gov/details/PIA09938",
+    "width": 1920,
+    "height": 1456
+  },
+  {
+    "scene": 17,
+    "type": "nasa",
+    "query": "Kepler supernova remnant",
+    "file": "/Users/er_macbook_287/Documents/WorkSpace/research-and-development/ytb-content/cosmic-what-if/12-betelgeuse-exploded/images/scene17.jpg.alt",
+    "source": "NASA Image and Video Library",
+    "id": "PIA06909",
+    "title": "Kepler Supernova Remnant: A View from Hubble Space Telescope",
+    "credit": "NASA/ESA/Johns Hopkins University",
+    "url": "https://images.nasa.gov/details/PIA06909",
+    "width": 1920,
+    "height": 1826
+  },
+  {
+    "scene": 18,
+    "type": "nasa",
+    "query": "Milky Way night sky",
+    "file": "images/scene18.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "iss073e0982823",
+    "title": "A bright airglow blankets Earth's horizon as the Milky Way illuminates the night sky",
+    "credit": "NASA (JSC)",
+    "url": "https://images.nasa.gov/details/iss073e0982823",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "scene": 19,
+    "type": "diagram"
+  },
+  {
+    "scene": 20,
+    "type": "nasa",
+    "query": "red supergiant star illustration",
+    "file": "images/scene20.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA05062",
+    "title": "The Tarantula Nebula",
+    "credit": "NASA/JPL-Caltech/Cornell University and University of Leiden",
+    "url": "https://images.nasa.gov/details/PIA05062",
+    "width": 1384,
+    "height": 908
+  },
+  {
+    "scene": 21,
+    "type": "nasa",
+    "query": "Betelgeuse dimming Hubble",
+    "missing": true
+  },
+  {
+    "scene": 22,
+    "type": "nasa",
+    "query": "Betelgeuse surface mass ejection illustration",
+    "missing": true
+  },
+  {
+    "scene": 23,
+    "type": "nasa",
+    "query": "solar coronal mass ejection SOHO",
+    "file": "/Users/er_macbook_287/Documents/WorkSpace/research-and-development/ytb-content/cosmic-what-if/12-betelgeuse-exploded/images/scene23.jpg.alt",
+    "source": "NASA Image and Video Library",
+    "id": "brief-outburst_16760026566_o",
+    "title": "Brief Outburst",
+    "credit": "NASA/Solar Dynamics Observatory",
+    "url": "https://images.nasa.gov/details/brief-outburst_16760026566_o",
+    "width": 1350,
+    "height": 1350
+  },
+  {
+    "scene": 24,
+    "type": "nasa",
+    "query": "Hubble Betelgeuse ultraviolet",
+    "missing": true
+  },
+  {
+    "scene": 25,
+    "type": "nasa",
+    "query": "Betelgeuse companion star Gemini",
+    "missing": true
+  },
+  {
+    "scene": 26,
+    "type": "nasa",
+    "query": "binary star system illustration",
+    "file": "images/scene26.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA13347",
+    "title": "Before the Smashup Artist Concept",
+    "credit": "NASA/JPL-Caltech",
+    "url": "https://images.nasa.gov/details/PIA13347",
+    "width": 1920,
+    "height": 1536
+  },
+  {
+    "scene": 27,
+    "type": "nasa",
+    "query": "Crab Nebula Hubble",
+    "file": "images/scene27.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA21474",
+    "title": "Crab Nebula from Five Observatories",
+    "credit": "NASA, ESA, G. Dubner IAFE, CONICET-University of Buenos Aires et al.; A. Loll et al.; T. Temim et al.; F. Seward et al.; VLA/NRAO/AUI/NSF; Chandra/CXC; Spitzer/JPL-Caltech; XMM-Newton/ESA; and Hubble/STScI",
+    "url": "https://images.nasa.gov/details/PIA21474",
+    "width": 1296,
+    "height": 1024
+  },
+  {
+    "scene": 28,
+    "type": "nasa",
+    "query": "Cassiopeia A Chandra",
+    "file": "images/scene28.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "GSFC_20171208_Archive_e002183",
+    "title": "Cassiopeia A supernova",
+    "credit": "NASA/DOE/Fermi LAT Collaboration, CXC/SAO/JPL-Caltech/Steward/O. Krause et al., and NRAO/AUI",
+    "url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e002183",
+    "width": 1920,
+    "height": 1453
+  },
+  {
+    "scene": 29,
+    "type": "nasa",
+    "query": "Pillars of Creation",
+    "file": "images/scene29.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA03096",
+    "title": "Towering Infernos",
+    "credit": "IRAC Image: NASA/JPL-Caltech/Harvard-Smithsonian CfA/ESA/STScI<br />Visible Light Image: NASA/JPL-Caltech/Harvard-Smithsonian CfA/DSS",
+    "url": "https://images.nasa.gov/details/PIA03096",
+    "width": 1920,
+    "height": 1427
+  },
+  {
+    "scene": 30,
+    "type": "nasa",
+    "query": "Orion winter sky",
+    "missing": true
+  },
+  {
+    "scene": 31,
+    "type": "outro"
+  }
+]

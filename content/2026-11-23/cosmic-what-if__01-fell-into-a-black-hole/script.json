@@ -1,0 +1,110 @@
+{
+  "channel": "cosmic-what-if",
+  "number": 1,
+  "slug": "fell-into-a-black-hole",
+  "target_minutes": 1.0,
+  "title": "What If You Fell Into a Black Hole?",
+  "thumbnail_text": "INTO A BLACK HOLE?",
+  "description": "What would actually happen if you fell into a black hole? It depends on the size of the black hole, and the answer is stranger than you think.\n\nSources:\n- NASA Science, Black Hole Basics: https://science.nasa.gov/universe/black-holes/\n- Event Horizon Telescope, Sagittarius A* (2022): https://eventhorizontelescope.org/blog/astronomers-reveal-first-image-black-hole-heart-our-galaxy",
+  "tags": [
+    "black hole",
+    "what if",
+    "space",
+    "astronomy",
+    "event horizon",
+    "spaghettification",
+    "sagittarius a*",
+    "physics",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "NASA Science - Black Hole Basics",
+      "url": "https://science.nasa.gov/universe/black-holes/"
+    },
+    {
+      "title": "Event Horizon Telescope - First image of Sagittarius A*",
+      "url": "https://eventhorizontelescope.org/blog/astronomers-reveal-first-image-black-hole-heart-our-galaxy"
+    }
+  ],
+  "scenes": [
+    {
+      "narration": "What if you fell into a black hole? Let's find out. And let's hope you packed light.",
+      "headline": "WHAT IF YOU FELL INTO A <em>BLACK HOLE?</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "black holes monsters in space artist concept",
+        "note": "dramatic black hole with accretion disk",
+        "nasa_id": "PIA16695"
+      }
+    },
+    {
+      "narration": "A black hole is matter crushed so tightly that its gravity traps everything, even light. Its edge is called the event horizon. Cross it, and there is no way back.",
+      "headline": "GRAVITY TRAPS EVERYTHING. <em>EVEN LIGHT.</em>",
+      "sub": "The edge: the event horizon",
+      "visual": {
+        "type": "nasa",
+        "query": "behemoth black hole found in an unlikely place",
+        "note": "black hole bending starlight",
+        "nasa_id": "GSFC_20171208_Archive_e000386",
+        "bgPosition": "0% 50%",
+        "bgSize": "140% auto"
+      }
+    },
+    {
+      "narration": "Fall into a small black hole, a few times the mass of our Sun, and gravity pulls your feet far harder than your head. You get stretched like a noodle. Scientists really call this spaghettification.",
+      "headline": "SMALL BLACK HOLE: <em>SPAGHETTIFICATION</em>",
+      "sub": "Stretched like a noodle",
+      "visual": {
+        "type": "nasa",
+        "query": "black hole destroys a star illustration",
+        "note": "tidal disruption of a star",
+        "nasa_id": "PIA25440",
+        "bgPosition": "70% center"
+      }
+    },
+    {
+      "narration": "But pick a giant, like Sagittarius A star at the center of our galaxy, four million times the mass of the Sun, and the pull is gentle at the edge. You would drift across the horizon and feel nothing at all.",
+      "headline": "A GIANT IS <em>GENTLE.</em>",
+      "sub": "Sagittarius A*: 4 million × the Sun",
+      "visual": {
+        "type": "nasa",
+        "query": "stars gather in downtown milky way spitzer",
+        "note": "galactic center",
+        "nasa_id": "PIA13932"
+      }
+    },
+    {
+      "narration": "To a friend watching from far away, you would never quite make it. Your image would slow down, turn red, and fade, frozen at the edge.",
+      "headline": "TO EVERYONE ELSE, YOU <em>FREEZE.</em>",
+      "sub": "Slower. Redder. Fainter.",
+      "visual": {
+        "type": "nasa",
+        "query": "astronaut Bruce McCandless EVA",
+        "note": "astronaut floating in space",
+        "nasa_id": "S84-27040",
+        "bgPosition": "center 30%"
+      }
+    },
+    {
+      "narration": "For you, the fall goes on, toward a point where our laws of physics simply break down. What happens there? Nobody knows yet.",
+      "headline": "WHERE PHYSICS <em>BREAKS DOWN</em>",
+      "sub": "Nobody knows... yet.",
+      "visual": {
+        "type": "nasa",
+        "query": "Hubble eXtreme Deep Field",
+        "note": "deep field of galaxies",
+        "nasa_id": "GSFC_20171208_Archive_e001651"
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "headline": "",
+      "sub": "",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

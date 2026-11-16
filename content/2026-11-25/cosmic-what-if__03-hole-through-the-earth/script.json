@@ -1,0 +1,140 @@
+{
+  "channel": "cosmic-what-if",
+  "number": 3,
+  "slug": "hole-through-the-earth",
+  "target_minutes": 2.33,
+  "title": "What If You Jumped Into a Hole Through the Earth?",
+  "thumbnail_text": "JUMP THROUGH EARTH?",
+  "description": "Dig a tunnel straight through the planet, jump in, and how long until you pop out the other side? Physics has a surprisingly precise answer, and gravity does something unexpected on the way down.\n\nSources:\n- NASA Science, Earth Facts: https://science.nasa.gov/earth/facts/\n- Alexander Klotz, The Gravity Tunnel in a Non-Uniform Earth, American Journal of Physics, 2015: https://arxiv.org/abs/1308.1342\n- WorldAtlas, The Kola Superdeep Borehole: https://www.worldatlas.com/articles/the-kola-superdeep-borehole.html",
+  "tags": [
+    "hole through the earth",
+    "gravity tunnel",
+    "what if",
+    "earth core",
+    "physics",
+    "gravity",
+    "kola superdeep borehole",
+    "science",
+    "earth science"
+  ],
+  "sources": [
+    {
+      "title": "NASA Science - Earth Facts",
+      "url": "https://science.nasa.gov/earth/facts/"
+    },
+    {
+      "title": "Klotz, The Gravity Tunnel in a Non-Uniform Earth (Am. J. Phys. 83, 231, 2015)",
+      "url": "https://arxiv.org/abs/1308.1342"
+    },
+    {
+      "title": "WorldAtlas - The Kola Superdeep Borehole",
+      "url": "https://www.worldatlas.com/articles/the-kola-superdeep-borehole.html"
+    }
+  ],
+  "scenes": [
+    {
+      "narration": "Imagine digging a hole straight through the center of the Earth, then jumping in. How long until you pop out the other side?",
+      "headline": "JUMP THROUGH <em>THE EARTH?</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "Blue Marble Earth full disk",
+        "note": "whole Earth seen from space"
+      }
+    },
+    {
+      "narration": "First, the digging. Earth is almost eight thousand miles across. The deepest hole humans have ever drilled, the Kola Superdeep Borehole in Russia, reached about seven and a half miles. It took nearly two decades, and it never made it through the crust.",
+      "headline": "OUR DEEPEST HOLE: <em>7.5 MILES</em>",
+      "sub": "Earth is ~7,900 miles wide",
+      "visual": {
+        "type": "diagram",
+        "spec": "Earth cross-section with a tiny tick at the surface showing the 7.5-mile Kola borehole versus the 7,900-mile diameter"
+      }
+    },
+    {
+      "narration": "Below the crust waits the mantle, about eighteen hundred miles of hot rock that slowly flows. Then a liquid metal outer core. And at the center, a solid ball of iron and nickel at up to nine thousand eight hundred degrees Fahrenheit, about as hot as the Sun's surface.",
+      "headline": "AS HOT AS <em>THE SUN</em>",
+      "sub": "Up to 9,800°F (5,400°C)",
+      "visual": {
+        "type": "diagram",
+        "spec": "labeled cutaway of Earth's layers: crust, mantle 1,800 mi, outer core 1,400 mi, inner core"
+      }
+    },
+    {
+      "narration": "So let's cheat. You get an indestructible tube with all the air pumped out. You step off the edge, and you fall. At first it feels like any other fall, just one that keeps going.",
+      "headline": "STEP OFF <em>THE EDGE</em>",
+      "sub": "Indestructible tube, no air",
+      "visual": {
+        "type": "nasa",
+        "query": "astronaut free fall training KC-135 weightless",
+        "note": "person floating in free fall"
+      }
+    },
+    {
+      "narration": "Here's the surprise. As you sink, gravity doesn't weaken right away. It actually gets stronger, peaking about nine percent above normal near the core. The rock above you pulls in all directions and cancels out, while the dense iron center keeps pulling you down.",
+      "headline": "GRAVITY GETS <em>STRONGER</em>",
+      "sub": "Peaks ~9% above surface gravity",
+      "visual": {
+        "type": "diagram",
+        "spec": "graph of gravity versus depth inside Earth: rises slightly to a peak near the core boundary, then falls to zero at the center"
+      }
+    },
+    {
+      "narration": "Then gravity fades, reaching zero at the very center. By now you're moving faster than eighteen thousand miles per hour, faster than the International Space Station orbits the planet.",
+      "headline": "ZERO GRAVITY <em>AT THE CENTER</em>",
+      "sub": "Over 18,000 mph",
+      "visual": {
+        "type": "nasa",
+        "query": "International Space Station orbit over Earth",
+        "note": "ISS above Earth"
+      }
+    },
+    {
+      "narration": "You shoot through the center, and now gravity works against you, slowing you down just as much as it sped you up. You rise and rise, and right as you reach the far side, you stop. Grab the edge, or you fall all the way back.",
+      "headline": "GRAB <em>THE EDGE</em>",
+      "sub": "Or fall back forever",
+      "visual": {
+        "type": "diagram",
+        "spec": "straight tunnel through Earth with a figure oscillating from one surface to the other, speed arrows largest at the center"
+      }
+    },
+    {
+      "narration": "Total travel time? The classic textbook answer is about forty two minutes. But in twenty fifteen, physicist Alexander Klotz used real data on Earth's layers and got about thirty eight minutes. Shorter than a lot of commutes.",
+      "headline": "ABOUT <em>38 MINUTES</em>",
+      "sub": "Not the textbook 42",
+      "visual": {
+        "type": "nasa",
+        "query": "Earth interior seismic tomography",
+        "note": "scientific view of Earth's interior"
+      }
+    },
+    {
+      "narration": "Of course, reality ruins the ride. With air in the tube, drag would cap your speed near one hundred twenty miles per hour, and you'd end up bobbing to a stop at the center. And Earth's spin would shove you into the wall, unless your tunnel runs pole to pole.",
+      "headline": "AIR AND SPIN <em>RUIN IT</em>",
+      "sub": "Drag and Earth's rotation",
+      "visual": {
+        "type": "nasa",
+        "query": "Earth North Pole Arctic from space",
+        "note": "Earth seen over the pole"
+      }
+    },
+    {
+      "narration": "One last twist. Drop in from most of the United States, and the far side of the planet is the Indian Ocean. So pack a swimsuit.",
+      "headline": "PACK A <em>SWIMSUIT</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "Indian Ocean from space astronaut photograph",
+        "note": "open ocean seen from orbit"
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "headline": "",
+      "sub": "",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

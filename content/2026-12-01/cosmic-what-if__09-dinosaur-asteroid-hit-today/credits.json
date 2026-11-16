@@ -1,0 +1,225 @@
+[
+  {
+    "scene": 1,
+    "type": "nasa",
+    "query": "asteroid impact artist concept",
+    "file": "images/scene01.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA18469",
+    "title": "Building Planets Through Collisions Artist Concept",
+    "credit": "NASA/JPL-Caltech",
+    "url": "https://images.nasa.gov/details/PIA18469",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "scene": 2,
+    "type": "nasa",
+    "query": "asteroid Bennu OSIRIS-REx",
+    "file": "images/scene02.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "jason2",
+    "title": "Vial with Asteroid Bennu Sample",
+    "credit": "James Tralie",
+    "url": "https://images.nasa.gov/details/jason2",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "scene": 3,
+    "type": "nasa",
+    "query": "Yucatan Peninsula Chicxulub crater relief map",
+    "file": "images/scene03.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA03380",
+    "title": "Anaglyph, Yucatan Peninsula, Mexico",
+    "credit": "NASA/JPL",
+    "url": "https://images.nasa.gov/details/PIA03380",
+    "width": 1600,
+    "height": 1080
+  },
+  {
+    "scene": 4,
+    "type": "diagram"
+  },
+  {
+    "scene": 5,
+    "type": "nasa",
+    "query": "meteor fireball",
+    "file": "/Users/er_macbook_287/Documents/WorkSpace/research-and-development/ytb-content/cosmic-what-if/09-dinosaur-asteroid-hit-today/images/scene05.jpg.alt",
+    "source": "NASA Image and Video Library",
+    "id": "PIA22825",
+    "title": "MISR Images Fireball Over Bering Sea",
+    "credit": "NASA/GSFC/LaRC/JPL-Caltech, MISR Team",
+    "url": "https://images.nasa.gov/details/PIA22825",
+    "width": 1830,
+    "height": 1830
+  },
+  {
+    "scene": 6,
+    "type": "nasa",
+    "query": "Chicxulub crater gravity map",
+    "missing": true
+  },
+  {
+    "scene": 7,
+    "type": "diagram"
+  },
+  {
+    "scene": 8,
+    "type": "nasa",
+    "query": "Gulf of Mexico from space",
+    "file": "images/scene08.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "51J-143-126",
+    "title": "Houston, Galveston Bay, Texas, USA",
+    "credit": "NASA (JSC)",
+    "url": "https://images.nasa.gov/details/51J-143-126",
+    "width": 1920,
+    "height": 1535
+  },
+  {
+    "scene": 9,
+    "type": "nasa",
+    "query": "Indian Ocean tsunami 2004 satellite",
+    "file": "/Users/er_macbook_287/Documents/WorkSpace/research-and-development/ytb-content/cosmic-what-if/09-dinosaur-asteroid-hit-today/images/scene09.jpg.alt",
+    "source": "NASA Image and Video Library",
+    "id": "PIA07219",
+    "title": "NASA/French Satellite Data Reveal New Details of Tsunami",
+    "credit": "NASA/JPL/CNES/National Institute of Advanced Industrial Science and Technology, Japan",
+    "url": "https://images.nasa.gov/details/PIA07219",
+    "width": 1590,
+    "height": 1800
+  },
+  {
+    "scene": 10,
+    "type": "nasa",
+    "query": "Florida coastline from the International Space Station",
+    "file": "images/scene10.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "KSC-2012-2997",
+    "title": "KSC-2012-2997",
+    "credit": "NASA/Dimitri Gerondidakis",
+    "url": "https://images.nasa.gov/details/KSC-2012-2997",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "scene": 11,
+    "type": "nasa",
+    "query": "New Zealand from space",
+    "file": "images/scene11.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "iss071e439624",
+    "title": "An orbital sunrise colorfully illuminates the Earth's atmosphere",
+    "credit": "NASA (JSC)",
+    "url": "https://images.nasa.gov/details/iss071e439624",
+    "width": 1920,
+    "height": 1078
+  },
+  {
+    "scene": 12,
+    "type": "nasa",
+    "query": "North Dakota badlands",
+    "missing": true
+  },
+  {
+    "scene": 13,
+    "type": "nasa",
+    "query": "dust storm atmosphere from space",
+    "file": "images/scene13.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "KSC-314D-0483_0061",
+    "title": "DART Employees at Work",
+    "credit": "NASA (KSC)",
+    "url": "https://images.nasa.gov/details/KSC-314D-0483_0061",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "scene": 14,
+    "type": "nasa",
+    "query": "snow covered North America satellite",
+    "file": "/Users/er_macbook_287/Documents/WorkSpace/research-and-development/ytb-content/cosmic-what-if/09-dinosaur-asteroid-hit-today/images/scene14.jpg.alt",
+    "source": "NASA Image and Video Library",
+    "id": "GSFC_20171208_Archive_e002014",
+    "title": "Happy Mother's Day - Flowers Fields as Seen by NASA Satellite",
+    "credit": "NASA (GSFC)",
+    "url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e002014",
+    "width": 1920,
+    "height": 1920
+  },
+  {
+    "scene": 15,
+    "type": "nasa",
+    "query": "Kansas crop circles irrigation Landsat",
+    "missing": true
+  },
+  {
+    "scene": 16,
+    "type": "nasa",
+    "query": "Cretaceous Paleogene boundary layer rock",
+    "missing": true
+  },
+  {
+    "scene": 17,
+    "type": "nasa",
+    "query": "Earth at night from space",
+    "file": "images/scene17.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "iss045e013851",
+    "title": "Earth Observation from the International Space Station",
+    "credit": "NASA (JSC)",
+    "url": "https://images.nasa.gov/details/iss045e013851",
+    "width": 1920,
+    "height": 1277
+  },
+  {
+    "scene": 18,
+    "type": "nasa",
+    "query": "fern forest",
+    "missing": true
+  },
+  {
+    "scene": 19,
+    "type": "nasa",
+    "query": "Yucatan sediment swirls MODIS",
+    "missing": true
+  },
+  {
+    "scene": 20,
+    "type": "nasa",
+    "query": "cenote Yucatan",
+    "missing": true
+  },
+  {
+    "scene": 21,
+    "type": "nasa",
+    "query": "near-Earth asteroid survey telescope",
+    "file": "images/scene21.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA25253",
+    "title": "NEO Surveyor in an Infrared Starfield Filled With Asteroids (Illustration)",
+    "credit": "NASA/JPL-Caltech/University of Arizona",
+    "url": "https://images.nasa.gov/details/PIA25253",
+    "width": 1920,
+    "height": 1143
+  },
+  {
+    "scene": 22,
+    "type": "nasa",
+    "query": "DART impact Dimorphos",
+    "file": "images/scene22.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "LRC-2022-0926-H1_P_DART-000425",
+    "title": "NASA’s Double Asteroid Redirection Test (DART) command team at Johns Hopkins University",
+    "credit": "NASA, Dave C. Bowman",
+    "url": "https://images.nasa.gov/details/LRC-2022-0926-H1_P_DART-000425",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "scene": 23,
+    "type": "outro"
+  }
+]

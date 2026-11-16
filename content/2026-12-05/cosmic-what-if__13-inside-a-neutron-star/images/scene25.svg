@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760"><defs>
+<filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="14" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="softglow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<marker id="ah-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ffb347"/></marker><marker id="ah-w" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ffffff"/></marker><marker id="ah-c" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7fe3ff"/></marker><marker id="ah-l" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c9c3ff"/></marker>
+</defs><g font-family="Avenir Next, Helvetica Neue, Arial, sans-serif"><circle cx="240" cy="360" r="140" fill="#bfe6ff" filter="url(#glow)"/>
+<text x="240" y="175" font-size="38" font-weight="800" fill="#ffffff" text-anchor="middle">J0030</text>
+<text x="240" y="374" font-size="40" font-weight="800" fill="#1a1440" text-anchor="middle">1.4 Suns</text>
+<line x1="100" y1="530" x2="100" y2="570" stroke="#c9c3ff" stroke-width="4"/>
+<line x1="380" y1="530" x2="380" y2="570" stroke="#c9c3ff" stroke-width="4"/>
+<line x1="108" y1="550" x2="372" y2="550" stroke="#c9c3ff" stroke-width="5" marker-start="url(#ah-l)" marker-end="url(#ah-l)"/>
+<text x="240" y="610" font-size="32" font-weight="700" fill="#c9c3ff" text-anchor="middle">≈ 16 miles</text><circle cx="660" cy="360" r="140" fill="#9fd4ff" filter="url(#glow)"/>
+<text x="660" y="175" font-size="38" font-weight="800" fill="#ffffff" text-anchor="middle">J0740</text>
+<text x="660" y="374" font-size="40" font-weight="800" fill="#1a1440" text-anchor="middle">2.1 Suns</text>
+<line x1="520" y1="530" x2="520" y2="570" stroke="#c9c3ff" stroke-width="4"/>
+<line x1="800" y1="530" x2="800" y2="570" stroke="#c9c3ff" stroke-width="4"/>
+<line x1="528" y1="550" x2="792" y2="550" stroke="#c9c3ff" stroke-width="5" marker-start="url(#ah-l)" marker-end="url(#ah-l)"/>
+<text x="660" y="610" font-size="32" font-weight="700" fill="#c9c3ff" text-anchor="middle">≈ 16 miles</text></g></svg>

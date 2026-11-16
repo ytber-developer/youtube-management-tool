@@ -1,0 +1,146 @@
+{
+  "channel": "inside-your-body",
+  "number": 7,
+  "slug": "immune-system-fights-a-cold",
+  "target_minutes": 5.0,
+  "title": "How Your Immune System Fights a Cold, Day by Day",
+  "thumbnail_text": "YOUR BODY VS. COLD",
+  "description": "The stuffy nose and sore throat of a cold are mostly your own immune system at work, not damage from the virus. Follow a cold from the first virus landing in your nose to the antibodies that finally win.\n\nSources:\n- CDC, About Common Cold: https://www.cdc.gov/common-cold/about/index.html\n- CDC, About Rhinoviruses: https://www.cdc.gov/rhinoviruses/about/index.html\n- Clinical Microbiology Reviews (2013), Human Rhinoviruses: https://pmc.ncbi.nlm.nih.gov/articles/3553670/\n- Antiviral Research (2001), The treatment of rhinovirus infections: progress and potential: https://pmc.ncbi.nlm.nih.gov/articles/PMC7125581\n- Yale News (2015), Cold virus replicates better at cooler temperatures: https://news.yale.edu/2015/01/05/cold-virus-replicates-better-cooler-temperatures\n- MedlinePlus, Immune response: https://medlineplus.gov/ency/article/000821.htm\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": ["common cold", "immune system", "how the immune system works", "rhinovirus", "antibodies", "white blood cells", "interferon", "runny nose", "virus", "human body", "immunology", "science explained", "inside your body"],
+  "sources": [
+    { "title": "CDC - About Common Cold", "url": "https://www.cdc.gov/common-cold/about/index.html" },
+    { "title": "CDC - About Rhinoviruses", "url": "https://www.cdc.gov/rhinoviruses/about/index.html" },
+    { "title": "Clinical Microbiology Reviews (2013) - Human Rhinoviruses", "url": "https://pmc.ncbi.nlm.nih.gov/articles/3553670/" },
+    { "title": "Antiviral Research (2001) - The treatment of rhinovirus infections: progress and potential", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7125581" },
+    { "title": "Yale News (2015) - Cold virus replicates better at cooler temperatures", "url": "https://news.yale.edu/2015/01/05/cold-virus-replicates-better-cooler-temperatures" },
+    { "title": "MedlinePlus - Immune response", "url": "https://medlineplus.gov/ency/article/000821.htm" }
+  ],
+  "scenes": [
+    {
+      "narration": "The scratchy throat, the stuffy nose, the endless tissues? Most of that misery isn't the virus hurting you. It's your immune system fighting back.",
+      "headline": "THE <em>FIGHT</em> INSIDE A COLD",
+      "sub": "Your symptoms are your defenses",
+      "visual": { "type": "stock", "query": "woman blowing nose tissue on couch", "note": "person with a cold wrapped in a blanket, blowing their nose" }
+    },
+    {
+      "narration": "Meet the usual suspect: rhinovirus, the most frequent cause of colds in the United States. Its name comes from the Greek word for nose. But it's far from alone. More than two hundred viruses can cause a cold.",
+      "headline": "MEET <em>RHINOVIRUS</em>",
+      "sub": "The nose virus",
+      "visual": { "type": "science", "query": "rhinovirus illustration CDC", "note": "3D illustration of a rhinovirus particle" }
+    },
+    {
+      "narration": "That's a big part of why colds are so common. Every year in the United States, adults catch an average of two to three colds, and children often catch even more. Rhinovirus activity tends to rise in early fall and spring.",
+      "headline": "TWO TO THREE <em>COLDS</em> A YEAR",
+      "sub": "And kids often get more",
+      "visual": { "type": "stock", "query": "family autumn walk park", "note": "family outdoors in fall weather" }
+    },
+    {
+      "narration": "It usually begins with tiny droplets. Someone nearby coughs or sneezes, and the virus floats your way. Or you shake a hand, then touch your eyes, nose, or mouth, and the virus hitches a ride straight to its favorite spot.",
+      "headline": "HOW A COLD <em>GETS IN</em>",
+      "sub": "Droplets and hands",
+      "visual": { "type": "stock", "query": "man sneezing into elbow", "note": "person sneezing into their elbow" }
+    },
+    {
+      "narration": "Your nose turns out to be a surprisingly good home for it. Rhinoviruses grow better in the cooler air passages of your nose than at the warmer temperature deep inside your body. In 2015, Yale researchers found one possible reason why.",
+      "headline": "WHY THE <em>NOSE?</em>",
+      "sub": "It's cooler in there",
+      "visual": { "type": "diagram", "spec": "side view of the head and airways: nasal passages labeled cooler, about 33 degrees Celsius, lungs labeled core body temperature, about 37 degrees Celsius" }
+    },
+    {
+      "narration": "Working with mouse airway cells, they found that at nose temperature, the cells' early antiviral defenses were weaker than at core body temperature. As one of the scientists put it, the lower the temperature, the lower the innate immune response to viruses seems to be.",
+      "headline": "COOLER NOSE, <em>WEAKER</em> DEFENSE",
+      "sub": "Yale study in mouse cells, 2015",
+      "visual": { "type": "science", "query": "airway epithelial cells cilia microscope", "note": "microscope image of airway lining cells with cilia" }
+    },
+    {
+      "narration": "To get inside, the virus latches onto a docking protein on the surface of the cells that line your nose. Once inside, it hijacks the cell's own machinery to churn out copies of itself, which then go looking for more cells.",
+      "headline": "THE VIRUS <em>BREAKS IN</em>",
+      "sub": "It hijacks your cells to copy itself",
+      "visual": { "type": "diagram", "spec": "four-step virus cycle: rhinovirus binds a receptor on a nasal cell, enters, cell makes new virus copies, new viruses are released toward neighboring cells" }
+    },
+    {
+      "narration": "Here's the surprising part. Only a small share of the cells lining your nose actually get infected, and the virus rarely destroys much tissue. So why do you feel so awful? Because the symptoms are mostly the result of your own immune response.",
+      "headline": "THE VIRUS ISN'T THE <em>VILLAIN</em>",
+      "sub": "Your response causes most symptoms",
+      "visual": { "type": "stock", "query": "sick man in bed with tea", "note": "person resting in bed with a mug of tea" }
+    },
+    {
+      "narration": "Your first responders belong to your innate immune system, the defense you're born with. Infected cells sense the intruder and release warning molecules called interferons, which help neighboring cells raise their guard against the virus.",
+      "headline": "THE <em>FIRST RESPONDERS</em>",
+      "sub": "Interferons sound the alarm",
+      "visual": { "type": "diagram", "spec": "infected nasal cell releasing interferon signals as small arrows to neighboring cells, which light up with a shield icon labeled antiviral state" }
+    },
+    {
+      "narration": "Other chemical messengers call in white blood cells. In people who develop symptoms, white blood cells called neutrophils rise in the blood. In people who are infected but feel fine, that rise isn't seen. The response, not just the virus, tracks how sick you feel.",
+      "headline": "CALLING IN <em>WHITE BLOOD CELLS</em>",
+      "sub": "Neutrophils join the fight",
+      "visual": { "type": "science", "query": "neutrophil white blood cell scanning electron micrograph NIH", "note": "electron microscope image of a neutrophil" }
+    },
+    {
+      "narration": "Day one or two. Symptoms typically start one to two days after infection, and they often begin with a sore or scratchy throat. On the first day of a cold, that throat is frequently the most bothersome symptom. The quiet stretch before it, the incubation period, averages about two days.",
+      "headline": "DAY ONE: THE <em>SCRATCHY THROAT</em>",
+      "sub": "Usually the first sign",
+      "visual": { "type": "stock", "query": "woman holding throat sore", "note": "person touching their throat with a slight wince" }
+    },
+    {
+      "narration": "Next comes the flood. Inflammatory substances like bradykinin rise, blood vessels in your nose swell and leak, and you start sneezing and dripping. That mucus is part of your defense, trapping germs and particles so they can be cleared away.",
+      "headline": "THE <em>RUNNY NOSE</em> IS A DEFENSE",
+      "sub": "Mucus traps the invaders",
+      "visual": { "type": "diagram", "spec": "inside the nasal passage: swollen blood vessels leaking fluid, mucus layer trapping virus particles, arrows showing mucus being cleared out" }
+    },
+    {
+      "narration": "Some of those immune signals act throughout your body, too. That can bring a headache, mild body aches, and sometimes a fever. Symptoms usually peak within two to three days of infection.",
+      "headline": "THE <em>PEAK</em> OF THE BATTLE",
+      "sub": "Usually two to three days in",
+      "visual": { "type": "stock", "query": "thermometer and tissues on nightstand", "note": "bedside table with tissues, a thermometer, and a glass of water" }
+    },
+    {
+      "narration": "Meanwhile, a slower but more precise team is gearing up: your adaptive immune system. Instead of reacting to anything suspicious, it learns the specific features of this particular virus and builds a custom response.",
+      "headline": "THE <em>SPECIALISTS</em> ARRIVE",
+      "sub": "Your adaptive immune system",
+      "visual": { "type": "science", "query": "lymphocyte scanning electron micrograph", "note": "electron microscope image of a lymphocyte" }
+    },
+    {
+      "narration": "Some white blood cells, called T cells, attack infected cells directly and help control the whole response. Others, called B cells, turn into plasma cells that pump out antibodies, proteins that latch onto the virus and make it easier to destroy. Each antibody fits one specific target.",
+      "headline": "T CELLS AND <em>ANTIBODIES</em>",
+      "sub": "Precision weapons against the virus",
+      "visual": { "type": "diagram", "spec": "T cell attacking an infected cell; B cell becoming a plasma cell releasing Y-shaped antibodies that bind to virus particles" }
+    },
+    {
+      "narration": "As infected cells are cleared and antibodies build up, the virus loses ground. Colds usually last less than a week, though some symptoms can linger for up to two weeks.",
+      "headline": "THE VIRUS <em>LOSES GROUND</em>",
+      "sub": "Usually less than a week",
+      "visual": { "type": "stock", "query": "woman feeling better opening curtains morning", "note": "person opening curtains to morning light, feeling better" }
+    },
+    {
+      "narration": "Afterward, a few of those immune cells stick around as memory, ready to respond faster if the same virus shows up again. So why do you still catch another cold next season?",
+      "headline": "YOUR IMMUNE <em>MEMORY</em>",
+      "sub": "A faster response next time",
+      "visual": { "type": "science", "query": "B lymphocyte illustration NIAID", "note": "illustration of B cells or memory immune cells" }
+    },
+    {
+      "narration": "Because rhinoviruses come in more than a hundred types, and antibodies against one type give little protection against the others. Add all the other cold viruses, and your immune system keeps meeting strangers. It's also a big reason scientists haven't been able to make a vaccine for the common cold.",
+      "headline": "MORE THAN <em>A HUNDRED</em> TYPES",
+      "sub": "Immunity to one doesn't cover all",
+      "visual": { "type": "diagram", "spec": "grid of many slightly different virus icons, with one antibody fitting only one of them" }
+    },
+    {
+      "narration": "The good news is that many fights end quietly. According to the CDC, most rhinovirus infections cause no symptoms or only mild ones. Your body often wins without you ever knowing there was a battle.",
+      "headline": "MOST FIGHTS END <em>QUIETLY</em>",
+      "sub": "Often no symptoms at all",
+      "visual": { "type": "stock", "query": "healthy woman jogging in park", "note": "person outdoors, energetic and well" }
+    },
+    {
+      "narration": "So the next time you reach for a tissue, remember what's going on. That sore throat and runny nose are signs of a coordinated defense, with layers of cells and signals working together to clear the virus out.",
+      "headline": "A <em>COORDINATED</em> DEFENSE",
+      "sub": "",
+      "visual": { "type": "stock", "query": "box of tissues on table", "note": "simple box of tissues in a cozy room" }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "headline": "",
+      "sub": "",
+      "visual": { "type": "outro" }
+    }
+  ]
+}

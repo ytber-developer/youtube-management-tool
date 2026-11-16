@@ -1,0 +1,130 @@
+[
+  {
+    "scene": 1,
+    "type": "stock",
+    "query": "close-up of hands cracking knuckles",
+    "file": "images/scene01.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Close-up of a woman disinfecting her hands with sanitizer spray.jpg",
+    "title": "Close-up of a woman disinfecting her hands with sanitizer spray",
+    "credit": "Shixart1985 / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Close-up_of_a_woman_disinfecting_her_hands_with_sanitizer_spray.jpg",
+    "width": 1920,
+    "height": 1282
+  },
+  {
+    "scene": 2,
+    "type": "diagram"
+  },
+  {
+    "scene": 3,
+    "type": "stock",
+    "query": "hand pulling finger close up",
+    "file": "images/scene03.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Peruvian brass casting - demonstrating traditional birth aiding technique, using 4 fingers of both hands pulling away from the centre.jpg",
+    "title": "Peruvian brass casting - demonstrating traditional birth aiding technique, using 4 fingers of both hands pulling away from the centre",
+    "credit": "Ina May Gaskin displayed it in her talk, a brass casting from museum. / CC0",
+    "license": "CC0",
+    "url": "https://commons.wikimedia.org/wiki/File:Peruvian_brass_casting_-_demonstrating_traditional_birth_aiding_technique,_using_4_fingers_of_both_hands_pulling_away_from_the_centre.jpg",
+    "width": 1920,
+    "height": 1440
+  },
+  {
+    "scene": 4,
+    "type": "science",
+    "query": "hand x-ray radiograph",
+    "file": "images/scene04.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:X-ray of arm showing absent radius and radially deviated hand, caused by Thrombocytopenia and Absent Radius syndrome.jpg",
+    "title": "X-ray of arm showing absent radius and radially deviated hand, caused by Thrombocytopenia and Absent Radius syndrome",
+    "credit": "Riaz Ahmad Department of Orthopaedics, Weston General Hospital, Weston-Super-Mare, UK / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:X-ray_of_arm_showing_absent_radius_and_radially_deviated_hand,_caused_by_Thrombocytopenia_and_Absent_Radius_syndrome.jpg",
+    "width": 1200,
+    "height": 451
+  },
+  {
+    "scene": 5,
+    "type": "stock",
+    "query": "MRI scanner hospital room",
+    "file": "images/scene05.jpg",
+    "source": "Openverse (rawpixel)",
+    "id": "decfc9f8-bc46-4d37-90d2-d34627f0cf06",
+    "title": "MRI room",
+    "credit": "U.S. Department of Agriculture / CC0",
+    "license": "CC0",
+    "url": "https://www.rawpixel.com/image/3306165/free-photo-image-medical-hospital",
+    "width": 1300,
+    "height": 867
+  },
+  {
+    "scene": 6,
+    "type": "diagram"
+  },
+  {
+    "scene": 7,
+    "type": "stock",
+    "query": "wall clock close up",
+    "file": "images/scene07.jpg",
+    "source": "Openverse (wikimedia)",
+    "id": "f5fb0c13-8755-40c6-8b20-dff25ce3a913",
+    "title": "Close up of the outdoor clock and brick wall of the tour company which indicates the start time of the next canal cruise; free photo Amsterdam city by Fons Heijnsbroek, 2007",
+    "credit": "Fons Heijnsbroek / CC0",
+    "license": "CC0",
+    "url": "https://commons.wikimedia.org/w/index.php?curid=119906328",
+    "width": 3307,
+    "height": 2480
+  },
+  {
+    "scene": 8,
+    "type": "stock",
+    "query": "elderly man hands on table",
+    "file": "images/scene08.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Theodore Roosevelt shaking hands with an elderly man LCCN2013651050.jpg",
+    "title": "Theodore Roosevelt shaking hands with an elderly man LCCN2013651050",
+    "credit": "Miscellaneous Items in High Demand, PPOC, Library of Congress / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:Theodore_Roosevelt_shaking_hands_with_an_elderly_man_LCCN2013651050.jpg",
+    "width": 1920,
+    "height": 1466
+  },
+  {
+    "scene": 9,
+    "type": "stock",
+    "query": "trophy award on table",
+    "file": "images/scene09.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Chirag Patel holding Stevie Award trophy, landscape format, 2025.jpg",
+    "title": "Chirag Patel holding Stevie Award trophy, landscape format, 2025",
+    "credit": "Chirag Patel / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Chirag_Patel_holding_Stevie_Award_trophy,_landscape_format,_2025.jpg",
+    "width": 1920,
+    "height": 1281
+  },
+  {
+    "scene": 10,
+    "type": "diagram"
+  },
+  {
+    "scene": 11,
+    "type": "stock",
+    "query": "person stretching fingers at laptop",
+    "file": "images/scene11.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Person stretching hands while sitting at a desk with a laptop open in a room.jpg",
+    "title": "Person stretching hands while sitting at a desk with a laptop open in a room",
+    "credit": "Shixart1985 / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Person_stretching_hands_while_sitting_at_a_desk_with_a_laptop_open_in_a_room.jpg",
+    "width": 1920,
+    "height": 1282
+  },
+  {
+    "scene": 12,
+    "type": "outro"
+  }
+]

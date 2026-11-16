@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <pattern id="hatch" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="14" height="14" fill="#ff8a7a"/>
+      <line x1="0" y1="0" x2="0" y2="14" stroke="#ffd0c8" stroke-width="5"/>
+    </pattern>
+    <marker id="aw" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#e3fbff"/>
+    </marker>
+  </defs>
+
+  <!-- hemispheres seen from below (front at top) -->
+  <g fill="#2a7a8c" stroke="#ffffff" stroke-width="6" stroke-linejoin="round">
+    <path d="M384 110 C 300 100 232 150 222 240 C 214 300 232 330 224 370 C 202 430 202 510 242 570 C 282 630 340 655 384 650 Z"/>
+    <path d="M396 110 C 480 100 548 150 558 240 C 566 300 548 330 556 370 C 578 430 578 510 538 570 C 498 630 440 655 396 650 Z"/>
+  </g>
+  <!-- temporal lobe edges -->
+  <g fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="5" stroke-linecap="round">
+    <path d="M226 368 C 255 338 300 332 325 352 C 340 410 336 480 330 540"/>
+    <path d="M554 368 C 525 338 480 332 455 352 C 440 410 444 480 450 540"/>
+    <!-- olfactory tracts -->
+    <path d="M362 150 L 368 280"/>
+    <path d="M418 150 L 412 280"/>
+  </g>
+  <!-- optic chiasm -->
+  <path d="M360 300 L 420 340 M420 300 L 360 340" stroke="#e3fbff" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- removed medial temporal tissue (both sides) -->
+  <ellipse cx="300" cy="445" rx="27" ry="72" transform="rotate(10 300 445)" fill="url(#hatch)" stroke="#ffffff" stroke-width="4" stroke-dasharray="8 6"/>
+  <ellipse cx="480" cy="445" rx="27" ry="72" transform="rotate(-10 480 445)" fill="url(#hatch)" stroke="#ffffff" stroke-width="4" stroke-dasharray="8 6"/>
+
+  <!-- cerebellum -->
+  <g fill="#6f63a8" stroke="#c9b8ff" stroke-width="5">
+    <ellipse cx="322" cy="590" rx="74" ry="52"/>
+    <ellipse cx="458" cy="590" rx="74" ry="52"/>
+  </g>
+  <!-- brainstem: pons + medulla -->
+  <path d="M366 440 L 366 600 C 366 620 414 620 414 600 L 414 440 Z" fill="#175c7c" stroke="#ffffff" stroke-width="5" stroke-linejoin="round"/>
+  <ellipse cx="390" cy="425" rx="50" ry="44" fill="#175c7c" stroke="#ffffff" stroke-width="5"/>
+
+  <!-- labels -->
+  <line x1="390" y1="92" x2="390" y2="46" stroke="#e3fbff" stroke-width="5" stroke-linecap="round" marker-end="url(#aw)"/>
+  <text x="410" y="74" font-size="28" font-weight="700" fill="#e3fbff">FRONT</text>
+
+  <text x="620" y="292" font-size="30" font-weight="800" fill="#ff8a7a">HIPPOCAMPUS</text>
+  <text x="620" y="328" font-size="30" font-weight="800" fill="#ff8a7a">REMOVED</text>
+  <g fill="none" stroke="#ff8a7a" stroke-width="4" stroke-linecap="round">
+    <path d="M612 340 L 505 410"/>
+    <path d="M612 300 C 480 230 340 250 310 372"/>
+  </g>
+
+  <text x="620" y="560" font-size="28" font-weight="700" fill="#e3fbff">BRAINSTEM</text>
+  <line x1="612" y1="550" x2="420" y2="530" stroke="#e3fbff" stroke-width="4" stroke-linecap="round"/>
+  <text x="620" y="664" font-size="28" font-weight="700" fill="#c9b8ff">CEREBELLUM</text>
+  <line x1="612" y1="654" x2="520" y2="620" stroke="#c9b8ff" stroke-width="4" stroke-linecap="round"/>
+</svg>

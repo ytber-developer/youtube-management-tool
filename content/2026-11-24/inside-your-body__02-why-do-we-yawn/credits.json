@@ -1,0 +1,108 @@
+[
+  {
+    "scene": 1,
+    "type": "stock",
+    "query": "woman yawning at desk",
+    "file": "images/scene01.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Yawning woman.jpg",
+    "title": "Yawning woman",
+    "credit": "Wheeler Cowperthwaite / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Yawning_woman.jpg",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "scene": 2,
+    "type": "diagram"
+  },
+  {
+    "scene": 3,
+    "type": "stock",
+    "query": "scientist laboratory breathing experiment",
+    "file": "images/scene03.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Breathing Cleaner Fumes (15351135847).jpg",
+    "title": "Breathing Cleaner Fumes (15351135847)",
+    "credit": "NASA Goddard Space Flight Center from Greenbelt, MD, USA / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:Breathing_Cleaner_Fumes_(15351135847).jpg",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "scene": 4,
+    "type": "science",
+    "query": "human brain blood vessels illustration",
+    "file": "images/scene04.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Dissections of the brain and blood vessels; three figures. C Wellcome V0007907.jpg",
+    "title": "Dissections of the brain and blood vessels: three figures. C",
+    "credit": "Unknown author / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Dissections_of_the_brain_and_blood_vessels;_three_figures._C_Wellcome_V0007907.jpg",
+    "width": 1920,
+    "height": 1481
+  },
+  {
+    "scene": 5,
+    "type": "stock",
+    "query": "people walking city street winter",
+    "file": "images/scene05.jpg",
+    "source": "Openverse (wikimedia)",
+    "id": "8f334543-1964-4320-bf2e-7fd2a4b32067",
+    "title": "People are walking at the city square Rembrandtplein in Amsterdam downtown, on a sunny day in late winter; street photo by Fons Heijnsbroek, 19 February 2022",
+    "credit": "Fons Heijnsbroek / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/w/index.php?curid=118218157",
+    "width": 4252,
+    "height": 3189
+  },
+  {
+    "scene": 6,
+    "type": "stock",
+    "query": "friends yawning together on couch",
+    "file": "images/scene06.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Fanny Appleton to Susan Benjamin, 5 August 1832 (605bea87-f3b1-4121-a3eb-b4d9d78fa5b1).jpg",
+    "title": "Fanny Appleton to Susan Benjamin, 5 August 1832 (605bea87-f3b1-4121-a3eb-b4d9d78fa5b1)",
+    "credit": "Fanny (Appleton) Longfellow (1817-1861) / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:Fanny_Appleton_to_Susan_Benjamin,_5_August_1832_(605bea87-f3b1-4121-a3eb-b4d9d78fa5b1).jpg",
+    "width": 1920,
+    "height": 1199
+  },
+  {
+    "scene": 7,
+    "type": "science",
+    "query": "fetus ultrasound image",
+    "file": "images/scene07.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Obstetric ultrasound scan monitor showing 20-week human fetus profile in Navi Mumbai 2015.jpg",
+    "title": "Obstetric ultrasound scan monitor showing 20-week human fetus profile in Navi Mumbai 2015",
+    "credit": "Goleisureintl / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Obstetric_ultrasound_scan_monitor_showing_20-week_human_fetus_profile_in_Navi_Mumbai_2015.jpg",
+    "width": 1300,
+    "height": 810
+  },
+  {
+    "scene": 8,
+    "type": "stock",
+    "query": "sleepy man yawning morning coffee",
+    "file": "images/scene08.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:He! Ho! - Heavy, dull and insipid by all that's good. (BM 1935,0522.1.13).jpg",
+    "title": "He! Ho! - Heavy, dull and insipid by all that's good.",
+    "credit": "Unknown author / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:He!_Ho!_-_Heavy,_dull_and_insipid_by_all_that%27s_good._(BM_1935,0522.1.13).jpg",
+    "width": 1794,
+    "height": 2500
+  },
+  {
+    "scene": 9,
+    "type": "outro"
+  }
+]

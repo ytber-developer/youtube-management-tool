@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#ffffff"/></marker>
+<radialGradient id="sun"><stop offset="0" stop-color="#fff3b0"/><stop offset="0.6" stop-color="#ffd34d"/><stop offset="1" stop-color="#ffd34d" stop-opacity="0"/></radialGradient>
+<radialGradient id="red"><stop offset="0" stop-color="#ffb08a"/><stop offset="0.6" stop-color="#ff6a3d"/><stop offset="1" stop-color="#ff6a3d" stop-opacity="0"/></radialGradient>
+</defs>
+<g font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-weight="800" text-anchor="middle">
+<line x1="60" y1="400" x2="850" y2="400" stroke="#ffffff" stroke-width="6" stroke-linecap="round" marker-end="url(#ah)"/>
+<!-- axis breaks -->
+<g stroke="#c9c3ff" stroke-width="4" stroke-linecap="round">
+<path d="M172,384 l-10,32 M186,384 l-10,32"/><path d="M352,384 l-10,32 M366,384 l-10,32"/>
+<path d="M532,384 l-10,32 M546,384 l-10,32"/><path d="M712,384 l-10,32 M726,384 l-10,32"/>
+</g>
+<g fill="#ffb347"><circle cx="90" cy="400" r="12"/><circle cx="270" cy="400" r="12"/><circle cx="450" cy="400" r="12"/><circle cx="630" cy="400" r="12"/><circle cx="810" cy="400" r="12"/></g>
+<!-- icons -->
+<circle cx="90" cy="290" r="46" fill="url(#sun)"/><circle cx="90" cy="290" r="26" fill="#ffd34d"/>
+<circle cx="270" cy="290" r="60" fill="url(#sun)"/><circle cx="270" cy="290" r="34" fill="#ffe680"/>
+<circle cx="450" cy="290" r="34" fill="url(#red)"/><circle cx="450" cy="290" r="16" fill="#ff6a3d"/>
+<circle cx="630" cy="290" r="40" fill="none" stroke="#ffb347" stroke-width="6" opacity="0.8"/><circle cx="630" cy="290" r="28" fill="#05040f" stroke="#c9c3ff" stroke-width="4"/>
+<circle cx="810" cy="290" r="34" fill="none" stroke="#c9c3ff" stroke-width="4" stroke-dasharray="6 10" opacity="0.7"/>
+<circle cx="800" cy="282" r="3" fill="#ffffff" opacity="0.6"/><circle cx="822" cy="300" r="3" fill="#ffffff" opacity="0.6"/>
+<!-- labels -->
+<g fill="#ffffff" font-size="32">
+<text x="90" y="470">TODAY</text>
+<text x="270" y="530">1 BILLION</text>
+<text x="450" y="470">1 TRILLION</text>
+<text x="630" y="530" font-size="38">10<tspan dy="-16" font-size="26">40</tspan></text>
+<text x="810" y="470" font-size="38">10<tspan dy="-16" font-size="26">100</tspan></text>
+</g>
+<text x="450" y="630" fill="#7fe3ff" font-size="34">YEARS FROM NOW</text>
+<text x="450" y="680" fill="#c9c3ff" font-size="24" font-weight="600">log scale · not to scale</text>
+</g>
+</svg>

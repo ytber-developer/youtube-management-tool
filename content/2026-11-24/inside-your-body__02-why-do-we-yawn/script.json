@@ -1,0 +1,70 @@
+{
+  "channel": "inside-your-body",
+  "number": 2,
+  "slug": "why-do-we-yawn",
+  "target_minutes": 1.67,
+  "title": "Why Do We Yawn? Science Still Isn't Sure",
+  "thumbnail_text": "WHY DO WE YAWN?",
+  "description": "You do it about nine times a day, you started before you were born, and you can catch it from a friend. Here are the leading scientific ideas about why we yawn, and the one that didn't survive testing.\n\nSources:\n- Frontiers in Neuroscience (2013), The thermoregulatory theory of yawning: what we know from over five years of research: https://pmc.ncbi.nlm.nih.gov/articles/PMC3534187/\n- Cleveland Clinic, Yawning: https://my.clevelandclinic.org/health/body/yawning\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": ["why do we yawn", "yawning", "contagious yawning", "brain cooling", "human body", "neuroscience", "body facts", "science explained", "inside your body"],
+  "sources": [
+    { "title": "Frontiers in Neuroscience (2013) - The thermoregulatory theory of yawning: what we know from over five years of research", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3534187/" },
+    { "title": "Cleveland Clinic - Yawning", "url": "https://my.clevelandclinic.org/health/body/yawning" }
+  ],
+  "scenes": [
+    {
+      "narration": "You might yawn just watching this. Scientists still can't fully explain why we do it, but they do have some strong suspects.",
+      "headline": "WHY DO WE <em>YAWN?</em>",
+      "sub": "Science is still investigating",
+      "visual": { "type": "stock", "query": "woman yawning at desk", "note": "person mid-yawn at a work desk" }
+    },
+    {
+      "narration": "A yawn is a whole routine. You open your jaw wide, take a long, deep breath, pause, then breathe out. It usually lasts four to seven seconds, and the average adult yawns about nine times a day.",
+      "headline": "ABOUT <em>NINE</em> YAWNS A DAY",
+      "sub": "Each one lasts four to seven seconds",
+      "visual": { "type": "diagram", "spec": "four-step yawn sequence: jaw opens wide, deep inhale, pause, quick exhale, with a timer showing four to seven seconds" }
+    },
+    {
+      "narration": "The oldest idea says yawning brings in extra oxygen. It sounds logical, but it failed the test. In a 1987 experiment, people breathed air with extra oxygen or extra carbon dioxide, and their yawning didn't change.",
+      "headline": "THE OXYGEN IDEA <em>FAILED</em>",
+      "sub": "Tested in 1987",
+      "visual": { "type": "stock", "query": "scientist laboratory breathing experiment", "note": "researcher in a lab with breathing equipment" }
+    },
+    {
+      "narration": "The leading idea today is brain cooling. A deep yawn pulls in cooler air and shifts blood flow through your head, a bit like a radiator. In rats, brain temperature rose just before a yawn and dropped right after.",
+      "headline": "A RADIATOR FOR YOUR <em>BRAIN?</em>",
+      "sub": "The brain cooling hypothesis",
+      "visual": { "type": "science", "query": "human brain blood vessels illustration", "note": "illustration of blood vessels supplying the brain" }
+    },
+    {
+      "narration": "There's support in people, too. In Tucson, Arizona, pedestrians were nearly twice as likely to yawn in winter as on scorching summer days, when the outside air was about as warm as their bodies and couldn't cool much.",
+      "headline": "MORE YAWNS IN <em>WINTER</em>",
+      "sub": "When the air can cool you",
+      "visual": { "type": "stock", "query": "people walking city street winter", "note": "pedestrians on a cool, sunny city street" }
+    },
+    {
+      "narration": "Then there's the strangest part. Yawns are contagious. Seeing or hearing someone yawn can set you off, and you're more likely to catch one from family and friends than from strangers. Many researchers link this to empathy.",
+      "headline": "YAWNS ARE <em>CONTAGIOUS</em>",
+      "sub": "Especially from people you love",
+      "visual": { "type": "stock", "query": "friends yawning together on couch", "note": "two friends yawning at the same time" }
+    },
+    {
+      "narration": "And yawning starts before you're even born. Babies yawn in the womb about three months into pregnancy. That's one reason the oxygen idea never quite fit: those babies aren't breathing air at all.",
+      "headline": "YAWNING BEFORE <em>BIRTH</em>",
+      "sub": "About three months into pregnancy",
+      "visual": { "type": "science", "query": "fetus ultrasound image", "note": "gentle ultrasound image of a fetus" }
+    },
+    {
+      "narration": "So why do we yawn? Probably for more than one reason: cooling the brain, nudging it awake, maybe keeping a group in sync. The honest answer is that science is still working on it.",
+      "headline": "THE ANSWER IS <em>STILL OPEN</em>",
+      "sub": "Cooling, alertness, social signals",
+      "visual": { "type": "stock", "query": "sleepy man yawning morning coffee", "note": "person yawning in the morning" }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "headline": "",
+      "sub": "",
+      "visual": { "type": "outro" }
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "channel": "cosmic-what-if",
+  "number": 2,
+  "slug": "moon-disappeared",
+  "target_minutes": 1.67,
+  "title": "What If the Moon Disappeared Tonight?",
+  "thumbnail_text": "NO MORE MOON?",
+  "description": "What would actually change if the Moon blinked out of existence tonight? Darker nights and smaller tides come first, but the Moon's biggest job is one you never notice.\n\nSources:\n- NASA Science, Earth's Moon Facts: https://science.nasa.gov/moon/facts/\n- NASA Science, Tides: https://science.nasa.gov/moon/tides/\n- EarthDate, If Earth Had No Moon: https://www.earthdate.org/episodes/if-earth-had-no-moon\n- NASA JPL, Earth's Rotation Slows Down: https://www.jpl.nasa.gov/news/earths-rotation-slows-down/",
+  "tags": [
+    "moon",
+    "what if",
+    "space",
+    "astronomy",
+    "tides",
+    "earth axial tilt",
+    "moon disappeared",
+    "seasons",
+    "physics",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "NASA Science - Earth's Moon Facts",
+      "url": "https://science.nasa.gov/moon/facts/"
+    },
+    {
+      "title": "NASA Science - Tides",
+      "url": "https://science.nasa.gov/moon/tides/"
+    },
+    {
+      "title": "EarthDate - If Earth Had No Moon",
+      "url": "https://www.earthdate.org/episodes/if-earth-had-no-moon"
+    },
+    {
+      "title": "NASA JPL - Earth's Rotation Slows Down",
+      "url": "https://www.jpl.nasa.gov/news/earths-rotation-slows-down/"
+    }
+  ],
+  "scenes": [
+    {
+      "narration": "Tonight, look up at the Moon. Now imagine it simply blinks out of existence. What would actually change down here?",
+      "headline": "WHAT IF THE MOON <em>DISAPPEARED?</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "Moon full disk Lunar Reconnaissance Orbiter",
+        "note": "full Moon against black sky"
+      }
+    },
+    {
+      "narration": "The first thing you'd notice is the dark. Every night would be as black as a new Moon night. You'd see more stars, but creatures that time their lives by moonlight, from spawning corals to night hunters, would lose their clock.",
+      "headline": "EVERY NIGHT GOES <em>DARK</em>",
+      "sub": "No moonlight, ever",
+      "visual": {
+        "type": "nasa",
+        "query": "Milky Way night sky from International Space Station",
+        "note": "dark night sky full of stars"
+      }
+    },
+    {
+      "narration": "Next, the oceans. The Moon's gravity pulls Earth's water into bulges, and those bulges are your tides. The Sun makes tides too, but its pull is a little less than half the Moon's. Without the Moon, tides would shrink to roughly a third of today's size.",
+      "headline": "TIDES SHRINK TO <em>ONE THIRD</em>",
+      "sub": "Only the Sun would still pull",
+      "visual": {
+        "type": "nasa",
+        "query": "Bay of Fundy tides Landsat",
+        "note": "coastline with large tidal flats"
+      }
+    },
+    {
+      "narration": "Here's something strange. Earth and the Moon actually circle a shared balance point, about a thousand miles beneath your feet. So Earth wobbles a little every month. Erase the Moon, and that wobble stops. Our orbit around the Sun would barely change.",
+      "headline": "EARTH STOPS <em>WOBBLING</em>",
+      "sub": "Balance point: ~1,000 miles underground",
+      "visual": {
+        "type": "diagram",
+        "spec": "Earth and Moon orbiting a shared center of mass marked inside Earth, about 1,000 miles below the surface, not to scale"
+      }
+    },
+    {
+      "narration": "The biggest change is slow. Earth's axis leans about twenty three and a half degrees, and over tens of thousands of years it only nods between roughly twenty two and twenty four and a half. The Moon's pull helps keep it that steady.",
+      "headline": "THE MOON STEADIES <em>OUR TILT</em>",
+      "sub": "23.4° today, very stable",
+      "visual": {
+        "type": "nasa",
+        "query": "Earthrise Apollo 8",
+        "note": "Earth rising over the lunar horizon"
+      }
+    },
+    {
+      "narration": "Mars has no big moon, and its tilt swings far more. Without ours, scientists think Earth's tilt could drift much further too, making seasons wilder over millions of years. Not in your lifetime, but on the timescales that shape climate and life.",
+      "headline": "SEASONS COULD GO <em>WILD</em>",
+      "sub": "Over millions of years",
+      "visual": {
+        "type": "nasa",
+        "query": "Mars north polar ice cap Mars Global Surveyor",
+        "note": "Mars with polar ice cap"
+      }
+    },
+    {
+      "narration": "And your days? The Moon's tides act like a brake, stretching each day by a tiny fraction of a second every century. Lose the Moon, and most of that braking stops. That pale rock in your sky is quietly shaping time itself.",
+      "headline": "THE MOON SHAPES <em>TIME</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "crescent Moon over Earth limb astronaut photograph",
+        "note": "thin Moon above Earth's horizon from orbit"
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "headline": "",
+      "sub": "",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

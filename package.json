@@ -22,7 +22,9 @@
     "migrate:fresh": "node src/database/migrate.js --fresh",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "echo \"Linting not configured yet\"",
-    "docs": "echo \"Documentation available in README.md, WATCH_VIDEO_API.md, and frontend/API_REFERENCE.md\""
+    "docs": "echo \"Documentation available in README.md, WATCH_VIDEO_API.md, and frontend/API_REFERENCE.md\"",
+    "content": "node content-tools/cli.js",
+    "test:content": "node --test content-tools/test/*.test.js"
   },
   "dependencies": {
     "adm-zip": "^0.5.16",

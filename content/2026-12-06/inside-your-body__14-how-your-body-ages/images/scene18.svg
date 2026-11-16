@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <marker id="ay" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="3.5" markerHeight="3.5" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#ffe08a"/>
+    </marker>
+  </defs>
+  <path d="M330 204 L378 200 L422 234 Q428 248 412 250 L372 238 L330 242 Z" fill="#e9dcc0" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/>
+  <rect x="200" y="190" width="140" height="66" rx="16" fill="#fff1c7" stroke="#ffffff" stroke-width="4"/>
+  <rect x="206" y="257" width="128" height="28" rx="14.0" fill="#7fe3ff" stroke="#e3fbff" stroke-width="4"/>
+  <path d="M330 300 L378 296 L422 330 Q428 344 412 346 L372 334 L330 338 Z" fill="#e9dcc0" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/>
+  <rect x="200" y="286" width="140" height="66" rx="16" fill="#fff1c7" stroke="#ffffff" stroke-width="4"/>
+  <rect x="206" y="353" width="128" height="28" rx="14.0" fill="#7fe3ff" stroke="#e3fbff" stroke-width="4"/>
+  <path d="M330 396 L378 392 L422 426 Q428 440 412 442 L372 430 L330 434 Z" fill="#e9dcc0" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/>
+  <rect x="200" y="382" width="140" height="66" rx="16" fill="#fff1c7" stroke="#ffffff" stroke-width="4"/>
+  <rect x="206" y="449" width="128" height="28" rx="14.0" fill="#7fe3ff" stroke="#e3fbff" stroke-width="4"/>
+  <path d="M330 492 L378 488 L422 522 Q428 536 412 538 L372 526 L330 530 Z" fill="#e9dcc0" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/>
+  <rect x="200" y="478" width="140" height="66" rx="16" fill="#fff1c7" stroke="#ffffff" stroke-width="4"/>
+  <rect x="206" y="545" width="128" height="28" rx="14.0" fill="#7fe3ff" stroke="#e3fbff" stroke-width="4"/>
+  <path d="M330 588 L378 584 L422 618 Q428 632 412 634 L372 622 L330 626 Z" fill="#e9dcc0" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/>
+  <rect x="200" y="574" width="140" height="66" rx="16" fill="#fff1c7" stroke="#ffffff" stroke-width="4"/>
+  <path d="M690 276 L738 272 L782 306 Q788 320 772 322 L732 310 L690 314 Z" fill="#e9dcc0" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/>
+  <rect x="560" y="262" width="140" height="66" rx="16" fill="#fff1c7" stroke="#ffffff" stroke-width="4"/>
+  <rect x="566" y="329" width="128" height="10" rx="5.0" fill="#9bb8c2" stroke="#c9dde3" stroke-width="4"/>
+  <path d="M690 354 L738 350 L782 384 Q788 398 772 400 L732 388 L690 392 Z" fill="#e9dcc0" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/>
+  <rect x="560" y="340" width="140" height="66" rx="16" fill="#fff1c7" stroke="#ffffff" stroke-width="4"/>
+  <rect x="566" y="407" width="128" height="10" rx="5.0" fill="#9bb8c2" stroke="#c9dde3" stroke-width="4"/>
+  <path d="M690 432 L738 428 L782 462 Q788 476 772 478 L732 466 L690 470 Z" fill="#e9dcc0" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/>
+  <rect x="560" y="418" width="140" height="66" rx="16" fill="#fff1c7" stroke="#ffffff" stroke-width="4"/>
+  <rect x="566" y="485" width="128" height="10" rx="5.0" fill="#9bb8c2" stroke="#c9dde3" stroke-width="4"/>
+  <path d="M690 510 L738 506 L782 540 Q788 554 772 556 L732 544 L690 548 Z" fill="#e9dcc0" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/>
+  <rect x="560" y="496" width="140" height="66" rx="16" fill="#fff1c7" stroke="#ffffff" stroke-width="4"/>
+  <rect x="566" y="563" width="128" height="10" rx="5.0" fill="#9bb8c2" stroke="#c9dde3" stroke-width="4"/>
+  <path d="M690 588 L738 584 L782 618 Q788 632 772 634 L732 622 L690 626 Z" fill="#e9dcc0" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/>
+  <rect x="560" y="574" width="140" height="66" rx="16" fill="#fff1c7" stroke="#ffffff" stroke-width="4"/>
+  <!-- height comparison -->
+  <line x1="200" y1="190" x2="800" y2="190" stroke="#ffe08a" stroke-width="4" stroke-dasharray="4 12" stroke-linecap="round"/>
+  <line x1="470" y1="262" x2="800" y2="262" stroke="#ffe08a" stroke-width="4" stroke-dasharray="4 12" stroke-linecap="round"/>
+  <line x1="495" y1="198" x2="495" y2="254" stroke="#ffe08a" stroke-width="5" stroke-linecap="round" marker-start="url(#ay)" marker-end="url(#ay)"/>
+  <text x="495" y="166" font-size="32" font-weight="800" fill="#ffe08a" text-anchor="middle">SHORTER</text>
+  <!-- labels -->
+  <text x="40" y="330" font-size="28" font-weight="700" fill="#fff1c7">VERTEBRA</text>
+  <line x1="190" y1="320" x2="214" y2="320" stroke="#fff1c7" stroke-width="4" stroke-linecap="round"/>
+  <text x="96" y="473" font-size="28" font-weight="800" fill="#7fe3ff">DISC</text>
+  <line x1="170" y1="463" x2="214" y2="463" stroke="#7fe3ff" stroke-width="4" stroke-linecap="round"/>
+  <text x="290" y="700" font-size="32" font-weight="800" fill="#ffffff" text-anchor="middle">YOUNGER</text>
+  <text x="650" y="700" font-size="32" font-weight="800" fill="#ffffff" text-anchor="middle">OLDER</text>
+</svg>

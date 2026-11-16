@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <marker id="ax" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#e3fbff"/>
+    </marker>
+  </defs>
+  <!-- x: 0..4 h over x 120..840 (180 px per hour); y baseline 600 -->
+
+  <!-- possible peak range: 15 min to 2 h -->
+  <rect x="165" y="150" width="315" height="450" fill="rgba(255,224,138,0.12)"/>
+  <!-- typical peak: 30 to 60 min -->
+  <rect x="210" y="150" width="90" height="450" fill="rgba(255,224,138,0.28)"/>
+
+  <!-- axes -->
+  <line x1="120" y1="130" x2="120" y2="600" stroke="#e3fbff" stroke-width="5" stroke-linecap="round"/>
+  <line x1="120" y1="600" x2="860" y2="600" stroke="#e3fbff" stroke-width="5" stroke-linecap="round" marker-end="url(#ax)"/>
+
+  <!-- curve: fast rise, peak ~45 min, slow decline -->
+  <path d="M120 598 C 170 380, 200 205, 255 200 C 330 196, 600 268, 840 345" fill="none" stroke="#7fe3ff" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="255" cy="200" r="13" fill="#ffe08a" stroke="#ffffff" stroke-width="4"/>
+
+  <!-- labels -->
+  <text x="255" y="122" text-anchor="middle" font-size="32" font-weight="800" fill="#ffe08a">PEAK: 30–60 MIN</text>
+  <text x="322" y="572" text-anchor="middle" font-size="28" font-weight="700" fill="#ffe08a">RANGE 15 MIN–2 H</text>
+  <text x="690" y="250" text-anchor="middle" font-size="30" font-weight="700" fill="#7fe3ff">SLOW DECLINE</text>
+
+  <text x="78" y="370" text-anchor="middle" font-size="28" font-weight="700" fill="#e3fbff" transform="rotate(-90 78 370)">CAFFEINE IN BLOOD</text>
+
+  <!-- hour ticks -->
+  <g stroke="#e3fbff" stroke-width="4">
+    <line x1="300" y1="600" x2="300" y2="614"/>
+    <line x1="480" y1="600" x2="480" y2="614"/>
+    <line x1="660" y1="600" x2="660" y2="614"/>
+    <line x1="840" y1="600" x2="840" y2="614"/>
+  </g>
+  <g font-size="26" font-weight="600" fill="#e3fbff" text-anchor="middle">
+    <text x="120" y="646">0</text>
+    <text x="300" y="646">1 h</text>
+    <text x="480" y="646">2 h</text>
+    <text x="660" y="646">3 h</text>
+    <text x="840" y="646">4 h</text>
+  </g>
+  <text x="480" y="706" text-anchor="middle" font-size="30" font-weight="700" fill="#ffffff">TIME AFTER COFFEE</text>
+</svg>

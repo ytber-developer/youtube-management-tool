@@ -1,0 +1,222 @@
+{
+  "channel": "inside-your-body",
+  "number": 6,
+  "slug": "24-hours-without-sleep",
+  "target_minutes": 4.33,
+  "title": "What 24 Hours Without Sleep Does to Your Body and Brain",
+  "thumbnail_text": "24 HOURS AWAKE",
+  "description": "Stay awake for one full day and your brain starts to perform as if you've been drinking. Follow the clock hour by hour, from rising sleep pressure to microsleeps, a supercharged emotional alarm, and a surprising change inside your brain.\n\nSources:\n- CDC NIOSH, Long work hours training: impairment from fatigue: https://archive.cdc.gov/www_cdc_gov/niosh/emres/longhourstraining/impaired.html\n- NHLBI, Sleep Deprivation and Deficiency: Health Effects: https://www.nhlbi.nih.gov/health/sleep-deprivation/health-effects\n- NHLBI, How Sleep Works: Your Sleep/Wake Cycle: https://www.nhlbi.nih.gov/health/sleep/sleep-wake-cycle\n- UC Berkeley News (2007), Sleep deprivation and the emotional brain: https://newsarchive.berkeley.edu/news/media/releases/2007/10/22_sleeploss.shtml\n- NIH Intramural Research Program, Lack of sleep may be linked to risk factor for Alzheimer's disease: https://irp.nih.gov/news-and-events/in-the-news/lack-of-sleep-may-be-linked-to-risk-factor-for-alzheimers-disease\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": [
+    "sleep deprivation",
+    "24 hours without sleep",
+    "all nighter",
+    "what happens when you don't sleep",
+    "microsleep",
+    "adenosine",
+    "amygdala",
+    "beta amyloid",
+    "sleep science",
+    "human body",
+    "science explained",
+    "inside your body"
+  ],
+  "sources": [
+    {
+      "title": "CDC NIOSH - Long work hours training: impairment from fatigue",
+      "url": "https://archive.cdc.gov/www_cdc_gov/niosh/emres/longhourstraining/impaired.html"
+    },
+    {
+      "title": "NHLBI - Sleep Deprivation and Deficiency: Health Effects",
+      "url": "https://www.nhlbi.nih.gov/health/sleep-deprivation/health-effects"
+    },
+    {
+      "title": "NHLBI - How Sleep Works: Your Sleep/Wake Cycle",
+      "url": "https://www.nhlbi.nih.gov/health/sleep/sleep-wake-cycle"
+    },
+    {
+      "title": "UC Berkeley News (2007) - Sleep deprivation and the emotional brain, Yoo et al., Current Biology",
+      "url": "https://newsarchive.berkeley.edu/news/media/releases/2007/10/22_sleeploss.shtml"
+    },
+    {
+      "title": "NIH Intramural Research Program - Lack of sleep may be linked to risk factor for Alzheimer's disease",
+      "url": "https://irp.nih.gov/news-and-events/in-the-news/lack-of-sleep-may-be-linked-to-risk-factor-for-alzheimers-disease"
+    }
+  ],
+  "scenes": [
+    {
+      "narration": "Skip one night of sleep, and by morning your brain performs in some ways like a drunk one. Here's how you get there.",
+      "headline": "ONE NIGHT <em>WITHOUT SLEEP</em>",
+      "sub": "Hour by hour",
+      "visual": {
+        "type": "stock",
+        "query": "tired man awake at night bed",
+        "note": "person lying awake in a dark bedroom"
+      }
+    },
+    {
+      "narration": "Hour zero. You wake up at seven in the morning, rested. From this moment, a chemical called adenosine starts building up in your brain. Each waking hour adds a little more, and with it, a growing biological need for sleep.",
+      "headline": "HOUR ZERO: THE <em>CLOCK STARTS</em>",
+      "sub": "Adenosine begins to build",
+      "visual": {
+        "type": "stock",
+        "query": "alarm clock morning sunlight bedroom",
+        "note": "alarm clock showing seven in a sunny bedroom"
+      }
+    },
+    {
+      "narration": "You also run on an internal clock. A central circadian clock in your brain uses light, darkness, and other cues to tell you when it's time to sleep. In the evening, the sleep hormone melatonin starts to rise.",
+      "headline": "YOUR BRAIN'S <em>INTERNAL CLOCK</em>",
+      "sub": "Light and dark set the timing",
+      "visual": {
+        "type": "diagram",
+        "spec": "twenty-four hour circle: daytime light keeps you alert, evening darkness, melatonin rising in the evening and peaking in the early morning, and a sleep pressure bar growing through waking hours"
+      }
+    },
+    {
+      "narration": "Normally, those two forces team up at bedtime: lots of sleep pressure, and a clock saying it's night. Tonight, you ignore both. The pressure keeps rising. And the bright screen in your hand doesn't help, because bright light late in the evening can suppress melatonin.",
+      "headline": "TWO FORCES <em>SAY SLEEP</em>",
+      "sub": "Tonight, you ignore both",
+      "visual": {
+        "type": "stock",
+        "query": "person using phone in bed at night",
+        "note": "face lit by a phone screen in a dark room"
+      }
+    },
+    {
+      "narration": "Hour seventeen. It's midnight. According to the CDC's workplace safety institute, being awake this long affects performance about as much as a blood alcohol level of zero point zero five percent. Some countries use that as their legal limit for drunk driving.",
+      "headline": "HOUR SEVENTEEN: <em>ALREADY IMPAIRED</em>",
+      "sub": "Like a blood alcohol of 0.05",
+      "visual": {
+        "type": "stock",
+        "query": "clock showing midnight",
+        "note": "clock face at midnight"
+      }
+    },
+    {
+      "narration": "As the night goes on, your thinking slows. You take longer to finish tasks, your reaction time gets slower, and you make more mistakes. Reading the same sentence three times starts to feel normal. And if alcohol enters the picture, even a small amount drags performance down further.",
+      "headline": "SLOWER, AND MORE <em>MISTAKES</em>",
+      "sub": "Your reaction time drops",
+      "visual": {
+        "type": "stock",
+        "query": "student studying late at night tired",
+        "note": "student slumped over books under a desk lamp"
+      }
+    },
+    {
+      "narration": "Then come microsleeps: brief moments of sleep that slip in while you're supposed to be awake. They are brief, and you might not even realize they happened. One moment you're reading, the next, you've lost your place.",
+      "headline": "THE <em>MICROSLEEPS</em> ARRIVE",
+      "sub": "Moments of sleep you don't notice",
+      "visual": {
+        "type": "stock",
+        "query": "man nodding off at computer",
+        "note": "person nodding off in front of a screen"
+      }
+    },
+    {
+      "narration": "Hour twenty-four. Seven in the morning again. Now the CDC comparison gets serious. A full day awake is similar to a blood alcohol level of zero point one zero percent. That's above the zero point zero eight limit for drunk driving in the US.",
+      "headline": "HOUR 24: <em>ABOVE THE LIMIT</em>",
+      "sub": "Like a blood alcohol of 0.10",
+      "visual": {
+        "type": "diagram",
+        "spec": "horizontal scale of hours awake: seventeen hours marked as similar to blood alcohol 0.05 percent, twenty-four hours marked as similar to 0.10 percent, with the US driving limit of 0.08 shown as a line"
+      }
+    },
+    {
+      "narration": "Your emotions take a hit too. In a study from UC Berkeley and Harvard, people kept awake for about thirty-five hours viewed upsetting images in a brain scanner. Their amygdala, the brain's emotional alarm, was more than sixty percent more reactive than in people who'd slept. Sleep deficiency has also been linked to risk-taking behavior.",
+      "headline": "YOUR EMOTIONAL ALARM <em>OVERREACTS</em>",
+      "sub": "Over sixty percent more reactive",
+      "visual": {
+        "type": "science",
+        "query": "amygdala brain illustration",
+        "note": "brain illustration with the amygdala highlighted"
+      }
+    },
+    {
+      "narration": "Normally, the front of your brain, the prefrontal cortex, helps keep that alarm in check. Without sleep, the link between the two weakens. That's part of why small annoyances can feel enormous when you're exhausted. The lead researcher said healthy brains deprived of sleep mimicked some patterns seen in psychiatric conditions.",
+      "headline": "THE <em>CALM VOICE</em> GOES QUIET",
+      "sub": "The prefrontal cortex loses its grip",
+      "visual": {
+        "type": "diagram",
+        "spec": "side view of the brain: prefrontal cortex and amygdala connected by an arrow; rested brain shows a strong connection, sleep-deprived brain shows a faint connection and a brighter amygdala"
+      }
+    },
+    {
+      "narration": "Your body chemistry shifts as well. When you don't get enough sleep, levels of ghrelin, a hormone that makes you feel hungry, go up. Levels of leptin, a hormone that helps you feel full, go down.",
+      "headline": "YOUR <em>HUNGER</em> HORMONES SHIFT",
+      "sub": "More ghrelin, less leptin",
+      "visual": {
+        "type": "stock",
+        "query": "person eating snack late at night kitchen",
+        "note": "person grabbing a snack from the fridge at night"
+      }
+    },
+    {
+      "narration": "According to the National Heart, Lung, and Blood Institute, sleep deficiency is also linked to higher than normal blood sugar. And over time, ongoing sleep loss can change the way your immune system responds to germs.",
+      "headline": "BLOOD SUGAR AND <em>IMMUNITY</em>",
+      "sub": "Effects that build over time",
+      "visual": {
+        "type": "science",
+        "query": "white blood cells illustration NIH",
+        "note": "illustration of white blood cells"
+      }
+    },
+    {
+      "narration": "Here's the most surprising part. In a small NIH study, researchers scanned people's brains after a normal night of sleep, then again after a night without it. After just one sleepless night, they saw an increase in beta amyloid, a protein linked to Alzheimer's disease.",
+      "headline": "A CHANGE AFTER <em>ONE NIGHT</em>",
+      "sub": "A small NIH brain imaging study",
+      "visual": {
+        "type": "science",
+        "query": "PET brain scan image",
+        "note": "colorful PET brain scan, non-alarming"
+      }
+    },
+    {
+      "narration": "The buildup showed up in the hippocampus, a region important for memory, and in the thalamus. The researchers called the finding preliminary, and one rough night doesn't mean disease. But it hints at how closely sleep and brain health are tied.",
+      "headline": "SLEEP AND THE <em>BRAIN</em> ARE TIED",
+      "sub": "A preliminary finding",
+      "visual": {
+        "type": "science",
+        "query": "hippocampus brain illustration",
+        "note": "anatomical illustration of the hippocampus and thalamus"
+      }
+    },
+    {
+      "narration": "Meanwhile, that adenosine has been piling up for twenty-four hours, and your internal clock is telling you it's morning. That mismatch can make an all-nighter feel strange: exhausted, yet weirdly wired.",
+      "headline": "EXHAUSTED, YET <em>WIRED</em>",
+      "sub": "Sleep pressure versus your body clock",
+      "visual": {
+        "type": "stock",
+        "query": "sunrise through window tired woman",
+        "note": "person squinting at morning sunlight after a sleepless night"
+      }
+    },
+    {
+      "narration": "These are the effects of a single night. When short sleep becomes a habit, they add up. According to the National Heart, Lung, and Blood Institute, adults who regularly get seven to eight hours of sleep a night have a lower risk of obesity and high blood pressure.",
+      "headline": "WHEN SHORT SLEEP <em>ADDS UP</em>",
+      "sub": "Habits matter more than one night",
+      "visual": {
+        "type": "stock",
+        "query": "calendar on wall bedroom night",
+        "note": "calendar and bedside lamp, suggesting nights adding up"
+      }
+    },
+    {
+      "narration": "So one night without sleep doesn't just leave you tired. It slows your reactions, sharpens your emotional alarm, nudges your hunger, and changes your brain chemistry, all in a single trip around the clock.",
+      "headline": "ONE TRIP <em>AROUND THE CLOCK</em>",
+      "sub": "",
+      "visual": {
+        "type": "stock",
+        "query": "woman sleeping peacefully in bed",
+        "note": "person sleeping peacefully"
+      }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "headline": "",
+      "sub": "",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

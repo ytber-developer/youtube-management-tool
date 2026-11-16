@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
+<defs><radialGradient id="o5g"><stop offset="0.45" stop-color="#ffd34d" stop-opacity="0.55"/><stop offset="1" stop-color="#ffd34d" stop-opacity="0"/></radialGradient></defs>
+<text x="70.0" y="114.0" font-size="38" font-weight="800" fill="#ffffff" text-anchor="start" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >1 light-day</text>
+<rect x="70" y="136" width="4.0" height="28" rx="2.0" fill="#7fe3ff"/>
+<text x="98.0" y="162.0" font-size="34" font-weight="700" fill="#7fe3ff" text-anchor="start" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >16 billion mi</text>
+<text x="70.0" y="314.0" font-size="38" font-weight="800" fill="#ffffff" text-anchor="start" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >1 light-year</text>
+<rect x="70" y="336" width="169.8" height="28" rx="14.0" fill="#ffb347"/>
+<text x="263.8" y="362.0" font-size="34" font-weight="700" fill="#ffb347" text-anchor="start" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >5.9 trillion mi</text>
+<text x="70.0" y="514.0" font-size="38" font-weight="800" fill="#ffffff" text-anchor="start" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >4.2 light-years</text>
+<rect x="70" y="536" width="720.0" height="28" rx="14.0" fill="#ff7a59"/>
+<text x="790.0" y="620.0" font-size="34" font-weight="700" fill="#ff7a59" text-anchor="end" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >25 trillion mi</text>
+<circle cx="70" cy="550" r="44" fill="url(#o5g)"/><circle cx="70" cy="550" r="20" fill="#ffd34d"/>
+<circle cx="790.0" cy="550" r="18" fill="#ff7a59" stroke="#ffffff" stroke-width="4"/>
+<text x="40.0" y="620.0" font-size="32" font-weight="800" fill="#ffd34d" text-anchor="start" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >Sun</text>
+<text x="790.0" y="514.0" font-size="32" font-weight="800" fill="#ff7a59" text-anchor="end" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >Proxima</text>
+<text x="40.0" y="725.0" font-size="24" font-weight="600" fill="#c9c3ff" text-anchor="start" >all bars to the same scale</text>
+</svg>

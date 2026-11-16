@@ -1,0 +1,150 @@
+[
+  {
+    "scene": 1,
+    "type": "stock",
+    "query": "tired man awake at night bed",
+    "missing": true
+  },
+  {
+    "scene": 2,
+    "type": "stock",
+    "query": "alarm clock morning sunlight bedroom",
+    "file": "images/scene02.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Morning setting with a banana, vintage clock, and smartphone on a table during bright daylight.jpg",
+    "title": "Morning setting with a banana, vintage clock, and smartphone on a table during bright daylight",
+    "credit": "Shixart1985 / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Morning_setting_with_a_banana,_vintage_clock,_and_smartphone_on_a_table_during_bright_daylight.jpg",
+    "width": 1920,
+    "height": 1282
+  },
+  {
+    "scene": 3,
+    "type": "diagram"
+  },
+  {
+    "scene": 4,
+    "type": "stock",
+    "query": "person using phone in bed at night",
+    "file": "images/scene04.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Woman using a mobile phone on Praia do Forte, Cabo Frio, Brazil.jpg",
+    "title": "Woman using a mobile phone on Praia do Forte, Cabo Frio, Brazil",
+    "credit": "Wilfredor / CC0",
+    "license": "CC0",
+    "url": "https://commons.wikimedia.org/wiki/File:Woman_using_a_mobile_phone_on_Praia_do_Forte,_Cabo_Frio,_Brazil.jpg",
+    "width": 1920,
+    "height": 1172
+  },
+  {
+    "scene": 5,
+    "type": "stock",
+    "query": "clock showing midnight",
+    "missing": true
+  },
+  {
+    "scene": 6,
+    "type": "stock",
+    "query": "student studying late at night tired",
+    "missing": true
+  },
+  {
+    "scene": 7,
+    "type": "stock",
+    "query": "man nodding off at computer",
+    "missing": true
+  },
+  {
+    "scene": 8,
+    "type": "diagram"
+  },
+  {
+    "scene": 9,
+    "type": "science",
+    "query": "amygdala brain illustration",
+    "missing": true
+  },
+  {
+    "scene": 10,
+    "type": "diagram"
+  },
+  {
+    "scene": 11,
+    "type": "stock",
+    "query": "person eating snack late at night kitchen",
+    "file": "images/scene11.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:A Short Snack To Start The Day (220395147).jpeg",
+    "title": "A Short Snack To Start The Day",
+    "credit": "Abhijit Deshpande / CC BY 3.0",
+    "license": "CC BY 3.0",
+    "url": "https://commons.wikimedia.org/wiki/File:A_Short_Snack_To_Start_The_Day_(220395147).jpeg",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "scene": 12,
+    "type": "science",
+    "query": "white blood cells illustration NIH",
+    "missing": true
+  },
+  {
+    "scene": 13,
+    "type": "science",
+    "query": "PET brain scan image",
+    "missing": true
+  },
+  {
+    "scene": 14,
+    "type": "science",
+    "query": "hippocampus brain illustration",
+    "missing": true
+  },
+  {
+    "scene": 15,
+    "type": "stock",
+    "query": "sunrise through window tired woman",
+    "file": "images/scene15.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Sunrise Through The Window (161173301).jpeg",
+    "title": "Sunrise Through The Window",
+    "credit": "Michael Zanussi / CC BY 3.0",
+    "license": "CC BY 3.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Sunrise_Through_The_Window_(161173301).jpeg",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "scene": 16,
+    "type": "stock",
+    "query": "calendar on wall bedroom night",
+    "file": "images/scene16.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:WallCalendar.jpg",
+    "title": "WallCalendar",
+    "credit": "Claudio Elias / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:WallCalendar.jpg",
+    "width": 1920,
+    "height": 1440
+  },
+  {
+    "scene": 17,
+    "type": "stock",
+    "query": "woman sleeping peacefully in bed",
+    "file": "images/scene17.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Saraswati, the Bodhisattva goddess of the arts, literature, language, 4-armed, in the posture of royal ease, Mahabuddha Temple, Patan, Kathmandu, Nepal (2052359620).jpg",
+    "title": "Saraswati, the Bodhisattva goddess of the arts, literature, language, 4-armed, in the posture of royal ease, Mahabuddha Temple, Patan, Kathmandu, Nepal (2052359620)",
+    "credit": "Wonderlane from Seattle, USA / CC0",
+    "license": "CC0",
+    "url": "https://commons.wikimedia.org/wiki/File:Saraswati,_the_Bodhisattva_goddess_of_the_arts,_literature,_language,_4-armed,_in_the_posture_of_royal_ease,_Mahabuddha_Temple,_Patan,_Kathmandu,_Nepal_(2052359620).jpg",
+    "width": 1920,
+    "height": 2888
+  },
+  {
+    "scene": 18,
+    "type": "outro"
+  }
+]

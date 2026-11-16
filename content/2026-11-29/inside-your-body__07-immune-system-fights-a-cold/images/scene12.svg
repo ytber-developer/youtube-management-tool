@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <marker id="ay" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#ffe08a"/>
+    </marker>
+    <marker id="ac" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#7fe3ff"/>
+    </marker>
+    <g id="v">
+      <path d="M0 -17 L14.7 -8.5 L14.7 8.5 L0 17 L-14.7 8.5 L-14.7 -8.5 Z" fill="#ff8a7a" stroke="#ffffff" stroke-width="3" stroke-linejoin="round"/>
+    </g>
+    <clipPath id="box"><rect x="50" y="40" width="800" height="680" rx="30"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#box)">
+    <!-- tissue under the lining -->
+    <rect x="50" y="420" width="800" height="300" fill="rgba(255,255,255,0.07)"/>
+    <!-- lining cells -->
+    <g fill="rgba(227,251,255,0.22)" stroke="#e3fbff" stroke-width="4">
+      <rect x="54" y="336" width="92" height="84" rx="16"/>
+      <rect x="152" y="336" width="92" height="84" rx="16"/>
+      <rect x="250" y="336" width="92" height="84" rx="16"/>
+      <rect x="348" y="336" width="92" height="84" rx="16"/>
+      <rect x="446" y="336" width="92" height="84" rx="16"/>
+      <rect x="544" y="336" width="92" height="84" rx="16"/>
+      <rect x="642" y="336" width="92" height="84" rx="16"/>
+      <rect x="740" y="336" width="92" height="84" rx="16"/>
+    </g>
+    <!-- cilia -->
+    <g stroke="#e3fbff" stroke-width="4" stroke-linecap="round" opacity="0.7">
+      <path d="M80 334 l8 -22 M100 334 l8 -22 M120 334 l8 -22 M178 334 l8 -22 M198 334 l8 -22 M218 334 l8 -22 M276 334 l8 -22 M296 334 l8 -22 M316 334 l8 -22 M374 334 l8 -22 M394 334 l8 -22 M414 334 l8 -22 M472 334 l8 -22 M492 334 l8 -22 M512 334 l8 -22 M570 334 l8 -22 M590 334 l8 -22 M610 334 l8 -22 M668 334 l8 -22 M688 334 l8 -22 M708 334 l8 -22 M766 334 l8 -22 M786 334 l8 -22 M806 334 l8 -22"/>
+    </g>
+    <!-- mucus layer -->
+    <path d="M50 240 C 200 225, 350 252, 500 238 C 650 224, 760 246, 850 236 L850 330 L50 330 Z" fill="rgba(255,224,138,0.32)" stroke="#ffe08a" stroke-width="4"/>
+  </g>
+  <rect x="50" y="40" width="800" height="680" rx="30" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="4"/>
+
+  <!-- trapped viruses -->
+  <use href="#v" x="250" y="282"/>
+  <use href="#v" x="430" y="292"/>
+  <use href="#v" x="610" y="280"/>
+  <!-- free virus in the air -->
+  <use href="#v" x="440" y="170"/>
+
+  <!-- mucus cleared out -->
+  <line x1="560" y1="200" x2="800" y2="200" stroke="#ffe08a" stroke-width="7" stroke-linecap="round" marker-end="url(#ay)"/>
+  <text x="680" y="170" text-anchor="middle" font-size="32" font-weight="800" fill="#ffe08a">CLEARED OUT</text>
+
+  <text x="80" y="300" font-size="30" font-weight="800" fill="#ffffff">MUCUS</text>
+  <text x="80" y="120" font-size="30" font-weight="800" fill="#ff8a7a">TRAPPED VIRUS</text>
+  <line x1="190" y1="134" x2="242" y2="258" stroke="#ff8a7a" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- swollen, leaky blood vessels -->
+  <ellipse cx="200" cy="570" rx="100" ry="58" fill="rgba(255,138,122,0.55)" stroke="#ff8a7a" stroke-width="6"/>
+  <ellipse cx="700" cy="570" rx="100" ry="58" fill="rgba(255,138,122,0.55)" stroke="#ff8a7a" stroke-width="6"/>
+  <g stroke="#7fe3ff" stroke-width="6" stroke-linecap="round" marker-end="url(#ac)">
+    <line x1="170" y1="502" x2="160" y2="440"/>
+    <line x1="230" y1="502" x2="240" y2="440"/>
+    <line x1="670" y1="502" x2="660" y2="440"/>
+    <line x1="730" y1="502" x2="740" y2="440"/>
+  </g>
+  <text x="450" y="520" text-anchor="middle" font-size="30" font-weight="800" fill="#7fe3ff">FLUID LEAKS</text>
+  <text x="450" y="680" text-anchor="middle" font-size="30" font-weight="800" fill="#ff8a7a">SWOLLEN VESSELS</text>
+  <g stroke="#ff8a7a" stroke-width="4" stroke-linecap="round">
+    <line x1="296" y1="664" x2="258" y2="622"/>
+    <line x1="604" y1="664" x2="642" y2="622"/>
+  </g>
+</svg>

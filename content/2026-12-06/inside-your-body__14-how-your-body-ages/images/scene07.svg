@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="3.5" markerHeight="3.5" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#ff8a7a"/>
+    </marker>
+  </defs>
+  <circle cx="450.0" cy="137.0" r="60" fill="rgba(142,230,168,0.35)" stroke="#ffffff" stroke-width="5"/>
+  <circle cx="450.0" cy="137.0" r="19" fill="#8ee6a8"/>
+  <circle cx="625.4" cy="209.6" r="60" fill="rgba(142,230,168,0.35)" stroke="#ffffff" stroke-width="5"/>
+  <circle cx="625.4" cy="209.6" r="19" fill="#8ee6a8"/>
+  <circle cx="698.0" cy="385.0" r="60" fill="rgba(255,138,122,0.35)" stroke="#ff8a7a" stroke-width="5"/>
+  <circle cx="698.0" cy="385.0" r="19" fill="#ff8a7a"/>
+  <circle cx="648.0" cy="537.7" r="44" fill="rgba(142,230,168,0.35)" stroke="#ffffff" stroke-width="5"/>
+  <circle cx="602.7" cy="583.0" r="44" fill="rgba(142,230,168,0.35)" stroke="#ffffff" stroke-width="5"/>
+  <circle cx="649.4" cy="536.3" r="12" fill="#8ee6a8"/>
+  <circle cx="601.3" cy="584.4" r="12" fill="#8ee6a8"/>
+  <circle cx="450.0" cy="633.0" r="60" fill="rgba(142,230,168,0.35)" stroke="#ffffff" stroke-width="5"/>
+  <circle cx="450.0" cy="633.0" r="19" fill="#8ee6a8"/>
+  <circle cx="274.6" cy="560.4" r="60" fill="rgba(142,230,168,0.35)" stroke="#ffffff" stroke-width="5"/>
+  <circle cx="274.6" cy="560.4" r="19" fill="#8ee6a8"/>
+  <circle cx="202.0" cy="385.0" r="60" fill="rgba(255,138,122,0.35)" stroke="#ff8a7a" stroke-width="5"/>
+  <circle cx="202.0" cy="385.0" r="19" fill="#ff8a7a"/>
+  <circle cx="252.0" cy="232.3" r="44" fill="rgba(142,230,168,0.35)" stroke="#ffffff" stroke-width="5"/>
+  <circle cx="297.3" cy="187.0" r="44" fill="rgba(142,230,168,0.35)" stroke="#ffffff" stroke-width="5"/>
+  <circle cx="250.6" cy="233.7" r="12" fill="#8ee6a8"/>
+  <circle cx="298.7" cy="185.6" r="12" fill="#8ee6a8"/>
+  <circle cx="470.9" cy="236.5" r="8" fill="#ff8a7a"/>
+  <circle cx="474.5" cy="210.7" r="7" fill="#ff8a7a"/>
+  <circle cx="526.1" cy="255.8" r="8" fill="#ff8a7a"/>
+  <circle cx="540.3" cy="231.6" r="7" fill="#ff8a7a"/>
+  <circle cx="553.5" cy="209.2" r="6" fill="#ff8a7a"/>
+  <circle cx="569.8" cy="294.7" r="8" fill="#ff8a7a"/>
+  <circle cx="590.6" cy="279.1" r="7" fill="#ff8a7a"/>
+  <circle cx="595.2" cy="347.4" r="8" fill="#ff8a7a"/>
+  <circle cx="622.3" cy="340.4" r="7" fill="#ff8a7a"/>
+  <circle cx="647.5" cy="333.9" r="6" fill="#ff8a7a"/>
+  <circle cx="598.5" cy="405.9" r="8" fill="#ff8a7a"/>
+  <circle cx="624.3" cy="409.5" r="7" fill="#ff8a7a"/>
+  <circle cx="579.2" cy="461.1" r="8" fill="#ff8a7a"/>
+  <circle cx="603.4" cy="475.3" r="7" fill="#ff8a7a"/>
+  <circle cx="625.8" cy="488.5" r="6" fill="#ff8a7a"/>
+  <circle cx="540.3" cy="504.8" r="8" fill="#ff8a7a"/>
+  <circle cx="555.9" cy="525.6" r="7" fill="#ff8a7a"/>
+  <circle cx="487.6" cy="530.2" r="8" fill="#ff8a7a"/>
+  <circle cx="494.6" cy="557.3" r="7" fill="#ff8a7a"/>
+  <circle cx="501.1" cy="582.5" r="6" fill="#ff8a7a"/>
+  <circle cx="429.1" cy="533.5" r="8" fill="#ff8a7a"/>
+  <circle cx="425.5" cy="559.3" r="7" fill="#ff8a7a"/>
+  <circle cx="373.9" cy="514.2" r="8" fill="#ff8a7a"/>
+  <circle cx="359.7" cy="538.4" r="7" fill="#ff8a7a"/>
+  <circle cx="346.5" cy="560.8" r="6" fill="#ff8a7a"/>
+  <circle cx="330.2" cy="475.3" r="8" fill="#ff8a7a"/>
+  <circle cx="309.4" cy="490.9" r="7" fill="#ff8a7a"/>
+  <circle cx="304.8" cy="422.6" r="8" fill="#ff8a7a"/>
+  <circle cx="277.7" cy="429.6" r="7" fill="#ff8a7a"/>
+  <circle cx="252.5" cy="436.1" r="6" fill="#ff8a7a"/>
+  <circle cx="301.5" cy="364.1" r="8" fill="#ff8a7a"/>
+  <circle cx="275.7" cy="360.5" r="7" fill="#ff8a7a"/>
+  <circle cx="320.8" cy="308.9" r="8" fill="#ff8a7a"/>
+  <circle cx="296.6" cy="294.7" r="7" fill="#ff8a7a"/>
+  <circle cx="274.2" cy="281.5" r="6" fill="#ff8a7a"/>
+  <circle cx="359.7" cy="265.2" r="8" fill="#ff8a7a"/>
+  <circle cx="344.1" cy="244.4" r="7" fill="#ff8a7a"/>
+  <circle cx="412.4" cy="239.8" r="8" fill="#ff8a7a"/>
+  <circle cx="405.4" cy="212.7" r="7" fill="#ff8a7a"/>
+  <circle cx="398.9" cy="187.5" r="6" fill="#ff8a7a"/>
+  <line x1="598.0" y1="385.0" x2="626.0" y2="385.0" stroke="#ff8a7a" stroke-width="6" stroke-linecap="round" marker-end="url(#ar)"/>
+  <line x1="302.0" y1="385.0" x2="274.0" y2="385.0" stroke="#ff8a7a" stroke-width="6" stroke-linecap="round" marker-end="url(#ar)"/>
+  <path d="M332 385 C 330 315 390 277 455 281 C 530 285 572 335 566 395 C 560 460 500 493 435 487 C 370 481 334 445 332 385 Z" fill="#9aa7b2" stroke="#e3fbff" stroke-width="6"/>
+  <ellipse cx="450" cy="337" rx="38" ry="26" fill="#6f7c88"/>
+  <text x="450" y="399" font-size="30" font-weight="800" fill="#06233d" text-anchor="middle">SENESCENT</text>
+  <text x="450" y="435" font-size="30" font-weight="800" fill="#06233d" text-anchor="middle">CELL</text>
+  <text x="860" y="56" font-size="30" font-weight="800" fill="#ff8a7a" text-anchor="end">HARMFUL SIGNALS</text>
+  <line x1="790" y1="74" x2="648" y2="334" stroke="#ff8a7a" stroke-width="4" stroke-linecap="round"/>
+  <text x="40" y="712" font-size="30" font-weight="800" fill="#8ee6a8">HEALTHY CELLS</text>
+  <line x1="200" y1="680" x2="248" y2="626" stroke="#8ee6a8" stroke-width="4" stroke-linecap="round"/>
+</svg>

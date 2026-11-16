@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <radialGradient id="hot" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffe08a" stop-opacity="1"/>
+      <stop offset="0.45" stop-color="#ff8a7a" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ff8a7a" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="cer">
+      <path d="M215 300 C 200 210 270 125 390 105 C 510 85 645 110 720 180 C 770 228 772 300 740 345 C 715 378 680 388 640 382 C 600 378 570 388 540 400 C 500 418 430 425 380 412 C 335 400 310 375 300 345 C 275 345 235 335 215 300 Z"/>
+    </clipPath>
+    <marker id="ay" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#e3fbff"/>
+    </marker>
+  </defs>
+
+  <g transform="translate(-36 60)">
+    <!-- cerebellum + brainstem -->
+    <path d="M478 400 C 488 450 496 500 500 560 L 552 560 C 550 500 546 440 548 392 Z" fill="#175c7c" stroke="#ffffff" stroke-width="5" stroke-linejoin="round"/>
+    <ellipse cx="652" cy="408" rx="88" ry="52" fill="#175c7c" stroke="#ffffff" stroke-width="5"/>
+    <!-- cerebrum -->
+    <path d="M215 300 C 200 210 270 125 390 105 C 510 85 645 110 720 180 C 770 228 772 300 740 345 C 715 378 680 388 640 382 C 600 378 570 388 540 400 C 500 418 430 425 380 412 C 335 400 310 375 300 345 C 275 345 235 335 215 300 Z"
+          fill="#1d6a8a"/>
+    <!-- hot zone glow -->
+    <g clip-path="url(#cer)">
+      <ellipse cx="640" cy="235" rx="190" ry="175" fill="url(#hot)"/>
+    </g>
+    <path d="M215 300 C 200 210 270 125 390 105 C 510 85 645 110 720 180 C 770 228 772 300 740 345 C 715 378 680 388 640 382 C 600 378 570 388 540 400 C 500 418 430 425 380 412 C 335 400 310 375 300 345 C 275 345 235 335 215 300 Z"
+          fill="none" stroke="#ffffff" stroke-width="6" stroke-linejoin="round"/>
+    <!-- folds -->
+    <g fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="5" stroke-linecap="round">
+      <path d="M300 345 C 360 320 430 300 500 300"/>
+      <path d="M470 98 C 455 160 470 220 452 290"/>
+      <path d="M290 170 C 320 200 310 240 340 260"/>
+      <path d="M370 140 C 400 180 380 220 400 250"/>
+      <path d="M580 130 C 560 180 600 220 580 270"/>
+      <path d="M670 200 C 650 240 690 270 670 330"/>
+      <path d="M390 370 C 430 350 470 352 510 345"/>
+    </g>
+  </g>
+
+  <!-- label -->
+  <text x="850" y="88" font-size="36" font-weight="800" fill="#ffe08a" text-anchor="end">POSTERIOR HOT ZONE</text>
+  <line x1="680" y1="108" x2="625" y2="245" stroke="#ffe08a" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="622" cy="252" r="9" fill="#ffe08a"/>
+
+  <!-- orientation -->
+  <line x1="290" y1="690" x2="120" y2="690" stroke="#e3fbff" stroke-width="5" stroke-linecap="round" marker-end="url(#ay)"/>
+  <text x="300" y="701" font-size="30" font-weight="700" fill="#e3fbff">FRONT</text>
+  <text x="600" y="701" font-size="30" font-weight="700" fill="#e3fbff" text-anchor="end">BACK</text>
+  <line x1="612" y1="690" x2="780" y2="690" stroke="#e3fbff" stroke-width="5" stroke-linecap="round" marker-end="url(#ay)"/>
+</svg>

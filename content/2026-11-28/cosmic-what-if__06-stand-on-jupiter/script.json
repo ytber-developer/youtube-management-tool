@@ -1,0 +1,213 @@
+{
+  "channel": "cosmic-what-if",
+  "number": 6,
+  "slug": "stand-on-jupiter",
+  "target_minutes": 4.33,
+  "title": "What If You Tried to Stand on Jupiter?",
+  "thumbnail_text": "NO GROUND ON JUPITER",
+  "description": "You can't stand on Jupiter, because there's nothing to stand on. Follow a fall through the giant planet's clouds, using real data from NASA's Galileo probe and Juno mission, to find out how far you'd get.\n\nSources:\n- NASA Science, Jupiter Facts: https://science.nasa.gov/jupiter/jupiter-facts/\n- NASA NSSDC, Jupiter Fact Sheet: https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html\n- NASA History, 30 Years Ago: Galileo Off to Orbit Jupiter: https://www.nasa.gov/history/30-years-ago-galileo-off-to-orbit-jupiter/",
+  "tags": [
+    "jupiter",
+    "what if",
+    "gas giant",
+    "galileo probe",
+    "juno",
+    "great red spot",
+    "space",
+    "astronomy",
+    "planets",
+    "metallic hydrogen",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "NASA Science - Jupiter Facts",
+      "url": "https://science.nasa.gov/jupiter/jupiter-facts/"
+    },
+    {
+      "title": "NASA NSSDC - Jupiter Fact Sheet",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html"
+    },
+    {
+      "title": "NASA History - 30 Years Ago: Galileo Off to Orbit Jupiter",
+      "url": "https://www.nasa.gov/history/30-years-ago-galileo-off-to-orbit-jupiter/"
+    }
+  ],
+  "scenes": [
+    {
+      "narration": "Picture yourself stepping off a spaceship toward Jupiter, ready to plant your boots on the biggest planet in the solar system. There's just one problem.",
+      "headline": "STAND ON <em>JUPITER?</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "Jupiter full disk Hubble",
+        "note": "the whole of Jupiter with its bands"
+      }
+    },
+    {
+      "narration": "Jupiter has no surface. None. It's a giant ball made mostly of hydrogen and helium, the same ingredients that make up stars. What looks like ground in photos is just the tops of clouds, painted into stripes by winds and storms.",
+      "headline": "THERE IS <em>NO GROUND</em>",
+      "sub": "Mostly hydrogen and helium",
+      "visual": {
+        "type": "nasa",
+        "query": "Jupiter cloud tops Juno JunoCam",
+        "note": "close-up swirling cloud bands"
+      }
+    },
+    {
+      "narration": "And it is enormous. Jupiter is about eleven times wider than Earth. Hollow it out, and about a thousand Earths could fit inside. It holds more than twice the material of every other planet, moon, asteroid, and comet in the solar system combined.",
+      "headline": "<em>1,000 EARTHS</em> COULD FIT INSIDE",
+      "sub": "11 times wider than Earth",
+      "visual": {
+        "type": "diagram",
+        "spec": "scale comparison of Earth and Jupiter side by side, Jupiter about 11 times wider"
+      }
+    },
+    {
+      "narration": "Getting there is rough. When NASA's Galileo probe dropped into Jupiter in nineteen ninety five, it hit the atmosphere at about one hundred six thousand miles per hour. It slowed so violently that it felt more than two hundred times the pull of Earth's gravity.",
+      "headline": "ENTRY AT <em>106,000 MPH</em>",
+      "sub": "Over 200 g of deceleration",
+      "visual": {
+        "type": "nasa",
+        "query": "Galileo probe descent Jupiter atmosphere artist",
+        "note": "the Galileo probe under its parachute"
+      }
+    },
+    {
+      "narration": "The gas in front of its heat shield blazed about as hot as the surface of the Sun. You would need protection just as tough. So let's assume you survive the plunge and open a parachute high above the clouds.",
+      "headline": "HOT AS <em>THE SUN'S SURFACE</em>",
+      "sub": "That's just the way in",
+      "visual": {
+        "type": "nasa",
+        "query": "Galileo probe heat shield",
+        "note": "the probe's heat shield"
+      }
+    },
+    {
+      "narration": "Up here, it's brutally cold. At the level where the pressure matches sea level on Earth, the temperature is about minus one hundred sixty degrees Fahrenheit. The air is mostly hydrogen, with traces of methane and ammonia. Not one breath of it would keep you alive.",
+      "headline": "MINUS <em>160°F</em> UP TOP",
+      "sub": "And nothing you can breathe",
+      "visual": {
+        "type": "nasa",
+        "query": "Jupiter south pole Juno cyclones",
+        "note": "Jupiter's polar storms"
+      }
+    },
+    {
+      "narration": "Then there's your weight. Gravity at Jupiter's cloud tops is about two point four times what you feel on Earth. If you weigh one hundred fifty pounds at home, here you'd weigh about three hundred fifty five. Just lifting your arms would feel like hauling sandbags.",
+      "headline": "YOU WEIGH <em>2.4 TIMES</em> MORE",
+      "sub": "150 lb becomes about 355 lb",
+      "visual": {
+        "type": "nasa",
+        "query": "Jupiter Great Red Spot Juno",
+        "note": "the Great Red Spot up close"
+      }
+    },
+    {
+      "narration": "And you would not hang in one place. Jupiter spins once every ten hours, the shortest day of any planet. That fast spin helps drive its striped bands, and winds near the equator can reach about three hundred thirty five miles per hour, faster than any hurricane on Earth.",
+      "headline": "WINDS OF <em>335 MPH</em>",
+      "sub": "A day lasts just 10 hours",
+      "visual": {
+        "type": "nasa",
+        "query": "Jupiter atmosphere bands Cassini",
+        "note": "Jupiter's colorful cloud belts"
+      }
+    },
+    {
+      "narration": "Before you sink into the clouds, glance up. Jupiter has one hundred fifteen officially recognized moons. The four biggest, Io, Europa, Ganymede, and Callisto, were discovered by Galileo Galilei in sixteen ten. The NASA probe that plunged into Jupiter was named after him.",
+      "headline": "<em>115</em> MOONS OVERHEAD",
+      "sub": "The four biggest found in 1610",
+      "visual": {
+        "type": "nasa",
+        "query": "Galilean moons Io Europa Ganymede Callisto",
+        "note": "Jupiter's four large moons side by side"
+      }
+    },
+    {
+      "narration": "The Great Red Spot, a storm wider than our entire planet, reaches roughly three hundred miles below the cloud tops. Juno measured that depth by tracking tiny tugs on the spacecraft from the storm's mass.",
+      "headline": "A STORM <em>WIDER THAN EARTH</em>",
+      "sub": "About 300 miles deep",
+      "visual": {
+        "type": "nasa",
+        "query": "Great Red Spot Voyager 1979",
+        "note": "the Great Red Spot from Voyager"
+      }
+    },
+    {
+      "narration": "So you sink. And as you sink, you discover there's still no floor. The gas just gets thicker and hotter around you. Galileo's probe kept radioing data for about fifty eight minutes, falling roughly ninety seven miles into the clouds.",
+      "headline": "STILL <em>NO FLOOR</em>",
+      "sub": "58 minutes, 97 miles down",
+      "visual": {
+        "type": "diagram",
+        "spec": "vertical profile of Jupiter's upper atmosphere showing cloud layers and the Galileo probe's 97-mile descent path"
+      }
+    },
+    {
+      "narration": "When it finally went silent, the pressure was about twenty three times what you feel at sea level, and the temperature had climbed above three hundred degrees Fahrenheit. That pressure is like being about seven hundred feet under the ocean. Later, the probe itself melted and vaporized.",
+      "headline": "CRUSHED AND <em>COOKED</em>",
+      "sub": "23 atmospheres, over 300°F",
+      "visual": {
+        "type": "nasa",
+        "query": "Galileo probe Jupiter entry illustration",
+        "note": "the probe descending into dark clouds"
+      }
+    },
+    {
+      "narration": "Keep going, and things turn truly alien. Far below, the pressure squeezes hydrogen so hard that it becomes a liquid that conducts electricity like a metal. This deep ocean of metallic hydrogen is thought to help power Jupiter's gigantic magnetic field.",
+      "headline": "AN OCEAN OF <em>LIQUID METAL</em>",
+      "sub": "Metallic hydrogen",
+      "visual": {
+        "type": "diagram",
+        "spec": "cutaway of Jupiter's interior: gas atmosphere, liquid hydrogen, metallic hydrogen layer, large diffuse core"
+      }
+    },
+    {
+      "narration": "And at the very center? For decades, scientists pictured a small, solid core. But NASA's Juno spacecraft found that Jupiter's core is much larger than expected, and not solid. It seems to blend gradually into the layers around it.",
+      "headline": "A CORE THAT'S <em>NOT SOLID</em>",
+      "sub": "Juno's surprise",
+      "visual": {
+        "type": "nasa",
+        "query": "Juno spacecraft Jupiter artist concept",
+        "note": "Juno orbiting above Jupiter"
+      }
+    },
+    {
+      "narration": "Even if the pressure didn't get you, the radiation would. Jupiter's magnetic field traps charged particles in belts intense enough to damage spacecraft. Robots that visit need heavy shielding just to survive.",
+      "headline": "DEADLY <em>RADIATION BELTS</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "Jupiter aurora Hubble ultraviolet",
+        "note": "glowing aurora at Jupiter's pole"
+      }
+    },
+    {
+      "narration": "And leaving? To escape Jupiter's gravity from the cloud tops, you'd need about one hundred thirty thousand miles per hour, more than five times what it takes to leave Earth. That would take a rocket far beyond anything humans have built.",
+      "headline": "NO WAY <em>BACK OUT</em>",
+      "sub": "Escape speed: ~133,000 mph",
+      "visual": {
+        "type": "nasa",
+        "query": "Jupiter Io shadow transit",
+        "note": "Jupiter with a moon's shadow"
+      }
+    },
+    {
+      "narration": "So you can never stand on Jupiter. You can only fall through it, deeper, hotter, and more crushed, until there's nothing left of you. Jupiter isn't a world you land on. It's a world you sink into.",
+      "headline": "A WORLD YOU <em>SINK INTO</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "Jupiter crescent Cassini",
+        "note": "Jupiter half in shadow"
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "headline": "",
+      "sub": "",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

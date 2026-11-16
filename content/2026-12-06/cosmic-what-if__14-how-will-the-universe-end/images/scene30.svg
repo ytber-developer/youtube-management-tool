@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#7fe3ff"/></marker>
+<radialGradient id="bub"><stop offset="0" stop-color="#ffffff" stop-opacity="0.35"/><stop offset="0.7" stop-color="#7fe3ff" stop-opacity="0.35"/><stop offset="1" stop-color="#7fe3ff" stop-opacity="0.7"/></radialGradient>
+<radialGradient id="glow"><stop offset="0.75" stop-color="#7fe3ff" stop-opacity="0.5"/><stop offset="1" stop-color="#7fe3ff" stop-opacity="0"/></radialGradient>
+<radialGradient id="gal"><stop offset="0" stop-color="#ffffff"/><stop offset="0.35" stop-color="#c9c3ff"/><stop offset="1" stop-color="#c9c3ff" stop-opacity="0"/></radialGradient>
+<ellipse id="g" cx="0" cy="0" rx="34" ry="13" fill="url(#gal)"/>
+</defs>
+<g font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-weight="800">
+<use href="#g" transform="translate(130,120) rotate(-25)"/>
+<use href="#g" transform="translate(430,60) rotate(10)"/>
+<use href="#g" transform="translate(810,80) rotate(30)"/>
+<use href="#g" transform="translate(110,390) rotate(60)"/>
+<use href="#g" transform="translate(780,400) rotate(-35)"/>
+<use href="#g" transform="translate(110,620) rotate(15)"/>
+<use href="#g" transform="translate(780,600) rotate(40)"/>
+<use href="#g" transform="translate(230,680) rotate(-10)"/>
+<use href="#g" transform="translate(650,670) rotate(20)"/>
+<circle cx="430" cy="380" r="225" fill="url(#glow)"/>
+<circle cx="430" cy="380" r="190" fill="url(#bub)" stroke="#7fe3ff" stroke-width="6"/>
+<g transform="translate(430,380)" stroke="#7fe3ff" stroke-width="7" stroke-linecap="round" marker-end="url(#ah)"><line x1="0" y1="-208" x2="0" y2="-272" transform="rotate(0)"/><line x1="0" y1="-208" x2="0" y2="-272" transform="rotate(45)"/><line x1="0" y1="-208" x2="0" y2="-272" transform="rotate(90)"/><line x1="0" y1="-208" x2="0" y2="-272" transform="rotate(135)"/><line x1="0" y1="-208" x2="0" y2="-272" transform="rotate(180)"/><line x1="0" y1="-208" x2="0" y2="-272" transform="rotate(225)"/><line x1="0" y1="-208" x2="0" y2="-272" transform="rotate(270)"/><line x1="0" y1="-208" x2="0" y2="-272" transform="rotate(315)"/></g>
+<g text-anchor="middle" fill="#ffffff">
+<text x="430" y="368" font-size="32">BUBBLE OF</text>
+<text x="430" y="412" font-size="40">TRUE VACUUM</text>
+</g>
+<text x="650" y="160" fill="#7fe3ff" font-size="28">≈ LIGHT SPEED</text>
+<text x="450" y="730" text-anchor="middle" fill="#c9c3ff" font-size="28">OUR SPACE: FALSE VACUUM</text>
+</g>
+</svg>

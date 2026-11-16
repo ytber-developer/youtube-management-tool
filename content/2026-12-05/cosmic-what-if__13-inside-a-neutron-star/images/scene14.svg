@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760"><defs>
+<filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="14" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="softglow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<marker id="ah-o" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ffb347"/></marker><marker id="ah-w" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ffffff"/></marker><marker id="ah-c" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7fe3ff"/></marker><marker id="ah-l" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c9c3ff"/></marker>
+</defs><g font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
+<circle cx="340" cy="390" r="300" fill="none" stroke="rgba(191,230,255,0.45)" stroke-width="10" filter="url(#softglow)"/>
+<circle cx="340" cy="390" r="292" fill="#bfe6ff"/>
+<circle cx="340" cy="390" r="252" fill="#86b9e6"/>
+<circle cx="340" cy="390" r="214" fill="#c9c3ff"/>
+<circle cx="340" cy="390" r="192" fill="#5a62c4"/>
+<circle cx="340" cy="390" r="105" fill="#ffb347"/>
+<text x="340" y="420" font-size="90" font-weight="800" fill="#1a1440" text-anchor="middle">?</text>
+<polyline points="461,120 645,120 " fill="none" stroke="#ffffff" stroke-width="4"/><circle cx="461" cy="120" r="7" fill="#ffffff"/><text x="665" y="131" font-size="32" font-weight="700" fill="#c9c3ff" text-anchor="start">atmosphere</text>
+<polyline points="538,205 645,205 " fill="none" stroke="#ffffff" stroke-width="4"/><circle cx="538" cy="205" r="7" fill="#ffffff"/><text x="665" y="216" font-size="32" font-weight="700" fill="#ffffff" text-anchor="start">outer crust</text>
+<polyline points="550,290 645,290 " fill="none" stroke="#ffffff" stroke-width="4"/><circle cx="550" cy="290" r="7" fill="#ffffff"/><text x="665" y="301" font-size="32" font-weight="700" fill="#ffffff" text-anchor="start">inner crust</text>
+<polyline points="542,375 645,375 " fill="none" stroke="#ffffff" stroke-width="4"/><circle cx="542" cy="375" r="7" fill="#ffffff"/><text x="665" y="386" font-size="32" font-weight="700" fill="#ffffff" text-anchor="start">nuclear pasta</text>
+<polyline points="464,470 645,470 " fill="none" stroke="#ffffff" stroke-width="4"/><circle cx="464" cy="470" r="7" fill="#ffffff"/><text x="665" y="481" font-size="32" font-weight="700" fill="#ffffff" text-anchor="start">outer core</text>
+<polyline points="390,470 645,610 " fill="none" stroke="#ffffff" stroke-width="4"/><circle cx="390" cy="470" r="7" fill="#ffffff"/><text x="665" y="621" font-size="32" font-weight="700" fill="#ffb347" text-anchor="start">inner core ?</text>
+<text x="870" y="728" font-size="24" font-weight="600" fill="#c9c3ff" text-anchor="end">not to scale</text>
+</g></svg>

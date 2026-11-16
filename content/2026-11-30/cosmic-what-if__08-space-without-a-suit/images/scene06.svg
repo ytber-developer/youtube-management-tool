@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
+<defs><marker id="p6c" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="3.2" markerHeight="3.2" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#7fe3ff"/></marker><marker id="p6r" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="3.2" markerHeight="3.2" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#ff7a59"/></marker></defs>
+<rect x="250" y="40" width="400" height="90" rx="45" fill="#ffffff" fill-opacity="0.06" stroke="#c9c3ff" stroke-width="4" stroke-dasharray="6 12"/>
+<text x="450.0" y="100.0" font-size="40" font-weight="800" fill="#c9c3ff" text-anchor="middle" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >Vacuum</text>
+<path d="M415.0,312 L415.0,150 M485.0,150 L485.0,312" fill="none" stroke="#ffb3c7" stroke-width="6" stroke-linecap="round"/>
+<path d="M273.3,514.3 A188,188 0 0 0 626.7,514.3" fill="none" stroke="#c8324a" stroke-width="56" stroke-linecap="round"/>
+<circle cx="450" cy="450" r="150" fill="#ffffff" fill-opacity="0.05" stroke="#ffb3c7" stroke-width="6"/>
+<rect x="418.0" y="294" width="64" height="24" fill="#1d1045"/>
+<line x1="415.0" y1="312" x2="415.0" y2="292" stroke="#ffb3c7" stroke-width="6"/>
+<line x1="485.0" y1="312" x2="485.0" y2="292" stroke="#ffb3c7" stroke-width="6"/>
+<circle cx="329.2" cy="594.0" r="11" fill="#7fe3ff"/>
+<line x1="343.3" y1="577.2" x2="388.9" y2="522.8" stroke="#7fe3ff" stroke-width="6" stroke-linecap="round" marker-end="url(#p6c)"/>
+<circle cx="450.0" cy="638.0" r="11" fill="#7fe3ff"/>
+<line x1="450.0" y1="616.0" x2="450.0" y2="545.0" stroke="#7fe3ff" stroke-width="6" stroke-linecap="round" marker-end="url(#p6c)"/>
+<circle cx="570.8" cy="594.0" r="11" fill="#7fe3ff"/>
+<line x1="556.7" y1="577.2" x2="511.1" y2="522.8" stroke="#7fe3ff" stroke-width="6" stroke-linecap="round" marker-end="url(#p6c)"/>
+<line x1="450.0" y1="420.0" x2="450.0" y2="170.0" stroke="#7fe3ff" stroke-width="7" stroke-linecap="round" marker-end="url(#p6c)"/>
+<text x="500.0" y="400.0" font-size="36" font-weight="800" fill="#7fe3ff" text-anchor="start" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round">O<tspan font-size="25" dy="8">2</tspan></text>
+<text x="260.0" y="390.0" font-size="34" font-weight="800" fill="#ffffff" text-anchor="end" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >Empty</text>
+<text x="260.0" y="428.0" font-size="34" font-weight="800" fill="#ffffff" text-anchor="end" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >air sac</text>
+<text x="678.0" y="570.0" font-size="36" font-weight="800" fill="#ff7a59" text-anchor="start" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >Blood</text>
+<text x="450.0" y="713.0" font-size="34" font-weight="800" fill="#7fe3ff" text-anchor="middle" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >Oxygen flows out</text>
+<text x="860.0" y="725.0" font-size="24" font-weight="600" fill="#c9c3ff" text-anchor="end" >not to scale</text>
+</svg>

@@ -14,3 +14,14 @@ fb-cookies.json
 /tool-management-account-ytb
 node_modules/
 tool_ytb.db
+# ── Content pipeline: media dựng lại được / người dùng tạo hằng ngày (không đưa lên git) ──
+content/**/images/*.jpg
+content/**/slides/
+content/**/caps/
+content/**/thumbnail.png
+content/**/preview.mp4
+content/**/voice.mp3
+content/**/final.mp4
+content/**/captions.srt
+.superpowers/
+content/**/images/*.alt

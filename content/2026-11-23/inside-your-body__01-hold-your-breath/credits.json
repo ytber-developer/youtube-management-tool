@@ -1,0 +1,58 @@
+[
+  {
+    "scene": 1,
+    "type": "stock",
+    "query": "woman holding breath puffed cheeks",
+    "file": "images/scene01.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Advertizements Illustrated! (BM 1878,0511.1401).jpg",
+    "title": "Advertizements Illustrated!",
+    "credit": "Print made by: Richard Newton After: John Nixon Published by: William Holland / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:Advertizements_Illustrated!_(BM_1878,0511.1401).jpg",
+    "width": 1600,
+    "height": 661
+  },
+  {
+    "scene": 2,
+    "type": "science",
+    "query": "human lungs anatomy illustration",
+    "file": "images/scene02.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:2312 Gross Anatomy of the Lungs.jpg",
+    "title": "2312 Gross Anatomy of the Lungs",
+    "credit": "OpenStax College / CC BY 3.0",
+    "license": "CC BY 3.0",
+    "url": "https://commons.wikimedia.org/wiki/File:2312_Gross_Anatomy_of_the_Lungs.jpg",
+    "width": 1896,
+    "height": 1304
+  },
+  {
+    "scene": 3,
+    "type": "diagram"
+  },
+  {
+    "scene": 4,
+    "type": "stock",
+    "query": "swimmer underwater holding breath",
+    "file": "images/scene04.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Underwater salmon (52263938449).jpg",
+    "title": "Underwater salmon (52263938449)",
+    "credit": "USFWS Pacific Southwest Region / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:Underwater_salmon_(52263938449).jpg",
+    "width": 1920,
+    "height": 1286
+  },
+  {
+    "scene": 5,
+    "type": "stock",
+    "query": "man exhaling deep breath outdoors",
+    "missing": true
+  },
+  {
+    "scene": 6,
+    "type": "outro"
+  }
+]

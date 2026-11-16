@@ -1,0 +1,102 @@
+{
+  "channel": "inside-your-body",
+  "number": 4,
+  "slug": "goosebumps",
+  "target_minutes": 3.0,
+  "title": "Why Do We Get Goosebumps? The Answer Is Hair-Raising",
+  "thumbnail_text": "WHY GOOSEBUMPS?",
+  "description": "Cold air, fear, and your favorite song all raise the same tiny bumps on your skin. Discover the muscle behind goosebumps, the hidden job scientists found for it in 2020, and the rare people who can make goosebumps on command.\n\nSources:\n- Cleveland Clinic, Why Do You Get Goosebumps?: https://health.clevelandclinic.org/why-do-you-get-goosebumps\n- News-Medical, Harvard scientists uncover the real reason behind goosebumps: https://www.news-medical.net/news/20200720/Harvard-scientists-uncover-the-real-reason-behind-goosebumps.aspx\n- Science News, Getting goose bumps could boost hair growth: https://www.sciencenews.org/article/goose-bumps-could-boost-hair-growth\n- PeerJ (2018), The voluntary control of piloerection: https://pmc.ncbi.nlm.nih.gov/articles/PMC6071615\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": ["goosebumps", "goose bumps", "why do we get goosebumps", "arrector pili", "piloerection", "frisson", "hair follicle stem cells", "sympathetic nervous system", "human body", "evolution", "science explained", "inside your body"],
+  "sources": [
+    { "title": "Cleveland Clinic - Why Do You Get Goosebumps?", "url": "https://health.clevelandclinic.org/why-do-you-get-goosebumps" },
+    { "title": "News-Medical - Harvard scientists uncover the real reason behind goosebumps", "url": "https://www.news-medical.net/news/20200720/Harvard-scientists-uncover-the-real-reason-behind-goosebumps.aspx" },
+    { "title": "Science News - Getting goose bumps could boost hair growth", "url": "https://www.sciencenews.org/article/goose-bumps-could-boost-hair-growth" },
+    { "title": "PeerJ (2018) - The voluntary control of piloerection", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6071615" }
+  ],
+  "scenes": [
+    {
+      "narration": "A cold breeze, a scary movie, your favorite song. Totally different moments, same result: tiny bumps rising all over your skin.",
+      "headline": "WHY DO WE GET <em>GOOSEBUMPS?</em>",
+      "sub": "Cold, fear, and music",
+      "visual": { "type": "stock", "query": "goosebumps on arm close up", "note": "close-up of an arm with goosebumps and raised hairs" }
+    },
+    {
+      "narration": "Those bumps start at your hair follicles. At the base of each follicle sits a tiny muscle called the arrector pili. When it contracts, it pulls the hair upright and pushes up a little mound of skin around it.",
+      "headline": "MEET THE <em>ARRECTOR PILI</em>",
+      "sub": "A tiny muscle on every follicle",
+      "visual": { "type": "diagram", "spec": "skin cross-section showing a hair follicle with the arrector pili muscle relaxed, then contracted with the hair standing up and a bump on the skin surface" }
+    },
+    {
+      "narration": "Most of us can't decide to do this. It's run by your sympathetic nervous system, the fight or flight branch that also helps control your heart rate. That's why goosebumps can show up alongside a pounding pulse when you're startled.",
+      "headline": "A <em>FIGHT OR FLIGHT</em> REFLEX",
+      "sub": "Controlled by your sympathetic nerves",
+      "visual": { "type": "stock", "query": "startled woman watching movie", "note": "person looking startled while watching something on screen" }
+    },
+    {
+      "narration": "For furry animals, this reflex is genuinely useful. When fur stands on end, it traps a layer of air close to the skin, a bit like a puffy jacket, and that air helps hold in body heat.",
+      "headline": "A BUILT-IN <em>PUFFY JACKET</em>",
+      "sub": "Raised fur traps warm air",
+      "visual": { "type": "stock", "query": "fluffy bird puffed feathers winter", "note": "bird or animal fluffed up against the cold" }
+    },
+    {
+      "narration": "It also works as a bluff. A frightened cat puffs up its fur to look bigger and more threatening. Our distant ancestors had far more body hair, so the same reflex may once have done both jobs for them.",
+      "headline": "LOOK <em>BIGGER</em>, SCARE OFF THREATS",
+      "sub": "The puffed-up cat trick",
+      "visual": { "type": "stock", "query": "cat with fur standing up", "note": "cat puffed up with an arched back" }
+    },
+    {
+      "narration": "You, on the other hand, have thin, fine hair across most of your body. Raising it doesn't trap much warmth or scare anyone. So for a long time, goosebumps in humans were written off as a leftover with little purpose.",
+      "headline": "A <em>LEFTOVER</em> REFLEX?",
+      "sub": "Not much fur left to raise",
+      "visual": { "type": "stock", "query": "person shivering in cold wind", "note": "person hugging themselves in chilly weather" }
+    },
+    {
+      "narration": "Then there are emotional goosebumps. Music, a moving film scene, or an inspiring speech can trigger a wave of chills that scientists call frisson. Exactly why strong emotions tap into this old reflex is still being studied.",
+      "headline": "THE <em>FRISSON</em> FEELING",
+      "sub": "Chills from music and emotion",
+      "visual": { "type": "stock", "query": "woman listening to music with headphones eyes closed", "note": "person deeply moved while listening to music" }
+    },
+    {
+      "narration": "In 2020, researchers at Harvard found a hidden second job. Working in mice, they showed that the nerve behind goosebumps also connects directly to the stem cells that grow new hair, wrapping around them like a ribbon.",
+      "headline": "A HIDDEN <em>SECOND JOB</em>",
+      "sub": "Harvard study in mice, 2020",
+      "visual": { "type": "science", "query": "hair follicle microscope image", "note": "microscope image of a hair follicle in skin tissue" }
+    },
+    {
+      "narration": "The tiny goosebump muscle acts as a bridge that holds that nerve in place. In the short term, cold triggers goosebumps. If the cold lasts, the nerve fires harder and pushes the stem cells to start growing new hair.",
+      "headline": "FROM CHILL TO <em>NEW HAIR</em>",
+      "sub": "Short term bumps, long term growth",
+      "visual": { "type": "diagram", "spec": "sympathetic nerve connected to arrector pili muscle and hair follicle stem cells; arrow 1 short-term cold: muscle contracts, goosebumps; arrow 2 prolonged cold: stem cells activate, new hair grows" }
+    },
+    {
+      "narration": "That might explain why the reflex stuck around. It links a quick fix for a chill with a slower plan for a thicker coat. Whether it works the same way in human skin is still an open question.",
+      "headline": "WHY THE REFLEX <em>STUCK AROUND</em>",
+      "sub": "Still unconfirmed in humans",
+      "visual": { "type": "stock", "query": "mouse in laboratory", "note": "small lab mouse, friendly and clean" }
+    },
+    {
+      "narration": "Now for the strangest part. A small number of people say they can give themselves goosebumps on command, no cold or music required. Before 2018, science had described this in just three individual case reports.",
+      "headline": "GOOSEBUMPS <em>ON COMMAND</em>",
+      "sub": "Only three cases were ever described",
+      "visual": { "type": "stock", "query": "man looking at his forearm", "note": "person examining their forearm with curiosity" }
+    },
+    {
+      "narration": "That year, a study of thirty-two people with the ability found something curious. Music was the most common moment they used it, and as a group they scored higher than average on openness to new experiences.",
+      "headline": "THIRTY-TWO <em>RARE</em> PEOPLE",
+      "sub": "Linked to music and openness",
+      "visual": { "type": "stock", "query": "people at concert enjoying music", "note": "audience absorbed in live music" }
+    },
+    {
+      "narration": "So the next time your arms prickle during a song, think about what's happening: a reflex built for fur, wired into the cells that grow your hair, and still responding to the moments that move you.",
+      "headline": "A REFLEX THAT <em>MOVES</em> WITH YOU",
+      "sub": "",
+      "visual": { "type": "stock", "query": "goosebumps skin music concert", "note": "close-up of skin with goosebumps during a concert" }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "headline": "",
+      "sub": "",
+      "visual": { "type": "outro" }
+    }
+  ]
+}

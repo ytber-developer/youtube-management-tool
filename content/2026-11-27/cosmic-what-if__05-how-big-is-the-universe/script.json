@@ -1,0 +1,184 @@
+{
+  "channel": "cosmic-what-if",
+  "number": 5,
+  "slug": "how-big-is-the-universe",
+  "target_minutes": 3.67,
+  "title": "How Big Is the Universe, Really? Zooming Out Step by Step",
+  "thumbnail_text": "HOW BIG IS IT?",
+  "description": "Zoom out from Earth, past Voyager 1, the nearest stars and the Milky Way, all the way to the edge of everything we can see. The universe is only 13.8 billion years old, so why is the visible part 93 billion light-years wide?\n\nSources:\n- NASA JPL, NASA Invites Media, Public to Join Voyager 1 One-Light Day Activities: https://www.jpl.nasa.gov/news/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities/\n- NASA Science, Hubble's Deepest View Ever of the Universe Unveils Earliest Galaxies: https://science.nasa.gov/missions/hubble/hubbles-deepest-view-ever-of-the-universe-unveils-earliest-galaxies/\n- Astronomy Magazine, How immense is the universe?: https://www.astronomy.com/science/how-immense-is-the-universe/",
+  "tags": [
+    "universe",
+    "how big is the universe",
+    "observable universe",
+    "light year",
+    "voyager 1",
+    "hubble ultra deep field",
+    "milky way",
+    "andromeda",
+    "cosmology",
+    "space",
+    "astronomy"
+  ],
+  "sources": [
+    {
+      "title": "NASA JPL - NASA Invites Media, Public to Join Voyager 1 One-Light Day Activities",
+      "url": "https://www.jpl.nasa.gov/news/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities/"
+    },
+    {
+      "title": "NASA Science - Hubble's Deepest View Ever of the Universe Unveils Earliest Galaxies",
+      "url": "https://science.nasa.gov/missions/hubble/hubbles-deepest-view-ever-of-the-universe-unveils-earliest-galaxies/"
+    },
+    {
+      "title": "Astronomy Magazine - How immense is the universe?",
+      "url": "https://www.astronomy.com/science/how-immense-is-the-universe/"
+    }
+  ],
+  "scenes": [
+    {
+      "narration": "How big is the universe? To answer that, you'll need to zoom out, step by step, until even light starts to feel slow.",
+      "headline": "HOW BIG IS <em>THE UNIVERSE?</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "Hubble eXtreme Deep Field",
+        "note": "field packed with distant galaxies"
+      }
+    },
+    {
+      "narration": "Start with light itself. It moves about one hundred eighty six thousand miles every second. That's fast enough to circle the Earth about seven and a half times in the time it takes you to say one Mississippi.",
+      "headline": "LIGHT: THE <em>COSMIC RULER</em>",
+      "sub": "186,000 miles per second",
+      "visual": {
+        "type": "nasa",
+        "query": "Blue Marble Earth Apollo 17",
+        "note": "the whole Earth"
+      }
+    },
+    {
+      "narration": "Sunlight reaches us in about eight minutes. Now take Voyager One, launched in nineteen seventy seven and the most distant spacecraft ever built. It is now about sixteen billion miles away, so far that a radio message from Earth takes roughly a full day to reach it.",
+      "headline": "VOYAGER 1: <em>ONE LIGHT-DAY</em> AWAY",
+      "sub": "16 billion miles (25.9 billion km)",
+      "visual": {
+        "type": "nasa",
+        "query": "Voyager spacecraft artist concept",
+        "note": "Voyager probe in deep space"
+      }
+    },
+    {
+      "narration": "Almost fifty years of flying, and it has covered about one light day. The nearest star beyond the Sun, Proxima Centauri, is about four and a quarter light years away. At Voyager's speed, getting there would take more than seventy thousand years.",
+      "headline": "THE NEAREST STAR: <em>4.2 LIGHT-YEARS</em>",
+      "sub": "70,000+ years at Voyager's speed",
+      "visual": {
+        "type": "nasa",
+        "query": "Proxima Centauri Hubble",
+        "note": "the red dwarf star Proxima Centauri"
+      }
+    },
+    {
+      "narration": "So what is a light year? It's the distance light travels in a year, almost six trillion miles. If you drove that far at highway speed, never stopping for gas or sleep, the trip would take you about ten million years.",
+      "headline": "ONE LIGHT-YEAR: <em>6 TRILLION MILES</em>",
+      "sub": "A 10-million-year road trip",
+      "visual": {
+        "type": "diagram",
+        "spec": "scale bar comparing one light-day, one light-year and 4.2 light-years to Proxima Centauri, with miles labeled"
+      }
+    },
+    {
+      "narration": "Now zoom out to our galaxy, the Milky Way. It's a spinning disk of hundreds of billions of stars, more than one hundred thousand light years across. Our Sun is just one of them, tucked into a quiet arm far from the center.",
+      "headline": "THE MILKY WAY: <em>100,000+</em> LIGHT-YEARS",
+      "sub": "Hundreds of billions of stars",
+      "visual": {
+        "type": "nasa",
+        "query": "Milky Way galaxy artist concept Spitzer",
+        "note": "spiral Milky Way seen from above"
+      }
+    },
+    {
+      "narration": "Our nearest big neighbor, the Andromeda galaxy, sits about two and a half million light years away. On a dark, clear night you can see it with your own eyes. The light you'd be catching left Andromeda before our species existed.",
+      "headline": "ANDROMEDA: LIGHT OLDER THAN <em>HUMANITY</em>",
+      "sub": "About 2.5 million light-years away",
+      "visual": {
+        "type": "nasa",
+        "query": "Andromeda galaxy Hubble panorama",
+        "note": "the Andromeda galaxy"
+      }
+    },
+    {
+      "narration": "Here's where it gets dizzying. Starting in two thousand three, astronomers aimed the Hubble Space Telescope at a patch of sky that looked empty, about one tenth the width of the full Moon. They gathered light for about a million seconds. That blank spot held roughly ten thousand galaxies.",
+      "headline": "AN EMPTY PATCH. <em>10,000 GALAXIES.</em>",
+      "sub": "The Hubble Ultra Deep Field",
+      "visual": {
+        "type": "nasa",
+        "query": "Hubble Ultra Deep Field 2004",
+        "note": "the original Ultra Deep Field image"
+      }
+    },
+    {
+      "narration": "Those galaxies also reveal something else. The farther you look, the further back in time you see. Some of the faint smudges in Hubble's deepest images appear as they were less than a billion years after the universe began, because that's when their light set out.",
+      "headline": "LOOKING FAR IS <em>LOOKING BACK</em>",
+      "sub": "Light from the early universe",
+      "visual": {
+        "type": "nasa",
+        "query": "Hubble Ultra Deep Field infrared distant galaxies",
+        "note": "close-up of tiny red distant galaxies"
+      }
+    },
+    {
+      "narration": "To cover the whole sky with patches that small, you would need millions of them. Do the multiplication, and you reach well over a hundred billion galaxies. Some estimates go higher still, and astronomers are still refining the count.",
+      "headline": "OVER <em>100 BILLION</em> GALAXIES",
+      "sub": "And the count isn't final",
+      "visual": {
+        "type": "nasa",
+        "query": "Webb deep field galaxy cluster SMACS 0723",
+        "note": "Webb's first deep field"
+      }
+    },
+    {
+      "narration": "Now the biggest number. The universe is about thirteen point eight billion years old, so you might expect to see thirteen point eight billion light years in every direction. But space itself has been stretching the whole time. The most distant places whose light we see are now about forty six billion light years away.",
+      "headline": "SPACE ITSELF <em>STRETCHES</em>",
+      "sub": "13.8 billion years old",
+      "visual": {
+        "type": "nasa",
+        "query": "cosmic microwave background Planck WMAP",
+        "note": "map of the oldest light in the universe"
+      }
+    },
+    {
+      "narration": "That makes the observable universe a sphere about ninety three billion light years across, with you at its center. Not because you're special. Every observer, in every galaxy, sits at the center of their own observable bubble.",
+      "headline": "<em>93 BILLION</em> LIGHT-YEARS ACROSS",
+      "sub": "And you're at the center",
+      "visual": {
+        "type": "diagram",
+        "spec": "sphere of the observable universe with Earth at the center, radius labeled about 46 billion light-years, diameter 93 billion"
+      }
+    },
+    {
+      "narration": "And beyond that edge? Almost certainly more universe. We just can't see it, because its light hasn't had time to reach us. Some cosmologists think the whole universe is finite but enormous. Others think it goes on forever. As far as we know, nobody can say yet.",
+      "headline": "BEYOND THE EDGE? <em>NOBODY KNOWS</em>",
+      "sub": "Finite, or infinite",
+      "visual": {
+        "type": "nasa",
+        "query": "cosmic web large scale structure simulation",
+        "note": "web of galaxies stretching into the distance"
+      }
+    },
+    {
+      "narration": "So how big is the universe, really? At least ninety three billion light years of it is visible. The rest is the biggest open question you can ask, and you're asking it from a tiny blue planet that light crosses in about a twenty fifth of a second.",
+      "headline": "THE BIGGEST <em>OPEN QUESTION</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "Pale Blue Dot Voyager 1",
+        "note": "Earth as a tiny dot in space"
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "headline": "",
+      "sub": "",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

@@ -1,0 +1,369 @@
+{
+  "channel": "inside-your-body",
+  "number": 12,
+  "slug": "why-do-we-dream",
+  "target_minutes": 8.33,
+  "title": "Why Do We Dream? What Science Knows, and What It Doesn't",
+  "thumbnail_text": "WHY DO WE DREAM?",
+  "description": "Every night your body goes limp, your eyes dart back and forth, and your brain lights up almost as if you were awake. Here is what scientists have learned about dreaming since the discovery of REM sleep, the leading explanations for why we dream, and a nap experiment that linked dreams to learning.\n\nSources:\n- NHLBI, Sleep Phases and Stages: https://www.nhlbi.nih.gov/health/sleep/stages-of-sleep\n- Cleveland Clinic, Why Do We Dream?: https://health.clevelandclinic.org/why-do-we-dream/\n- NCCIH, Mapping the Brain During Sleep Yields New Insights on Dreaming and Consciousness: https://www.nccih.nih.gov/research/research-results/mapping-the-brain-during-sleep-yields-new-insights-on-dreaming-and-consciousness\n- Current Biology (2010), Dreaming of a learning task is associated with enhanced sleep-dependent memory consolidation: https://pmc.ncbi.nlm.nih.gov/articles/PMC2869395\n- EurekAlert (2010), To learn better, take a nap (and don't forget to dream): https://www.eurekalert.org/news-releases/544711\n- Lumen Learning, Introduction to Psychology, Dreams and Dreaming: https://content.one.lumenlearning.com/introductiontopsychology/chapter/reading-dreams/\n- Wikipedia, Eugene Aserinsky: https://en.wikipedia.org/wiki/Eugene_Aserinsky\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": [
+    "dreams",
+    "why do we dream",
+    "REM sleep",
+    "sleep science",
+    "dreaming",
+    "brain",
+    "memory consolidation",
+    "sleep cycles",
+    "neuroscience",
+    "nightmares",
+    "human body",
+    "science explained",
+    "inside your body"
+  ],
+  "sources": [
+    {
+      "title": "NHLBI - Sleep Phases and Stages",
+      "url": "https://www.nhlbi.nih.gov/health/sleep/stages-of-sleep"
+    },
+    {
+      "title": "Cleveland Clinic - Why Do We Dream?",
+      "url": "https://health.clevelandclinic.org/why-do-we-dream/"
+    },
+    {
+      "title": "NCCIH - Mapping the Brain During Sleep Yields New Insights on Dreaming and Consciousness",
+      "url": "https://www.nccih.nih.gov/research/research-results/mapping-the-brain-during-sleep-yields-new-insights-on-dreaming-and-consciousness"
+    },
+    {
+      "title": "Current Biology (2010) - Dreaming of a learning task is associated with enhanced sleep-dependent memory consolidation",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2869395"
+    },
+    {
+      "title": "EurekAlert (2010) - To learn better, take a nap (and don't forget to dream)",
+      "url": "https://www.eurekalert.org/news-releases/544711"
+    },
+    {
+      "title": "Lumen Learning, Introduction to Psychology - Dreams and Dreaming",
+      "url": "https://content.one.lumenlearning.com/introductiontopsychology/chapter/reading-dreams/"
+    },
+    {
+      "title": "Wikipedia - Eugene Aserinsky",
+      "url": "https://en.wikipedia.org/wiki/Eugene_Aserinsky"
+    }
+  ],
+  "scenes": [
+    {
+      "narration": "Tonight, you will lie still, go nearly limp, and live through events that never happened. Scientists still argue about why.",
+      "headline": "WHY DO WE <em>DREAM?</em>",
+      "sub": "Science is still arguing",
+      "visual": {
+        "type": "stock",
+        "query": "person sleeping in bed at night moonlight",
+        "note": "a person peacefully asleep in a dim bedroom"
+      }
+    },
+    {
+      "narration": "Dreams are one of the most universal human experiences. Most people dream every night, even if they remember nothing in the morning. Yet for most of history, nobody could study them directly. Dreams happened in a locked room, and only the dreamer had the key.",
+      "headline": "A <em>LOCKED</em> ROOM",
+      "sub": "Most people dream every night",
+      "visual": {
+        "type": "stock",
+        "query": "dark bedroom door slightly open night",
+        "note": "a bedroom door ajar in the dark"
+      }
+    },
+    {
+      "narration": "That started to change in the early nineteen fifties at the University of Chicago. A graduate student named Eugene Aserinsky spent long hours watching the eyelids of sleeping people. He noticed that at certain times, their eyes darted rapidly back and forth beneath closed lids.",
+      "headline": "THE EYES THAT <em>MOVED</em>",
+      "sub": "University of Chicago, early 1950s",
+      "visual": {
+        "type": "stock",
+        "query": "close up closed eyes sleeping face",
+        "note": "close-up of a sleeping face with closed eyes"
+      }
+    },
+    {
+      "narration": "In nineteen fifty three, Aserinsky and his adviser, Nathaniel Kleitman, described this stage of sleep. It became known as rapid eye movement sleep, or REM sleep. And when they looked closer, they found it was linked to dreaming and to a surge in brain activity.",
+      "headline": "THE DISCOVERY OF <em>REM</em>",
+      "sub": "Rapid eye movement sleep, 1953",
+      "visual": {
+        "type": "science",
+        "query": "EEG sleep recording polysomnography trace",
+        "note": "brain wave recordings from a sleep study"
+      }
+    },
+    {
+      "narration": "Since then, sleep labs have mapped the night in detail. Your sleep moves through stages. Stage one is the drift from waking into sleep. Stage two is true sleep. Stage three is deep, slow-wave sleep. And then comes REM.",
+      "headline": "MAPPING THE <em>NIGHT</em>",
+      "sub": "Stage one, two, three, then REM",
+      "visual": {
+        "type": "stock",
+        "query": "sleep lab patient electrodes monitoring",
+        "note": "a person sleeping in a sleep lab wearing sensors"
+      }
+    },
+    {
+      "narration": "These stages repeat in cycles. The cycle starts over every eighty to one hundred minutes, usually four to six times a night. Deep sleep is more common early on, and REM periods get longer as the night goes on. So many of your longest dreams likely happen toward morning.",
+      "headline": "FOUR TO SIX <em>CYCLES</em>",
+      "sub": "Every 80 to 100 minutes",
+      "visual": {
+        "type": "diagram",
+        "spec": "hypnogram of one night: stair-step graph cycling through stages 1, 2, 3 and REM, with REM blocks growing longer toward morning"
+      }
+    },
+    {
+      "narration": "REM is a strange state. Your eyes twitch. Your brain waves become almost as active as when you are awake. And yet your body is nearly paralyzed. Your muscles go limp, which keeps you from acting out the dreams your brain is producing.",
+      "headline": "AN ACTIVE BRAIN, A <em>STILL</em> BODY",
+      "sub": "Muscles go limp in REM",
+      "visual": {
+        "type": "diagram",
+        "spec": "split figure of a sleeping person: brain glowing with activity above, body muscles shown relaxed and switched off below"
+      }
+    },
+    {
+      "narration": "Your brain chemistry flips as well. During REM, chemical messengers like acetylcholine and dopamine are more prominent, while others, including serotonin, norepinephrine and histamine, are suppressed. Some researchers think this mix helps explain why dreams feel so vivid and so strange.",
+      "headline": "THE BRAIN'S CHEMISTRY <em>FLIPS</em>",
+      "sub": "Some messengers up, others down",
+      "visual": {
+        "type": "science",
+        "query": "neuron synapse neurotransmitter illustration",
+        "note": "illustration of neurotransmitters crossing a synapse"
+      }
+    },
+    {
+      "narration": "And where does the dream material come from? One study suggests dreams draw more on imagination, meaning your memories, abstract thoughts and wishes, than on what your senses are picking up. Some researchers suspect the thalamus, a relay station for sensory signals, partly closes its gates while you dream. So your brain builds the scenery from what it already has.",
+      "headline": "BUILT FROM <em>IMAGINATION</em>",
+      "sub": "Not from your senses",
+      "visual": {
+        "type": "science",
+        "query": "thalamus brain anatomy illustration",
+        "note": "illustration of the brain with the thalamus highlighted at its center"
+      }
+    },
+    {
+      "narration": "Here is a clue about how dreams are built. Scientists believe your brainstem generates REM sleep, while your forebrain generates the dreams themselves. Damage to the brainstem can leave people dreaming without REM. Damage to the forebrain can leave people with REM, but no dreams.",
+      "headline": "TWO SEPARATE <em>SWITCHES</em>",
+      "sub": "Brainstem for REM, forebrain for dreams",
+      "visual": {
+        "type": "science",
+        "query": "brain sagittal section brainstem forebrain illustration",
+        "note": "side cutaway of the brain with the brainstem and forebrain visible"
+      }
+    },
+    {
+      "narration": "And that hints at something textbooks used to get wrong. For decades, dreaming and REM sleep were treated as basically the same thing. They are not.",
+      "headline": "DREAMS ARE NOT JUST <em>REM</em>",
+      "sub": "",
+      "visual": {
+        "type": "stock",
+        "query": "old textbook pages library",
+        "note": "pages of an old textbook"
+      }
+    },
+    {
+      "narration": "In two thousand seventeen, researchers at the University of Wisconsin had volunteers sleep in the lab wearing caps covered in electrodes. They woke them throughout the night and asked one simple question: were you just experiencing anything?",
+      "headline": "WERE YOU JUST <em>DREAMING?</em>",
+      "sub": "University of Wisconsin, 2017",
+      "visual": {
+        "type": "stock",
+        "query": "EEG cap electrodes head research",
+        "note": "a person wearing an electrode cap for brain recording"
+      }
+    },
+    {
+      "narration": "People reported dreams from REM sleep, but also from every stage of non-REM sleep, just less often. And in both cases, dreaming was linked to the same pattern: a drop in slow, low-frequency activity in a region toward the back of the brain. The team called it a posterior hot zone.",
+      "headline": "THE POSTERIOR <em>HOT ZONE</em>",
+      "sub": "Dreams happen outside REM too",
+      "visual": {
+        "type": "diagram",
+        "spec": "side view of the brain with a glowing region at the back, the parietal and occipital area, labeled posterior hot zone"
+      }
+    },
+    {
+      "narration": "By watching that region in real time, the researchers could predict whether a sleeper would report a dream before they even woke the person up. Dreams, it turns out, leave a signature you can read from the outside.",
+      "headline": "PREDICTING A <em>DREAM</em>",
+      "sub": "Before the sleeper wakes",
+      "visual": {
+        "type": "science",
+        "query": "brain activity map EEG topography",
+        "note": "a colorful map of brain activity across the scalp"
+      }
+    },
+    {
+      "narration": "So scientists now know a lot about when and where dreams happen. But that still leaves the big question. Why does your brain bother? Why spend hours each night building stories that you will mostly forget? There are several leading answers, and they do not all agree.",
+      "headline": "BUT <em>WHY</em> BOTHER?",
+      "sub": "Several answers, no consensus",
+      "visual": {
+        "type": "stock",
+        "query": "person waking up morning bed thinking",
+        "note": "a person sitting up in bed in the morning, lost in thought"
+      }
+    },
+    {
+      "narration": "Start with the most famous. Sigmund Freud saw dreams as a pathway to the unconscious. He split a dream into its storyline and a hidden meaning underneath. It is a powerful idea, but Freud's claims have never been scientifically substantiated.",
+      "headline": "FREUD: HIDDEN <em>MEANINGS</em>",
+      "sub": "Famous, but never substantiated",
+      "visual": {
+        "type": "science",
+        "query": "Sigmund Freud portrait photograph public domain",
+        "note": "historical portrait photograph of Sigmund Freud"
+      }
+    },
+    {
+      "narration": "Modern sleep experts are blunt about dream dictionaries too. There is no consistent, scientifically proven way to link specific dream content to a specific meaning. A dream about falling does not have one universal translation.",
+      "headline": "NO DREAM <em>DICTIONARY</em>",
+      "sub": "",
+      "visual": {
+        "type": "stock",
+        "query": "old book open dictionary pages",
+        "note": "an old book lying open"
+      }
+    },
+    {
+      "narration": "A very different idea came from psychiatrists Allan Hobson and Robert McCarley. Their activation-synthesis theory says that during REM, the brain fires off signals, and the forebrain does its best to weave them into a story. In this view, dreams are the brain making sense of noise.",
+      "headline": "MAKING SENSE OF <em>NOISE</em>",
+      "sub": "The activation-synthesis theory",
+      "visual": {
+        "type": "diagram",
+        "spec": "random scattered signals from the brainstem flowing up into the forebrain, which assembles them into a storyboard"
+      }
+    },
+    {
+      "narration": "A third idea is evolutionary. Researcher Antti Revonsuo proposed the threat simulation theory. Dreams, he argued, are a kind of virtual reality where you can rehearse responses to danger safely. That might explain why so many dreams involve being chased, lost or unprepared.",
+      "headline": "A <em>THREAT</em> SIMULATOR",
+      "sub": "Rehearsing danger safely",
+      "visual": {
+        "type": "stock",
+        "query": "foggy forest path at night",
+        "note": "a misty forest path at night, slightly eerie but not frightening"
+      }
+    },
+    {
+      "narration": "A fourth idea focuses on feelings. Psychologist Rosalind Cartwright described dreams as a space where emotions are processed and regulated, linking what happened today to memories from the past. Unlike Freud's ideas, this view has found real empirical support.",
+      "headline": "PROCESSING YOUR <em>EMOTIONS</em>",
+      "sub": "Linking today to the past",
+      "visual": {
+        "type": "stock",
+        "query": "person journaling by window morning light",
+        "note": "a person writing in a notebook by a window"
+      }
+    },
+    {
+      "narration": "It also fits everyday experience. Sleep experts note that stressful dreams are common when you are under stress. And people living with post-traumatic stress disorder are more likely to have recurring nightmares tied to what they went through.",
+      "headline": "STRESS SHOWS UP AT <em>NIGHT</em>",
+      "sub": "",
+      "visual": {
+        "type": "stock",
+        "query": "person awake in bed at night worried",
+        "note": "a person lying awake in bed at night"
+      }
+    },
+    {
+      "narration": "The fifth idea is the one many sleep scientists consider the leading theory: memory. Dreaming may be a side effect of your brain sorting, strengthening and connecting what you learned, a kind of overnight filing system. And one clever experiment put that idea to the test.",
+      "headline": "THE OVERNIGHT <em>FILING</em> SYSTEM",
+      "sub": "Dreaming and memory",
+      "visual": {
+        "type": "stock",
+        "query": "library shelves organized books",
+        "note": "rows of neatly organized library shelves"
+      }
+    },
+    {
+      "narration": "In this view, dreaming helps consolidate and analyze memories, including skills and habits, not just facts. Some experts go further and suggest dreams may serve as a rehearsal for challenges you will face during the day, a practice run your brain stages while you sleep.",
+      "headline": "A NIGHTLY <em>REHEARSAL</em>",
+      "sub": "Skills, habits and practice runs",
+      "visual": {
+        "type": "stock",
+        "query": "pianist hands practicing piano keys",
+        "note": "hands practicing on a piano"
+      }
+    },
+    {
+      "narration": "At Harvard Medical School and Beth Israel Deaconess Medical Center, researchers had ninety nine college students learn a three dimensional virtual maze. Five hours later, the students were dropped into the maze again and had to find their way to a landmark.",
+      "headline": "THE <em>MAZE</em> EXPERIMENT",
+      "sub": "99 students, one virtual maze",
+      "visual": {
+        "type": "stock",
+        "query": "hedge maze aerial view",
+        "note": "an aerial view of a garden hedge maze"
+      }
+    },
+    {
+      "narration": "In between, about half the students stayed awake. The others got a ninety minute chance to nap, and they were woken up and asked about their dreams. Only four of the fifty nappers said their dreams involved the maze.",
+      "headline": "FOUR <em>MAZE</em> DREAMERS",
+      "sub": "Out of fifty nappers",
+      "visual": {
+        "type": "stock",
+        "query": "student napping on couch",
+        "note": "a student napping on a couch"
+      }
+    },
+    {
+      "narration": "But those four stood out. On the second try, they improved about ten times more than the nappers who did not dream about the maze. Simply thinking about the maze while awake did not predict any boost.",
+      "headline": "TEN TIMES <em>BETTER</em>",
+      "sub": "Improvement after maze dreams",
+      "visual": {
+        "type": "diagram",
+        "spec": "bar chart comparing maze improvement: nappers without maze dreams small bar, nappers with maze dreams a bar about ten times taller"
+      }
+    },
+    {
+      "narration": "There was one more surprise. The nappers were woken before REM sleep could begin, so these learning-related dreams came from non-REM sleep. The group was tiny, so it is not proof. But it suggests dreams may be a window into memories being processed.",
+      "headline": "A WINDOW INTO <em>MEMORY</em>",
+      "sub": "And the dreams came from non-REM",
+      "visual": {
+        "type": "science",
+        "query": "hippocampus brain illustration",
+        "note": "illustration highlighting the hippocampus, a memory center"
+      }
+    },
+    {
+      "narration": "Which raises an obvious question. If dreams are so useful, why do you forget almost all of them? Sleep researcher Robert Stickgold has noted that people generally remember no more than ten to fifteen percent of their dreams.",
+      "headline": "WHY YOU <em>FORGET</em>",
+      "sub": "Remembering 10 to 15% at most",
+      "visual": {
+        "type": "stock",
+        "query": "alarm clock morning bedside",
+        "note": "an alarm clock on a bedside table at dawn"
+      }
+    },
+    {
+      "narration": "Part of the answer is timing. You usually only remember a dream if you wake up during it or just after it. Otherwise, the memory never gets saved. And even when you do wake up mid-dream, it fades fast. That is why people who keep dream journals write the moment they wake.",
+      "headline": "DREAMS <em>FADE</em> FAST",
+      "sub": "Unless you wake during one",
+      "visual": {
+        "type": "stock",
+        "query": "notebook pen on nightstand",
+        "note": "a notebook and pen resting on a nightstand"
+      }
+    },
+    {
+      "narration": "So, why do we dream? The honest answer is that nobody knows for sure. The theories with the most support today point to emotion and memory. But dreams might do several jobs at once, or they might be partly a side effect of a brain that never fully switches off.",
+      "headline": "THE <em>HONEST</em> ANSWER",
+      "sub": "Nobody knows for sure",
+      "visual": {
+        "type": "stock",
+        "query": "night sky stars over quiet house",
+        "note": "a starry sky above a quiet house"
+      }
+    },
+    {
+      "narration": "Science has mapped the stage. It has not yet read the script. What is certain is this. Every night, your brain stays busy while your body rests, replaying, sorting and inventing. The stories may vanish by breakfast, but the work happening behind them is one of the deepest mysteries your body holds.",
+      "headline": "A MYSTERY YOU LIVE <em>NIGHTLY</em>",
+      "sub": "",
+      "visual": {
+        "type": "science",
+        "query": "neurons network fluorescence microscopy",
+        "note": "glowing network of neurons under a microscope"
+      }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "headline": "",
+      "sub": "",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

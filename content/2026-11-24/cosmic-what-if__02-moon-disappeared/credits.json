@@ -1,0 +1,88 @@
+[
+  {
+    "scene": 1,
+    "type": "nasa",
+    "query": "Moon full disk Lunar Reconnaissance Orbiter",
+    "file": "/Users/er_macbook_287/Documents/WorkSpace/research-and-development/ytb-content/cosmic-what-if/02-moon-disappeared/images/scene01.jpg.alt",
+    "source": "NASA Image and Video Library",
+    "id": "GSFC_20171208_Archive_e001861",
+    "title": "Full Moon",
+    "credit": "NASA (GSFC)",
+    "url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001861",
+    "width": 1920,
+    "height": 1920
+  },
+  {
+    "scene": 2,
+    "type": "nasa",
+    "query": "Milky Way night sky from International Space Station",
+    "file": "images/scene02.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "iss073e0982261",
+    "title": "The Milky Way spans the night sky above a yellow-green airglow",
+    "credit": "NASA (JSC)",
+    "url": "https://images.nasa.gov/details/iss073e0982261",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "scene": 3,
+    "type": "nasa",
+    "query": "Bay of Fundy tides Landsat",
+    "file": "images/scene03.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "iss059e059149",
+    "title": "Earth observation taken by Expedition 59 crew",
+    "credit": "David Saint-Jacques",
+    "url": "https://images.nasa.gov/details/iss059e059149",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "scene": 4,
+    "type": "diagram"
+  },
+  {
+    "scene": 5,
+    "type": "nasa",
+    "query": "Earthrise Apollo 8",
+    "file": "images/scene05.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "GSFC_20171208_Archive_e001282",
+    "title": "NASA Google+ Hangout: 'Earthrise' A New Visualization - 45th Anniversary of Apollo 8 Viewing Earth from Space",
+    "credit": "NASA (GSFC)",
+    "url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001282",
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "scene": 6,
+    "type": "nasa",
+    "query": "Mars north polar ice cap Mars Global Surveyor",
+    "file": "images/scene06.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA13163",
+    "title": "Northern Ice Cap of Mars",
+    "credit": "NASA/JPL-Caltech/MSSS",
+    "url": "https://images.nasa.gov/details/PIA13163",
+    "width": 1280,
+    "height": 1024
+  },
+  {
+    "scene": 7,
+    "type": "nasa",
+    "query": "crescent Moon over Earth limb astronaut photograph",
+    "file": "images/scene07.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "iss024e013421",
+    "title": "Earth Observations",
+    "credit": "NASA (JSC)",
+    "url": "https://images.nasa.gov/details/iss024e013421",
+    "width": 1920,
+    "height": 1311
+  },
+  {
+    "scene": 8,
+    "type": "outro"
+  }
+]

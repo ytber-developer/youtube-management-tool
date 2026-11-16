@@ -13,8 +13,9 @@ Two English-language science channels aimed at a **US audience**. Every video is
 |---|---|---|
 | Promise | "What if…" space and physics scenarios, answered with real science | What your body is doing, and why |
 | Tone | Awe, playful, a little dramatic | Warm, curious, reassuring — never alarmist |
-| Visuals | NASA imagery first, dark purple diagrams with star field | Clean anatomy illustrations, teal/blue diagrams, no gore |
-| Voice | Adam (ElevenLabs) — deep, steady | Not chosen yet; record the choice in `content-tools/lib/channels.js` (`voiceHint`) |
+| Visuals | NASA imagery first, dark purple diagrams with star field; AI illustrations in purple/indigo as last resort | Clean anatomy illustrations, teal/blue diagrams, no gore; AI illustrations in teal/navy as last resort |
+| Voice (default, free) | Kokoro `am_michael` (male) | Kokoro `af_heart` (female, warm) |
+| Voice (optional, paid) | ElevenLabs Adam — deep, steady | not chosen |
 | Outro (exact) | `Follow Cosmic What If for more mind-bending science.` | `Follow Inside Your Body for more of the science of you.` |
 | Disclaimer | none | `This video is for educational purposes only and is not medical advice.` must appear in `description` |
 | Accent / base color | `#ffb347` on `#05040f` | `#ffe08a` on `#06233d` |

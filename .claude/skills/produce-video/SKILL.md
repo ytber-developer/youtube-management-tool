@@ -1,62 +1,84 @@
 ---
 name: produce-video
-description: Use when rendering slides, thumbnails, previews or final videos for the content pipeline, when the user has recorded a voiceover (voice.mp3) and wants the final video, when preparing the daily upload, or when something in the /content UI or `npm run content` commands fails.
+description: Use when building, rendering or voicing videos for the content pipeline (Cosmic What If, Inside Your Body) — "build video", "làm video", "tạo giọng", "render", setting up the pipeline on a new Mac or Windows machine, preparing the daily upload, or when the /content UI or `npm run content` commands fail.
 ---
 
 # Producing a video
 
-Everything is done ahead of time **except the voiceover**. Each day the user records the voice on ElevenLabs (on their Mac), drops it into the UI, gets `final.mp4`, and uploads.
+The pipeline runs **without Claude and without paid credits**: free image sources → local AI illustrations (Z-Image-Turbo) → slides → local AI voice (Kokoro) → final video. Claude is only needed to write scripts and fix scenes the user rejects.
 
-## Prerequisites
+## The one command
 
-Node 22, Homebrew `ffmpeg`/`ffprobe`, Chrome (Puppeteer renders slides). `PIXABAY_API_KEY` goes in the repo `.env`, pasted by the user. The Inside Your Body voice must be chosen (channel-guides) before its first render.
+```bash
+npm run content -- build <id|date|all>
+```
 
-## Commands
+`build` checks status on disk and runs only the missing/stale steps, in order:
+`images → slides → thumb → package → preview → voice (Kokoro) → render`.
+- A script with `check` errors builds nothing — fix it first (write-video-script).
+- An existing `voice.mp3` (e.g. a hand-recorded ElevenLabs take) is kept; only `render` reruns.
+- Run long batches in the background; `build all` takes hours.
 
-`npm run content -- <command> <target>` — target is a video id (`2026-11-23/cosmic-what-if__01-fell-into-a-black-hole`), a date (`2026-11-23`), a folder prefix, or `all`.
+In the UI (`/content` → a video) the green **Làm hết (tự động)** button does the same.
 
-| Command | Produces | Needs |
+## Single steps
+
+`npm run content -- <command> <target>` — target is an id (`2026-11-23/cosmic-what-if__01-fell-into-a-black-hole`), a date, a folder prefix, or `all`.
+
+| Command | Produces | Notes |
 |---|---|---|
-| `check` | validation report | script.json |
-| `images` | images/*.jpg, credits.json | network (see source-visuals) |
-| `slides` | slides/sceneNN.png, slides/contact.jpg | images or svg per scene |
-| `thumb` | thumbnail.png 1280×720 | scene images |
-| `package` | narration.txt, metadata.md | script.json, credits.json |
-| `preview` | preview.mp4 (silent, estimated timing) | slides |
-| `render` | final.mp4 + captions.srt | slides + **voice.mp3** |
+| `check` | validation report | |
+| `images` | images/*.jpg, credits.json | free sources, then AI (see source-visuals). `REFETCH=1` refetches all |
+| `slides` | slides/sceneNN.png, contact.jpg | |
+| `thumb` | thumbnail.png 1280×720 | |
+| `package` | narration.txt, metadata.md | |
+| `preview` | preview.mp4 (silent) | |
+| `voice` | voice.mp3 via Kokoro, then final.mp4 | skips if voice exists; `REVOICE=1` overwrites; `VOICE=am_fenrir SPEED=1.1` to try others |
+| `render` | final.mp4 + captions.srt | needs voice.mp3 |
 
-Full prep for a day: `check → images → slides → thumb → package → preview`. Tests: `npm run test:content`.
+Tests: `npm run test:content`.
 
-Media files (jpg, slides/, thumbnail.png, mp4, mp3, srt) are gitignored. `script.json`, `credits.json`, `review.json`, `narration.txt`, `metadata.md` and `images/*.svg` are committed.
+## Setup on a new machine (Mac or Windows)
 
-## The /content UI
+```bash
+# macOS (Apple Silicon M1–M4, ≥16 GB RAM for AI images)
+brew install python@3.12 ffmpeg
+# Windows
+winget install Python.Python.3.12 ; winget install Gyan.FFmpeg
 
-Frontend `/content` (backend `/api/v1/content`):
-- List: grouped by post date, thumbnail, title, stage, 8 step dots (green done, grey todo, amber stale, red error).
-- Detail: action buttons (run on a serial job queue), voice drop-zone, players, copy buttons for title/description/tags/metadata, scene-by-scene script with slides, **Đã duyệt ảnh** and uploaded-link fields (saved to `review.json`).
+npm install
+npm run migrate
+npm run content:setup          # .venv-tts (Kokoro) + .venv-img (mflux on Mac / diffusers+CUDA on Windows)
+npm run content:setup -- tts   # voice only
+```
 
-Status is computed from files on disk (`content-tools/lib/status.js`), so after running a CLI command the UI is already up to date. A step turns amber when its inputs are newer than its output — re-run it.
+- First run downloads models from Hugging Face: Kokoro ~330 MB, Z-Image-Turbo 4-bit several GB (to `~/.cache/huggingface`).
+- Windows AI images need an NVIDIA GPU with ≥ 12 GB VRAM; without one, setup skips it and missing scenes show red TODO cards. **The Windows path is untested** — if `gen_images.py` fails, read its error and fix `torch_generator` in `content-tools/tts/gen_images.py`.
+- Media is gitignored (images/*.jpg, slides/, thumbnail.png, mp4, mp3, srt). On a fresh clone, `build` regenerates it; copy `content/` over instead to keep already-reviewed images.
 
-## Daily voice workflow (the user's routine)
+## Voices (Kokoro, Apache-2.0, offline)
 
-1. Open today's two videos in `/content`.
-2. Click **Copy lời đọc** → paste into ElevenLabs with the channel voice (channel-guides). Paragraph breaks = scene breaks; keep them.
-3. Download the mp3 → drag it onto the voice drop-zone. The backend converts it to `voice.mp3` and queues `render`.
-4. Watch `final.mp4`; check captions line up.
-5. Upload to YouTube with the copied title/description/tags and `thumbnail.png`, scheduled for 12:00 PM ET.
-6. Paste the YouTube link into **Link sau khi đăng** → stage becomes "Đã đăng".
+Set per channel in `content-tools/lib/channels.js` (`ttsVoice`, optional `ttsSpeed`). Current: Cosmic `am_michael`, Body `af_heart`. Others: `af_bella`, `af_nicole`, `am_fenrir`, `am_puck`. Kokoro reads each sentence separately with fixed gaps (0.35 s sentence, 0.8 s scene) so caption alignment is exact. Kokoro reads a bit slower than 163 wpm → videos run ~10–20% longer than `target_minutes`; raise `ttsSpeed` (e.g. 1.1) if that matters.
 
-## How render aligns the voice
+ElevenLabs is optional: drop an mp3/m4a/wav on the detail page; it replaces voice.mp3 and re-renders.
 
-`render` uses ffmpeg `silencedetect` and a DP that maps sentence ends to pauses (`content-tools/lib/align.js`). If captions drift: the voice probably skipped or merged sentences, or narration.txt was stale when recorded. Re-run `package`, re-record that video, render again.
+## Daily routine
+
+1. Open today's two videos in `/content`. If not built: **Làm hết (tự động)**.
+2. Watch `final.mp4`. Check every scene with the purple **AI** badge; reject → fix per source-visuals, rebuild.
+3. Tick **Đã duyệt ảnh**.
+4. Upload with the copied title/description/tags + `thumbnail.png`, scheduled 12:00 PM ET.
+5. Paste the YouTube link into **Link sau khi đăng**.
 
 ## Troubleshooting
 
 | Symptom | Cause / fix |
 |---|---|
-| ffmpeg "No such filter: drawtext/subtitles" | Expected — Homebrew ffmpeg lacks them; captions are PNG overlays. Don't add those filters. |
-| Red TODO card on a slide | Missing image/svg for that scene → source-visuals |
-| `render` button disabled | No voice.mp3 yet |
-| Job stuck "đang chờ" | Queue is serial; one job runs at a time |
-| UI shows nothing | Backend not on `PORT` from `.env` / frontend `NEXT_PUBLIC_API_URL` mismatch |
-| Upload rejected | Only .mp3/.m4a/.wav, ≤ 50 MB. Export a lower-bitrate mp3 from ElevenLabs, or place it as `voice.mp3` in the video folder and run `render` |
+| "Chưa cài Kokoro (.venv-tts)" | `npm run content:setup -- tts` |
+| AI images never appear, scenes stay missing | `.venv-img` missing → `npm run content:setup -- img`; Windows without NVIDIA → hand-fix scenes |
+| Mac runs out of memory during AI images | close Chrome/other apps; 16 GB is the minimum |
+| ffmpeg "No such filter: drawtext/subtitles" | Expected — captions are PNG overlays. Don't add those filters. |
+| Captions drift | voice skipped/merged sentences or narration changed after recording → `REVOICE=1 npm run content -- voice <id>` |
+| `build` stops "Còn thiếu ảnh cảnh …" | no source and no AI → source-visuals |
+| UI shows nothing | backend `PORT` (.env) ≠ frontend `NEXT_PUBLIC_API_URL` |
+| Upload rejected | only real audio .mp3/.m4a/.wav ≤ 50 MB (checked with ffprobe) |

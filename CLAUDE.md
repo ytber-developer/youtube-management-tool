@@ -72,10 +72,11 @@ SQLite file `tool_ytb.db`, Sequelize models in `src/models/` (associations are d
 A separate tool for making the videos for two US science channels (Cosmic What If, Inside Your Body). It doesn't touch the account automation.
 
 - Videos live in `content/<post-date>/<channel>__NN-<slug>/`. `script.json`, `credits.json`, `review.json`, `narration.txt`, `metadata.md` and `images/*.svg` are committed. Media files (jpg, `slides/`, `thumbnail.png`, mp4, mp3, srt) are gitignored.
-- The CLI is `npm run content -- <check|images|slides|thumb|package|preview|render> <id|date|all>`, code in `content-tools/`. Tests: `npm run test:content` (`node:test`, the only automated tests in the repo).
-- UI is at `/content` (frontend) on top of `/api/v1/content` (`src/services/content.service.js`, serial job queue). Status is computed from files on disk.
-- Everything is prepared ahead of time except the voiceover. The user records it daily on ElevenLabs and drops it into the UI, which runs `render`.
-- Project skills in `.claude/skills/`: `channel-guides` (rules, schedule, medical policy), `write-video-script`, `source-visuals` (licenses, NASA pins, SVG style), `produce-video` (commands, daily workflow, troubleshooting). Read them instead of re-deriving the rules.
+- `npm run content -- build <id|date|all>` makes a finished video with no Claude and no paid credits: free images (NASA, Commons, Openverse, optional Pixabay) → local AI illustrations (Z-Image-Turbo) for whatever is still missing → slides → thumbnail → local AI voice (Kokoro) → `final.mp4` + captions. Single steps: `check|images|slides|thumb|package|preview|voice|render`. Code in `content-tools/`. Tests: `npm run test:content` (`node:test`, the only automated tests in the repo).
+- Local AI tools live in gitignored venvs: `.venv-tts` (Kokoro) and `.venv-img` (mflux on Apple Silicon, diffusers+CUDA on Windows). Install with `npm run content:setup` (also needs Python 3.12 + ffmpeg). Models download to `~/.cache/huggingface` on first use. The Windows path is untested.
+- UI is at `/content` (frontend) on top of `/api/v1/content` (`src/services/content.service.js`, serial job queue). Status is computed from files on disk. The detail page has a "Làm hết (tự động)" button (= `build`) and marks AI-generated images with an "AI" badge.
+- Project skills in `.claude/skills/`: `channel-guides` (rules, schedule, voices, medical policy), `write-video-script`, `source-visuals` (licenses, source order, AI illustrations, NASA pins, SVG style), `produce-video` (build, setup on Mac/Windows, voices, troubleshooting). Read them instead of re-deriving the rules.
+- Subagent `.claude/agents/content-builder.md` (Haiku) runs builds and reports status cheaply. Hand it long `build` runs instead of doing them in the main session.
 - Specs and plans: `.claude/specs/`, `.claude/plans/`.
 
 ## Further docs

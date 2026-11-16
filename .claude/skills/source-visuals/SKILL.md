@@ -9,19 +9,27 @@ Every scene needs `images/sceneNN.jpg` (photo) or `images/sceneNN.svg` (diagram)
 
 ## Allowed licenses — nothing else
 
-NASA (public domain), Public Domain, **CC0**, **CC BY** (with credit), **Pixabay License**. No CC BY-SA, no NC, no ND, no "editorial use", no Google Images, no AI-generated look-alikes of real objects.
+NASA (public domain), Public Domain, **CC0**, **CC BY** (with credit), **Pixabay License**, and our own **AI illustrations** (Z-Image-Turbo, Apache-2.0, generated locally). No CC BY-SA, no NC, no ND, no "editorial use", no Google Images, no cloud AI generators.
 
-## visual.type → source
+## visual.type → source (tried in order, `SOURCE_ORDER` in `content-tools/lib/images.js`)
 
-| type | Fetched from | Use for |
+| type | Sources | Use for |
 |---|---|---|
-| `nasa` | images.nasa.gov (pin with `visual.nasa_id`) | space, planets, missions, astronauts |
-| `stock` | Pixabay (needs `PIXABAY_API_KEY` in `.env`), then Openverse | everyday life, people, objects |
-| `science` | Wikimedia Commons (science images only), then Openverse | anatomy, microscopy, lab figures |
+| `nasa` | images.nasa.gov (pin with `visual.nasa_id`) → Wikimedia Commons → AI | space, planets, missions, astronauts |
+| `stock` | Pixabay (`PIXABAY_API_KEY` in `.env`, optional) → Openverse → AI | everyday life, people, objects |
+| `science` | Commons (≥1200px, match ≥0.6) → Commons relaxed (≥900px, ≥0.5) → Openverse → AI | anatomy, microscopy, lab figures |
 | `diagram` | hand-drawn `images/sceneNN.svg` (not fetched) | mechanisms, comparisons, scales, charts |
 | `outro` | nothing — channel outro card | last scene |
 
 The user pastes API keys into `.env` themselves. Never write a key into a file.
+
+## AI illustrations (the last resort)
+
+`content-tools/lib/aigen.js` + `content-tools/tts/gen_images.py` run Z-Image-Turbo on the machine (mflux on Apple Silicon, diffusers+CUDA on Windows) for every scene still missing after the free sources — in one batch per video, 1344×768, ~30–60 s/image on M4, slower on M1.
+- Style is a flat editorial vector illustration in the channel palette, no text. `science`/`nasa` scenes are drawn **symbolic** (no labels, no anatomical/astronomical detail) so they never pose as a real diagram or telescope image.
+- Credited as "AI-generated illustration" (`ai: true` in credits.json) → purple **AI** badge in the UI. Review these first.
+- AI is wrong for anything where accuracy is the point (heart chambers, a specific nebula, a named person). For those: pin a NASA id, find a Commons file, or switch the scene to `diagram` and draw it.
+- To regenerate one AI scene with a different look: delete `images/sceneNN.jpg`, optionally sharpen `visual.query`/`visual.note`, run `images` again.
 
 ## Commands
 
@@ -64,3 +72,5 @@ Look at an existing one first, e.g. `content/2026-11-23/inside-your-body__01-hol
 | Edited script scenes, images now shifted | Scene numbers changed → `REFETCH=1` and redraw affected SVGs |
 | Ticked "Đã duyệt ảnh" from the contact sheet thumbnail | Open slides full size |
 | CC BY-SA image from Commons | Not allowed — find another or draw |
+| AI illustration of a real named thing (Betelgeuse, Scott Kelly) | Replace with a pinned NASA/Commons image |
+| Approved AI scene without opening it full size | AI hands, faces and objects can be malformed — always look |

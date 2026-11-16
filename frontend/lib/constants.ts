@@ -48,6 +48,15 @@ export const API_ENDPOINTS = {
     ASSIGN: '/api/v1/proxies/assign',
     AUTO_ASSIGN: '/api/v1/proxies/auto-assign',
   },
+  CONTENT: {
+    LIST: '/api/v1/content',
+    JOBS: '/api/v1/content/jobs',
+    DETAIL: (id: string) => `/api/v1/content/${id}`,
+    FILE: (id: string, file: string) => `/api/v1/content/file/${id}/${file}`,
+    ACTION: (id: string, action: string) => `/api/v1/content/${id}/actions/${action}`,
+    VOICE: (id: string) => `/api/v1/content/${id}/voice`,
+    REVIEW: (id: string) => `/api/v1/content/${id}/review`,
+  },
   AUTHENTICATOR: '/api/v1/authenticator',
   AUTHENTICATOR_RETRY: (id: number) => `/api/v1/authenticator/retry/${id}`,
   SETUP: {

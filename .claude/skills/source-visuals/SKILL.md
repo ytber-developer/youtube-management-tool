@@ -23,7 +23,10 @@ NASA (public domain), Public Domain, **CC0**, **CC BY** (with credit), **Pixabay
 
 The user pastes API keys into `.env` themselves. Never write a key into a file.
 
-## AI illustrations (the last resort)
+## AI illustrations (optional, off by default)
+
+The user found local generation too heavy for now. It only runs with `AI_IMAGES=1` (e.g. `AI_IMAGES=1 npm run content -- images <id>`). Without it, scenes with no free image stay missing and Claude fixes them by hand (pin, Commons file, or SVG diagram). Do not enable it unless the user asks.
+
 
 `content-tools/lib/aigen.js` + `content-tools/tts/gen_images.py` run Z-Image-Turbo on the machine (mflux on Apple Silicon, diffusers+CUDA on Windows) for every scene still missing after the free sources — in one batch per video, 1344×768, ~30–60 s/image on M4, slower on M1.
 - Style is a flat editorial vector illustration in the channel palette, no text. `science`/`nasa` scenes are drawn **symbolic** (no labels, no anatomical/astronomical detail) so they never pose as a real diagram or telescope image.

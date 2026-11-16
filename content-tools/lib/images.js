@@ -235,7 +235,7 @@ async function fetchForVideo(dir, { onProgress = () => {}, onlyMissing = true, a
   // Cảnh đời thường không có ảnh miễn phí hợp lệ → tranh minh hoạ AI (một lô, nạp mô hình một lần)
   const aigen = require('./aigen');
   const aiScenes = missing.filter(n => SOURCE_ORDER[script.scenes[n - 1].visual.type]?.includes('ai'));
-  if (ai && aiScenes.length && aigen.available()) {
+  if (ai && aiScenes.length && aigen.enabled() && aigen.available()) {
     const jobs = aiScenes.map(n => ({ scene: n, out: path.join(imgDir, `scene${String(n).padStart(2, '0')}.jpg`), prompt: aigen.buildPrompt(script.scenes[n - 1], script.channel), seed: 1000 + n }));
     const made = await aigen.generate(jobs, (p, m) => onProgress(0.5 + p / 2, m));
     for (const j of jobs.filter(x => made.includes(x.scene))) {

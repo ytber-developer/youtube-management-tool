@@ -5,7 +5,7 @@ description: Use when building, rendering or voicing videos for the content pipe
 
 # Producing a video
 
-The pipeline runs **without Claude and without paid credits**: free image sources → local AI illustrations (Z-Image-Turbo) → slides → local AI voice (Kokoro) → final video. Claude is only needed to write scripts and fix scenes the user rejects.
+The pipeline runs **without paid credits**: free image sources → slides → local AI voice (Kokoro) → final video. Claude is needed to write scripts and to fill scenes that have no free image (source-visuals). Local AI illustrations exist but are off by default (`AI_IMAGES=1` to enable).
 
 ## The one command
 
@@ -79,6 +79,6 @@ ElevenLabs is optional: drop an mp3/m4a/wav on the detail page; it replaces voic
 | Mac runs out of memory during AI images | close Chrome/other apps; 16 GB is the minimum |
 | ffmpeg "No such filter: drawtext/subtitles" | Expected — captions are PNG overlays. Don't add those filters. |
 | Captions drift | voice skipped/merged sentences or narration changed after recording → `REVOICE=1 npm run content -- voice <id>` |
-| `build` stops "Còn thiếu ảnh cảnh …" | no source and no AI → source-visuals |
+| `build` stops "Còn thiếu ảnh cảnh …" | no free image → fix per source-visuals (pin / Commons / SVG); AI only if the user enables `AI_IMAGES=1` |
 | UI shows nothing | backend `PORT` (.env) ≠ frontend `NEXT_PUBLIC_API_URL` |
 | Upload rejected | only real audio .mp3/.m4a/.wav ≤ 50 MB (checked with ffprobe) |

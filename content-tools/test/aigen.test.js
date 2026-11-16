@@ -27,3 +27,13 @@ test('science and space scenes are drawn as symbolic illustrations without anato
   assert.match(p, /no labels/i);
   assert.doesNotMatch(buildPrompt(scene, 'inside-your-body'), /symbolic/i);
 });
+
+test('local AI images are off unless AI_IMAGES=1', () => {
+  const { enabled } = require('../lib/aigen');
+  const old = process.env.AI_IMAGES;
+  delete process.env.AI_IMAGES;
+  assert.strictEqual(enabled(), false);
+  process.env.AI_IMAGES = '1';
+  assert.strictEqual(enabled(), true);
+  if (old === undefined) delete process.env.AI_IMAGES; else process.env.AI_IMAGES = old;
+});

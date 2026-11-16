@@ -43,6 +43,8 @@ function creditFor(job) {
 }
 
 const available = () => fs.existsSync(PYTHON);
+// Nặng (mô hình vài GB, 30–120 s/ảnh) → chỉ chạy khi bật rõ ràng: AI_IMAGES=1
+const enabled = () => process.env.AI_IMAGES === '1';
 
 /** Sinh ảnh cho cả lô (nạp mô hình một lần). Trả về danh sách số cảnh đã sinh xong. */
 function generate(jobs, onProgress = () => {}) {
@@ -69,4 +71,4 @@ function generate(jobs, onProgress = () => {}) {
   });
 }
 
-module.exports = { buildPrompt, creditFor, generate, available };
+module.exports = { buildPrompt, creditFor, generate, available, enabled };

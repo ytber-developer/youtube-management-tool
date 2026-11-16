@@ -7,7 +7,7 @@ import { ArrowLeft, Copy, Check, Loader2, Mic, Download, X, ExternalLink, ImageO
 import { contentAPI, ContentAction, ContentDetail } from '@/lib/api';
 import { CHANNEL_META, ACTION_LABEL, StepDots, StageBadge, JobBar, fmtDuration, fmtDate } from '@/components/ContentStatus';
 
-const ACTIONS: ContentAction[] = ['images', 'slides', 'thumb', 'package', 'preview', 'render'];
+const ACTIONS: ContentAction[] = ['images', 'slides', 'thumb', 'package', 'preview', 'tts', 'render'];
 
 function CopyBtn({ text, label = 'Copy' }: { text: string; label?: string }) {
   const [ok, setOk] = useState(false);

@@ -17,6 +17,11 @@ const ACTIONS = {
   package: (dir) => require(path.join(LIB, 'pack')).writeAll(dir),
   preview: (dir, p) => require(path.join(LIB, 'video')).renderPreview(dir, { onProgress: p }),
   render: (dir, p) => require(path.join(LIB, 'video')).renderFinal(dir, { onProgress: p }),
+  // Giọng Kokoro offline rồi render luôn video cuối
+  tts: async (dir, p) => {
+    await require(path.join(LIB, 'tts')).synthesize(dir, { onProgress: (x, m) => p(x * 0.4, m) });
+    await require(path.join(LIB, 'video')).renderFinal(dir, { onProgress: (x, m) => p(0.4 + x * 0.6, m) });
+  },
 };
 
 const queue = createQueue(async (job, onProgress) => {
@@ -64,7 +69,7 @@ function detail(id) {
 }
 
 function enqueue(id, action) {
-  if (!ACTIONS[action]) { const e = new Error(`Tác vụ không hợp lệ: ${action}`); e.status = 400; throw e; }
+  if (!Object.hasOwn(ACTIONS, action)) { const e = new Error(`Tác vụ không hợp lệ: ${action}`); e.status = 400; throw e; }
   return queue.enqueue({ videoId: id, action });
 }
 

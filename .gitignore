@@ -27,3 +27,7 @@ content/**/captions.srt
 content/**/images/*.alt
 content/**/*.part.mp4
 content/**/*.part.mp3
+content/**/*.part.wav
+
+# Giọng đọc Kokoro (môi trường Python + mô hình tải về)
+.venv-tts/

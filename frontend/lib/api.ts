@@ -696,7 +696,7 @@ export const proxyAPI = {
 // ── Content pipeline (/content) ──────────────────────────────────────────────
 export type ContentStepState = 'done' | 'todo' | 'stale' | 'error';
 export type ContentStepKey = 'script' | 'images' | 'review' | 'slides' | 'preview' | 'voice' | 'final' | 'uploaded';
-export type ContentAction = 'images' | 'slides' | 'thumb' | 'package' | 'preview' | 'render';
+export type ContentAction = 'images' | 'slides' | 'thumb' | 'package' | 'preview' | 'tts' | 'render';
 
 export interface ContentJob {
   id: number;

@@ -53,6 +53,15 @@ const COMMANDS = {
     console.log(`✅ ${id}  final.mp4 ${r.duration.toFixed(1)}s + captions.srt`);
     return true;
   },
+  // Giọng Kokoro offline → voice.mp3 → final.mp4. VOICE=am_fenrir / SPEED=0.95 để thử giọng khác.
+  // Không ghi đè giọng đã có (ví dụ giọng ElevenLabs thả tay) trừ khi REVOICE=1.
+  async voice(id, dir) {
+    if (fs.existsSync(path.join(dir, 'voice.mp3')) && !process.env.REVOICE) { console.log(`⏭️  ${id}  đã có voice.mp3 (REVOICE=1 để tạo lại)`); return true; }
+    const t = Date.now();
+    const r = await require('./lib/tts').synthesize(dir, { voice: process.env.VOICE, speed: process.env.SPEED ? +process.env.SPEED : undefined });
+    console.log(`🎙️  ${id}  voice.mp3 (${r.voice}, ${((Date.now() - t) / 1000).toFixed(0)}s)`);
+    return COMMANDS.render(id, dir);
+  },
   async thumb(id, dir) {
     console.log(`✅ ${id}  ${path.relative(process.cwd(), await require('./lib/thumb').render(dir))}`);
     return true;

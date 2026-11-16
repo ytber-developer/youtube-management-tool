@@ -8,11 +8,13 @@ module.exports = {
     outro: 'Follow Cosmic What If for more mind-bending science.',
     disclaimer: null,
     voiceHint: 'Adam (ElevenLabs) — trầm, chắc',
+    ttsVoice: 'am_michael', // Kokoro (offline, miễn phí)
   },
   'inside-your-body': {
     name: 'Inside Your Body',
     outro: 'Follow Inside Your Body for more of the science of you.',
     disclaimer: 'This video is for educational purposes only and is not medical advice.',
     voiceHint: 'Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây)',
+    ttsVoice: 'af_heart', // Kokoro (offline, miễn phí)
   },
 };

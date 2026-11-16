@@ -1,0 +1,55 @@
+Mars is the most Earth-like world we can reach. It would still try to kill you in at least six different ways.
+
+On paper, Mars looks promising. A day there lasts about twenty-four point six hours, almost exactly like ours. It has seasons, polar ice caps, and mountains. Robots have been driving across it for decades. So picture yourself stepping out of a lander. Let's go through the problems, one at a time.
+
+Problem zero is getting there. Earth and Mars line up for an efficient trip only about once every twenty-six months. Miss the window and you wait more than two years. Even then, the journey takes around seven months, and the Perseverance rover's curving path covered about three hundred fourteen million miles.
+
+And once you land, home is far away. Depending on where the two planets are in their orbits, a radio message takes somewhere between about three and twenty-two minutes to cross the gap, one way. You can't have a conversation with Earth. In an emergency, you are on your own.
+
+Problem one: the air. Take a breath on Mars and you'd get almost entirely carbon dioxide, about ninety-five percent. Oxygen makes up less than a fifth of one percent. And there's very little air at all.
+
+Problem two is closely related: pressure. The air on Mars presses down with only about six tenths of one percent of the pressure at sea level on Earth. That's far thinner than the air at the top of Mount Everest, and thin enough to matter in a frightening way.
+
+At that pressure, water boils at a temperature far below that of your body. Without a pressure suit, the moisture on your tongue and in your eyes would start boiling away within seconds. You would black out quickly. On Mars, a spacesuit isn't gear. It's your atmosphere.
+
+Problem three: the cold. The average temperature on Mars is around minus seventy-four degrees Fahrenheit. Near the poles, nights can plunge to about minus two hundred twenty-five. On a perfect summer day at the equator, it can reach about seventy degrees.
+
+But here's the weird part. The air is so thin it can't hold heat. Stand at the equator at noon, and NASA says your feet might feel like a spring day, around seventy-five degrees, while the air at your head is close to freezing.
+
+Problem four is the one you can't see or feel: radiation. Earth wraps you in a thick atmosphere and a global magnetic field that deflects charged particles from space. Mars has neither. It lost its global magnetic field long ago, and it has only about one percent as much atmosphere as Earth.
+
+NASA's Curiosity rover carries a radiation detector, and it measured the dose at the surface. It averaged about two thirds of a millisievert per day. That's roughly like getting thirty chest X-rays every single day, just by standing outside.
+
+Add up the flight there, the stay, and the trip home, and a mission could total around one full sievert. NASA links that dose to roughly a five percent increase in the risk of a fatal cancer, above the three percent limit it used for astronauts in low Earth orbit.
+
+That's why many plans have settlers living underground, or under several feet of Martian soil piled over their habitats. The first Martians might rarely see the sky directly. But that's not the strangest thing about Mars. The ground itself has a problem.
+
+Problem five: the dirt. NASA's Phoenix lander found that Martian soil contains salts called perchlorates, at levels of around half a percent, which is considered toxic to humans. And Mars is dusty. Its dust storms can wrap the entire planet and take months to settle.
+
+That dust gets everywhere. Into air locks, seals, suit joints, and eventually lungs. On a planet where your survival depends on machines, fine abrasive dust is a constant enemy. Anything you grow in that soil would first have to be washed clean of those salts.
+
+Problem six: your body. Mars has about thirty-eight percent of Earth's gravity. If you weigh two hundred pounds here, you'd weigh about seventy-six pounds there. That sounds fun, and for a while it would be.
+
+We know that months in zero gravity weaken astronauts' bones and muscles. What we don't know is whether a third of Earth's gravity is enough to keep a body healthy for years, or what it would do to a child growing up there. No one has ever lived in partial gravity long enough to find out.
+
+So that's six ways Mars fights you. Now let's flip it around. What does Mars actually give you to work with? More than you might think. Start with the very thing that makes its air unbreathable.
+
+Perseverance carried an experiment called MOXIE that pulled carbon dioxide from the Martian air and split off the oxygen. Over sixteen runs, it made one hundred twenty-two grams of oxygen, about what a small dog breathes in ten hours. Small, but a first: breathable oxygen made on another planet.
+
+At its best, MOXIE produced about twelve grams an hour, twice its goal. A full-size version could supply air and, more importantly, the huge amounts of oxygen needed for rocket fuel to fly people home. Making that fuel on Mars, instead of hauling it from Earth, is the difference between a stunt and a settlement.
+
+Next, water. Mars has lots of it, frozen. NASA says water ice sits just under the surface in the polar regions, and the northern polar cap is mostly water ice. Melt it, and you have drinking water, water for crops, and, by splitting it, more oxygen.
+
+And here's a surprise. In twenty twenty-four, scientists studying marsquakes recorded by NASA's InSight lander concluded that the best explanation was liquid water, deep in cracked rock seven to twelve miles underground. If that's true across the planet, it could be enough to cover Mars in a layer more than half a mile deep.
+
+The catch? Even on Earth, drilling just half a mile is a challenge, and the global estimate assumes one spot represents the whole planet. As one of the researchers put it, drilling that deep on Mars would be extremely difficult. For now, ice near the surface is what settlers would use.
+
+Put it all together, and here's the honest answer. Could humans live on Mars? Probably, in the sense that people live in Antarctica: in sealed, shielded buildings, making their own air and water, heavily supplied from home, for months or years at a time.
+
+Living there without help from Earth, raising families, growing all your own food, is a much harder problem, and nobody knows yet how long it would take to solve. It's a frontier, not a backup planet.
+
+Because here's the strangest comparison of all. Sixty-six million years ago, right after the asteroid that wiped out the dinosaurs, Earth was dark and freezing. Even on that terrible day, it still had air you could breathe and a magnetic field to protect you. Mars, on its best day, has neither.
+
+None of that means we shouldn't go. It means the first people who walk on Mars will be explorers, carrying their whole world with them. And everything they learn about surviving there will teach us how rare and precious this blue planet really is.
+
+Follow Cosmic What If for more mind-bending science.

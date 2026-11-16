@@ -14,11 +14,11 @@
   <!-- liver: patient's right = viewer's left -->
   <path d="M 380 330 C 380 300, 440 296, 480 304 C 505 310, 470 340, 440 350 C 410 360, 380 352, 380 330 Z" fill="#ff8a7a" stroke="#ffffff" stroke-width="4"/>
   <g stroke="#ffffff" stroke-width="4" fill="none">
-    <path d="M 418 142 L 270 110"/><path d="M 466 150 L 640 140"/><path d="M 400 328 L 250 400"/><path d="M 556 360 L 666 398"/>
+    <path d="M 418 142 L 270 110"/><path d="M 466 150 L 640 140"/><path d="M 400 328 L 250 400"/><path d="M 556 360 L 672 470"/>
   </g>
   <g fill="#ffffff"><circle cx="418" cy="142" r="6"/><circle cx="466" cy="150" r="6"/><circle cx="400" cy="328" r="6"/><circle cx="556" cy="360" r="6"/></g>
   <circle cx="240" cy="104" r="24" fill="#ffe08a"/><text x="240" y="114" text-anchor="middle" font-size="28" font-weight="800" fill="#06233d" letter-spacing="0">1</text><text x="240" y="70" text-anchor="middle" font-size="32" font-weight="800" fill="#ffffff" letter-spacing="1">MOUTH</text>
   <circle cx="670" cy="136" r="24" fill="#ffe08a"/><text x="670" y="146" text-anchor="middle" font-size="28" font-weight="800" fill="#06233d" letter-spacing="0">4</text><text x="690" y="100" text-anchor="middle" font-size="32" font-weight="800" fill="#ffffff" letter-spacing="1">TONGUE</text>
   <circle cx="225" cy="410" r="24" fill="#ffe08a"/><text x="225" y="420" text-anchor="middle" font-size="28" font-weight="800" fill="#06233d" letter-spacing="0">3</text><text x="190" y="466" text-anchor="middle" font-size="32" font-weight="800" fill="#ff8a7a" letter-spacing="1">LIVER</text>
-  <circle cx="690" cy="404" r="24" fill="#ffe08a"/><text x="690" y="414" text-anchor="middle" font-size="28" font-weight="800" fill="#06233d" letter-spacing="0">2</text><text x="740" y="466" text-anchor="middle" font-size="32" font-weight="800" fill="#ff6b6b" letter-spacing="1">BLOODSTREAM</text>
+  <circle cx="690" cy="486" r="24" fill="#ffe08a"/><text x="690" y="496" text-anchor="middle" font-size="28" font-weight="800" fill="#06233d" letter-spacing="0">2</text><text x="705" y="545" text-anchor="middle" font-size="32" font-weight="800" fill="#ff6b6b" letter-spacing="1">BLOODSTREAM</text>
 </svg>

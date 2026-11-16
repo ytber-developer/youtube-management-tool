@@ -37,6 +37,11 @@ const COMMANDS = {
     console.log(`✅ ${id}  ${r.count} slide${r.todo.length ? `  ⚠️ TODO cảnh ${r.todo.join(', ')}` : ''}`);
     return true;
   },
+  async package(id, dir) {
+    require('./lib/pack').writeAll(dir);
+    console.log(`✅ ${id}  narration.txt + metadata.md`);
+    return true;
+  },
   async thumb(id, dir) {
     console.log(`✅ ${id}  ${path.relative(process.cwd(), await require('./lib/thumb').render(dir))}`);
     return true;

@@ -25,3 +25,5 @@ content/**/final.mp4
 content/**/captions.srt
 .superpowers/
 content/**/images/*.alt
+content/**/*.part.mp4
+content/**/*.part.mp3

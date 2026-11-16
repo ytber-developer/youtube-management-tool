@@ -60,3 +60,12 @@ test('review.json drives imagesReviewed and uploaded', () => {
   assert.strictEqual(s.steps.uploaded, 'done');
   assert.strictEqual(s.uploadedUrl, 'https://youtu.be/abc');
 });
+
+test('a script.json without scenes reports a script error instead of throwing', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'status-bad-'));
+  fs.writeFileSync(path.join(dir, 'script.json'), JSON.stringify({ title: 'x' }));
+  const s = videoStatus(dir);
+  assert.equal(s.steps.script, 'error');
+  assert.equal(s.stageKey, 'script');
+  fs.rmSync(dir, { recursive: true, force: true });
+});

@@ -63,3 +63,41 @@ test('unknown action is rejected', async () => {
   const r = await fetch(`${base}/${ID}/actions/rm-rf`, { method: 'POST' });
   assert.strictEqual(r.status, 400);
 });
+
+test('a malformed script.json does not break the list or its detail page', async () => {
+  const BAD = '2026-11-24/inside-your-body__02-why-do-we-yawn';
+  fs.mkdirSync(path.join(root, BAD), { recursive: true });
+  fs.writeFileSync(path.join(root, BAD, 'script.json'), JSON.stringify({ title: 'half written' }));
+  const r = await fetch(base);
+  assert.strictEqual(r.status, 200);
+  const bad = (await r.json()).data.find(v => v.id === BAD);
+  assert.strictEqual(bad.status.stageKey, 'script');
+  const d = await fetch(`${base}/${BAD}`);
+  assert.strictEqual(d.status, 200);
+  const body = (await d.json()).data;
+  assert.deepStrictEqual([body.script.scenes, body.script.tags, body.script.sources], [[], [], []]);
+});
+
+test('a non-audio file renamed to .mp3 is rejected and the existing voice is kept', async () => {
+  const voice = path.join(root, ID, 'voice.mp3');
+  fs.writeFileSync(voice, 'GOOD-VOICE');
+  const fd = new FormData();
+  fd.append('voice', new Blob(['this is a text file, not audio'], { type: 'audio/mpeg' }), 'fake.mp3');
+  const r = await fetch(`${base}/${ID}/voice`, { method: 'POST', body: fd });
+  assert.strictEqual(r.status, 400);
+  assert.match((await r.json()).message, /âm thanh/);
+  assert.strictEqual(fs.readFileSync(voice, 'utf8'), 'GOOD-VOICE');
+  assert.deepStrictEqual(fs.readdirSync(path.join(root, ID)).filter(f => f.includes('.part')), []);
+  fs.rmSync(voice);
+});
+
+test('a real wav recording is converted to voice.mp3', async () => {
+  const wav = path.join(root, 'tone.wav');
+  require('child_process').execFileSync('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-f', 'lavfi', '-i', 'sine=frequency=440:duration=1', wav]);
+  const fd = new FormData();
+  fd.append('voice', new Blob([fs.readFileSync(wav)], { type: 'audio/wav' }), 'take1.wav');
+  const r = await fetch(`${base}/${ID}/voice`, { method: 'POST', body: fd });
+  assert.strictEqual(r.status, 200);
+  assert.ok(fs.statSync(path.join(root, ID, 'voice.mp3')).size > 1000);
+  assert.strictEqual(fs.existsSync(path.join(root, ID, 'voice.part.mp3')), false);
+});

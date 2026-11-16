@@ -17,7 +17,9 @@ const STAGES = [
 ];
 
 function videoStatus(dir) {
-  const script = readJson(path.join(dir, 'script.json'), { scenes: [] });
+  const raw = readJson(path.join(dir, 'script.json'), {});
+  const script = raw && typeof raw === 'object' ? raw : {};
+  const scenes = Array.isArray(script.scenes) ? script.scenes.filter(s => s && typeof s === 'object') : [];
   const review = readJson(path.join(dir, 'review.json'), {});
   const check = validateScript(script);
   const n = (i) => String(i + 1).padStart(2, '0');
@@ -26,7 +28,7 @@ function videoStatus(dir) {
   const missingScenes = [];
   let imagesNeed = 0, inputsMtime = mtime(path.join(dir, 'script.json'));
   inputsMtime = Math.max(inputsMtime, mtime(path.join(dir, 'credits.json')));
-  script.scenes.forEach((s, i) => {
+  scenes.forEach((s, i) => {
     const t = s.visual?.type;
     if (t === 'outro') return;
     imagesNeed++;
@@ -35,7 +37,7 @@ function videoStatus(dir) {
     inputsMtime = Math.max(inputsMtime, mtime(file));
   });
 
-  const slideFiles = script.scenes.map((_, i) => path.join(dir, 'slides', `scene${n(i)}.png`));
+  const slideFiles = scenes.map((_, i) => path.join(dir, 'slides', `scene${n(i)}.png`));
   const slidesOk = slideFiles.length > 0 && slideFiles.every(f => fs.existsSync(f));
   const slidesMtime = slidesOk ? Math.min(...slideFiles.map(mtime)) : 0;
   const slidesNewest = slidesOk ? Math.max(...slideFiles.map(mtime)) : 0;
@@ -53,7 +55,7 @@ function videoStatus(dir) {
     uploaded: review.uploadedUrl ? 'done' : 'todo',
   };
   const pending = STAGES.find(([k]) => steps[k] !== 'done');
-  const totalWords = script.scenes.reduce((a, s) => a + words(s.narration), 0);
+  const totalWords = scenes.reduce((a, s) => a + words(s.narration || ''), 0);
   return {
     steps,
     stage: pending ? (steps[pending[0]] === 'stale' ? `${pending[1]} (cũ)` : pending[1]) : 'Đã đăng',

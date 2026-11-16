@@ -54,6 +54,6 @@ exports.voice = async (req, res) => {
   try {
     res.json({ success: true, message: 'Đã nhận giọng đọc, đang render video cuối', data: await content.saveVoice(id, req.file.path, req.file.originalname) });
   } catch (e) {
-    res.status(500).json({ success: false, message: `Không xử lý được file giọng: ${e.message}` });
+    res.status(e.code === 'NOT_AUDIO' ? 400 : 500).json({ success: false, message: e.code === 'NOT_AUDIO' ? e.message : `Không xử lý được file giọng: ${e.message}` });
   }
 };

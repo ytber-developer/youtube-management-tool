@@ -117,12 +117,17 @@ async function render(dir, { mode, onProgress = () => {} }) {
     '-c:a', 'aac', '-b:a', '192k', '-t', total.toFixed(2), '-movflags', '+faststart', out + '.part.mp4');
 
   onProgress(0.15, 'ghép video');
-  await run(args, (chunk) => {
-    const m = chunk.match(/out_time_ms=(\d+)/g);
-    if (m) onProgress(0.15 + 0.85 * Math.min(1, (+m[m.length - 1].split('=')[1] / 1e6) / total), 'ghép video');
-  });
-  fs.renameSync(out + '.part.mp4', out);
-  fs.rmSync(path.join(dir, 'caps'), { recursive: true, force: true });
+  try {
+    await run(args, (chunk) => {
+      const m = chunk.match(/out_time_ms=(\d+)/g);
+      if (m) onProgress(0.15 + 0.85 * Math.min(1, (+m[m.length - 1].split('=')[1] / 1e6) / total), 'ghép video');
+    });
+    fs.renameSync(out + '.part.mp4', out);
+  } finally {
+    // ffmpeg lỗi giữa chừng → không để lại file tạm hàng trăm MB
+    fs.rmSync(out + '.part.mp4', { force: true });
+    fs.rmSync(path.join(dir, 'caps'), { recursive: true, force: true });
+  }
   onProgress(1, `${path.basename(out)} ${total.toFixed(1)}s`);
   return { video: out, srt: mode === 'final' ? path.join(dir, 'captions.srt') : null, duration: total };
 }

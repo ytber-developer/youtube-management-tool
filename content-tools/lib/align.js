@@ -48,11 +48,15 @@ function alignSentences(sentences, pauses, duration) {
   const dp = Array.from({ length: K }, () => new Float64Array(M).fill(INF));
   const from = Array.from({ length: K }, () => new Int32Array(M).fill(-1));
   for (let j = 0; j < M; j++) dp[0][j] = cost(0, cands[j]);
+  // Ranh giới k phải bắt đầu sau khi ranh giới k-1 kết thúc (không chồng câu,
+  // kể cả khi ranh giới ảo rơi vào giữa một khoảng lặng dài)
   for (let k = 1; k < K; k++) {
-    let best = INF, bestJ = -1;
     for (let j = 0; j < M; j++) {
-      if (j > 0 && dp[k - 1][j - 1] < best) { best = dp[k - 1][j - 1]; bestJ = j - 1; }
-      if (bestJ >= 0 && cands[j].mid > cands[bestJ].mid) { dp[k][j] = best + cost(k, cands[j]); from[k][j] = bestJ; }
+      let best = INF, bestI = -1;
+      for (let i = 0; i < j; i++) {
+        if (dp[k - 1][i] < best && cands[i].end < cands[j].start + 1e-9 && cands[i].mid < cands[j].mid) { best = dp[k - 1][i]; bestI = i; }
+      }
+      if (bestI >= 0) { dp[k][j] = best + cost(k, cands[j]); from[k][j] = bestI; }
     }
   }
   let j = -1, best = INF;

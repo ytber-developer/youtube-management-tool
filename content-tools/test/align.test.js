@@ -50,3 +50,9 @@ test('estimateTimings spaces sentences by words at 163 wpm', () => {
   assert.ok(Math.abs(t[0].end - 3 * 60 / 163) < 1e-6);
   assert.ok(Math.abs(t[1].start - (t[0].end + 0.35)) < 1e-6);
 });
+
+test('align never overlaps sentences when a virtual boundary falls inside a long pause', () => {
+  const t = align.alignSentences(['Aaaa aaaa.', 'Bbbb bbbb.', 'Cccc cccc.'], [{ start: 1.9, end: 7 }], 9);
+  for (let i = 1; i < t.length; i++) assert.ok(t[i].start >= t[i - 1].end, `sentence ${i} starts ${t[i].start} before ${t[i - 1].end}`);
+  assert.equal(t[t.length - 1].end, 9);
+});

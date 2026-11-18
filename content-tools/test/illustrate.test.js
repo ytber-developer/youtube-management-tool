@@ -36,3 +36,11 @@ test('pinned icon names that do not exist are dropped; if none are left, search 
   assert.deepStrictEqual(await pickIcons({ icons: ['brain', 'not-an-icon', 'zzz'] }, search, exists), { main: 'brain', side: ['zzz'] });
   assert.deepStrictEqual(await pickIcons({ query: 'runner', icons: ['nope'] }, search, exists), { main: 'person-running', side: [] });
 });
+
+test('a network error while checking an icon is retried and never cached as "missing"', async () => {
+  const { iconExists } = require('../lib/illustrate');
+  let calls = 0;
+  const flaky = async () => { calls++; if (calls < 3) throw new Error('ECONNRESET'); return { icons: { 'test-icon-x': {} } }; };
+  assert.strictEqual(await iconExists('test-icon-x', flaky, 0), true);
+  assert.strictEqual(calls, 3);
+});

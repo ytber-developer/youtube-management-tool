@@ -22,23 +22,37 @@ function keywords(text = '') {
 const cache = new Map();
 async function iconifySearch(word) {
   if (cache.has(word)) return cache.get(word);
-  let icons = [];
-  try {
-    const r = await fetch(`https://api.iconify.design/search?query=${encodeURIComponent(word)}&prefix=${PREFIX}&limit=12`);
-    if (r.ok) icons = ((await r.json()).icons || []).map(n => n.replace(`${PREFIX}:`, '')).filter(n => !SKIN.test(n));
-  } catch { /* mạng lỗi → coi như không có icon */ }
-  cache.set(word, icons);
-  return icons;
+  for (let i = 0; i < 3; i++) {
+    try {
+      const r = await fetch(`https://api.iconify.design/search?query=${encodeURIComponent(word)}&prefix=${PREFIX}&limit=12`);
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      const icons = ((await r.json()).icons || []).map(n => n.replace(`${PREFIX}:`, '')).filter(n => !SKIN.test(n));
+      cache.set(word, icons);
+      return icons;
+    } catch { await new Promise(res => setTimeout(res, 1500 * (i + 1))); }
+  }
+  return []; // mạng lỗi: không ghi nhớ, lần sau thử lại
 }
 
+const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+const getIconData = async (name) => {
+  const r = await fetch(`https://api.iconify.design/${PREFIX}.json?icons=${encodeURIComponent(name)}`);
+  if (!r.ok) throw new Error(`HTTP ${r.status}`);
+  return r.json();
+};
+
+// Lỗi mạng → thử lại; chỉ ghi nhớ kết quả khi API trả lời thật (không ghi "không có" vì mạng chập chờn)
 const known = new Map();
-async function iconExists(name) {
-  if (!known.has(name)) {
-    let ok = false;
-    try { ok = (await fetch(`https://api.iconify.design/${PREFIX}.json?icons=${encodeURIComponent(name)}`).then(r => r.json())).icons?.[name] != null; } catch { /* mạng lỗi */ }
-    known.set(name, ok);
+async function iconExists(name, get = getIconData, waitMs = 1500) {
+  if (known.has(name)) return known.get(name);
+  for (let i = 0; i < 4; i++) {
+    try {
+      const ok = (await get(name)).icons?.[name] != null;
+      known.set(name, ok);
+      return ok;
+    } catch { await sleep(waitMs * (i + 1)); }
   }
-  return known.get(name);
+  return false;
 }
 
 /** → { main, side[] } hoặc null nếu không tìm được icon nào. Icon chỉ định sai tên thì bỏ, hết thì tự tìm. */
@@ -70,9 +84,13 @@ function creditFor(icons) {
 }
 
 async function svgOf(name) {
-  const r = await fetch(`https://api.iconify.design/${PREFIX}/${encodeURIComponent(name)}.svg`);
-  if (!r.ok) throw new Error(`icon ${name}: HTTP ${r.status}`);
-  return r.text();
+  for (let i = 0; ; i++) {
+    try {
+      const r = await fetch(`https://api.iconify.design/${PREFIX}/${encodeURIComponent(name)}.svg`);
+      if (!r.ok) throw new Error(`icon ${name}: HTTP ${r.status}`);
+      return await r.text();
+    } catch (e) { if (i >= 3) throw e; await sleep(1500 * (i + 1)); }
+  }
 }
 
 // Chữ tiêu đề của slide nằm bên trái/trên → hình đặt nửa phải, icon phụ ở rìa phải và dưới
@@ -116,4 +134,4 @@ async function renderBatch(jobs, channel, onProgress = () => {}) {
   return done;
 }
 
-module.exports = { keywords, pickIcons, creditFor, renderBatch };
+module.exports = { keywords, pickIcons, creditFor, renderBatch, iconExists };

@@ -39,10 +39,12 @@ function starField(seed, w = W, h = H) {
 
 async function launchBrowser() {
   const puppeteer = require('puppeteer');
-  try { return await puppeteer.launch({ headless: true }); }
+  // Video dài / máy bận: chụp slide có thể lâu hơn mặc định 180 s của Puppeteer
+  const opts = { headless: 'shell', protocolTimeout: 600000 }; // chrome-headless-shell: ổn định hơn khi màn hình tắt/khoá
+  try { return await puppeteer.launch(opts); }
   catch (e) {
     const chrome = [process.env.CHROME_EXECUTABLE, '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'].find(p => p && fs.existsSync(p));
-    return puppeteer.launch({ headless: true, executablePath: chrome });
+    return puppeteer.launch({ ...opts, executablePath: chrome });
   }
 }
 

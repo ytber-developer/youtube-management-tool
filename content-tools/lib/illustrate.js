@@ -114,7 +114,7 @@ async function renderBatch(jobs, channel, onProgress = () => {}) {
   const done = [];
   const browser = await launchBrowser();
   try {
-    const page = await browser.newPage();
+    let page = await browser.newPage();
     await page.setViewport({ width: 1600, height: 900 });
     for (let i = 0; i < jobs.length; i++) {
       const j = jobs[i];
@@ -126,8 +126,19 @@ async function renderBatch(jobs, channel, onProgress = () => {}) {
         main = await svgOf(icons.main);
         side = (await Promise.all(icons.side.map(n => svgOf(n).catch(() => null)))).filter(Boolean);
       } catch { continue; }
-      await page.setContent(html(theme, main, side), { waitUntil: 'load' });
-      await page.screenshot({ path: j.out, type: 'jpeg', quality: 88 });
+      // Chụp lỗi (timeout) → mở tab mới thử lại một lần, không làm hỏng cả lô
+      for (let attempt = 0; attempt < 2; attempt++) {
+        try {
+          await page.setContent(html(theme, main, side), { waitUntil: 'load', timeout: 60000 });
+          await page.screenshot({ path: j.out, type: 'jpeg', quality: 88 });
+          break;
+        } catch (e) {
+          if (attempt) throw e;
+          await page.close().catch(() => {});
+          page = await browser.newPage();
+          await page.setViewport({ width: 1600, height: 900 });
+        }
+      }
       if (fs.existsSync(j.out)) done.push({ scene: j.scene, info: { ...creditFor(icons), width: 1600, height: 900 } });
     }
   } finally { await browser.close(); }

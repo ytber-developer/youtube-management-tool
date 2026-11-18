@@ -219,11 +219,24 @@ async function fetchOpenverse(query, used, outFile) {
 
 // Thứ tự nguồn miễn phí cho từng loại cảnh ('ai' chạy theo lô ở fetchForVideo vì phải nạp mô hình)
 const SOURCE_ORDER = {
-  nasa: ['nasa', 'commons', 'emoji', 'ai'],
-  science: ['commons', 'commons-relaxed', 'openverse', 'emoji', 'ai'],
-  stock: ['pixabay', 'openverse', 'emoji', 'ai'],
+  nasa: ['clip', 'nasa', 'commons', 'emoji', 'ai'],
+  science: ['clip', 'commons', 'commons-relaxed', 'openverse', 'emoji', 'ai'],
+  stock: ['pixabay', 'clip', 'openverse', 'emoji', 'ai'],
 };
+// Tải bản đầy đủ của một ảnh đã chọn (ghim tay hoặc CLIP chọn) — vẫn kiểm tra giấy phép
+function fetchPinned(pin, used, out, query = '') {
+  if (pin.key === 'nasa_id') return fetchNasa(query, used, out, pin.value);
+  if (pin.key === 'commons') return fetchCommonsFile(pin.value, used, out);
+  return fetchOpenverseId(pin.value, used, out);
+}
+
 const SOURCES = {
+  // CLIP chấm ảnh ứng viên theo nội dung cảnh (bỏ qua nếu chưa cài @huggingface/transformers hoặc CLIP=0)
+  clip: async (q, used, out, v) => {
+    const clip = require('./clip');
+    if (!clip.enabled() || !clip.available() || !v.type) return null;
+    return clip.pick(v, used, out, (pin, o) => fetchPinned(pin, used, o, q));
+  },
   nasa: (q, used, out, v) => fetchNasa(q, used, out, v.nasa_id),
   commons: (q, used, out) => fetchCommons(q, used, out),
   'commons-relaxed': (q, used, out) => fetchCommons(q, used, out, { minWidth: 900, minScore: 0.5 }),
@@ -242,7 +255,8 @@ async function fetchOne(v, used, out) {
   }
   if (v.query.split(' ').length > 3) { // thử lại với truy vấn ngắn hơn ở nguồn chính
     const short = v.query.split(' ').slice(0, 3).join(' ');
-    return SOURCES[order[0]](short, used, out, {});
+    const first = order.find(k => k !== 'clip');
+    return first ? SOURCES[first](short, used, out, {}) : null;
   }
   return null;
 }

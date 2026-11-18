@@ -14,9 +14,9 @@ test('matchScore keeps on-topic photos and rejects off-topic ones', () => {
 
 test('each visual type tries its free sources in order, NASA falls back to Commons, all end with AI', () => {
   const { SOURCE_ORDER } = require('../lib/images');
-  assert.deepStrictEqual(SOURCE_ORDER.nasa, ['nasa', 'commons', 'emoji', 'ai']);
-  assert.deepStrictEqual(SOURCE_ORDER.science, ['commons', 'commons-relaxed', 'openverse', 'emoji', 'ai']);
-  assert.deepStrictEqual(SOURCE_ORDER.stock, ['pixabay', 'openverse', 'emoji', 'ai']);
+  assert.deepStrictEqual(SOURCE_ORDER.nasa, ['clip', 'nasa', 'commons', 'emoji', 'ai']);
+  assert.deepStrictEqual(SOURCE_ORDER.science, ['clip', 'commons', 'commons-relaxed', 'openverse', 'emoji', 'ai']);
+  assert.deepStrictEqual(SOURCE_ORDER.stock, ['pixabay', 'clip', 'openverse', 'emoji', 'ai']);
 });
 
 test('a scene pinned to a Commons file or Openverse id uses that pin before any search', () => {

@@ -44,6 +44,10 @@ npm run content -- slides <id>                     # re-render; missing visuals 
 
 Then open `slides/contact.jpg` (or the /content UI) and look at **every** slide.
 
+## Automatic picking with CLIP (default)
+
+For every scene without an image, `images` first asks CLIP (`content-tools/lib/clip.js`, model `Xenova/clip-vit-base-patch32` via `@huggingface/transformers`, runs on CPU, ~10 s/scene) to score ~45 licence-checked candidates from Openverse/Commons/NASA against `visual.query` + `visual.note`, and downloads the best one scoring ≥ 0.26. It rejects candidates that look more like an "avoid" prompt than the scene: text posters/book covers/board-game boxes/logos (CLIP reads text), the scene's keywords printed as text, smoking/alcohol/weapons/nudity/gore, and (non-science) charts. `credits.json` records `clipScore`. Disable with `CLIP=0`. A better `visual.query`/`note` (what the viewer should *see*) is the main lever for better picks.
+
 ## Hand-picking an image (fastest way to fill a missing scene)
 
 ```bash

@@ -8,36 +8,8 @@
 const fs = require('fs');
 const path = require('path');
 require('./lib/env').load();
-const { allowedLicense } = require('./lib/images');
 
-const UA = 'ytb-content-tool/0.1 (personal educational video project)';
-const strip = (s = '') => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
-const get = async (url) => { const r = await fetch(url, { headers: { 'User-Agent': UA } }); if (!r.ok) throw new Error(`HTTP ${r.status} ${url.split('?')[0]}`); return r.json(); };
-
-async function openverse(q) {
-  const d = await get(`https://api.openverse.org/v1/images/?page_size=20&mature=false&license=cc0,pdm,by&q=${encodeURIComponent(q)}`);
-  return (d.results || []).map(r => {
-    const lic = r.license === 'pdm' ? 'Public Domain Mark' : r.license === 'cc0' ? 'CC0' : `CC BY ${r.license_version || ''}`.trim();
-    return { source: 'openverse', w: r.width, h: r.height, lic, title: r.title || '', creator: r.creator || '', thumb: r.thumbnail || r.url, pin: `"openverse_id": "${r.id}"` };
-  }).filter(c => allowedLicense(c.lic));
-}
-
-async function commons(q) {
-  const d = await get('https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=20'
-    + `&gsrsearch=${encodeURIComponent(q + ' filetype:bitmap')}&prop=imageinfo&iiprop=url|size|extmetadata&iiurlwidth=400`);
-  return Object.values(d.query?.pages || {}).sort((a, b) => a.index - b.index).map(p => {
-    const ii = p.imageinfo?.[0] || {}; const md = ii.extmetadata || {};
-    return { source: 'commons', w: ii.width, h: ii.height, lic: strip(md.LicenseShortName?.value), title: p.title.replace(/^File:/, ''), creator: strip(md.Artist?.value).slice(0, 40), thumb: ii.thumburl, pin: `"commons": "${p.title.replace(/"/g, '\\"')}"` };
-  }).filter(c => allowedLicense(c.lic));
-}
-
-async function nasa(q) {
-  const d = await get(`https://images-api.nasa.gov/search?media_type=image&q=${encodeURIComponent(q)}`);
-  return (d.collection.items || []).slice(0, 20).map(it => {
-    const m = it.data[0];
-    return { source: 'nasa', w: 0, h: 0, lic: 'NASA', title: m.title, creator: m.center || '', thumb: (it.links || [])[0]?.href, pin: `"nasa_id": "${m.nasa_id}"` };
-  });
-}
+const { openverse, commons, nasa, pinLine, UA } = require('./lib/candidates');
 
 async function sheet(cands, out) {
   const { launchBrowser } = require('./lib/theme');
@@ -75,7 +47,7 @@ async function main() {
   for (const k of src === 'all' ? Object.keys(fns) : [src]) {
     try { list.push(...(await fns[k](q)).slice(0, src === 'all' ? 8 : 20)); } catch (e) { console.error(`⚠️  ${k}: ${e.message}`); }
   }
-  list.forEach((c, i) => console.log(`${String(i + 1).padStart(2)}. ${c.source.padEnd(9)} ${String(c.w || '?').padStart(5)}×${String(c.h || '?').padEnd(5)} ${c.lic.padEnd(18)} ${c.title.slice(0, 60)}  →  ${c.pin}`));
+  list.forEach((c, i) => console.log(`${String(i + 1).padStart(2)}. ${c.source.padEnd(9)} ${String(c.w || '?').padStart(5)}×${String(c.h || '?').padEnd(5)} ${c.lic.padEnd(18)} ${c.title.slice(0, 60)}  →  ${pinLine(c)}`));
   if (out && list.length) { await sheet(list, path.resolve(out)); console.log(`🖼  ${out}`); }
 }
 

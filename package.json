@@ -29,6 +29,7 @@
     "content:search": "node content-tools/search.js"
   },
   "dependencies": {
+    "@huggingface/transformers": "^4.3.2",
     "adm-zip": "^0.5.16",
     "axios": "^1.13.4",
     "cheerio": "^1.2.0",

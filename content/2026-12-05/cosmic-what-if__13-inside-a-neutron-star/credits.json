@@ -286,7 +286,15 @@
     "scene": 28,
     "type": "nasa",
     "query": "GW170817 kilonova Hubble NGC 4993",
-    "missing": true
+    "file": "images/scene28.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Kilonova and Host Galaxy (2023-134).png",
+    "title": "Kilonova and Host Galaxy (2023-134)",
+    "credit": "Image: NASA, ESA, CSA, STScI, Andrew Levan (IMAPP, Warw) / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:Kilonova_and_Host_Galaxy_(2023-134).png",
+    "width": 1920,
+    "height": 1257
   },
   {
     "scene": 29,
@@ -310,7 +318,15 @@
     "scene": 31,
     "type": "nasa",
     "query": "Vela pulsar Chandra",
-    "missing": true
+    "file": "images/scene31.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Vela Pulsar (14039782592).png",
+    "title": "Vela Pulsar (14039782592)",
+    "credit": "geckzilla / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Vela_Pulsar_(14039782592).png",
+    "width": 1920,
+    "height": 1542
   },
   {
     "scene": 32,

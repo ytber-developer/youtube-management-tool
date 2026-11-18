@@ -81,7 +81,15 @@
     "scene": 7,
     "type": "nasa",
     "query": "Mars spacesuit xEMU prototype",
-    "missing": true
+    "file": "images/scene07.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "NHQ201910150007",
+    "title": "Artemis Generation Spacesuit Event",
+    "credit": "(NASA/Joel Kowsky)",
+    "license": "NASA (public domain)",
+    "url": "https://images.nasa.gov/details/NHQ201910150007",
+    "width": 1920,
+    "height": 1191
   },
   {
     "scene": 8,

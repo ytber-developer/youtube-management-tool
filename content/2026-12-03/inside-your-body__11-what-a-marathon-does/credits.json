@@ -3,13 +3,31 @@
     "scene": 1,
     "type": "stock",
     "query": "tired marathon runner late in race",
-    "missing": true
+    "file": "images/scene01.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:person-running+low-battery+brick+hot-face",
+    "title": "person-running, low-battery, brick, hot-face",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 2,
     "type": "stock",
     "query": "marathon runners city street crowd",
-    "missing": true
+    "file": "images/scene02.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:person-running+woman-running+cityscape+chequered-flag",
+    "title": "person-running, woman-running, cityscape, chequered-flag",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 3,
@@ -73,13 +91,31 @@
     "scene": 10,
     "type": "stock",
     "query": "marathon water station cups volunteers",
-    "missing": true
+    "file": "images/scene10.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:potable-water+hot-face+sun+person-running",
+    "title": "potable-water, hot-face, sun, person-running",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 11,
     "type": "stock",
     "query": "runner drinking water bottle race",
-    "missing": true
+    "file": "images/scene11.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:droplet+potable-water+warning+brain",
+    "title": "droplet, potable-water, warning, brain",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 12,
@@ -103,19 +139,46 @@
     "scene": 14,
     "type": "stock",
     "query": "triathlon cyclists race road",
-    "missing": true
+    "file": "images/scene14.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:person-biking+person-swimming+person-running+trophy",
+    "title": "person-biking, person-swimming, person-running, trophy",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 15,
     "type": "stock",
     "query": "sports medicine tent race finish",
-    "missing": true
+    "file": "images/scene15.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:potable-water+thinking-face+stethoscope+droplet",
+    "title": "potable-water, thinking-face, stethoscope, droplet",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 16,
     "type": "stock",
     "query": "exhausted runner walking during marathon",
-    "missing": true
+    "file": "images/scene16.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:person-walking+low-battery+fuel-pump+hot-face",
+    "title": "person-walking, low-battery, fuel-pump, hot-face",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 17,
@@ -139,13 +202,31 @@
     "scene": 19,
     "type": "stock",
     "query": "runner training early morning road",
-    "missing": true
+    "file": "images/scene19.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:person-running+sunrise+battery+calendar",
+    "title": "person-running, sunrise, battery, calendar",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 20,
     "type": "stock",
     "query": "marathon finish line celebration",
-    "missing": true
+    "file": "images/scene20.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:chequered-flag+party-popper+person-running+sports-medal",
+    "title": "chequered-flag, party-popper, person-running, sports-medal",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 21,
@@ -169,7 +250,16 @@
     "scene": 23,
     "type": "stock",
     "query": "runner checking heart rate monitor watch",
-    "missing": true
+    "file": "images/scene23.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:watch+beating-heart+person-running+chart-increasing",
+    "title": "watch, beating-heart, person-running, chart-increasing",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 24,
@@ -189,19 +279,46 @@
     "scene": 25,
     "type": "stock",
     "query": "doctor reviewing heart test results",
-    "missing": true
+    "file": "images/scene25.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:stethoscope+anatomical-heart+clipboard+check-mark-button",
+    "title": "stethoscope, anatomical-heart, clipboard, check-mark-button",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 26,
     "type": "stock",
     "query": "patient talking with doctor clinic",
-    "missing": true
+    "file": "images/scene26.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:health-worker+speech-balloon+anatomical-heart+clipboard",
+    "title": "health-worker, speech-balloon, anatomical-heart, clipboard",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 27,
     "type": "stock",
     "query": "runners resting after race with medals",
-    "missing": true
+    "file": "images/scene27.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:sports-medal+spaghetti+battery+bed",
+    "title": "sports-medal, spaghetti, battery, bed",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 28,
@@ -211,7 +328,16 @@
     "scene": 29,
     "type": "stock",
     "query": "diverse group of runners finishing race",
-    "missing": true
+    "file": "images/scene29.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:person-running+woman-running+flexed-biceps+sparkles",
+    "title": "person-running, woman-running, flexed-biceps, sparkles",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 30,

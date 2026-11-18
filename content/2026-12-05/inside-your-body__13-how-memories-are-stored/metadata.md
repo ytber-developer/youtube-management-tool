@@ -21,13 +21,30 @@ Sources:
 - Scientific American, Sleep Shrinks the Brain's Synapses to Make Room for New Learning: https://www.scientificamerican.com/article/sleep-shrinks-the-brain-rsquo-s-synapses-to-make-room-for-new-learning/
 
 This video is for educational purposes only and is not medical advice.
+
+Images:
+- Illustration with Fluent Emoji by Microsoft (https://github.com/microsoft/fluentui-emoji)
+- Courtesy of NIAID Ryan Kissinger / Public domain (https://commons.wikimedia.org/wiki/File:Brain_Lateral_(NIH_BioArt_60).png)
+- National Museum of Health and Medicine / CC BY 2.0 (https://commons.wikimedia.org/w/index.php?curid=95962657)
+- explorebiology / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:XBio_illustration_%E2%80%93_Hippocampus.png)
+- Martin Iniguez, Antonio Jimenez-Marin, Asier Erramuzpe, Marian Acera, Beatriz Tijero, Ane Murueta-Goyena, Rocio Del Pino, Tamara Fernandez, Mar Carmona‑Abellan, Alberto Cabrera-Zubizarreta, Juan Carlos Gómez‑Esteban, Jesus M. Cortes & Inigo Gabilondo / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:Key_brain_regions_in_the_central_autonomic_network_(CAN).png)
+- Armen R Kherlopian, Ting Song, Qi Duan, Mathew A Neimark, Ming J Po, John K Gohagan and Andrew F Laine / CC BY 2.0 (https://commons.wikimedia.org/wiki/File:Two-photon_microscopy_of_in_vivo_brain_function.jpg)
+- Faber-Zuschratter, Heidi; Stöter, Torsten; Zuschratter, Werner (ORCID: 0000-0002-9845-6393); Hartig, Roland (ORCID: 0000-0002-3706-7458); Wilke, Markus / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:NFDI4BIOIMAGE_Calendar_September_2025.png)
+- Hagmann P, Cammoun L, Gigandet X, Meuli R, Honey CJ, et al / CC BY 3.0 (https://commons.wikimedia.org/wiki/File:Connectome_extraction_procedure.jpg)
 ```
 
 ## Tags
 memory, how memory works, brain, hippocampus, engram, neuroscience, patient HM, false memories, sleep and memory, Elizabeth Loftus, human body, science explained, inside your body
 
 ## Image credits
-- (chưa có ảnh)
+- Illustration with Fluent Emoji by Microsoft (https://github.com/microsoft/fluentui-emoji)
+- Courtesy of NIAID Ryan Kissinger / Public domain (https://commons.wikimedia.org/wiki/File:Brain_Lateral_(NIH_BioArt_60).png)
+- National Museum of Health and Medicine / CC BY 2.0 (https://commons.wikimedia.org/w/index.php?curid=95962657)
+- explorebiology / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:XBio_illustration_%E2%80%93_Hippocampus.png)
+- Martin Iniguez, Antonio Jimenez-Marin, Asier Erramuzpe, Marian Acera, Beatriz Tijero, Ane Murueta-Goyena, Rocio Del Pino, Tamara Fernandez, Mar Carmona‑Abellan, Alberto Cabrera-Zubizarreta, Juan Carlos Gómez‑Esteban, Jesus M. Cortes & Inigo Gabilondo / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:Key_brain_regions_in_the_central_autonomic_network_(CAN).png)
+- Armen R Kherlopian, Ting Song, Qi Duan, Mathew A Neimark, Ming J Po, John K Gohagan and Andrew F Laine / CC BY 2.0 (https://commons.wikimedia.org/wiki/File:Two-photon_microscopy_of_in_vivo_brain_function.jpg)
+- Faber-Zuschratter, Heidi; Stöter, Torsten; Zuschratter, Werner (ORCID: 0000-0002-9845-6393); Hartig, Roland (ORCID: 0000-0002-3706-7458); Wilke, Markus / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:NFDI4BIOIMAGE_Calendar_September_2025.png)
+- Hagmann P, Cammoun L, Gigandet X, Meuli R, Honey CJ, et al / CC BY 3.0 (https://commons.wikimedia.org/wiki/File:Connectome_extraction_procedure.jpg)
 
 ## Sources
 - Queensland Brain Institute - Where are memories stored in the brain?: https://qbi.uq.edu.au/memory/where-are-memories-stored

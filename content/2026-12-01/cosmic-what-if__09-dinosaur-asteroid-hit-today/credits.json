@@ -59,7 +59,15 @@
     "scene": 6,
     "type": "nasa",
     "query": "Chicxulub crater gravity map",
-    "missing": true
+    "file": "images/scene06.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA03379",
+    "title": "Shaded Relief with Height as Color, Yucatan Peninsula, Mexico",
+    "credit": "NASA/JPL",
+    "license": "NASA (public domain)",
+    "url": "https://images.nasa.gov/details/PIA03379",
+    "width": 1920,
+    "height": 1219
   },
   {
     "scene": 7,
@@ -161,7 +169,16 @@
     "scene": 15,
     "type": "nasa",
     "query": "Kansas crop circles irrigation Landsat",
-    "missing": true
+    "file": "images/scene15.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:t-rex+wilted-flower+sauropod+fallen-leaf",
+    "title": "t-rex, wilted-flower, sauropod, fallen-leaf",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 16,

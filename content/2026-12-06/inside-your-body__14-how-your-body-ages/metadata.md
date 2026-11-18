@@ -25,13 +25,44 @@ Sources:
 - The Stanford Daily (2010), Happiness increases with age, study says: https://stanforddaily.com/2010/11/11/happiness-increases-with-age-study-says/
 
 This video is for educational purposes only and is not medical advice.
+
+Images:
+- Illustration with Fluent Emoji by Microsoft (https://github.com/microsoft/fluentui-emoji)
+- Hackett NR, Shaykhiev R, Walters MS, Wang R, Zwick RK, Ferris B, et al. / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:Characterization_of_cultured_human_airway_epithelial_basal_cells.png)
+- Unknown author / Public domain (https://commons.wikimedia.org/wiki/File:DNA-structure-and-bases.png)
+- Unknown author / CC BY 4.0 (https://wellcomecollection.org/works/kdvwqcz8)
+- Lu Y, Aitken RJ, Lin M / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:A_transmission_electron_micrograph_showing_a_primary_spermatocyte_at_late_zygotene-early_pachytene_stage_of_the_first_meiotic_division.png)
+- crackdog / Public Domain Mark (https://www.flickr.com/photos/88645472@N00/4265454440)
+- kenwalton / CC BY 2.0 (https://www.flickr.com/photos/55684318@N00/50184328458)
+- Berkshire Community College Bioscience Image Library / CC0 (https://commons.wikimedia.org/wiki/File:Muscle_Tissue_Cross_Section_Whole_Skeletal_Muscle_(41915835902).jpg)
+- Patrick J. Lynch, medical illustrator / CC BY 2.5 (https://commons.wikimedia.org/wiki/File:Eye_orbit_anatomy_anterior2.jpg)
+- OpenStax College / CC BY 3.0 (https://commons.wikimedia.org/wiki/File:917_Knee_Joint.jpg)
+- Knowledge Collector / Public Domain Mark (https://www.flickr.com/photos/133115863@N08/18629905601)
+- Unknown author / CC0 (https://www.rawpixel.com/image/9975831/image-border-person-art)
+- Unknown Illustrator / Public domain (https://commons.wikimedia.org/wiki/File:Skin-_epidermis_and_dermis.jpg)
+- Conrad Poirier / Public domain (https://commons.wikimedia.org/wiki/File:Feature._Rush_Hour_BAnQ_P48S1P09120.jpg)
+- Alan Cleaver / CC BY 2.0 (https://www.flickr.com/photos/11121568@N06/4443947162)
 ```
 
 ## Tags
 aging, how the body ages, what happens as you age, telomeres, cellular senescence, sarcopenia, presbyopia, hearing loss, aging brain, biology of aging, human body, science explained, inside your body
 
 ## Image credits
-- (chưa có ảnh)
+- Illustration with Fluent Emoji by Microsoft (https://github.com/microsoft/fluentui-emoji)
+- Hackett NR, Shaykhiev R, Walters MS, Wang R, Zwick RK, Ferris B, et al. / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:Characterization_of_cultured_human_airway_epithelial_basal_cells.png)
+- Unknown author / Public domain (https://commons.wikimedia.org/wiki/File:DNA-structure-and-bases.png)
+- Unknown author / CC BY 4.0 (https://wellcomecollection.org/works/kdvwqcz8)
+- Lu Y, Aitken RJ, Lin M / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:A_transmission_electron_micrograph_showing_a_primary_spermatocyte_at_late_zygotene-early_pachytene_stage_of_the_first_meiotic_division.png)
+- crackdog / Public Domain Mark (https://www.flickr.com/photos/88645472@N00/4265454440)
+- kenwalton / CC BY 2.0 (https://www.flickr.com/photos/55684318@N00/50184328458)
+- Berkshire Community College Bioscience Image Library / CC0 (https://commons.wikimedia.org/wiki/File:Muscle_Tissue_Cross_Section_Whole_Skeletal_Muscle_(41915835902).jpg)
+- Patrick J. Lynch, medical illustrator / CC BY 2.5 (https://commons.wikimedia.org/wiki/File:Eye_orbit_anatomy_anterior2.jpg)
+- OpenStax College / CC BY 3.0 (https://commons.wikimedia.org/wiki/File:917_Knee_Joint.jpg)
+- Knowledge Collector / Public Domain Mark (https://www.flickr.com/photos/133115863@N08/18629905601)
+- Unknown author / CC0 (https://www.rawpixel.com/image/9975831/image-border-person-art)
+- Unknown Illustrator / Public domain (https://commons.wikimedia.org/wiki/File:Skin-_epidermis_and_dermis.jpg)
+- Conrad Poirier / Public domain (https://commons.wikimedia.org/wiki/File:Feature._Rush_Hour_BAnQ_P48S1P09120.jpg)
+- Alan Cleaver / CC BY 2.0 (https://www.flickr.com/photos/11121568@N06/4443947162)
 
 ## Sources
 - Nathan Shock Centers - Biology of Aging: https://nathanshockcenters.org/biology-of-aging

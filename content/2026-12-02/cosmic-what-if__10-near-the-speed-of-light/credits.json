@@ -68,7 +68,15 @@
     "scene": 6,
     "type": "nasa",
     "query": "starship concept art interstellar",
-    "missing": true
+    "file": "images/scene06.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA26353",
+    "title": "NASA's Voyager Probe Speeds Through Space (Artist's Concept)",
+    "credit": "NASA/JPL-Caltech",
+    "license": "NASA (public domain)",
+    "url": "https://images.nasa.gov/details/PIA26353",
+    "width": 1920,
+    "height": 1080
   },
   {
     "scene": 7,
@@ -108,7 +116,15 @@
     "scene": 11,
     "type": "nasa",
     "query": "cosmic ray shower illustration",
-    "missing": true
+    "file": "images/scene11.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Crshower2 nasa.jpg",
+    "title": "Crshower2 nasa",
+    "credit": "Simon Swordy / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:Crshower2_nasa.jpg",
+    "width": 800,
+    "height": 600
   },
   {
     "scene": 12,

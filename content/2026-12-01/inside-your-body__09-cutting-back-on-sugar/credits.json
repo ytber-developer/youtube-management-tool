@@ -3,25 +3,61 @@
     "scene": 1,
     "type": "stock",
     "query": "vanilla pudding dessert spoon close up",
-    "missing": true
+    "file": "images/scene01.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:custard+spoon+tongue+sparkles",
+    "title": "custard, spoon, tongue, sparkles",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 2,
     "type": "stock",
     "query": "sugar cubes syrup honey jar table",
-    "missing": true
+    "file": "images/scene02.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:candy+honey-pot+lollipop+spoon",
+    "title": "candy, honey-pot, lollipop, spoon",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 3,
     "type": "stock",
     "query": "soda cans and pastries on table",
-    "missing": true
+    "file": "images/scene03.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:cup-with-straw+doughnut+cookie+shortcake",
+    "title": "cup-with-straw, doughnut, cookie, shortcake",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 4,
     "type": "stock",
     "query": "reading nutrition facts label grocery store",
-    "missing": true
+    "file": "images/scene04.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:page-facing-up+shopping-cart+magnifying-glass-tilted-left+candy",
+    "title": "page-facing-up, shopping-cart, magnifying-glass-tilted-left, candy",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 5,
@@ -45,7 +81,16 @@
     "scene": 7,
     "type": "science",
     "query": "Streptococcus mutans bacteria electron micrograph",
-    "missing": true
+    "file": "images/scene07.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:tooth+microbe+candy+toothbrush",
+    "title": "tooth, microbe, candy, toothbrush",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 8,
@@ -73,7 +118,16 @@
     "scene": 11,
     "type": "stock",
     "query": "scientist pipette laboratory research",
-    "missing": true
+    "file": "images/scene11.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:test-tube+microscope+brain+candy",
+    "title": "test-tube, microscope, brain, candy",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 12,
@@ -97,7 +151,16 @@
     "scene": 14,
     "type": "stock",
     "query": "scientific journal papers on desk",
-    "missing": true
+    "file": "images/scene14.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:books+scroll+balance-scale+red-question-mark",
+    "title": "books, scroll, balance-scale, red-question-mark",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 15,
@@ -107,7 +170,16 @@
     "scene": 16,
     "type": "stock",
     "query": "doctor measuring blood pressure patient",
-    "missing": true
+    "file": "images/scene16.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:stethoscope+anatomical-heart+drop-of-blood+candy",
+    "title": "stethoscope, anatomical-heart, drop-of-blood, candy",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 17,
@@ -127,19 +199,46 @@
     "scene": 18,
     "type": "stock",
     "query": "glass of soda cola ice",
-    "missing": true
+    "file": "images/scene18.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:cup-with-straw+ice+calendar+candy",
+    "title": "cup-with-straw, ice, calendar, candy",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 19,
     "type": "stock",
     "query": "raspberry drink glass",
-    "missing": true
+    "file": "images/scene19.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:tumbler-glass+strawberry+tongue+sparkles",
+    "title": "tumbler-glass, strawberry, tongue, sparkles",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 20,
     "type": "stock",
     "query": "person reaching for cookie jar",
-    "missing": true
+    "file": "images/scene20.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:cookie+candy+doughnut+chocolate-bar",
+    "title": "cookie, candy, doughnut, chocolate-bar",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 21,
@@ -153,13 +252,31 @@
     "scene": 23,
     "type": "stock",
     "query": "family eating fresh fruit kitchen",
-    "missing": true
+    "file": "images/scene23.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:red-apple+banana+grapes+tangerine",
+    "title": "red-apple, banana, grapes, tangerine",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 24,
     "type": "stock",
     "query": "dietitian consultation office",
-    "missing": true
+    "file": "images/scene24.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:health-worker+clipboard+green-salad+speech-balloon",
+    "title": "health-worker, clipboard, green-salad, speech-balloon",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 25,

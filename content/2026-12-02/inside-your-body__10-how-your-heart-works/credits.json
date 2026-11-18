@@ -3,7 +3,16 @@
     "scene": 1,
     "type": "stock",
     "query": "person hand on chest heartbeat",
-    "missing": true
+    "file": "images/scene01.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:beating-heart+raised-hand+red-question-mark+high-voltage",
+    "title": "beating-heart, raised-hand, red-question-mark, high-voltage",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 2,
@@ -37,7 +46,16 @@
     "scene": 4,
     "type": "science",
     "query": "heart position in chest anatomy illustration",
-    "missing": true
+    "file": "images/scene04.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:anatomical-heart+balance-scale+gear+drop-of-blood",
+    "title": "anatomical-heart, balance-scale, gear, drop-of-blood",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 5,
@@ -59,13 +77,30 @@
     "scene": 9,
     "type": "science",
     "query": "heart cross section ventricle wall anatomy",
-    "missing": true
+    "file": "images/scene09.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:anatomical-heart+flexed-biceps+drop-of-blood+high-voltage",
+    "title": "anatomical-heart, flexed-biceps, drop-of-blood, high-voltage",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 10,
     "type": "science",
     "query": "heart valves anatomy illustration",
-    "missing": true
+    "file": "images/scene10.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:2011 Heart Valves.jpg",
+    "title": "2011 Heart Valves",
+    "credit": "OpenStax College / CC BY 3.0",
+    "license": "CC BY 3.0",
+    "url": "https://commons.wikimedia.org/wiki/File:2011_Heart_Valves.jpg",
+    "width": 1525,
+    "height": 1217
   },
   {
     "scene": 11,
@@ -75,13 +110,31 @@
     "scene": 12,
     "type": "stock",
     "query": "doctor stethoscope listening heart",
-    "missing": true
+    "file": "images/scene12.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:stethoscope+anatomical-heart+door+speaker-high-volume",
+    "title": "stethoscope, anatomical-heart, door, speaker-high-volume",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 13,
     "type": "stock",
     "query": "metronome close up",
-    "missing": true
+    "file": "images/scene13.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:high-voltage+anatomical-heart+brain+alarm-clock",
+    "title": "high-voltage, anatomical-heart, brain, alarm-clock",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 14,
@@ -99,19 +152,46 @@
     "scene": 17,
     "type": "science",
     "query": "cardiac conduction system Purkinje fibers diagram",
-    "missing": true
+    "file": "images/scene17.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:high-voltage+anatomical-heart+racing-car+right-arrow",
+    "title": "high-voltage, anatomical-heart, racing-car, right-arrow",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 18,
     "type": "stock",
     "query": "smartwatch heart rate display wrist",
-    "missing": true
+    "file": "images/scene18.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:watch+beating-heart+stopwatch+chart-increasing",
+    "title": "watch, beating-heart, stopwatch, chart-increasing",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 19,
     "type": "science",
     "query": "heart muscle tissue micrograph cardiomyocytes",
-    "missing": true
+    "file": "images/scene19.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:anatomical-heart+drop-of-blood+red-apple+sparkles",
+    "title": "anatomical-heart, drop-of-blood, red-apple, sparkles",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 20,
@@ -135,7 +215,16 @@
     "scene": 22,
     "type": "stock",
     "query": "old laboratory archive vintage science",
-    "missing": true
+    "file": "images/scene22.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:test-tube+anatomical-heart+hourglass-done+microscope",
+    "title": "test-tube, anatomical-heart, hourglass-done, microscope",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 23,
@@ -145,13 +234,31 @@
     "scene": 24,
     "type": "science",
     "query": "DNA double helix illustration",
-    "missing": true
+    "file": "images/scene24.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:dna+anatomical-heart+seedling+hourglass-not-done",
+    "title": "dna, anatomical-heart, seedling, hourglass-not-done",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 25,
     "type": "stock",
     "query": "pregnancy ultrasound screen heartbeat",
-    "missing": true
+    "file": "images/scene25.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:baby+beating-heart+pregnant-woman+sparkles",
+    "title": "baby, beating-heart, pregnant-woman, sparkles",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 26,
@@ -171,7 +278,16 @@
     "scene": 27,
     "type": "stock",
     "query": "fingers checking pulse on wrist",
-    "missing": true
+    "file": "images/scene27.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:high-voltage+beating-heart+hand-with-fingers-splayed+stopwatch",
+    "title": "high-voltage, beating-heart, hand-with-fingers-splayed, stopwatch",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 28,

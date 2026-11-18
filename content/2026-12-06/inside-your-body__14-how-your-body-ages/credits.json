@@ -3,13 +3,31 @@
     "scene": 1,
     "type": "stock",
     "query": "elderly woman solving crossword puzzle",
-    "missing": true
+    "file": "images/scene01.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:puzzle-piece+brain+sparkles",
+    "title": "puzzle-piece, brain, sparkles",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 2,
     "type": "stock",
     "query": "many different clocks on wall",
-    "missing": true
+    "file": "images/scene02.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:mantelpiece-clock+alarm-clock+hourglass-not-done+watch",
+    "title": "mantelpiece-clock, alarm-clock, hourglass-not-done, watch",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 3,
@@ -29,19 +47,46 @@
     "scene": 4,
     "type": "science",
     "query": "DNA double helix structure illustration",
-    "missing": true
+    "file": "images/scene04.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:DNA-structure-and-bases.png",
+    "title": "DNA-structure-and-bases",
+    "credit": "Unknown author / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:DNA-structure-and-bases.png",
+    "width": 330,
+    "height": 476,
+    "clipScore": 0.337
   },
   {
     "scene": 5,
     "type": "science",
     "query": "telomeres chromosomes fluorescent image",
-    "missing": true
+    "file": "images/scene05.jpg",
+    "source": "Openverse (europeana)",
+    "id": "8270d8a0-dd52-4ac9-97d1-0b81165d858e",
+    "title": "DiGeorge syndrome - 22q11deletion - FISH",
+    "credit": "Unknown author / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://wellcomecollection.org/works/kdvwqcz8",
+    "width": 512,
+    "height": 404,
+    "clipScore": 0.342
   },
   {
     "scene": 6,
     "type": "stock",
     "query": "shoelace aglet close up",
-    "missing": true
+    "file": "images/scene06.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:dna+hourglass-not-done+sparkles",
+    "title": "dna, hourglass-not-done, sparkles",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 7,
@@ -65,19 +110,46 @@
     "scene": 9,
     "type": "stock",
     "query": "three generations family portrait",
-    "missing": true
+    "file": "images/scene09.jpg",
+    "source": "Openverse (flickr)",
+    "id": "8f0887d9-0413-4efb-aec7-9d8e77a648d0",
+    "title": "Three generations of family, c1913",
+    "credit": "crackdog / Public Domain Mark",
+    "license": "Public Domain Mark",
+    "url": "https://www.flickr.com/photos/88645472@N00/4265454440",
+    "width": 1024,
+    "height": 828,
+    "clipScore": 0.316
   },
   {
     "scene": 10,
     "type": "stock",
     "query": "young adults playing fast video game",
-    "missing": true
+    "file": "images/scene10.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:video-game+high-voltage+brain+stopwatch",
+    "title": "video-game, high-voltage, brain, stopwatch",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 11,
     "type": "stock",
     "query": "person juggling balls",
-    "missing": true
+    "file": "images/scene11.jpg",
+    "source": "Openverse (flickr)",
+    "id": "8e80d3b9-c75b-42bd-a8b1-e1762f1f7603",
+    "title": "Untitled",
+    "credit": "kenwalton / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://www.flickr.com/photos/55684318@N00/50184328458",
+    "width": 1024,
+    "height": 683,
+    "clipScore": 0.284
   },
   {
     "scene": 12,
@@ -97,13 +169,31 @@
     "scene": 13,
     "type": "stock",
     "query": "older man lifting light dumbbells gym",
-    "missing": true
+    "file": "images/scene13.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:flexed-biceps+person-lifting-weights+chart-decreasing",
+    "title": "flexed-biceps, person-lifting-weights, chart-decreasing",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 14,
     "type": "stock",
     "query": "man holding phone at arm's length squinting",
-    "missing": true
+    "file": "images/scene14.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:mobile-phone+glasses+eye",
+    "title": "mobile-phone, glasses, eye",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 15,
@@ -123,13 +213,31 @@
     "scene": 16,
     "type": "stock",
     "query": "two middle aged friends talking coffee",
-    "missing": true
+    "file": "images/scene16.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:hot-beverage+speech-balloon+brain+sparkles",
+    "title": "hot-beverage, speech-balloon, brain, sparkles",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 17,
     "type": "science",
     "query": "bone trabecular structure micro CT",
-    "missing": true
+    "file": "images/scene17.jpg",
+    "source": "Openverse (europeana)",
+    "id": "fd59a464-eb4e-48c1-8179-89e542c357d8",
+    "title": "Bone development in human infant L1 vertebrae, micro-CT",
+    "credit": "Unknown author / CC BY 4.0",
+    "license": "CC BY 4.0",
+    "url": "https://wellcomecollection.org/works/pkbnx9nd",
+    "width": 512,
+    "height": 87,
+    "clipScore": 0.318
   },
   {
     "scene": 18,
@@ -153,7 +261,16 @@
     "scene": 20,
     "type": "science",
     "query": "human heart anatomy illustration",
-    "missing": true
+    "file": "images/scene20.jpg",
+    "source": "Openverse (flickr)",
+    "id": "fe802a8f-d82c-413e-add5-ddd02a19094f",
+    "title": "16-2 The intact heart seen from its dorsal surface, with the pericardium removed.",
+    "credit": "Knowledge Collector / Public Domain Mark",
+    "license": "Public Domain Mark",
+    "url": "https://www.flickr.com/photos/133115863@N08/18629905601",
+    "width": 346,
+    "height": 500,
+    "clipScore": 0.374
   },
   {
     "scene": 21,
@@ -163,7 +280,16 @@
     "scene": 22,
     "type": "science",
     "query": "aorta arteries anatomy illustration",
-    "missing": true
+    "file": "images/scene22.jpg",
+    "source": "Openverse (rawpixel)",
+    "id": "50bb55a5-de83-4032-aff5-2dcc2c579b1b",
+    "title": "Identifier: anatomydescripti1887gray (find matches)Title: Anatomy",
+    "credit": "Unknown author / CC0",
+    "license": "CC0",
+    "url": "https://www.rawpixel.com/image/9975831/image-border-person-art",
+    "width": 727,
+    "height": 1024,
+    "clipScore": 0.342
   },
   {
     "scene": 23,
@@ -183,13 +309,31 @@
     "scene": 24,
     "type": "stock",
     "query": "older woman wrapped in blanket with tea",
-    "missing": true
+    "file": "images/scene24.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:thermometer+hot-beverage+snowflake",
+    "title": "thermometer, hot-beverage, snowflake",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 25,
     "type": "stock",
     "query": "older hands in sunlight close up",
-    "missing": true
+    "file": "images/scene25.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:sun+open-hands+sunglasses+warning",
+    "title": "sun, open-hands, sunglasses, warning",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 26,
@@ -223,19 +367,46 @@
     "scene": 28,
     "type": "science",
     "query": "brain MRI comparison young older",
-    "missing": true
+    "file": "images/scene28.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:brain+turtle+stopwatch+sparkles",
+    "title": "brain, turtle, stopwatch, sparkles",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 29,
     "type": "stock",
     "query": "older couple talking with doctor",
-    "missing": true
+    "file": "images/scene29.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:health-worker+brain+speech-balloon",
+    "title": "health-worker, brain, speech-balloon",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 30,
     "type": "stock",
     "query": "older man reading newspaper library",
-    "missing": true
+    "file": "images/scene30.jpg",
+    "source": "Wikimedia Commons",
+    "id": "File:Feature. Rush Hour BAnQ P48S1P09120.jpg",
+    "title": "Feature. Rush Hour",
+    "credit": "Conrad Poirier / Public domain",
+    "license": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:Feature._Rush_Hour_BAnQ_P48S1P09120.jpg",
+    "width": 960,
+    "height": 603,
+    "clipScore": 0.283
   },
   {
     "scene": 31,
@@ -245,13 +416,31 @@
     "scene": 32,
     "type": "stock",
     "query": "smiling older friends laughing together",
-    "missing": true
+    "file": "images/scene32.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:grinning-face-with-smiling-eyes+sparkles",
+    "title": "grinning-face-with-smiling-eyes, sparkles",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 33,
     "type": "stock",
     "query": "elderly couple walking in park",
-    "missing": true
+    "file": "images/scene33.jpg",
+    "source": "Openverse (flickr)",
+    "id": "6d779f76-9ffd-42f5-b58e-179264f785b3",
+    "title": "Older, wiser and more in love",
+    "credit": "Alan Cleaver / CC BY 2.0",
+    "license": "CC BY 2.0",
+    "url": "https://www.flickr.com/photos/11121568@N06/4443947162",
+    "width": 687,
+    "height": 1000,
+    "clipScore": 0.278
   },
   {
     "scene": 34,
@@ -265,7 +454,16 @@
     "scene": 36,
     "type": "stock",
     "query": "grandparent and grandchild laughing outdoors",
-    "missing": true
+    "file": "images/scene36.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:child+mantelpiece-clock+musical-notes",
+    "title": "child, mantelpiece-clock, musical-notes",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 37,

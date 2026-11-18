@@ -321,7 +321,8 @@
       "visual": {
         "type": "nasa",
         "query": "GW170817 kilonova Hubble NGC 4993",
-        "note": "Hubble image of the kilonova in galaxy NGC 4993"
+        "note": "Hubble image of the kilonova in galaxy NGC 4993",
+        "commons": "File:Kilonova and Host Galaxy (2023-134).png"
       }
     },
     {
@@ -350,7 +351,8 @@
       "visual": {
         "type": "nasa",
         "query": "Vela pulsar Chandra",
-        "note": "X-ray image of the Vela pulsar and its jets"
+        "note": "X-ray image of the Vela pulsar and its jets",
+        "commons": "File:Vela Pulsar (14039782592).png"
       }
     },
     {

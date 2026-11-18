@@ -20,6 +20,7 @@ Sources:
 - Esri model via Maps on the Web, If the Earth stood still: https://mapsontheweb.zoom-maps.com/posts/what-if/if-the-earth-stood-still-the-oceans-would-gradually-migrate-toward-the-poles-and-cause-land-in-the-equatorial-region-to-emerge.html
 
 Images:
+- NASA image from the DSCOVR EPIC team (https://images.nasa.gov/details/GSFC_20171208_Archive_e000522)
 - NASA/Kim Shiflett (https://images.nasa.gov/details/KSC-2012-5380)
 - NASA (GSFC) (https://images.nasa.gov/details/GSFC_20171208_Archive_e001282)
 - NASA (JSC) (https://images.nasa.gov/details/iss057e023128)
@@ -34,6 +35,7 @@ Images:
 earth stopped spinning, what if, earth rotation, physics, geography, equatorial bulge, day length, tides, earth science, space, science
 
 ## Image credits
+- NASA image from the DSCOVR EPIC team (https://images.nasa.gov/details/GSFC_20171208_Archive_e000522)
 - NASA/Kim Shiflett (https://images.nasa.gov/details/KSC-2012-5380)
 - NASA (GSFC) (https://images.nasa.gov/details/GSFC_20171208_Archive_e001282)
 - NASA (JSC) (https://images.nasa.gov/details/iss057e023128)

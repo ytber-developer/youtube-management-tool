@@ -59,7 +59,13 @@
       "visual": {
         "type": "stock",
         "query": "person sleeping in bed at night moonlight",
-        "note": "a person peacefully asleep in a dim bedroom"
+        "note": "a person peacefully asleep in a dim bedroom",
+        "icons": [
+          "sleeping-face",
+          "crescent-moon",
+          "thought-balloon",
+          "zzz"
+        ]
       }
     },
     {
@@ -69,7 +75,13 @@
       "visual": {
         "type": "stock",
         "query": "dark bedroom door slightly open night",
-        "note": "a bedroom door ajar in the dark"
+        "note": "a bedroom door ajar in the dark",
+        "icons": [
+          "door",
+          "locked",
+          "crescent-moon",
+          "brain"
+        ]
       }
     },
     {
@@ -79,7 +91,13 @@
       "visual": {
         "type": "stock",
         "query": "close up closed eyes sleeping face",
-        "note": "close-up of a sleeping face with closed eyes"
+        "note": "close-up of a sleeping face with closed eyes",
+        "icons": [
+          "eye",
+          "sleeping-face",
+          "zzz",
+          "eyes"
+        ]
       }
     },
     {
@@ -89,7 +107,13 @@
       "visual": {
         "type": "science",
         "query": "EEG sleep recording polysomnography trace",
-        "note": "brain wave recordings from a sleep study"
+        "note": "brain wave recordings from a sleep study",
+        "icons": [
+          "chart-increasing",
+          "brain",
+          "eye",
+          "zzz"
+        ]
       }
     },
     {
@@ -99,7 +123,13 @@
       "visual": {
         "type": "stock",
         "query": "sleep lab patient electrodes monitoring",
-        "note": "a person sleeping in a sleep lab wearing sensors"
+        "note": "a person sleeping in a sleep lab wearing sensors",
+        "icons": [
+          "bed",
+          "brain",
+          "laptop",
+          "chart-increasing"
+        ]
       }
     },
     {
@@ -127,7 +157,13 @@
       "visual": {
         "type": "science",
         "query": "neuron synapse neurotransmitter illustration",
-        "note": "illustration of neurotransmitters crossing a synapse"
+        "note": "illustration of neurotransmitters crossing a synapse",
+        "icons": [
+          "brain",
+          "test-tube",
+          "high-voltage",
+          "sparkles"
+        ]
       }
     },
     {
@@ -147,7 +183,13 @@
       "visual": {
         "type": "science",
         "query": "brain sagittal section brainstem forebrain illustration",
-        "note": "side cutaway of the brain with the brainstem and forebrain visible"
+        "note": "side cutaway of the brain with the brainstem and forebrain visible",
+        "icons": [
+          "brain",
+          "light-bulb",
+          "crescent-moon",
+          "sun"
+        ]
       }
     },
     {
@@ -157,7 +199,13 @@
       "visual": {
         "type": "stock",
         "query": "old textbook pages library",
-        "note": "pages of an old textbook"
+        "note": "pages of an old textbook",
+        "icons": [
+          "open-book",
+          "thought-balloon",
+          "brain",
+          "zzz"
+        ]
       }
     },
     {
@@ -167,7 +215,13 @@
       "visual": {
         "type": "stock",
         "query": "EEG cap electrodes head research",
-        "note": "a person wearing an electrode cap for brain recording"
+        "note": "a person wearing an electrode cap for brain recording",
+        "icons": [
+          "brain",
+          "thought-balloon",
+          "bell",
+          "red-question-mark"
+        ]
       }
     },
     {
@@ -186,7 +240,13 @@
       "visual": {
         "type": "science",
         "query": "brain activity map EEG topography",
-        "note": "a colorful map of brain activity across the scalp"
+        "note": "a colorful map of brain activity across the scalp",
+        "icons": [
+          "brain",
+          "crystal-ball",
+          "chart-increasing",
+          "thought-balloon"
+        ]
       }
     },
     {
@@ -196,7 +256,13 @@
       "visual": {
         "type": "stock",
         "query": "person waking up morning bed thinking",
-        "note": "a person sitting up in bed in the morning, lost in thought"
+        "note": "a person sitting up in bed in the morning, lost in thought",
+        "icons": [
+          "person-in-bed",
+          "thinking-face",
+          "sun",
+          "red-question-mark"
+        ]
       }
     },
     {
@@ -216,7 +282,13 @@
       "visual": {
         "type": "stock",
         "query": "old book open dictionary pages",
-        "note": "an old book lying open"
+        "note": "an old book lying open",
+        "icons": [
+          "closed-book",
+          "cross-mark",
+          "thought-balloon",
+          "crystal-ball"
+        ]
       }
     },
     {
@@ -235,7 +307,13 @@
       "visual": {
         "type": "stock",
         "query": "foggy forest path at night",
-        "note": "a misty forest path at night, slightly eerie but not frightening"
+        "note": "a misty forest path at night, slightly eerie but not frightening",
+        "icons": [
+          "foggy",
+          "evergreen-tree",
+          "ghost",
+          "crescent-moon"
+        ]
       }
     },
     {
@@ -245,7 +323,13 @@
       "visual": {
         "type": "stock",
         "query": "person journaling by window morning light",
-        "note": "a person writing in a notebook by a window"
+        "note": "a person writing in a notebook by a window",
+        "icons": [
+          "notebook",
+          "pensive-face",
+          "sunrise",
+          "pencil"
+        ]
       }
     },
     {
@@ -255,7 +339,13 @@
       "visual": {
         "type": "stock",
         "query": "person awake in bed at night worried",
-        "note": "a person lying awake in bed at night"
+        "note": "a person lying awake in bed at night",
+        "icons": [
+          "anxious-face-with-sweat",
+          "bed",
+          "crescent-moon",
+          "thought-balloon"
+        ]
       }
     },
     {
@@ -265,7 +355,13 @@
       "visual": {
         "type": "stock",
         "query": "library shelves organized books",
-        "note": "rows of neatly organized library shelves"
+        "note": "rows of neatly organized library shelves",
+        "icons": [
+          "card-file-box",
+          "brain",
+          "books",
+          "zzz"
+        ]
       }
     },
     {
@@ -275,7 +371,13 @@
       "visual": {
         "type": "stock",
         "query": "pianist hands practicing piano keys",
-        "note": "hands practicing on a piano"
+        "note": "hands practicing on a piano",
+        "icons": [
+          "musical-keyboard",
+          "brain",
+          "musical-notes",
+          "zzz"
+        ]
       }
     },
     {
@@ -285,7 +387,13 @@
       "visual": {
         "type": "stock",
         "query": "hedge maze aerial view",
-        "note": "an aerial view of a garden hedge maze"
+        "note": "an aerial view of a garden hedge maze",
+        "icons": [
+          "world-map",
+          "mouse",
+          "brain",
+          "thought-balloon"
+        ]
       }
     },
     {
@@ -295,7 +403,13 @@
       "visual": {
         "type": "stock",
         "query": "student napping on couch",
-        "note": "a student napping on a couch"
+        "note": "a student napping on a couch",
+        "icons": [
+          "sleeping-face",
+          "couch-and-lamp",
+          "thought-balloon",
+          "zzz"
+        ]
       }
     },
     {
@@ -324,7 +438,13 @@
       "visual": {
         "type": "stock",
         "query": "alarm clock morning bedside",
-        "note": "an alarm clock on a bedside table at dawn"
+        "note": "an alarm clock on a bedside table at dawn",
+        "icons": [
+          "alarm-clock",
+          "sunrise",
+          "thought-balloon",
+          "dashing-away"
+        ]
       }
     },
     {
@@ -334,7 +454,13 @@
       "visual": {
         "type": "stock",
         "query": "notebook pen on nightstand",
-        "note": "a notebook and pen resting on a nightstand"
+        "note": "a notebook and pen resting on a nightstand",
+        "icons": [
+          "notebook",
+          "pencil",
+          "crescent-moon",
+          "thought-balloon"
+        ]
       }
     },
     {
@@ -344,7 +470,13 @@
       "visual": {
         "type": "stock",
         "query": "night sky stars over quiet house",
-        "note": "a starry sky above a quiet house"
+        "note": "a starry sky above a quiet house",
+        "icons": [
+          "night-with-stars",
+          "house",
+          "crescent-moon",
+          "red-question-mark"
+        ]
       }
     },
     {
@@ -354,7 +486,13 @@
       "visual": {
         "type": "science",
         "query": "neurons network fluorescence microscopy",
-        "note": "glowing network of neurons under a microscope"
+        "note": "glowing network of neurons under a microscope",
+        "icons": [
+          "brain",
+          "high-voltage",
+          "sparkles",
+          "crescent-moon"
+        ]
       }
     },
     {

@@ -55,7 +55,13 @@
       "visual": {
         "type": "stock",
         "query": "vanilla pudding dessert spoon close up",
-        "note": "a bowl of vanilla pudding with a spoon"
+        "note": "a bowl of vanilla pudding with a spoon",
+        "icons": [
+          "custard",
+          "spoon",
+          "tongue",
+          "sparkles"
+        ]
       }
     },
     {
@@ -65,7 +71,13 @@
       "visual": {
         "type": "stock",
         "query": "sugar cubes syrup honey jar table",
-        "note": "sugar cubes, a jar of honey and a bottle of syrup"
+        "note": "sugar cubes, a jar of honey and a bottle of syrup",
+        "icons": [
+          "candy",
+          "honey-pot",
+          "lollipop",
+          "spoon"
+        ]
       }
     },
     {
@@ -75,7 +87,13 @@
       "visual": {
         "type": "stock",
         "query": "soda cans and pastries on table",
-        "note": "soft drinks, cookies and pastries on a table"
+        "note": "soft drinks, cookies and pastries on a table",
+        "icons": [
+          "cup-with-straw",
+          "doughnut",
+          "cookie",
+          "shortcake"
+        ]
       }
     },
     {
@@ -85,7 +103,13 @@
       "visual": {
         "type": "stock",
         "query": "reading nutrition facts label grocery store",
-        "note": "a hand holding a packaged food, looking at the nutrition label"
+        "note": "a hand holding a packaged food, looking at the nutrition label",
+        "icons": [
+          "page-facing-up",
+          "shopping-cart",
+          "magnifying-glass-tilted-left",
+          "candy"
+        ]
       }
     },
     {
@@ -114,7 +138,13 @@
       "visual": {
         "type": "science",
         "query": "Streptococcus mutans bacteria electron micrograph",
-        "note": "microscope image of mouth bacteria"
+        "note": "microscope image of mouth bacteria",
+        "icons": [
+          "tooth",
+          "microbe",
+          "candy",
+          "toothbrush"
+        ]
       }
     },
     {
@@ -152,7 +182,13 @@
       "visual": {
         "type": "stock",
         "query": "scientist pipette laboratory research",
-        "note": "a researcher working in a lab"
+        "note": "a researcher working in a lab",
+        "icons": [
+          "test-tube",
+          "microscope",
+          "brain",
+          "candy"
+        ]
       }
     },
     {
@@ -181,7 +217,13 @@
       "visual": {
         "type": "stock",
         "query": "scientific journal papers on desk",
-        "note": "research papers and notes spread on a desk"
+        "note": "research papers and notes spread on a desk",
+        "icons": [
+          "books",
+          "scroll",
+          "balance-scale",
+          "red-question-mark"
+        ]
       }
     },
     {
@@ -200,7 +242,13 @@
       "visual": {
         "type": "stock",
         "query": "doctor measuring blood pressure patient",
-        "note": "a routine blood pressure check"
+        "note": "a routine blood pressure check",
+        "icons": [
+          "stethoscope",
+          "anatomical-heart",
+          "drop-of-blood",
+          "candy"
+        ]
       }
     },
     {
@@ -220,7 +268,13 @@
       "visual": {
         "type": "stock",
         "query": "glass of soda cola ice",
-        "note": "a glass of cola with ice"
+        "note": "a glass of cola with ice",
+        "icons": [
+          "cup-with-straw",
+          "ice",
+          "calendar",
+          "candy"
+        ]
       }
     },
     {
@@ -230,7 +284,13 @@
       "visual": {
         "type": "stock",
         "query": "raspberry drink glass",
-        "note": "a glass of red raspberry drink"
+        "note": "a glass of red raspberry drink",
+        "icons": [
+          "tumbler-glass",
+          "strawberry",
+          "tongue",
+          "sparkles"
+        ]
       }
     },
     {
@@ -240,7 +300,13 @@
       "visual": {
         "type": "stock",
         "query": "person reaching for cookie jar",
-        "note": "a hand reaching into a cookie jar"
+        "note": "a hand reaching into a cookie jar",
+        "icons": [
+          "cookie",
+          "candy",
+          "doughnut",
+          "chocolate-bar"
+        ]
       }
     },
     {
@@ -268,7 +334,13 @@
       "visual": {
         "type": "stock",
         "query": "family eating fresh fruit kitchen",
-        "note": "people sharing a bowl of fresh fruit in a kitchen"
+        "note": "people sharing a bowl of fresh fruit in a kitchen",
+        "icons": [
+          "red-apple",
+          "banana",
+          "grapes",
+          "tangerine"
+        ]
       }
     },
     {
@@ -278,7 +350,13 @@
       "visual": {
         "type": "stock",
         "query": "dietitian consultation office",
-        "note": "a friendly consultation with a health professional"
+        "note": "a friendly consultation with a health professional",
+        "icons": [
+          "health-worker",
+          "clipboard",
+          "green-salad",
+          "speech-balloon"
+        ]
       }
     },
     {

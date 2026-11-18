@@ -219,9 +219,9 @@ async function fetchOpenverse(query, used, outFile) {
 
 // Thứ tự nguồn miễn phí cho từng loại cảnh ('ai' chạy theo lô ở fetchForVideo vì phải nạp mô hình)
 const SOURCE_ORDER = {
-  nasa: ['nasa', 'commons', 'ai'],
-  science: ['commons', 'commons-relaxed', 'openverse', 'ai'],
-  stock: ['pixabay', 'openverse', 'ai'],
+  nasa: ['nasa', 'commons', 'emoji', 'ai'],
+  science: ['commons', 'commons-relaxed', 'openverse', 'emoji', 'ai'],
+  stock: ['pixabay', 'openverse', 'emoji', 'ai'],
 };
 const SOURCES = {
   nasa: (q, used, out, v) => fetchNasa(q, used, out, v.nasa_id),
@@ -251,7 +251,7 @@ async function fetchOne(v, used, out) {
  * @param {string} dir thư mục video
  * @param {{onProgress?: (p:number, msg:string)=>void, onlyMissing?: boolean}} opts
  */
-async function fetchForVideo(dir, { onProgress = () => {}, onlyMissing = true, ai = true } = {}) {
+async function fetchForVideo(dir, { onProgress = () => {}, onlyMissing = true, ai = true, illustrate = process.env.ILLUSTRATE !== '0' } = {}) {
   const script = JSON.parse(fs.readFileSync(path.join(dir, 'script.json'), 'utf8'));
   const imgDir = path.join(dir, 'images'); fs.mkdirSync(imgDir, { recursive: true });
   const credFile = path.join(dir, 'credits.json');
@@ -271,7 +271,18 @@ async function fetchForVideo(dir, { onProgress = () => {}, onlyMissing = true, a
     else { missing.push(i + 1); credits.push({ scene: i + 1, type: v.type, query: v.query, missing: true }); }
     await sleep(300);
   }
-  // Cảnh đời thường không có ảnh miễn phí hợp lệ → tranh minh hoạ AI (một lô, nạp mô hình một lần)
+  // Không có ảnh miễn phí hợp lệ → tranh minh hoạ ghép từ Fluent Emoji (nhẹ, mặc định bật; ILLUSTRATE=0 để tắt)
+  const emojiScenes = missing.filter(n => SOURCE_ORDER[script.scenes[n - 1].visual.type]?.includes('emoji'));
+  if (illustrate && emojiScenes.length) {
+    const jobs = emojiScenes.map(n => ({ scene: n, visual: script.scenes[n - 1].visual, out: path.join(imgDir, `scene${String(n).padStart(2, '0')}.jpg`) }));
+    const made = await require('./illustrate').renderBatch(jobs, script.channel, (p, m) => onProgress(0.5 + p / 4, m));
+    for (const { scene, info } of made) {
+      const k = credits.findIndex(c => c.scene === scene);
+      credits[k] = { scene, type: script.scenes[scene - 1].visual.type, query: script.scenes[scene - 1].visual.query, file: `images/scene${String(scene).padStart(2, '0')}.jpg`, ...info };
+      missing.splice(missing.indexOf(scene), 1);
+    }
+  }
+  // Vẫn thiếu → tranh minh hoạ AI (một lô, nạp mô hình một lần; chỉ khi AI_IMAGES=1)
   const aigen = require('./aigen');
   const aiScenes = missing.filter(n => SOURCE_ORDER[script.scenes[n - 1].visual.type]?.includes('ai'));
   if (ai && aiScenes.length && aigen.enabled() && aigen.available()) {

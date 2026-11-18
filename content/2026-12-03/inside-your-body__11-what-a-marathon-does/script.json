@@ -47,7 +47,13 @@
       "visual": {
         "type": "stock",
         "query": "tired marathon runner late in race",
-        "note": "a determined runner pushing through fatigue late in a race"
+        "note": "a determined runner pushing through fatigue late in a race",
+        "icons": [
+          "person-running",
+          "low-battery",
+          "brick",
+          "hot-face"
+        ]
       }
     },
     {
@@ -57,7 +63,13 @@
       "visual": {
         "type": "stock",
         "query": "marathon runners city street crowd",
-        "note": "a crowd of marathon runners filling a city street"
+        "note": "a crowd of marathon runners filling a city street",
+        "icons": [
+          "person-running",
+          "woman-running",
+          "cityscape",
+          "chequered-flag"
+        ]
       }
     },
     {
@@ -133,7 +145,13 @@
       "visual": {
         "type": "stock",
         "query": "marathon water station cups volunteers",
-        "note": "volunteers handing out cups at a race water station"
+        "note": "volunteers handing out cups at a race water station",
+        "icons": [
+          "potable-water",
+          "hot-face",
+          "sun",
+          "person-running"
+        ]
       }
     },
     {
@@ -143,7 +161,13 @@
       "visual": {
         "type": "stock",
         "query": "runner drinking water bottle race",
-        "note": "a runner drinking from a bottle"
+        "note": "a runner drinking from a bottle",
+        "icons": [
+          "droplet",
+          "potable-water",
+          "warning",
+          "brain"
+        ]
       }
     },
     {
@@ -172,7 +196,13 @@
       "visual": {
         "type": "stock",
         "query": "triathlon cyclists race road",
-        "note": "cyclists racing during a triathlon"
+        "note": "cyclists racing during a triathlon",
+        "icons": [
+          "person-biking",
+          "person-swimming",
+          "person-running",
+          "trophy"
+        ]
       }
     },
     {
@@ -182,7 +212,13 @@
       "visual": {
         "type": "stock",
         "query": "sports medicine tent race finish",
-        "note": "a medical tent near a race finish area"
+        "note": "a medical tent near a race finish area",
+        "icons": [
+          "potable-water",
+          "thinking-face",
+          "stethoscope",
+          "droplet"
+        ]
       }
     },
     {
@@ -192,7 +228,13 @@
       "visual": {
         "type": "stock",
         "query": "exhausted runner walking during marathon",
-        "note": "a runner slowing to a walk, looking exhausted"
+        "note": "a runner slowing to a walk, looking exhausted",
+        "icons": [
+          "person-walking",
+          "low-battery",
+          "fuel-pump",
+          "hot-face"
+        ]
       }
     },
     {
@@ -221,7 +263,13 @@
       "visual": {
         "type": "stock",
         "query": "runner training early morning road",
-        "note": "a runner training alone on a quiet road at dawn"
+        "note": "a runner training alone on a quiet road at dawn",
+        "icons": [
+          "person-running",
+          "sunrise",
+          "battery",
+          "calendar"
+        ]
       }
     },
     {
@@ -231,7 +279,13 @@
       "visual": {
         "type": "stock",
         "query": "marathon finish line celebration",
-        "note": "a runner crossing the finish line with arms raised"
+        "note": "a runner crossing the finish line with arms raised",
+        "icons": [
+          "chequered-flag",
+          "party-popper",
+          "person-running",
+          "sports-medal"
+        ]
       }
     },
     {
@@ -260,7 +314,13 @@
       "visual": {
         "type": "stock",
         "query": "runner checking heart rate monitor watch",
-        "note": "a runner glancing at a heart rate watch"
+        "note": "a runner glancing at a heart rate watch",
+        "icons": [
+          "watch",
+          "beating-heart",
+          "person-running",
+          "chart-increasing"
+        ]
       }
     },
     {
@@ -280,7 +340,13 @@
       "visual": {
         "type": "stock",
         "query": "doctor reviewing heart test results",
-        "note": "a doctor reviewing heart test results with a patient"
+        "note": "a doctor reviewing heart test results with a patient",
+        "icons": [
+          "stethoscope",
+          "anatomical-heart",
+          "clipboard",
+          "check-mark-button"
+        ]
       }
     },
     {
@@ -290,7 +356,13 @@
       "visual": {
         "type": "stock",
         "query": "patient talking with doctor clinic",
-        "note": "a person talking with a doctor in a clinic"
+        "note": "a person talking with a doctor in a clinic",
+        "icons": [
+          "health-worker",
+          "speech-balloon",
+          "anatomical-heart",
+          "clipboard"
+        ]
       }
     },
     {
@@ -300,7 +372,13 @@
       "visual": {
         "type": "stock",
         "query": "runners resting after race with medals",
-        "note": "runners resting and recovering with finisher medals"
+        "note": "runners resting and recovering with finisher medals",
+        "icons": [
+          "sports-medal",
+          "spaghetti",
+          "battery",
+          "bed"
+        ]
       }
     },
     {
@@ -319,7 +397,13 @@
       "visual": {
         "type": "stock",
         "query": "diverse group of runners finishing race",
-        "note": "a diverse group of runners of all ages finishing together"
+        "note": "a diverse group of runners of all ages finishing together",
+        "icons": [
+          "person-running",
+          "woman-running",
+          "flexed-biceps",
+          "sparkles"
+        ]
       }
     },
     {

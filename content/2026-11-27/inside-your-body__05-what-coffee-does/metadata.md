@@ -28,10 +28,13 @@ Images:
 - Tim Gouw punttim / CC0 (https://commons.wikimedia.org/wiki/File:Busy_people_at_a_coffee_shop_(Unsplash).jpg)
 - Armen R Kherlopian, Ting Song, Qi Duan, Mathew A Neimark, Ming J Po, John K Gohagan and Andrew F Laine / CC BY 2.0 (https://commons.wikimedia.org/wiki/File:Two-photon_microscopy_of_in_vivo_brain_function.jpg)
 - U.S. Customs and Border Protection / Public domain (https://commons.wikimedia.org/wiki/File:Mexican_Woman_Found_Hiding_in_Trunk_of_Compact_Cark_(35587570182).jpg)
+- Grant, John Charles Boileau / Public domain (https://commons.wikimedia.org/wiki/File:Grant_1962_132.png)
 - Pete Souza / Public domain (https://commons.wikimedia.org/wiki/File:Barack_Obama_engrossed_in_reading_at_the_Resolute_Desk_while_illuminated_by_some_interesting,_autumnal,_western_sunlight_falling_through_the_garden_windows_(31901910102).jpg)
 - NIH NIAID / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:Liver_Lobule_(NIH_BioArt_565).png)
 - Unknown author / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:Sir_J._Y._Simpson_and_two_friends,_having_tested_chloroform_Wellcome_M0003274.jpg)
+- Zach_Woolf / CC BY 2.0 (https://www.flickr.com/photos/98088988@N07/22633805704)
 - Absorbine Jr. advertisements / Public domain (https://commons.wikimedia.org/wiki/File:Absorbine_Jr._ad_Elks_Magazine_1925-08.png)
+- jronaldlee / CC BY 2.0 (https://www.flickr.com/photos/37176760@N06/4657522179)
 ```
 
 ## Tags
@@ -43,10 +46,13 @@ coffee, caffeine, what coffee does to your body, adenosine, sleep pressure, caff
 - Tim Gouw punttim / CC0 (https://commons.wikimedia.org/wiki/File:Busy_people_at_a_coffee_shop_(Unsplash).jpg)
 - Armen R Kherlopian, Ting Song, Qi Duan, Mathew A Neimark, Ming J Po, John K Gohagan and Andrew F Laine / CC BY 2.0 (https://commons.wikimedia.org/wiki/File:Two-photon_microscopy_of_in_vivo_brain_function.jpg)
 - U.S. Customs and Border Protection / Public domain (https://commons.wikimedia.org/wiki/File:Mexican_Woman_Found_Hiding_in_Trunk_of_Compact_Cark_(35587570182).jpg)
+- Grant, John Charles Boileau / Public domain (https://commons.wikimedia.org/wiki/File:Grant_1962_132.png)
 - Pete Souza / Public domain (https://commons.wikimedia.org/wiki/File:Barack_Obama_engrossed_in_reading_at_the_Resolute_Desk_while_illuminated_by_some_interesting,_autumnal,_western_sunlight_falling_through_the_garden_windows_(31901910102).jpg)
 - NIH NIAID / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:Liver_Lobule_(NIH_BioArt_565).png)
 - Unknown author / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:Sir_J._Y._Simpson_and_two_friends,_having_tested_chloroform_Wellcome_M0003274.jpg)
+- Zach_Woolf / CC BY 2.0 (https://www.flickr.com/photos/98088988@N07/22633805704)
 - Absorbine Jr. advertisements / Public domain (https://commons.wikimedia.org/wiki/File:Absorbine_Jr._ad_Elks_Magazine_1925-08.png)
+- jronaldlee / CC BY 2.0 (https://www.flickr.com/photos/37176760@N06/4657522179)
 
 ## Sources
 - U.S. Food and Drug Administration - Spilling the Beans: How Much Caffeine is Too Much?: https://www.fda.gov/consumers/consumer-updates/spilling-beans-how-much-caffeine-too-much

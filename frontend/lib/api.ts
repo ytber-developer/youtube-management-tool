@@ -741,7 +741,7 @@ export interface ContentScene {
 
 export interface ContentDetail extends ContentVideo {
   script: { title: string; description: string; tags: string[]; thumbnail_text: string; scenes: ContentScene[]; sources: { title: string; url: string }[] };
-  credits: { scene: number; credit?: string; url?: string; source?: string; missing?: boolean; type?: string; ai?: boolean }[];
+  credits: { scene: number; credit?: string; url?: string; source?: string; missing?: boolean; type?: string; ai?: boolean; illustration?: boolean }[];
   review: { imagesReviewed?: boolean; uploadedUrl?: string };
   narration: string | null;
   metadata: string | null;

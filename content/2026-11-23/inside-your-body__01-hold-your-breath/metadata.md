@@ -22,6 +22,7 @@ Images:
 - Print made by: Richard Newton After: John Nixon Published by: William Holland / Public domain (https://commons.wikimedia.org/wiki/File:Advertizements_Illustrated!_(BM_1878,0511.1401).jpg)
 - OpenStax College / CC BY 3.0 (https://commons.wikimedia.org/wiki/File:2312_Gross_Anatomy_of_the_Lungs.jpg)
 - USFWS Pacific Southwest Region / Public domain (https://commons.wikimedia.org/wiki/File:Underwater_salmon_(52263938449).jpg)
+- summonedbyfells / CC BY 2.0 (https://www.flickr.com/photos/8521690@N02/7948664062)
 ```
 
 ## Tags
@@ -31,6 +32,7 @@ holding your breath, breath hold, human body, carbon dioxide, diaphragm, diving 
 - Print made by: Richard Newton After: John Nixon Published by: William Holland / Public domain (https://commons.wikimedia.org/wiki/File:Advertizements_Illustrated!_(BM_1878,0511.1401).jpg)
 - OpenStax College / CC BY 3.0 (https://commons.wikimedia.org/wiki/File:2312_Gross_Anatomy_of_the_Lungs.jpg)
 - USFWS Pacific Southwest Region / Public domain (https://commons.wikimedia.org/wiki/File:Underwater_salmon_(52263938449).jpg)
+- summonedbyfells / CC BY 2.0 (https://www.flickr.com/photos/8521690@N02/7948664062)
 
 ## Sources
 - Frontiers in Physiology (2021) - Large Lung Volumes Delay the Onset of the Physiological Breaking Point During Simulated Diving: https://pmc.ncbi.nlm.nih.gov/articles/PMC8511405

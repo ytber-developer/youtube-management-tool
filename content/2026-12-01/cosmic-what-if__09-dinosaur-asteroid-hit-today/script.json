@@ -103,7 +103,8 @@
       "visual": {
         "type": "nasa",
         "query": "Chicxulub crater gravity map",
-        "note": "gravity anomaly map of the Chicxulub crater rings"
+        "note": "gravity anomaly map of the Chicxulub crater rings",
+        "nasa_id": "PIA03379"
       }
     },
     {
@@ -192,7 +193,13 @@
       "visual": {
         "type": "nasa",
         "query": "Kansas crop circles irrigation Landsat",
-        "note": "farmland seen from orbit"
+        "note": "farmland seen from orbit",
+        "icons": [
+          "t-rex",
+          "wilted-flower",
+          "sauropod",
+          "fallen-leaf"
+        ]
       }
     },
     {

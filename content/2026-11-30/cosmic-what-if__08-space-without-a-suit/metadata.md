@@ -20,6 +20,7 @@ Sources:
 Images:
 - NASA (JSC) (https://images.nasa.gov/details/iss010e20747)
 - NASA/Tony Landis (https://images.nasa.gov/details/ED08-0306-44)
+- NASA Johnson Space Center / Public domain (https://commons.wikimedia.org/wiki/File:EXTRAVEHICULAR_(EV)_(CUTAWAY_VIEW)_-_SPACESUIT_-_MSC_(s65-04970).jpg)
 - NASA (https://images.nasa.gov/details/PIA26583)
 - (NASA/James Blair) (https://images.nasa.gov/details/jsc2017e114943)
 - NASA/Bill Ingalls (https://images.nasa.gov/details/PIA19342)
@@ -37,6 +38,7 @@ space without a spacesuit, vacuum, what if, spacesuit, astronaut, ebullism, soyu
 ## Image credits
 - NASA (JSC) (https://images.nasa.gov/details/iss010e20747)
 - NASA/Tony Landis (https://images.nasa.gov/details/ED08-0306-44)
+- NASA Johnson Space Center / Public domain (https://commons.wikimedia.org/wiki/File:EXTRAVEHICULAR_(EV)_(CUTAWAY_VIEW)_-_SPACESUIT_-_MSC_(s65-04970).jpg)
 - NASA (https://images.nasa.gov/details/PIA26583)
 - (NASA/James Blair) (https://images.nasa.gov/details/jsc2017e114943)
 - NASA/Bill Ingalls (https://images.nasa.gov/details/PIA19342)

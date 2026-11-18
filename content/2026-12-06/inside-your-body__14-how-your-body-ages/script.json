@@ -71,7 +71,13 @@
       "visual": {
         "type": "stock",
         "query": "elderly woman solving crossword puzzle",
-        "note": "an older woman happily working on a crossword"
+        "note": "an older woman happily working on a crossword",
+        "icons": [
+          "older-woman",
+          "puzzle-piece",
+          "brain",
+          "sparkles"
+        ]
       }
     },
     {
@@ -81,7 +87,13 @@
       "visual": {
         "type": "stock",
         "query": "many different clocks on wall",
-        "note": "a wall covered with many different clocks"
+        "note": "a wall covered with many different clocks",
+        "icons": [
+          "mantelpiece-clock",
+          "alarm-clock",
+          "hourglass-not-done",
+          "watch"
+        ]
       }
     },
     {
@@ -101,7 +113,13 @@
       "visual": {
         "type": "science",
         "query": "DNA double helix structure illustration",
-        "note": "illustration of the DNA double helix"
+        "note": "illustration of the DNA double helix",
+        "icons": [
+          "dna",
+          "collision",
+          "shield",
+          "sparkles"
+        ]
       }
     },
     {
@@ -111,7 +129,13 @@
       "visual": {
         "type": "science",
         "query": "telomeres chromosomes fluorescent image",
-        "note": "chromosomes with brightly labeled telomere tips"
+        "note": "chromosomes with brightly labeled telomere tips",
+        "icons": [
+          "dna",
+          "hourglass-not-done",
+          "scissors",
+          "microscope"
+        ]
       }
     },
     {
@@ -121,7 +145,13 @@
       "visual": {
         "type": "stock",
         "query": "shoelace aglet close up",
-        "note": "close-up of the plastic tip on a shoelace"
+        "note": "close-up of the plastic tip on a shoelace",
+        "icons": [
+          "athletic-shoe",
+          "dna",
+          "hourglass-not-done",
+          "sparkles"
+        ]
       }
     },
     {
@@ -150,7 +180,13 @@
       "visual": {
         "type": "stock",
         "query": "three generations family portrait",
-        "note": "a family portrait with grandparents, parents and children"
+        "note": "a family portrait with grandparents, parents and children",
+        "icons": [
+          "older-woman",
+          "person",
+          "baby",
+          "chart-increasing"
+        ]
       }
     },
     {
@@ -160,7 +196,13 @@
       "visual": {
         "type": "stock",
         "query": "young adults playing fast video game",
-        "note": "young adults focused on a fast-paced game"
+        "note": "young adults focused on a fast-paced game",
+        "icons": [
+          "video-game",
+          "high-voltage",
+          "brain",
+          "stopwatch"
+        ]
       }
     },
     {
@@ -170,7 +212,13 @@
       "visual": {
         "type": "stock",
         "query": "person juggling balls",
-        "note": "a person juggling several balls"
+        "note": "a person juggling several balls",
+        "icons": [
+          "person-juggling",
+          "brain",
+          "sparkles",
+          "light-bulb"
+        ]
       }
     },
     {
@@ -190,7 +238,13 @@
       "visual": {
         "type": "stock",
         "query": "older man lifting light dumbbells gym",
-        "note": "an older man working out with light weights"
+        "note": "an older man working out with light weights",
+        "icons": [
+          "older-man",
+          "flexed-biceps",
+          "person-lifting-weights",
+          "chart-decreasing"
+        ]
       }
     },
     {
@@ -200,7 +254,13 @@
       "visual": {
         "type": "stock",
         "query": "man holding phone at arm's length squinting",
-        "note": "a middle-aged person holding a phone at arm's length"
+        "note": "a middle-aged person holding a phone at arm's length",
+        "icons": [
+          "mobile-phone",
+          "glasses",
+          "eye",
+          "older-man"
+        ]
       }
     },
     {
@@ -220,7 +280,13 @@
       "visual": {
         "type": "stock",
         "query": "two middle aged friends talking coffee",
-        "note": "two middle-aged friends in warm conversation over coffee"
+        "note": "two middle-aged friends in warm conversation over coffee",
+        "icons": [
+          "hot-beverage",
+          "speech-balloon",
+          "brain",
+          "sparkles"
+        ]
       }
     },
     {
@@ -230,7 +296,13 @@
       "visual": {
         "type": "science",
         "query": "bone trabecular structure micro CT",
-        "note": "the inner honeycomb structure of bone"
+        "note": "the inner honeycomb structure of bone",
+        "icons": [
+          "bone",
+          "chart-decreasing",
+          "magnifying-glass-tilted-left",
+          "glass-of-milk"
+        ]
       }
     },
     {
@@ -259,7 +331,13 @@
       "visual": {
         "type": "science",
         "query": "human heart anatomy illustration",
-        "note": "an anatomical illustration of the heart"
+        "note": "an anatomical illustration of the heart",
+        "icons": [
+          "anatomical-heart",
+          "magnifying-glass-tilted-left",
+          "hourglass-not-done",
+          "drop-of-blood"
+        ]
       }
     },
     {
@@ -278,7 +356,13 @@
       "visual": {
         "type": "science",
         "query": "aorta arteries anatomy illustration",
-        "note": "illustration of the aorta and major arteries"
+        "note": "illustration of the aorta and major arteries",
+        "icons": [
+          "anatomical-heart",
+          "drop-of-blood",
+          "chart-increasing",
+          "hourglass-not-done"
+        ]
       }
     },
     {
@@ -298,7 +382,13 @@
       "visual": {
         "type": "stock",
         "query": "older woman wrapped in blanket with tea",
-        "note": "an older woman wrapped in a cozy blanket holding a warm drink"
+        "note": "an older woman wrapped in a cozy blanket holding a warm drink",
+        "icons": [
+          "older-woman",
+          "thermometer",
+          "hot-beverage",
+          "snowflake"
+        ]
       }
     },
     {
@@ -308,7 +398,13 @@
       "visual": {
         "type": "stock",
         "query": "older hands in sunlight close up",
-        "note": "close-up of older hands resting in sunlight"
+        "note": "close-up of older hands resting in sunlight",
+        "icons": [
+          "sun",
+          "open-hands",
+          "sunglasses",
+          "warning"
+        ]
       }
     },
     {
@@ -338,7 +434,13 @@
       "visual": {
         "type": "science",
         "query": "brain MRI comparison young older",
-        "note": "brain scan images"
+        "note": "brain scan images",
+        "icons": [
+          "brain",
+          "turtle",
+          "stopwatch",
+          "sparkles"
+        ]
       }
     },
     {
@@ -348,7 +450,13 @@
       "visual": {
         "type": "stock",
         "query": "older couple talking with doctor",
-        "note": "an older couple having a calm conversation with a doctor"
+        "note": "an older couple having a calm conversation with a doctor",
+        "icons": [
+          "older-man",
+          "health-worker",
+          "brain",
+          "speech-balloon"
+        ]
       }
     },
     {
@@ -358,7 +466,13 @@
       "visual": {
         "type": "stock",
         "query": "older man reading newspaper library",
-        "note": "an older man reading in a library"
+        "note": "an older man reading in a library",
+        "icons": [
+          "newspaper",
+          "older-man",
+          "books",
+          "chart-increasing"
+        ]
       }
     },
     {
@@ -377,7 +491,13 @@
       "visual": {
         "type": "stock",
         "query": "smiling older friends laughing together",
-        "note": "a group of older friends laughing together"
+        "note": "a group of older friends laughing together",
+        "icons": [
+          "grinning-face-with-smiling-eyes",
+          "older-woman",
+          "older-man",
+          "sparkles"
+        ]
       }
     },
     {
@@ -387,7 +507,13 @@
       "visual": {
         "type": "stock",
         "query": "elderly couple walking in park",
-        "note": "an older couple walking arm in arm through a park"
+        "note": "an older couple walking arm in arm through a park",
+        "icons": [
+          "older-man",
+          "older-woman",
+          "deciduous-tree",
+          "smiling-face-with-smiling-eyes"
+        ]
       }
     },
     {
@@ -415,7 +541,13 @@
       "visual": {
         "type": "stock",
         "query": "grandparent and grandchild laughing outdoors",
-        "note": "a grandparent and grandchild laughing together outdoors"
+        "note": "a grandparent and grandchild laughing together outdoors",
+        "icons": [
+          "older-woman",
+          "child",
+          "mantelpiece-clock",
+          "musical-notes"
+        ]
       }
     },
     {

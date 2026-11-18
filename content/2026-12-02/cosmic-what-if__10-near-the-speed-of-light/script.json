@@ -96,7 +96,8 @@
       "visual": {
         "type": "nasa",
         "query": "starship concept art interstellar",
-        "note": "artist concept of an interstellar spacecraft"
+        "note": "artist concept of an interstellar spacecraft",
+        "nasa_id": "PIA26353"
       }
     },
     {
@@ -144,7 +145,8 @@
       "visual": {
         "type": "nasa",
         "query": "cosmic ray shower illustration",
-        "note": "cosmic ray particle shower in the atmosphere"
+        "note": "cosmic ray particle shower in the atmosphere",
+        "commons": "File:Crshower2 nasa.jpg"
       }
     },
     {

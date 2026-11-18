@@ -17,7 +17,16 @@
     "scene": 2,
     "type": "stock",
     "query": "person standing on mountain summit sunrise",
-    "missing": true
+    "file": "images/scene02.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:person-standing+mountain+sunrise+down-arrow",
+    "title": "person-standing, mountain, sunrise, down-arrow",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 3,
@@ -153,7 +162,16 @@
     "scene": 13,
     "type": "science",
     "query": "telomeres chromosome ends fluorescence microscopy",
-    "missing": true
+    "file": "images/scene13.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:dna+microscope+astronaut+hourglass-not-done",
+    "title": "dna, microscope, astronaut, hourglass-not-done",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 14,
@@ -313,7 +331,16 @@
     "scene": 25,
     "type": "stock",
     "query": "people walking city sidewalk daylight",
-    "missing": true
+    "file": "images/scene25.jpg",
+    "source": "Illustration (Fluent Emoji)",
+    "id": "emoji:person-walking+cityscape+bone+flexed-biceps",
+    "title": "person-walking, cityscape, bone, flexed-biceps",
+    "credit": "Illustration with Fluent Emoji by Microsoft",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/fluentui-emoji",
+    "illustration": true,
+    "width": 1600,
+    "height": 900
   },
   {
     "scene": 26,

@@ -338,7 +338,7 @@ npm run content -- build <ngày|id|all>
 ```
 Ví dụ: `npm run content -- build 2026-11-25` làm 2 video ngày 25/11. Tool tự chạy các bước còn thiếu theo thứ tự: lấy ảnh → dựng slide → thumbnail → đóng gói → preview → giọng đọc → video cuối. Bước nào đã xong thì bỏ qua.
 
-Hoặc trên giao diện: bấm vào video → nút xanh lá **"Làm hết (tự động)"**.
+Trang `/content` chỉ để xem (trạng thái + nội dung đăng YouTube), không có nút thao tác. Mọi thao tác chạy bằng lệnh hoặc nhờ AI trong chat chạy hộ.
 
 ### Các lệnh lẻ
 
@@ -352,6 +352,7 @@ Hoặc trên giao diện: bấm vào video → nút xanh lá **"Làm hết (tự
 | `npm run content -- preview <mục tiêu>` | Video thử không tiếng |
 | `npm run content -- voice <mục tiêu>` | Tạo giọng Kokoro + render |
 | `npm run content -- render <mục tiêu>` | Render video cuối từ `voice.mp3` có sẵn |
+| `npm run content -- uploaded <id> <link>` | Đánh dấu video đã đăng (link `-` để bỏ) |
 | `npm run content:search -- "từ khoá" --sheet out.jpg` | Tìm ảnh để chọn tay |
 
 `<mục tiêu>` là một id video (ví dụ `2026-11-23/cosmic-what-if__01-fell-into-a-black-hole`), một ngày (`2026-11-23`), hoặc `all`.
@@ -370,11 +371,11 @@ Trên Windows, chỉnh *Settings → System → Power* để máy không ngủ, 
 
 ### Đăng video
 
-1. Mở video trên `/content`, xem `final.mp4`, kiểm tra các cảnh có nhãn **Minh hoạ**/**AI**.
-2. Tick **Đã duyệt ảnh**.
-3. Lên YouTube Studio: tải `final.mp4`, thumbnail `thumbnail.png`, phụ đề `captions.srt`; dán tiêu đề/mô tả/tags (nút Copy trên trang).
+1. Mở video trên `/content` (bấm vào dòng) — trang chi tiết có video, thumbnail, tiêu đề, mô tả, tags, phụ đề và giờ đăng.
+2. (Chỉ video kiểu slide) duyệt ảnh xong thì ghi `"imagesReviewed": true` vào `review.json`. Video hoạt hình không có bước này.
+3. Lên YouTube Studio: tải `final.mp4`, thumbnail `thumbnail.png`, phụ đề `captions.srt`; dán tiêu đề/mô tả/tags bằng nút Copy trên trang chi tiết.
 4. Hẹn giờ **12:00 PM, múi giờ Eastern Time (New York)**.
-5. Dán link video vào ô **Link sau khi đăng**.
+5. Đánh dấu đã đăng: `npm run content -- uploaded <id> https://youtu.be/…` (hoặc nhờ AI chạy).
 
 ---
 

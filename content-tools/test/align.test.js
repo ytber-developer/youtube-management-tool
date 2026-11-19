@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 const align = require('../lib/align');
 
-const script = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../content/2026-11-23/cosmic-what-if__01-fell-into-a-black-hole/script.json'), 'utf8'));
+const script = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'fixtures/2026-11-23/cosmic-what-if__01-fell-into-a-black-hole/script.json'), 'utf8'));
 const TEXT = script.scenes.map(s => s.narration).join(' ');
 const DURATION = 66.27;
 // 16 khoảng lặng đo bằng ffmpeg silencedetect trên bản giọng Adam của video mẫu

@@ -46,6 +46,8 @@ async function synthesize(dir, { onProgress = () => {}, voice, speed } = {}) {
     onProgress(0.95, 'chuyển mp3');
     await new Promise((resolve, reject) => execFile('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', '-i', wav, '-codec:a', 'libmp3lame', '-q:a', '2', '-f', 'mp3', part], e => (e ? reject(e) : resolve())));
     fs.renameSync(part, path.join(dir, 'voice.mp3'));
+    // ghi lại đúng lời đã đọc → status biết khi nào giọng cũ so với kịch bản
+    fs.writeFileSync(path.join(dir, 'voice.txt'), require('./pack').narrationText(script) + '\n');
   } finally {
     fs.rmSync(wav, { force: true });
     fs.rmSync(part, { force: true });

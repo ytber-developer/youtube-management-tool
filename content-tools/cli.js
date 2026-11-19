@@ -73,6 +73,18 @@ const COMMANDS = {
     console.log(`✅ ${id}  ${plan.length ? plan.join(' → ') : 'đã đủ'} (${((Date.now() - t) / 60000).toFixed(1)} phút)`);
     return true;
   },
+  // Đánh dấu đã đăng: npm run content -- uploaded <id> <link YouTube>   (link "-" để bỏ đánh dấu)
+  async uploaded(id, dir) {
+    const url = process.argv[4];
+    if (!url) { console.error('Cần link: npm run content -- uploaded <id> https://youtu.be/…'); return false; }
+    if (url !== '-' && !/^https:\/\/(youtu\.be|(www\.)?youtube\.com)\//.test(url)) { console.error(`❌ Không phải link YouTube: ${url}`); return false; }
+    const file = path.join(dir, 'review.json');
+    const review = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8')) : {};
+    if (url === '-') delete review.uploadedUrl; else review.uploadedUrl = url;
+    fs.writeFileSync(file, JSON.stringify(review, null, 2) + '\n');
+    console.log(`✅ ${id}  ${url === '-' ? 'bỏ đánh dấu đã đăng' : `đã đăng: ${url}`}`);
+    return true;
+  },
   async thumb(id, dir) {
     console.log(`✅ ${id}  ${path.relative(process.cwd(), await require('./lib/thumb').render(dir))}`);
     return true;
@@ -87,6 +99,7 @@ async function main() {
   }
   const ids = resolveTargets(target);
   if (!ids.length) { console.error(`Không tìm thấy video cho "${target}"`); process.exit(2); }
+  if (cmd === 'uploaded' && ids.length > 1) { console.error(`"uploaded" chỉ nhận một video, "${target}" khớp ${ids.length}`); process.exit(2); }
   let failed = 0;
   for (const id of ids) {
     try { if ((await COMMANDS[cmd](id, paths.resolveVideoDir(id))) === false) failed++; }

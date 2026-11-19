@@ -693,30 +693,17 @@ export const proxyAPI = {
     request(API_ENDPOINTS.PROXIES.AUTO_ASSIGN, { method: 'POST', body: JSON.stringify({ maxPerProxy }) }),
 };
 
-// ── Content pipeline (/content) ──────────────────────────────────────────────
+// ── Content pipeline (/content) — chỉ đọc trạng thái ────────────────────────
 export type ContentStepState = 'done' | 'todo' | 'stale' | 'error';
 export type ContentStepKey = 'script' | 'images' | 'review' | 'slides' | 'preview' | 'voice' | 'final' | 'uploaded';
-export type ContentAction = 'build' | 'images' | 'slides' | 'thumb' | 'package' | 'preview' | 'tts' | 'render';
-
-export interface ContentJob {
-  id: number;
-  videoId: string;
-  action: ContentAction;
-  state: 'queued' | 'running' | 'done' | 'error';
-  progress: number;
-  message: string;
-}
 
 export interface ContentStatus {
   steps: Record<ContentStepKey, ContentStepState>;
   stage: string;
   stageKey: ContentStepKey | 'done';
-  imagesHave: number;
-  imagesNeed: number;
   missingScenes: number[];
   durationEst: number;
   errors: string[];
-  hasThumbnail: boolean;
   uploadedUrl: string | null;
 }
 
@@ -727,46 +714,26 @@ export interface ContentVideo {
   number: number;
   slug: string;
   title: string;
-  thumbnailText: string;
   status: ContentStatus;
-  job: ContentJob | null;
+  /** mtime của thumbnail.png, null nếu chưa có */
+  thumbnail: number | null;
 }
 
-export interface ContentScene {
-  narration: string;
-  headline: string;
-  sub: string;
-  visual: { type: string; query?: string; spec?: string; note?: string };
-}
+export type ContentFile = 'thumbnail.png' | 'final.mp4' | 'captions.srt';
 
 export interface ContentDetail extends ContentVideo {
-  script: { title: string; description: string; tags: string[]; thumbnail_text: string; scenes: ContentScene[]; sources: { title: string; url: string }[] };
-  credits: { scene: number; credit?: string; url?: string; source?: string; missing?: boolean; type?: string; ai?: boolean; illustration?: boolean }[];
-  review: { imagesReviewed?: boolean; uploadedUrl?: string };
-  narration: string | null;
-  metadata: string | null;
-  files: Record<string, number | null>;
-  slides: { scene: number; file: string; exists: boolean; headline: string; type: string }[];
+  thumbnailText: string;
+  description: string;
+  tags: string[];
+  postTime: { et: string; vn: string };
+  files: Record<ContentFile, number | null>;
 }
 
 export const contentAPI = {
   list: (): Promise<{ success: boolean; data: ContentVideo[] }> => request(API_ENDPOINTS.CONTENT.LIST),
-  jobs: (): Promise<{ success: boolean; data: ContentJob[] }> => request(API_ENDPOINTS.CONTENT.JOBS),
   detail: (id: string): Promise<{ success: boolean; data: ContentDetail }> => request(API_ENDPOINTS.CONTENT.DETAIL(id)),
-  action: (id: string, action: ContentAction): Promise<{ success: boolean; data: ContentJob }> =>
-    request(API_ENDPOINTS.CONTENT.ACTION(id, action), { method: 'POST' }),
-  review: (id: string, body: { imagesReviewed?: boolean; uploadedUrl?: string | null }) =>
-    request(API_ENDPOINTS.CONTENT.REVIEW(id), { method: 'PUT', body: JSON.stringify(body) }),
-  /** URL file trong thư mục video; v = mtime để trình duyệt không dùng bản cũ */
-  fileUrl: (id: string, file: string, v?: number | null) => buildApiUrl(API_ENDPOINTS.CONTENT.FILE(id, file)) + (v ? `?v=${Math.round(v)}` : ''),
-  uploadVoice: async (id: string, file: File): Promise<{ success: boolean; message: string; data?: ContentJob }> => {
-    const fd = new FormData();
-    fd.append('voice', file);
-    const r = await fetch(buildApiUrl(API_ENDPOINTS.CONTENT.VOICE(id)), { method: 'POST', body: fd });
-    const body = await r.json().catch(() => ({ success: false, message: `HTTP ${r.status}` }));
-    if (!r.ok) throw new Error(body.message || `HTTP ${r.status}`);
-    return body;
-  },
+  /** URL file của video; v = mtime để trình duyệt không dùng bản cũ */
+  fileUrl: (id: string, file: ContentFile, v?: number | null) => buildApiUrl(API_ENDPOINTS.CONTENT.FILE(id, file)) + (v ? `?v=${v}` : ''),
 };
 
 // Export a combined API object

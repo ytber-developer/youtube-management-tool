@@ -42,7 +42,7 @@ REFETCH=1 npm run content -- images <id>           # refetch all scenes of that 
 npm run content -- slides <id>                     # re-render; missing visuals become red TODO cards
 ```
 
-Then open `slides/contact.jpg` (or the /content UI) and look at **every** slide.
+Then open `slides/contact.jpg` (full-size slides are in `slides/`) and look at **every** slide.
 
 ## Automatic picking with CLIP (default)
 
@@ -63,7 +63,7 @@ Tips: short concrete queries (2–3 words) work best; Commons for medical terms 
 1. Make `visual.query` concrete and visual: "astronaut floating outside space station", not "weightlessness".
 2. NASA: find the right item on images.nasa.gov and set `"nasa_id": "PIA12345"` in the scene's `visual` — a pin always wins, and plain `images` re-downloads that scene when the pin differs from `credits.json` (no `REFETCH` needed). Pins are the fix for the cosmic scenes that are still missing.
 3. If no licensed photo fits, change the scene to `diagram` and draw it.
-4. Re-run `images` then `slides`; tick **Đã duyệt ảnh** in the UI only after looking at every slide.
+4. Re-run `images` then `slides`; set `"imagesReviewed": true` in `review.json` only after looking at every slide.
 
 Reject: wrong subject (a coin for "puffed cheeks"), historical prints for modern topics, watermarks, text-heavy images, gore, low resolution (< 1280 px wide).
 
@@ -87,7 +87,7 @@ Look at an existing one first, e.g. `content/2026-11-23/inside-your-body__01-hol
 |---|---|
 | Image fits the words but not the meaning | Query for the thing the viewer should *see* |
 | Edited script scenes, images now shifted | Scene numbers changed → `REFETCH=1` and redraw affected SVGs |
-| Ticked "Đã duyệt ảnh" from the contact sheet thumbnail | Open slides full size |
+| Set `imagesReviewed` from the contact sheet thumbnail | Open slides full size |
 | CC BY-SA image from Commons | Not allowed — find another or draw |
 | AI illustration of a real named thing (Betelgeuse, Scott Kelly) | Replace with a pinned NASA/Commons image |
 | Approved AI scene without opening it full size | AI hands, faces and objects can be malformed — always look |

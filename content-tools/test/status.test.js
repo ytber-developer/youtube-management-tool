@@ -4,7 +4,7 @@ const fs = require('fs');
 const os = require('os');
 const path = require('path');
 
-const SRC = path.resolve(__dirname, '../../content/2026-11-23/cosmic-what-if__01-fell-into-a-black-hole');
+const SRC = path.resolve(__dirname, 'fixtures/2026-11-23/cosmic-what-if__01-fell-into-a-black-hole');
 const root = fs.mkdtempSync(path.join(os.tmpdir(), 'content-status-'));
 process.env.CONTENT_ROOT = root;
 const { videoStatus } = require('../lib/status');
@@ -68,4 +68,27 @@ test('a script.json without scenes reports a script error instead of throwing', 
   assert.equal(s.steps.script, 'error');
   assert.equal(s.stageKey, 'script');
   fs.rmSync(dir, { recursive: true, force: true });
+});
+
+test('animated videos need no image review: script + voice + final → waiting to upload', () => {
+  const { dir } = fixture();
+  const p = path.join(dir, 'script.json');
+  const s = JSON.parse(fs.readFileSync(p, 'utf8'));
+  s.style = 'anim';
+  fs.writeFileSync(p, JSON.stringify(s));
+  const st = videoStatus(dir);
+  assert.strictEqual(st.steps.review, 'done');
+  assert.ok(['script', 'voice', 'final'].includes(st.stageKey), st.stageKey);
+});
+
+test('the voice goes stale only when the narration changes, not on other script edits', () => {
+  const { dir, script } = fixture();
+  fs.writeFileSync(path.join(dir, 'voice.mp3'), 'x');
+  assert.strictEqual(videoStatus(dir).steps.voice, 'done', 'hand-made voice without voice.txt counts as current');
+  fs.writeFileSync(path.join(dir, 'voice.txt'), require('../lib/pack').narrationText(script) + '\n');
+  fs.writeFileSync(path.join(dir, 'script.json'), JSON.stringify({ ...script, title: 'New title', tags: ['x'] }));
+  assert.strictEqual(videoStatus(dir).steps.voice, 'done');
+  script.scenes[1].narration += ' One more sentence.';
+  fs.writeFileSync(path.join(dir, 'script.json'), JSON.stringify(script));
+  assert.strictEqual(videoStatus(dir).steps.voice, 'stale');
 });

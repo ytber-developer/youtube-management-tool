@@ -5,12 +5,11 @@ const os = require('os');
 const path = require('path');
 
 const ID = '2026-11-23/cosmic-what-if__01-fell-into-a-black-hole';
-const SRC = path.resolve(__dirname, '../../content', ID);
+const SRC = path.resolve(__dirname, 'fixtures', ID);
 const root = fs.mkdtempSync(path.join(os.tmpdir(), 'content-api-'));
 process.env.CONTENT_ROOT = root;
 fs.mkdirSync(path.join(root, ID), { recursive: true });
 fs.copyFileSync(path.join(SRC, 'script.json'), path.join(root, ID, 'script.json'));
-fs.writeFileSync(path.join(root, ID, 'narration.txt'), 'hello');
 
 const express = require('express');
 const app = express();
@@ -31,40 +30,33 @@ test('lists videos with status', async () => {
   assert.strictEqual(body.data[0].title, 'What If You Fell Into a Black Hole?');
 });
 
-test('serves files inside the video folder only', async () => {
-  const ok = await fetch(`${base}/file/${ID}/narration.txt`);
-  assert.strictEqual(ok.status, 200);
-  assert.strictEqual(await ok.text(), 'hello');
+test('detail has everything needed to post on YouTube', async () => {
+  const r = await fetch(`${base}/${ID}`);
+  assert.strictEqual(r.status, 200);
+  const d = (await r.json()).data;
+  assert.strictEqual(d.title, 'What If You Fell Into a Black Hole?');
+  assert.ok(d.description.startsWith('What would actually happen'));
+  assert.ok(d.tags.includes('black hole'));
+  assert.strictEqual(d.postTime.et, '2026-11-23 12:00 PM ET');
+  assert.deepStrictEqual(Object.keys(d.files), ['thumbnail.png', 'final.mp4', 'captions.srt']);
 });
 
-test('rejects traversal ids', async () => {
-  for (const url of [`${base}/file/2026-11-23/..%2F..%2Fpackage.json`, `${base}/file/${ID}/..%2F..%2F..%2Fpackage.json`, `${base}/2026-11-23/..%2Fsrc`]) {
-    const r = await fetch(url);
-    assert.strictEqual(r.status, 404, url);
+test('serves only the upload files, never other files or traversal paths', async () => {
+  fs.writeFileSync(path.join(root, ID, 'captions.srt'), '1\n00:00:00,000 --> 00:00:01,000\nhi\n');
+  assert.strictEqual((await fetch(`${base}/file/${ID}/captions.srt`)).status, 200);
+  for (const url of [`${base}/file/${ID}/script.json`, `${base}/file/${ID}/final.mp4`, `${base}/file/${ID}/..%2F..%2F..%2Fpackage.json`,
+    `${base}/file/2026-11-23/..%2F..%2Fpackage.json/thumbnail.png`, `${base}/2026-11-23/..%2Fsrc`]) {
+    assert.strictEqual((await fetch(url)).status, 404, url);
   }
 });
 
-test('voice upload rejects non-mp3', async () => {
-  const fd = new FormData();
-  fd.append('voice', new Blob(['not audio'], { type: 'text/plain' }), 'notes.txt');
-  const r = await fetch(`${base}/${ID}/voice`, { method: 'POST', body: fd });
-  assert.strictEqual(r.status, 400);
-  assert.strictEqual(fs.existsSync(path.join(root, ID, 'voice.mp3')), false);
+test('the API is read-only: write routes are gone', async () => {
+  for (const [method, url] of [['POST', `${base}/${ID}/actions/build`], ['PUT', `${base}/${ID}/review`], ['POST', `${base}/${ID}/voice`], ['GET', `${base}/jobs`]]) {
+    assert.strictEqual((await fetch(url, { method })).status, 404, `${method} ${url}`);
+  }
 });
 
-test('review endpoint stores imagesReviewed and uploadedUrl', async () => {
-  const r = await fetch(`${base}/${ID}/review`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ imagesReviewed: true, uploadedUrl: 'https://youtu.be/x' }) });
-  assert.strictEqual(r.status, 200);
-  const saved = JSON.parse(fs.readFileSync(path.join(root, ID, 'review.json'), 'utf8'));
-  assert.deepStrictEqual(saved, { imagesReviewed: true, uploadedUrl: 'https://youtu.be/x' });
-});
-
-test('unknown action is rejected', async () => {
-  const r = await fetch(`${base}/${ID}/actions/rm-rf`, { method: 'POST' });
-  assert.strictEqual(r.status, 400);
-});
-
-test('a malformed script.json does not break the list or its detail page', async () => {
+test('a malformed script.json does not break the list', async () => {
   const BAD = '2026-11-24/inside-your-body__02-why-do-we-yawn';
   fs.mkdirSync(path.join(root, BAD), { recursive: true });
   fs.writeFileSync(path.join(root, BAD, 'script.json'), JSON.stringify({ title: 'half written' }));
@@ -72,32 +64,5 @@ test('a malformed script.json does not break the list or its detail page', async
   assert.strictEqual(r.status, 200);
   const bad = (await r.json()).data.find(v => v.id === BAD);
   assert.strictEqual(bad.status.stageKey, 'script');
-  const d = await fetch(`${base}/${BAD}`);
-  assert.strictEqual(d.status, 200);
-  const body = (await d.json()).data;
-  assert.deepStrictEqual([body.script.scenes, body.script.tags, body.script.sources], [[], [], []]);
-});
-
-test('a non-audio file renamed to .mp3 is rejected and the existing voice is kept', async () => {
-  const voice = path.join(root, ID, 'voice.mp3');
-  fs.writeFileSync(voice, 'GOOD-VOICE');
-  const fd = new FormData();
-  fd.append('voice', new Blob(['this is a text file, not audio'], { type: 'audio/mpeg' }), 'fake.mp3');
-  const r = await fetch(`${base}/${ID}/voice`, { method: 'POST', body: fd });
-  assert.strictEqual(r.status, 400);
-  assert.match((await r.json()).message, /âm thanh/);
-  assert.strictEqual(fs.readFileSync(voice, 'utf8'), 'GOOD-VOICE');
-  assert.deepStrictEqual(fs.readdirSync(path.join(root, ID)).filter(f => f.includes('.part')), []);
-  fs.rmSync(voice);
-});
-
-test('a real wav recording is converted to voice.mp3', async () => {
-  const wav = path.join(root, 'tone.wav');
-  require('child_process').execFileSync('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-f', 'lavfi', '-i', 'sine=frequency=440:duration=1', wav]);
-  const fd = new FormData();
-  fd.append('voice', new Blob([fs.readFileSync(wav)], { type: 'audio/wav' }), 'take1.wav');
-  const r = await fetch(`${base}/${ID}/voice`, { method: 'POST', body: fd });
-  assert.strictEqual(r.status, 200);
-  assert.ok(fs.statSync(path.join(root, ID, 'voice.mp3')).size > 1000);
-  assert.strictEqual(fs.existsSync(path.join(root, ID, 'voice.part.mp3')), false);
+  assert.strictEqual((await fetch(`${base}/${BAD}`)).status, 200);
 });

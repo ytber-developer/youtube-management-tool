@@ -7,6 +7,7 @@ const path = require('path');
 const { validateScript, words } = require('./check');
 const { IMAGE_TYPES } = require('./images');
 const CHANNELS = require('./channels');
+const narrationText = (script) => script.scenes.map(s => String(s.narration || '').trim()).join('\n\n');
 
 const mtime = (f) => (fs.existsSync(f) ? fs.statSync(f).mtimeMs : 0);
 const readJson = (f, d) => { try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch { return d; } };
@@ -44,11 +45,18 @@ function videoStatus(dir) {
   const fresh = (file, after) => (!fs.existsSync(file) ? 'todo' : mtime(file) >= after ? 'done' : 'stale');
 
   const voiceFile = path.join(dir, 'voice.mp3');
+  // Giọng đọc theo lời kịch bản: lời đã đổi sau khi tạo giọng → giọng cũ, phải đọc lại (nếu không phụ đề lệch)
+  const voiceState = (() => {
+    if (!fs.existsSync(voiceFile)) return 'todo';
+    const said = path.join(dir, 'voice.txt'); // lời đã đọc lúc tạo giọng (tts ghi); không có → giọng tay/cũ, coi là khớp
+    if (!fs.existsSync(said)) return 'done';
+    return fs.readFileSync(said, 'utf8').trim() === narrationText({ scenes }).trim() ? 'done' : 'stale';
+  })();
   if (script.style === 'anim') { // hoạt hình: không có ảnh/slide/preview; video cuối phụ thuộc kịch bản + giọng
     missingScenes.length = 0; imagesNeed = 0;
     const anim = {
-      script: check.ok ? 'done' : 'error', images: 'done', review: review.imagesReviewed ? 'done' : 'todo', slides: 'done', preview: 'done',
-      voice: fs.existsSync(voiceFile) ? 'done' : 'todo',
+      script: check.ok ? 'done' : 'error', images: 'done', review: 'done', slides: 'done', preview: 'done',
+      voice: voiceState,
       final: fresh(path.join(dir, 'final.mp4'), Math.max(mtime(path.join(dir, 'script.json')), mtime(voiceFile))),
       uploaded: review.uploadedUrl ? 'done' : 'todo',
     };
@@ -60,7 +68,7 @@ function videoStatus(dir) {
     review: review.imagesReviewed ? 'done' : 'todo',
     slides: !slidesOk ? 'todo' : slidesMtime >= inputsMtime ? 'done' : 'stale',
     preview: fresh(path.join(dir, 'preview.mp4'), slidesNewest),
-    voice: fs.existsSync(voiceFile) ? 'done' : 'todo',
+    voice: voiceState,
     final: fresh(path.join(dir, 'final.mp4'), Math.max(slidesNewest, mtime(voiceFile))),
     uploaded: review.uploadedUrl ? 'done' : 'todo',
   };

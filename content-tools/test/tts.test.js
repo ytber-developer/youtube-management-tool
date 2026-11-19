@@ -5,7 +5,7 @@ const fs = require('fs');
 const { buildJob } = require('../lib/tts');
 const { sceneSentences } = require('../lib/video');
 
-const script = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../content/2026-11-23/cosmic-what-if__01-fell-into-a-black-hole/script.json'), 'utf8'));
+const script = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'fixtures/2026-11-23/cosmic-what-if__01-fell-into-a-black-hole/script.json'), 'utf8'));
 
 test('buildJob reads every scene as the same sentences the caption aligner expects', () => {
   const job = buildJob(script, '/tmp/v.wav');

@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 const { validateScript } = require('../lib/check');
 
-const FIXTURE = path.resolve(__dirname, '../../content/2026-11-23/cosmic-what-if__01-fell-into-a-black-hole/script.json');
+const FIXTURE = path.resolve(__dirname, 'fixtures/2026-11-23/cosmic-what-if__01-fell-into-a-black-hole/script.json');
 const base = () => JSON.parse(fs.readFileSync(FIXTURE, 'utf8'));
 const errs = (s) => validateScript(s).errors;
 

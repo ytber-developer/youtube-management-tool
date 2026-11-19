@@ -17,9 +17,10 @@ npm run content -- build <id|date|all>
 `images → slides → thumb → package → preview → voice (Kokoro) → render`.
 - A script with `check` errors builds nothing — fix it first (write-video-script).
 - An existing `voice.mp3` (e.g. a hand-recorded ElevenLabs take) is kept; only `render` reruns.
+- Kokoro writes `voice.txt` (the exact narration it read). When the script's narration no longer matches it, status shows the voice as stale ("Chờ lồng tiếng (cũ)") and `build` re-voices automatically. Edits to title/tags/anim don't trigger this. A voice without `voice.txt` (hand-made) is never re-voiced automatically.
 - Run long batches in the background; `build all` takes hours.
 
-In the UI (`/content` → a video) the green **Làm hết (tự động)** button does the same.
+The `/content` page is **read-only**: status table + a detail page per video with everything to post (video, thumbnail, title, description, tags, captions, post time, copy buttons). Every action runs from chat through `npm run content`.
 
 ## Single steps
 
@@ -60,15 +61,15 @@ npm run content:setup -- tts   # voice only
 
 Set per channel in `content-tools/lib/channels.js` (`ttsVoice`, optional `ttsSpeed`). Current: Cosmic `am_michael`, Body `af_heart`. Others: `af_bella`, `af_nicole`, `am_fenrir`, `am_puck`. Kokoro reads each sentence separately with fixed gaps (0.35 s sentence, 0.8 s scene) so caption alignment is exact. Kokoro reads a bit slower than 163 wpm → videos run ~10–20% longer than `target_minutes`; raise `ttsSpeed` (e.g. 1.1) if that matters.
 
-ElevenLabs is optional: drop an mp3/m4a/wav on the detail page; it replaces voice.mp3 and re-renders.
+ElevenLabs is optional: save the take as the video's `voice.mp3` (convert m4a/wav with `ffmpeg -i take.m4a -codec:a libmp3lame -q:a 2 voice.mp3`), then `npm run content -- render <id>`.
 
 ## Daily routine
 
-1. Open today's two videos in `/content`. If not built: **Làm hết (tự động)**.
+1. Open today's two videos on `/content`. If not built: `npm run content -- build <date>`.
 2. Watch `final.mp4`. Check every scene with the purple **AI** badge; reject → fix per source-visuals, rebuild.
-3. Tick **Đã duyệt ảnh**.
-4. Upload with the copied title/description/tags + `thumbnail.png`, scheduled 12:00 PM ET.
-5. Paste the YouTube link into **Link sau khi đăng**.
+3. (Slide-style videos only) after looking at every slide, set `"imagesReviewed": true` in the video's `review.json`. Animated videos skip this step.
+4. Upload with title/description/tags copied from the detail page + `thumbnail.png` + `captions.srt`, scheduled 12:00 PM ET.
+5. Mark it posted: `npm run content -- uploaded <id> https://youtu.be/…` (`-` instead of the link un-marks it).
 
 ## Troubleshooting
 

@@ -21,6 +21,7 @@ content/**/caps/
 content/**/thumbnail.png
 content/**/preview.mp4
 content/**/voice.mp3
+content/**/voice.txt
 content/**/final.mp4
 content/**/captions.srt
 .superpowers/

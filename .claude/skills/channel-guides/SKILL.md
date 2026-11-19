@@ -27,7 +27,7 @@ Branding (avatars, banners) lives in `branding/`. Colors and slide themes come f
 - Season 1: 14 videos per channel, one per day per channel, **Mon 2026-11-23 → Sun 2026-12-06**.
 - Video NN posts on `2026-11-23 + (NN−1)` days, folder `content/<date>/<channel>__NN-<slug>/`.
 - Post time: **12:00 PM ET**. In winter (EST, UTC−5, which covers this season) that is 00:00 Vietnam time the next day; during US daylight time it is 23:00 Vietnam time the same day.
-- Each video is longer than the last: `target_minutes` ≈ 1.0–1.1, 1.67, 2.33 … 9.67 (+~0.67 per video). Later seasons: agree the lengths with the user first. Narration rate is 163 wpm, so words ≈ `target_minutes × 163`.
+- Length: every video is **6–8 minutes** (for watch time). `target_minutes` 6.0–7.9, rising slowly from video to video (episodes 01–08 were expanded on 2026-11-19 to 6.0 → 7.4, +0.2 per video; 09–14 stay at 6.33–9.67; 15–34 run 6.0 → 7.9). Never write a new episode under 6 minutes. Narration rate is 163 wpm, so words ≈ `target_minutes × 163`.
 
 ## Medical policy (Inside Your Body)
 

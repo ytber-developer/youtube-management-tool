@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 const pack = require('../lib/pack');
 
-const DIR = path.resolve(__dirname, '../../content/2026-11-23/cosmic-what-if__01-fell-into-a-black-hole');
+const DIR = path.resolve(__dirname, 'fixtures/2026-11-23/cosmic-what-if__01-fell-into-a-black-hole');
 const script = JSON.parse(fs.readFileSync(path.join(DIR, 'script.json'), 'utf8'));
 const credits = [
   { scene: 1, credit: 'NASA/JPL-Caltech', url: 'https://images.nasa.gov/details/PIA16695', source: 'NASA Image and Video Library' },
@@ -29,4 +29,13 @@ test('metadataMarkdown has title, description, deduplicated credits, tags, post 
   assert.ok(md.includes(script.tags.join(', ')));
   assert.ok(md.includes('12:00 PM ET (00:00 giờ VN ngày 2026-11-24)'));
   assert.ok(md.includes('Adam'));
+});
+
+test('animated videos credit only the animation and icons, not leftover slide images', () => {
+  const anim = { ...script, style: 'anim' };
+  const desc = pack.youtubeDescription(anim, credits);
+  assert.ok(desc.includes('Original animation by Cosmic What If'));
+  assert.ok(desc.includes('Fluent Emoji'));
+  assert.ok(!desc.includes('NASA/JPL-Caltech'));
+  assert.ok(pack.metadataMarkdown(anim, credits, { date: '2026-11-23' }).includes(desc));
 });

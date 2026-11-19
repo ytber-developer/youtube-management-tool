@@ -21,12 +21,28 @@ function creditLines(credits) {
   return [...seen].map(([credit, url]) => `- ${credit}${url ? ` (${url})` : ''}`);
 }
 
+/** Credit ảnh cho mô tả YouTube. Video hoạt hình không dùng ảnh trong images/ → chỉ ghi animation + icon */
+function imageCredits(script, credits) {
+  if (script.style === 'anim') {
+    return creditLines([{ credit: `Original animation by ${(CHANNELS[script.channel] || {}).name || 'the channel'}` },
+      { credit: 'Icons: Fluent Emoji by Microsoft (MIT License)', url: 'https://github.com/microsoft/fluentui-emoji' }]);
+  }
+  return creditLines(credits);
+}
+
+/** Mô tả đăng YouTube nguyên khối: description + credit ảnh */
+function youtubeDescription(script, credits) {
+  const lines = imageCredits(script, credits);
+  return String(script.description || '').trim() + (lines.length ? `\n\nImages:\n${lines.join('\n')}` : '');
+}
+
+/** Giờ đăng 12:00 PM ET (mùa đông = 00:00 giờ VN hôm sau) */
+const postTime = (date) => ({ et: `${date} 12:00 PM ET`, vn: `00:00 ngày ${nextDay(date)} (giờ VN)` });
+
 function metadataMarkdown(script, credits, { date }) {
   const ch = CHANNELS[script.channel] || {};
-  const lines = creditLines(script.style === 'anim'
-    ? [{ credit: `Original animation by ${(CHANNELS[script.channel] || {}).name || 'the channel'}` }, { credit: 'Icons: Fluent Emoji by Microsoft (MIT License)', url: 'https://github.com/microsoft/fluentui-emoji' }, ...credits]
-    : credits);
-  const description = script.description.trim() + (lines.length ? `\n\nImages:\n${lines.join('\n')}` : '');
+  const lines = imageCredits(script, credits);
+  const description = youtubeDescription(script, credits);
   const chars = narrationText(script).length;
   const minutes = (script.scenes.reduce((a, s) => a + words(s.narration), 0) / CHANNELS.WPM).toFixed(1);
   return `# ${script.title}
@@ -64,4 +80,4 @@ function writeAll(dir) {
   fs.writeFileSync(path.join(dir, 'metadata.md'), metadataMarkdown(script, credits, { date }));
 }
 
-module.exports = { narrationText, metadataMarkdown, writeAll, creditLines };
+module.exports = { narrationText, metadataMarkdown, writeAll, creditLines, youtubeDescription, postTime };

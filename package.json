@@ -17,6 +17,7 @@
     "build:frontend": "npm run build -w frontend",
     "start:frontend": "npm run start -w frontend",
     "setup": "npm install",
+    "prepare": "git config core.hooksPath .githooks || true",
     "migrate": "node src/database/migrate.js",
     "migrate:undo": "node src/database/migrate.js --undo",
     "migrate:fresh": "node src/database/migrate.js --fresh",
@@ -26,7 +27,8 @@
     "content": "node content-tools/cli.js",
     "test:content": "node --test content-tools/test/*.test.js",
     "content:setup": "node content-tools/setup.js",
-    "content:search": "node content-tools/search.js"
+    "content:search": "node content-tools/search.js",
+    "secrets:scan": "gitleaks git . --redact --no-banner"
   },
   "dependencies": {
     "@huggingface/transformers": "^4.3.2",

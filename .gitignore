@@ -32,3 +32,24 @@ content/**/*.part.wav
 # Giọng đọc Kokoro (môi trường Python + mô hình tải về)
 .venv-tts/
 .venv-img/
+# ── Dữ liệu nhạy cảm: KHÔNG BAO GIỜ commit ─────────────────────────
+# Database / bản dump (chứa email, mật khẩu, mã 2FA của account)
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+*.sql
+*.bundle
+# Biến môi trường thật (chỉ commit file *.example)
+.env.*
+!.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+# Cookie / phiên đăng nhập / khoá
+*cookies*.json
+*.pem
+*.key
+# Danh sách account, proxy xuất ra từ tool
+/accounts*.csv
+/proxies*.txt

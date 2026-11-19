@@ -5,10 +5,17 @@ const fs = require('fs');
 // Configure multer for video file upload
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    // Sử dụng email từ body để tạo folder riêng cho mỗi account
-    const email = req.body.email || req.body.id || 'default';
-    const uploadDir = path.join(__dirname, '../../uploads/videos', email);
-    
+    // Tạo folder riêng cho mỗi account. Tên folder lấy từ input của request nên
+    // phải làm sạch: chỉ giữ ký tự an toàn, để "../" hay "C:\..." không thể
+    // ghi file ra ngoài uploads/videos (path traversal).
+    const baseDir = path.resolve(__dirname, '../../uploads/videos');
+    const raw = String(req.body.email || req.body.id || 'default');
+    const folder = raw.replace(/[^a-zA-Z0-9._-]/g, '_').replace(/^\.+/, '_').slice(0, 100) || 'default';
+    const uploadDir = path.resolve(baseDir, folder);
+    if (!uploadDir.startsWith(baseDir + path.sep)) {
+      return cb(new Error('Tên thư mục upload không hợp lệ'));
+    }
+
     if (!fs.existsSync(uploadDir)) {
       fs.mkdirSync(uploadDir, { recursive: true });
     }

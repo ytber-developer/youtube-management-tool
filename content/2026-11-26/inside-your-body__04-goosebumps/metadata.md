@@ -21,6 +21,8 @@ Sources:
 This video is for educational purposes only and is not medical advice.
 
 Images:
+- Original animation by Inside Your Body
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 - EverJean / CC BY 2.0 (https://commons.wikimedia.org/wiki/File:Goose_bumps.jpg)
 - Fanny (Appleton) Longfellow (1817-1861) / Public domain (https://commons.wikimedia.org/wiki/File:Frances_(Appleton)_Longfellow_to_Emmeline_(Austin)_Wadsworth,_22_August_1841_(4ae1bc0a-8d67-4b14-bf29-ac0d12b7e9c1).jpg)
 - vastateparksstaff / CC BY 2.0 (https://www.flickr.com/photos/37922399@N05/32045348853)
@@ -38,6 +40,8 @@ Images:
 goosebumps, goose bumps, why do we get goosebumps, arrector pili, piloerection, frisson, hair follicle stem cells, sympathetic nervous system, human body, evolution, science explained, inside your body
 
 ## Image credits
+- Original animation by Inside Your Body
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 - EverJean / CC BY 2.0 (https://commons.wikimedia.org/wiki/File:Goose_bumps.jpg)
 - Fanny (Appleton) Longfellow (1817-1861) / Public domain (https://commons.wikimedia.org/wiki/File:Frances_(Appleton)_Longfellow_to_Emmeline_(Austin)_Wadsworth,_22_August_1841_(4ae1bc0a-8d67-4b14-bf29-ac0d12b7e9c1).jpg)
 - vastateparksstaff / CC BY 2.0 (https://www.flickr.com/photos/37922399@N05/32045348853)

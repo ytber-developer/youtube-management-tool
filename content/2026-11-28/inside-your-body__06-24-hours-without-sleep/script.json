@@ -42,6 +42,23 @@
       "url": "https://irp.nih.gov/news-and-events/in-the-news/lack-of-sleep-may-be-linked-to-risk-factor-for-alzheimers-disease"
     }
   ],
+  "style": "anim",
+  "thumbnail_anim": {
+    "thumbAction": "yawn",
+    "props": [
+      {
+        "icon": "alarm-clock",
+        "at": "right",
+        "size": "xl",
+        "anim": "shake"
+      },
+      {
+        "icon": "beer-mug",
+        "at": "left",
+        "size": "m"
+      }
+    ]
+  },
   "scenes": [
     {
       "narration": "Skip one night of sleep, and by morning your brain performs in some ways like a drunk one. Here's how you get there.",
@@ -52,6 +69,24 @@
         "query": "tired man awake at night bed",
         "note": "person lying awake in a dark bedroom",
         "openverse_id": "d89f2963-1b2f-4aef-b6cc-6e9ce3619f0a"
+      },
+      "anim": {
+        "action": "yawn",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "beer-mug",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "sleep",
+        "bg": "room"
       }
     },
     {
@@ -62,6 +97,23 @@
         "type": "stock",
         "query": "alarm clock morning sunlight bedroom",
         "note": "alarm clock showing seven in a sunny bedroom"
+      },
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "m"
+          }
+        ],
+        "text": "HOUR ZERO",
+        "bg": "room"
       }
     },
     {
@@ -71,6 +123,22 @@
       "visual": {
         "type": "diagram",
         "spec": "twenty-four hour circle: daytime light keeps you alert, evening darkness, melatonin rising in the evening and peaking in the early morning, and a sleep pressure bar growing through waking hours"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "mantelpiece-clock",
+            "at": "bubble",
+            "size": "l"
+          },
+          {
+            "icon": "crescent-moon",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -81,6 +149,22 @@
         "type": "stock",
         "query": "person using phone in bed at night",
         "note": "face lit by a phone screen in a dark room"
+      },
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "mobile-phone",
+            "at": "hand",
+            "size": "m"
+          },
+          {
+            "icon": "crescent-moon",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
       }
     },
     {
@@ -92,6 +176,23 @@
         "query": "clock showing midnight",
         "note": "clock face at midnight",
         "openverse_id": "ebd35320-c794-47b7-8220-204c85b77a3e"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "beer-mug",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "alarm-clock",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "HOUR 17",
+        "bg": "night"
       }
     },
     {
@@ -103,6 +204,22 @@
         "query": "student studying late at night tired",
         "note": "student slumped over books under a desk lamp",
         "openverse_id": "48a630fe-a7a2-403a-9e24-b4a2e4a147b6"
+      },
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "open-book",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "snail",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
       }
     },
     {
@@ -114,6 +231,25 @@
         "query": "man nodding off at computer",
         "note": "person nodding off in front of a screen",
         "openverse_id": "33b8700c-1eb9-4848-889d-ee8f6c254099"
+      },
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "open-book",
+            "at": "right",
+            "size": "m",
+            "anim": "fall"
+          },
+          {
+            "icon": "zzz",
+            "at": "above",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "text": "MICROSLEEPS",
+        "bg": "night"
       }
     },
     {
@@ -123,6 +259,24 @@
       "visual": {
         "type": "diagram",
         "spec": "horizontal scale of hours awake: seventeen hours marked as similar to blood alcohol 0.05 percent, twenty-four hours marked as similar to 0.10 percent, with the US driving limit of 0.08 shown as a line"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "automobile",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "beer-mug",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "text": "HOUR 24",
+        "camera": "shake",
+        "bg": "room"
       }
     },
     {
@@ -133,6 +287,24 @@
         "type": "science",
         "query": "amygdala brain illustration",
         "note": "brain illustration with the amygdala highlighted"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "police-car-light",
+            "at": "top",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "lab"
       }
     },
     {
@@ -142,6 +314,23 @@
       "visual": {
         "type": "diagram",
         "spec": "side view of the brain: prefrontal cortex and amygdala connected by an arrow; rested brain shows a strong connection, sleep-deprived brain shows a faint connection and a brighter amygdala"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "bubble",
+            "size": "l"
+          },
+          {
+            "icon": "anger-symbol",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "face": "worry",
+        "bg": "paper"
       }
     },
     {
@@ -152,6 +341,23 @@
         "type": "stock",
         "query": "person eating snack late at night kitchen",
         "note": "person grabbing a snack from the fridge at night"
+      },
+      "anim": {
+        "action": "eat",
+        "props": [
+          {
+            "icon": "hamburger",
+            "at": "hand",
+            "size": "m"
+          },
+          {
+            "icon": "chart-increasing",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "HUNGRY HORMONES",
+        "bg": "room"
       }
     },
     {
@@ -162,6 +368,24 @@
         "type": "science",
         "query": "white blood cells illustration NIH",
         "note": "illustration of white blood cells"
+      },
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "candy",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "microbe",
+            "at": "left",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "face": "sick",
+        "bg": "room"
       }
     },
     {
@@ -172,6 +396,24 @@
         "type": "science",
         "query": "PET brain scan image",
         "note": "colorful PET brain scan, non-alarming"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "text": "BETA AMYLOID",
+        "bg": "lab"
       }
     },
     {
@@ -182,6 +424,18 @@
         "type": "science",
         "query": "hippocampus brain illustration",
         "note": "anatomical illustration of the hippocampus and thalamus"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "face": "worry",
+        "bg": "lab"
       }
     },
     {
@@ -192,6 +446,23 @@
         "type": "stock",
         "query": "sunrise through window tired woman",
         "note": "person squinting at morning sunlight after a sleepless night"
+      },
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "m"
+          }
+        ],
+        "bg": "room"
       }
     },
     {
@@ -202,6 +473,24 @@
         "type": "stock",
         "query": "calendar on wall bedroom night",
         "note": "calendar and bedside lamp, suggesting nights adding up"
+      },
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "bed",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "red-heart",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "text": "7–8 HOURS",
+        "bg": "night"
       }
     },
     {
@@ -212,6 +501,23 @@
         "type": "stock",
         "query": "woman sleeping peacefully in bed",
         "note": "person sleeping peacefully"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "brain",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -220,6 +526,10 @@
       "sub": "",
       "visual": {
         "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
       }
     }
   ]

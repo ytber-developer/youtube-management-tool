@@ -1,0 +1,766 @@
+{
+  "channel": "inside-your-body",
+  "number": 28,
+  "slug": "why-you-blush",
+  "style": "anim",
+  "target_minutes": 7.3,
+  "title": "Why Do You Blush? The Hidden Purpose of a Red Face",
+  "thumbnail_text": "WHY YOU BLUSH",
+  "description": "Darwin called blushing the most human of all expressions. Here is what actually happens when your cheeks turn red: the alarm system that widens the blood vessels in your face, what a karaoke brain-scan study revealed about where blushing starts, and why a blush may work as a silent apology that makes people trust you more.\n\nSources:\n- NHS - Blushing: https://www.nhs.uk/conditions/blushing/\n- The Psychologist (British Psychological Society) - The puzzle of blushing: https://www.bps.org.uk/psychologist/puzzle-blushing\n- Nikolic et al. (2024), Proceedings of the Royal Society B - The blushing brain: https://doi.org/10.1098/rspb.2024.0958\n- EurekAlert! (Netherlands Institute for Neuroscience) - What happens in your brain when you blush: https://www.eurekalert.org/news-releases/1051559\n- Dijk, de Jong & Peters (2009), Emotion - The remedial value of blushing in the context of transgressions and mishaps: https://cris.maastrichtuniversity.nl/en/publications/the-remedial-value-of-blushing-in-the-context-of-transgressions-a/\n- Dijk et al. (2011), Emotion - Saved by the blush: being trusted despite defecting: https://www.dare.uva.nl/id/15d6be9c-5196-4a96-a25c-d7ed0f69ed00\n- Drummond (1997), Psychophysiology - The effect of adrenergic blockade on blushing and facial flushing: https://researchportal.murdoch.edu.au/esploro/outputs/journalArticle/The-effect-of-adrenergic-blockade-on/991005543775307891\n- Darwin (1872) - The Expression of the Emotions in Man and Animals, Chapter 13: https://brocku.ca/MeadProject/Darwin/Darwin_1872_13.html\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": [
+    "blushing",
+    "why do we blush",
+    "embarrassment",
+    "red face",
+    "sympathetic nervous system",
+    "fight or flight",
+    "darwin",
+    "psychology",
+    "social anxiety",
+    "human body",
+    "science explained",
+    "inside your body"
+  ],
+  "sources": [
+    {
+      "title": "NHS - Blushing",
+      "url": "https://www.nhs.uk/conditions/blushing/"
+    },
+    {
+      "title": "The Psychologist (British Psychological Society) - The puzzle of blushing",
+      "url": "https://www.bps.org.uk/psychologist/puzzle-blushing"
+    },
+    {
+      "title": "Nikolic et al. (2024), Proceedings of the Royal Society B - The blushing brain",
+      "url": "https://doi.org/10.1098/rspb.2024.0958"
+    },
+    {
+      "title": "EurekAlert! (Netherlands Institute for Neuroscience) - What happens in your brain when you blush",
+      "url": "https://www.eurekalert.org/news-releases/1051559"
+    },
+    {
+      "title": "Dijk, de Jong & Peters (2009), Emotion - The remedial value of blushing in the context of transgressions and mishaps",
+      "url": "https://cris.maastrichtuniversity.nl/en/publications/the-remedial-value-of-blushing-in-the-context-of-transgressions-a/"
+    },
+    {
+      "title": "Dijk et al. (2011), Emotion - Saved by the blush: being trusted despite defecting",
+      "url": "https://www.dare.uva.nl/id/15d6be9c-5196-4a96-a25c-d7ed0f69ed00"
+    },
+    {
+      "title": "Drummond (1997), Psychophysiology - The effect of adrenergic blockade on blushing and facial flushing",
+      "url": "https://researchportal.murdoch.edu.au/esploro/outputs/journalArticle/The-effect-of-adrenergic-blockade-on/991005543775307891"
+    },
+    {
+      "title": "Darwin (1872) - The Expression of the Emotions in Man and Animals, Chapter 13",
+      "url": "https://brocku.ca/MeadProject/Darwin/Darwin_1872_13.html"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "flushed-face",
+        "at": "right",
+        "size": "l"
+      },
+      {
+        "icon": "fire",
+        "at": "top-left",
+        "size": "m"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "You trip in front of a crowd, and before you can even think, your cheeks start burning red. Why does your face give you away?",
+      "anim": {
+        "action": "fall-toward",
+        "props": [
+          {
+            "icon": "flushed-face",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "busts-in-silhouette",
+            "at": "far-right",
+            "size": "s"
+          }
+        ],
+        "face": "shock",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "Almost everyone knows the feeling. A wave of heat, a pink or red glow spreading across your face, and the uneasy sense that everyone in the room is staring right at it.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "fire",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "eyes",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "worry",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Charles Darwin was fascinated by it. In 1872 he called blushing the most peculiar and the most human of all expressions. He noticed that nobody can blush on purpose, and nobody can simply switch it off.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "books",
+            "at": "bubble",
+            "size": "m"
+          },
+          {
+            "icon": "scroll",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "text": "MOST HUMAN EXPRESSION"
+      }
+    },
+    {
+      "narration": "Today scientists understand a lot more about how a blush works, though some details are still a puzzle. So let's start in your skin, then travel up to your brain, and finally ask why blushing exists at all.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "brain",
+            "at": "top-left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "First, where it happens. A blush mostly lights up your cheeks and forehead, but it can spread to your ears, your neck and your upper chest. Researchers call this whole area the blush region.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "ear",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "flushed-face",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "THE BLUSH REGION"
+      }
+    },
+    {
+      "narration": "Your face is built for showing color. Its skin is packed with tiny looping capillaries, a large network of veins that can hold a lot of blood, and blood vessels sitting close to the surface.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "drop-of-blood",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "When you feel embarrassed, your sympathetic nervous system switches on. That's the same alarm system behind the fight or flight response, the one that makes your heart pound before a big test.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "shock"
+      }
+    },
+    {
+      "narration": "But in your face, this alarm does something unusual. Nerve signals tell the blood vessels in your facial skin to widen. Wider vessels let in more blood, and that extra blood shows through as a warm red glow.",
+      "anim": {
+        "action": "grow",
+        "props": [
+          {
+            "icon": "drop-of-blood",
+            "at": "right",
+            "size": "m",
+            "anim": "grow"
+          },
+          {
+            "icon": "flushed-face",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Researchers have found that the veins in your face are rich in so called beta adrenergic receptors, which respond to that alarm by relaxing and widening. Other chemical messengers, like nitric oxide, may play a part too.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "test-tube",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "drop-of-blood",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "Interestingly, people who blush a lot don't seem to have more of these receptors in their faces than people who rarely blush. One study suggested the difference may lie more in the mind than in the blood vessels.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "bubble",
+            "size": "m"
+          },
+          {
+            "icon": "drop-of-blood",
+            "at": "right",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "That's why a blush feels hot. You aren't imagining it. More warm blood near the surface really does raise your skin temperature, and that's exactly how one recent study measured blushing.",
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "thermometer",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "worry",
+        "text": "IT REALLY IS HOT"
+      }
+    },
+    {
+      "narration": "Not every blush looks the same. Psychologists describe a classic blush, a sudden wave of red, and a creeping blush, which spreads slowly over several minutes, often in blotchy patches.",
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "flushed-face",
+            "at": "right",
+            "size": "m",
+            "anim": "grow"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Embarrassment isn't the only trigger. The NHS notes that blushing is usually set off by embarrassment, heat or anxiety, and for some people, spicy food, alcohol or hot drinks can bring it on too.",
+      "anim": {
+        "action": "eat",
+        "props": [
+          {
+            "icon": "hot-pepper",
+            "at": "hand",
+            "size": "m"
+          },
+          {
+            "icon": "hot-beverage",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "A red face after a hot shower or a hard workout comes from your body shedding heat. The emotional blush is the strange one, because nothing about the situation is actually warming you up.",
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "s"
+          },
+          {
+            "icon": "sweat-droplets",
+            "at": "right",
+            "size": "m",
+            "anim": "fall"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "So what in your brain sets off a blush? For a long time, many scientists assumed blushing required a sophisticated skill: thinking about what other people are thinking about you.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "busts-in-silhouette",
+            "at": "bubble",
+            "size": "m"
+          },
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Darwin himself thought so. He argued that blushing comes from self attention, from suddenly picturing how we look in other people's eyes. It was a lovely idea, but in his day nobody could look inside a blushing brain.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "mirror",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "scroll",
+            "at": "left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "In 2024, a team in the Netherlands tested this in a memorable way. They asked teenage girls and young women to sing difficult karaoke songs, and they recorded every note.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "microphone",
+            "at": "hand",
+            "size": "m"
+          },
+          {
+            "icon": "musical-notes",
+            "at": "top",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "text": "KARAOKE TEST",
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Later, each volunteer lay in a brain scanner and watched videos of their own singing, plus videos of other people singing. They were told others would watch too, while sensors tracked the temperature of their cheeks.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "movie-camera",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "thermometer",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "As you might guess, people blushed more while watching themselves. That's the classic cringe. But the brain areas linked to the blushing were a surprise.",
+      "anim": {
+        "action": "hidden",
+        "props": [
+          {
+            "icon": "see-no-evil-monkey",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "The more someone blushed, the more active their cerebellum was, a region usually linked to movement and coordination. Areas involved in early vision lit up too, a sign they were watching very closely.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "eyes",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "But the brain regions typically used to imagine other people's thoughts were not active. The researchers suggested that blushing may be a fast, automatic emotional reaction, rather than the product of careful self reflection.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "text": "FAST AND AUTOMATIC"
+      }
+    },
+    {
+      "narration": "It was a small study, with forty participants who were all female, so it's far from the final word. The researchers also note that blushing increases during adolescence, when other people's opinions suddenly feel enormous.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "clipboard",
+            "at": "bubble",
+            "size": "m"
+          },
+          {
+            "icon": "busts-in-silhouette",
+            "at": "right",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Now for the biggest question. Why would evolution give us a signal that broadcasts our embarrassment to everyone? It sounds like terrible design. Wouldn't it be smarter to hide it?",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "red-question-mark",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "The leading idea is appeasement. A blush may work as a kind of silent apology. It says, I know I messed up, I care what you think, and I'm not a threat to you.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "folded-hands",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "dove",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "text": "A SILENT SORRY"
+      }
+    },
+    {
+      "narration": "Dutch researchers tested this in 2009. They showed volunteers pictures of people who had just had an accident or broken a social rule. Some faces had a blush added by computer, and others didn't.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "framed-picture",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "laptop",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "In most cases, the blushing faces were judged more favorably. People saw them as more sympathetic and more trustworthy than the very same faces without the blush.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "flushed-face",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "thumbs-up",
+            "at": "left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "A follow up study in 2011 went further. In a trust game, a player who blushed after acting unfairly was trusted more, and people expected her to be less likely to cheat again.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "handshake",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "game-die",
+            "at": "left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "So that burning face you hate may actually be working in your favor. To the people around you, it signals honesty, and it can soften how they react to your mistake.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "red-heart",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "busts-in-silhouette",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "It isn't magic, though. Researchers point out that in unclear situations, where it isn't obvious what happened, a blush can sometimes make a person look guilty instead.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "man-detective",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "red-question-mark",
+            "at": "bubble",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Part of a blush's power is that it's so hard to fake. You can force a smile on command, but you can't force a blush. That's what makes it believable.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "smiling-face-with-smiling-eyes",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "flushed-face",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Darwin went further. He believed humans are the only animals that blush from emotion. Monkeys may redden with passion, he wrote, but the embarrassed blush appears to be ours alone.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "monkey-face",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "scroll",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Here's a twist that may comfort you. Research suggests that how much people think they blush doesn't always match how much they actually do. Your blush may feel far more obvious to you than it looks to everyone else.",
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "relieved-face",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "eyes",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "For some people, blushing becomes a source of real distress. Worrying about it can make it feel worse, and researchers have found that fear of blushing is closely linked to social anxiety.",
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "anxious-face-with-sweat",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "The NHS suggests seeing a doctor if blushing is affecting your everyday life, or if you think a medical condition or a medicine might be causing it. Talking therapies can help when anxiety is driving it.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "stethoscope",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "speech-balloon",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "room",
+        "text": "TALK TO A DOCTOR"
+      }
+    },
+    {
+      "narration": "And redness that stays put, with small visible blood vessels or spots, may be a skin condition called rosacea rather than ordinary blushing. That's also worth getting checked.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "woman-health-worker",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "So the next time your cheeks catch fire, remember what's really happening. Your nerves are widening the vessels in your face, and you're sending a message older than words: I care what you think.",
+      "anim": {
+        "action": "wave",
+        "props": [
+          {
+            "icon": "flushed-face",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "red-heart",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "camera": "zoom-out",
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

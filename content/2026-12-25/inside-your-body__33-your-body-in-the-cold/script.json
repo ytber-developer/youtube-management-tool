@@ -1,0 +1,779 @@
+{
+  "channel": "inside-your-body",
+  "number": 33,
+  "slug": "your-body-in-the-cold",
+  "style": "anim",
+  "target_minutes": 7.8,
+  "title": "What the Cold Does to Your Body: 5 Defenses Against Freezing",
+  "thumbnail_text": "YOUR BODY VS COLD",
+  "description": "Step outside on a freezing morning and your body launches a five-part defense plan: narrowing blood vessels, goosebumps, a hidden heater called brown fat, shivering that can multiply your heat output, and the feeling of cold that pushes you to grab a coat. Here is how each one works, why your fingers get cold first, the warning signs of hypothermia and frostbite, and whether cold weather really gives you a cold.\n\nSources:\n- Cleveland Clinic, Body Temperature: What Is and Isn't Normal: https://health.clevelandclinic.org/body-temperature-what-is-and-isnt-normal\n- Cleveland Clinic, Hypothalamus: https://my.clevelandclinic.org/health/body/22566-hypothalamus\n- Cleveland Clinic, Vasoconstriction: https://my.clevelandclinic.org/health/body/21697-vasoconstriction\n- Cleveland Clinic, Why Do You Get Goosebumps?: https://health.clevelandclinic.org/why-do-you-get-goosebumps\n- Cleveland Clinic, Brown Fat: https://my.clevelandclinic.org/health/body/24015-brown-fat\n- National Academies (1996), Nutritional Needs in Cold and High-Altitude Environments, Muscle Metabolism and Shivering During Cold Stress: https://www.nationalacademies.org/read/5197/chapter/15\n- Mayo Clinic, Hypothermia: https://www.mayoclinic.org/diseases-conditions/hypothermia/symptoms-causes/syc-20352682\n- CDC, Preventing Hypothermia: https://www.cdc.gov/winter-weather/prevention/index.html\n- CDC, Preventing Frostbite: https://www.cdc.gov/winter-weather/prevention/preventing-frostbite.html\n- CDC, About Common Cold: https://www.cdc.gov/common-cold/about/index.html\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": [
+    "cold weather",
+    "what cold does to your body",
+    "body temperature",
+    "shivering",
+    "brown fat",
+    "goosebumps",
+    "vasoconstriction",
+    "hypothermia",
+    "frostbite",
+    "winter health",
+    "human body",
+    "science explained",
+    "inside your body"
+  ],
+  "sources": [
+    {
+      "title": "Cleveland Clinic - Body Temperature: What Is and Isn't Normal",
+      "url": "https://health.clevelandclinic.org/body-temperature-what-is-and-isnt-normal"
+    },
+    {
+      "title": "Cleveland Clinic - Hypothalamus",
+      "url": "https://my.clevelandclinic.org/health/body/22566-hypothalamus"
+    },
+    {
+      "title": "Cleveland Clinic - Vasoconstriction",
+      "url": "https://my.clevelandclinic.org/health/body/21697-vasoconstriction"
+    },
+    {
+      "title": "Cleveland Clinic - Why Do You Get Goosebumps?",
+      "url": "https://health.clevelandclinic.org/why-do-you-get-goosebumps"
+    },
+    {
+      "title": "Cleveland Clinic - Brown Fat",
+      "url": "https://my.clevelandclinic.org/health/body/24015-brown-fat"
+    },
+    {
+      "title": "National Academies (1996) - Nutritional Needs in Cold and High-Altitude Environments, ch. 10: Muscle Metabolism and Shivering During Cold Stress",
+      "url": "https://www.nationalacademies.org/read/5197/chapter/15"
+    },
+    {
+      "title": "Mayo Clinic - Hypothermia",
+      "url": "https://www.mayoclinic.org/diseases-conditions/hypothermia/symptoms-causes/syc-20352682"
+    },
+    {
+      "title": "CDC - Preventing Hypothermia",
+      "url": "https://www.cdc.gov/winter-weather/prevention/index.html"
+    },
+    {
+      "title": "CDC - Preventing Frostbite",
+      "url": "https://www.cdc.gov/winter-weather/prevention/preventing-frostbite.html"
+    },
+    {
+      "title": "CDC - About Common Cold",
+      "url": "https://www.cdc.gov/common-cold/about/index.html"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "shiver",
+    "props": [
+      {
+        "icon": "snowflake",
+        "at": "right",
+        "size": "l",
+        "anim": "spin"
+      },
+      {
+        "icon": "cold-face",
+        "at": "top-left",
+        "size": "m"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "You step outside on a freezing morning. Within seconds, your body launches a defense plan, and your fingers are the first to pay.",
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "snowflake",
+            "at": "right",
+            "size": "l",
+            "anim": "fall"
+          },
+          {
+            "icon": "snowman",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "park",
+        "face": "worry",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "What is it defending? The center of your body, where your vital organs live. Doctors say a normal body temperature generally runs somewhere between about ninety-seven and ninety-nine degrees Fahrenheit.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "thermometer",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "room",
+        "text": "97 TO 99°F"
+      }
+    },
+    {
+      "narration": "The famous ninety-eight point six is really an average that traces back to a study from the eighteen hundreds. Your normal shifts a little over your lifetime, but your body works hard to keep it in a narrow range.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "open-book",
+            "at": "bubble"
+          },
+          {
+            "icon": "thermometer",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "The control center is a small region deep in your brain called the hypothalamus. It helps manage your body temperature, keeping track of how warm you are and correcting things when you drift too far.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "gear",
+            "at": "top-left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "When the cold hits, your body has a whole series of defenses ready to go. Let's count them off, one by one, starting with the one that kicks in during the very first moments.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "shield",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "snowflake",
+            "at": "top-left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Defense number one is a squeeze. The muscles wrapped around the small blood vessels in your skin tighten, making the space inside those vessels smaller. Doctors call this vasoconstriction.",
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "drop-of-blood",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          }
+        ],
+        "bg": "body",
+        "text": "THE SQUEEZE"
+      }
+    },
+    {
+      "narration": "Less blood flows near the surface of your skin, so less heat leaks out into the cold air. Warm blood stays deeper inside, around your organs. It is like closing the vents in a house to keep the heat in.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "house",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "fire",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "That is why your fingers, toes, nose, and ears get cold first. Your body is making a trade. It lets the edges of you chill, so it can protect your core, which matters far more for survival.",
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "hand-with-fingers-splayed",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "nose",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "park",
+        "face": "worry",
+        "text": "EDGES FOR CORE"
+      }
+    },
+    {
+      "narration": "The squeeze has a side effect. When blood vessels narrow, it takes more pressure to push blood through them, so your blood pressure rises. In the cold, your heart is working a little harder.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "chart-increasing",
+            "at": "top-left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "So if you have a heart or blood pressure condition, it is worth asking your doctor how cold weather and hard outdoor work, like shoveling snow, might affect you, and what is safe for you.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "stethoscope",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "snowman-without-snow",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Defense number two is a leftover from our furry past. Tiny muscles at the base of each hair follicle contract and pull the hairs upright, raising little bumps across your skin. You know them as goosebumps.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "cold-face",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "shock",
+        "text": "GOOSEBUMPS"
+      }
+    },
+    {
+      "narration": "In furry animals, cold can thicken the coat. With so little body hair, people do not get much out of it. Cleveland Clinic says goosebumps may help hold in a bit of heat, but that is about it.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "polar-bear",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Defense number three is a secret heater. Most of your fat simply stores energy. But a special kind, called brown fat, breaks down sugar and fat molecules to make heat, without you moving a muscle.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "fire",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "battery",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "text": "BROWN FAT"
+      }
+    },
+    {
+      "narration": "Brown fat gets its color from being packed with mitochondria, the tiny power plants inside cells, which contain a lot of iron. In adults, it sits in spots like around your neck, your kidneys, and the big vessels in your chest.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Babies rely on it most of all. Newborns have much more brown fat for their size, about two to five percent of their body weight, mostly in the back, neck, and shoulders. It shrinks as children grow.",
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "baby",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "fire",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "night",
+        "face": "sleep"
+      }
+    },
+    {
+      "narration": "And it kicks in early. Cleveland Clinic notes that brown fat switches on right before you start to shiver, like a quiet heater running in the background before the noisy backup arrives.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "candle",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Defense number four is the loud one, shivering. Your muscles begin contracting rapidly, over and over. They are not trying to move you anywhere. They are burning fuel for one reason, to make heat.",
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "snowflake",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "bg": "park",
+        "face": "worry",
+        "camera": "shake",
+        "text": "SHIVERING"
+      }
+    },
+    {
+      "narration": "And it works. Because so many muscle groups join in, shivering can raise your heat production about four to five times above its resting level. It is your body's emergency furnace.",
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "fire",
+            "at": "right",
+            "size": "l",
+            "anim": "grow"
+          }
+        ],
+        "bg": "park",
+        "text": "FOUR TO FIVE TIMES"
+      }
+    },
+    {
+      "narration": "But that furnace is expensive. Shivering burns through your stored energy, and it is exhausting. If you stay in the cold long enough, you start running low on fuel, and your temperature can begin to slip.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "low-battery",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "park",
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "That brings us to defense number five, your smartest one. You feel cold. That uncomfortable feeling pushes you to grab a coat, find shelter, move around, or reach for something warm to drink.",
+      "anim": {
+        "action": "drink",
+        "props": [
+          {
+            "icon": "hot-beverage",
+            "at": "hand"
+          },
+          {
+            "icon": "scarf",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "room",
+        "face": "smile",
+        "text": "YOUR SMARTEST DEFENSE"
+      }
+    },
+    {
+      "narration": "In fact, your choices are your strongest protection. Dry layers, a hat, and gloves can do more than any of your body's automatic tricks can manage on their own, especially on the coldest days.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "coat",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "gloves",
+            "at": "top-left",
+            "size": "s"
+          },
+          {
+            "icon": "billed-cap",
+            "at": "bottom-right",
+            "size": "s"
+          }
+        ],
+        "bg": "park",
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Because two things can overwhelm all five defenses. Wind strips away the thin layer of warm air that sits next to your skin. And water pulls heat out of your body much faster than air does.",
+      "anim": {
+        "action": "fall-toward",
+        "props": [
+          {
+            "icon": "wind-face",
+            "at": "right",
+            "size": "l",
+            "anim": "approach"
+          },
+          {
+            "icon": "droplet",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "park",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "That is why getting wet is so risky. The CDC notes that hypothermia can happen even above forty degrees Fahrenheit, if someone gets chilled from rain, sweat, or cold water.",
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "cloud-with-snow",
+            "at": "above",
+            "size": "m"
+          },
+          {
+            "icon": "sweat-droplets",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "bg": "park",
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "When heat loss wins, your core temperature drops below ninety-five degrees Fahrenheit, or thirty-five Celsius. That is called hypothermia, and doctors treat it as a medical emergency.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "thermometer",
+            "at": "right",
+            "size": "l",
+            "anim": "shrink"
+          },
+          {
+            "icon": "warning",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "sick",
+        "text": "BELOW 95°F"
+      }
+    },
+    {
+      "narration": "Watch for shivering, exhaustion, fumbling hands, slurred speech, memory loss, confusion, and drowsiness. In babies, the warning signs are bright red, cold skin and very low energy.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "warning",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "baby",
+            "at": "top-left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Here is the tricky part. Hypothermia muddles your thinking, so people often do not realize what is happening to them. And as it gets worse, shivering can stop. So no shivering does not mean you are safe.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "bubble"
+          },
+          {
+            "icon": "red-question-mark",
+            "at": "right",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "night",
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "If you suspect hypothermia, get medical help right away. Move the person somewhere warm, remove any wet clothing, and warm the center of their body first, their chest, neck, head, and groin.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "hospital",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "bed",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "night",
+        "text": "GET HELP FAST"
+      }
+    },
+    {
+      "narration": "Some people face a higher risk: older adults without enough heat or warm clothing, babies sleeping in cold rooms, people outside for long stretches, and people who have been drinking. Alcohol even dulls your shivering.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "older-person",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "beer-mug",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Your fingers and toes face a separate danger called frostbite, an injury caused by freezing. It most often strikes the nose, ears, cheeks, chin, fingers, and toes, the very parts your body chills first.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "ice",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "ear",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "shock",
+        "text": "FROSTBITE"
+      }
+    },
+    {
+      "narration": "Early on, skin turns red or painful. Then it may look white or grayish yellow, feel oddly firm or waxy, and go numb. Because it is numb, people often do not notice until someone else points it out.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "hand-with-fingers-splayed",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Get out of the cold and seek medical care. Warm the area in warm, not hot, water, and do not rub it or use a heating pad or a fire. Numb skin can burn without you feeling it.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "bathtub",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "cross-mark",
+            "at": "top-left",
+            "size": "s",
+            "anim": "fade-in"
+          }
+        ],
+        "bg": "room",
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "Finally, a famous myth. Does going out in the cold give you a cold? Not by itself. Colds are caused by viruses, more than two hundred different kinds, and rhinoviruses are the most common.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "sneezing-face",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "sick",
+        "text": "VIRUSES, NOT WEATHER"
+      }
+    },
+    {
+      "narration": "Colds can happen any time of year. The viruses spread mainly through droplets from coughs and sneezes, and through touching contaminated surfaces. So washing your hands helps more than any hat.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "soap",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "bubbles",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "room",
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "So step out into the cold, and your body becomes a fortress. The vents close, a hidden heater switches on, your muscles turn into a furnace, and your brain nudges you toward a warm coat.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "snowflake",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "fire",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "All to protect a few precious degrees deep inside you. Your fingers might complain, but they are part of the plan. Your body would rather let its edges get cold than let its core cool down.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "snowman",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "park",
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

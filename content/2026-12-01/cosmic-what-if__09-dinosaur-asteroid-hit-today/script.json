@@ -3,6 +3,7 @@
   "number": 9,
   "slug": "dinosaur-asteroid-hit-today",
   "target_minutes": 6.33,
+  "style": "anim",
   "title": "What If the Dinosaur-Killing Asteroid Hit Earth Today?",
   "thumbnail_text": "IT HITS TODAY",
   "description": "Sixty-six million years ago, a rock about six miles wide slammed into Mexico and ended the age of dinosaurs. What would the same impact do to our world of cities, coastlines and farms, minute by minute, and could it actually happen again?\n\nSources:\n- AGU, End-Cretaceous asteroid caused massive global tsunami peaking at a mile high: https://news.agu.org/press-release/end-cretaceous-asteroid-caused-massive-global-tsunami-peaking-at-a-mile-high\n- NOAA PMEL, First global tsunami simulation of the Chicxulub asteroid impact: https://www.pmel.noaa.gov/news-and-media/highlights/first-global-tsunami-simulation-chicxulub-asteroid-impact-66-million-years-ago\n- Science News Explores, Reliving the last day of the dinosaurs: https://www.snexplores.org/article/reliving-last-day-dinosaurs\n- ScienceDaily / Imperial College London, Dinosaur-dooming asteroid struck Earth at deadliest possible angle: https://www.sciencedaily.com/releases/2020/05/200526111320.htm\n- NASA Earth Observatory, Relief Map, Yucatan Peninsula, Mexico: https://science.nasa.gov/earth/earth-observatory/relief-map-yucatan-peninsula-mexico-3267/\n- NASA Planetary Defense Strategy (2023): https://www.nasa.gov/wp-content/uploads/2023/06/nasa_-_planetary_defense_strategy_-_final-508.pdf",
@@ -46,6 +47,17 @@
       "url": "https://www.nasa.gov/wp-content/uploads/2023/06/nasa_-_planetary_defense_strategy_-_final-508.pdf"
     }
   ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "comet",
+        "at": "right",
+        "size": "xl",
+        "anim": "approach"
+      }
+    ]
+  },
   "scenes": [
     {
       "narration": "Sixty-six million years ago, a rock the size of a city ended the age of dinosaurs. Now imagine it arrives this afternoon, same spot.",
@@ -55,6 +67,20 @@
         "type": "nasa",
         "query": "asteroid impact artist concept",
         "note": "giant asteroid striking Earth"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "comet",
+            "at": "right",
+            "size": "l",
+            "anim": "approach"
+          }
+        ],
+        "text": "THIS AFTERNOON",
+        "bg": "sky",
+        "camera": "zoom-in"
       }
     },
     {
@@ -65,6 +91,23 @@
         "type": "nasa",
         "query": "asteroid Bennu OSIRIS-REx",
         "note": "close-up of a rocky asteroid surface"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "comet",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "airplane",
+            "at": "top",
+            "size": "s",
+            "anim": "bob"
+          }
+        ]
       }
     },
     {
@@ -75,6 +118,23 @@
         "type": "nasa",
         "query": "Yucatan Peninsula Chicxulub crater relief map",
         "note": "shaded relief map of the Yucatan showing the buried crater ring"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "beach-with-umbrella",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -84,6 +144,23 @@
       "visual": {
         "type": "diagram",
         "spec": "Side view of Earth's surface with an asteroid trajectory arriving at 60 degrees, compared with dashed lines for a shallow 30 degree path and a vertical path; label 60 degrees as most damaging"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "triangular-ruler",
+            "at": "bubble",
+            "size": "m"
+          },
+          {
+            "icon": "comet",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          }
+        ],
+        "text": "STEEP ANGLE"
       }
     },
     {
@@ -94,6 +171,23 @@
         "type": "nasa",
         "query": "meteor fireball",
         "note": "bright fireball streaking across the sky"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "fire",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "sky"
       }
     },
     {
@@ -105,6 +199,21 @@
         "query": "Chicxulub crater gravity map",
         "note": "gravity anomaly map of the Chicxulub crater rings",
         "nasa_id": "PIA03379"
+      },
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "collision",
+            "at": "right",
+            "size": "xl",
+            "anim": "grow"
+          }
+        ],
+        "face": "shock",
+        "text": "IMPACT",
+        "bg": "sky",
+        "camera": "shake"
       }
     },
     {
@@ -114,6 +223,23 @@
       "visual": {
         "type": "diagram",
         "spec": "Map of the Gulf of Mexico region with the impact point at northern Yucatan and a circle of about 900 miles radius reaching Havana, Mexico City, Miami, Houston and New Orleans"
+      },
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "fire",
+            "at": "right",
+            "size": "xl",
+            "anim": "approach"
+          },
+          {
+            "icon": "wind-face",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "sky"
       }
     },
     {
@@ -124,6 +250,17 @@
         "type": "nasa",
         "query": "Gulf of Mexico from space",
         "note": "satellite view of the Gulf of Mexico"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "water-wave",
+            "at": "right",
+            "size": "l",
+            "anim": "approach"
+          }
+        ]
       }
     },
     {
@@ -134,6 +271,19 @@
         "type": "nasa",
         "query": "Indian Ocean tsunami 2004 satellite",
         "note": "satellite image of a coastline flooded by the 2004 tsunami"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "water-wave",
+            "at": "right",
+            "size": "xl",
+            "anim": "shake"
+          }
+        ],
+        "bg": "sky",
+        "camera": "shake"
       }
     },
     {
@@ -144,6 +294,23 @@
         "type": "nasa",
         "query": "Florida coastline from the International Space Station",
         "note": "Florida peninsula and coastline seen from orbit"
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "globe-showing-europe-africa",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "water-wave",
+            "at": "left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ]
       }
     },
     {
@@ -154,6 +321,23 @@
         "type": "nasa",
         "query": "New Zealand from space",
         "note": "New Zealand seen from orbit"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "rock",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "text": "THE SEAFLOOR REMEMBERS"
       }
     },
     {
@@ -164,6 +348,24 @@
         "type": "nasa",
         "query": "North Dakota badlands",
         "note": "badlands landscape in the northern Great Plains"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "fish",
+            "at": "right",
+            "size": "m",
+            "anim": "fall"
+          },
+          {
+            "icon": "wood",
+            "at": "left",
+            "size": "s",
+            "anim": "fall"
+          }
+        ],
+        "bg": "sky"
       }
     },
     {
@@ -174,6 +376,25 @@
         "type": "nasa",
         "query": "dust storm atmosphere from space",
         "note": "thick dust spreading through the atmosphere seen from orbit"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "cloud",
+            "at": "right",
+            "size": "l",
+            "anim": "grow"
+          },
+          {
+            "icon": "fog",
+            "at": "top",
+            "size": "m",
+            "anim": "fade-in"
+          }
+        ],
+        "bg": "night",
+        "camera": "zoom-out"
       }
     },
     {
@@ -184,6 +405,24 @@
         "type": "nasa",
         "query": "snow covered North America satellite",
         "note": "snow and ice covering a continent seen from orbit"
+      },
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "snowflake",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "thermometer",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "THREE FROZEN YEARS",
+        "bg": "night"
       }
     },
     {
@@ -200,6 +439,24 @@
           "sauropod",
           "fallen-leaf"
         ]
+      },
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "sheaf-of-rice",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "ear-of-corn",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "worry",
+        "bg": "night"
       }
     },
     {
@@ -210,6 +467,23 @@
         "type": "nasa",
         "query": "Cretaceous Paleogene boundary layer rock",
         "note": "rock outcrop showing the thin boundary clay layer"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "rock",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "test-tube",
+            "at": "left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "text": "IRIDIUM"
       }
     },
     {
@@ -220,6 +494,24 @@
         "type": "nasa",
         "query": "Earth at night from space",
         "note": "dark Earth seen from orbit"
+      },
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "t-rex",
+            "at": "right",
+            "size": "l",
+            "anim": "fade-in"
+          },
+          {
+            "icon": "sauropod",
+            "at": "far-right",
+            "size": "m",
+            "anim": "fade-in"
+          }
+        ],
+        "face": "worry"
       }
     },
     {
@@ -230,6 +522,22 @@
         "type": "nasa",
         "query": "fern forest",
         "note": "ferns growing in a forest"
+      },
+      "anim": {
+        "action": "hidden",
+        "props": [
+          {
+            "icon": "mouse",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "herb",
+            "at": "left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -240,6 +548,24 @@
         "type": "nasa",
         "query": "Yucatan sediment swirls MODIS",
         "note": "Yucatan coast today, seen from orbit"
+      },
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "seedling",
+            "at": "right",
+            "size": "m",
+            "anim": "grow"
+          },
+          {
+            "icon": "evergreen-tree",
+            "at": "left",
+            "size": "s",
+            "anim": "grow"
+          }
+        ],
+        "bg": "sky"
       }
     },
     {
@@ -250,6 +576,22 @@
         "type": "nasa",
         "query": "cenote Yucatan",
         "note": "water-filled sinkhole in the Yucatan jungle"
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "palm-tree",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "hole",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "sky"
       }
     },
     {
@@ -260,6 +602,24 @@
         "type": "nasa",
         "query": "near-Earth asteroid survey telescope",
         "note": "survey telescope under a starry sky"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "telescope",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "comet",
+            "at": "top",
+            "size": "s",
+            "anim": "orbit"
+          }
+        ],
+        "text": "95% FOUND",
+        "bg": "night"
       }
     },
     {
@@ -270,6 +630,24 @@
         "type": "nasa",
         "query": "DART impact Dimorphos",
         "note": "DART spacecraft approaching asteroid Dimorphos"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "l",
+            "anim": "approach"
+          },
+          {
+            "icon": "comet",
+            "at": "far-right",
+            "size": "s",
+            "anim": "shake"
+          }
+        ],
+        "camera": "zoom-in"
       }
     },
     {
@@ -278,6 +656,10 @@
       "sub": "",
       "visual": {
         "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
       }
     }
   ]

@@ -3,6 +3,7 @@
   "number": 11,
   "slug": "could-we-live-on-mars",
   "target_minutes": 7.67,
+  "style": "anim",
   "title": "Could Humans Really Live on Mars? The Honest Answer",
   "thumbnail_text": "LIVE ON MARS?",
   "description": "Mars is the most Earth-like planet we can reach, and it would still try to kill you in a dozen different ways. We walk through every problem a Mars settler would face, from the air and the cold to radiation and toxic dirt, and what NASA's robots have already learned about solving them.\n\nSources:\n- NASA Science, Mars Facts: https://science.nasa.gov/mars/facts/\n- NASA Goddard, Mars Fact Sheet: https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html\n- NASA, Rover Results Include First Age Measurement on Mars and Help for Human Exploration (2013): https://www.nasa.gov/press/2013/december/nasa-rover-results-include-first-age-measurement-on-mars-and-help-for-human/\n- NASA JPL, NASA's Oxygen-Generating Experiment MOXIE Completes Mars Mission: https://www.jpl.nasa.gov/news/nasas-oxygen-generating-experiment-moxie-completes-mars-mission/\n- NASA JPL, The Launch Is Approaching for NASA's Next Mars Rover, Perseverance: https://www.jpl.nasa.gov/news/the-launch-is-approaching-for-nasas-next-mars-rover-perseverance/\n- Universe Today, Mars Has Lots of Water, But It's Out of Reach (on Wright et al., PNAS 2024): https://www.universetoday.com/articles/mars-has-lots-of-water-but-its-out-of-reach\n- Wikipedia, Martian regolith (perchlorates): https://en.wikipedia.org/wiki/Martian_regolith",
@@ -50,6 +51,21 @@
       "url": "https://en.wikipedia.org/wiki/Martian_regolith"
     }
   ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "red-circle",
+        "at": "right",
+        "size": "xl"
+      },
+      {
+        "icon": "skull",
+        "at": "left",
+        "size": "m"
+      }
+    ]
+  },
   "scenes": [
     {
       "narration": "Mars is the most Earth-like world we can reach. It would still try to kill you in at least six different ways.",
@@ -59,6 +75,23 @@
         "type": "nasa",
         "query": "Mars globe Valles Marineris",
         "note": "full globe of Mars showing the great canyon"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "red-circle",
+            "at": "right",
+            "size": "xl",
+            "anim": "spin"
+          },
+          {
+            "icon": "skull",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "SIX WAYS"
       }
     },
     {
@@ -69,6 +102,23 @@
         "type": "nasa",
         "query": "Mars Perseverance rover selfie",
         "note": "Perseverance rover selfie on the Martian surface"
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "red-circle",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "robot",
+            "at": "left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "sky"
       }
     },
     {
@@ -79,6 +129,22 @@
         "type": "nasa",
         "query": "Atlas V launch Mars 2020 Perseverance",
         "note": "Atlas V rocket launching the Mars 2020 mission"
+      },
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "calendar",
+            "at": "left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -89,6 +155,22 @@
         "type": "nasa",
         "query": "Deep Space Network antenna",
         "note": "giant Deep Space Network dish antenna"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "satellite-antenna",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "22 MINUTES DELAY"
       }
     },
     {
@@ -99,6 +181,18 @@
         "type": "nasa",
         "query": "Mars atmosphere limb Viking orbiter",
         "note": "thin haze of the Martian atmosphere along the horizon"
+      },
+      "anim": {
+        "action": "hold-breath",
+        "props": [
+          {
+            "icon": "fog",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "bg": "sky"
       }
     },
     {
@@ -109,6 +203,18 @@
         "type": "nasa",
         "query": "Mars Curiosity Gale crater landscape",
         "note": "wide Martian landscape under a pale sky"
+      },
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "snow-capped-mountain",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "face": "worry",
+        "bg": "sky"
       }
     },
     {
@@ -120,6 +226,23 @@
         "query": "Mars spacesuit xEMU prototype",
         "note": "prototype planetary exploration spacesuit",
         "nasa_id": "NHQ201910150007"
+      },
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "hot-springs",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "astronaut",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "SUIT IS AIR"
       }
     },
     {
@@ -130,6 +253,24 @@
         "type": "nasa",
         "query": "Mars north polar ice cap",
         "note": "Martian north polar ice cap"
+      },
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "thermometer",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "snowflake",
+            "at": "left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "text": "MINUS 74°F",
+        "bg": "night"
       }
     },
     {
@@ -139,6 +280,23 @@
       "visual": {
         "type": "diagram",
         "spec": "Standing astronaut silhouette on Mars with a temperature scale: about 75 degrees Fahrenheit at the feet near the ground and about 32 degrees Fahrenheit at head height"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "thermometer",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "sky"
       }
     },
     {
@@ -149,6 +307,22 @@
         "type": "nasa",
         "query": "MAVEN solar wind stripping Mars atmosphere",
         "note": "illustration of the solar wind stripping the Martian atmosphere"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "radioactive",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "magnet",
+            "at": "left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -159,6 +333,22 @@
         "type": "nasa",
         "query": "Curiosity rover RAD radiation assessment detector",
         "note": "Curiosity rover on Mars"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "radioactive",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "bone",
+            "at": "left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -169,6 +359,16 @@
         "type": "nasa",
         "query": "astronaut International Space Station window Earth",
         "note": "astronaut looking out a space station window"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "chart-increasing",
+            "at": "bubble",
+            "size": "m"
+          }
+        ]
       }
     },
     {
@@ -179,6 +379,23 @@
         "type": "nasa",
         "query": "Mars habitat concept 3D printed",
         "note": "concept art of a Mars habitat shielded by regolith"
+      },
+      "anim": {
+        "action": "hidden",
+        "props": [
+          {
+            "icon": "hut",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "rock",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "LIVE UNDERGROUND",
+        "bg": "night"
       }
     },
     {
@@ -189,6 +406,22 @@
         "type": "nasa",
         "query": "Phoenix lander Mars soil trench",
         "note": "Phoenix lander's scoop digging into Martian soil"
+      },
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "test-tube",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "wind-face",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "sky"
       }
     },
     {
@@ -199,6 +432,24 @@
         "type": "nasa",
         "query": "Mars global dust storm 2018",
         "note": "Mars before and during a planet-wide dust storm"
+      },
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "fog",
+            "at": "right",
+            "size": "l",
+            "anim": "approach"
+          },
+          {
+            "icon": "gear",
+            "at": "left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "bg": "sky"
       }
     },
     {
@@ -209,6 +460,19 @@
         "type": "nasa",
         "query": "astronaut exercise treadmill space station",
         "note": "astronaut exercising aboard the space station"
+      },
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "balance-scale",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "text": "38% GRAVITY",
+        "bg": "sky"
       }
     },
     {
@@ -219,6 +483,22 @@
         "type": "nasa",
         "query": "astronauts walking on the Moon Apollo",
         "note": "Apollo astronaut walking in low gravity on the Moon"
+      },
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "bone",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "flexed-biceps",
+            "at": "left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -229,6 +509,21 @@
         "type": "nasa",
         "query": "Mars sunset Gale crater Curiosity",
         "note": "sunset on Mars"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "red-circle",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "toolbox",
+            "at": "left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -239,6 +534,23 @@
         "type": "nasa",
         "query": "MOXIE instrument Perseverance",
         "note": "MOXIE oxygen experiment being installed in the Perseverance rover"
+      },
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "wind-face",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "dog",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "OXYGEN MADE",
+        "bg": "sky"
       }
     },
     {
@@ -249,6 +561,22 @@
         "type": "nasa",
         "query": "Mars ascent vehicle concept",
         "note": "concept art of a rocket lifting off from Mars"
+      },
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "l",
+            "anim": "approach"
+          },
+          {
+            "icon": "fuel-pump",
+            "at": "left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -259,6 +587,22 @@
         "type": "nasa",
         "query": "Mars Reconnaissance Orbiter exposed ice cliff",
         "note": "exposed ice in a Martian cliff seen from orbit"
+      },
+      "anim": {
+        "action": "drink",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "hand",
+            "size": "m"
+          },
+          {
+            "icon": "ice",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "sky"
       }
     },
     {
@@ -269,6 +613,23 @@
         "type": "nasa",
         "query": "InSight lander seismometer Mars",
         "note": "InSight lander's seismometer on the Martian surface"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "water-wave",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "DEEP WATER"
       }
     },
     {
@@ -279,6 +640,22 @@
         "type": "nasa",
         "query": "Mars subsurface ice map",
         "note": "map of near-surface ice on Mars"
+      },
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "pick",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "droplet",
+            "at": "left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -289,6 +666,22 @@
         "type": "nasa",
         "query": "Antarctica research station aerial",
         "note": "research station in the Antarctic ice"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "hut",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "penguin",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
       }
     },
     {
@@ -299,6 +692,16 @@
         "type": "nasa",
         "query": "Mars Jezero crater delta",
         "note": "Jezero crater delta seen from orbit"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "seedling",
+            "at": "bubble",
+            "size": "m"
+          }
+        ]
       }
     },
     {
@@ -309,6 +712,23 @@
         "type": "nasa",
         "query": "Earth and Mars comparison",
         "note": "Earth and Mars shown side by side"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "comet",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
       }
     },
     {
@@ -319,6 +739,22 @@
         "type": "nasa",
         "query": "Earth and Moon from Mars orbit HiRISE",
         "note": "Earth and Moon photographed from Mars orbit"
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "astronaut",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "BLUE PLANET"
       }
     },
     {
@@ -327,6 +763,10 @@
       "sub": "",
       "visual": {
         "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
       }
     }
   ]

@@ -2,7 +2,23 @@
   "channel": "inside-your-body",
   "number": 4,
   "slug": "goosebumps",
-  "target_minutes": 3.0,
+  "target_minutes": 3,
+  "style": "anim",
+  "thumbnail_anim": {
+    "thumbAction": "shiver",
+    "props": [
+      {
+        "icon": "wind-face",
+        "at": "right",
+        "size": "l"
+      },
+      {
+        "icon": "snowflake",
+        "at": "top-left",
+        "size": "m"
+      }
+    ]
+  },
   "title": "Why Do We Get Goosebumps? The Answer Is Hair-Raising",
   "thumbnail_text": "WHY GOOSEBUMPS?",
   "description": "Cold air, fear, and your favorite song all raise the same tiny bumps on your skin. Discover the muscle behind goosebumps, the hidden job scientists found for it in 2020, and the rare people who can make goosebumps on command.\n\nSources:\n- Cleveland Clinic, Why Do You Get Goosebumps?: https://health.clevelandclinic.org/why-do-you-get-goosebumps\n- News-Medical, Harvard scientists uncover the real reason behind goosebumps: https://www.news-medical.net/news/20200720/Harvard-scientists-uncover-the-real-reason-behind-goosebumps.aspx\n- Science News, Getting goose bumps could boost hair growth: https://www.sciencenews.org/article/goose-bumps-could-boost-hair-growth\n- PeerJ (2018), The voluntary control of piloerection: https://pmc.ncbi.nlm.nih.gov/articles/PMC6071615\n\nThis video is for educational purposes only and is not medical advice.",
@@ -48,6 +64,24 @@
         "query": "goosebumps on arm close up",
         "note": "close-up of an arm with goosebumps and raised hairs",
         "commons": "File:Goose bumps.jpg"
+      },
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "wind-face",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "musical-notes",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "text": "GOOSEBUMPS"
       }
     },
     {
@@ -57,6 +91,22 @@
       "visual": {
         "type": "diagram",
         "spec": "skin cross-section showing a hair follicle with the arrector pili muscle relaxed, then contracted with the hair standing up and a bump on the skin surface"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "flexed-biceps",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "top-left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -67,6 +117,24 @@
         "type": "stock",
         "query": "startled woman watching movie",
         "note": "person looking startled while watching something on screen"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "FIGHT OR FLIGHT",
+        "face": "shock"
       }
     },
     {
@@ -78,6 +146,22 @@
         "query": "fluffy bird puffed feathers winter",
         "note": "bird or animal fluffed up against the cold",
         "openverse_id": "6451bd03-fecb-48ea-b45e-71a063eb1c36"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "bear",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "coat",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
       }
     },
     {
@@ -88,6 +172,19 @@
         "type": "stock",
         "query": "cat with fur standing up",
         "note": "cat puffed up with an arched back"
+      },
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "cat",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          }
+        ],
+        "face": "shock",
+        "bg": "room"
       }
     },
     {
@@ -98,6 +195,17 @@
         "type": "stock",
         "query": "person shivering in cold wind",
         "note": "person hugging themselves in chilly weather"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "feather",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ]
       }
     },
     {
@@ -108,6 +216,26 @@
         "type": "stock",
         "query": "woman listening to music with headphones eyes closed",
         "note": "person deeply moved while listening to music"
+      },
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "headphone",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "musical-notes",
+            "at": "top",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "text": "FRISSON",
+        "face": "grin",
+        "bg": "room"
       }
     },
     {
@@ -119,6 +247,22 @@
         "query": "hair follicle microscope image",
         "note": "microscope image of a hair follicle in skin tissue",
         "commons": "File:Blausen 0437 HairFollicleAnatomy.png"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "mouse",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "test-tube",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
       }
     },
     {
@@ -128,6 +272,22 @@
       "visual": {
         "type": "diagram",
         "spec": "sympathetic nerve connected to arrector pili muscle and hair follicle stem cells; arrow 1 short-term cold: muscle contracts, goosebumps; arrow 2 prolonged cold: stem cells activate, new hair grows"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "snowflake",
+            "at": "bubble"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "lab"
       }
     },
     {
@@ -139,6 +299,22 @@
         "query": "mouse in laboratory",
         "note": "small lab mouse, friendly and clean",
         "openverse_id": "52539c67-fa27-4f6e-95c5-d781c8a94de6"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "coat",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "stopwatch",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "QUICK FIX, SLOW PLAN"
       }
     },
     {
@@ -150,6 +326,18 @@
         "query": "man looking at his forearm",
         "note": "person examining their forearm with curiosity",
         "openverse_id": "4a650d95-aafc-4a76-b6af-145e9af83183"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "magic-wand",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          }
+        ],
+        "face": "grin"
       }
     },
     {
@@ -160,6 +348,24 @@
         "type": "stock",
         "query": "people at concert enjoying music",
         "note": "audience absorbed in live music"
+      },
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "musical-note",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "bar-chart",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "32 PEOPLE",
+        "bg": "room"
       }
     },
     {
@@ -171,6 +377,25 @@
         "query": "goosebumps skin music concert",
         "note": "close-up of skin with goosebumps during a concert",
         "openverse_id": "68ff9b1a-4e58-4b19-b4bb-d7ee70e781e2"
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "headphone",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "musical-notes",
+            "at": "top",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "park",
+        "face": "smile"
       }
     },
     {
@@ -179,6 +404,10 @@
       "sub": "",
       "visual": {
         "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
       }
     }
   ]

@@ -19,6 +19,8 @@ Sources:
 - Popular Science, If the Sun Went Out, How Long Could Life on Earth Survive?: https://www.popsci.com/science/article/2013-07/if-sun-went-out-how-long-could-life-earth-survive/
 
 Images:
+- Original animation by Cosmic What If
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 - NASA/GFSC (https://images.nasa.gov/details/PIA18169)
 - NASA (JSC) (https://images.nasa.gov/details/iss028e007274)
 - NASA/JPL-Caltech (https://images.nasa.gov/details/PIA21910)
@@ -34,6 +36,8 @@ Images:
 sun, what if, sun disappeared, space, astronomy, gravity, speed of light, gravitational waves, frozen earth, science
 
 ## Image credits
+- Original animation by Cosmic What If
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 - NASA/GFSC (https://images.nasa.gov/details/PIA18169)
 - NASA (JSC) (https://images.nasa.gov/details/iss028e007274)
 - NASA/JPL-Caltech (https://images.nasa.gov/details/PIA21910)

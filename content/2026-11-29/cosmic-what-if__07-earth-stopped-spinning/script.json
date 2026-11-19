@@ -41,6 +41,22 @@
       "url": "https://science.nasa.gov/moon/facts/"
     }
   ],
+  "style": "anim",
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "globe-showing-americas",
+        "at": "right",
+        "size": "xl"
+      },
+      {
+        "icon": "water-wave",
+        "at": "left",
+        "size": "m"
+      }
+    ]
+  },
   "scenes": [
     {
       "narration": "Earth spins so smoothly you never feel it. But what if it stopped? The answer depends on one thing: how fast it stops.",
@@ -51,6 +67,19 @@
         "query": "Earth rotation DSCOVR EPIC",
         "note": "the full sunlit Earth from deep space",
         "nasa_id": "GSFC_20171208_Archive_e000522"
+      },
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "xl",
+            "anim": "spin"
+          }
+        ],
+        "text": "WHAT IF?",
+        "bg": "space"
       }
     },
     {
@@ -60,6 +89,24 @@
       "visual": {
         "type": "diagram",
         "spec": "globe with arrows showing rotation speed by latitude: 1,037 mph at equator, about 794 mph at New York, zero at the poles"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "dashing-away",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "1,037 MPH",
+        "bg": "space"
       }
     },
     {
@@ -70,6 +117,18 @@
         "type": "nasa",
         "query": "NASA aircraft flight above clouds",
         "note": "jet flying smoothly above clouds"
+      },
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "airplane",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          }
+        ],
+        "bg": "sky"
       }
     },
     {
@@ -80,6 +139,25 @@
         "type": "nasa",
         "query": "Earth from space Apollo 17 Blue Marble",
         "note": "whole Earth"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "house",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "water-wave",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "text": "INSTANT STOP",
+        "camera": "shake",
+        "bg": "sky"
       }
     },
     {
@@ -90,6 +168,24 @@
         "type": "nasa",
         "query": "hurricane from International Space Station",
         "note": "massive storm seen from orbit"
+      },
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "wind-face",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "tornado",
+            "at": "left",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "camera": "shake",
+        "bg": "sky"
       }
     },
     {
@@ -100,6 +196,19 @@
         "type": "nasa",
         "query": "ocean waves coastline aerial NASA Earth Observatory",
         "note": "ocean meeting a coastline"
+      },
+      "anim": {
+        "action": "swallowed",
+        "props": [
+          {
+            "icon": "water-wave",
+            "at": "right",
+            "size": "xl",
+            "anim": "approach"
+          }
+        ],
+        "face": "shock",
+        "bg": "sky"
       }
     },
     {
@@ -110,6 +219,22 @@
         "type": "nasa",
         "query": "Artemis I Orion Earth view",
         "note": "distant Earth seen from a spacecraft"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "bubble",
+            "size": "l"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -119,6 +244,19 @@
       "visual": {
         "type": "diagram",
         "spec": "exaggerated oblate Earth showing equatorial radius 3,963 miles versus polar radius 3,950 miles"
+      },
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "text": "13-MILE BULGE",
+        "bg": "space"
       }
     },
     {
@@ -129,6 +267,22 @@
         "type": "nasa",
         "query": "global ocean sea surface height satellite",
         "note": "global map of the oceans"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "water-wave",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -138,6 +292,22 @@
       "visual": {
         "type": "diagram",
         "spec": "world map of a non-spinning Earth: a northern polar ocean, a southern polar ocean, and one continuous band of land around the equator"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "world-map",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "laptop",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -148,6 +318,23 @@
         "type": "nasa",
         "query": "North America from space Suomi NPP",
         "note": "North America seen from orbit"
+      },
+      "anim": {
+        "action": "hold-breath",
+        "props": [
+          {
+            "icon": "snow-capped-mountain",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "water-wave",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "text": "NEW CONTINENT",
+        "bg": "sky"
       }
     },
     {
@@ -158,6 +345,23 @@
         "type": "nasa",
         "query": "Earth day night terminator ISS",
         "note": "the line between day and night on Earth"
+      },
+      "anim": {
+        "action": "yawn",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "m"
+          },
+          {
+            "icon": "crescent-moon",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "YEAR-LONG DAY",
+        "bg": "night"
       }
     },
     {
@@ -167,6 +371,17 @@
       "visual": {
         "type": "diagram",
         "spec": "top-down view of a non-rotating Earth at four points in its orbit, showing the Sun drifting from west to east in the local sky over a year"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "sunrise",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "bg": "sky"
       }
     },
     {
@@ -177,6 +392,24 @@
         "type": "nasa",
         "query": "Sahara desert from space",
         "note": "sunbaked desert seen from orbit"
+      },
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "snowflake",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "worry",
+        "bg": "sky"
       }
     },
     {
@@ -187,6 +420,23 @@
         "type": "nasa",
         "query": "hurricane eye GOES satellite",
         "note": "a spiraling hurricane"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "cyclone",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "wind-face",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "sky"
       }
     },
     {
@@ -197,6 +447,23 @@
         "type": "nasa",
         "query": "Earth magnetosphere illustration",
         "note": "Earth's magnetic field lines"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "magnet",
+            "at": "bubble",
+            "size": "l"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "OPEN QUESTION",
+        "bg": "space"
       }
     },
     {
@@ -207,6 +474,24 @@
         "type": "nasa",
         "query": "Moon over Earth limb from space station",
         "note": "the Moon above Earth's horizon"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "l",
+            "anim": "orbit"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "LONGER DAYS",
+        "bg": "space"
       }
     },
     {
@@ -217,6 +502,24 @@
         "type": "nasa",
         "query": "Apollo 11 laser ranging retroreflector",
         "note": "mirror array left on the Moon by astronauts"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "l",
+            "anim": "shrink"
+          },
+          {
+            "icon": "straight-ruler",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "AN INCH A YEAR",
+        "bg": "space"
       }
     },
     {
@@ -227,6 +530,23 @@
         "type": "nasa",
         "query": "Sun extreme ultraviolet SDO",
         "note": "the Sun glowing"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "hourglass-done",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -237,6 +557,19 @@
         "type": "nasa",
         "query": "Earthrise Apollo 8",
         "note": "Earth rising above the lunar horizon"
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          }
+        ],
+        "face": "smile",
+        "bg": "sky"
       }
     },
     {
@@ -245,6 +578,10 @@
       "sub": "",
       "visual": {
         "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
       }
     }
   ]

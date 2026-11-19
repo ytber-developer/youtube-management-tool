@@ -51,6 +51,18 @@
       "url": "https://www.eso.org/public/news/eso1733/"
     }
   ],
+  "style": "anim",
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "star",
+        "at": "right",
+        "size": "xl",
+        "anim": "pulse"
+      }
+    ]
+  },
   "scenes": [
     {
       "narration": "Take more than the mass of the Sun. Crush it into a ball the size of a city. Now let's go inside.",
@@ -60,6 +72,20 @@
         "type": "nasa",
         "query": "neutron star illustration magnetic field",
         "note": "artist illustration of a glowing neutron star with magnetic field lines"
+      },
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "xl",
+            "anim": "shrink"
+          }
+        ],
+        "text": "CITY-SIZED STAR",
+        "bg": "space",
+        "camera": "zoom-in"
       }
     },
     {
@@ -70,6 +96,19 @@
         "type": "nasa",
         "query": "Crab Nebula pulsar Chandra",
         "note": "X-ray image of the Crab pulsar at the heart of its nebula"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "collision",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "space",
+        "camera": "shake"
       }
     },
     {
@@ -80,6 +119,23 @@
         "type": "nasa",
         "query": "Manhattan from the International Space Station",
         "note": "Manhattan island seen from orbit"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "cityscape",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "12 MILES WIDE",
+        "bg": "space"
       }
     },
     {
@@ -89,6 +145,23 @@
       "visual": {
         "type": "diagram",
         "spec": "A sugar cube on one side of a balance scale, with a stack labeled one billion tons on the other side, and the scale tipped toward the sugar cube"
+      },
+      "anim": {
+        "action": "eat",
+        "props": [
+          {
+            "icon": "spoon",
+            "at": "hand",
+            "size": "m"
+          },
+          {
+            "icon": "balance-scale",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "A BILLION TONS",
+        "bg": "space"
       }
     },
     {
@@ -99,6 +172,22 @@
         "type": "nasa",
         "query": "Earth Blue Marble",
         "note": "full disk of Earth"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "bubble",
+            "size": "m"
+          },
+          {
+            "icon": "office-building",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -108,6 +197,18 @@
       "visual": {
         "type": "diagram",
         "spec": "An electron and a proton being squeezed together to form a neutron, with a large arrow labeled crushing gravity"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "atom-symbol",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -118,6 +219,19 @@
         "type": "nasa",
         "query": "pulsar beams illustration",
         "note": "pulsar with two beams of radiation sweeping through space"
+      },
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "flashlight",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "text": "PULSARS",
+        "bg": "space"
       }
     },
     {
@@ -128,6 +242,18 @@
         "type": "nasa",
         "query": "Terzan 5 globular cluster",
         "note": "dense globular cluster Terzan 5"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "cyclone",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -138,6 +264,18 @@
         "type": "nasa",
         "query": "magnetar illustration",
         "note": "artist illustration of a magnetar with intense field lines"
+      },
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "magnet",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -148,6 +286,20 @@
         "type": "nasa",
         "query": "SGR 1806-20 magnetar flare",
         "note": "illustration of a giant magnetar flare"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "text": "MAGNETAR FLARE",
+        "bg": "space",
+        "camera": "shake"
       }
     },
     {
@@ -158,6 +310,17 @@
         "type": "nasa",
         "query": "neutron star light bending visualization",
         "note": "visualization of light bending around a neutron star so both hemispheres are visible"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -167,6 +330,18 @@
       "visual": {
         "type": "diagram",
         "spec": "Comparison of a marshmallow dropped one meter on Earth, landing gently, versus on a neutron star, where it strikes at millions of miles per hour; labels for gravity strength"
+      },
+      "anim": {
+        "action": "fall-toward",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "100 BILLION G",
+        "bg": "space"
       }
     },
     {
@@ -177,6 +352,18 @@
         "type": "nasa",
         "query": "neutron star surface illustration",
         "note": "artist concept of a smooth neutron star surface"
+      },
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "mountain",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -186,6 +373,22 @@
       "visual": {
         "type": "diagram",
         "spec": "Cross section of a neutron star with labeled layers: thin atmosphere, outer crust of nuclei and electrons, inner crust with free neutrons, nuclear pasta at the crust's base, outer core of neutrons, and a question mark at the inner core"
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "pick",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "rock",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -195,6 +398,23 @@
       "visual": {
         "type": "diagram",
         "spec": "Close-up of the inner crust: a regular grid of atomic nuclei with small neutrons drifting freely in the spaces between them"
+      },
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "atom-symbol",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -204,6 +424,18 @@
       "visual": {
         "type": "diagram",
         "spec": "Three panels showing nuclear pasta phases: round gnocchi-like blobs, long spaghetti rods, and flat lasagna sheets, with arrow showing increasing depth"
+      },
+      "anim": {
+        "action": "eat",
+        "props": [
+          {
+            "icon": "spaghetti",
+            "at": "hand",
+            "size": "m"
+          }
+        ],
+        "text": "NUCLEAR PASTA",
+        "bg": "space"
       }
     },
     {
@@ -214,6 +446,22 @@
         "type": "nasa",
         "query": "supercomputer NASA Pleiades",
         "note": "rows of supercomputer racks"
+      },
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "flexed-biceps",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "spaghetti",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -224,6 +472,17 @@
         "type": "nasa",
         "query": "neutron star interior cutaway",
         "note": "illustrated cutaway of a neutron star's interior"
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "water-wave",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -234,6 +493,19 @@
         "type": "nasa",
         "query": "Cold Atom Laboratory space station",
         "note": "ultracold quantum physics experiment hardware"
+      },
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "cyclone",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "text": "SUPERFLUID",
+        "bg": "space"
       }
     },
     {
@@ -244,6 +516,18 @@
         "type": "nasa",
         "query": "Vela supernova remnant",
         "note": "wispy filaments of the Vela supernova remnant"
+      },
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "glowing-star",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -254,6 +538,18 @@
         "type": "nasa",
         "query": "Hubble Ultra Deep Field",
         "note": "deep field of galaxies suggesting mystery"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "red-question-mark",
+            "at": "bubble",
+            "size": "l"
+          }
+        ],
+        "text": "NOBODY KNOWS",
+        "bg": "space"
       }
     },
     {
@@ -263,6 +559,23 @@
       "visual": {
         "type": "diagram",
         "spec": "Three possible inner cores side by side: tightly packed neutrons, a soup of free quarks, and a mix of exotic particles; each labeled as a hypothesis"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "atom-symbol",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "bubbles",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -273,6 +586,23 @@
         "type": "nasa",
         "query": "NICER International Space Station",
         "note": "NICER X-ray instrument mounted on the space station"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "l",
+            "anim": "orbit"
+          },
+          {
+            "icon": "straight-ruler",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -283,6 +613,22 @@
         "type": "nasa",
         "query": "NICER neutron star hot spots",
         "note": "visualization of hot spots mapped on a neutron star"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "satellite",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -292,6 +638,17 @@
       "visual": {
         "type": "diagram",
         "spec": "Two neutron star circles of nearly equal size labeled J0030, 1.4 solar masses, and J0740, 2.1 solar masses, each about 16 miles across"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "balance-scale",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -302,6 +659,17 @@
         "type": "nasa",
         "query": "Milky Way panorama",
         "note": "panorama of the Milky Way band"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "top",
+            "size": "l"
+          }
+        ],
+        "bg": "night"
       }
     },
     {
@@ -312,6 +680,24 @@
         "type": "nasa",
         "query": "neutron star merger illustration",
         "note": "two neutron stars spiraling together"
+      },
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "star",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "star",
+            "at": "left",
+            "size": "m",
+            "anim": "orbit"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -323,6 +709,20 @@
         "query": "GW170817 kilonova Hubble NGC 4993",
         "note": "Hubble image of the kilonova in galaxy NGC 4993",
         "commons": "File:Kilonova and Host Galaxy (2023-134).png"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "collision",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "text": "KILONOVA",
+        "bg": "space",
+        "camera": "shake"
       }
     },
     {
@@ -333,6 +733,23 @@
         "type": "nasa",
         "query": "gold platinum kilonova illustration",
         "note": "illustration of a kilonova spraying heavy elements"
+      },
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "coin",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "ring",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -342,6 +759,17 @@
       "visual": {
         "type": "diagram",
         "spec": "Full cross section of a neutron star from surface to center with a dotted path traveling inward through each labeled layer"
+      },
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "pool-8-ball",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -353,6 +781,17 @@
         "query": "Vela pulsar Chandra",
         "note": "X-ray image of the Vela pulsar and its jets",
         "commons": "File:Vela Pulsar (14039782592).png"
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "cityscape",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -363,6 +802,24 @@
         "type": "nasa",
         "query": "Milky Way galaxy spiral illustration",
         "note": "our galaxy, where ancient neutron stars collided"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "ring",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "coin",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "COSMIC GOLD",
+        "bg": "space"
       }
     },
     {
@@ -371,6 +828,10 @@
       "sub": "",
       "visual": {
         "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
       }
     }
   ]

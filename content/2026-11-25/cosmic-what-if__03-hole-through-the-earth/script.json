@@ -3,6 +3,22 @@
   "number": 3,
   "slug": "hole-through-the-earth",
   "target_minutes": 2.33,
+  "style": "anim",
+  "thumbnail_anim": {
+    "thumbAction": "fall-toward",
+    "props": [
+      {
+        "icon": "globe-showing-americas",
+        "at": "right",
+        "size": "xl"
+      },
+      {
+        "icon": "hole",
+        "at": "center",
+        "size": "m"
+      }
+    ]
+  },
   "title": "What If You Jumped Into a Hole Through the Earth?",
   "thumbnail_text": "JUMP THROUGH EARTH?",
   "description": "Dig a tunnel straight through the planet, jump in, and how long until you pop out the other side? Physics has a surprisingly precise answer, and gravity does something unexpected on the way down.\n\nSources:\n- NASA Science, Earth Facts: https://science.nasa.gov/earth/facts/\n- Alexander Klotz, The Gravity Tunnel in a Non-Uniform Earth, American Journal of Physics, 2015: https://arxiv.org/abs/1308.1342\n- WorldAtlas, The Kola Superdeep Borehole: https://www.worldatlas.com/articles/the-kola-superdeep-borehole.html",
@@ -40,6 +56,19 @@
         "type": "nasa",
         "query": "Blue Marble Earth full disk",
         "note": "whole Earth seen from space"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          }
+        ],
+        "text": "THROUGH THE EARTH",
+        "camera": "zoom-in"
       }
     },
     {
@@ -49,6 +78,21 @@
       "visual": {
         "type": "diagram",
         "spec": "Earth cross-section with a tiny tick at the surface showing the 7.5-mile Kola borehole versus the 7,900-mile diameter"
+      },
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "pick",
+            "at": "hand"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "7.5 MILES"
       }
     },
     {
@@ -58,6 +102,23 @@
       "visual": {
         "type": "diagram",
         "spec": "labeled cutaway of Earth's layers: crust, mantle 1,800 mi, outer core 1,400 mi, inner core"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "fire",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "shock"
       }
     },
     {
@@ -68,6 +129,17 @@
         "type": "nasa",
         "query": "astronaut free fall training KC-135 weightless",
         "note": "person floating in free fall"
+      },
+      "anim": {
+        "action": "fall-toward",
+        "props": [
+          {
+            "icon": "hole",
+            "at": "center",
+            "size": "l"
+          }
+        ],
+        "camera": "zoom-in"
       }
     },
     {
@@ -77,6 +149,19 @@
       "visual": {
         "type": "diagram",
         "spec": "graph of gravity versus depth inside Earth: rises slightly to a peak near the core boundary, then falls to zero at the center"
+      },
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "magnet",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "text": "+9% GRAVITY",
+        "face": "hold"
       }
     },
     {
@@ -87,6 +172,19 @@
         "type": "nasa",
         "query": "International Space Station orbit over Earth",
         "note": "ISS above Earth"
+      },
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "far-right",
+            "size": "m",
+            "anim": "orbit"
+          }
+        ],
+        "camera": "zoom-out",
+        "face": "grin"
       }
     },
     {
@@ -96,6 +194,21 @@
       "visual": {
         "type": "diagram",
         "spec": "straight tunnel through Earth with a figure oscillating from one surface to the other, speed arrows largest at the center"
+      },
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "hole",
+            "at": "top-left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -106,6 +219,21 @@
         "type": "nasa",
         "query": "Earth interior seismic tomography",
         "note": "scientific view of Earth's interior"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "bubble"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "text": "38 MINUTES"
       }
     },
     {
@@ -116,6 +244,19 @@
         "type": "nasa",
         "query": "Earth North Pole Arctic from space",
         "note": "Earth seen over the pole"
+      },
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "wind-face",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          }
+        ],
+        "camera": "shake",
+        "face": "worry"
       }
     },
     {
@@ -126,6 +267,24 @@
         "type": "nasa",
         "query": "Indian Ocean from space astronaut photograph",
         "note": "open ocean seen from orbit"
+      },
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "water-wave",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "bikini",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "PACK A SWIMSUIT",
+        "bg": "sky"
       }
     },
     {
@@ -134,6 +293,10 @@
       "sub": "",
       "visual": {
         "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
       }
     }
   ]

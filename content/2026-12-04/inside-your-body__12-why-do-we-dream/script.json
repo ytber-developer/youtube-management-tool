@@ -51,6 +51,17 @@
       "url": "https://en.wikipedia.org/wiki/Eugene_Aserinsky"
     }
   ],
+  "style": "anim",
+  "thumbnail_anim": {
+    "thumbAction": "sleep",
+    "props": [
+      {
+        "icon": "thought-balloon",
+        "at": "above",
+        "size": "l"
+      }
+    ]
+  },
   "scenes": [
     {
       "narration": "Tonight, you will lie still, go nearly limp, and live through events that never happened. Scientists still argue about why.",
@@ -66,6 +77,25 @@
           "thought-balloon",
           "zzz"
         ]
+      },
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "crescent-moon",
+            "at": "top-left",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "zzz",
+            "at": "above",
+            "size": "s",
+            "anim": "fade-in"
+          }
+        ],
+        "bg": "night",
+        "face": "sleep"
       }
     },
     {
@@ -82,6 +112,22 @@
           "crescent-moon",
           "brain"
         ]
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "locked",
+            "at": "bubble",
+            "size": "m"
+          },
+          {
+            "icon": "key",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
       }
     },
     {
@@ -98,6 +144,23 @@
           "zzz",
           "eyes"
         ]
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "eye",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "microscope",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
       }
     },
     {
@@ -114,6 +177,19 @@
           "eye",
           "zzz"
         ]
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "eyes",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          }
+        ],
+        "text": "REM SLEEP",
+        "bg": "lab"
       }
     },
     {
@@ -130,6 +206,17 @@
           "laptop",
           "chart-increasing"
         ]
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "ladder",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -139,6 +226,23 @@
       "visual": {
         "type": "diagram",
         "spec": "hypnogram of one night: stair-step graph cycling through stages 1, 2, 3 and REM, with REM blocks growing longer toward morning"
+      },
+      "anim": {
+        "action": "yawn",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "repeat-button",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "4 TO 6 CYCLES",
+        "bg": "night"
       }
     },
     {
@@ -148,6 +252,19 @@
       "visual": {
         "type": "diagram",
         "spec": "split figure of a sleeping person: brain glowing with activity above, body muscles shown relaxed and switched off below"
+      },
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "above",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "night",
+        "face": "sleep"
       }
     },
     {
@@ -164,6 +281,22 @@
           "high-voltage",
           "sparkles"
         ]
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "test-tube",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "sparkles",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
       }
     },
     {
@@ -174,6 +307,22 @@
         "type": "science",
         "query": "thalamus brain anatomy illustration",
         "note": "illustration of the brain with the thalamus highlighted at its center"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "film-frames",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -190,6 +339,22 @@
           "crescent-moon",
           "sun"
         ]
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
       }
     },
     {
@@ -206,6 +371,23 @@
           "brain",
           "zzz"
         ]
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "books",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "cross-mark",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "NOT THE SAME",
+        "bg": "paper"
       }
     },
     {
@@ -222,6 +404,18 @@
           "bell",
           "red-question-mark"
         ]
+      },
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "electric-plug",
+            "at": "above",
+            "size": "m"
+          }
+        ],
+        "bg": "lab",
+        "face": "sleep"
       }
     },
     {
@@ -231,6 +425,24 @@
       "visual": {
         "type": "diagram",
         "spec": "side view of the brain with a glowing region at the back, the parietal and occipital area, labeled posterior hot zone"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "fire",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "POSTERIOR HOT ZONE",
+        "bg": "lab"
       }
     },
     {
@@ -247,6 +459,22 @@
           "chart-increasing",
           "thought-balloon"
         ]
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "laptop",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "brain",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
       }
     },
     {
@@ -263,6 +491,18 @@
           "sun",
           "red-question-mark"
         ]
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "red-question-mark",
+            "at": "bubble",
+            "size": "l"
+          }
+        ],
+        "text": "WHY DREAM?",
+        "bg": "room"
       }
     },
     {
@@ -273,6 +513,22 @@
         "type": "science",
         "query": "Sigmund Freud portrait photograph public domain",
         "note": "historical portrait photograph of Sigmund Freud"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "locked",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "books",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
       }
     },
     {
@@ -289,6 +545,17 @@
           "thought-balloon",
           "crystal-ball"
         ]
+      },
+      "anim": {
+        "action": "fall-toward",
+        "props": [
+          {
+            "icon": "open-book",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -298,6 +565,24 @@
       "visual": {
         "type": "diagram",
         "spec": "random scattered signals from the brainstem flowing up into the forebrain, which assembles them into a storyboard"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "brain",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "MAKING SENSE OF NOISE",
+        "bg": "paper"
       }
     },
     {
@@ -314,6 +599,19 @@
           "ghost",
           "crescent-moon"
         ]
+      },
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "lion",
+            "at": "right",
+            "size": "l",
+            "anim": "approach"
+          }
+        ],
+        "text": "THREAT SIMULATION",
+        "bg": "park"
       }
     },
     {
@@ -330,6 +628,17 @@
           "sunrise",
           "pencil"
         ]
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "red-heart",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "bg": "room"
       }
     },
     {
@@ -346,6 +655,18 @@
           "crescent-moon",
           "thought-balloon"
         ]
+      },
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "cloud-with-rain",
+            "at": "above",
+            "size": "m"
+          }
+        ],
+        "bg": "room",
+        "face": "worry"
       }
     },
     {
@@ -362,6 +683,23 @@
           "books",
           "zzz"
         ]
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "file-cabinet",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "brain",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "OVERNIGHT FILING",
+        "bg": "paper"
       }
     },
     {
@@ -378,6 +716,23 @@
           "musical-notes",
           "zzz"
         ]
+      },
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "flexed-biceps",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
       }
     },
     {
@@ -394,6 +749,22 @@
           "brain",
           "thought-balloon"
         ]
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "compass",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "graduation-cap",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
       }
     },
     {
@@ -410,6 +781,23 @@
           "thought-balloon",
           "zzz"
         ]
+      },
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "couch-and-lamp",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "zzz",
+            "at": "above",
+            "size": "s"
+          }
+        ],
+        "bg": "room",
+        "face": "sleep"
       }
     },
     {
@@ -419,6 +807,24 @@
       "visual": {
         "type": "diagram",
         "spec": "bar chart comparing maze improvement: nappers without maze dreams small bar, nappers with maze dreams a bar about ten times taller"
+      },
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "trophy",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "compass",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "10× BETTER",
+        "bg": "lab"
       }
     },
     {
@@ -429,6 +835,17 @@
         "type": "science",
         "query": "hippocampus brain illustration",
         "note": "illustration highlighting the hippocampus, a memory center"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "light-bulb",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -445,6 +862,19 @@
           "thought-balloon",
           "dashing-away"
         ]
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "fog",
+            "at": "above",
+            "size": "m",
+            "anim": "fade-in"
+          }
+        ],
+        "text": "ONLY 10–15%",
+        "bg": "room"
       }
     },
     {
@@ -461,6 +891,22 @@
           "crescent-moon",
           "thought-balloon"
         ]
+      },
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "notebook",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "pencil",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
       }
     },
     {
@@ -477,6 +923,22 @@
           "crescent-moon",
           "red-question-mark"
         ]
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "red-question-mark",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "brain",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -493,6 +955,24 @@
           "sparkles",
           "crescent-moon"
         ]
+      },
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "above",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "night",
+        "face": "sleep"
       }
     },
     {
@@ -501,6 +981,10 @@
       "sub": "",
       "visual": {
         "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
       }
     }
   ]

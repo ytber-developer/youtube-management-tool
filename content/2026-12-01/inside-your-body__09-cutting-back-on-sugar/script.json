@@ -3,6 +3,7 @@
   "number": 9,
   "slug": "cutting-back-on-sugar",
   "target_minutes": 6.33,
+  "style": "anim",
   "title": "What Happens Inside You When You Cut Back on Added Sugar",
   "thumbnail_text": "LESS SUGAR, THEN?",
   "description": "The average American adult eats about seventeen teaspoons of added sugar a day. Follow that sugar through your mouth, your bloodstream and your liver, and see what science says changes when there is less of it, including a surprising shift in how sweet things taste.\n\nSources:\n- CDC, Get the Facts: Added Sugars: https://www.cdc.gov/nutrition/php/data-research/added-sugars.html\n- Harvard T.H. Chan School of Public Health, The Nutrition Source, Dietary Guidelines for Americans 2025-2030: https://nutritionsource.hsph.harvard.edu/2026/01/09/dietary-guidelines-for-americans-2025-2030-progress-on-added-sugar-protein-hype-saturated-fat-contradictions/\n- NIDDK, Insulin Resistance and Prediabetes: https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/prediabetes-insulin-resistance\n- Nutrients (2017), Fructose Consumption, Lipogenesis, and Non-Alcoholic Fatty Liver Disease: https://pmc.ncbi.nlm.nih.gov/articles/PMC5622741\n- Monell Center via EurekAlert (2015), Low-sugar diet makes foods taste sweeter: https://www.eurekalert.org/news-releases/613619\n- NIDCR, Tooth Decay: https://www.nidcr.nih.gov/health-info/tooth-decay\n\nThis video is for educational purposes only and is not medical advice.",
@@ -47,6 +48,21 @@
       "url": "https://www.nidcr.nih.gov/health-info/tooth-decay"
     }
   ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "candy",
+        "at": "right",
+        "size": "xl"
+      },
+      {
+        "icon": "tongue",
+        "at": "left",
+        "size": "m"
+      }
+    ]
+  },
   "scenes": [
     {
       "narration": "Eat less added sugar for a few months, and something strange happens. The same dessert starts tasting sweeter. Here is why, and what else changes.",
@@ -62,6 +78,19 @@
           "tongue",
           "sparkles"
         ]
+      },
+      "anim": {
+        "action": "eat",
+        "props": [
+          {
+            "icon": "shortcake",
+            "at": "hand",
+            "size": "m"
+          }
+        ],
+        "face": "grin",
+        "text": "SWEETER?",
+        "bg": "room"
       }
     },
     {
@@ -78,6 +107,23 @@
           "lollipop",
           "spoon"
         ]
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "candy",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "honey-pot",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "ADDED SUGAR"
       }
     },
     {
@@ -94,6 +140,23 @@
           "cookie",
           "shortcake"
         ]
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "cup-with-straw",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "cookie",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
       }
     },
     {
@@ -110,6 +173,21 @@
           "magnifying-glass-tilted-left",
           "candy"
         ]
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "clipboard",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "candy",
+            "at": "left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -119,6 +197,16 @@
       "visual": {
         "type": "diagram",
         "spec": "side-by-side comparison: earlier guideline, about 50 grams of added sugar per day on a 2,000 calorie diet; newest guideline, no more than 10 grams per meal"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "bar-chart",
+            "at": "bubble",
+            "size": "m"
+          }
+        ]
       }
     },
     {
@@ -129,6 +217,18 @@
         "type": "stock",
         "query": "spoonful of white sugar close up",
         "note": "a spoon heaped with white sugar"
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "spoon",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "camera": "zoom-in"
       }
     },
     {
@@ -145,6 +245,25 @@
           "candy",
           "toothbrush"
         ]
+      },
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "tooth",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "microbe",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "face": "worry",
+        "text": "ACID ATTACK"
       }
     },
     {
@@ -154,6 +273,23 @@
       "visual": {
         "type": "diagram",
         "spec": "cross-section of a tooth showing enamel losing minerals to acid on one side and saliva returning minerals on the other, with arrows"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "tooth",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "droplet",
+            "at": "left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ]
       }
     },
     {
@@ -163,6 +299,23 @@
       "visual": {
         "type": "diagram",
         "spec": "a sucrose molecule splitting into one glucose and one fructose molecule, labeled"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "drop-of-blood",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
       }
     },
     {
@@ -173,6 +326,19 @@
         "type": "science",
         "query": "pancreas anatomy illustration",
         "note": "anatomy illustration of the pancreas near the stomach"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "key",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          }
+        ],
+        "text": "INSULIN = KEY",
+        "bg": "body"
       }
     },
     {
@@ -189,6 +355,22 @@
           "brain",
           "candy"
         ]
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "red-question-mark",
+            "at": "bubble",
+            "size": "m"
+          },
+          {
+            "icon": "red-apple",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
       }
     },
     {
@@ -199,6 +381,22 @@
         "type": "science",
         "query": "human liver anatomy illustration",
         "note": "the liver in the upper right abdomen"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "red-apple",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "factory",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
       }
     },
     {
@@ -208,6 +406,25 @@
       "visual": {
         "type": "diagram",
         "spec": "fructose entering a liver, with four labeled exits: glucose, storage, energy, fat"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "factory",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "butter",
+            "at": "left",
+            "size": "s",
+            "anim": "grow"
+          }
+        ],
+        "text": "LIPOGENESIS",
+        "bg": "body"
       }
     },
     {
@@ -224,6 +441,17 @@
           "balance-scale",
           "red-question-mark"
         ]
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "balance-scale",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "bg": "lab"
       }
     },
     {
@@ -233,6 +461,24 @@
       "visual": {
         "type": "diagram",
         "spec": "two cells side by side: left, insulin key opens a door and glucose enters; right, the door stays shut and glucose builds up outside"
+      },
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "key",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "locked",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "INSULIN RESISTANCE",
+        "bg": "body"
       }
     },
     {
@@ -249,6 +495,24 @@
           "drop-of-blood",
           "candy"
         ]
+      },
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "syringe",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "worry",
+        "bg": "room"
       }
     },
     {
@@ -259,6 +523,18 @@
         "type": "science",
         "query": "human tongue taste buds micrograph",
         "note": "a microscope view of taste buds"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "tongue",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "camera": "zoom-in"
       }
     },
     {
@@ -275,6 +551,22 @@
           "calendar",
           "candy"
         ]
+      },
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "cup-with-straw",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "stopwatch",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
       }
     },
     {
@@ -291,6 +583,25 @@
           "tongue",
           "sparkles"
         ]
+      },
+      "anim": {
+        "action": "eat",
+        "props": [
+          {
+            "icon": "custard",
+            "at": "hand",
+            "size": "m"
+          },
+          {
+            "icon": "sparkles",
+            "at": "right",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "grin",
+        "text": "SWEETER!",
+        "bg": "lab"
       }
     },
     {
@@ -307,6 +618,23 @@
           "doughnut",
           "chocolate-bar"
         ]
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "cup-with-straw",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "chart-increasing",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
       }
     },
     {
@@ -316,6 +644,17 @@
       "visual": {
         "type": "diagram",
         "spec": "a sweetness dial with a needle shifting as sugar intake goes down, labeled perceived sweetness"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "control-knobs",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "text": "TASTE ADJUSTS"
       }
     },
     {
@@ -325,6 +664,27 @@
       "visual": {
         "type": "diagram",
         "spec": "outline of the human body with four labeled stops: mouth, bloodstream, liver, tongue"
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "drop-of-blood",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "tooth",
+            "at": "top-left",
+            "size": "s"
+          },
+          {
+            "icon": "tongue",
+            "at": "far-right",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
       }
     },
     {
@@ -340,6 +700,22 @@
           "banana",
           "grapes",
           "tangerine"
+        ]
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "tongue",
+            "at": "left",
+            "size": "s"
+          }
         ]
       }
     },
@@ -357,6 +733,22 @@
           "green-salad",
           "speech-balloon"
         ]
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "stethoscope",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "clipboard",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
       }
     },
     {
@@ -365,6 +757,10 @@
       "sub": "",
       "visual": {
         "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
       }
     }
   ]

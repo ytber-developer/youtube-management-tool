@@ -1,0 +1,700 @@
+{
+  "channel": "inside-your-body",
+  "number": 21,
+  "slug": "how-your-eyes-see-color",
+  "style": "anim",
+  "target_minutes": 6.6,
+  "title": "How Your Eyes See Color (It's Not What You Think)",
+  "thumbnail_text": "COLOR IS IN YOU",
+  "description": "A red strawberry is not really red. Follow one beam of sunlight from the Sun to your retina and brain: why rods are color blind, how three types of cones and a little comparing create about a million colors, why some people see fewer colors, and the rare people who may see many more.\n\nSources:\n- NASA Science - Visible Light: https://science.nasa.gov/ems/09_visiblelight/\n- Cleveland Clinic - Photoreceptors (Rods and Cones): https://my.clevelandclinic.org/health/body/photoreceptors-rods-and-cones\n- National Eye Institute - Color Blindness: https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/color-blindness\n- StatPearls (NCBI Bookshelf) - Physiology, Color Perception: https://www.ncbi.nlm.nih.gov/books/NBK544355/\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": [
+    "color vision",
+    "how eyes see color",
+    "cones and rods",
+    "retina",
+    "photoreceptors",
+    "color blindness",
+    "tetrachromacy",
+    "visible light",
+    "eyes",
+    "vision",
+    "human body",
+    "science explained",
+    "inside your body"
+  ],
+  "sources": [
+    {
+      "title": "NASA Science - Visible Light",
+      "url": "https://science.nasa.gov/ems/09_visiblelight/"
+    },
+    {
+      "title": "Cleveland Clinic - Photoreceptors (Rods and Cones)",
+      "url": "https://my.clevelandclinic.org/health/body/photoreceptors-rods-and-cones"
+    },
+    {
+      "title": "National Eye Institute - Color Blindness",
+      "url": "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/color-blindness"
+    },
+    {
+      "title": "StatPearls (NCBI Bookshelf) - Physiology, Color Perception",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK544355/"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "strawberry",
+        "at": "right",
+        "size": "l"
+      },
+      {
+        "icon": "eye",
+        "at": "top-left",
+        "size": "m"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "Look at a red strawberry. The red is not actually in the strawberry. It is made inside you. Here is how your eyes see color.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "strawberry",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          }
+        ],
+        "face": "grin",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "To understand that, we need to follow a single beam of sunlight. It travels from the Sun, hits the strawberry, bounces into your eye, and ends up as a signal in your brain.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "strawberry",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Sunlight looks white, but it is really a mix of many different wavelengths of light. Your eyes can only detect a narrow band of them, the band scientists call visible light.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "rainbow",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "VISIBLE LIGHT",
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "According to NASA, the human eye can typically detect wavelengths from about three hundred eighty to seven hundred nanometers. A nanometer is a billionth of a meter, so these waves are incredibly tiny.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "shock",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Within that band, violet has the shortest wavelength and red has the longest. Everything else, blue, green, yellow, and orange, sits somewhere in between, just like the colors of a rainbow.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "rainbow",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Now the light reaches the strawberry. Objects soak up some wavelengths and bounce back others. NASA notes that plants reflect more green light than blue or red. A ripe strawberry bounces back plenty of long, reddish light.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "strawberry",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "leaf-fluttering-in-wind",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Next, that light enters your eye and lands on the retina, a thin layer of tissue at the back. Cleveland Clinic describes it as holding millions of light sensing cells called photoreceptors.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "eye",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "text": "PHOTORECEPTORS",
+        "camera": "zoom-in",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "There are two kinds. The most numerous are rods, about one hundred to one hundred twenty five million of them. That is roughly ninety five percent of all the photoreceptors in your eyes.",
+      "anim": {
+        "action": "grow",
+        "props": [
+          {
+            "icon": "eye",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "hundred-points",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Rods are extremely sensitive to light. They let you see in dim light and at night. But they have one big limitation. Rods cannot detect color at all.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "top-left",
+            "size": "m"
+          },
+          {
+            "icon": "eye",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "That is why a moonlit garden looks gray and silver. In very dim light, your rods do most of the work, and the bright colors you know from daytime seem to drain away.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "rose",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "crescent-moon",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Color is the job of the other photoreceptors, the cones. Most of your cones crowd into one small area of the retina called the macula, which also gives you sharp, detailed vision.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "eye",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "text": "CONES",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "This is also why colors look richest when you look straight at something. Your sharp, colorful central vision comes from that cone packed spot, while the edges of your vision lean more on rods.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "sunflower",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "eye",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "And here is the key. Most people have three types of cones. Short cones respond to bluish light, medium cones to greenish light, and long cones to longer, reddish light.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "blue-circle",
+            "at": "left",
+            "size": "s"
+          },
+          {
+            "icon": "green-circle",
+            "at": "top",
+            "size": "s"
+          },
+          {
+            "icon": "red-circle",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "THREE CONE TYPES",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Doctors call this trichromacy, which simply means three color channels. Every shade you have ever seen comes from your visual system combining the signals from these three cone types.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "artist-palette",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "face": "think",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "But here is the catch. On its own, a single cone only signals how much light it has caught. It cannot tell you which wavelength that light was. One cone alone is color blind.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "red-question-mark",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          }
+        ],
+        "face": "shock",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "So your visual system compares. Signals from the different cones are set against each other in two main pairs, red versus green and blue versus yellow. This comparing happens in your retina and brain.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "red-circle",
+            "at": "left",
+            "size": "s"
+          },
+          {
+            "icon": "green-circle",
+            "at": "right",
+            "size": "s"
+          },
+          {
+            "icon": "brain",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "text": "RED VS GREEN",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Back to our strawberry. Its light excites your long cones much more than your short cones. Your retina turns that pattern into coded nerve signals and sends them down the optic nerve.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "brain",
+            "at": "far-right",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Those signals reach your brain, which processes what you see. Only after all that comparing does the experience of red finally appear. Red is your brain's answer, not something painted on the fruit.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "strawberry",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "camera": "zoom-in",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "So the strawberry looked red at the start of this video, but think about what really happened. The light was real, and the wavelengths were real. The redness itself was built inside your head.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "strawberry",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "face": "grin",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "This three cone system is surprisingly powerful. Cleveland Clinic says the average healthy human eye can tell apart up to about a million different colors.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "artist-palette",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "crayon",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "face": "grin",
+        "text": "ONE MILLION COLORS",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Not everyone's cones work the same way, though. If one cone type is missing or works differently, some colors become harder to tell apart. This is called color vision deficiency, or color blindness.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "vertical-traffic-light",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "It is more common than you might think. The National Eye Institute says about one in twelve men has color vision deficiency. Women are affected much less often.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "glasses",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "eye",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "The most common type makes it hard to tell red from green. Most cases are inherited, passed down through families, because the instructions for building cone pigments are written in your genes.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "dna",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "face": "think",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "There is also a less common type that makes blue and yellow harder to tell apart. For kids, the National Eye Institute suggests testing if color blindness runs in the family, or if a child struggles to learn colors.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "crayon",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "blue-circle",
+            "at": "left",
+            "size": "s"
+          },
+          {
+            "icon": "yellow-circle",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Color vision can also change later in life. According to the National Eye Institute, it can be affected by injuries to the eye or brain, some medicines, and cataracts that come with aging.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "glasses",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "pill",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "If colors ever start looking different to you than they used to, or you have trouble telling certain colors apart, talk with an eye doctor. A simple test with colored dot patterns can check.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "eye",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "stethoscope",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "SEE AN EYE DOCTOR",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Now flip it around. A small number of people are born with four types of cones instead of three. This rare genetic variation is called tetrachromacy.",
+      "anim": {
+        "action": "grow",
+        "props": [
+          {
+            "icon": "rainbow",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Cleveland Clinic explains that in its strongest form, that fourth cone type may let someone distinguish up to one hundred million colors. It is very rare, and most people have no idea whether they have it.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "butterfly",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          }
+        ],
+        "face": "shock",
+        "text": "ONE HUNDRED MILLION?",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "So in a way, color is personal. Two people can look at the same strawberry, receive exactly the same light, and still build slightly different experiences of red from their own cones.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "strawberry",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "red-question-mark",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Your eyes also need a little care to keep doing all of this. Cleveland Clinic recommends regular eye exams, at least every two years, to keep track of your vision and retinal health.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "glasses",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "spiral-calendar",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Here is a fun test you can try tonight. Turn the lights down low and look at a colorful book cover. As your rods take over, watch the colors fade toward gray.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "books",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "crescent-moon",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Then switch the lights back on, and the color floods back as your cones get enough light to work again. You are watching your two photoreceptor systems trade places.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "light-bulb",
+            "at": "top-left",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "books",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "So every color you have ever loved, a sunset, a favorite shirt, a ripe strawberry, is really a conversation between light, three kinds of cones, and your brain.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "s"
+          },
+          {
+            "icon": "strawberry",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "brain",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "grin",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

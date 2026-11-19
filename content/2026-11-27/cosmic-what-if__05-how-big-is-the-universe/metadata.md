@@ -18,6 +18,8 @@ Sources:
 - Astronomy Magazine, How immense is the universe?: https://www.astronomy.com/science/how-immense-is-the-universe/
 
 Images:
+- Original animation by Cosmic What If
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 - NASA; ESA; G. Illingworth, D. Magee, and P. Oesch, University of California, Santa Cruz; R. Bouwens, Leiden University; and the HUDF09 Team (https://images.nasa.gov/details/GSFC_20171208_Archive_e001651)
 - NASA (GSFC) (https://images.nasa.gov/details/GSFC_20171208_Archive_e001016)
 - NASA/JPL (https://images.nasa.gov/details/PIA04495)
@@ -34,6 +36,8 @@ Images:
 universe, how big is the universe, observable universe, light year, voyager 1, hubble ultra deep field, milky way, andromeda, cosmology, space, astronomy
 
 ## Image credits
+- Original animation by Cosmic What If
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 - NASA; ESA; G. Illingworth, D. Magee, and P. Oesch, University of California, Santa Cruz; R. Bouwens, Leiden University; and the HUDF09 Team (https://images.nasa.gov/details/GSFC_20171208_Archive_e001651)
 - NASA (GSFC) (https://images.nasa.gov/details/GSFC_20171208_Archive_e001016)
 - NASA/JPL (https://images.nasa.gov/details/PIA04495)

@@ -1,0 +1,610 @@
+{
+  "channel": "cosmic-what-if",
+  "style": "anim",
+  "number": 17,
+  "slug": "earth-had-rings",
+  "target_minutes": 6.2,
+  "title": "What If Earth Had Rings Like Saturn? (It May Have Happened)",
+  "thumbnail_text": "EARTH WITH RINGS",
+  "description": "Give Earth a ring system like Saturn's and the sky turns spectacular, but rings also cast shadows, threaten satellites and slowly rain debris. We tour the view from the equator to the poles, explain how planets get rings in the first place, and look at new evidence that Earth may have worn a ring about 466 million years ago.\n\nSources:\n- NASA Science, Saturn Facts: https://science.nasa.gov/saturn/facts/\n- NASA, NASA Research Reveals Saturn is Losing Its Rings at 'Worst-Case-Scenario' Rate: https://www.nasa.gov/news-release/nasa-research-reveals-saturn-is-losing-its-rings-at-worst-case-scenario-rate\n- Monash Lens, Hidden craters reveal Earth may once have had a ring like Saturn (2024): https://lens.monash.edu/hidden-craters-reveal-earth-may-once-have-had-a-ring-like-saturn/\n- Tomkins and Martin, Evidence suggesting that Earth had a ring in the Ordovician, Earth and Planetary Science Letters (2024): https://research.monash.edu/en/publications/evidence-suggesting-that-earth-had-a-ring-in-the-ordovician/\n- NASA Science, Phobos: https://science.nasa.gov/mars/moons/phobos/\n- NASA, What Is the International Space Station? (Grades 5-8): https://www.nasa.gov/learning-resources/for-kids-and-students/what-is-the-international-space-station-grades-5-8/",
+  "tags": [
+    "earth rings",
+    "what if earth had rings",
+    "saturn rings",
+    "planetary rings",
+    "roche limit",
+    "ring rain",
+    "phobos",
+    "ordovician",
+    "monash university",
+    "satellites",
+    "astronomy",
+    "space",
+    "science",
+    "what if",
+    "cosmic what if"
+  ],
+  "sources": [
+    {
+      "title": "NASA Science, Saturn Facts",
+      "url": "https://science.nasa.gov/saturn/facts/"
+    },
+    {
+      "title": "NASA, NASA Research Reveals Saturn is Losing Its Rings at 'Worst-Case-Scenario' Rate",
+      "url": "https://www.nasa.gov/news-release/nasa-research-reveals-saturn-is-losing-its-rings-at-worst-case-scenario-rate"
+    },
+    {
+      "title": "Monash Lens, Hidden craters reveal Earth may once have had a ring like Saturn (2024)",
+      "url": "https://lens.monash.edu/hidden-craters-reveal-earth-may-once-have-had-a-ring-like-saturn/"
+    },
+    {
+      "title": "Tomkins and Martin, Evidence suggesting that Earth had a ring in the Ordovician, Earth and Planetary Science Letters (2024)",
+      "url": "https://research.monash.edu/en/publications/evidence-suggesting-that-earth-had-a-ring-in-the-ordovician/"
+    },
+    {
+      "title": "NASA Science, Phobos",
+      "url": "https://science.nasa.gov/mars/moons/phobos/"
+    },
+    {
+      "title": "NASA, What Is the International Space Station? (Grades 5-8)",
+      "url": "https://www.nasa.gov/learning-resources/for-kids-and-students/what-is-the-international-space-station-grades-5-8/"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "look-up",
+    "props": [
+      {
+        "icon": "ringed-planet",
+        "at": "right",
+        "size": "xl"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "What if Earth had rings like Saturn? Picture a glowing arch across your sky, every single night. Now, what would it cost?",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "top",
+            "size": "xl",
+            "anim": "fade-in"
+          }
+        ],
+        "face": "grin",
+        "bg": "night",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "To build Earth's rings, we should copy the expert. Saturn's rings are made of billions of chunks of ice and rock, some as small as dust grains, some as big as a house, and a few the size of mountains.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "ice",
+            "at": "left",
+            "size": "s"
+          },
+          {
+            "icon": "rock",
+            "at": "bottom-right",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "They're also absurdly flat. Saturn's ring system reaches up to one hundred seventy-five thousand miles from the planet. Yet the main rings are typically only about thirty feet thick. That's about the height of a three-story building.",
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "straight-ruler",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "ringed-planet",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "THIRTY FEET THICK",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "A ring like that always circles a planet's equator. So for Earth, it would sit right above the tropics. And what you'd see depends entirely on where you're standing. Let's take a tour.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "world-map",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "First stop, the equator, in Ecuador or Kenya. Look up and the rings are almost invisible. You're standing right in their plane, so you see them edge-on, as a thin bright line slicing the sky straight overhead.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "straight-ruler",
+            "at": "top",
+            "size": "l"
+          }
+        ],
+        "face": "think",
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "Now fly north to the United States. Here the rings become spectacular. They rise from the eastern horizon, arch across the southern sky, and come down in the west, like a frozen rainbow that never moves.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "rainbow",
+            "at": "top",
+            "size": "xl",
+            "anim": "fade-in"
+          },
+          {
+            "icon": "statue-of-liberty",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "grin",
+        "text": "A FROZEN RAINBOW",
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "At night they might be even better. A ring of ice reflects sunlight. Even after sunset, the rings high above you would still be lit by the Sun, shining down long after the sky around them goes dark.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "top",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "night-with-stars",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Keep traveling north, toward the Arctic, and the arch sinks lower and lower toward the southern horizon. Near the poles, the rings could slip below the horizon entirely. Some people would never see them at all.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "polar-bear",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "snowflake",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "worry",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Now the cost. Rings don't just glow. They cast shadows. On Saturn, you can see dark bands drawn across the planet by its rings. Earth would get the same thing, and our tilted axis would move that shadow through the year.",
+      "anim": {
+        "action": "hidden",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "sun",
+            "at": "far-right",
+            "size": "s"
+          }
+        ],
+        "bg": "space",
+        "camera": "drift"
+      }
+    },
+    {
+      "narration": "In winter, your hemisphere tilts away from the Sun. That's exactly when the ring's shadow would fall on it. So depending on where you live, part of winter could be spent in the shade of the rings, on top of already short days.",
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "cold-face",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "snowflake",
+            "at": "left",
+            "size": "m",
+            "anim": "fall"
+          }
+        ],
+        "face": "worry",
+        "text": "WINTER IN SHADOW",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Less sunlight in winter could mean colder winters in some regions. Hold on to that idea, because it turns out to be more than a guess. We'll come back to it.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "thermometer",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "face": "think",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "The next cost is space travel. Today, about two hundred fifty miles up, the International Space Station circles Earth at roughly seventeen thousand five hundred miles per hour. Satellites by the thousands share the sky with it.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "l",
+            "anim": "orbit"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "At those speeds, even a tiny fleck of debris hits like a bullet. A ring is a band of countless orbiting rocks and ice chunks. Any satellite whose path crossed the ring would be sandblasted, again and again.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "collision",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "satellite",
+            "at": "left",
+            "size": "s",
+            "anim": "shake"
+          }
+        ],
+        "face": "shock",
+        "bg": "space",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "Engineers would have to keep spacecraft in orbits that stay clear of the ring, and plan launches to avoid flying through it. Our modern life runs on satellites, for navigation, weather and phone calls, so that's a big deal.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "mobile-phone",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "So how would Earth even get rings? Here's the trick. If a small body wanders too close to a big planet, gravity pulls harder on its near side than its far side. Inside a certain distance, that stretching tears it apart.",
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "comet",
+            "at": "right",
+            "size": "l",
+            "anim": "approach"
+          }
+        ],
+        "face": "hold",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "That boundary is called the Roche limit. Inside it, a comet, an asteroid, or even a small moon gets shredded into countless pieces. And those pieces don't fall straight down. They keep orbiting, spreading out into a ring.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "comet",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "rock",
+            "at": "left",
+            "size": "s",
+            "anim": "orbit"
+          }
+        ],
+        "text": "THE ROCHE LIMIT",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "NASA says Saturn's rings may be leftovers of exactly that kind, pieces of comets, asteroids, or moons that were torn apart by Saturn's gravity before they could reach the planet.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "comet",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "And here's a twist. Saturn's rings may be surprisingly young. NASA research suggests they're likely no more than about one hundred million years old. When the first dinosaurs walked on Earth, Saturn may not have had them at all.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "t-rex",
+            "at": "left",
+            "size": "m"
+          },
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "m",
+            "anim": "fade-in"
+          }
+        ],
+        "face": "shock",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "And they're disappearing. Ice from the rings rains down into Saturn. The amount lost every half hour could fill an Olympic-sized swimming pool. NASA researchers estimate the rings could be gone in less than one hundred million years.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "m",
+            "anim": "fall"
+          },
+          {
+            "icon": "ringed-planet",
+            "at": "top",
+            "size": "m",
+            "anim": "shrink"
+          }
+        ],
+        "text": "RING RAIN",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "So rings aren't forever. They're temporary decorations. A planet gets one when something breaks apart, wears it for a while, and slowly loses it. Which raises a question. Could Earth have worn one once?",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "globe-showing-europe-africa",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "face": "think",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "In 2024, geologists at Monash University in Australia proposed that it might have. They looked at twenty-one impact craters from about four hundred sixty-six million years ago, a time when meteorite strikes suddenly spiked.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "hand",
+            "size": "s"
+          },
+          {
+            "icon": "volcano",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "466 MILLION YEARS AGO",
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "Every one of those craters formed on land that was close to the equator at the time. That's odd, because only about thirty percent of the land suitable for preserving craters was near the equator. Random space rocks shouldn't line up like that.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "round-pushpin",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "think",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Their explanation: a large asteroid passed inside Earth's Roche limit and broke apart. Its pieces formed a ring around the equator. Over tens of millions of years, chunks fell from that ring, hitting the planet near the equator.",
+      "anim": {
+        "action": "fall-toward",
+        "props": [
+          {
+            "icon": "comet",
+            "at": "right",
+            "size": "m",
+            "anim": "fall"
+          },
+          {
+            "icon": "rock",
+            "at": "top",
+            "size": "s",
+            "anim": "fall"
+          }
+        ],
+        "bg": "space",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "Remember the winter shadow? The team suggests the ring's shade could have helped cool the planet. Earth did slide into one of its coldest periods of the last five hundred million years, an ice age that peaked about four hundred forty-five million years ago.",
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "snowflake",
+            "at": "right",
+            "size": "l",
+            "anim": "fall"
+          },
+          {
+            "icon": "ice",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "worry",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "The researchers are careful to say this link hasn't been tested yet, and it needs climate modeling to confirm. But if they're right, the creatures in Earth's ancient seas lived under a ringed sky.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "top",
+            "size": "l"
+          },
+          {
+            "icon": "spiral-shell",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "And another world in our solar system is heading for rings right now. Mars's moon Phobos creeps about six feet closer to the planet every century. NASA says in about fifty million years, it will either crash into Mars or break up into a ring.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "red-circle",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "rock",
+            "at": "top-left",
+            "size": "s",
+            "anim": "orbit"
+          }
+        ],
+        "text": "MARS GETS RINGS",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "So Earth with rings would give you the most beautiful sky imaginable, and darker winters, dangerous orbits, and a constant drizzle of falling debris. It may have happened once. Rings come and go. We might just be living between them.",
+      "anim": {
+        "action": "wave",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          }
+        ],
+        "face": "smile",
+        "bg": "night",
+        "camera": "zoom-out"
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

@@ -2,89 +2,357 @@
   "channel": "cosmic-what-if",
   "number": 4,
   "slug": "sun-suddenly-vanished",
-  "target_minutes": 3.0,
+  "target_minutes": 3,
+  "style": "anim",
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "sun",
+        "at": "right",
+        "size": "xl",
+        "anim": "shrink"
+      }
+    ]
+  },
   "title": "What If the Sun Suddenly Vanished? Minute by Minute",
   "thumbnail_text": "THE SUN IS GONE",
   "description": "If the Sun vanished right now, you wouldn't know for eight minutes, and Earth wouldn't either. Here's what happens next, from the first eerie minutes to the frozen world millions of years later, and where life could still hang on.\n\nSources:\n- NASA Science, Sun Facts: https://science.nasa.gov/sun/facts/\n- LIGO Caltech, GW170817 press release: https://www.ligo.caltech.edu/page/press-release-gw170817\n- Caltech, If the Sun ceased to exist, how long would mankind survive?: https://experts.caltech.edu/news/caltech-question-month-if-sun-ceased-exist-right-now-how-long-would-mankind-survive-would\n- Popular Science, If the Sun Went Out, How Long Could Life on Earth Survive?: https://www.popsci.com/science/article/2013-07/if-sun-went-out-how-long-could-life-earth-survive/",
-  "tags": ["sun", "what if", "sun disappeared", "space", "astronomy", "gravity", "speed of light", "gravitational waves", "frozen earth", "science"],
+  "tags": [
+    "sun",
+    "what if",
+    "sun disappeared",
+    "space",
+    "astronomy",
+    "gravity",
+    "speed of light",
+    "gravitational waves",
+    "frozen earth",
+    "science"
+  ],
   "sources": [
-    { "title": "NASA Science - Sun Facts", "url": "https://science.nasa.gov/sun/facts/" },
-    { "title": "LIGO Caltech - GW170817 press release", "url": "https://www.ligo.caltech.edu/page/press-release-gw170817" },
-    { "title": "Caltech - If the Sun ceased to exist, how long would mankind survive?", "url": "https://experts.caltech.edu/news/caltech-question-month-if-sun-ceased-exist-right-now-how-long-would-mankind-survive-would" },
-    { "title": "Popular Science - If the Sun Went Out, How Long Could Life on Earth Survive?", "url": "https://www.popsci.com/science/article/2013-07/if-sun-went-out-how-long-could-life-earth-survive/" }
+    {
+      "title": "NASA Science - Sun Facts",
+      "url": "https://science.nasa.gov/sun/facts/"
+    },
+    {
+      "title": "LIGO Caltech - GW170817 press release",
+      "url": "https://www.ligo.caltech.edu/page/press-release-gw170817"
+    },
+    {
+      "title": "Caltech - If the Sun ceased to exist, how long would mankind survive?",
+      "url": "https://experts.caltech.edu/news/caltech-question-month-if-sun-ceased-exist-right-now-how-long-would-mankind-survive-would"
+    },
+    {
+      "title": "Popular Science - If the Sun Went Out, How Long Could Life on Earth Survive?",
+      "url": "https://www.popsci.com/science/article/2013-07/if-sun-went-out-how-long-could-life-earth-survive/"
+    }
   ],
   "scenes": [
     {
       "narration": "Right now, the Sun disappears. No explosion, no warning. Strangely, for the next eight minutes, you would have no idea.",
       "headline": "THE SUN JUST <em>VANISHED</em>",
       "sub": "",
-      "visual": { "type": "nasa", "query": "Solar Dynamics Observatory full disk Sun", "note": "full glowing disk of the Sun" }
+      "visual": {
+        "type": "nasa",
+        "query": "Solar Dynamics Observatory full disk Sun",
+        "note": "full glowing disk of the Sun"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l",
+            "anim": "shrink"
+          }
+        ],
+        "text": "SUN GONE",
+        "face": "shock",
+        "camera": "zoom-in",
+        "bg": "sky"
+      }
     },
     {
       "narration": "That's because sunlight takes about eight minutes and twenty seconds to cross the ninety three million miles to Earth. The light warming your face right now left the Sun more than eight minutes ago. For a little while, you'd still be basking in the glow of a star that's gone.",
       "headline": "LIGHT IS <em>8 MINUTES</em> LATE",
       "sub": "93 million miles (150 million km)",
-      "visual": { "type": "nasa", "query": "sunrise over Earth from International Space Station", "note": "sunlight on Earth's horizon from orbit" }
+      "visual": {
+        "type": "nasa",
+        "query": "sunrise over Earth from International Space Station",
+        "note": "sunlight on Earth's horizon from orbit"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "stopwatch",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "8 MIN 20 SEC",
+        "face": "smile",
+        "bg": "sky"
+      }
     },
     {
       "narration": "Here's the part that surprises people. Earth would keep orbiting that empty spot for the same eight minutes, because changes in gravity also travel at the speed of light. In twenty seventeen, gravitational waves and light from colliding neutron stars, one hundred thirty million light years away, arrived within about two seconds of each other.",
       "headline": "GRAVITY IS <em>LATE TOO</em>",
       "sub": "It travels at light speed",
-      "visual": { "type": "nasa", "query": "neutron star merger illustration gravitational waves", "note": "two neutron stars colliding" }
+      "visual": {
+        "type": "nasa",
+        "query": "neutron star merger illustration gravitational waves",
+        "note": "two neutron stars colliding"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "collision",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ]
+      }
     },
     {
       "narration": "Then, at eight minutes and twenty seconds, the sky goes black. The daytime side of Earth plunges into night. The Moon vanishes too, since moonlight is just reflected sunlight. The bright planets fade away. Only the distant stars remain.",
       "headline": "THE SKY GOES <em>BLACK</em>",
       "sub": "Even the Moon goes dark",
-      "visual": { "type": "nasa", "query": "Earth at night Black Marble", "note": "night side of Earth with city lights" }
+      "visual": {
+        "type": "nasa",
+        "query": "Earth at night Black Marble",
+        "note": "night side of Earth with city lights"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "star",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "text": "SKY GOES BLACK",
+        "bg": "night",
+        "face": "worry"
+      }
     },
     {
       "narration": "At the same moment, Earth is set free. Our planet has been racing around the Sun at about sixty seven thousand miles per hour. With nothing pulling it inward, it flies off in a straight line toward interstellar space, taking the Moon along for the ride.",
       "headline": "EARTH FLIES <em>OFF COURSE</em>",
       "sub": "67,000 mph, in a straight line",
-      "visual": { "type": "diagram", "spec": "Earth's circular orbit around the Sun's position, with Earth leaving along a straight tangent line once the Sun is gone" }
+      "visual": {
+        "type": "diagram",
+        "spec": "Earth's circular orbit around the Sun's position, with Earth leaving along a straight tangent line once the Sun is gone"
+      },
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "dashing-away",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "camera": "zoom-out"
+      }
     },
     {
       "narration": "Now the cold. Earth doesn't freeze instantly, because land, air, and especially oceans store a lot of heat. But Caltech planetary scientist David Stevenson estimates that within about a week, the surface would cool below the freezing point of salt water, and ice would start spreading across the seas.",
       "headline": "FREEZING <em>WITHIN A WEEK</em>",
       "sub": "Ice spreads across the oceans",
-      "visual": { "type": "nasa", "query": "Antarctic sea ice from space", "note": "sea ice covering ocean" }
+      "visual": {
+        "type": "nasa",
+        "query": "Antarctic sea ice from space",
+        "note": "sea ice covering ocean"
+      },
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "snowflake",
+            "at": "right",
+            "size": "l",
+            "anim": "fall"
+          },
+          {
+            "icon": "ice",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "night",
+        "face": "worry"
+      }
     },
     {
       "narration": "Photosynthesis stops the instant the light does. Most plants would die within a few weeks. Some big trees, with their stored sugars, might hang on for decades. But the food chain that feeds you would collapse long before that.",
       "headline": "PLANTS <em>STOP</em>",
       "sub": "Most die within weeks",
-      "visual": { "type": "nasa", "query": "Earth vegetation global map satellite", "note": "global map of plant life" }
+      "visual": {
+        "type": "nasa",
+        "query": "Earth vegetation global map satellite",
+        "note": "global map of plant life"
+      },
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "wilted-flower",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "deciduous-tree",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
+      }
     },
     {
       "narration": "After about a year, the surface would sit around minus one hundred degrees Fahrenheit. Over millions of years, it would keep cooling toward about minus four hundred. Long before that, the air itself would freeze out of the sky as solid oxygen and nitrogen.",
       "headline": "EVEN THE <em>AIR FREEZES</em>",
       "sub": "About -100°F after one year",
-      "visual": { "type": "nasa", "query": "Pluto nitrogen ice plains New Horizons", "note": "frozen nitrogen landscape" }
+      "visual": {
+        "type": "nasa",
+        "query": "Pluto nitrogen ice plains New Horizons",
+        "note": "frozen nitrogen landscape"
+      },
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "cold-face",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "thermometer",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "-100°F",
+        "bg": "night"
+      }
     },
     {
       "narration": "And yet, Earth would not be completely dead. The ice forming on the oceans would act like a lid, insulating the water below for a very long time. And deep underground, microbes that never needed sunlight could carry on, warmed by heat from Earth's interior.",
       "headline": "LIFE <em>HANGS ON</em> BELOW",
       "sub": "Under the ice, inside the rock",
-      "visual": { "type": "nasa", "query": "Europa ice surface Galileo", "note": "icy surface with ocean beneath" }
+      "visual": {
+        "type": "nasa",
+        "query": "Europa ice surface Galileo",
+        "note": "icy surface with ocean beneath"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "bubble"
+          },
+          {
+            "icon": "ice",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "night"
+      }
     },
     {
       "narration": "Could people survive? A few, possibly. Iceland already heats close to nine out of ten homes with geothermal energy. Scientists suggest that with volcanic heat and habitats dug deep underground, small groups could hold on for a long time.",
       "headline": "HUMANS <em>GO UNDERGROUND</em>",
       "sub": "Living on Earth's inner heat",
-      "visual": { "type": "nasa", "query": "Iceland volcano from space", "note": "Iceland with volcanic activity seen from orbit" }
+      "visual": {
+        "type": "nasa",
+        "query": "Iceland volcano from space",
+        "note": "Iceland with volcanic activity seen from orbit"
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "volcano",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "hut",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
+      }
     },
     {
       "narration": "The good news: the Sun can't actually vanish. Mass doesn't just disappear. Our star is about four point six billion years old, and when it finally changes, billions of years from now, it will swell, not blink out. So enjoy that sunlight on your face. Just remember, it's eight minutes old.",
       "headline": "IT <em>CAN'T</em> HAPPEN",
       "sub": "The Sun is ~4.6 billion years old",
-      "visual": { "type": "nasa", "query": "Sun solar flare SDO", "note": "active Sun with a flare" }
+      "visual": {
+        "type": "nasa",
+        "query": "Sun solar flare SDO",
+        "note": "active Sun with a flare"
+      },
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "sky",
+        "face": "grin"
+      }
     },
     {
       "narration": "Follow Cosmic What If for more mind-bending science.",
       "headline": "",
       "sub": "",
-      "visual": { "type": "outro" }
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
     }
   ]
 }

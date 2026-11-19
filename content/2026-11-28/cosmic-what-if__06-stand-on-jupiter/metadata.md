@@ -18,6 +18,8 @@ Sources:
 - NASA History, 30 Years Ago: Galileo Off to Orbit Jupiter: https://www.nasa.gov/history/30-years-ago-galileo-off-to-orbit-jupiter/
 
 Images:
+- Original animation by Cosmic What If
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 - NASA/JPL/USGS (https://images.nasa.gov/details/PIA00292)
 - Image data: NASA/JPL-Caltech/SwRI/MSSS Image processing by Tanya Oleksuik CC BY NC SA 3.0 (https://images.nasa.gov/details/PIA26077)
 - NASA (ARC) (https://images.nasa.gov/details/ARC-1989-AC89-0146-2)
@@ -36,6 +38,8 @@ Images:
 jupiter, what if, gas giant, galileo probe, juno, great red spot, space, astronomy, planets, metallic hydrogen, science
 
 ## Image credits
+- Original animation by Cosmic What If
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 - NASA/JPL/USGS (https://images.nasa.gov/details/PIA00292)
 - Image data: NASA/JPL-Caltech/SwRI/MSSS Image processing by Tanya Oleksuik CC BY NC SA 3.0 (https://images.nasa.gov/details/PIA26077)
 - NASA (ARC) (https://images.nasa.gov/details/ARC-1989-AC89-0146-2)

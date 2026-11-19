@@ -23,6 +23,8 @@ Sources:
 This video is for educational purposes only and is not medical advice.
 
 Images:
+- Original animation by Inside Your Body
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 - After: Jefferyes Hamett O'Neale Published by: Edward Sumpter / Public domain (https://commons.wikimedia.org/wiki/File:The_Proclamation_of_Proclamations_or_the_most_glorious_and_memorable_Peace_that_ever_was_proclaimed_in_this_or_any_other_Metropolis_thoughout_the_World_(BM_1868,0808.4305).jpg)
 - ENERGY.GOV / Public domain (https://commons.wikimedia.org/wiki/File:HD.17.025_(12639376143).jpg)
 - Muller, Jacques / PDM-owner (https://commons.wikimedia.org/wiki/File:The_Family_of_Preacher_Reinier_Halma_in_Langerak_on_the_Lek_(SM_2172).png)
@@ -43,6 +45,8 @@ Images:
 common cold, immune system, how the immune system works, rhinovirus, antibodies, white blood cells, interferon, runny nose, virus, human body, immunology, science explained, inside your body
 
 ## Image credits
+- Original animation by Inside Your Body
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 - After: Jefferyes Hamett O'Neale Published by: Edward Sumpter / Public domain (https://commons.wikimedia.org/wiki/File:The_Proclamation_of_Proclamations_or_the_most_glorious_and_memorable_Peace_that_ever_was_proclaimed_in_this_or_any_other_Metropolis_thoughout_the_World_(BM_1868,0808.4305).jpg)
 - ENERGY.GOV / Public domain (https://commons.wikimedia.org/wiki/File:HD.17.025_(12639376143).jpg)
 - Muller, Jacques / PDM-owner (https://commons.wikimedia.org/wiki/File:The_Family_of_Preacher_Reinier_Halma_in_Langerak_on_the_Lek_(SM_2172).png)

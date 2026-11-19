@@ -22,6 +22,8 @@ Sources:
 This video is for educational purposes only and is not medical advice.
 
 Images:
+- Original animation by Inside Your Body
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 - Shixart1985 / CC BY 2.0 (https://commons.wikimedia.org/wiki/File:Close-up_of_a_woman_disinfecting_her_hands_with_sanitizer_spray.jpg)
 - Ina May Gaskin displayed it in her talk, a brass casting from museum. / CC0 (https://commons.wikimedia.org/wiki/File:Peruvian_brass_casting_-_demonstrating_traditional_birth_aiding_technique,_using_4_fingers_of_both_hands_pulling_away_from_the_centre.jpg)
 - Riaz Ahmad Department of Orthopaedics, Weston General Hospital, Weston-Super-Mare, UK / CC BY 2.0 (https://commons.wikimedia.org/wiki/File:X-ray_of_arm_showing_absent_radius_and_radially_deviated_hand,_caused_by_Thrombocytopenia_and_Absent_Radius_syndrome.jpg)
@@ -35,6 +37,8 @@ Images:
 cracking knuckles, knuckle cracking, joint cracking, cavitation, synovial fluid, arthritis myth, MRI, human body, body facts, science explained, inside your body
 
 ## Image credits
+- Original animation by Inside Your Body
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 - Shixart1985 / CC BY 2.0 (https://commons.wikimedia.org/wiki/File:Close-up_of_a_woman_disinfecting_her_hands_with_sanitizer_spray.jpg)
 - Ina May Gaskin displayed it in her talk, a brass casting from museum. / CC0 (https://commons.wikimedia.org/wiki/File:Peruvian_brass_casting_-_demonstrating_traditional_birth_aiding_technique,_using_4_fingers_of_both_hands_pulling_away_from_the_centre.jpg)
 - Riaz Ahmad Department of Orthopaedics, Weston General Hospital, Weston-Super-Mare, UK / CC BY 2.0 (https://commons.wikimedia.org/wiki/File:X-ray_of_arm_showing_absent_radius_and_radially_deviated_hand,_caused_by_Thrombocytopenia_and_Absent_Radius_syndrome.jpg)

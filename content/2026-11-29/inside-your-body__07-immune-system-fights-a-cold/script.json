@@ -2,7 +2,7 @@
   "channel": "inside-your-body",
   "number": 7,
   "slug": "immune-system-fights-a-cold",
-  "target_minutes": 5.0,
+  "target_minutes": 5,
   "title": "How Your Immune System Fights a Cold, Day by Day",
   "thumbnail_text": "YOUR BODY VS. COLD",
   "description": "The stuffy nose and sore throat of a cold are mostly your own immune system at work, not damage from the virus. Follow a cold from the first virus landing in your nose to the antibodies that finally win.\n\nSources:\n- CDC, About Common Cold: https://www.cdc.gov/common-cold/about/index.html\n- CDC, About Rhinoviruses: https://www.cdc.gov/rhinoviruses/about/index.html\n- Clinical Microbiology Reviews (2013), Human Rhinoviruses: https://pmc.ncbi.nlm.nih.gov/articles/3553670/\n- Antiviral Research (2001), The treatment of rhinovirus infections: progress and potential: https://pmc.ncbi.nlm.nih.gov/articles/PMC7125581\n- Yale News (2015), Cold virus replicates better at cooler temperatures: https://news.yale.edu/2015/01/05/cold-virus-replicates-better-cooler-temperatures\n- MedlinePlus, Immune response: https://medlineplus.gov/ency/article/000821.htm\n\nThis video is for educational purposes only and is not medical advice.",
@@ -47,6 +47,23 @@
       "url": "https://medlineplus.gov/ency/article/000821.htm"
     }
   ],
+  "style": "anim",
+  "thumbnail_anim": {
+    "thumbAction": "sick",
+    "props": [
+      {
+        "icon": "microbe",
+        "at": "right",
+        "size": "xl",
+        "anim": "bob"
+      },
+      {
+        "icon": "shield",
+        "at": "left",
+        "size": "m"
+      }
+    ]
+  },
   "scenes": [
     {
       "narration": "The scratchy throat, the stuffy nose, the endless tissues? Most of that misery isn't the virus hurting you. It's your immune system fighting back.",
@@ -56,6 +73,24 @@
         "type": "stock",
         "query": "woman blowing nose tissue on couch",
         "note": "person with a cold wrapped in a blanket, blowing their nose"
+      },
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "roll-of-paper",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "microbe",
+            "at": "left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "face": "sick",
+        "bg": "room"
       }
     },
     {
@@ -67,6 +102,19 @@
         "query": "rhinovirus illustration CDC",
         "note": "3D illustration of a rhinovirus particle",
         "commons": "File:HD.17.025 (12639376143).jpg"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          }
+        ],
+        "text": "RHINOVIRUS",
+        "bg": "lab"
       }
     },
     {
@@ -77,6 +125,23 @@
         "type": "stock",
         "query": "family autumn walk park",
         "note": "family outdoors in fall weather"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "calendar",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "sneezing-face",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "text": "2–3 COLDS A YEAR",
+        "bg": "paper"
       }
     },
     {
@@ -87,6 +152,23 @@
         "type": "stock",
         "query": "man sneezing into elbow",
         "note": "person sneezing into their elbow"
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "sneezing-face",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "droplet",
+            "at": "top",
+            "size": "s",
+            "anim": "fall"
+          }
+        ],
+        "bg": "park"
       }
     },
     {
@@ -96,6 +178,22 @@
       "visual": {
         "type": "diagram",
         "spec": "side view of the head and airways: nasal passages labeled cooler, about 33 degrees Celsius, lungs labeled core body temperature, about 37 degrees Celsius"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "nose",
+            "at": "bubble",
+            "size": "l"
+          },
+          {
+            "icon": "thermometer",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "body"
       }
     },
     {
@@ -106,6 +204,23 @@
         "type": "science",
         "query": "airway epithelial cells cilia microscope",
         "note": "microscope image of airway lining cells with cilia"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "thermometer",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "mouse",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "COLD NOSE",
+        "bg": "lab"
       }
     },
     {
@@ -115,6 +230,23 @@
       "visual": {
         "type": "diagram",
         "spec": "four-step virus cycle: rhinovirus binds a receptor on a nasal cell, enters, cell makes new virus copies, new viruses are released toward neighboring cells"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "nose",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "bg": "body"
       }
     },
     {
@@ -126,6 +258,23 @@
         "query": "sick man in bed with tea",
         "note": "person resting in bed with a mug of tea",
         "openverse_id": "7f056a69-b73a-405a-9702-cf94474a5fb7"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "shield",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "shock",
+        "bg": "body"
       }
     },
     {
@@ -135,6 +284,24 @@
       "visual": {
         "type": "diagram",
         "spec": "infected nasal cell releasing interferon signals as small arrows to neighboring cells, which light up with a shield icon labeled antiviral state"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "shield",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "police-car-light",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "body"
       }
     },
     {
@@ -145,6 +312,22 @@
         "type": "science",
         "query": "neutrophil white blood cell scanning electron micrograph NIH",
         "note": "electron microscope image of a neutrophil"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "drop-of-blood",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "microbe",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
       }
     },
     {
@@ -155,6 +338,19 @@
         "type": "stock",
         "query": "woman holding throat sore",
         "note": "person touching their throat with a slight wince"
+      },
+      "anim": {
+        "action": "drink",
+        "props": [
+          {
+            "icon": "hot-beverage",
+            "at": "hand",
+            "size": "m"
+          }
+        ],
+        "text": "DAY ONE",
+        "face": "sick",
+        "bg": "room"
       }
     },
     {
@@ -164,6 +360,25 @@
       "visual": {
         "type": "diagram",
         "spec": "inside the nasal passage: swollen blood vessels leaking fluid, mucus layer trapping virus particles, arrows showing mucus being cleared out"
+      },
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "sneezing-face",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "droplet",
+            "at": "left",
+            "size": "m",
+            "anim": "fall"
+          }
+        ],
+        "camera": "shake",
+        "bg": "room"
       }
     },
     {
@@ -174,6 +389,23 @@
         "type": "stock",
         "query": "thermometer and tissues on nightstand",
         "note": "bedside table with tissues, a thermometer, and a glass of water"
+      },
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "thermometer",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "hot-face",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "text": "PEAK SYMPTOMS",
+        "bg": "room"
       }
     },
     {
@@ -184,6 +416,22 @@
         "type": "science",
         "query": "lymphocyte scanning electron micrograph",
         "note": "electron microscope image of a lymphocyte"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "bubble",
+            "size": "l"
+          },
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "body"
       }
     },
     {
@@ -193,6 +441,23 @@
       "visual": {
         "type": "diagram",
         "spec": "T cell attacking an infected cell; B cell becoming a plasma cell releasing Y-shaped antibodies that bind to virus particles"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "crossed-swords",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "bullseye",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "text": "T CELLS, B CELLS",
+        "bg": "body"
       }
     },
     {
@@ -203,6 +468,24 @@
         "type": "stock",
         "query": "woman feeling better opening curtains morning",
         "note": "person opening curtains to morning light, feeling better"
+      },
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "calendar",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "UNDER A WEEK",
+        "bg": "room"
       }
     },
     {
@@ -213,6 +496,23 @@
         "type": "science",
         "query": "B lymphocyte illustration NIAID",
         "note": "illustration of B cells or memory immune cells"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "shield",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "microbe",
+            "at": "left",
+            "size": "s",
+            "anim": "approach"
+          }
+        ],
+        "bg": "body"
       }
     },
     {
@@ -222,6 +522,25 @@
       "visual": {
         "type": "diagram",
         "spec": "grid of many slightly different virus icons, with one antibody fitting only one of them"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "microbe",
+            "at": "left",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "text": "100+ TYPES",
+        "bg": "lab"
       }
     },
     {
@@ -233,6 +552,18 @@
         "query": "healthy woman jogging in park",
         "note": "person outdoors, energetic and well",
         "openverse_id": "a5959c72-aec5-4762-a8a8-0668864d5ef3"
+      },
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "trophy",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          }
+        ],
+        "bg": "park"
       }
     },
     {
@@ -243,6 +574,22 @@
         "type": "stock",
         "query": "box of tissues on table",
         "note": "simple box of tissues in a cozy room"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "roll-of-paper",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "shield",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -251,6 +598,10 @@
       "sub": "",
       "visual": {
         "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
       }
     }
   ]

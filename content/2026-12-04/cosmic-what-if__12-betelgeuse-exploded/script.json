@@ -47,6 +47,18 @@
       "url": "https://www.nasa.gov/universe/2012-fear-no-supernova/"
     }
   ],
+  "style": "anim",
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "glowing-star",
+        "at": "right",
+        "size": "xl",
+        "anim": "pulse"
+      }
+    ]
+  },
   "scenes": [
     {
       "narration": "Look up at Orion on a winter night. That reddish star on his shoulder is going to explode. Here's what tonight would look like.",
@@ -56,6 +68,19 @@
         "type": "nasa",
         "query": "Orion constellation Betelgeuse",
         "note": "Orion constellation with the red star Betelgeuse at upper left"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "star",
+            "at": "top-left",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "text": "BETELGEUSE",
+        "bg": "night"
       }
     },
     {
@@ -66,6 +91,23 @@
         "type": "nasa",
         "query": "Orion Nebula Hubble",
         "note": "the Orion Nebula in the same constellation"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "shield",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -75,6 +117,23 @@
       "visual": {
         "type": "diagram",
         "spec": "Star chart of Orion: the three belt stars in a row, Betelgeuse marked in red at upper left as the shoulder, Rigel in blue at lower right"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "star",
+            "at": "top",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "telescope",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
       }
     },
     {
@@ -84,6 +143,25 @@
       "visual": {
         "type": "diagram",
         "spec": "Orbits of Mercury, Venus, Earth, Mars, the asteroid belt and Jupiter drawn to scale, with a red circle for Betelgeuse's surface placed at the Sun's position extending just beyond the asteroid belt"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "red-circle",
+            "at": "right",
+            "size": "xl",
+            "anim": "grow"
+          },
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "750× THE SUN",
+        "bg": "space",
+        "face": "shock"
       }
     },
     {
@@ -94,6 +172,17 @@
         "type": "nasa",
         "query": "Betelgeuse ALMA image",
         "note": "radio image resolving the disk of Betelgeuse"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -103,6 +192,22 @@
       "visual": {
         "type": "diagram",
         "spec": "Cutaway of a massive star's onion-like layers: hydrogen outer shell, then helium, carbon, oxygen, neon, silicon, and an iron core at the center"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "onion",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "fire",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -113,6 +218,25 @@
         "type": "nasa",
         "query": "neutron star illustration",
         "note": "artist illustration of a neutron star"
+      },
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l",
+            "anim": "shrink"
+          },
+          {
+            "icon": "cityscape",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "CORE COLLAPSE",
+        "bg": "space",
+        "camera": "zoom-in"
       }
     },
     {
@@ -123,6 +247,19 @@
         "type": "nasa",
         "query": "supernova explosion illustration",
         "note": "artist concept of a supernova shock wave"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "collision",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "space",
+        "camera": "shake"
       }
     },
     {
@@ -133,6 +270,23 @@
         "type": "nasa",
         "query": "Sun Solar Dynamics Observatory",
         "note": "full disk of the Sun"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -143,6 +297,23 @@
         "type": "nasa",
         "query": "Super-Kamiokande neutrino detector",
         "note": "interior of a giant underground neutrino detector lined with sensors"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "sparkles",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "satellite-antenna",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
       }
     },
     {
@@ -153,6 +324,23 @@
         "type": "nasa",
         "query": "SN 1987A Hubble",
         "note": "Hubble image of Supernova 1987A and its rings"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "star",
+            "at": "bubble",
+            "size": "m"
+          },
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "text": "ONLY TWO DOZEN",
+        "bg": "space"
       }
     },
     {
@@ -163,6 +351,24 @@
         "type": "nasa",
         "query": "Gemini North telescope dome",
         "note": "large observatory dome opening at night"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "mobile-phone",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "telescope",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "12-HOUR WARNING",
+        "bg": "night"
       }
     },
     {
@@ -173,6 +379,25 @@
         "type": "nasa",
         "query": "half moon",
         "note": "half Moon in a dark sky"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "glowing-star",
+            "at": "top-left",
+            "size": "xl",
+            "anim": "pulse"
+          },
+          {
+            "icon": "first-quarter-moon",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "night",
+        "camera": "zoom-in",
+        "face": "shock"
       }
     },
     {
@@ -183,6 +408,23 @@
         "type": "nasa",
         "query": "daytime Moon blue sky",
         "note": "bright object visible in a daytime blue sky"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "glowing-star",
+            "at": "top",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "sky"
       }
     },
     {
@@ -193,6 +435,18 @@
         "type": "nasa",
         "query": "Orion constellation over observatory",
         "note": "Orion rising over a telescope dome"
+      },
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "star",
+            "at": "top",
+            "size": "m",
+            "anim": "shrink"
+          }
+        ],
+        "bg": "night"
       }
     },
     {
@@ -203,6 +457,23 @@
         "type": "nasa",
         "query": "ozone layer Earth limb",
         "note": "thin blue layer of atmosphere along Earth's edge"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "shield",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "TOTALLY SAFE",
+        "bg": "space"
       }
     },
     {
@@ -213,6 +484,22 @@
         "type": "nasa",
         "query": "Kepler supernova remnant",
         "note": "remnant of Kepler's supernova of 1604"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "fog",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -223,6 +510,19 @@
         "type": "nasa",
         "query": "Milky Way night sky",
         "note": "Milky Way over a dark landscape"
+      },
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "fireworks",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "text": "NOTHING TO FEAR",
+        "bg": "night"
       }
     },
     {
@@ -232,6 +532,22 @@
       "visual": {
         "type": "diagram",
         "spec": "Timeline from about the year 1400 to today: a light ray leaves Betelgeuse at the left and arrives at Earth at the right, labeled roughly 500 to 700 years of travel"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "castle",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
       }
     },
     {
@@ -242,6 +558,17 @@
         "type": "nasa",
         "query": "red supergiant star illustration",
         "note": "artist illustration of a red supergiant star"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "red-question-mark",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -252,6 +579,24 @@
         "type": "nasa",
         "query": "Betelgeuse dimming Hubble",
         "note": "illustration of Betelgeuse during the Great Dimming"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "newspaper",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "star",
+            "at": "top-left",
+            "size": "s",
+            "anim": "shake"
+          }
+        ],
+        "text": "THE 2019 DIMMING",
+        "bg": "night"
       }
     },
     {
@@ -262,6 +607,23 @@
         "type": "nasa",
         "query": "Betelgeuse surface mass ejection illustration",
         "note": "illustration of Betelgeuse ejecting a huge plume that cools into dust"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "telescope",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "fog",
+            "at": "top-left",
+            "size": "m",
+            "anim": "fade-in"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -272,6 +634,23 @@
         "type": "nasa",
         "query": "solar coronal mass ejection SOHO",
         "note": "coronal mass ejection erupting from the Sun"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "collision",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -282,6 +661,18 @@
         "type": "nasa",
         "query": "Hubble Betelgeuse ultraviolet",
         "note": "Hubble ultraviolet image of the disk of Betelgeuse"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "text": "100,000 YEARS LEFT",
+        "bg": "space"
       }
     },
     {
@@ -292,6 +683,24 @@
         "type": "nasa",
         "query": "Betelgeuse companion star Gemini",
         "note": "image or illustration of Betelgeuse with its faint companion"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "star",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "ring",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "HER BRACELET",
+        "bg": "space"
       }
     },
     {
@@ -302,6 +711,23 @@
         "type": "nasa",
         "query": "binary star system illustration",
         "note": "artist illustration of a large star with a small companion"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "star",
+            "at": "top",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "telescope",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
       }
     },
     {
@@ -312,6 +738,23 @@
         "type": "nasa",
         "query": "Crab Nebula Hubble",
         "note": "Hubble mosaic of the Crab Nebula"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "crab",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -322,6 +765,17 @@
         "type": "nasa",
         "query": "Cassiopeia A Chandra",
         "note": "colorful supernova remnant Cassiopeia A in X-rays"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "black-hole",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -332,6 +786,23 @@
         "type": "nasa",
         "query": "Pillars of Creation",
         "note": "Pillars of Creation, gas clouds forming new stars"
+      },
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "wind-face",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "sparkles",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "MADE OF STARS",
+        "bg": "sky"
       }
     },
     {
@@ -342,6 +813,19 @@
         "type": "nasa",
         "query": "Orion winter sky",
         "note": "Orion high in a winter night sky"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "star",
+            "at": "top-left",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "night",
+        "camera": "zoom-out"
       }
     },
     {
@@ -350,6 +834,10 @@
       "sub": "",
       "visual": {
         "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
       }
     }
   ]

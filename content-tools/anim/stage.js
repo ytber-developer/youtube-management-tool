@@ -168,7 +168,8 @@
     ctx.font = `900 ${size}px "Avenir Next", "Helvetica Neue", Arial, sans-serif`;
     ctx.textAlign = pos === 'right' ? 'center' : 'left'; ctx.textBaseline = 'top';
     const x = pos === 'right' ? 0.7 * W : 0.06 * W, y = 0.07 * H + (1 - ease(ap)) * 20 * U;
-    ctx.lineWidth = 10 * U; ctx.strokeStyle = DARKBG ? 'rgba(0,0,0,0.55)' : '#ffffff'; ctx.lineJoin = 'round'; ctx.strokeText(text, x, y);
+    // viền đen đậm: đọc được trên cả phông tối lẫn phông sáng
+    ctx.lineWidth = 14 * U; ctx.strokeStyle = '#151515'; ctx.lineJoin = 'round'; ctx.strokeText(text, x, y);
     ctx.fillStyle = color; ctx.fillText(text, x, y);
     ctx.restore();
   }

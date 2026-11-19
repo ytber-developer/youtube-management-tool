@@ -47,6 +47,17 @@
       "url": "https://www.scientificamerican.com/article/sleep-shrinks-the-brain-rsquo-s-synapses-to-make-room-for-new-learning/"
     }
   ],
+  "style": "anim",
+  "thumbnail_anim": {
+    "thumbAction": "think",
+    "props": [
+      {
+        "icon": "brain",
+        "at": "bubble",
+        "size": "l"
+      }
+    ]
+  },
   "scenes": [
     {
       "narration": "Think of your favorite childhood memory. It feels like a recording. It is not. Every time you replay it, your brain rebuilds it.",
@@ -62,6 +73,17 @@
           "pencil",
           "camera"
         ]
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "teddy-bear",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "bg": "room"
       }
     },
     {
@@ -72,6 +94,22 @@
         "type": "science",
         "query": "human brain lateral view illustration",
         "note": "a side view illustration of the human brain"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "house",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "brain",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -82,6 +120,23 @@
         "type": "stock",
         "query": "white laboratory rat",
         "note": "a white lab rat"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "rat",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "brain",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "THE ENGRAM",
+        "bg": "lab"
       }
     },
     {
@@ -91,6 +146,23 @@
       "visual": {
         "type": "diagram",
         "spec": "a simple rat maze from above with question marks over several brain regions of a rat silhouette"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "cross-mark",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "face": "worry"
       }
     },
     {
@@ -100,6 +172,22 @@
       "visual": {
         "type": "diagram",
         "spec": "brain outline with several highlighted regions connected by lines: hippocampus, amygdala, cerebellum, prefrontal cortex, neocortex"
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "footprints",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -116,6 +204,22 @@
           "party-popper",
           "sparkles"
         ]
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "party-popper",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "musical-notes",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
       }
     },
     {
@@ -126,6 +230,19 @@
         "type": "science",
         "query": "hippocampus anatomy illustration brain",
         "note": "the hippocampus highlighted inside the brain"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "text": "HIPPOCAMPUS",
+        "bg": "body"
       }
     },
     {
@@ -142,6 +259,22 @@
           "file-cabinet",
           "magnifying-glass-tilted-left"
         ]
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "books",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "card-index",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -158,6 +291,18 @@
           "hourglass-done",
           "red-question-mark"
         ]
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "old-man",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "PATIENT H.M.",
+        "bg": "paper"
       }
     },
     {
@@ -167,6 +312,18 @@
       "visual": {
         "type": "diagram",
         "spec": "brain seen from below with the hippocampus regions on both sides shaded to show the tissue removed"
+      },
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "room",
+        "face": "worry"
       }
     },
     {
@@ -183,6 +340,18 @@
           "raised-hand",
           "brain"
         ]
+      },
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "pencil",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "bg": "room"
       }
     },
     {
@@ -192,6 +361,18 @@
       "visual": {
         "type": "diagram",
         "spec": "three labeled branches from one word Memory: explicit for facts and events, implicit for skills and habits, working for short-term holding"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "light-bulb",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "text": "MORE THAN ONE",
+        "bg": "paper"
       }
     },
     {
@@ -208,6 +389,22 @@
           "brain",
           "books"
         ]
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "bicycle",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "brain",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
       }
     },
     {
@@ -218,6 +415,23 @@
         "type": "science",
         "query": "prefrontal cortex brain illustration",
         "note": "the front of the brain highlighted"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "mobile-phone",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "spiral-notepad",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "MENTAL NOTEPAD",
+        "bg": "paper"
       }
     },
     {
@@ -228,6 +442,17 @@
         "type": "science",
         "query": "neurons fluorescence microscopy brain cells",
         "note": "glowing neurons under a microscope"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "microscope",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "lab"
       }
     },
     {
@@ -244,6 +469,24 @@
           "brain",
           "sparkles"
         ]
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "mouse",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "light-bulb",
+            "at": "left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "text": "OPTOGENETICS",
+        "bg": "lab"
       }
     },
     {
@@ -253,6 +496,23 @@
       "visual": {
         "type": "diagram",
         "spec": "a mouse in a new box with a beam of light reaching a small cluster of highlighted neurons, and the mouse shown frozen in place"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "mouse",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "flashlight",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
       }
     },
     {
@@ -269,6 +529,19 @@
           "sparkles",
           "microscope"
         ]
+      },
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "trophy",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "text": "ENGRAM FOUND",
+        "bg": "lab"
       }
     },
     {
@@ -285,6 +558,18 @@
           "brain",
           "zzz"
         ]
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "egg",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          }
+        ],
+        "bg": "room"
       }
     },
     {
@@ -294,6 +579,24 @@
       "visual": {
         "type": "diagram",
         "spec": "a sleeping person with a looping replay arrow over the brain and a small calendar showing the replay repeating over several nights"
+      },
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "above",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "repeat-button",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "night",
+        "face": "sleep"
       }
     },
     {
@@ -310,6 +613,22 @@
           "brain",
           "repeat-button"
         ]
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "mouse",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "crescent-moon",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
       }
     },
     {
@@ -320,6 +639,18 @@
         "type": "science",
         "query": "synapse electron micrograph",
         "note": "electron microscope image of synapses between neurons"
+      },
+      "anim": {
+        "action": "yawn",
+        "props": [
+          {
+            "icon": "scissors",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "SHRUNK 18%",
+        "bg": "room"
       }
     },
     {
@@ -336,6 +667,22 @@
           "brain",
           "sparkles"
         ]
+      },
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "memo",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "scissors",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
       }
     },
     {
@@ -352,6 +699,19 @@
           "brain",
           "sparkles"
         ]
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          }
+        ],
+        "text": "OPEN TO CHANGE",
+        "bg": "paper"
       }
     },
     {
@@ -361,6 +721,23 @@
       "visual": {
         "type": "diagram",
         "spec": "puzzle pieces labeled sight, sound, emotion, place being reassembled into a picture, with one piece slightly different from the original"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "puzzle-piece",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "brain",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "RECONSTRUCTION",
+        "bg": "paper"
       }
     },
     {
@@ -377,6 +754,22 @@
           "speech-balloon",
           "brain"
         ]
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "automobile",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "film-frames",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
       }
     },
     {
@@ -386,6 +779,23 @@
       "visual": {
         "type": "diagram",
         "spec": "two speech bubbles, one saying smashed and one saying contacted, each pointing to a speedometer, the smashed one reading higher"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "collision",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "automobile",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "NO BROKEN GLASS",
+        "bg": "room"
       }
     },
     {
@@ -402,6 +812,22 @@
           "speaking-head",
           "red-question-mark"
         ]
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "balance-scale",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "dna",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -418,6 +844,18 @@
           "brain",
           "camera"
         ]
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "camera-with-flash",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "text": "FLASHBULB MEMORIES",
+        "bg": "room"
       }
     },
     {
@@ -434,6 +872,18 @@
           "thinking-face",
           "red-question-mark"
         ]
+      },
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "cloud",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -450,6 +900,18 @@
           "light-bulb",
           "brain"
         ]
+      },
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "light-bulb",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -460,6 +922,23 @@
         "type": "science",
         "query": "brain connectome neural pathways illustration",
         "note": "colorful map of the brain's neural pathways"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "link",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
       }
     },
     {
@@ -476,6 +955,22 @@
           "sunset",
           "pencil"
         ]
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "teddy-bear",
+            "at": "bubble",
+            "size": "m"
+          },
+          {
+            "icon": "pencil",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
       }
     },
     {
@@ -484,6 +979,10 @@
       "sub": "",
       "visual": {
         "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
       }
     }
   ]

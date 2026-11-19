@@ -23,6 +23,8 @@ Sources:
 This video is for educational purposes only and is not medical advice.
 
 Images:
+- Original animation by Inside Your Body
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 - epSos.de / CC BY 2.0 (https://commons.wikimedia.org/w/index.php?curid=27942430)
 - Wide Awake! / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:The_Coffee_Bean_%26_Tea_Leaf_on_The_SM_Store_at_SM_City_Cebu_(2024-11-17).jpg)
 - Tim Gouw punttim / CC0 (https://commons.wikimedia.org/wiki/File:Busy_people_at_a_coffee_shop_(Unsplash).jpg)
@@ -41,6 +43,8 @@ Images:
 coffee, caffeine, what coffee does to your body, adenosine, sleep pressure, caffeine half-life, brain chemistry, human body, neuroscience, science explained, inside your body
 
 ## Image credits
+- Original animation by Inside Your Body
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 - epSos.de / CC BY 2.0 (https://commons.wikimedia.org/w/index.php?curid=27942430)
 - Wide Awake! / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:The_Coffee_Bean_%26_Tea_Leaf_on_The_SM_Store_at_SM_City_Cebu_(2024-11-17).jpg)
 - Tim Gouw punttim / CC0 (https://commons.wikimedia.org/wiki/File:Busy_people_at_a_coffee_shop_(Unsplash).jpg)

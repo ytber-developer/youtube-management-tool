@@ -33,6 +33,23 @@
       "url": "https://www.nasa.gov/history/30-years-ago-galileo-off-to-orbit-jupiter/"
     }
   ],
+  "style": "anim",
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "ringed-planet",
+        "at": "right",
+        "size": "xl",
+        "anim": "bob"
+      },
+      {
+        "icon": "cloud",
+        "at": "left",
+        "size": "m"
+      }
+    ]
+  },
   "scenes": [
     {
       "narration": "Picture yourself stepping off a spaceship toward Jupiter, ready to plant your boots on the biggest planet in the solar system. There's just one problem.",
@@ -42,6 +59,23 @@
         "type": "nasa",
         "query": "Jupiter full disk Hubble",
         "note": "the whole of Jupiter with its bands"
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "left",
+            "size": "m"
+          },
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "xl",
+            "anim": "bob"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -52,6 +86,25 @@
         "type": "nasa",
         "query": "Jupiter cloud tops Juno JunoCam",
         "note": "close-up swirling cloud bands"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "cloud",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "ringed-planet",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "NO SURFACE",
+        "face": "shock",
+        "bg": "space"
       }
     },
     {
@@ -61,6 +114,24 @@
       "visual": {
         "type": "diagram",
         "spec": "scale comparison of Earth and Jupiter side by side, Jupiter about 11 times wider"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "xl",
+            "anim": "pulse"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "1,000 EARTHS",
+        "bg": "space"
       }
     },
     {
@@ -71,6 +142,24 @@
         "type": "nasa",
         "query": "Galileo probe descent Jupiter atmosphere artist",
         "note": "the Galileo probe under its parachute"
+      },
+      "anim": {
+        "action": "fall-toward",
+        "props": [
+          {
+            "icon": "fire",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "satellite",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "camera": "shake",
+        "bg": "space"
       }
     },
     {
@@ -81,6 +170,23 @@
         "type": "nasa",
         "query": "Galileo probe heat shield",
         "note": "the probe's heat shield"
+      },
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "parachute",
+            "at": "above",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "cloud",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -91,6 +197,25 @@
         "type": "nasa",
         "query": "Jupiter south pole Juno cyclones",
         "note": "Jupiter's polar storms"
+      },
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "snowflake",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "thermometer",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "text": "-160°F",
+        "face": "worry",
+        "bg": "space"
       }
     },
     {
@@ -101,6 +226,18 @@
         "type": "nasa",
         "query": "Jupiter Great Red Spot Juno",
         "note": "the Great Red Spot up close"
+      },
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "balance-scale",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "text": "2.4× GRAVITY",
+        "bg": "space"
       }
     },
     {
@@ -111,6 +248,24 @@
         "type": "nasa",
         "query": "Jupiter atmosphere bands Cassini",
         "note": "Jupiter's colorful cloud belts"
+      },
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "tornado",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "dashing-away",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "camera": "shake",
+        "bg": "space"
       }
     },
     {
@@ -121,6 +276,24 @@
         "type": "nasa",
         "query": "Galilean moons Io Europa Ganymede Callisto",
         "note": "Jupiter's four large moons side by side"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "top",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "telescope",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "text": "115 MOONS",
+        "bg": "space"
       }
     },
     {
@@ -131,6 +304,23 @@
         "type": "nasa",
         "query": "Great Red Spot Voyager 1979",
         "note": "the Great Red Spot from Voyager"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "cyclone",
+            "at": "right",
+            "size": "xl",
+            "anim": "spin"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -140,6 +330,23 @@
       "visual": {
         "type": "diagram",
         "spec": "vertical profile of Jupiter's upper atmosphere showing cloud layers and the Galileo probe's 97-mile descent path"
+      },
+      "anim": {
+        "action": "fall-toward",
+        "props": [
+          {
+            "icon": "cloud",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "satellite",
+            "at": "top",
+            "size": "s",
+            "anim": "fall"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -150,6 +357,25 @@
         "type": "nasa",
         "query": "Galileo probe Jupiter entry illustration",
         "note": "the probe descending into dark clouds"
+      },
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "water-wave",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "fire",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "23× PRESSURE",
+        "camera": "shake",
+        "face": "worry",
+        "bg": "space"
       }
     },
     {
@@ -159,6 +385,24 @@
       "visual": {
         "type": "diagram",
         "spec": "cutaway of Jupiter's interior: gas atmosphere, liquid hydrogen, metallic hydrogen layer, large diffuse core"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "bubble",
+            "size": "l"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "text": "METALLIC HYDROGEN",
+        "bg": "space"
       }
     },
     {
@@ -169,6 +413,23 @@
         "type": "nasa",
         "query": "Juno spacecraft Jupiter artist concept",
         "note": "Juno orbiting above Jupiter"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -179,6 +440,24 @@
         "type": "nasa",
         "query": "Jupiter aurora Hubble ultraviolet",
         "note": "glowing aurora at Jupiter's pole"
+      },
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "radioactive",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "satellite",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "face": "sick",
+        "bg": "space"
       }
     },
     {
@@ -189,6 +468,19 @@
         "type": "nasa",
         "query": "Jupiter Io shadow transit",
         "note": "Jupiter with a moon's shadow"
+      },
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "above",
+            "size": "l",
+            "anim": "approach"
+          }
+        ],
+        "text": "130,000 MPH",
+        "bg": "space"
       }
     },
     {
@@ -199,6 +491,18 @@
         "type": "nasa",
         "query": "Jupiter crescent Cassini",
         "note": "Jupiter half in shadow"
+      },
+      "anim": {
+        "action": "swallowed",
+        "props": [
+          {
+            "icon": "cloud",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "text": "SINK, DON'T LAND",
+        "bg": "space"
       }
     },
     {
@@ -207,6 +511,10 @@
       "sub": "",
       "visual": {
         "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
       }
     }
   ]

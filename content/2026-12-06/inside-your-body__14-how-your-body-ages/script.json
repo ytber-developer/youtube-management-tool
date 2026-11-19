@@ -63,6 +63,17 @@
       "url": "https://stanforddaily.com/2010/11/11/happiness-increases-with-age-study-says/"
     }
   ],
+  "style": "anim",
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "hourglass-not-done",
+        "at": "right",
+        "size": "xl"
+      }
+    ]
+  },
   "scenes": [
     {
       "narration": "Your brain's processing speed likely peaked around your early twenties. But one of your mental abilities may keep improving into your late sixties.",
@@ -78,6 +89,17 @@
           "brain",
           "sparkles"
         ]
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "bg": "room"
       }
     },
     {
@@ -94,6 +116,23 @@
           "hourglass-not-done",
           "watch"
         ]
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "watch",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "MANY CLOCKS",
+        "bg": "paper"
       }
     },
     {
@@ -104,6 +143,17 @@
         "type": "science",
         "query": "human cells microscopy nucleus stained",
         "note": "colorful microscope image of human cells"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "microscope",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "lab"
       }
     },
     {
@@ -120,6 +170,19 @@
           "shield",
           "sparkles"
         ]
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "dna",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          }
+        ],
+        "text": "A MILLION A DAY",
+        "bg": "lab"
       }
     },
     {
@@ -136,6 +199,22 @@
           "scissors",
           "microscope"
         ]
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "dna",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
       }
     },
     {
@@ -152,6 +231,17 @@
           "hourglass-not-done",
           "sparkles"
         ]
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "running-shoe",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -161,6 +251,17 @@
       "visual": {
         "type": "diagram",
         "spec": "a group of healthy dividing cells with one larger gray senescent cell in the middle releasing small signal particles into its neighbors"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "lab"
       }
     },
     {
@@ -171,6 +272,22 @@
         "type": "science",
         "query": "mitochondria electron micrograph",
         "note": "electron microscope image of mitochondria"
+      },
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "low-battery",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
       }
     },
     {
@@ -187,6 +304,17 @@
           "baby",
           "chart-increasing"
         ]
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "calendar",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -203,6 +331,18 @@
           "brain",
           "stopwatch"
         ]
+      },
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "PEAK AT 20",
+        "bg": "park"
       }
     },
     {
@@ -219,6 +359,17 @@
           "sparkles",
           "light-bulb"
         ]
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "bg": "room"
       }
     },
     {
@@ -229,6 +380,19 @@
         "type": "science",
         "query": "skeletal muscle cross section histology",
         "note": "microscope cross-section of muscle fibers"
+      },
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "flexed-biceps",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          }
+        ],
+        "text": "3–5% PER DECADE",
+        "bg": "room"
       }
     },
     {
@@ -245,6 +409,17 @@
           "person-lifting-weights",
           "chart-decreasing"
         ]
+      },
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "couch-and-lamp",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "room"
       }
     },
     {
@@ -261,6 +436,17 @@
           "eye",
           "older-man"
         ]
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "mobile-phone",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "room"
       }
     },
     {
@@ -271,6 +457,23 @@
         "type": "science",
         "query": "human eye anatomy lens cross section",
         "note": "cross-section illustration of the eye showing the lens"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "glasses",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "eye",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "PRESBYOPIA",
+        "bg": "paper"
       }
     },
     {
@@ -287,6 +490,19 @@
           "brain",
           "sparkles"
         ]
+      },
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "smiling-face-with-smiling-eyes",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "text": "GOOD NEWS",
+        "bg": "paper"
       }
     },
     {
@@ -303,6 +519,22 @@
           "magnifying-glass-tilted-left",
           "glass-of-milk"
         ]
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "bone",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "glass-of-milk",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -312,6 +544,23 @@
       "visual": {
         "type": "diagram",
         "spec": "two side views of a section of spine: younger with thick plump discs between vertebrae, older with thinner discs and slightly shorter overall height"
+      },
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "straight-ruler",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "rocket",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "SHORTER WITH AGE",
+        "bg": "paper"
       }
     },
     {
@@ -322,6 +571,17 @@
         "type": "science",
         "query": "knee joint anatomy cartilage illustration",
         "note": "anatomy illustration of the knee joint and cartilage"
+      },
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "bone",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "room"
       }
     },
     {
@@ -338,6 +598,18 @@
           "hourglass-not-done",
           "drop-of-blood"
         ]
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "body"
       }
     },
     {
@@ -347,6 +619,23 @@
       "visual": {
         "type": "diagram",
         "spec": "heart outline with the sinoatrial node marked and a thicker ventricle wall labeled, comparing younger and older"
+      },
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "stethoscope",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
       }
     },
     {
@@ -363,6 +652,18 @@
           "chart-increasing",
           "hourglass-not-done"
         ]
+      },
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "dizzy",
+            "at": "above",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "face": "worry"
       }
     },
     {
@@ -373,6 +674,22 @@
         "type": "science",
         "query": "skin layers cross section illustration",
         "note": "cross-section illustration of skin layers"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "sweat-droplets",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "droplet",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -389,6 +706,17 @@
           "hot-beverage",
           "snowflake"
         ]
+      },
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "thermometer",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "room"
       }
     },
     {
@@ -405,6 +733,18 @@
           "sunglasses",
           "warning"
         ]
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "l"
+          }
+        ],
+        "text": "SUN EXPOSURE",
+        "bg": "park"
       }
     },
     {
@@ -415,6 +755,22 @@
         "type": "science",
         "query": "inner ear cochlea anatomy illustration",
         "note": "anatomy illustration of the inner ear and cochlea"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "ear",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "speaker-high-volume",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -425,6 +781,17 @@
         "type": "science",
         "query": "human brain illustration top view",
         "note": "an illustration of the brain seen from above"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -441,6 +808,23 @@
           "stopwatch",
           "sparkles"
         ]
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "snail",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -457,6 +841,23 @@
           "brain",
           "speech-balloon"
         ]
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "warning",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "brain",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "NOT NORMAL",
+        "bg": "paper"
       }
     },
     {
@@ -473,6 +874,23 @@
           "books",
           "chart-increasing"
         ]
+      },
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "books",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "chart-increasing",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "VOCABULARY KEEPS GROWING",
+        "bg": "paper"
       }
     },
     {
@@ -482,6 +900,17 @@
       "visual": {
         "type": "diagram",
         "spec": "line chart of the age of peak vocabulary across survey periods, rising from early forties in 1974 to 1987, to about 50, to about 65 in 1998 to 2012"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "chart-increasing",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -498,6 +927,22 @@
           "older-man",
           "sparkles"
         ]
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "pager",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "spiral-calendar",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
       }
     },
     {
@@ -514,6 +959,18 @@
           "deciduous-tree",
           "smiling-face-with-smiling-eyes"
         ]
+      },
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "smiling-face-with-smiling-eyes",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "HAPPIER WITH AGE",
+        "bg": "park"
       }
     },
     {
@@ -523,6 +980,22 @@
       "visual": {
         "type": "diagram",
         "spec": "a human outline with labeled callouts: cells, muscles, bones, eyes, ears, heart and arteries, skin, brain"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "dna",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "bone",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -532,6 +1005,22 @@
       "visual": {
         "type": "diagram",
         "spec": "three curves across a lifespan from 10 to 90: processing speed peaking early, social skills peaking mid-life, vocabulary rising into the late sixties"
+      },
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "books",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "red-heart",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
       }
     },
     {
@@ -548,6 +1037,24 @@
           "mantelpiece-clock",
           "musical-notes"
         ]
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "musical-notes",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "violin",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "ORCHESTRA OF CLOCKS",
+        "bg": "paper"
       }
     },
     {
@@ -556,6 +1063,10 @@
       "sub": "",
       "visual": {
         "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
       }
     }
   ]

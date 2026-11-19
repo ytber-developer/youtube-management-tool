@@ -22,6 +22,8 @@ Sources:
 This video is for educational purposes only and is not medical advice.
 
 Images:
+- Original animation by Inside Your Body
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 - Alyssa L. Miller / CC BY 2.0 (https://www.flickr.com/photos/34701044@N06/3628914665)
 - Shixart1985 / CC BY 2.0 (https://commons.wikimedia.org/wiki/File:Morning_setting_with_a_banana,_vintage_clock,_and_smartphone_on_a_table_during_bright_daylight.jpg)
 - Wilfredor / CC0 (https://commons.wikimedia.org/wiki/File:Woman_using_a_mobile_phone_on_Praia_do_Forte,_Cabo_Frio,_Brazil.jpg)
@@ -42,6 +44,8 @@ Images:
 sleep deprivation, 24 hours without sleep, all nighter, what happens when you don't sleep, microsleep, adenosine, amygdala, beta amyloid, sleep science, human body, science explained, inside your body
 
 ## Image credits
+- Original animation by Inside Your Body
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 - Alyssa L. Miller / CC BY 2.0 (https://www.flickr.com/photos/34701044@N06/3628914665)
 - Shixart1985 / CC BY 2.0 (https://commons.wikimedia.org/wiki/File:Morning_setting_with_a_banana,_vintage_clock,_and_smartphone_on_a_table_during_bright_daylight.jpg)
 - Wilfredor / CC0 (https://commons.wikimedia.org/wiki/File:Woman_using_a_mobile_phone_on_Praia_do_Forte,_Cabo_Frio,_Brazil.jpg)

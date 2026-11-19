@@ -3,6 +3,7 @@
   "number": 10,
   "slug": "how-your-heart-works",
   "target_minutes": 7.0,
+  "style": "anim",
   "title": "How Your Heart Beats 100,000 Times a Day Without Stopping",
   "thumbnail_text": "100,000 BEATS A DAY",
   "description": "Your heart beats over one hundred thousand times a day and pumps more than two thousand gallons of blood, and every beat starts with a tiny electrical spark inside the heart itself. Here is how the two pumps, four valves and built-in pacemaker work together, and what nuclear bomb tests revealed about whether your heart cells ever get replaced.\n\nSources:\n- NHLBI, How the Heart Beats: https://www.nhlbi.nih.gov/health/heart/heart-beats\n- NHLBI, How Blood Flows through the Heart: https://www.nhlbi.nih.gov/health/heart/blood-flow\n- Cleveland Clinic, Heart: Anatomy and Function: https://my.clevelandclinic.org/health/body/21704-heart\n- UCSF Health, How the Heart Works: https://ucsfhealth.org/education/how-the-heart-works\n- Temple Health, 10 Interesting Heart Facts You May Not Know: https://templehealth.org/about/blog/10-interesting-heart-facts-you-may-not-know\n- Karolinska Institutet (2009), Heart cells replaced throughout life: https://news.ki.se/heart-cells-replaced-throughout-life\n\nThis video is for educational purposes only and is not medical advice.",
@@ -47,6 +48,22 @@
       "url": "https://news.ki.se/heart-cells-replaced-throughout-life"
     }
   ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "anatomical-heart",
+        "at": "right",
+        "size": "xl",
+        "anim": "pulse"
+      },
+      {
+        "icon": "high-voltage",
+        "at": "left",
+        "size": "m"
+      }
+    ]
+  },
   "scenes": [
     {
       "narration": "Since you woke up this morning, your heart has beaten tens of thousands of times. You never asked it to. So who is in charge?",
@@ -62,6 +79,19 @@
           "red-question-mark",
           "high-voltage"
         ]
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "bubble",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "text": "WHO IS IN CHARGE?",
+        "bg": "room"
       }
     },
     {
@@ -72,6 +102,22 @@
         "type": "stock",
         "query": "backyard swimming pool water",
         "note": "a small backyard swimming pool full of water"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "person-swimming",
+            "at": "left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -82,6 +128,23 @@
         "type": "science",
         "query": "human circulatory system arteries veins illustration",
         "note": "full-body illustration of arteries and veins"
+      },
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "drop-of-blood",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "60,000 MILES"
       }
     },
     {
@@ -98,6 +161,22 @@
           "gear",
           "drop-of-blood"
         ]
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "beverage-box",
+            "at": "left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -107,6 +186,21 @@
       "visual": {
         "type": "diagram",
         "spec": "three labeled icons in a row: pumps (heart chambers), doors (valves), spark (electrical signal)"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -116,6 +210,19 @@
       "visual": {
         "type": "diagram",
         "spec": "front view of the heart with the four chambers labeled: right atrium, right ventricle, left atrium, left ventricle"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "text": "TWO PUMPS",
+        "bg": "body"
       }
     },
     {
@@ -125,6 +232,24 @@
       "visual": {
         "type": "diagram",
         "spec": "blue arrows showing blood from the body into the right atrium, right ventricle, then the pulmonary artery to the lungs"
+      },
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "lungs",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "drop-of-blood",
+            "at": "left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "body"
       }
     },
     {
@@ -134,6 +259,28 @@
       "visual": {
         "type": "diagram",
         "spec": "red arrows showing blood from the lungs into the left atrium, left ventricle, then out through the aorta to the body"
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "drop-of-blood",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "brain",
+            "at": "top",
+            "size": "s"
+          },
+          {
+            "icon": "foot",
+            "at": "far-right",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
       }
     },
     {
@@ -150,6 +297,24 @@
           "drop-of-blood",
           "high-voltage"
         ]
+      },
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "flexed-biceps",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "body"
       }
     },
     {
@@ -166,6 +331,22 @@
           "right-arrow",
           "drop-of-blood"
         ]
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "door",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "drop-of-blood",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "FOUR VALVES"
       }
     },
     {
@@ -175,6 +356,22 @@
       "visual": {
         "type": "diagram",
         "spec": "heart outline with the four valves labeled: tricuspid, pulmonary, mitral, aortic"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "door",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "door",
+            "at": "far-right",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
       }
     },
     {
@@ -190,6 +387,22 @@
           "anatomical-heart",
           "door",
           "speaker-high-volume"
+        ]
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "stethoscope",
+            "at": "left",
+            "size": "s"
+          }
         ]
       }
     },
@@ -207,6 +420,16 @@
           "brain",
           "alarm-clock"
         ]
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "bubble",
+            "size": "m"
+          }
+        ]
       }
     },
     {
@@ -216,6 +439,25 @@
       "visual": {
         "type": "diagram",
         "spec": "heart outline with the electrical conduction pathway highlighted in yellow from top right down to the bottom"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "text": "BUILT-IN WIRING",
+        "bg": "body"
       }
     },
     {
@@ -225,6 +467,24 @@
       "visual": {
         "type": "diagram",
         "spec": "close-up of the right atrium with the sinoatrial node marked and an electrical wave spreading across both atria"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "SA NODE",
+        "bg": "body"
       }
     },
     {
@@ -234,6 +494,18 @@
       "visual": {
         "type": "diagram",
         "spec": "the electrical signal pausing at the atrioventricular node between atria and ventricles, with a small timer icon"
+      },
+      "anim": {
+        "action": "hold-breath",
+        "props": [
+          {
+            "icon": "pause-button",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "body"
       }
     },
     {
@@ -250,6 +522,24 @@
           "racing-car",
           "right-arrow"
         ]
+      },
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "body"
       }
     },
     {
@@ -266,6 +556,24 @@
           "stopwatch",
           "chart-increasing"
         ]
+      },
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "text": "60–100 BPM",
+        "bg": "room"
       }
     },
     {
@@ -282,6 +590,21 @@
           "red-apple",
           "sparkles"
         ]
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "red-question-mark",
+            "at": "bubble",
+            "size": "m"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -292,6 +615,24 @@
         "type": "science",
         "query": "coronary arteries anatomy illustration",
         "note": "the coronary arteries wrapping around the surface of the heart"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "drop-of-blood",
+            "at": "left",
+            "size": "s",
+            "anim": "orbit"
+          }
+        ],
+        "bg": "body"
       }
     },
     {
@@ -301,6 +642,22 @@
       "visual": {
         "type": "diagram",
         "spec": "heart surface showing coronary arteries in red branching from the aorta and coronary veins in blue returning to the right atrium"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "lungs",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
       }
     },
     {
@@ -317,6 +674,22 @@
           "hourglass-done",
           "microscope"
         ]
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "cloud",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
       }
     },
     {
@@ -326,6 +699,24 @@
       "visual": {
         "type": "diagram",
         "spec": "timeline graph of atmospheric carbon-14 spiking in the 1960s and slowly falling, with a cell icon reading its birth year from the curve"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "dna",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "leafy-green",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "CARBON FOURTEEN",
+        "bg": "lab"
       }
     },
     {
@@ -342,6 +733,22 @@
           "seedling",
           "hourglass-not-done"
         ]
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "microscope",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
       }
     },
     {
@@ -358,6 +765,22 @@
           "pregnant-woman",
           "sparkles"
         ]
+      },
+      "anim": {
+        "action": "grow",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "baby",
+            "at": "left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -368,6 +791,22 @@
         "type": "science",
         "query": "human heart anatomical illustration front view",
         "note": "a detailed anatomical illustration of the heart"
+      },
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -384,6 +823,24 @@
           "hand-with-fingers-splayed",
           "stopwatch"
         ]
+      },
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sparkles",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "BILLIONS OF BEATS",
+        "bg": "room"
       }
     },
     {
@@ -392,6 +849,10 @@
       "sub": "",
       "visual": {
         "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
       }
     }
   ]

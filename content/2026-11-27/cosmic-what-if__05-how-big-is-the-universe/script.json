@@ -3,6 +3,23 @@
   "number": 5,
   "slug": "how-big-is-the-universe",
   "target_minutes": 3.67,
+  "style": "anim",
+  "thumbnail_anim": {
+    "thumbAction": "look-up",
+    "props": [
+      {
+        "icon": "milky-way",
+        "at": "right",
+        "size": "xl",
+        "anim": "spin"
+      },
+      {
+        "icon": "telescope",
+        "at": "left",
+        "size": "m"
+      }
+    ]
+  },
   "title": "How Big Is the Universe, Really? Zooming Out Step by Step",
   "thumbnail_text": "HOW BIG IS IT?",
   "description": "Zoom out from Earth, past Voyager 1, the nearest stars and the Milky Way, all the way to the edge of everything we can see. The universe is only 13.8 billion years old, so why is the visible part 93 billion light-years wide?\n\nSources:\n- NASA JPL, NASA Invites Media, Public to Join Voyager 1 One-Light Day Activities: https://www.jpl.nasa.gov/news/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities/\n- NASA Science, Hubble's Deepest View Ever of the Universe Unveils Earliest Galaxies: https://science.nasa.gov/missions/hubble/hubbles-deepest-view-ever-of-the-universe-unveils-earliest-galaxies/\n- Astronomy Magazine, How immense is the universe?: https://www.astronomy.com/science/how-immense-is-the-universe/",
@@ -42,6 +59,24 @@
         "type": "nasa",
         "query": "Hubble eXtreme Deep Field",
         "note": "field packed with distant galaxies"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "telescope",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "HOW BIG?",
+        "camera": "zoom-out"
       }
     },
     {
@@ -52,6 +87,22 @@
         "type": "nasa",
         "query": "Blue Marble Earth Apollo 17",
         "note": "the whole Earth"
+      },
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top-left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -62,6 +113,22 @@
         "type": "nasa",
         "query": "Voyager spacecraft artist concept",
         "note": "Voyager probe in deep space"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "far-right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -72,6 +139,23 @@
         "type": "nasa",
         "query": "Proxima Centauri Hubble",
         "note": "the red dwarf star Proxima Centauri"
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "star",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "70,000 YEARS"
       }
     },
     {
@@ -81,6 +165,22 @@
       "visual": {
         "type": "diagram",
         "spec": "scale bar comparing one light-day, one light-year and 4.2 light-years to Proxima Centauri, with miles labeled"
+      },
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "automobile",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "fuel-pump",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "sky"
       }
     },
     {
@@ -91,6 +191,22 @@
         "type": "nasa",
         "query": "Milky Way galaxy artist concept Spitzer",
         "note": "spiral Milky Way seen from above"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "xl",
+            "anim": "spin"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -101,6 +217,23 @@
         "type": "nasa",
         "query": "Andromeda galaxy Hubble panorama",
         "note": "the Andromeda galaxy"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "far-right",
+            "size": "m",
+            "anim": "fade-in"
+          },
+          {
+            "icon": "eyes",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
       }
     },
     {
@@ -111,6 +244,25 @@
         "type": "nasa",
         "query": "Hubble Ultra Deep Field 2004",
         "note": "the original Ultra Deep Field image"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "telescope",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "text": "10,000 GALAXIES",
+        "face": "shock",
+        "camera": "zoom-in"
       }
     },
     {
@@ -121,6 +273,20 @@
         "type": "nasa",
         "query": "Hubble Ultra Deep Field infrared distant galaxies",
         "note": "close-up of tiny red distant galaxies"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "mantelpiece-clock",
+            "at": "bubble"
+          },
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -131,6 +297,22 @@
         "type": "nasa",
         "query": "Webb deep field galaxy cluster SMACS 0723",
         "note": "Webb's first deep field"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "abacus",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "milky-way",
+            "at": "top-left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ]
       }
     },
     {
@@ -141,6 +323,18 @@
         "type": "nasa",
         "query": "cosmic microwave background Planck WMAP",
         "note": "map of the oldest light in the universe"
+      },
+      "anim": {
+        "action": "grow",
+        "props": [
+          {
+            "icon": "balloon",
+            "at": "right",
+            "size": "l",
+            "anim": "grow"
+          }
+        ],
+        "text": "46 BILLION LY"
       }
     },
     {
@@ -150,6 +344,18 @@
       "visual": {
         "type": "diagram",
         "spec": "sphere of the observable universe with Earth at the center, radius labeled about 46 billion light-years, diameter 93 billion"
+      },
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "bubbles",
+            "at": "center",
+            "size": "xl",
+            "anim": "pulse"
+          }
+        ],
+        "camera": "zoom-out"
       }
     },
     {
@@ -160,6 +366,21 @@
         "type": "nasa",
         "query": "cosmic web large scale structure simulation",
         "note": "web of galaxies stretching into the distance"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "red-question-mark",
+            "at": "bubble"
+          },
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "m",
+            "anim": "fade-in"
+          }
+        ]
       }
     },
     {
@@ -170,6 +391,23 @@
         "type": "nasa",
         "query": "Pale Blue Dot Voyager 1",
         "note": "Earth as a tiny dot in space"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "smile"
       }
     },
     {
@@ -178,6 +416,10 @@
       "sub": "",
       "visual": {
         "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
       }
     }
   ]

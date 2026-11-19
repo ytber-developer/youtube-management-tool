@@ -18,6 +18,8 @@ Sources:
 - Astronomy Magazine, Remembering the crew of Soyuz 11: https://astronomy.com/news/2021/06/remembering-the-crew-of-soyuz-11-the-only-astronauts-to-die-in-space
 
 Images:
+- Original animation by Cosmic What If
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 - NASA (JSC) (https://images.nasa.gov/details/iss010e20747)
 - NASA/Tony Landis (https://images.nasa.gov/details/ED08-0306-44)
 - NASA Johnson Space Center / Public domain (https://commons.wikimedia.org/wiki/File:EXTRAVEHICULAR_(EV)_(CUTAWAY_VIEW)_-_SPACESUIT_-_MSC_(s65-04970).jpg)
@@ -36,6 +38,8 @@ Images:
 space without a spacesuit, vacuum, what if, spacesuit, astronaut, ebullism, soyuz 11, human body in space, space, science, physics
 
 ## Image credits
+- Original animation by Cosmic What If
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 - NASA (JSC) (https://images.nasa.gov/details/iss010e20747)
 - NASA/Tony Landis (https://images.nasa.gov/details/ED08-0306-44)
 - NASA Johnson Space Center / Public domain (https://commons.wikimedia.org/wiki/File:EXTRAVEHICULAR_(EV)_(CUTAWAY_VIEW)_-_SPACESUIT_-_MSC_(s65-04970).jpg)

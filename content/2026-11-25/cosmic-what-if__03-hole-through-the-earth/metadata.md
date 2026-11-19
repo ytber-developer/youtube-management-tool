@@ -18,6 +18,8 @@ Sources:
 - WorldAtlas, The Kola Superdeep Borehole: https://www.worldatlas.com/articles/the-kola-superdeep-borehole.html
 
 Images:
+- Original animation by Cosmic What If
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 - NASA (GSFC) (https://images.nasa.gov/details/GSFC_20171208_Archive_e001016)
 - NASA/Ken Ulbrich (https://images.nasa.gov/details/KSC-2013-3561)
 - NASA (JSC) (https://images.nasa.gov/details/iss062e148363)
@@ -29,6 +31,8 @@ Images:
 hole through the earth, gravity tunnel, what if, earth core, physics, gravity, kola superdeep borehole, science, earth science
 
 ## Image credits
+- Original animation by Cosmic What If
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 - NASA (GSFC) (https://images.nasa.gov/details/GSFC_20171208_Archive_e001016)
 - NASA/Ken Ulbrich (https://images.nasa.gov/details/KSC-2013-3561)
 - NASA (JSC) (https://images.nasa.gov/details/iss062e148363)

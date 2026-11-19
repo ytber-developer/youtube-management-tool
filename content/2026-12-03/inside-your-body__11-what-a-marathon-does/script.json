@@ -3,6 +3,7 @@
   "number": 11,
   "slug": "what-a-marathon-does",
   "target_minutes": 7.67,
+  "style": "anim",
   "title": "What Running 26.2 Miles Does to Your Body, Mile by Mile",
   "thumbnail_text": "26.2 MILES INSIDE YOU",
   "description": "A marathon pushes your fuel tanks, your fluid balance, your kidneys and your heart further than almost anything else people do for fun. Follow a runner from the start line to the finish and see what the science says is happening inside, including why the wall hits around mile twenty.\n\nSources:\n- Nutrition Reviews (2018), Fundamentals of glycogen metabolism for coaches and athletes: https://pmc.ncbi.nlm.nih.gov/articles/PMC6019055/\n- Frontiers in Medicine (2017), Exercise-Associated Hyponatremia: 2017 Update: https://pmc.ncbi.nlm.nih.gov/articles/PMC5334560\n- Yale News (2017), Marathon running may cause short-term kidney injury: https://news.yale.edu/2017/03/28/marathon-running-may-cause-short-term-kidney-injury\n- The Hospitalist, Marathon runners are at low risk of cardiac arrest (RACER study, NEJM 2012): https://blogs.the-hospitalist.org/content/marathon-runners-are-low-risk-cardiac-arrest\n\nThis video is for educational purposes only and is not medical advice.",
@@ -39,6 +40,16 @@
       "url": "https://blogs.the-hospitalist.org/content/marathon-runners-are-low-risk-cardiac-arrest"
     }
   ],
+  "thumbnail_anim": {
+    "thumbAction": "tired",
+    "props": [
+      {
+        "icon": "brick",
+        "at": "right",
+        "size": "xl"
+      }
+    ]
+  },
   "scenes": [
     {
       "narration": "Twenty six point two miles. Somewhere around mile twenty, many runners feel like they have hit a wall. Here is what is happening inside them.",
@@ -54,6 +65,19 @@
           "brick",
           "hot-face"
         ]
+      },
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "brick",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "face": "worry",
+        "text": "THE WALL",
+        "bg": "park"
       }
     },
     {
@@ -70,6 +94,22 @@
           "cityscape",
           "chequered-flag"
         ]
+      },
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "running-shirt",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "sports-medal",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
       }
     },
     {
@@ -79,6 +119,22 @@
       "visual": {
         "type": "diagram",
         "spec": "a marathon course line from start to finish with four icons along it: fuel tank, water drop, kidney, heart"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "droplet",
+            "at": "left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -89,6 +145,25 @@
         "type": "stock",
         "query": "marathon start line runners",
         "note": "runners surging forward at a marathon start line"
+      },
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "lungs",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "text": "START!",
+        "bg": "park",
+        "camera": "zoom-in"
       }
     },
     {
@@ -98,6 +173,23 @@
       "visual": {
         "type": "diagram",
         "spec": "human outline with glycogen stores highlighted: large amount in leg and arm muscles, smaller amount in the liver, with gram labels"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "bread",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "battery",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "600 GRAMS",
+        "bg": "body"
       }
     },
     {
@@ -108,6 +200,16 @@
         "type": "science",
         "query": "adipose tissue fat cells micrograph",
         "note": "microscope image of fat cells"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "butter",
+            "at": "bubble",
+            "size": "m"
+          }
+        ]
       }
     },
     {
@@ -117,6 +219,18 @@
       "visual": {
         "type": "diagram",
         "spec": "a horizontal scale from sprint to marathon to ultramarathon, showing fuel use shifting from mostly carbohydrate to mostly fat"
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "turtle",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "bg": "park"
       }
     },
     {
@@ -126,6 +240,22 @@
       "visual": {
         "type": "diagram",
         "spec": "one glycogen granule surrounded by three water droplets, labeled 1 gram glycogen and at least 3 grams water"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "battery",
+            "at": "left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -136,6 +266,18 @@
         "type": "stock",
         "query": "runners smiling during race",
         "note": "runners looking relaxed and steady mid-race"
+      },
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "low-battery",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "park"
       }
     },
     {
@@ -152,6 +294,23 @@
           "sun",
           "person-running"
         ]
+      },
+      "anim": {
+        "action": "drink",
+        "props": [
+          {
+            "icon": "cup-with-straw",
+            "at": "hand",
+            "size": "m"
+          },
+          {
+            "icon": "sweat-droplets",
+            "at": "right",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "park"
       }
     },
     {
@@ -168,6 +327,17 @@
           "warning",
           "brain"
         ]
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "cup-with-straw",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "text": "TOO MUCH WATER"
       }
     },
     {
@@ -177,6 +347,24 @@
       "visual": {
         "type": "diagram",
         "spec": "two beakers of blood: left with normal sodium particles, right with the same particles spread through much more water, labeled diluted"
+      },
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "salt",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "droplet",
+            "at": "left",
+            "size": "s",
+            "anim": "fall"
+          }
+        ],
+        "face": "worry",
+        "text": "HYPONATREMIA"
       }
     },
     {
@@ -187,6 +375,22 @@
         "type": "science",
         "query": "pituitary gland location brain illustration",
         "note": "the pituitary gland at the base of the brain, which releases vasopressin"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "stop-sign",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
       }
     },
     {
@@ -203,6 +407,22 @@
           "person-running",
           "trophy"
         ]
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "bicycle",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "rugby-football",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
       }
     },
     {
@@ -219,6 +439,22 @@
           "stethoscope",
           "droplet"
         ]
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "bar-chart",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "cup-with-straw",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "DRINK TO THIRST"
       }
     },
     {
@@ -235,6 +471,18 @@
           "fuel-pump",
           "hot-face"
         ]
+      },
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "brick",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "face": "worry",
+        "bg": "park"
       }
     },
     {
@@ -244,6 +492,20 @@
       "visual": {
         "type": "diagram",
         "spec": "a fuel gauge for muscle glycogen dropping from full at the start line to nearly empty around mile 20"
+      },
+      "anim": {
+        "action": "fall-toward",
+        "props": [
+          {
+            "icon": "brick",
+            "at": "right",
+            "size": "xl",
+            "anim": "approach"
+          }
+        ],
+        "text": "HITTING THE WALL",
+        "bg": "park",
+        "camera": "shake"
       }
     },
     {
@@ -254,6 +516,23 @@
         "type": "science",
         "query": "skeletal muscle fiber micrograph",
         "note": "microscope image of striated muscle fibers"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "microscope",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "left",
+            "size": "s",
+            "anim": "shrink"
+          }
+        ],
+        "bg": "lab"
       }
     },
     {
@@ -270,6 +549,23 @@
           "battery",
           "calendar"
         ]
+      },
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "flexed-biceps",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "butter",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
       }
     },
     {
@@ -286,6 +582,23 @@
           "person-running",
           "sports-medal"
         ]
+      },
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "chequered-flag",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "park"
       }
     },
     {
@@ -296,6 +609,18 @@
         "type": "science",
         "query": "kidney anatomy cross section illustration",
         "note": "cross-section illustration of a kidney"
+      },
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "test-tube",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "82% KIDNEY STRESS",
+        "bg": "lab"
       }
     },
     {
@@ -305,6 +630,22 @@
       "visual": {
         "type": "diagram",
         "spec": "timeline: kidney stress marker rising at the finish line and returning to baseline about two days later"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "thermometer",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "droplet",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
       }
     },
     {
@@ -321,6 +662,16 @@
           "person-running",
           "chart-increasing"
         ]
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "bubble",
+            "size": "m"
+          }
+        ]
       }
     },
     {
@@ -331,6 +682,19 @@
         "type": "science",
         "query": "human heart illustration anatomical",
         "note": "an anatomical illustration of the heart"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "face": "worry",
+        "text": "1 IN 184,000"
       }
     },
     {
@@ -346,6 +710,21 @@
           "anatomical-heart",
           "clipboard",
           "check-mark-button"
+        ]
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "bar-chart",
+            "at": "left",
+            "size": "s"
+          }
         ]
       }
     },
@@ -363,6 +742,22 @@
           "anatomical-heart",
           "clipboard"
         ]
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "stethoscope",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "ambulance",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
       }
     },
     {
@@ -379,6 +774,22 @@
           "battery",
           "bed"
         ]
+      },
+      "anim": {
+        "action": "eat",
+        "props": [
+          {
+            "icon": "spaghetti",
+            "at": "hand",
+            "size": "m"
+          },
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
       }
     },
     {
@@ -388,6 +799,23 @@
       "visual": {
         "type": "diagram",
         "spec": "summary graphic of a runner with four labeled callouts: glycogen drained, water and salt balance, kidneys stressed briefly, heart working for hours"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "battery",
+            "at": "right",
+            "size": "m",
+            "anim": "grow"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "FOUR SYSTEMS"
       }
     },
     {
@@ -404,6 +832,19 @@
           "flexed-biceps",
           "sparkles"
         ]
+      },
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "sports-medal",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          }
+        ],
+        "face": "grin",
+        "bg": "park"
       }
     },
     {
@@ -412,6 +853,10 @@
       "sub": "",
       "visual": {
         "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
       }
     }
   ]

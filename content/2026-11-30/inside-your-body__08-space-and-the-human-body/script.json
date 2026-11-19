@@ -43,6 +43,22 @@
       "url": "https://ntrs.nasa.gov/citations/20090007782"
     }
   ],
+  "style": "anim",
+  "thumbnail_anim": {
+    "thumbAction": "grow",
+    "props": [
+      {
+        "icon": "straight-ruler",
+        "at": "right",
+        "size": "xl"
+      },
+      {
+        "icon": "rocket",
+        "at": "left",
+        "size": "m"
+      }
+    ]
+  },
   "scenes": [
     {
       "narration": "Two hundred forty miles above your head, the human body starts rebuilding itself. Within two days, you could even be taller.",
@@ -52,6 +68,23 @@
         "type": "nasa",
         "query": "astronaut floating inside International Space Station cupola",
         "note": "astronaut floating weightless inside the station"
+      },
+      "anim": {
+        "action": "grow",
+        "props": [
+          {
+            "icon": "straight-ruler",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "rocket",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "TALLER IN SPACE",
+        "bg": "night"
       }
     },
     {
@@ -68,6 +101,22 @@
           "sunrise",
           "down-arrow"
         ]
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "bone",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
       }
     },
     {
@@ -78,6 +127,24 @@
         "type": "nasa",
         "query": "International Space Station over Earth",
         "note": "the space station orbiting above Earth"
+      },
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "l",
+            "anim": "orbit"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "text": "ALWAYS FALLING",
+        "bg": "night"
       }
     },
     {
@@ -87,6 +154,24 @@
       "visual": {
         "type": "diagram",
         "spec": "two human outlines side by side: on Earth fluid concentrated in the legs, in orbit fluid shifted up toward chest and head, with arrows"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "top",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "drop-of-blood",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "face": "worry",
+        "bg": "body"
       }
     },
     {
@@ -97,6 +182,19 @@
         "type": "science",
         "query": "human vertebral column lateral view illustration Gray's Anatomy",
         "note": "side view of the human spine and its discs"
+      },
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "straight-ruler",
+            "at": "right",
+            "size": "l",
+            "anim": "grow"
+          }
+        ],
+        "text": "3% TALLER",
+        "bg": "night"
       }
     },
     {
@@ -107,6 +205,17 @@
         "type": "nasa",
         "query": "astronaut portrait inside space station module",
         "note": "astronaut floating with tools and cables around"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "ledger",
+            "at": "bubble",
+            "size": "l"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -117,6 +226,23 @@
         "type": "science",
         "query": "human femur hip bone anatomy illustration",
         "note": "the hip and thigh bone, weight-bearing bones"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "bone",
+            "at": "right",
+            "size": "l",
+            "anim": "shrink"
+          },
+          {
+            "icon": "calendar",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
       }
     },
     {
@@ -127,6 +253,24 @@
         "type": "science",
         "query": "human kidney anatomy illustration",
         "note": "simple kidney anatomy illustration"
+      },
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "rock",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "droplet",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "sick",
+        "text": "KIDNEY STONES",
+        "bg": "body"
       }
     },
     {
@@ -137,6 +281,18 @@
         "type": "science",
         "query": "human leg muscles anatomy illustration",
         "note": "muscles of the legs and back that hold you upright"
+      },
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "flexed-biceps",
+            "at": "right",
+            "size": "l",
+            "anim": "shrink"
+          }
+        ],
+        "bg": "room"
       }
     },
     {
@@ -147,6 +303,23 @@
         "type": "nasa",
         "query": "astronaut exercising ARED advanced resistive exercise device",
         "note": "astronaut lifting on the resistive exercise machine"
+      },
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "bicycle",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "text": "TWO HOURS DAILY",
+        "bg": "lab"
       }
     },
     {
@@ -157,6 +330,22 @@
         "type": "nasa",
         "query": "Scott Kelly Mark Kelly twins study",
         "note": "identical twin astronauts Scott and Mark Kelly together"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "dna",
+            "at": "bubble",
+            "size": "l"
+          },
+          {
+            "icon": "busts-in-silhouette",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -167,6 +356,23 @@
         "type": "nasa",
         "query": "Scott Kelly year in space ISS",
         "note": "Scott Kelly aboard the space station"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "busts-in-silhouette",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "rocket",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "THE TWINS STUDY",
+        "bg": "paper"
       }
     },
     {
@@ -183,6 +389,24 @@
           "astronaut",
           "hourglass-not-done"
         ]
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "dna",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "microbe",
+            "at": "left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "lab"
       }
     },
     {
@@ -193,6 +417,18 @@
         "type": "nasa",
         "query": "astronauts eating food space station galley",
         "note": "astronauts sharing a meal with floating food packets"
+      },
+      "anim": {
+        "action": "eat",
+        "props": [
+          {
+            "icon": "red-apple",
+            "at": "hand",
+            "size": "m"
+          }
+        ],
+        "text": "30% FEWER CALORIES",
+        "bg": "room"
       }
     },
     {
@@ -203,6 +439,23 @@
         "type": "nasa",
         "query": "astronaut eye exam ocular health space station",
         "note": "astronaut having an eye examination in orbit"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "eye",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "droplet",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "face": "worry",
+        "bg": "body"
       }
     },
     {
@@ -213,6 +466,18 @@
         "type": "nasa",
         "query": "Soyuz capsule landing parachute Kazakhstan",
         "note": "a crew capsule descending under its parachute"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "house",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "text": "COMING HOME",
+        "bg": "room"
       }
     },
     {
@@ -223,6 +488,19 @@
         "type": "nasa",
         "query": "astronaut helped out of capsule after landing",
         "note": "recovery crew helping an astronaut after landing"
+      },
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "dizzy",
+            "at": "above",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "face": "sick",
+        "bg": "room"
       }
     },
     {
@@ -233,6 +511,22 @@
         "type": "science",
         "query": "human brain MRI side view",
         "note": "a side view brain scan"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "bubble",
+            "size": "l"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -243,6 +537,23 @@
         "type": "nasa",
         "query": "Scott Kelly Mark Kelly after landing",
         "note": "the twin brothers reunited after the mission"
+      },
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "dna",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "syringe",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "91% BOUNCED BACK",
+        "bg": "park"
       }
     },
     {
@@ -253,6 +564,18 @@
         "type": "science",
         "query": "bone density scan DEXA image",
         "note": "a bone density scan image"
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "bone",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "face": "worry",
+        "bg": "park"
       }
     },
     {
@@ -263,6 +586,24 @@
         "type": "nasa",
         "query": "galactic cosmic rays radiation illustration",
         "note": "artist illustration of cosmic radiation streaming past a spacecraft"
+      },
+      "anim": {
+        "action": "hidden",
+        "props": [
+          {
+            "icon": "radioactive",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "comet",
+            "at": "top",
+            "size": "s",
+            "anim": "approach"
+          }
+        ],
+        "bg": "night"
       }
     },
     {
@@ -273,6 +614,19 @@
         "type": "nasa",
         "query": "Mars global view Viking orbiter mosaic",
         "note": "the planet Mars seen from space"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "above",
+            "size": "l",
+            "anim": "approach"
+          }
+        ],
+        "text": "TRIP TO MARS",
+        "bg": "night"
       }
     },
     {
@@ -283,6 +637,23 @@
         "type": "nasa",
         "query": "astronauts Mars surface concept art habitat",
         "note": "artist concept of astronauts working on Mars"
+      },
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "s"
+          },
+          {
+            "icon": "full-moon",
+            "at": "top-left",
+            "size": "m"
+          }
+        ],
+        "text": "1/3 GRAVITY",
+        "bg": "night"
       }
     },
     {
@@ -293,6 +664,18 @@
         "type": "nasa",
         "query": "Earth from space Blue Marble",
         "note": "the whole Earth seen from space"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "gear",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "bg": "paper"
       }
     },
     {
@@ -309,6 +692,23 @@
           "bone",
           "flexed-biceps"
         ]
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "flexed-biceps",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "bone",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "text": "STAY STRONG",
+        "bg": "park"
       }
     },
     {
@@ -317,6 +717,10 @@
       "sub": "",
       "visual": {
         "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
       }
     }
   ]

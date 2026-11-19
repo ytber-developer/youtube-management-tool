@@ -33,6 +33,23 @@
       "url": "https://astronomy.com/news/2021/06/remembering-the-crew-of-soyuz-11-the-only-astronauts-to-die-in-space"
     }
   ],
+  "style": "anim",
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "astronaut",
+        "at": "right",
+        "size": "xl",
+        "anim": "bob"
+      },
+      {
+        "icon": "stopwatch",
+        "at": "left",
+        "size": "m"
+      }
+    ]
+  },
   "scenes": [
     {
       "narration": "You're on a spacewalk, and something goes wrong. Your suit is gone. Movies say you'd explode or freeze solid. The truth is stranger.",
@@ -42,6 +59,20 @@
         "type": "nasa",
         "query": "astronaut spacewalk ISS",
         "note": "astronaut floating outside the space station"
+      },
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          }
+        ],
+        "face": "shock",
+        "text": "NO SUIT",
+        "bg": "space"
       }
     },
     {
@@ -52,6 +83,23 @@
         "type": "nasa",
         "query": "Extravehicular Mobility Unit spacesuit",
         "note": "a NASA spacesuit up close"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "astronaut",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "rocket",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "ONE-PERSON SPACECRAFT",
+        "bg": "space"
       }
     },
     {
@@ -62,6 +110,25 @@
         "type": "nasa",
         "query": "spacesuit layers cutaway",
         "note": "the layers of a spacesuit"
+      },
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "snowflake",
+            "at": "left",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "text": "±250°F",
+        "bg": "space"
       }
     },
     {
@@ -72,6 +139,20 @@
         "type": "nasa",
         "query": "Space Environment Simulation Laboratory vacuum chamber Johnson",
         "note": "a large NASA vacuum test chamber"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "balloon",
+            "at": "right",
+            "size": "l",
+            "anim": "shrink"
+          }
+        ],
+        "text": "ZERO PRESSURE",
+        "camera": "shake",
+        "bg": "space"
       }
     },
     {
@@ -82,6 +163,19 @@
         "type": "nasa",
         "query": "Neutral Buoyancy Laboratory astronaut training diver",
         "note": "astronaut training underwater with divers"
+      },
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "lungs",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "text": "BREATHE OUT",
+        "bg": "space"
       }
     },
     {
@@ -91,6 +185,23 @@
       "visual": {
         "type": "diagram",
         "spec": "lungs and blood vessels with arrows showing oxygen flowing out of the blood into empty lungs in a vacuum"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "lungs",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "drop-of-blood",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "worry",
+        "bg": "space"
       }
     },
     {
@@ -100,6 +211,24 @@
       "visual": {
         "type": "diagram",
         "spec": "chart of water's boiling point dropping as air pressure falls, from 212°F at sea level to body temperature near vacuum"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "tongue",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "bubbles",
+            "at": "left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "text": "SALIVA BOILS",
+        "bg": "space"
       }
     },
     {
@@ -110,6 +239,18 @@
         "type": "nasa",
         "query": "astronaut hand glove spacewalk",
         "note": "astronaut glove against the blackness of space"
+      },
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "drop-of-blood",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "NO EXPLOSION",
+        "bg": "space"
       }
     },
     {
@@ -120,6 +261,19 @@
         "type": "nasa",
         "query": "astronaut portrait in spacesuit helmet",
         "note": "astronaut face inside a helmet"
+      },
+      "anim": {
+        "action": "grow",
+        "props": [
+          {
+            "icon": "balloon",
+            "at": "right",
+            "size": "m",
+            "anim": "grow"
+          }
+        ],
+        "face": "worry",
+        "bg": "space"
       }
     },
     {
@@ -130,6 +284,23 @@
         "type": "nasa",
         "query": "high altitude balloon launch stratosphere",
         "note": "a giant balloon rising into the stratosphere"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "balloon",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "raised-hand",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "bg": "sky"
       }
     },
     {
@@ -140,6 +311,20 @@
         "type": "nasa",
         "query": "Manned Spacecraft Center vacuum chamber test 1960s",
         "note": "1960s NASA chamber testing"
+      },
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          }
+        ],
+        "text": "15 SECONDS",
+        "camera": "zoom-in",
+        "bg": "space"
       }
     },
     {
@@ -150,6 +335,22 @@
         "type": "nasa",
         "query": "spacesuit testing engineer 1960s Apollo",
         "note": "engineer in a pressure suit during testing"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "tongue",
+            "at": "bubble",
+            "size": "m"
+          },
+          {
+            "icon": "bubbles",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -160,6 +361,23 @@
         "type": "nasa",
         "query": "astronaut silhouette Earth limb spacewalk",
         "note": "astronaut against Earth's glowing edge"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "thermometer",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "snowflake",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "think",
+        "bg": "space"
       }
     },
     {
@@ -170,6 +388,25 @@
         "type": "nasa",
         "query": "orbital sunrise from International Space Station",
         "note": "sunrise over Earth's limb from orbit"
+      },
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "l",
+            "anim": "spin"
+          }
+        ],
+        "text": "90-MINUTE ORBIT",
+        "bg": "space"
       }
     },
     {
@@ -180,6 +417,25 @@
         "type": "nasa",
         "query": "astronaut gold visor reflection",
         "note": "astronaut's gold visor reflecting sunlight"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "above",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "fire",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "face": "worry",
+        "text": "SUNBURN",
+        "bg": "space"
       }
     },
     {
@@ -190,6 +446,24 @@
         "type": "nasa",
         "query": "micrometeoroid impact damage space station window",
         "note": "tiny impact chip on a spacecraft window"
+      },
+      "anim": {
+        "action": "hidden",
+        "props": [
+          {
+            "icon": "radioactive",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "comet",
+            "at": "top-left",
+            "size": "s",
+            "anim": "approach"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -200,6 +474,18 @@
         "type": "nasa",
         "query": "space station airlock Quest",
         "note": "the station's airlock hatch"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "bubble",
+            "size": "l"
+          }
+        ],
+        "text": "30 SECONDS",
+        "bg": "space"
       }
     },
     {
@@ -210,6 +496,22 @@
         "type": "nasa",
         "query": "two astronauts spacewalk tethered",
         "note": "two spacewalkers working together"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "chains",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -220,6 +522,18 @@
         "type": "nasa",
         "query": "Soyuz spacecraft descent module landing",
         "note": "a Soyuz capsule"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "face": "worry",
+        "bg": "space"
       }
     },
     {
@@ -230,6 +544,18 @@
         "type": "nasa",
         "query": "Soyuz crew Sokol suits Baikonur",
         "note": "crew in pressure suits before launch"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "astronaut",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "face": "worry",
+        "bg": "space"
       }
     },
     {
@@ -240,6 +566,24 @@
         "type": "nasa",
         "query": "ER-2 high altitude pilot pressure suit",
         "note": "pilot in a high-altitude pressure suit"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "airplane",
+            "at": "above",
+            "size": "m"
+          },
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "text": "12 MILES UP",
+        "bg": "sky"
       }
     },
     {
@@ -250,6 +594,22 @@
         "type": "nasa",
         "query": "Bruce McCandless Manned Maneuvering Unit",
         "note": "astronaut floating free above Earth"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "astronaut",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "stopwatch",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -258,6 +618,10 @@
       "sub": "",
       "visual": {
         "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
       }
     }
   ]

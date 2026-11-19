@@ -3,6 +3,22 @@
   "number": 5,
   "slug": "what-coffee-does",
   "target_minutes": 3.67,
+  "style": "anim",
+  "thumbnail_anim": {
+    "thumbAction": "drink",
+    "props": [
+      {
+        "icon": "hot-beverage",
+        "at": "hand",
+        "size": "l"
+      },
+      {
+        "icon": "zzz",
+        "at": "top-left",
+        "size": "m"
+      }
+    ]
+  },
   "title": "What Coffee Actually Does to Your Body",
   "thumbnail_text": "COFFEE ISN'T ENERGY",
   "description": "Coffee doesn't add energy to your body. It hides a tiredness signal your brain has been collecting all day. Follow one cup from the first sip to hours later, and see why the same coffee hits everyone differently.\n\nSources:\n- U.S. Food and Drug Administration, Spilling the Beans: How Much Caffeine is Too Much?: https://www.fda.gov/consumers/consumer-updates/spilling-beans-how-much-caffeine-too-much\n- MedlinePlus, Caffeine: https://medlineplus.gov/caffeine.html\n- Current Neuropharmacology (2015), Caffeine: Cognitive and Physical Performance Enhancer or Psychoactive Drug?: https://pmc.ncbi.nlm.nih.gov/articles/4462044/\n- Nutrients (2021), Caffeine as a Factor Influencing the Functioning of the Human Body: Friend or Foe?: https://pmc.ncbi.nlm.nih.gov/articles/PMC8467199\n- NHLBI, How Sleep Works: Your Sleep/Wake Cycle: https://www.nhlbi.nih.gov/health/sleep/sleep-wake-cycle\n- ScienceDaily (2009), NIH-funded study on astrocytes, adenosine and sleep pressure: https://www.sciencedaily.com/releases/2009/01/090128122814.htm\n\nThis video is for educational purposes only and is not medical advice.",
@@ -54,6 +70,17 @@
         "type": "stock",
         "query": "cup of black coffee on table",
         "note": "steaming cup of black coffee on a wooden table"
+      },
+      "anim": {
+        "action": "yawn",
+        "props": [
+          {
+            "icon": "hot-beverage",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "text": "NOT ENERGY"
       }
     },
     {
@@ -64,6 +91,21 @@
         "type": "stock",
         "query": "coffee beans tea leaves cacao pods",
         "note": "coffee beans, tea leaves, and cacao side by side"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "teacup-without-handle",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "chocolate-bar",
+            "at": "top-left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -74,6 +116,21 @@
         "type": "stock",
         "query": "busy coffee shop morning line",
         "note": "people lined up at a coffee shop counter"
+      },
+      "anim": {
+        "action": "drink",
+        "props": [
+          {
+            "icon": "hot-beverage",
+            "at": "hand"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
       }
     },
     {
@@ -83,6 +140,23 @@
       "visual": {
         "type": "diagram",
         "spec": "path of caffeine: mouth, stomach and small intestine, bloodstream, then crossing the blood-brain barrier into the brain"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "drop-of-blood",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
       }
     },
     {
@@ -92,6 +166,19 @@
       "visual": {
         "type": "diagram",
         "spec": "line graph of caffeine level in blood over time: rising to a peak around thirty to sixty minutes, shaded range from fifteen minutes to two hours, then slowly declining"
+      },
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          }
+        ],
+        "text": "30–60 MINUTES",
+        "bg": "room"
       }
     },
     {
@@ -102,6 +189,24 @@
         "type": "science",
         "query": "neurons brain cells microscope",
         "note": "microscope image of brain neurons"
+      },
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "zzz",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "text": "SLEEP PRESSURE",
+        "bg": "room"
       }
     },
     {
@@ -111,6 +216,22 @@
       "visual": {
         "type": "diagram",
         "spec": "brain cell receptor shown as a lock; adenosine key fits and sends a tired signal; caffeine key fits but blocks the signal, so the receptor stays quiet"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "key",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "locked",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
       }
     },
     {
@@ -121,6 +242,23 @@
         "type": "stock",
         "query": "woman working alert at laptop with coffee",
         "note": "focused person working at a laptop with a coffee mug"
+      },
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "brain",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "grin"
       }
     },
     {
@@ -131,6 +269,24 @@
         "type": "science",
         "query": "human digestive system anatomy illustration",
         "note": "simple anatomy illustration of the stomach and digestive tract"
+      },
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "fire",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "droplet",
+            "at": "top-left",
+            "size": "s",
+            "anim": "fall"
+          }
+        ],
+        "face": "worry"
       }
     },
     {
@@ -141,6 +297,21 @@
         "type": "stock",
         "query": "afternoon sunlight office desk clock",
         "note": "office desk in afternoon light, suggesting hours passing"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "bubble"
+          },
+          {
+            "icon": "hot-beverage",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "night"
       }
     },
     {
@@ -151,6 +322,21 @@
         "type": "science",
         "query": "human liver anatomy illustration",
         "note": "clean anatomical illustration of the liver"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "cigarette",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "pregnant-woman",
+            "at": "left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -161,6 +347,22 @@
         "type": "stock",
         "query": "two friends drinking coffee cafe",
         "note": "two people sharing coffee, one energetic, one relaxed"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "sleeping-face",
+            "at": "left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -172,6 +374,22 @@
         "query": "barista pouring drip coffee",
         "note": "coffee being poured from a drip machine into a mug",
         "openverse_id": "1583ed01-6553-4158-878b-087261c01550"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "hot-beverage",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "balance-scale",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "400 MG A DAY"
       }
     },
     {
@@ -182,6 +400,23 @@
         "type": "stock",
         "query": "tired man rubbing eyes at desk",
         "note": "person rubbing their eyes, looking tired"
+      },
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "face-with-head-bandage",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "worry"
       }
     },
     {
@@ -193,6 +428,24 @@
         "query": "empty coffee mug evening window",
         "note": "empty mug by a window at dusk",
         "openverse_id": "0886047e-30f0-44f1-bb2f-08743e5fc5f8"
+      },
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "warning",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "hot-beverage",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "TAPE OVER WARNING",
+        "bg": "night"
       }
     },
     {
@@ -201,6 +454,10 @@
       "sub": "",
       "visual": {
         "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
       }
     }
   ]

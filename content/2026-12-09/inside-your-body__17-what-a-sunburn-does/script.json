@@ -1,0 +1,559 @@
+{
+  "channel": "inside-your-body",
+  "number": 17,
+  "slug": "what-a-sunburn-does",
+  "style": "anim",
+  "target_minutes": 6.2,
+  "title": "What a Sunburn Really Does to Your Skin, Hour by Hour",
+  "thumbnail_text": "SUNBURN HOUR BY HOUR",
+  "description": "A sunburn is not heat damage. It is your skin reacting to ultraviolet rays that injure the DNA inside its cells. Follow one sunburn hour by hour: the silent damage, the self-destructing sunburn cells, the redness that peaks a day later, the peeling on day three, and the DNA damage that stays after the skin looks healed. Plus what a tan really means, how to prevent a burn, and when to get medical help.\n\nSources:\n- Cleveland Clinic - Sunburn: https://my.clevelandclinic.org/health/diseases/21858-sunburn\n- StatPearls (NCBI Bookshelf) - Sunburn: https://www.ncbi.nlm.nih.gov/books/NBK534837/\n- CDC - Reducing Risk for Skin Cancer: https://www.cdc.gov/skin-cancer/prevention/index.html\n- NHS - Sunburn: https://www.nhs.uk/conditions/sunburn/\n- Cleveland Clinic Health Essentials - Is It Bad To Peel Sunburn?: https://health.clevelandclinic.org/is-it-bad-to-peel-sunburn\n- Skin Cancer Foundation - Why Does My Skin Peel When I Get Sunburned?: https://www.skincancer.org/blog/why-does-my-skin-peel-when-i-get-sunburned/\n- Skin Cancer Foundation - Tanning & Your Skin: https://www.skincancer.org/risk-factors/tanning/\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": [
+    "sunburn",
+    "what does a sunburn do",
+    "why does skin peel",
+    "UV rays",
+    "UVA and UVB",
+    "sunscreen",
+    "skin cancer prevention",
+    "tanning",
+    "skin health",
+    "dermatology",
+    "human body",
+    "science explained",
+    "inside your body"
+  ],
+  "sources": [
+    {
+      "title": "Cleveland Clinic - Sunburn",
+      "url": "https://my.clevelandclinic.org/health/diseases/21858-sunburn"
+    },
+    {
+      "title": "StatPearls (NCBI Bookshelf) - Sunburn",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK534837/"
+    },
+    {
+      "title": "CDC - Reducing Risk for Skin Cancer",
+      "url": "https://www.cdc.gov/skin-cancer/prevention/index.html"
+    },
+    {
+      "title": "NHS - Sunburn",
+      "url": "https://www.nhs.uk/conditions/sunburn/"
+    },
+    {
+      "title": "Cleveland Clinic Health Essentials - Is It Bad To Peel Sunburn?",
+      "url": "https://health.clevelandclinic.org/is-it-bad-to-peel-sunburn"
+    },
+    {
+      "title": "Skin Cancer Foundation - Why Does My Skin Peel When I Get Sunburned?",
+      "url": "https://www.skincancer.org/blog/why-does-my-skin-peel-when-i-get-sunburned/"
+    },
+    {
+      "title": "Skin Cancer Foundation - Tanning & Your Skin",
+      "url": "https://www.skincancer.org/risk-factors/tanning/"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "sick",
+    "props": [
+      {
+        "icon": "sun",
+        "at": "top-left",
+        "size": "l"
+      },
+      {
+        "icon": "hot-face",
+        "at": "right",
+        "size": "l"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "You spent the afternoon outside and felt totally fine. Tonight your skin is red, hot and tender. What happened while you weren't looking?",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "beach-with-umbrella",
+            "at": "right"
+          }
+        ],
+        "bg": "park",
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "A sunburn feels like heat damage, like touching a stove. But the real story is stranger. A sunburn is your skin reacting to injury deep inside its cells. So let us follow one sunburn, hour by hour, from the first ray to the last flake.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "text": "HOUR BY HOUR"
+      }
+    },
+    {
+      "narration": "Hour zero. You step into the sunshine. Along with the light you can see, the sun sends invisible ultraviolet rays, called UV. Two types reach your skin, UVA and UVB, and both of them can burn.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "s",
+            "anim": "fall"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "These rays can reach you even on cloudy and cool days. Cleveland Clinic says their strength depends on the time of day, cloud cover, altitude and how close you are to the equator. So a gray sky is not a shield.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "sun-behind-cloud",
+            "at": "top-left",
+            "size": "l",
+            "anim": "bob"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Now zoom in. Your outer skin is built from layers of cells stacked like bricks. Inside every one of them is DNA, the instruction manual that tells the cell how to work and how to copy itself.",
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "dna",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "brick",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Here is the key moment. UVB rays are absorbed directly by DNA. The energy can make neighboring letters of the genetic code stick together in the wrong way, like two pages of a book glued shut.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "dna",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          }
+        ],
+        "text": "DNA DAMAGE",
+        "bg": "body",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "And the strange part is, you feel nothing. No pain, no redness, no warning. The damage is building while you read, swim or nap in the sun. That is why so many people get burned without realizing it.",
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "beach-with-umbrella",
+            "at": "right"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "bg": "park",
+        "face": "sleep"
+      }
+    },
+    {
+      "narration": "Hour one. Your skin cells start to notice the damage. Each cell has repair crews that try to fix broken DNA. Many fixes succeed. But when the damage is too great, the cell has a tough decision to make.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "gear",
+            "at": "bubble"
+          },
+          {
+            "icon": "dna",
+            "at": "right",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Badly damaged cells can trigger their own self destruct program. Doctors even have a name for them, sunburn cells. It sounds harsh, but it is protective. A cell that dies cannot pass on broken instructions.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "bomb",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "text": "SUNBURN CELLS"
+      }
+    },
+    {
+      "narration": "At the same time, damaged cells release chemical alarm signals, including histamine and substances called prostaglandins. They call in your immune system, and they tell nearby blood vessels to open up.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "bell",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "shield",
+            "at": "left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Hours three to five. According to a medical review, this is when redness usually begins to appear. Your skin's blood vessels widen, more blood rushes in, and the area turns red, warm and swollen.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "hot-face",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "text": "3 TO 5 HOURS",
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "That heat you feel is not stored sunshine. It is the extra blood flow from your own body. The burn is your immune system's repair job, made visible on your skin.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "fire",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "On darker skin, the redness may be hard to see. The NHS notes that brown or black skin may show little color change. But it can still feel hot, sore and painful, because the same damage is happening underneath.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "raised-hand",
+            "at": "right"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Hours twelve to twenty four. Redness usually peaks somewhere in this window, and Cleveland Clinic says the pain often peaks at about one day after the burn. Clothes rub, showers sting, and sleep gets tricky.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "bed",
+            "at": "right"
+          }
+        ],
+        "text": "PEAK PAIN",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "In a stronger burn, fluid can collect between skin layers and form blisters. Those are a sign that the burn went deeper. Doctors say do not pop them, because broken blisters can let infection in.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "face": "sick"
+      }
+    },
+    {
+      "narration": "Day three. The swelling begins to go down, but the dead outer layer does not shrink with it. Cleveland Clinic explains that this top layer starts to lift away. Yes, this is the peeling stage.",
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "leaf-fluttering-in-wind",
+            "at": "right",
+            "size": "m",
+            "anim": "fall"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Peeling is your body throwing out the cells that UV damaged, including those that self destructed. Fresh skin is growing underneath. It is skin cell turnover on fast forward. So resist the urge to pull the flakes off.",
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "sparkles",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Pulling can expose new skin before it is ready and raise the risk of infection. Instead, doctors suggest cool showers, a gentle moisturizer or aloe gel, and plenty of water, since burned skin loses fluid.",
+      "anim": {
+        "action": "drink",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "hand"
+          },
+          {
+            "icon": "potted-plant",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Around one week. For mild to moderate burns, the Skin Cancer Foundation says peeling usually stops around day seven. Your skin looks almost normal again. The redness is gone, and the pain is a memory.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "calendar",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "text": "ABOUT ONE WEEK"
+      }
+    },
+    {
+      "narration": "But here is the twist. Some cells survived with damage that was never repaired. Cleveland Clinic says the damage to DNA in your skin cells is permanent. Your skin looks healed, but it has not completely forgotten.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "dna",
+            "at": "bubble"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "That is why every sunburn adds to your risk of developing skin cancer later in life. Repeated sun damage is also linked to premature skin aging, and to cataracts, a clouding of the lens in your eyes.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "warning",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "eye",
+            "at": "top-left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "What about a tan? It feels like the healthy version of a burn, but it is not. The Skin Cancer Foundation explains that skin makes extra pigment, called melanin, only after UV has already damaged its cells.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "sunglasses",
+            "at": "right"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "So a tan is also evidence of DNA injury. And a so called base tan does not reliably protect you from burning. The CDC says plainly that a suntan does not indicate good health.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "cross-mark",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "NO SAFE TAN"
+      }
+    },
+    {
+      "narration": "The good news is that sunburn is very preventable. UV is strongest from about ten in the morning to four in the afternoon, so shade during those hours does a lot of the work for you.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "beach-with-umbrella",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "bg": "park",
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "The CDC recommends clothing that covers your arms and legs, a hat with a wide brim, and wraparound sunglasses that block both UVA and UVB. Then add a broad spectrum sunscreen with an SPF of fifteen or higher.",
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "billed-cap",
+            "at": "top-left",
+            "size": "s"
+          },
+          {
+            "icon": "lotion-bottle",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Sunscreen wears off. Cleveland Clinic advises reapplying about every ninety minutes when you are outdoors, and more often after swimming or sweating. One morning coat will not last through a whole beach day.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "lotion-bottle",
+            "at": "right"
+          },
+          {
+            "icon": "water-wave",
+            "at": "bottom-right",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Most sunburns heal on their own. But get medical help for blisters over a large area, a fever over one hundred and two degrees Fahrenheit, chills, severe pain, signs of infection, or feeling dizzy or sick.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "thermometer",
+            "at": "right"
+          },
+          {
+            "icon": "stethoscope",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "sick"
+      }
+    },
+    {
+      "narration": "And any sunburn on a baby under one year old needs a call to a doctor. Severe sunburn can also come with heat exhaustion, which can turn serious, so treat it seriously.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "baby",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "bg": "room",
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "So the next time you head outside, remember the timeline. The damage happens while you are outside, the redness shows up hours later, and the peeling comes days after that. Your skin keeps score, so give it some shade.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "billed-cap",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

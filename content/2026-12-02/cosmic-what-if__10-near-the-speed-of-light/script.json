@@ -3,6 +3,7 @@
   "number": 10,
   "slug": "near-the-speed-of-light",
   "target_minutes": 7.0,
+  "style": "anim",
   "title": "What If You Traveled Near the Speed of Light?",
   "thumbnail_text": "TIME SLOWS DOWN",
   "description": "Get close enough to the speed of light and your clock slows, the stars crowd in front of you, and a trip across the galaxy fits inside a human lifetime. Here is what Einstein's relativity says would really happen, and the catch that comes with it.\n\nSources:\n- Ohio State University Astronomy, Real-World Relativity: The GPS Navigation System: https://www.astronomy.ohio-state.edu/pogge.1/Ast162/Unit5/gps\n- NASA JPL via ScienceDaily, Voyager 1 reaches one light-day from Earth (2026): https://sciencedaily.com/releases/2026/11/261103003152.htm\n- NASA Science, Parker Solar Probe top speed: https://science.nasa.gov/?p=483262\n- Semyonov, Radiation hazard of relativistic interstellar flight, Acta Futura (arXiv:2004.10079): https://arxiv.org/abs/2004.10079",
@@ -38,6 +39,22 @@
       "url": "https://arxiv.org/abs/2004.10079"
     }
   ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "rocket",
+        "at": "right",
+        "size": "xl",
+        "anim": "approach"
+      },
+      {
+        "icon": "stopwatch",
+        "at": "left",
+        "size": "m"
+      }
+    ]
+  },
   "scenes": [
     {
       "narration": "You leave Earth for a short trip near the speed of light. When you come home, everyone you knew is decades older. You are not.",
@@ -47,6 +64,23 @@
         "type": "nasa",
         "query": "Orion spacecraft deep space",
         "note": "spacecraft against a starry background"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "l",
+            "anim": "approach"
+          },
+          {
+            "icon": "older-person",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "DECADES OLDER"
       }
     },
     {
@@ -57,6 +91,22 @@
         "type": "nasa",
         "query": "Albert Einstein",
         "note": "historical portrait of Albert Einstein"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -67,6 +117,22 @@
         "type": "nasa",
         "query": "sunrise from International Space Station",
         "note": "sunlight breaking over Earth's horizon"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "flashlight",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "s",
+            "anim": "orbit"
+          }
+        ]
       }
     },
     {
@@ -77,6 +143,23 @@
         "type": "nasa",
         "query": "Parker Solar Probe",
         "note": "Parker Solar Probe approaching the Sun"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "satellite",
+            "at": "left",
+            "size": "m",
+            "anim": "approach"
+          }
+        ]
       }
     },
     {
@@ -87,6 +170,23 @@
         "type": "nasa",
         "query": "Voyager spacecraft",
         "note": "Voyager spacecraft illustration"
+      },
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "star",
+            "at": "far-right",
+            "size": "s"
+          }
+        ],
+        "text": "ONE LIGHT-DAY"
       }
     },
     {
@@ -98,6 +198,22 @@
         "query": "starship concept art interstellar",
         "note": "artist concept of an interstellar spacecraft",
         "nasa_id": "PIA26353"
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "stopwatch",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "sky"
       }
     },
     {
@@ -107,6 +223,18 @@
       "visual": {
         "type": "diagram",
         "spec": "Two clocks side by side: one labeled Earth ticking normally, one labeled moving ship with longer gaps between ticks; arrow showing ship velocity"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "text": "TIME SLOWS",
+        "camera": "zoom-in"
       }
     },
     {
@@ -116,6 +244,22 @@
       "visual": {
         "type": "diagram",
         "spec": "Curve of the time dilation factor versus speed as a percent of light speed, flat near zero and shooting upward near 100 percent; labeled points at 50, 90, 99 and 99.99 percent with factors 1.15, 2.3, 7 and 70"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "bar-chart",
+            "at": "left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -126,6 +270,23 @@
         "type": "nasa",
         "query": "GPS satellite in orbit",
         "note": "GPS navigation satellite orbiting Earth"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "mobile-phone",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "satellite",
+            "at": "top",
+            "size": "s",
+            "anim": "orbit"
+          }
+        ],
+        "bg": "sky"
       }
     },
     {
@@ -136,6 +297,23 @@
         "type": "nasa",
         "query": "city lights at night from space station",
         "note": "city grid lit up at night seen from orbit"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "world-map",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "mobile-phone",
+            "at": "left",
+            "size": "s",
+            "anim": "shake"
+          }
+        ],
+        "bg": "sky"
       }
     },
     {
@@ -147,6 +325,23 @@
         "query": "cosmic ray shower illustration",
         "note": "cosmic ray particle shower in the atmosphere",
         "commons": "File:Crshower2 nasa.jpg"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "comet",
+            "at": "top",
+            "size": "m",
+            "anim": "fall"
+          },
+          {
+            "icon": "hand-with-fingers-splayed",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "sky"
       }
     },
     {
@@ -157,6 +352,24 @@
         "type": "nasa",
         "query": "Proxima Centauri Hubble",
         "note": "Hubble image of Proxima Centauri"
+      },
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "star",
+            "at": "far-right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "text": "PROXIMA CENTAURI"
       }
     },
     {
@@ -166,6 +379,18 @@
       "visual": {
         "type": "diagram",
         "spec": "Two bars showing the distance from Earth to Proxima Centauri: 4.2 light-years as measured from Earth, and about 0.6 light-years as measured from the ship at 99 percent of light speed"
+      },
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "star",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          }
+        ],
+        "face": "think"
       }
     },
     {
@@ -176,6 +401,23 @@
         "type": "nasa",
         "query": "Alpha Centauri stars",
         "note": "bright Alpha Centauri star system"
+      },
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "calendar",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "rocket",
+            "at": "left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "text": "THREE WEEKS"
       }
     },
     {
@@ -185,6 +427,23 @@
       "visual": {
         "type": "diagram",
         "spec": "View from a cockpit: at rest, stars spread evenly; at 99 percent of light speed, stars bunched into a tight bright circle straight ahead with a darker sky around it"
+      },
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "sparkles",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "star",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "camera": "zoom-in"
       }
     },
     {
@@ -195,6 +454,22 @@
         "type": "nasa",
         "query": "Hubble deep field galaxies",
         "note": "field of distant galaxies"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "rainbow",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "star",
+            "at": "far-right",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ]
       }
     },
     {
@@ -205,6 +480,16 @@
         "type": "nasa",
         "query": "Milky Way galaxy center",
         "note": "dense star clouds toward the center of the Milky Way"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "bubble",
+            "size": "m"
+          }
+        ]
       }
     },
     {
@@ -215,6 +500,17 @@
         "type": "nasa",
         "query": "Sagittarius A star galactic center Chandra",
         "note": "X-ray view of the galactic center"
+      },
+      "anim": {
+        "action": "fall-toward",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "xl",
+            "anim": "approach"
+          }
+        ]
       }
     },
     {
@@ -225,6 +521,23 @@
         "type": "nasa",
         "query": "Andromeda galaxy",
         "note": "Andromeda Galaxy"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "rocket",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "ANOTHER GALAXY"
       }
     },
     {
@@ -235,6 +548,23 @@
         "type": "nasa",
         "query": "Space Launch System rocket launch",
         "note": "large rocket launching with a bright exhaust plume"
+      },
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "low-battery",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "INFINITE ENERGY"
       }
     },
     {
@@ -245,6 +575,22 @@
         "type": "nasa",
         "query": "interstellar medium nebula gas",
         "note": "thin interstellar gas glowing in space"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "atom-symbol",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "ice",
+            "at": "left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -255,6 +601,18 @@
         "type": "nasa",
         "query": "micrometeoroid impact test",
         "note": "crater left by a high-speed impact on a test plate"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "bomb",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          }
+        ],
+        "camera": "shake"
       }
     },
     {
@@ -265,6 +623,23 @@
         "type": "nasa",
         "query": "Earth from deep space",
         "note": "small Earth seen from far away"
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "right-arrow",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "ONE WAY"
       }
     },
     {
@@ -275,6 +650,21 @@
         "type": "nasa",
         "query": "astronaut returns to Earth",
         "note": "astronaut being greeted after landing"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "older-person",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "baby",
+            "at": "left",
+            "size": "s"
+          }
+        ]
       }
     },
     {
@@ -285,6 +675,23 @@
         "type": "nasa",
         "query": "Milky Way over observatory",
         "note": "Milky Way arching over a telescope at night"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "mobile-phone",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "sparkles",
+            "at": "left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "night"
       }
     },
     {
@@ -293,6 +700,10 @@
       "sub": "",
       "visual": {
         "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
       }
     }
   ]

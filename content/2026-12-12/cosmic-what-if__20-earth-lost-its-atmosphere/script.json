@@ -1,0 +1,720 @@
+{
+  "channel": "cosmic-what-if",
+  "number": 20,
+  "slug": "earth-lost-its-atmosphere",
+  "style": "anim",
+  "target_minutes": 6.5,
+  "title": "What If Earth Lost Its Atmosphere? Second by Second",
+  "thumbnail_text": "NO MORE AIR",
+  "description": "Snap your fingers and every molecule of air on Earth disappears. What happens to you in the first second, the first minute, and the first day? We follow the silence, the black sky, the boiling and freezing oceans, the deadly sunlight and the hail of space rock, then look at how Mars really did lose most of its air, and why Earth's thin blanket is safe for now.\n\nSources:\n- UCAR Center for Science Education, The Highs and Lows of Air Pressure: https://scied.ucar.edu/learning-zone/how-weather-works/highs-and-lows-air-pressure\n- UC Berkeley Space Sciences Lab, Earth's Atmosphere: https://spaceweather.ssl.berkeley.edu/atmosphere\n- NASA Space Place, Why Is the Sky Blue?: https://spaceplace.nasa.gov/blue-sky/en/\n- Wikipedia, Armstrong limit: https://en.wikipedia.org/wiki/Armstrong_limit\n- NASA Glenn Research Center, The Lift Equation: https://www.grc.nasa.gov/www/k-12/airplane/lifteq.html\n- Astrobiology.com, Simulating the Solar System's Ice Volcanoes in the Lab (Earth and Planetary Science Letters, 2025): https://astrobiology.com/2025/07/simulating-the-solar-systems-ice-volcanoes-in-the-lab.html\n- NASA Science, Moon Facts: https://science.nasa.gov/moon/facts/\n- NASA Science, Mercury Facts: https://science.nasa.gov/mercury/facts/\n- NASA Earth Observatory, Climate and Earth's Energy Budget: https://science.nasa.gov/earth/earth-observatory/climate-and-earths-energy-budget\n- NASA Aura, Ozone: https://aura.gsfc.nasa.gov/ozone.html\n- NASA Earth Observatory, Ultraviolet Radiation: How It Affects Life on Earth: https://earthobservatory.nasa.gov/features/UVB\n- NASA Science, Meteors and Meteorites Facts: https://science.nasa.gov/solar-system/meteors-meteorites/facts/\n- ESA, Where Does Earth's Leaking Atmosphere Go?: https://sci.esa.int/web/cluster/-/58029-where-does-earth-s-leaking-atmosphere-go\n- ESA, Cluster Reveals Earth's Plasmaspheric Wind: https://sci.esa.int/j/51988\n- NASA Science, Mars Facts: https://science.nasa.gov/mars/facts/\n- NASA Goddard, Mars Fact Sheet: https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html\n- NASA Astrobiology, NASA Mission Reveals Speed of Solar Wind Stripping Martian Atmosphere: https://astrobiology.nasa.gov/news/nasa-mission-reveals-speed-of-solar-wind-stripping-martian-atmosphere/\n- NASA Scientific Visualization Studio, Solar Wind Strips the Martian Atmosphere: https://svs.gsfc.nasa.gov/4370/",
+  "tags": [
+    "earth without atmosphere",
+    "what if earth lost its atmosphere",
+    "atmosphere",
+    "air pressure",
+    "ozone layer",
+    "meteors",
+    "mars atmosphere",
+    "maven",
+    "solar wind",
+    "what if",
+    "space science",
+    "astronomy",
+    "science",
+    "cosmic what if"
+  ],
+  "sources": [
+    {
+      "title": "UCAR Center for Science Education - The Highs and Lows of Air Pressure",
+      "url": "https://scied.ucar.edu/learning-zone/how-weather-works/highs-and-lows-air-pressure"
+    },
+    {
+      "title": "UC Berkeley Space Sciences Lab - Earth's Atmosphere",
+      "url": "https://spaceweather.ssl.berkeley.edu/atmosphere"
+    },
+    {
+      "title": "NASA Space Place - Why Is the Sky Blue?",
+      "url": "https://spaceplace.nasa.gov/blue-sky/en/"
+    },
+    {
+      "title": "Wikipedia - Armstrong limit",
+      "url": "https://en.wikipedia.org/wiki/Armstrong_limit"
+    },
+    {
+      "title": "NASA Glenn Research Center - The Lift Equation",
+      "url": "https://www.grc.nasa.gov/www/k-12/airplane/lifteq.html"
+    },
+    {
+      "title": "Astrobiology.com - Simulating the Solar System's Ice Volcanoes in the Lab (EPSL 2025)",
+      "url": "https://astrobiology.com/2025/07/simulating-the-solar-systems-ice-volcanoes-in-the-lab.html"
+    },
+    {
+      "title": "NASA Science - Moon Facts",
+      "url": "https://science.nasa.gov/moon/facts/"
+    },
+    {
+      "title": "NASA Science - Mercury Facts",
+      "url": "https://science.nasa.gov/mercury/facts/"
+    },
+    {
+      "title": "NASA Earth Observatory - Climate and Earth's Energy Budget",
+      "url": "https://science.nasa.gov/earth/earth-observatory/climate-and-earths-energy-budget"
+    },
+    {
+      "title": "NASA Aura - Ozone",
+      "url": "https://aura.gsfc.nasa.gov/ozone.html"
+    },
+    {
+      "title": "NASA Earth Observatory - Ultraviolet Radiation: How It Affects Life on Earth",
+      "url": "https://earthobservatory.nasa.gov/features/UVB"
+    },
+    {
+      "title": "NASA Science - Meteors and Meteorites Facts",
+      "url": "https://science.nasa.gov/solar-system/meteors-meteorites/facts/"
+    },
+    {
+      "title": "ESA - Where Does Earth's Leaking Atmosphere Go?",
+      "url": "https://sci.esa.int/web/cluster/-/58029-where-does-earth-s-leaking-atmosphere-go"
+    },
+    {
+      "title": "ESA - Cluster Reveals Earth's Plasmaspheric Wind",
+      "url": "https://sci.esa.int/j/51988"
+    },
+    {
+      "title": "NASA Science - Mars Facts",
+      "url": "https://science.nasa.gov/mars/facts/"
+    },
+    {
+      "title": "NASA Goddard - Mars Fact Sheet",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+    },
+    {
+      "title": "NASA Astrobiology - NASA Mission Reveals Speed of Solar Wind Stripping Martian Atmosphere",
+      "url": "https://astrobiology.nasa.gov/news/nasa-mission-reveals-speed-of-solar-wind-stripping-martian-atmosphere/"
+    },
+    {
+      "title": "NASA SVS - Solar Wind Strips the Martian Atmosphere",
+      "url": "https://svs.gsfc.nasa.gov/4370/"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "globe-showing-americas",
+        "at": "right",
+        "size": "l"
+      },
+      {
+        "icon": "dashing-away",
+        "at": "top-left",
+        "size": "m"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "What if Earth lost its atmosphere, every last breath of it, in a single instant? What would happen to you?",
+      "anim": {
+        "action": "shocked",
+        "face": "shock",
+        "bg": "sky",
+        "camera": "zoom-in",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "dashing-away",
+            "at": "top-left",
+            "size": "m",
+            "anim": "fade-in"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Right now, you are standing at the bottom of an ocean of air. Above every square inch of your body sits almost fifteen pounds of it. You never feel it, because it presses on you from every side at once.",
+      "anim": {
+        "action": "look-up",
+        "bg": "sky",
+        "text": "14.7 POUNDS PER INCH",
+        "props": [
+          {
+            "icon": "cloud",
+            "at": "top",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "balance-scale",
+            "at": "right",
+            "size": "m"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "And that ocean is shockingly thin. About three quarters of all the air on Earth sits within roughly eight miles of the ground. Earth itself is nearly eight thousand miles wide. Our air is a film, not a dome.",
+      "anim": {
+        "action": "present",
+        "bg": "space",
+        "camera": "zoom-out",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "xl",
+            "anim": "spin"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "So let's switch it off. Snap your fingers, and every molecule of nitrogen, oxygen and carbon dioxide vanishes at once. Here is what happens to you in the first second, the first minute, the first day, and beyond.",
+      "anim": {
+        "action": "point",
+        "bg": "sky",
+        "face": "grin",
+        "props": [
+          {
+            "icon": "sparkles",
+            "at": "hand",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "wind-face",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "The first thing you would notice is silence. Sound is a wave that travels through air. With no air, birdsong, traffic and the voices around you simply disappear. You could shout as hard as you like and hear almost nothing.",
+      "anim": {
+        "action": "shocked",
+        "face": "worry",
+        "bg": "sky",
+        "props": [
+          {
+            "icon": "muted-speaker",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "musical-note",
+            "at": "top-left",
+            "size": "s",
+            "anim": "fade-in"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Then look up. Today the sky is blue because air molecules scatter blue sunlight in every direction. Without them, the sky would turn black even at noon, with a blinding Sun and stars beside it, like the sky on the Moon.",
+      "anim": {
+        "action": "look-up",
+        "bg": "space",
+        "camera": "zoom-out",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "top",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "glowing-star",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Pilots know an invisible line called the Armstrong limit, roughly sixty-three thousand feet up. Above it, air pressure is so low that water boils at the temperature of your body. With no atmosphere, you are above that line while standing on the ground.",
+      "anim": {
+        "action": "think",
+        "bg": "sky",
+        "text": "ARMSTRONG LIMIT",
+        "props": [
+          {
+            "icon": "thermometer",
+            "at": "bubble",
+            "size": "m"
+          },
+          {
+            "icon": "airplane",
+            "at": "top",
+            "size": "m",
+            "anim": "bob"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "The moisture on your tongue and in your eyes would start to bubble away. The blood inside your veins is held under pressure, so it would not boil, but the air in your lungs would rush out. Within seconds, you would black out.",
+      "anim": {
+        "action": "hold-breath",
+        "face": "hold",
+        "bg": "sky",
+        "camera": "shake",
+        "props": [
+          {
+            "icon": "bubbles",
+            "at": "above",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "lungs",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Studies of high-altitude accidents suggest that unless pressure returns within about a minute to a minute and a half, the harm becomes deadly. And that is true for every person, every pet and every air-breathing animal on the planet,.",
+      "anim": {
+        "action": "tired",
+        "face": "sick",
+        "bg": "sky",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "dog-face",
+            "at": "left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Birds would drop out of the sky. A wing works by pushing on air, and the lift it makes depends on how dense that air is. Take the air away, and every bird, bee and airplane loses its grip at once.",
+      "anim": {
+        "action": "look-up",
+        "face": "shock",
+        "bg": "sky",
+        "text": "ZERO LIFT",
+        "props": [
+          {
+            "icon": "bird",
+            "at": "top",
+            "size": "m",
+            "anim": "fall"
+          },
+          {
+            "icon": "airplane",
+            "at": "top-left",
+            "size": "m",
+            "anim": "fall"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Now the oceans. Water needs air pressing down on it to stay liquid at everyday temperatures. With that pressure gone, the surface of every ocean, lake and puddle would start to boil, even though the water itself is cold.",
+      "anim": {
+        "action": "shocked",
+        "bg": "sky",
+        "camera": "zoom-in",
+        "props": [
+          {
+            "icon": "water-wave",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "bubbles",
+            "at": "far-right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "But boiling steals heat. As vapor escapes, the water left behind gets colder and colder. In lab experiments that recreate a near vacuum, a thin skin of ice formed over boiling water within minutes, with bubbles still bursting through from below.",
+      "anim": {
+        "action": "shiver",
+        "face": "worry",
+        "bg": "night",
+        "props": [
+          {
+            "icon": "ice",
+            "at": "right",
+            "size": "l",
+            "anim": "grow"
+          },
+          {
+            "icon": "test-tube",
+            "at": "left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "So picture the seas as a crust of ice, still fizzing and cracking as water boils away beneath it. And above them, nothing moves. With no air there is no wind, no clouds and no rain. Weather itself is gone.",
+      "anim": {
+        "action": "walk",
+        "bg": "night",
+        "props": [
+          {
+            "icon": "cloud-with-rain",
+            "at": "top",
+            "size": "m",
+            "anim": "fade-in"
+          },
+          {
+            "icon": "ice",
+            "at": "right",
+            "size": "m"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Next comes the temperature problem. Air spreads heat around the planet and holds some of it in at night. On the Moon, which has no real atmosphere, the ground reaches about two hundred sixty degrees Fahrenheit in full sunlight.",
+      "anim": {
+        "action": "talk",
+        "face": "worry",
+        "bg": "space",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "hot-face",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "When night falls there, it plunges to about minus two hundred eighty. Mercury swings from around eight hundred degrees by day to minus two hundred ninety at night, because there is no air to hold the heat in.",
+      "anim": {
+        "action": "shiver",
+        "bg": "night",
+        "text": "MINUS 280°F",
+        "props": [
+          {
+            "icon": "thermometer",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "snowflake",
+            "at": "top-left",
+            "size": "m",
+            "anim": "spin"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Earth would slide toward extremes like these. NASA estimates our atmosphere keeps the surface more than thirty degrees Celsius warmer on average than a bare planet would be. That is over fifty degrees Fahrenheit of warmth, gone.",
+      "anim": {
+        "action": "sit",
+        "face": "worry",
+        "bg": "night",
+        "props": [
+          {
+            "icon": "snowman",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "top-left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "And sunlight itself turns dangerous. High in the sky, a thin layer of ozone screens out all of the Sun's harshest ultraviolet light, called UV-C, and most of the UV-B that burns skin. That protection vanishes with the rest of the air.",
+      "anim": {
+        "action": "hidden",
+        "bg": "sky",
+        "text": "NO OZONE",
+        "props": [
+          {
+            "icon": "umbrella",
+            "at": "center",
+            "size": "l"
+          },
+          {
+            "icon": "sun",
+            "at": "top",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Stepping into daylight would mean a fast, severe sunburn. NASA notes that ultraviolet B damages DNA, the instruction code inside every cell. So plants, insects and microbes on the surface would take the hardest hit of all.",
+      "anim": {
+        "action": "sick",
+        "face": "sick",
+        "bg": "sky",
+        "props": [
+          {
+            "icon": "dna",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "lady-beetle",
+            "at": "left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Then there is the rain from space. NASA estimates that about forty-eight tons of meteoritic material reaches Earth every single day. Today almost all of it burns up as shooting stars, high in the air, long before it can reach you.",
+      "anim": {
+        "action": "look-up",
+        "face": "smile",
+        "bg": "night",
+        "text": "48 TONS A DAY",
+        "props": [
+          {
+            "icon": "shooting-star",
+            "at": "top",
+            "size": "m",
+            "anim": "fall"
+          },
+          {
+            "icon": "comet",
+            "at": "top-left",
+            "size": "s",
+            "anim": "approach"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Without that shield, every speck and pebble would reach the ground at full speed. Space rocks enter at tens of thousands of miles per hour. The one that lit up Chelyabinsk, Russia, in 2013 came in at more than eleven miles per second.",
+      "anim": {
+        "action": "run",
+        "face": "shock",
+        "bg": "night",
+        "camera": "shake",
+        "props": [
+          {
+            "icon": "comet",
+            "at": "right",
+            "size": "l",
+            "anim": "approach"
+          },
+          {
+            "icon": "collision",
+            "at": "far-right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "That rock broke apart about fourteen miles above the ground. With no atmosphere, objects like it would slam straight into the surface instead. The cratered face of the Moon shows what billions of years of that kind of bombardment looks like.",
+      "anim": {
+        "action": "point",
+        "bg": "space",
+        "text": "NO SHIELD",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "xl",
+            "anim": "spin"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Now the real question. Could this actually happen to Earth? The good news is that we are losing air only very slowly. European Space Agency satellites measure about ninety tonnes of material escaping from our upper atmosphere every day.",
+      "anim": {
+        "action": "talk",
+        "bg": "space",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "far-right",
+            "size": "m"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "That sounds like a lot, but our atmosphere weighs more than a million billion tonnes. Leaking all of it away at today's rate would take tens of billions of years. For now, the air above your head is going nowhere.",
+      "anim": {
+        "action": "cheer",
+        "face": "grin",
+        "bg": "sky",
+        "text": "SAFE FOR NOW",
+        "props": [
+          {
+            "icon": "balance-scale",
+            "at": "right",
+            "size": "l"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "But we do have a warning right next door. Billions of years ago, Mars seems to have had a thick atmosphere, warm enough for liquid water. Rivers carved valleys there. Today its surface air pressure is less than one percent of ours.",
+      "anim": {
+        "action": "look-up",
+        "face": "think",
+        "bg": "space",
+        "camera": "zoom-in",
+        "props": [
+          {
+            "icon": "red-circle",
+            "at": "top",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "droplet",
+            "at": "top-left",
+            "size": "s",
+            "anim": "fade-in"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "NASA's MAVEN spacecraft found one big reason. The solar wind, a stream of charged particles from the Sun, slams into the top of the Martian atmosphere and strips gas away at about a quarter of a pound every second.",
+      "anim": {
+        "action": "float",
+        "bg": "space",
+        "text": "SOLAR WIND",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Scientists think the loss was much faster billions of years ago, when the young Sun was more active. And unlike Earth, Mars has no global magnetic field to push that wind aside. Our planet does, like an invisible umbrella.",
+      "anim": {
+        "action": "present",
+        "face": "smile",
+        "bg": "space",
+        "props": [
+          {
+            "icon": "shield",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "magnet",
+            "at": "left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "So here is the strange takeaway. Everything that makes Earth feel alive, the blue sky, the sound of rain, the warm nights, the shooting stars, comes from a layer of gas so thin that you could drive through most of it in ten minutes.",
+      "anim": {
+        "action": "walk",
+        "face": "grin",
+        "bg": "sky",
+        "text": "TEN MINUTES THICK",
+        "props": [
+          {
+            "icon": "cloud",
+            "at": "top",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "rainbow",
+            "at": "right",
+            "size": "m"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "That film shields you from falling rock, from burning sunlight, from boiling away, and from the deep cold of space. So take a slow breath right now. That is the atmosphere, quietly doing its job.",
+      "anim": {
+        "action": "breathe",
+        "face": "smile",
+        "bg": "sky",
+        "camera": "zoom-in",
+        "props": [
+          {
+            "icon": "lungs",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "leaf-fluttering-in-wind",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

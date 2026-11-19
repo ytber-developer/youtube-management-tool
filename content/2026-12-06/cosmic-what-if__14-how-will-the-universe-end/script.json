@@ -40,6 +40,18 @@
       "url": "https://ar5iv.arxiv.org/html/astro-ph/9701131"
     }
   ],
+  "style": "anim",
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "black-hole",
+        "at": "right",
+        "size": "xl",
+        "anim": "spin"
+      }
+    ]
+  },
   "scenes": [
     {
       "narration": "Everything that has a beginning has an end. The universe began about thirteen point eight billion years ago. So how does it finish?",
@@ -49,6 +61,18 @@
         "type": "nasa",
         "query": "Hubble eXtreme Deep Field",
         "note": "deep field filled with distant galaxies"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "top",
+            "size": "l"
+          }
+        ],
+        "text": "THE END?",
+        "bg": "space"
       }
     },
     {
@@ -58,6 +82,23 @@
       "visual": {
         "type": "diagram",
         "spec": "A long horizontal timeline on a logarithmic scale, starting at today and passing markers for 1 billion, 1 trillion, 10 to the 40th and 10 to the 100th years"
+      },
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "rocket",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -68,6 +109,25 @@
         "type": "nasa",
         "query": "Sun Solar Dynamics Observatory full disk",
         "note": "the full disk of the Sun"
+      },
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l",
+            "anim": "grow"
+          },
+          {
+            "icon": "water-wave",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "1 BILLION YEARS",
+        "bg": "space",
+        "face": "worry"
       }
     },
     {
@@ -78,6 +138,24 @@
         "type": "nasa",
         "query": "planetary nebula Hubble",
         "note": "glowing shell of gas around a dying Sun-like star"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "xl",
+            "anim": "grow"
+          },
+          {
+            "icon": "white-circle",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "RED GIANT",
+        "bg": "space"
       }
     },
     {
@@ -88,6 +166,19 @@
         "type": "nasa",
         "query": "Andromeda galaxy collision Milky Way illustration",
         "note": "illustration of Andromeda looming in the night sky"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "l",
+            "anim": "approach"
+          }
+        ],
+        "text": "50-50 ODDS",
+        "bg": "space"
       }
     },
     {
@@ -98,6 +189,22 @@
         "type": "nasa",
         "query": "elliptical galaxy Hubble",
         "note": "giant elliptical galaxy"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "sparkles",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -108,6 +215,18 @@
         "type": "nasa",
         "query": "Type Ia supernova distant galaxy Hubble",
         "note": "a distant supernova in its host galaxy"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "far-right",
+            "size": "m",
+            "anim": "shrink"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -117,6 +236,18 @@
       "visual": {
         "type": "diagram",
         "spec": "Pie chart of the universe's contents: dark energy about 68 percent, dark matter about 27 percent, normal matter about 5 percent"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "red-question-mark",
+            "at": "bubble",
+            "size": "l"
+          }
+        ],
+        "text": "DARK ENERGY",
+        "bg": "space"
       }
     },
     {
@@ -127,6 +258,17 @@
         "type": "nasa",
         "query": "isolated galaxy dark space",
         "note": "a lone galaxy surrounded by empty dark space"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "telescope",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "night"
       }
     },
     {
@@ -136,6 +278,18 @@
       "visual": {
         "type": "diagram",
         "spec": "Two galaxies on a stretching grid; a light ray travels between them while the grid lines spread apart faster than the ray advances, labeled cosmic horizon"
+      },
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "far-right",
+            "size": "s",
+            "anim": "shrink"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -146,6 +300,19 @@
         "type": "nasa",
         "query": "Planck cosmic microwave background",
         "note": "all-sky map of the cosmic microwave background"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "radio",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          }
+        ],
+        "bg": "space",
+        "face": "worry"
       }
     },
     {
@@ -156,6 +323,23 @@
         "type": "nasa",
         "query": "star forming region nebula Hubble",
         "note": "glowing gas cloud where new stars are forming"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "cloud",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "star",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -166,6 +350,19 @@
         "type": "nasa",
         "query": "red dwarf star illustration",
         "note": "artist illustration of a small red dwarf star"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "red-circle",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "text": "10 TRILLION YEARS",
+        "bg": "space"
       }
     },
     {
@@ -176,6 +373,18 @@
         "type": "nasa",
         "query": "dark nebula Bok globule",
         "note": "dark cloud blotting out stars"
+      },
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "new-moon",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "DEGENERATE ERA",
+        "bg": "night"
       }
     },
     {
@@ -186,6 +395,17 @@
         "type": "nasa",
         "query": "Hubble galaxy cluster gravitational lensing",
         "note": "galaxy cluster full of shining galaxies"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -196,6 +416,22 @@
         "type": "nasa",
         "query": "white dwarf star Sirius B Hubble",
         "note": "Sirius A with its tiny white dwarf companion Sirius B"
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "white-circle",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "black-hole",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -206,6 +442,23 @@
         "type": "nasa",
         "query": "supermassive black hole galaxy center illustration",
         "note": "illustration of a supermassive black hole at a galaxy's center"
+      },
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "star",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "black-hole",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -216,6 +469,17 @@
         "type": "nasa",
         "query": "Super-Kamiokande detector",
         "note": "the giant water tank of a proton decay detector"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "atom-symbol",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -226,6 +490,18 @@
         "type": "nasa",
         "query": "asteroid field illustration",
         "note": "drifting rocks in dark space"
+      },
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -236,6 +512,19 @@
         "type": "nasa",
         "query": "black hole accretion disk visualization",
         "note": "visualization of a black hole with a glowing disk"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "black-hole",
+            "at": "right",
+            "size": "l",
+            "anim": "shrink"
+          }
+        ],
+        "text": "HAWKING RADIATION",
+        "bg": "space"
       }
     },
     {
@@ -246,6 +535,18 @@
         "type": "nasa",
         "query": "M87 black hole Event Horizon Telescope",
         "note": "Event Horizon Telescope image of the M87 black hole"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "A GOOGOL YEARS",
+        "bg": "space"
       }
     },
     {
@@ -256,6 +557,22 @@
         "type": "nasa",
         "query": "gamma ray burst illustration",
         "note": "brief bright flash in dark space"
+      },
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "atom-symbol",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -265,6 +582,19 @@
       "visual": {
         "type": "diagram",
         "spec": "A nearly black panel with a handful of faint scattered dots, labeled 'heat death', and a thermometer reading close to absolute zero"
+      },
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "snowflake",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "text": "BIG FREEZE",
+        "bg": "night"
       }
     },
     {
@@ -275,6 +605,17 @@
         "type": "nasa",
         "query": "dark sky empty space stars fading",
         "note": "nearly empty dark sky with a few faint points of light"
+      },
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "night"
       }
     },
     {
@@ -285,6 +626,18 @@
         "type": "nasa",
         "query": "Kitt Peak Mayall telescope",
         "note": "Mayall telescope dome at Kitt Peak, home of DESI"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "red-exclamation-mark",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -295,6 +648,22 @@
         "type": "nasa",
         "query": "galaxy map large scale structure cosmic web",
         "note": "three-dimensional map of the cosmic web of galaxies"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "telescope",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "milky-way",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
       }
     },
     {
@@ -304,6 +673,17 @@
       "visual": {
         "type": "diagram",
         "spec": "A horizontal confidence bar from 0 to 5 sigma, with a shaded band from 2.8 to 4.2 labeled DESI hints, and a line at 5 labeled discovery"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "bar-chart",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -313,6 +693,19 @@
       "visual": {
         "type": "diagram",
         "spec": "Graph of the size of the universe over time with three futures branching from today: steady growth labeled Big Freeze, a curve that turns over and falls labeled Big Crunch, and a curve shooting upward labeled Big Rip"
+      },
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "l",
+            "anim": "shrink"
+          }
+        ],
+        "text": "BIG CRUNCH",
+        "bg": "space"
       }
     },
     {
@@ -323,6 +716,20 @@
         "type": "nasa",
         "query": "galaxy torn apart tidal Hubble",
         "note": "galaxy being stretched and pulled apart"
+      },
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "collision",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "text": "BIG RIP",
+        "bg": "space",
+        "camera": "shake"
       }
     },
     {
@@ -332,6 +739,18 @@
       "visual": {
         "type": "diagram",
         "spec": "A glowing expanding sphere inside a field of galaxies, labeled bubble of true vacuum, with arrows pointing outward"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "bubbles",
+            "at": "right",
+            "size": "l",
+            "anim": "grow"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -342,6 +761,18 @@
         "type": "nasa",
         "query": "Hubble Ultra Deep Field infrared",
         "note": "deep field of galaxies"
+      },
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "bubbles",
+            "at": "far-right",
+            "size": "s"
+          }
+        ],
+        "bg": "night",
+        "face": "sleep"
       }
     },
     {
@@ -352,6 +783,17 @@
         "type": "nasa",
         "query": "Vera Rubin Observatory",
         "note": "large survey telescope observatory at dusk"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "red-question-mark",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -362,6 +804,22 @@
         "type": "nasa",
         "query": "Nancy Grace Roman Space Telescope",
         "note": "illustration of the Roman Space Telescope"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "telescope",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "satellite",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
       }
     },
     {
@@ -372,6 +830,24 @@
         "type": "nasa",
         "query": "Milky Way over Earth horizon from space station",
         "note": "the Milky Way above Earth's glowing horizon"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "star",
+            "at": "top-left",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "night",
+        "camera": "zoom-out"
       }
     },
     {
@@ -380,6 +856,10 @@
       "sub": "",
       "visual": {
         "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
       }
     }
   ]

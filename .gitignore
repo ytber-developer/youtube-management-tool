@@ -53,3 +53,4 @@ frontend/.env.*
 # Danh sách account, proxy xuất ra từ tool
 /accounts*.csv
 /proxies*.txt
+content/**/.anim-thumb

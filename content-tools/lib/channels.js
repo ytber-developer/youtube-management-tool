@@ -2,7 +2,8 @@
 module.exports = {
   WPM: 163,
   // Lời đọc viết cho máy đọc (TTS) → chữ hiển thị trên phụ đề
-  CAPTION_DISPLAY: [[/\bSagittarius A star\b/g, 'Sagittarius A*'], [/\bVoyager One\b/g, 'Voyager 1']],
+  CAPTION_DISPLAY: [[/\bSagittarius A star\b/g, 'Sagittarius A*'], [/\bVoyager One\b/g, 'Voyager 1'], [/\bB P P V\b/g, 'BPPV'], [/\bBor, bo, rig, me\b/g, 'borborygmi'],
+    [/\bGliese seven ten\b/g, 'Gliese 710'], [/\bWISE zero eight five five\b/g, 'WISE 0855'], [/\b[Ss]ixty-seven P\b/g, '67P']],
   'cosmic-what-if': {
     name: 'Cosmic What If',
     outro: 'Follow Cosmic What If for more mind-bending science.',

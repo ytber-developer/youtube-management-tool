@@ -21,28 +21,16 @@ Sources:
 This video is for educational purposes only and is not medical advice.
 
 Images:
-- Illustration with Fluent Emoji by Microsoft (https://github.com/microsoft/fluentui-emoji)
-- City of Boston Archives from West Roxbury, United States / CC BY 2.0 (https://commons.wikimedia.org/w/index.php?curid=66051929)
-- Corrêa, L.H.; Heyn, G.S.; Magalhaes, K.G. / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:External_agents_capable_of_inducing_the_browning_process_in_adipose_tissue.png)
-- Shixart1985 / CC BY 2.0 (https://commons.wikimedia.org/w/index.php?curid=193163356)
-- User:Mattes / CC BY 2.0 de (https://commons.wikimedia.org/wiki/File:Basel_2012-10-05_Batch_2_(28).JPG)
-- Community College Bioscience / CC0 (https://commons.wikimedia.org/wiki/File:Skeletal_Muscle_Tissue.jpg)
-- BruceBlaus. When using this image in external sources it can be cited as: Blausen.com staff (2014). "Medical gallery of Blausen Medical 2014". WikiJournal of Medicine 1 (2). DOI:10.15347/wjm/2014.010. ISSN 2002-4436. / CC BY 3.0 (https://commons.wikimedia.org/wiki/File:Blausen_0592_KidneyAnatomy_01.png)
-- Unknown author / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:The_heart,_circa_1749._Wellcome_L0004130.jpg)
+- Original animation by Inside Your Body
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 ```
 
 ## Tags
 marathon, running, what a marathon does to your body, hitting the wall, glycogen, endurance exercise, hyponatremia, exercise physiology, kidneys, heart, human body, science explained, inside your body
 
 ## Image credits
-- Illustration with Fluent Emoji by Microsoft (https://github.com/microsoft/fluentui-emoji)
-- City of Boston Archives from West Roxbury, United States / CC BY 2.0 (https://commons.wikimedia.org/w/index.php?curid=66051929)
-- Corrêa, L.H.; Heyn, G.S.; Magalhaes, K.G. / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:External_agents_capable_of_inducing_the_browning_process_in_adipose_tissue.png)
-- Shixart1985 / CC BY 2.0 (https://commons.wikimedia.org/w/index.php?curid=193163356)
-- User:Mattes / CC BY 2.0 de (https://commons.wikimedia.org/wiki/File:Basel_2012-10-05_Batch_2_(28).JPG)
-- Community College Bioscience / CC0 (https://commons.wikimedia.org/wiki/File:Skeletal_Muscle_Tissue.jpg)
-- BruceBlaus. When using this image in external sources it can be cited as: Blausen.com staff (2014). "Medical gallery of Blausen Medical 2014". WikiJournal of Medicine 1 (2). DOI:10.15347/wjm/2014.010. ISSN 2002-4436. / CC BY 3.0 (https://commons.wikimedia.org/wiki/File:Blausen_0592_KidneyAnatomy_01.png)
-- Unknown author / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:The_heart,_circa_1749._Wellcome_L0004130.jpg)
+- Original animation by Inside Your Body
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 
 ## Sources
 - Nutrition Reviews (2018) - Fundamentals of glycogen metabolism for coaches and athletes: https://pmc.ncbi.nlm.nih.gov/articles/PMC6019055/

@@ -2,7 +2,7 @@
 
 - **Kênh:** Cosmic What If · **Video #6** · **Ngày đăng:** 2026-11-28
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-11-29)
-- **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 4091 ký tự · khoảng 4.3 phút
+- **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 6741 ký tự · khoảng 7.1 phút
 - **Thumbnail text:** NO GROUND ON JUPITER
 
 ## Title
@@ -10,50 +10,46 @@ What If You Tried to Stand on Jupiter?
 
 ## Description (copy nguyên khối)
 ```
-You can't stand on Jupiter, because there's nothing to stand on. Follow a fall through the giant planet's clouds, using real data from NASA's Galileo probe and Juno mission, to find out how far you'd get.
+You can't stand on Jupiter, because there's nothing to stand on. Follow a full fall into the giant planet, using real data from NASA's Galileo probe and Juno mission: radiation belts, the scars of comet Shoemaker-Levy 9, lightning in ammonia clouds, slushy "mushball" hail, a shrinking Great Red Spot, helium rain and a fuzzy core that scientists are still arguing about. Then find out why NASA crashed its own spacecraft into Jupiter on purpose.
 
 Sources:
 - NASA Science, Jupiter Facts: https://science.nasa.gov/jupiter/jupiter-facts/
 - NASA NSSDC, Jupiter Fact Sheet: https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html
 - NASA History, 30 Years Ago: Galileo Off to Orbit Jupiter: https://www.nasa.gov/history/30-years-ago-galileo-off-to-orbit-jupiter/
+- NASA Science, Galileo: https://science.nasa.gov/mission/galileo/
+- NASA Science, Juno: https://science.nasa.gov/mission/juno/
+- NASA Science, Comet Shoemaker-Levy 9: https://science.nasa.gov/solar-system/comets/p-shoemaker-levy-9/
+- NASA Science, The Lasting Impacts of Comet Shoemaker-Levy 9: https://science.nasa.gov/science-research/planetary-science/the-lasting-impacts-comet-shoemaker-levy-9/
+- NASA, 'Shallow Lightning' and 'Mushballs' Reveal Ammonia to NASA's Juno Scientists: https://www.nasa.gov/missions/juno/shallow-lightning-and-mushballs-reveal-ammonia-to-nasas-juno-scientists/
+- NASA Science, NASA's Juno Probes the Depths of Jupiter's Great Red Spot: https://science.nasa.gov/missions/juno/nasas-juno-probes-the-depths-of-jupiters-great-red-spot/
+- NASA Science, Jupiter's Great Red Spot is Shrinking: https://science.nasa.gov/science-research/planetary-science/15may_grs/
+- Wilson & Militzer, Physical Review Letters (2010), Sequestration of Noble Gases in Giant Planet Interiors: https://doi.org/10.1103/PhysRevLett.104.121101
+- Liu et al., Nature (2019), The formation of Jupiter's diluted core by a giant impact: https://doi.org/10.1038/s41586-019-1470-2
+- Meier et al., The Astrophysical Journal (2025), On the Origin of Jupiter's Fuzzy Core: https://doi.org/10.3847/1538-4357/addbe6
 
 Images:
 - Original animation by Cosmic What If
 - Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
-- NASA/JPL/USGS (https://images.nasa.gov/details/PIA00292)
-- Image data: NASA/JPL-Caltech/SwRI/MSSS Image processing by Tanya Oleksuik CC BY NC SA 3.0 (https://images.nasa.gov/details/PIA26077)
-- NASA (ARC) (https://images.nasa.gov/details/ARC-1989-AC89-0146-2)
-- NASA/JPL-Caltech/SwRI/ASI/INAF/JIRAM (https://images.nasa.gov/details/PIA24967)
-- NASA/JPL-Caltech/SwRI/MSSS/Christopher Go (https://images.nasa.gov/details/PIA21770)
-- NASA/JPL-Caltech/SSI/SWRI/MSSS/ASI/INAF/JIRAM/Björn Jónsson CC BY 3.0 (https://images.nasa.gov/details/PIA26076)
-- NASA/JPL/DLR (https://images.nasa.gov/details/PIA01299)
-- NASA/JPL (https://images.nasa.gov/details/PIA00022)
-- NASA (JSC) (https://images.nasa.gov/details/S89-44175)
-- NASA, ESA, and J. Nichols (University of Leicester) (https://images.nasa.gov/details/GSFC_20171208_Archive_e000276)
-- NASA, ESA, and the Hubble Heritage Team (STScI/AURA) (https://images.nasa.gov/details/GSFC_20171208_Archive_e000795)
-- NASA/JPL/University of Arizona (https://images.nasa.gov/details/PIA03451)
 ```
 
 ## Tags
-jupiter, what if, gas giant, galileo probe, juno, great red spot, space, astronomy, planets, metallic hydrogen, science
+jupiter, what if, stand on jupiter, gas giant, galileo probe, juno, great red spot, shoemaker-levy 9, helium rain, mushballs, metallic hydrogen, jupiter core, space, astronomy, planets, science
 
 ## Image credits
 - Original animation by Cosmic What If
 - Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
-- NASA/JPL/USGS (https://images.nasa.gov/details/PIA00292)
-- Image data: NASA/JPL-Caltech/SwRI/MSSS Image processing by Tanya Oleksuik CC BY NC SA 3.0 (https://images.nasa.gov/details/PIA26077)
-- NASA (ARC) (https://images.nasa.gov/details/ARC-1989-AC89-0146-2)
-- NASA/JPL-Caltech/SwRI/ASI/INAF/JIRAM (https://images.nasa.gov/details/PIA24967)
-- NASA/JPL-Caltech/SwRI/MSSS/Christopher Go (https://images.nasa.gov/details/PIA21770)
-- NASA/JPL-Caltech/SSI/SWRI/MSSS/ASI/INAF/JIRAM/Björn Jónsson CC BY 3.0 (https://images.nasa.gov/details/PIA26076)
-- NASA/JPL/DLR (https://images.nasa.gov/details/PIA01299)
-- NASA/JPL (https://images.nasa.gov/details/PIA00022)
-- NASA (JSC) (https://images.nasa.gov/details/S89-44175)
-- NASA, ESA, and J. Nichols (University of Leicester) (https://images.nasa.gov/details/GSFC_20171208_Archive_e000276)
-- NASA, ESA, and the Hubble Heritage Team (STScI/AURA) (https://images.nasa.gov/details/GSFC_20171208_Archive_e000795)
-- NASA/JPL/University of Arizona (https://images.nasa.gov/details/PIA03451)
 
 ## Sources
 - NASA Science - Jupiter Facts: https://science.nasa.gov/jupiter/jupiter-facts/
 - NASA NSSDC - Jupiter Fact Sheet: https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html
 - NASA History - 30 Years Ago: Galileo Off to Orbit Jupiter: https://www.nasa.gov/history/30-years-ago-galileo-off-to-orbit-jupiter/
+- NASA Science - Galileo: https://science.nasa.gov/mission/galileo/
+- NASA Science - Juno: https://science.nasa.gov/mission/juno/
+- NASA Science - Comet Shoemaker-Levy 9: https://science.nasa.gov/solar-system/comets/p-shoemaker-levy-9/
+- NASA Science - The Lasting Impacts of Comet Shoemaker-Levy 9: https://science.nasa.gov/science-research/planetary-science/the-lasting-impacts-comet-shoemaker-levy-9/
+- NASA - 'Shallow Lightning' and 'Mushballs' Reveal Ammonia to NASA's Juno Scientists: https://www.nasa.gov/missions/juno/shallow-lightning-and-mushballs-reveal-ammonia-to-nasas-juno-scientists/
+- NASA Science - NASA's Juno Probes the Depths of Jupiter's Great Red Spot: https://science.nasa.gov/missions/juno/nasas-juno-probes-the-depths-of-jupiters-great-red-spot/
+- NASA Science - Jupiter's Great Red Spot is Shrinking: https://science.nasa.gov/science-research/planetary-science/15may_grs/
+- Wilson & Militzer, Physical Review Letters (2010) - Sequestration of Noble Gases in Giant Planet Interiors: https://doi.org/10.1103/PhysRevLett.104.121101
+- Liu et al., Nature (2019) - The formation of Jupiter's diluted core by a giant impact: https://doi.org/10.1038/s41586-019-1470-2
+- Meier et al., The Astrophysical Journal (2025) - On the Origin of Jupiter's Fuzzy Core: https://doi.org/10.3847/1538-4357/addbe6

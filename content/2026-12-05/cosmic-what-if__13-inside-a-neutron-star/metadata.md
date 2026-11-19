@@ -22,40 +22,16 @@ Sources:
 - ESO, Astronomers witness first light from gravitational wave source (eso1733): https://www.eso.org/public/news/eso1733/
 
 Images:
-- NASA/JPL-Caltech (https://images.nasa.gov/details/PIA25781)
-- NASA (MSFC) (https://images.nasa.gov/details/9905980)
-- NASA (JSC) (https://images.nasa.gov/details/iss056e021682)
-- NASA (GSFC) (https://images.nasa.gov/details/GSFC_20171208_Archive_e001016)
-- NASA/Sonoma State University, Aurore Simonnet / Public domain (https://commons.wikimedia.org/wiki/File:GamRayEclipseG22.jpg)
-- ESA/Hubble & NASA, R. Cohen / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:Terzan_1,_Take_2_(potw2241a).jpg)
-- U Harvard / Public domain (https://commons.wikimedia.org/wiki/File:SGR_1806-20_108530main_cloudballPrint.jpg)
-- Steve Jurvetson from Los Altos, USA / CC BY 2.0 (https://commons.wikimedia.org/wiki/File:NASA_Pleiades_Supercomputer_(9616175099).jpg)
-- NASA/Goddard/ Keith Gendreau (https://images.nasa.gov/details/GSFC_20171208_Archive_e000040)
-- NASA, ESA, and D. Elmegreen (Vassar College) (https://images.nasa.gov/details/GSFC_20171208_Archive_e000278)
-- NASA/JPL-Caltech/University of Wisconsin (https://images.nasa.gov/details/PIA17996)
-- Image: NASA, ESA, CSA, STScI, Andrew Levan (IMAPP, Warw) / Public domain (https://commons.wikimedia.org/wiki/File:Kilonova_and_Host_Galaxy_(2023-134).png)
-- ARTWORK: NASA, Joseph Olmsted (STScI) / Public domain (https://commons.wikimedia.org/wiki/File:Illustration_of_a_Kilonova_(2022-049).png)
-- geckzilla / CC BY 2.0 (https://commons.wikimedia.org/wiki/File:Vela_Pulsar_(14039782592).png)
+- Original animation by Cosmic What If
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 ```
 
 ## Tags
 neutron star, pulsar, magnetar, nuclear pasta, dead star, astrophysics, NICER, kilonova, what if, space, astronomy, physics, cosmic what if
 
 ## Image credits
-- NASA/JPL-Caltech (https://images.nasa.gov/details/PIA25781)
-- NASA (MSFC) (https://images.nasa.gov/details/9905980)
-- NASA (JSC) (https://images.nasa.gov/details/iss056e021682)
-- NASA (GSFC) (https://images.nasa.gov/details/GSFC_20171208_Archive_e001016)
-- NASA/Sonoma State University, Aurore Simonnet / Public domain (https://commons.wikimedia.org/wiki/File:GamRayEclipseG22.jpg)
-- ESA/Hubble & NASA, R. Cohen / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:Terzan_1,_Take_2_(potw2241a).jpg)
-- U Harvard / Public domain (https://commons.wikimedia.org/wiki/File:SGR_1806-20_108530main_cloudballPrint.jpg)
-- Steve Jurvetson from Los Altos, USA / CC BY 2.0 (https://commons.wikimedia.org/wiki/File:NASA_Pleiades_Supercomputer_(9616175099).jpg)
-- NASA/Goddard/ Keith Gendreau (https://images.nasa.gov/details/GSFC_20171208_Archive_e000040)
-- NASA, ESA, and D. Elmegreen (Vassar College) (https://images.nasa.gov/details/GSFC_20171208_Archive_e000278)
-- NASA/JPL-Caltech/University of Wisconsin (https://images.nasa.gov/details/PIA17996)
-- Image: NASA, ESA, CSA, STScI, Andrew Levan (IMAPP, Warw) / Public domain (https://commons.wikimedia.org/wiki/File:Kilonova_and_Host_Galaxy_(2023-134).png)
-- ARTWORK: NASA, Joseph Olmsted (STScI) / Public domain (https://commons.wikimedia.org/wiki/File:Illustration_of_a_Kilonova_(2022-049).png)
-- geckzilla / CC BY 2.0 (https://commons.wikimedia.org/wiki/File:Vela_Pulsar_(14039782592).png)
+- Original animation by Cosmic What If
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 
 ## Sources
 - NASA Science - What's Inside a Dead Star?: https://science.nasa.gov/universe/stories/quick-reads/whats-inside-a-dead-star/

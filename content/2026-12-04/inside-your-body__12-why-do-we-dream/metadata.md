@@ -24,22 +24,16 @@ Sources:
 This video is for educational purposes only and is not medical advice.
 
 Images:
-- Illustration with Fluent Emoji by Microsoft (https://github.com/microsoft/fluentui-emoji)
-- رشيدة رقي / CC0 (https://commons.wikimedia.org/wiki/File:Sleep_spindle_and_K-complex_in_%D9%8FEEG_recording_durin_stage_2_NREM_sleep.jpg)
-- House, Earl Lawrence. Pansky, Ben. / Public domain (https://commons.wikimedia.org/wiki/File:Lawrence_1960_22.4.png)
-- AnonymousUnknown author / Public domain (https://commons.wikimedia.org/wiki/File:FreudFliess1890.jpg)
-- explorebiology / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:XBio_illustration_%E2%80%93_Hippocampus.png)
+- Original animation by Inside Your Body
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 ```
 
 ## Tags
 dreams, why do we dream, REM sleep, sleep science, dreaming, brain, memory consolidation, sleep cycles, neuroscience, nightmares, human body, science explained, inside your body
 
 ## Image credits
-- Illustration with Fluent Emoji by Microsoft (https://github.com/microsoft/fluentui-emoji)
-- رشيدة رقي / CC0 (https://commons.wikimedia.org/wiki/File:Sleep_spindle_and_K-complex_in_%D9%8FEEG_recording_durin_stage_2_NREM_sleep.jpg)
-- House, Earl Lawrence. Pansky, Ben. / Public domain (https://commons.wikimedia.org/wiki/File:Lawrence_1960_22.4.png)
-- AnonymousUnknown author / Public domain (https://commons.wikimedia.org/wiki/File:FreudFliess1890.jpg)
-- explorebiology / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:XBio_illustration_%E2%80%93_Hippocampus.png)
+- Original animation by Inside Your Body
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 
 ## Sources
 - NHLBI - Sleep Phases and Stages: https://www.nhlbi.nih.gov/health/sleep/stages-of-sleep

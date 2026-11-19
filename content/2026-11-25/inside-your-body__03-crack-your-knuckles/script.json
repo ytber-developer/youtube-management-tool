@@ -2,7 +2,7 @@
   "channel": "inside-your-body",
   "number": 3,
   "slug": "crack-your-knuckles",
-  "target_minutes": 2.33,
+  "target_minutes": 6.4,
   "style": "anim",
   "thumbnail_anim": {
     "thumbAction": "shocked",
@@ -21,12 +21,14 @@
   },
   "title": "What Actually Happens When You Crack Your Knuckles?",
   "thumbnail_text": "WHAT'S THAT POP?",
-  "description": "For nearly seventy years, scientists argued about what makes that pop in your knuckles. An MRI scanner finally caught it on video, and one doctor spent sixty years testing the arthritis myth on his own hands.\n\nSources:\n- PLOS ONE (2015), Real-Time Visualization of Joint Cavitation: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0119470\n- Science News Explores, Mystery solved: Why knuckles crack: https://www.snexplores.org/article/mystery-solved-why-knuckles-crack\n- Journal of the American Board of Family Medicine (2011), Knuckle Cracking and Hand Osteoarthritis: https://www.jabfm.org/content/24/2/169\n- Improbable Research, Interview with Dr. Knuckle-cracker: https://improbable.com/2009/11/05/interview-with-dr-knuckle-cracker/\n- Popular Science, Is cracking your knuckles really bad for them?: https://www.popsci.com/health/is-cracking-knuckles-bad-arthritis/\n\nThis video is for educational purposes only and is not medical advice.",
+  "description": "For nearly seventy years, scientists argued about what makes that pop in your knuckles. We follow the whole story: the slippery fluid inside your joints, the X-ray studies of 1947 and 1971, the MRI scan that finally filmed a knuckle cracking, and the 2018 math model that suggests both sides were partly right. Then we test the arthritis myth, from one doctor's sixty-year experiment on his own hands to larger studies, and cover when a cracking joint is worth a visit to the doctor.\n\nSources:\n- PLOS ONE (2015), Real-Time Visualization of Joint Cavitation: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0119470\n- Science News Explores, Mystery solved: Why knuckles crack: https://www.snexplores.org/article/mystery-solved-why-knuckles-crack\n- Scientific Reports (2018), A Mathematical Model for the Sounds Produced by Knuckle Cracking: https://www.nature.com/articles/s41598-018-22664-4\n- Journal of the American Board of Family Medicine (2011), Knuckle Cracking and Hand Osteoarthritis: https://www.jabfm.org/content/24/2/169\n- Improbable Research, Interview with Dr. Knuckle-cracker: https://improbable.com/2009/11/05/interview-with-dr-knuckle-cracker/\n- Popular Science, Is cracking your knuckles really bad for them?: https://www.popsci.com/health/is-cracking-knuckles-bad-arthritis/\n- Cleveland Clinic, Is Cracking Your Knuckles Bad for You?: https://health.clevelandclinic.org/is-cracking-your-knuckles-bad-for-you\n- Cleveland Clinic, Synovial Fluid: https://my.clevelandclinic.org/health/body/synovial-fluid\n- NHS, Joint pain: https://www.nhs.uk/conditions/joint-pain/\n\nThis video is for educational purposes only and is not medical advice.",
   "tags": [
     "cracking knuckles",
     "knuckle cracking",
     "joint cracking",
+    "why do knuckles crack",
     "cavitation",
+    "tribonucleation",
     "synovial fluid",
     "arthritis myth",
     "MRI",
@@ -45,6 +47,10 @@
       "url": "https://www.snexplores.org/article/mystery-solved-why-knuckles-crack"
     },
     {
+      "title": "Scientific Reports (2018) - A Mathematical Model for the Sounds Produced by Knuckle Cracking",
+      "url": "https://www.nature.com/articles/s41598-018-22664-4"
+    },
+    {
       "title": "Journal of the American Board of Family Medicine (2011) - Knuckle Cracking and Hand Osteoarthritis",
       "url": "https://www.jabfm.org/content/24/2/169"
     },
@@ -55,18 +61,23 @@
     {
       "title": "Popular Science - Is cracking your knuckles really bad for them?",
       "url": "https://www.popsci.com/health/is-cracking-knuckles-bad-arthritis/"
+    },
+    {
+      "title": "Cleveland Clinic - Is Cracking Your Knuckles Bad for You?",
+      "url": "https://health.clevelandclinic.org/is-cracking-your-knuckles-bad-for-you"
+    },
+    {
+      "title": "Cleveland Clinic - Synovial Fluid",
+      "url": "https://my.clevelandclinic.org/health/body/synovial-fluid"
+    },
+    {
+      "title": "NHS - Joint pain",
+      "url": "https://www.nhs.uk/conditions/joint-pain/"
     }
   ],
   "scenes": [
     {
       "narration": "Pop. That little sound from your knuckles started a scientific argument that lasted almost seventy years. Here's what's really going on inside.",
-      "headline": "WHAT MAKES THAT <em>POP?</em>",
-      "sub": "A seventy-year scientific argument",
-      "visual": {
-        "type": "stock",
-        "query": "close-up of hands cracking knuckles",
-        "note": "two hands interlocked, pushing outward to crack knuckles"
-      },
       "anim": {
         "action": "shocked",
         "props": [
@@ -83,13 +94,42 @@
       }
     },
     {
-      "narration": "Each knuckle is a joint where two bones meet inside a sealed capsule. That capsule is filled with synovial fluid, a slippery liquid that cushions the joint and helps the bones glide smoothly past each other.",
-      "headline": "A JOINT FULL OF <em>FLUID</em>",
-      "sub": "Synovial fluid keeps bones gliding",
-      "visual": {
-        "type": "diagram",
-        "spec": "cross-section of a finger knuckle joint: two bone ends, cartilage, joint capsule, synovial fluid labeled"
-      },
+      "narration": "If you crack your knuckles, you're in big company. Depending on the group studied, somewhere between a quarter and just over half of people do it. Some do it to relieve tension, others simply out of habit.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "busts-in-silhouette",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "hand-with-fingers-splayed",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "And you've probably heard the warning: keep doing that, and you'll get arthritis. Today we'll find out what that pop actually is, why it can't happen twice in a row, and whether the warning holds up.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "warning",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Start with the joint itself. Each knuckle is a place where two bones meet inside a sealed capsule. That capsule is filled with synovial fluid, a slippery liquid that helps the bones glide smoothly past each other.",
       "anim": {
         "action": "present",
         "props": [
@@ -104,18 +144,30 @@
             "size": "s",
             "anim": "bob"
           }
+        ],
+        "text": "SYNOVIAL FLUID"
+      }
+    },
+    {
+      "narration": "Your body makes this fluid from the plasma in your blood. It's rich in hyaluronic acid, which makes it slick, and it's thick and slippery, a bit like egg whites. It also carries dissolved gas.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "egg",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "drop-of-blood",
+            "at": "top-left",
+            "size": "s"
+          }
         ]
       }
     },
     {
-      "narration": "When you bend or pull your finger, the bones separate slightly and the pressure inside that fluid drops. Then something happens fast, in less than a third of a second. For decades, scientists couldn't agree on what it was.",
-      "headline": "OVER IN A <em>SPLIT SECOND</em>",
-      "sub": "Pressure drops inside the joint",
-      "visual": {
-        "type": "stock",
-        "query": "hand pulling finger close up",
-        "note": "one hand gently pulling a finger of the other hand"
-      },
+      "narration": "When you bend or pull your finger, the bones start to separate and the pressure inside that fluid drops. At first the two joint surfaces cling together. Then, at a critical point, they suddenly snap apart.",
       "anim": {
         "action": "stretch",
         "props": [
@@ -126,23 +178,51 @@
             "anim": "shake"
           },
           {
-            "icon": "stopwatch",
+            "icon": "high-voltage",
             "at": "top-left",
-            "size": "s"
+            "size": "s",
+            "anim": "pulse"
           }
         ],
         "face": "hold"
       }
     },
     {
-      "narration": "In 1947, researchers using X-rays said the crack came from a new space suddenly forming in the joint. Then in 1971, another team argued the opposite: the sound was a bubble collapsing. That second idea stuck around for decades.",
-      "headline": "FORMING OR <em>BURSTING?</em>",
-      "sub": "1947 versus 1971",
-      "visual": {
-        "type": "science",
-        "query": "hand x-ray radiograph",
-        "note": "clean X-ray of a human hand showing finger joints"
-      },
+      "narration": "Something happens in that instant, and the result can be loud enough to hear across a room. But what exactly makes the sound? For most of the last century, scientists couldn't agree.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "speaker-high-volume",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "Doctors first noticed a strange clear space inside stretched joints on X-rays back in 1911. Some thought it only showed up in unhealthy joints. Later, it was found in perfectly normal ones too.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "x-ray",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "In 1947, two researchers took a series of X-rays while pulling on finger joints. They linked the crack to that clear space suddenly forming, as gas came out of the fluid.",
       "anim": {
         "action": "think",
         "props": [
@@ -154,21 +234,73 @@
             "icon": "bubbles",
             "at": "right",
             "size": "m",
-            "anim": "bob"
+            "anim": "grow"
           }
         ],
-        "text": "1947 VS 1971"
+        "text": "1947: FORMING"
       }
     },
     {
-      "narration": "In 2015, a team at the University of Alberta finally watched it happen. They placed a volunteer's fingers inside an MRI scanner and slowly pulled each one with a cable until it cracked, filming the joint in real time.",
-      "headline": "CAUGHT ON <em>MRI VIDEO</em>",
-      "sub": "University of Alberta, 2015",
-      "visual": {
-        "type": "stock",
-        "query": "MRI scanner hospital room",
-        "note": "modern MRI machine in a bright room"
-      },
+      "narration": "That explanation stood for twenty four years. Then, in 1971, another team argued the opposite: the sound came from a bubble collapsing, like a tiny implosion. Most people came to believe this second idea.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "bubbles",
+            "at": "right",
+            "size": "l",
+            "anim": "shrink"
+          },
+          {
+            "icon": "collision",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "1971: BURSTING"
+      }
+    },
+    {
+      "narration": "So which was it, a bubble forming or a bubble bursting? Ordinary X-rays only show still snapshots. To settle it, someone had to film the inside of a living finger at the exact moment it cracked.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "video-camera",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "red-question-mark",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "In 2015, a team at the University of Alberta tried. They needed a volunteer who could crack on demand, and one of their own, Jerome Fryer, could do it in all ten fingers. His colleague called him the Wayne Gretzky of knuckle cracking.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "trophy",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "hand-with-fingers-splayed",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "ALL TEN FINGERS"
+      }
+    },
+    {
+      "narration": "Fryer lay on his stomach with his hand inside an MRI scanner. Each finger went into a tube attached to a cable, which slowly pulled until the knuckle cracked, while the scanner filmed the joint about three times every second.",
       "anim": {
         "action": "sit",
         "props": [
@@ -188,13 +320,7 @@
       }
     },
     {
-      "narration": "All ten knuckles cracked, and every time, the crack came with a gas-filled cavity suddenly forming in the fluid. The cavity didn't collapse. The researchers compared the sound to a suction cup popping off a window.",
-      "headline": "A BUBBLE <em>FORMING</em>, NOT BURSTING",
-      "sub": "Like a suction cup letting go",
-      "visual": {
-        "type": "diagram",
-        "spec": "before and after knuckle joint: bones close together, then slightly apart with a gas cavity appearing in the synovial fluid, label: cavity forms"
-      },
+      "narration": "Every crack came with a gas-filled cavity suddenly opening in the fluid. And the cavity didn't collapse. It stayed visible afterward. The lead researcher compared the sound to a suction cup being pulled off a glass window.",
       "anim": {
         "action": "point",
         "props": [
@@ -210,16 +336,29 @@
       }
     },
     {
-      "narration": "That also explains why you can't crack the same knuckle twice in a row. After a crack, there's a refractory period of roughly twenty minutes before that joint is ready to pop again.",
-      "headline": "THE <em>TWENTY-MINUTE</em> WAIT",
-      "sub": "Why it won't pop twice",
-      "visual": {
-        "type": "stock",
-        "query": "wall clock close up",
-        "note": "simple clock face showing time passing"
-      },
+      "narration": "The team called the process tribonucleation: two wet surfaces resist separating until they suddenly let go, and gas rushes out of the fluid to fill the gap. They called it maybe the largest example of it ever observed.",
       "anim": {
-        "action": "talk",
+        "action": "present",
+        "props": [
+          {
+            "icon": "test-tube",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "bubbles",
+            "at": "top-left",
+            "size": "s",
+            "anim": "grow"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "That also explains why you can't crack the same knuckle twice in a row. After a crack, the joint needs time to reset. The bubble can last up to about twenty minutes, and until it's gone, that knuckle won't pop again.",
+      "anim": {
+        "action": "yawn",
         "props": [
           {
             "icon": "alarm-clock",
@@ -232,14 +371,45 @@
       }
     },
     {
-      "narration": "Now the big question. Will it give you arthritis? One doctor, Donald Unger, decided to test it on himself. For more than sixty years, he cracked the knuckles of his left hand every day, but never his right.",
-      "headline": "A <em>SIXTY-YEAR</em> EXPERIMENT",
-      "sub": "Left hand cracked, right hand never",
-      "visual": {
-        "type": "stock",
-        "query": "elderly man hands on table",
-        "note": "an older person's hands resting on a table"
-      },
+      "narration": "Case closed? Not quite. In 2018, two researchers built a mathematical model of the knuckle and found that the sound matches a bubble collapsing. But here's the key detail: only a partial collapse is needed.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "abacus",
+            "at": "bubble"
+          },
+          {
+            "icon": "bubbles",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "That could fit both sides of the old argument. A cavity forms, part of it collapses with a pop, and the rest lingers, just like the MRI showed. Even today, researchers still debate exactly when the sound is made.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "bubbles",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "red-question-mark",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "Now the big question. Will it give you arthritis? One doctor, Donald Unger, decided to test it on himself. For more than sixty years, he cracked the knuckles of his left hand, but never his right.",
       "anim": {
         "action": "exercise",
         "props": [
@@ -257,14 +427,25 @@
       }
     },
     {
-      "narration": "He reported no arthritis in either hand, and in 2009 he won the satirical Ig Nobel Prize in medicine. Of course, one person's hands aren't proof. So larger studies took a look.",
-      "headline": "NO ARTHRITIS IN <em>EITHER HAND</em>",
-      "sub": "Ig Nobel Prize, 2009",
-      "visual": {
-        "type": "stock",
-        "query": "trophy award on table",
-        "note": "simple award trophy, lighthearted tone"
-      },
+      "narration": "His right hand was his comparison, untouched for decades. In the end, he found no arthritis in either hand, and he published his results in the journal Arthritis and Rheumatism in 1998.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "raised-hand",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "newspaper",
+            "at": "top-left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "In 2009, he won the satirical Ig Nobel Prize in medicine. At the ceremony, he joked that he wanted his tombstone to read: here lies Don Unger, who finally has quit cracking his knuckles.",
       "anim": {
         "action": "cheer",
         "props": [
@@ -279,24 +460,17 @@
       }
     },
     {
-      "narration": "A 2011 study surveyed over two hundred adults, and hand arthritis was about as common in knuckle crackers as in people who didn't crack. An earlier study of three hundred adults found the same pattern.",
-      "headline": "BIGGER STUDIES, <em>SAME ANSWER</em>",
-      "sub": "No link to hand arthritis found",
-      "visual": {
-        "type": "diagram",
-        "spec": "simple bar chart: hand arthritis prevalence in knuckle crackers about 18 percent vs non-crackers about 22 percent, labeled 2011 study"
-      },
+      "narration": "Of course, one man's hands aren't proof, so larger studies took a look. A 1975 study of twenty eight older patients, all of them knuckle crackers, found no link to arthritis.",
       "anim": {
-        "action": "present",
+        "action": "walk",
         "props": [
           {
-            "icon": "bar-chart",
+            "icon": "busts-in-silhouette",
             "at": "right",
-            "size": "l",
-            "anim": "grow"
+            "size": "l"
           },
           {
-            "icon": "busts-in-silhouette",
+            "icon": "memo",
             "at": "top-left",
             "size": "s"
           }
@@ -305,27 +479,15 @@
       }
     },
     {
-      "narration": "So that pop isn't your bones grinding. It's physics in a tiny, fluid-filled space. Researchers still want bigger imaging studies, but so far, the old warning about arthritis isn't backed by the evidence.",
-      "headline": "IT'S <em>PHYSICS</em>, NOT GRINDING",
-      "sub": "The arthritis myth lacks evidence",
-      "visual": {
-        "type": "stock",
-        "query": "person stretching fingers at laptop",
-        "note": "person stretching their fingers at a desk"
-      },
+      "narration": "In 2011, doctors surveyed more than two hundred adults aged fifty to eighty nine. Hand arthritis showed up about as often in knuckle crackers as in people who didn't crack, roughly eighteen versus twenty two percent.",
       "anim": {
-        "action": "talk",
+        "action": "present",
         "props": [
           {
-            "icon": "bone",
+            "icon": "bar-chart",
             "at": "right",
-            "size": "l"
-          },
-          {
-            "icon": "check-mark-button",
-            "at": "top-left",
-            "size": "s",
-            "anim": "pulse"
+            "size": "l",
+            "anim": "grow"
           }
         ],
         "text": "NO ARTHRITIS LINK",
@@ -333,9 +495,111 @@
       }
     },
     {
+      "narration": "Even people who had cracked their knuckles for decades, however often, showed no extra risk. A 2018 review of the research came to the same conclusion. The old arthritis warning just isn't backed by the evidence.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "check-mark-button",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "But here's a twist. One older study did find something: knuckle crackers seemed to have more hand swelling and a weaker grip. Then, in 2017, newer studies found no damage to grip strength, swelling, or range of motion.",
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "flexed-biceps",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "text": "GRIP STRENGTH"
+      }
+    },
+    {
+      "narration": "There is one real caution. Push too hard, or bend a finger the wrong way, and you could injure a ligament or even dislocate a knuckle. So if you crack, keep it gentle and never force it.",
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "warning",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "bone",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "And if a joint hurts when it cracks, swells up, or the pain doesn't get better, that's a good reason to see a doctor. A painless pop on its own is usually nothing to worry about.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "stethoscope",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "text": "PAIN? SEE A DOCTOR",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "And here's what scientists still want to know: why some people can't crack their knuckles at all. The Alberta team hoped to repeat their scans with more volunteers, including people who never manage a single pop.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "microscope",
+            "at": "bubble"
+          },
+          {
+            "icon": "hand-with-fingers-splayed",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "So that pop isn't your bones grinding. It isn't damage either. It's physics: two slippery surfaces letting go, and a pocket of gas bursting into being inside a tiny, fluid-filled space in your hand.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "collision",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
       "narration": "Follow Inside Your Body for more of the science of you.",
-      "headline": "",
-      "sub": "",
       "visual": {
         "type": "outro"
       },

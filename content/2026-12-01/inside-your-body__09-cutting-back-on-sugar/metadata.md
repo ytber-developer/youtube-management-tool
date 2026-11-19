@@ -23,22 +23,16 @@ Sources:
 This video is for educational purposes only and is not medical advice.
 
 Images:
-- Illustration with Fluent Emoji by Microsoft (https://github.com/microsoft/fluentui-emoji)
-- Alina Kakshapati / CC0 (https://wordpress.org/photos/photo/18068db8e4/)
-- Unknown Illustrator / Public domain (https://commons.wikimedia.org/wiki/File:Pancreas_(1).jpg)
-- NIH NIAID / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:Liver_Lobule_(NIH_BioArt_565).png)
-- OpenStax / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:1402_The_Tongue.jpg)
+- Original animation by Inside Your Body
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 ```
 
 ## Tags
 added sugar, sugar, what happens when you cut sugar, insulin, blood sugar, fructose, liver, sweet taste, dietary guidelines, nutrition science, human body, science explained, inside your body
 
 ## Image credits
-- Illustration with Fluent Emoji by Microsoft (https://github.com/microsoft/fluentui-emoji)
-- Alina Kakshapati / CC0 (https://wordpress.org/photos/photo/18068db8e4/)
-- Unknown Illustrator / Public domain (https://commons.wikimedia.org/wiki/File:Pancreas_(1).jpg)
-- NIH NIAID / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:Liver_Lobule_(NIH_BioArt_565).png)
-- OpenStax / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:1402_The_Tongue.jpg)
+- Original animation by Inside Your Body
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 
 ## Sources
 - CDC - Get the Facts: Added Sugars: https://www.cdc.gov/nutrition/php/data-research/added-sugars.html

@@ -2,7 +2,7 @@
   "channel": "cosmic-what-if",
   "number": 3,
   "slug": "hole-through-the-earth",
-  "target_minutes": 2.33,
+  "target_minutes": 6.4,
   "style": "anim",
   "thumbnail_anim": {
     "thumbAction": "fall-toward",
@@ -21,15 +21,19 @@
   },
   "title": "What If You Jumped Into a Hole Through the Earth?",
   "thumbnail_text": "JUMP THROUGH EARTH?",
-  "description": "Dig a tunnel straight through the planet, jump in, and how long until you pop out the other side? Physics has a surprisingly precise answer, and gravity does something unexpected on the way down.\n\nSources:\n- NASA Science, Earth Facts: https://science.nasa.gov/earth/facts/\n- Alexander Klotz, The Gravity Tunnel in a Non-Uniform Earth, American Journal of Physics, 2015: https://arxiv.org/abs/1308.1342\n- WorldAtlas, The Kola Superdeep Borehole: https://www.worldatlas.com/articles/the-kola-superdeep-borehole.html",
+  "description": "Dig a tunnel straight through the planet, jump in, and how long until you pop out the other side? We start at the deepest hole humans have ever drilled, travel through the crust, the caramel-like mantle and an iron core nearly as hot as the Sun, and find out why gravity gets stronger on the way down. Then the physics gets strange: the fall takes about thirty-eight minutes, matches half a satellite orbit, and works for almost any straight tunnel. Plus the inner core's mysterious spin, and where you would really come out (hint: not China).\n\nSources:\n- NASA Science, Earth Facts: https://science.nasa.gov/earth/facts/\n- Alexander Klotz, The Gravity Tunnel in a Non-Uniform Earth, American Journal of Physics, 2015: https://arxiv.org/abs/1308.1342\n- WorldAtlas, The Kola Superdeep Borehole: https://www.worldatlas.com/articles/the-kola-superdeep-borehole.html\n- Wikipedia, Kola Superdeep Borehole: https://en.wikipedia.org/wiki/Kola_Superdeep_Borehole\n- NASA Science, Sun Facts: https://science.nasa.gov/sun/facts/\n- Wikipedia, Inge Lehmann: https://en.wikipedia.org/wiki/Inge_Lehmann\n- Wikipedia, Gravity train: https://en.wikipedia.org/wiki/Gravity_train\n- Wikipedia, Terminal velocity: https://en.wikipedia.org/wiki/Terminal_velocity\n- Wang et al., Inner core backtracking by seismic waveform change reversals, Nature, 2024: https://www.nature.com/articles/s41586-024-07536-4\n- Wikipedia, Antipodes on Earth: https://en.wikipedia.org/wiki/Antipodes_on_Earth",
   "tags": [
     "hole through the earth",
     "gravity tunnel",
+    "gravity train",
     "what if",
     "earth core",
+    "inner core",
     "physics",
     "gravity",
     "kola superdeep borehole",
+    "inge lehmann",
+    "antipodes",
     "science",
     "earth science"
   ],
@@ -45,18 +49,39 @@
     {
       "title": "WorldAtlas - The Kola Superdeep Borehole",
       "url": "https://www.worldatlas.com/articles/the-kola-superdeep-borehole.html"
+    },
+    {
+      "title": "Wikipedia - Kola Superdeep Borehole",
+      "url": "https://en.wikipedia.org/wiki/Kola_Superdeep_Borehole"
+    },
+    {
+      "title": "NASA Science - Sun Facts",
+      "url": "https://science.nasa.gov/sun/facts/"
+    },
+    {
+      "title": "Wikipedia - Inge Lehmann",
+      "url": "https://en.wikipedia.org/wiki/Inge_Lehmann"
+    },
+    {
+      "title": "Wikipedia - Gravity train",
+      "url": "https://en.wikipedia.org/wiki/Gravity_train"
+    },
+    {
+      "title": "Wikipedia - Terminal velocity",
+      "url": "https://en.wikipedia.org/wiki/Terminal_velocity"
+    },
+    {
+      "title": "Wang et al., Inner core backtracking by seismic waveform change reversals (Nature, 2024)",
+      "url": "https://www.nature.com/articles/s41586-024-07536-4"
+    },
+    {
+      "title": "Wikipedia - Antipodes on Earth",
+      "url": "https://en.wikipedia.org/wiki/Antipodes_on_Earth"
     }
   ],
   "scenes": [
     {
       "narration": "Imagine digging a hole straight through the center of the Earth, then jumping in. How long until you pop out the other side?",
-      "headline": "JUMP THROUGH <em>THE EARTH?</em>",
-      "sub": "",
-      "visual": {
-        "type": "nasa",
-        "query": "Blue Marble Earth full disk",
-        "note": "whole Earth seen from space"
-      },
       "anim": {
         "action": "point",
         "props": [
@@ -72,13 +97,27 @@
       }
     },
     {
-      "narration": "First, the digging. Earth is almost eight thousand miles across. The deepest hole humans have ever drilled, the Kola Superdeep Borehole in Russia, reached about seven and a half miles. It took nearly two decades, and it never made it through the crust.",
-      "headline": "OUR DEEPEST HOLE: <em>7.5 MILES</em>",
-      "sub": "Earth is ~7,900 miles wide",
-      "visual": {
-        "type": "diagram",
-        "spec": "Earth cross-section with a tiny tick at the surface showing the 7.5-mile Kola borehole versus the 7,900-mile diameter"
-      },
+      "narration": "It sounds like a cartoon, but it's a real physics puzzle. The answer takes you past heat as fierce as the Sun, through gravity that grows stronger, and into a strange secret shared with orbiting satellites.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "satellite",
+            "at": "top-left",
+            "size": "s",
+            "anim": "orbit"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "First, you need a hole, and Earth is almost eight thousand miles across. Humans have tried going deep. In 1970, Soviet scientists began drilling the Kola Superdeep Borehole, in the far northwest of Russia.",
       "anim": {
         "action": "exercise",
         "props": [
@@ -92,44 +131,147 @@
             "size": "s"
           }
         ],
-        "text": "7.5 MILES"
+        "text": "KOLA SUPERDEEP BOREHOLE"
       }
     },
     {
-      "narration": "Below the crust waits the mantle, about eighteen hundred miles of hot rock that slowly flows. Then a liquid metal outer core. And at the center, a solid ball of iron and nickel at up to nine thousand eight hundred degrees Fahrenheit, about as hot as the Sun's surface.",
-      "headline": "AS HOT AS <em>THE SUN</em>",
-      "sub": "Up to 9,800°F (5,400°C)",
-      "visual": {
-        "type": "diagram",
-        "spec": "labeled cutaway of Earth's layers: crust, mantle 1,800 mi, outer core 1,400 mi, inner core"
-      },
+      "narration": "Nineteen years later, the hole reached about seven and a half miles down. It's still the deepest hole humans have ever drilled. And along the way, the drill kept finding things nobody expected.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "hole",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "straight-ruler",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "Water was trapped in the rock miles below the surface. Microscopic plankton fossils turned up nearly four miles down. And the mud flowing out of the hole was described as boiling, full of hydrogen gas.",
       "anim": {
         "action": "shocked",
         "props": [
           {
-            "icon": "fire",
+            "icon": "microbe",
             "at": "right",
             "size": "l",
             "anim": "pulse"
           },
           {
-            "icon": "globe-showing-americas",
+            "icon": "droplet",
             "at": "top-left",
-            "size": "s"
+            "size": "s",
+            "anim": "bob"
           }
         ],
         "face": "shock"
       }
     },
     {
-      "narration": "So let's cheat. You get an indestructible tube with all the air pumped out. You step off the edge, and you fall. At first it feels like any other fall, just one that keeps going.",
-      "headline": "STEP OFF <em>THE EDGE</em>",
-      "sub": "Indestructible tube, no air",
-      "visual": {
-        "type": "nasa",
-        "query": "astronaut free fall training KC-135 weightless",
-        "note": "person floating in free fall"
-      },
+      "narration": "Then the heat won. Around seven miles down, the rock reached about three hundred fifty six degrees Fahrenheit, far hotter than expected, and drilling stopped in 1992. Your tunnel would need to be over a thousand times longer.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "thermometer",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "fire",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "text": "TOO HOT TO DRILL"
+      }
+    },
+    {
+      "narration": "And Kola never even made it through the crust, Earth's thin outer shell. On land, the crust is about nineteen miles thick on average. Under the oceans, it's only about three miles. Then the real journey begins.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "rock",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "water-wave",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Next comes the mantle, roughly eighteen hundred miles of hot rock. NASA describes it as having the consistency of caramel. Below that sits the outer core, about fourteen hundred miles of liquid iron and nickel, slowly churning.",
+      "anim": {
+        "action": "eat",
+        "props": [
+          {
+            "icon": "honey-pot",
+            "at": "hand"
+          },
+          {
+            "icon": "volcano",
+            "at": "right",
+            "size": "m"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "At the very center is the inner core, a solid ball of iron and nickel about seven hundred sixty miles in radius. It reaches up to nine thousand eight hundred degrees Fahrenheit, nearly as hot as the surface of the Sun.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "fire",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "HOT AS THE SUN",
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "How do we know, if nobody has ever been there? In 1936, Danish seismologist Inge Lehmann studied earthquake waves crossing the planet, and realized some were bouncing off a solid core hidden inside the liquid one.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "bubble"
+          },
+          {
+            "icon": "chart-increasing",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "INGE LEHMANN, 1936"
+      }
+    },
+    {
+      "narration": "So let's cheat. You get an indestructible, heatproof tube with all the air pumped out. You step off the edge, and you fall. At first it feels like any other fall, just one that never seems to end.",
       "anim": {
         "action": "fall-toward",
         "props": [
@@ -143,13 +285,7 @@
       }
     },
     {
-      "narration": "Here's the surprise. As you sink, gravity doesn't weaken right away. It actually gets stronger, peaking about nine percent above normal near the core. The rock above you pulls in all directions and cancels out, while the dense iron center keeps pulling you down.",
-      "headline": "GRAVITY GETS <em>STRONGER</em>",
-      "sub": "Peaks ~9% above surface gravity",
-      "visual": {
-        "type": "diagram",
-        "spec": "graph of gravity versus depth inside Earth: rises slightly to a peak near the core boundary, then falls to zero at the center"
-      },
+      "narration": "Here's the first surprise. As you sink, gravity doesn't weaken right away. It actually gets stronger, peaking about nine percent above normal near the top of the core. Stand on a scale down there, and you'd weigh more than at home.",
       "anim": {
         "action": "stretch",
         "props": [
@@ -165,36 +301,62 @@
       }
     },
     {
-      "narration": "Then gravity fades, reaching zero at the very center. By now you're moving faster than eighteen thousand miles per hour, faster than the International Space Station orbits the planet.",
-      "headline": "ZERO GRAVITY <em>AT THE CENTER</em>",
-      "sub": "Over 18,000 mph",
-      "visual": {
-        "type": "nasa",
-        "query": "International Space Station orbit over Earth",
-        "note": "ISS above Earth"
-      },
+      "narration": "Why? Earth's core is incredibly dense, about thirteen times denser than water at the very center. As you sink, the rock above you pulls in all directions and mostly cancels out, while that heavy core gets closer and pulls harder.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "rock",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "droplet",
+            "at": "top-left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Past the core boundary, gravity finally fades, reaching zero at the very center. For one instant you are weightless, wrapped inside the entire planet, and moving at nearly five miles every second.",
       "anim": {
         "action": "float",
         "props": [
           {
-            "icon": "satellite",
+            "icon": "glowing-star",
             "at": "far-right",
             "size": "m",
-            "anim": "orbit"
+            "anim": "spin"
           }
         ],
+        "text": "ZERO GRAVITY",
         "camera": "zoom-out",
         "face": "grin"
       }
     },
     {
-      "narration": "You shoot through the center, and now gravity works against you, slowing you down just as much as it sped you up. You rise and rise, and right as you reach the far side, you stop. Grab the edge, or you fall all the way back.",
-      "headline": "GRAB <em>THE EDGE</em>",
-      "sub": "Or fall back forever",
-      "visual": {
-        "type": "diagram",
-        "spec": "straight tunnel through Earth with a figure oscillating from one surface to the other, speed arrows largest at the center"
-      },
+      "narration": "That's over thirty times faster than a passenger jet crossing the Atlantic, with no engine and no fuel. Then you shoot straight through the center, and gravity flips against you.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "airplane",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Now it slows you down exactly as much as it sped you up. You rise and rise, and right as you reach the far side, you stop. Grab the edge! Miss it, and you fall all the way back.",
       "anim": {
         "action": "jump",
         "props": [
@@ -212,14 +374,22 @@
       }
     },
     {
-      "narration": "Total travel time? The classic textbook answer is about forty two minutes. But in twenty fifteen, physicist Alexander Klotz used real data on Earth's layers and got about thirty eight minutes. Shorter than a lot of commutes.",
-      "headline": "ABOUT <em>38 MINUTES</em>",
-      "sub": "Not the textbook 42",
-      "visual": {
-        "type": "nasa",
-        "query": "Earth interior seismic tomography",
-        "note": "scientific view of Earth's interior"
-      },
+      "narration": "In fact, with no air to slow you, you'd bounce between the two sides forever, like a pendulum swinging back and forth through the whole planet. So how long does one crossing take?",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "The classic textbook answer assumes Earth has the same density all the way through. In 1966, physicist Paul Cooper worked it out in the American Journal of Physics: about forty two minutes from one side to the other.",
       "anim": {
         "action": "think",
         "props": [
@@ -228,8 +398,28 @@
             "at": "bubble"
           },
           {
-            "icon": "globe-showing-americas",
+            "icon": "books",
             "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "42 MINUTES"
+      }
+    },
+    {
+      "narration": "But Earth isn't uniform. Its heavy core makes gravity stronger deep down. In 2015, physicist Alexander Klotz used earthquake data on Earth's real layers, and found the fall takes about thirty eight minutes instead.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "bar-chart",
+            "at": "right",
+            "size": "l",
+            "anim": "grow"
+          },
+          {
+            "icon": "stopwatch",
+            "at": "top-left",
             "size": "s"
           }
         ],
@@ -237,14 +427,88 @@
       }
     },
     {
-      "narration": "Of course, reality ruins the ride. With air in the tube, drag would cap your speed near one hundred twenty miles per hour, and you'd end up bobbing to a stop at the center. And Earth's spin would shove you into the wall, unless your tunnel runs pole to pole.",
-      "headline": "AIR AND SPIN <em>RUIN IT</em>",
-      "sub": "Drag and Earth's rotation",
-      "visual": {
-        "type": "nasa",
-        "query": "Earth North Pole Arctic from space",
-        "note": "Earth seen over the pole"
-      },
+      "narration": "Klotz found another surprise. Pretend gravity stays exactly the same strength all the way down, and you also get about thirty eight minutes. That crude shortcut actually beats the textbook's smooth, uniform Earth.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "light-bulb",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Here's a beautiful coincidence. Forty two minutes is exactly half the time a satellite skimming Earth's surface would take to orbit once. Your straight fall and its circular path are secretly the same motion, seen from the side.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "top",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "It gets stranger. In that simple model, a straight tunnel between any two cities, not just through the center, also takes forty two minutes. In the real Earth, short tunnels still take about forty two, and the longest about thirty eight.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "high-speed-train",
+            "at": "right",
+            "size": "l",
+            "anim": "approach"
+          }
+        ],
+        "text": "ANY TWO CITIES"
+      }
+    },
+    {
+      "narration": "And the trip time doesn't depend on the planet's size at all, only on its density. A tunnel through a tiny world just as dense as Earth would take the very same forty two minutes.",
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "The idea is old. Robert Hooke described something like it in a letter to Isaac Newton in the 1600s. A French magazine imagined gravity trains in 1883, and Lewis Carroll wrote about them in 1893.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "scroll",
+            "at": "hand"
+          },
+          {
+            "icon": "locomotive",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Of course, reality ruins the ride. Leave air in the tube, and drag caps your speed near one hundred twenty miles per hour, like a skydiver. You'd never reach the far side. You'd just bob to a stop at the center.",
       "anim": {
         "action": "spin",
         "props": [
@@ -253,6 +517,12 @@
             "at": "right",
             "size": "l",
             "anim": "shake"
+          },
+          {
+            "icon": "parachute",
+            "at": "top-left",
+            "size": "s",
+            "anim": "fall"
           }
         ],
         "camera": "shake",
@@ -260,14 +530,58 @@
       }
     },
     {
-      "narration": "One last twist. Drop in from most of the United States, and the far side of the planet is the Indian Ocean. So pack a swimsuit.",
-      "headline": "PACK A <em>SWIMSUIT</em>",
-      "sub": "",
-      "visual": {
-        "type": "nasa",
-        "query": "Indian Ocean from space astronaut photograph",
-        "note": "open ocean seen from orbit"
-      },
+      "narration": "And scientists still don't fully understand what's down there. In 2024, a team tracking repeated earthquakes found the inner core spun slightly faster than the mantle around it, then began slipping backward.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "cyclone",
+            "at": "bubble"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "text": "SPINNING CORE"
+      }
+    },
+    {
+      "narration": "So where would you finally come out? There's an old saying that if you dig straight down from America, you'll reach China. Not even close. Only about fifteen percent of Earth's land sits opposite other land.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "world-map",
+            "at": "right",
+            "size": "l"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Jump in from almost anywhere in the lower forty eight states, and you'd pop out in the Indian Ocean. Only three small patches, in Montana and Colorado, line up with land: a few tiny, remote islands.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "desert-island",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "water-wave",
+            "at": "top-left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "So pack a swimsuit. After about thirty eight minutes of falling, past molten metal and a restless iron heart, you'd pop up in the open ocean, with nobody there to grab your hand.",
       "anim": {
         "action": "cheer",
         "props": [
@@ -289,8 +603,6 @@
     },
     {
       "narration": "Follow Cosmic What If for more mind-bending science.",
-      "headline": "",
-      "sub": "",
       "visual": {
         "type": "outro"
       },

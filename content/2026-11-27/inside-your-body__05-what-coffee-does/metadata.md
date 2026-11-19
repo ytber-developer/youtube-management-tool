@@ -2,7 +2,7 @@
 
 - **Kênh:** Inside Your Body · **Video #5** · **Ngày đăng:** 2026-11-27
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-11-28)
-- **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 3463 ký tự · khoảng 3.6 phút
+- **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 6484 ký tự · khoảng 6.8 phút
 - **Thumbnail text:** COFFEE ISN'T ENERGY
 
 ## Title
@@ -10,7 +10,7 @@ What Coffee Actually Does to Your Body
 
 ## Description (copy nguyên khối)
 ```
-Coffee doesn't add energy to your body. It hides a tiredness signal your brain has been collecting all day. Follow one cup from the first sip to hours later, and see why the same coffee hits everyone differently.
+Coffee doesn't add energy to your body. It hides a tiredness signal your brain has been collecting all day. Follow one cup from the first sip to bedtime: why plants make caffeine (and why bees love it), what it really does for your focus and your muscles, the coffee myths about dehydration and stunted growth, why your liver and your genes decide how long it lasts, what decades of research say about long-term health, and what scientists still don't know.
 
 Sources:
 - U.S. Food and Drug Administration, Spilling the Beans: How Much Caffeine is Too Much?: https://www.fda.gov/consumers/consumer-updates/spilling-beans-how-much-caffeine-too-much
@@ -19,44 +19,29 @@ Sources:
 - Nutrients (2021), Caffeine as a Factor Influencing the Functioning of the Human Body: Friend or Foe?: https://pmc.ncbi.nlm.nih.gov/articles/PMC8467199
 - NHLBI, How Sleep Works: Your Sleep/Wake Cycle: https://www.nhlbi.nih.gov/health/sleep/sleep-wake-cycle
 - ScienceDaily (2009), NIH-funded study on astrocytes, adenosine and sleep pressure: https://www.sciencedaily.com/releases/2009/01/090128122814.htm
+- Wright et al., Science (2013), Caffeine in floral nectar enhances a pollinator's memory of reward: https://pmc.ncbi.nlm.nih.gov/articles/PMC4521368/
+- McLellan et al., Neuroscience & Biobehavioral Reviews (2016), A review of caffeine's effects on cognitive, physical and occupational performance: https://doi.org/10.1016/j.neubiorev.2016.09.001
+- Journal of the International Society of Sports Nutrition (2021), Position stand: caffeine and exercise performance: https://jissn.biomedcentral.com/articles/10.1186/s12970-020-00383-4
+- NHS, Water, drinks and your health: https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/water-drinks-nutrition/
+- Brown et al., Gut (1990), Effect of coffee on distal colon function: https://pubmed.ncbi.nlm.nih.gov/2338272/
+- Harvard Health Publishing, Can Coffee Really Stunt Your Growth?: https://www.health.harvard.edu/staying-healthy/can-coffee-really-stunt-your-growth
+- Nehlig, Pharmacological Reviews (2018), Interindividual Differences in Caffeine Metabolism and Factors Driving Caffeine Consumption: https://doi.org/10.1124/pr.117.014407
+- Drake et al., Journal of Clinical Sleep Medicine (2013), Caffeine Effects on Sleep Taken 0, 3, or 6 Hours before Going to Bed: https://pmc.ncbi.nlm.nih.gov/articles/PMC3805807/
+- Poole et al., BMJ (2017), Coffee consumption and health: umbrella review of meta-analyses of multiple health outcomes: https://pmc.ncbi.nlm.nih.gov/articles/PMC5696634/
 
 This video is for educational purposes only and is not medical advice.
 
 Images:
 - Original animation by Inside Your Body
 - Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
-- epSos.de / CC BY 2.0 (https://commons.wikimedia.org/w/index.php?curid=27942430)
-- Wide Awake! / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:The_Coffee_Bean_%26_Tea_Leaf_on_The_SM_Store_at_SM_City_Cebu_(2024-11-17).jpg)
-- Tim Gouw punttim / CC0 (https://commons.wikimedia.org/wiki/File:Busy_people_at_a_coffee_shop_(Unsplash).jpg)
-- Armen R Kherlopian, Ting Song, Qi Duan, Mathew A Neimark, Ming J Po, John K Gohagan and Andrew F Laine / CC BY 2.0 (https://commons.wikimedia.org/wiki/File:Two-photon_microscopy_of_in_vivo_brain_function.jpg)
-- U.S. Customs and Border Protection / Public domain (https://commons.wikimedia.org/wiki/File:Mexican_Woman_Found_Hiding_in_Trunk_of_Compact_Cark_(35587570182).jpg)
-- Grant, John Charles Boileau / Public domain (https://commons.wikimedia.org/wiki/File:Grant_1962_132.png)
-- Pete Souza / Public domain (https://commons.wikimedia.org/wiki/File:Barack_Obama_engrossed_in_reading_at_the_Resolute_Desk_while_illuminated_by_some_interesting,_autumnal,_western_sunlight_falling_through_the_garden_windows_(31901910102).jpg)
-- NIH NIAID / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:Liver_Lobule_(NIH_BioArt_565).png)
-- Unknown author / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:Sir_J._Y._Simpson_and_two_friends,_having_tested_chloroform_Wellcome_M0003274.jpg)
-- Zach_Woolf / CC BY 2.0 (https://www.flickr.com/photos/98088988@N07/22633805704)
-- Absorbine Jr. advertisements / Public domain (https://commons.wikimedia.org/wiki/File:Absorbine_Jr._ad_Elks_Magazine_1925-08.png)
-- jronaldlee / CC BY 2.0 (https://www.flickr.com/photos/37176760@N06/4657522179)
 ```
 
 ## Tags
-coffee, caffeine, what coffee does to your body, adenosine, sleep pressure, caffeine half-life, brain chemistry, human body, neuroscience, science explained, inside your body
+coffee, caffeine, what coffee does to your body, adenosine, sleep pressure, caffeine half-life, caffeine and sleep, coffee myths, does coffee dehydrate you, does coffee stunt your growth, caffeine tolerance, caffeine withdrawal, coffee and health, brain chemistry, human body, neuroscience, science explained, inside your body
 
 ## Image credits
 - Original animation by Inside Your Body
 - Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
-- epSos.de / CC BY 2.0 (https://commons.wikimedia.org/w/index.php?curid=27942430)
-- Wide Awake! / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:The_Coffee_Bean_%26_Tea_Leaf_on_The_SM_Store_at_SM_City_Cebu_(2024-11-17).jpg)
-- Tim Gouw punttim / CC0 (https://commons.wikimedia.org/wiki/File:Busy_people_at_a_coffee_shop_(Unsplash).jpg)
-- Armen R Kherlopian, Ting Song, Qi Duan, Mathew A Neimark, Ming J Po, John K Gohagan and Andrew F Laine / CC BY 2.0 (https://commons.wikimedia.org/wiki/File:Two-photon_microscopy_of_in_vivo_brain_function.jpg)
-- U.S. Customs and Border Protection / Public domain (https://commons.wikimedia.org/wiki/File:Mexican_Woman_Found_Hiding_in_Trunk_of_Compact_Cark_(35587570182).jpg)
-- Grant, John Charles Boileau / Public domain (https://commons.wikimedia.org/wiki/File:Grant_1962_132.png)
-- Pete Souza / Public domain (https://commons.wikimedia.org/wiki/File:Barack_Obama_engrossed_in_reading_at_the_Resolute_Desk_while_illuminated_by_some_interesting,_autumnal,_western_sunlight_falling_through_the_garden_windows_(31901910102).jpg)
-- NIH NIAID / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:Liver_Lobule_(NIH_BioArt_565).png)
-- Unknown author / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:Sir_J._Y._Simpson_and_two_friends,_having_tested_chloroform_Wellcome_M0003274.jpg)
-- Zach_Woolf / CC BY 2.0 (https://www.flickr.com/photos/98088988@N07/22633805704)
-- Absorbine Jr. advertisements / Public domain (https://commons.wikimedia.org/wiki/File:Absorbine_Jr._ad_Elks_Magazine_1925-08.png)
-- jronaldlee / CC BY 2.0 (https://www.flickr.com/photos/37176760@N06/4657522179)
 
 ## Sources
 - U.S. Food and Drug Administration - Spilling the Beans: How Much Caffeine is Too Much?: https://www.fda.gov/consumers/consumer-updates/spilling-beans-how-much-caffeine-too-much
@@ -65,3 +50,12 @@ coffee, caffeine, what coffee does to your body, adenosine, sleep pressure, caff
 - Nutrients (2021) - Caffeine as a Factor Influencing the Functioning of the Human Body: Friend or Foe?: https://pmc.ncbi.nlm.nih.gov/articles/PMC8467199
 - NHLBI - How Sleep Works: Your Sleep/Wake Cycle: https://www.nhlbi.nih.gov/health/sleep/sleep-wake-cycle
 - ScienceDaily (2009) - NIH-funded study on astrocytes, adenosine and sleep pressure: https://www.sciencedaily.com/releases/2009/01/090128122814.htm
+- Wright et al., Science (2013) - Caffeine in floral nectar enhances a pollinator's memory of reward: https://pmc.ncbi.nlm.nih.gov/articles/PMC4521368/
+- McLellan et al., Neuroscience & Biobehavioral Reviews (2016) - A review of caffeine's effects on cognitive, physical and occupational performance: https://doi.org/10.1016/j.neubiorev.2016.09.001
+- Journal of the International Society of Sports Nutrition (2021) - Position stand: caffeine and exercise performance: https://jissn.biomedcentral.com/articles/10.1186/s12970-020-00383-4
+- NHS - Water, drinks and your health: https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/water-drinks-nutrition/
+- Brown et al., Gut (1990) - Effect of coffee on distal colon function: https://pubmed.ncbi.nlm.nih.gov/2338272/
+- Harvard Health Publishing - Can Coffee Really Stunt Your Growth?: https://www.health.harvard.edu/staying-healthy/can-coffee-really-stunt-your-growth
+- Nehlig, Pharmacological Reviews (2018) - Interindividual Differences in Caffeine Metabolism and Factors Driving Caffeine Consumption: https://doi.org/10.1124/pr.117.014407
+- Drake et al., Journal of Clinical Sleep Medicine (2013) - Caffeine Effects on Sleep Taken 0, 3, or 6 Hours before Going to Bed: https://pmc.ncbi.nlm.nih.gov/articles/PMC3805807/
+- Poole et al., BMJ (2017) - Coffee consumption and health: umbrella review of meta-analyses of multiple health outcomes: https://pmc.ncbi.nlm.nih.gov/articles/PMC5696634/

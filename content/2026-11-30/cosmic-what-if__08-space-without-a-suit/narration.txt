@@ -4,41 +4,57 @@ First, why you need a suit at all. NASA calls a spacesuit a one person spacecraf
 
 It's built for a harsh place. Spacewalk temperatures can swing from about minus two hundred fifty degrees Fahrenheit in shadow to two hundred fifty in sunlight. That's why a suit can have as many as sixteen layers, including fabric also used in bulletproof vests.
 
-Now take all of that away, and go second by second. Out there, there's essentially no air pressure at all. Right now, about fourteen and a half pounds of air press on every square inch of your body. Lose that in an instant, and several things start happening at once.
+Now take all of that away, and go second by second. Out there, there's essentially no air pressure. Right now, about fourteen and a half pounds of air press on every square inch of your body. Lose that, and everything happens at once.
 
 Second zero. The single most important thing you could do is breathe out. If you held your breath, the air in your lungs would expand and could tear the delicate tissue inside. Scuba divers learn the same rule for rising toward the surface.
 
 Over the next few seconds, the air rushes out of your lungs, and something cruel happens. With no air outside, oxygen starts leaving your blood through your lungs instead of entering it. Your brain is now running on whatever oxygen it has left.
 
+That gives you a frighteningly short window. A NASA data book estimates that a person suddenly exposed to vacuum would have only about five to ten seconds to help themselves, like grabbing a handrail or closing a hatch.
+
 Meanwhile, the moisture on your tongue starts to bubble, even though it isn't hot. In a vacuum, water boils at far lower temperatures, even the temperature of your own body. NASA's own description says the saliva on your tongue might boil.
 
-But your blood doesn't boil. Your skin and blood vessels hold their own pressure, and your blood pressure keeps your blood above the point where it would boil. And no, you do not explode. Skin is remarkably tough and stretchy.
+Here is the strange part. This kind of boiling steals heat. As water keeps evaporating out through your airways, that same data book says your mouth and nose would cool to near freezing, while the rest of you cools much more slowly.
 
-What does happen is swelling. Some of the water in your soft tissues can turn to vapor, puffing up your skin and the tissue underneath. Doctors call this ebullism. NASA's description calls the swelling mild and reversible. Your skin keeps you in one piece.
+But your blood doesn't boil. Your blood vessels keep it squeezed under pressure, which raises its boiling point to roughly one hundred fifteen degrees Fahrenheit, well above body temperature. And no, you do not explode. Skin is remarkably tough and stretchy.
 
-In nineteen sixty, Air Force pilot Joe Kittinger rode a balloon nearly twenty miles up. One of his gloves failed to pressurize, and his hand swelled up, painful and useless. Once he came back down, it returned to normal.
+What does happen is swelling. Some of the water in your soft tissues can turn to vapor, puffing up your skin and the tissue underneath. Doctors call this ebullism. NASA's description calls the swelling mild and reversible, at least at first.
+
+Wait longer, and it gets worse. The data book warns that as vapor builds in your soft tissues, and more slowly in your veins, an unprotected body could swell to perhaps twice its normal volume.
+
+In nineteen sixty, Air Force pilot Joe Kittinger rode a balloon nearly twenty miles up. One pressure glove failed, and his right hand swelled to about twice its normal size, stiff and painful. Three hours after landing, it was back to normal.
 
 Around ten to fifteen seconds in, your vision fades and you pass out. Your brain has simply run out of oxygen. In the nineteen sixties, a NASA test subject in a vacuum chamber stayed conscious for about fourteen seconds after his suit leaked.
 
-He could feel and hear the air escaping. His last conscious memory was of the water on his tongue beginning to boil. Technicians repressurized the chamber quickly, and he recovered.
+He could feel and hear the air escaping. His last conscious memory was of the water on his tongue beginning to boil. Technicians began repressurizing the chamber within fifteen seconds, and he woke up with no apparent injury.
+
+Real astronauts have had close calls too. On one space shuttle mission, a metal bar inside a glove punched a small hole between an astronaut's thumb and finger. His skin partly sealed the hole, and he only noticed a painful red mark once he was back inside.
 
 What about the cold? Space is cold, but it's also empty, and emptiness is a great insulator. That's how a thermos works. With no air to carry heat away, you'd lose warmth slowly, mostly by radiating it. You would not freeze solid in seconds.
 
-There's a catch, though. The space station circles Earth about every ninety minutes, so you'd swing from blazing sunlight into deep shadow roughly every forty five minutes. Without a suit, there's no insulation, no cooling, and no protection from either extreme.
+In fact, astronauts tend to have more trouble with overheating than with staying warm. A sealed suit traps body heat. So underneath it, they wear a stretchy garment woven with tubes, and cool water flows through them like a radiator.
 
-In direct sunlight, the bigger danger is the opposite. Without an atmosphere or a gold coated visor to filter it, raw sunlight would start burning exposed skin. According to NASA, sunburn is one of the problems that begins after about ten seconds.
+And in direct sunlight, there is a different danger. Without an atmosphere or a gold coated visor to filter it, raw sunlight would start burning exposed skin. According to NASA, sunburn is one of the problems that begins after about ten seconds.
 
-And sunlight isn't the only thing streaming past. Spacesuits also shield astronauts from radiation and from tiny, fast moving specks of space dust. Unprotected, your skin and eyes would take every hit.
+And sunlight isn't the only thing streaming past. Spacesuits also shield astronauts from radiation and from tiny specks of space dust that can move many times faster than a bullet. Unprotected, your skin and eyes would take every hit.
 
 So what's the time limit? NASA's estimate: about half a minute of exposure is unlikely to cause permanent injury. But after perhaps one or two minutes, you are dying. And they admit the exact limits aren't really known. Rescue has to come fast.
 
-That's why spacewalkers usually work in pairs and stay tethered to the station. If something failed, a partner could haul you back toward the airlock. Thirty seconds can be the difference between a terrifying story and a tragedy.
+Much of what we know about the outer limit comes from animal studies decades ago. Survival was the rule if pressure came back within about ninety seconds. But once the heart stopped, attempts at resuscitation failed.
+
+That is why spacewalkers usually work in pairs and stay tethered to the station. They also wear a small jet pack called SAFER, so an astronaut who drifts away could fly back. In an emergency, every second of rescue counts.
 
 Sadly, we know this from real history. In June nineteen seventy one, a valve on the Soviet Soyuz eleven capsule sprang open about one hundred miles up, as the crew headed home. The cabin air escaped, and all three cosmonauts died within about two minutes.
 
 They remain the only people known to have died in space itself. Since then, crews launching and landing in Soyuz capsules wear pressure suits, just in case. A suit is the last line of defense if the cabin fails.
 
 You don't even need to reach space for this danger. About twelve miles up, the air pressure is so low that water boils at the temperature of your body. Above that height, even pilots need pressure suits.
+
+So did any movie get it right? One classic comes close. In two thousand one, A Space Odyssey, an astronaut crosses a few seconds of vacuum without a helmet and survives. Physicist Geoffrey Landis says the film got it about right.
+
+And here is the twist. Long ago, researchers found that a properly fitted elastic garment could entirely prevent that dangerous swelling, even at very low pressure. Your body does not need a balloon of air around it. It needs a firm squeeze.
+
+That idea could shape future spacesuits. At MIT, engineers have worked on a skintight design lined with tiny, musclelike coils. Plug it into power, and the coils contract, shrink wrapping the suit around the astronaut like a second skin.
 
 So, out in the vacuum without a suit, you wouldn't explode, boil, or freeze in an instant. You'd have about fifteen seconds of awareness, and maybe a minute or two for someone to save you. That's why every astronaut treats a spacesuit as a spacecraft.
 

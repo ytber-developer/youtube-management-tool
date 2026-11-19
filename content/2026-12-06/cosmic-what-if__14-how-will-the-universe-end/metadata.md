@@ -19,56 +19,16 @@ Sources:
 - Adams and Laughlin, A Dying Universe: The Long Term Fate and Evolution of Astrophysical Objects, Reviews of Modern Physics (1997): https://ar5iv.arxiv.org/html/astro-ph/9701131
 
 Images:
-- NASA; ESA; G. Illingworth, D. Magee, and P. Oesch, University of California, Santa Cruz; R. Bouwens, Leiden University; and the HUDF09 Team (https://images.nasa.gov/details/GSFC_20171208_Archive_e001651)
-- NASA/GSFC/Solar Dynamics Observatory (https://images.nasa.gov/details/PIA21583)
-- NASA, Raghvendra Sahai NASA Jet Propulsion Laboratory, Lars-Ake Nyman European Southern Observatory Chile & Onsala Space Observatory, Sweden (https://images.nasa.gov/details/PIA04214)
-- ESA/Hubble &amp; NASA (https://images.nasa.gov/details/GSFC_20171208_Archive_e000052)
-- NASA (GSFC) (https://images.nasa.gov/details/a-galaxy-at-the-center-of-the-hubble-tuning-fork_22206278923_o)
-- NASA/JPL-Caltech (https://images.nasa.gov/details/PIA22353)
-- ESA and the Planck Collaboration - D. Ducros (https://images.nasa.gov/details/PIA17449)
-- X-ray: NASA/CXC/PSU/L.Townsley et al.; Optical: NASA/STScI; Infrared: NASA/JPL/PSU/L.Townsley et al. (https://images.nasa.gov/details/PIA14415)
-- NASA/ESA/STScI/G. Bacon (https://images.nasa.gov/details/PIA21473)
-- NASA, ESA, N. Smith (University of California, Berkeley), and The Hubble Heritage Team (STScI/AURA); credit for CTIO Image: N. Smith (University of California, Berkeley) and NOAO/AURA/NSF / Public domain (https://commons.wikimedia.org/wiki/File:%22Finger_of_God%22_Bok_globule_in_the_Carina_Nebula.jpg)
-- ESA/Hubble & NASA, M. Gladders et al; Acknowledgment: Judy Schmidt (https://images.nasa.gov/details/potw1903a)
-- ESA/NASA (https://images.nasa.gov/details/GSFC_20171208_Archive_e001783)
-- ESA/C. Carreau (https://images.nasa.gov/details/PIA17009)
-- Daderot / CC0 (https://commons.wikimedia.org/wiki/File:Neutrino_detector_-_National_Museum_of_Nature_and_Science,_Tokyo_-_DSC07824.JPG)
-- NASA's Goddard Space Flight Center (https://images.nasa.gov/details/GSFC_20171208_Archive_e000698)
-- NASA/JPL-Caltech/IPAC/Event Horizon Telescope Collaboration (https://images.nasa.gov/details/PIA23122)
-- NASA (KSC) (https://images.nasa.gov/details/KSC-04pd1617)
-- NASA/CXC/JPL-Caltech/NOAO/DSS (https://images.nasa.gov/details/PIA19347)
-- NASA, ESA, and D. Elmegreen (Vassar College) (https://images.nasa.gov/details/GSFC_20171208_Archive_e000278)
-- NOIRLab/NSF/AURA/C. Corco / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:Vera_C_Rubin_Observatory_in_the_Snow_(IMG_0315-CC).jpg)
-- NASA/GSFC/Bill Hrybyk (https://images.nasa.gov/details/GSFC_20170331_2017-11028_014)
-- NASA/JPL-Caltech/Oxford University (https://images.nasa.gov/details/PIA15412)
+- Original animation by Cosmic What If
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 ```
 
 ## Tags
 end of the universe, heat death, big rip, big crunch, dark energy, DESI, cosmology, far future, black holes, hawking radiation, what if, astronomy, science, cosmic what if
 
 ## Image credits
-- NASA; ESA; G. Illingworth, D. Magee, and P. Oesch, University of California, Santa Cruz; R. Bouwens, Leiden University; and the HUDF09 Team (https://images.nasa.gov/details/GSFC_20171208_Archive_e001651)
-- NASA/GSFC/Solar Dynamics Observatory (https://images.nasa.gov/details/PIA21583)
-- NASA, Raghvendra Sahai NASA Jet Propulsion Laboratory, Lars-Ake Nyman European Southern Observatory Chile & Onsala Space Observatory, Sweden (https://images.nasa.gov/details/PIA04214)
-- ESA/Hubble &amp; NASA (https://images.nasa.gov/details/GSFC_20171208_Archive_e000052)
-- NASA (GSFC) (https://images.nasa.gov/details/a-galaxy-at-the-center-of-the-hubble-tuning-fork_22206278923_o)
-- NASA/JPL-Caltech (https://images.nasa.gov/details/PIA22353)
-- ESA and the Planck Collaboration - D. Ducros (https://images.nasa.gov/details/PIA17449)
-- X-ray: NASA/CXC/PSU/L.Townsley et al.; Optical: NASA/STScI; Infrared: NASA/JPL/PSU/L.Townsley et al. (https://images.nasa.gov/details/PIA14415)
-- NASA/ESA/STScI/G. Bacon (https://images.nasa.gov/details/PIA21473)
-- NASA, ESA, N. Smith (University of California, Berkeley), and The Hubble Heritage Team (STScI/AURA); credit for CTIO Image: N. Smith (University of California, Berkeley) and NOAO/AURA/NSF / Public domain (https://commons.wikimedia.org/wiki/File:%22Finger_of_God%22_Bok_globule_in_the_Carina_Nebula.jpg)
-- ESA/Hubble & NASA, M. Gladders et al; Acknowledgment: Judy Schmidt (https://images.nasa.gov/details/potw1903a)
-- ESA/NASA (https://images.nasa.gov/details/GSFC_20171208_Archive_e001783)
-- ESA/C. Carreau (https://images.nasa.gov/details/PIA17009)
-- Daderot / CC0 (https://commons.wikimedia.org/wiki/File:Neutrino_detector_-_National_Museum_of_Nature_and_Science,_Tokyo_-_DSC07824.JPG)
-- NASA's Goddard Space Flight Center (https://images.nasa.gov/details/GSFC_20171208_Archive_e000698)
-- NASA/JPL-Caltech/IPAC/Event Horizon Telescope Collaboration (https://images.nasa.gov/details/PIA23122)
-- NASA (KSC) (https://images.nasa.gov/details/KSC-04pd1617)
-- NASA/CXC/JPL-Caltech/NOAO/DSS (https://images.nasa.gov/details/PIA19347)
-- NASA, ESA, and D. Elmegreen (Vassar College) (https://images.nasa.gov/details/GSFC_20171208_Archive_e000278)
-- NOIRLab/NSF/AURA/C. Corco / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:Vera_C_Rubin_Observatory_in_the_Snow_(IMG_0315-CC).jpg)
-- NASA/GSFC/Bill Hrybyk (https://images.nasa.gov/details/GSFC_20170331_2017-11028_014)
-- NASA/JPL-Caltech/Oxford University (https://images.nasa.gov/details/PIA15412)
+- Original animation by Cosmic What If
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 
 ## Sources
 - NASA Science - What Is Dark Energy? Inside Our Accelerating, Expanding Universe: https://science.nasa.gov/dark-energy/

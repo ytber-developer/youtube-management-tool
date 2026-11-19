@@ -1,0 +1,71 @@
+What if you stepped into a wormhole here on Earth and stepped out next to another star? What would that trip actually be like?
+
+First, an honest warning. Wormholes are hypothetical. Nobody has ever found one. They're allowed by the math of Einstein's general relativity, but allowed is not the same as real. So think of this as a careful thought experiment.
+
+The basic idea is simple. Space can bend. A wormhole would be a tunnel through bent space, linking two distant places with a shortcut, like poking a pencil through a folded sheet of paper.
+
+Why bother? Because space is unbelievably big. The nearest star to the Sun, Proxima Centauri, is about four and a quarter light-years away. Even light, the fastest thing there is, needs more than four years to get there.
+
+Our spacecraft are much slower. Voyager One is racing away from the Sun at about seventeen kilometers per second. At that speed, a trip to Proxima would take more than seventy-three thousand years.
+
+A wormhole could shrink that journey to almost nothing, maybe a short stroll. So let's plan your trip, step by step. Step one, and it's a big one: find a wormhole.
+
+The idea goes back to 1935, when Albert Einstein and physicist Nathan Rosen found bridges in the equations of general relativity, connecting two separate regions of space. They came to be called Einstein-Rosen bridges, or wormholes.
+
+But there was a catch. Later work showed that this kind of bridge isn't a tunnel you can use. It pinches shut so quickly that not even light could make it from one side to the other.
+
+If you jumped in, you'd be trapped as it collapsed around you. So step two of your plan is much harder: you need a wormhole that stays open long enough for you to cross.
+
+In the 1980s, the astronomer Carl Sagan was writing a novel called Contact, and he wanted his heroine to cross space in a believable way. Caltech physicist Kip Thorne decided to take the question seriously.
+
+In 1988, Thorne and his student Michael Morris published what a traversable wormhole would need. The answer was startling. To hold the tunnel open, you'd need something called exotic matter.
+
+Exotic matter would have negative energy density. Instead of pulling space together the way normal matter and energy do, it would push the throat of the wormhole apart and keep it from slamming shut.
+
+Does anything like that exist? No known material has negative mass. But quantum physics does allow tiny pockets of negative energy. One example is the Casimir effect, between metal plates placed extremely close together.
+
+The problem is scale. Those effects are incredibly small. Nobody knows how to gather enough negative energy to prop open a tunnel big enough for a person, or whether the laws of physics even allow it.
+
+Where would a wormhole even come from? Some physicists have speculated that tiny ones might flicker in and out of existence at the smallest scales of space, far smaller than an atom, and that someone might one day enlarge one.
+
+So far, your plan has two impossible-looking steps. But let's say a future civilization pulls them off. Step three: approach the wormhole. What would you actually see?
+
+Not a dark hole, and not a swirling tunnel like in cartoons. A wormhole's mouth would most likely look like a sphere, a glowing ball hanging in space.
+
+Inside that sphere, you'd see a warped picture of the place on the other side: its stars and galaxies, bent and squeezed together, as if you were peering into a crystal ball.
+
+That's how the 2014 movie Interstellar showed it. Kip Thorne worked on the film, and the visual effects team traced real paths of light around a wormhole to draw it. They later published the science in a physics journal.
+
+Around the edge of the sphere, light from your own side would bend too, forming a bright circle called an Einstein ring. Behind you, the familiar sky. In front of you, a window to somewhere else.
+
+Step four: go through. What would you feel? Near a small black hole, tidal forces would stretch you like spaghetti. Morris and Thorne designed their imaginary wormhole so the stretching on a traveler would be no stronger than Earth's gravity.
+
+Their design also had no event horizon, the point of no return around a black hole. So unlike a black hole, a wormhole like this would let you come back out the way you went in.
+
+In a wormhole built like that, the trip could feel surprisingly ordinary. You'd glide through the throat, the view ahead swelling until it surrounds you, while the sky behind you shrinks to a small sphere.
+
+Then you'd drift out the other side. Fresh starlight, a new sun, maybe a strange planet. A journey that would have taken Voyager tens of thousands of years, done in moments.
+
+And a working wormhole would allow two-way traffic. You could send messages home and get replies almost right away, no matter how far apart the two mouths are in ordinary space.
+
+One rule for your trip: don't touch the walls. The throat would be lined with that exotic matter, and nobody knows what contact with it would do. Experts also warn about sudden collapse and high radiation.
+
+Now, the strangest part. Soon after their first paper, Thorne and his colleagues showed something astonishing. If you could move one mouth of a wormhole around, you could, in principle, turn it into a time machine.
+
+The trick comes from relativity. Moving clocks tick slower. Fly one mouth around at nearly the speed of light and bring it back, and the two ends would age differently. Stepping through could then carry you into the past.
+
+That opens the door to famous paradoxes. What if you went back and stopped yourself from ever building the wormhole in the first place? Physicists take puzzles like that very seriously.
+
+Stephen Hawking suspected nature forbids it. In 1992, he proposed the chronology protection conjecture: the idea that the laws of physics prevent time machines from forming, and so keep the universe safe for historians.
+
+So is anyone studying wormholes for real? In a surprising way, yes. In 2022, physicists used Google's Sycamore quantum computer to run a tiny quantum system that behaves, mathematically, like a traversable wormhole.
+
+They put a bit of quantum information into one side and watched it emerge from the other. But it was not a real tunnel through space. It was a model of the physics, running on a chip.
+
+And the people who think hardest about bent space aren't on the fringe. Kip Thorne went on to share the 2017 Nobel Prize in Physics for helping detect gravitational waves, ripples in spacetime itself.
+
+So could you travel through a wormhole? The honest answer is that nobody knows if they exist, and holding one open would need a kind of matter no one has ever gathered in useful amounts.
+
+But the equations haven't said no. And just asking the question has pushed physicists to understand gravity, quantum physics, and even time a little better. For now, the shortcut stays a beautiful maybe.
+
+Follow Cosmic What If for more mind-bending science.

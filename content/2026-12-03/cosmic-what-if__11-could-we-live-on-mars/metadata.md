@@ -22,50 +22,16 @@ Sources:
 - Wikipedia, Martian regolith (perchlorates): https://en.wikipedia.org/wiki/Martian_regolith
 
 Images:
-- NASA/GSFC/Scientific Visualization Studio (https://images.nasa.gov/details/PIA20277)
-- NASA/JPL-Caltech/MSSS (https://images.nasa.gov/details/PIA24542)
-- NASA/Frank Michaux (https://images.nasa.gov/details/KSC-20200730-PH-FMX01_0042)
-- NASA/JPL-Caltech (https://images.nasa.gov/details/PIA25136)
-- NASA/Univ. of Colorado (https://images.nasa.gov/details/PIA18856)
-- Maksym Bocharov (https://images.nasa.gov/details/PIA23374)
-- (NASA/Joel Kowsky) (https://images.nasa.gov/details/NHQ201910150007)
-- JPL/NASA/STScI (https://images.nasa.gov/details/PIA01247)
-- NASA/Kim Shiflett (https://images.nasa.gov/details/KSC-2013-3598)
-- NASA (JSC) (https://images.nasa.gov/details/iss058e003901)
-- NASA (https://images.nasa.gov/details/PIA23302)
-- NASA/JPL-Caltech/University of Arizona/Texas A&M University (https://images.nasa.gov/details/PIA11130)
-- NASA/JPL-Caltech/MSSS/Texas A&M Univ. (https://images.nasa.gov/details/PIA19400)
-- NASA/JPL-Caltech/Univ. of Arizona (https://images.nasa.gov/details/PIA19850)
-- NASA/JPL-Caltech/IPGP (https://images.nasa.gov/details/PIA22952)
-- NASA/JPL-Caltech/Planetary Science Institute (https://images.nasa.gov/details/PIA26045)
-- NASA/JPL-Caltech/ASU/MSSS (https://images.nasa.gov/details/PIA24921)
-- NASA/JPL/GSFC (https://images.nasa.gov/details/PIA00960)
-- NASA/JPL-Caltech/ESA/University of Arizona (https://images.nasa.gov/details/PIA26512)
+- Original animation by Cosmic What If
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 ```
 
 ## Tags
 mars, living on mars, mars colony, space exploration, nasa, perseverance, moxie, space radiation, what if, astronomy, science, cosmic what if
 
 ## Image credits
-- NASA/GSFC/Scientific Visualization Studio (https://images.nasa.gov/details/PIA20277)
-- NASA/JPL-Caltech/MSSS (https://images.nasa.gov/details/PIA24542)
-- NASA/Frank Michaux (https://images.nasa.gov/details/KSC-20200730-PH-FMX01_0042)
-- NASA/JPL-Caltech (https://images.nasa.gov/details/PIA25136)
-- NASA/Univ. of Colorado (https://images.nasa.gov/details/PIA18856)
-- Maksym Bocharov (https://images.nasa.gov/details/PIA23374)
-- (NASA/Joel Kowsky) (https://images.nasa.gov/details/NHQ201910150007)
-- JPL/NASA/STScI (https://images.nasa.gov/details/PIA01247)
-- NASA/Kim Shiflett (https://images.nasa.gov/details/KSC-2013-3598)
-- NASA (JSC) (https://images.nasa.gov/details/iss058e003901)
-- NASA (https://images.nasa.gov/details/PIA23302)
-- NASA/JPL-Caltech/University of Arizona/Texas A&M University (https://images.nasa.gov/details/PIA11130)
-- NASA/JPL-Caltech/MSSS/Texas A&M Univ. (https://images.nasa.gov/details/PIA19400)
-- NASA/JPL-Caltech/Univ. of Arizona (https://images.nasa.gov/details/PIA19850)
-- NASA/JPL-Caltech/IPGP (https://images.nasa.gov/details/PIA22952)
-- NASA/JPL-Caltech/Planetary Science Institute (https://images.nasa.gov/details/PIA26045)
-- NASA/JPL-Caltech/ASU/MSSS (https://images.nasa.gov/details/PIA24921)
-- NASA/JPL/GSFC (https://images.nasa.gov/details/PIA00960)
-- NASA/JPL-Caltech/ESA/University of Arizona (https://images.nasa.gov/details/PIA26512)
+- Original animation by Cosmic What If
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 
 ## Sources
 - NASA Science - Mars Facts: https://science.nasa.gov/mars/facts/

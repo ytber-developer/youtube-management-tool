@@ -2,7 +2,7 @@
 
 - **Kênh:** Inside Your Body · **Video #6** · **Ngày đăng:** 2026-11-28
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-11-29)
-- **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 4164 ký tự · khoảng 4.3 phút
+- **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 6725 ký tự · khoảng 7.0 phút
 - **Thumbnail text:** 24 HOURS AWAKE
 
 ## Title
@@ -10,7 +10,7 @@ What 24 Hours Without Sleep Does to Your Body and Brain
 
 ## Description (copy nguyên khối)
 ```
-Stay awake for one full day and your brain starts to perform as if you've been drinking. Follow the clock hour by hour, from rising sleep pressure to microsleeps, a supercharged emotional alarm, and a surprising change inside your brain.
+Stay awake for one full day and your brain starts to perform as if you've been drinking. Follow the clock hour by hour: rising sleep pressure and what caffeine really does to it, the late-night dip behind drowsy-driving crashes, microsleeps, brain cells that briefly nod off while you're awake, weaker memories, louder pain, a supercharged emotional alarm, hungry hormones, the brain's overnight cleanup crew, and why sleeping in on the weekend doesn't undo the damage. Plus: when sleep trouble is worth talking to a doctor about.
 
 Sources:
 - CDC NIOSH, Long work hours training: impairment from fatigue: https://archive.cdc.gov/www_cdc_gov/niosh/emres/longhourstraining/impaired.html
@@ -18,48 +18,28 @@ Sources:
 - NHLBI, How Sleep Works: Your Sleep/Wake Cycle: https://www.nhlbi.nih.gov/health/sleep/sleep-wake-cycle
 - UC Berkeley News (2007), Sleep deprivation and the emotional brain: https://newsarchive.berkeley.edu/news/media/releases/2007/10/22_sleeploss.shtml
 - NIH Intramural Research Program, Lack of sleep may be linked to risk factor for Alzheimer's disease: https://irp.nih.gov/news-and-events/in-the-news/lack-of-sleep-may-be-linked-to-risk-factor-for-alzheimers-disease
+- NCBI StatPearls, Caffeine: https://www.ncbi.nlm.nih.gov/books/NBK519490/
+- Yoo et al., Nature Neuroscience (2007), A deficit in the ability to form new human memories without sleep: https://pubmed.ncbi.nlm.nih.gov/17293859/
+- NHTSA, Drowsy Driving: https://www.nhtsa.gov/risky-driving/drowsy-driving
+- Nir et al., Nature Medicine (2017), Selective neuronal lapses precede human cognitive lapses following sleep deprivation: https://doi.org/10.1038/nm.4433
+- Krause et al., Journal of Neuroscience (2019), The Pain of Sleep Loss: A Brain Characterization in Humans: https://doi.org/10.1523/JNEUROSCI.2408-18.2018
+- Xie et al., Science (2013), Sleep Drives Metabolite Clearance from the Adult Brain: https://doi.org/10.1126/science.1241224
+- CU Boulder Today (2019), Catching up on sleep on the weekend doesn't work: https://www.colorado.edu/today/2019/02/28/catching-sleep-weekend-doesnt-work
+- NHS, Insomnia: https://www.nhs.uk/conditions/insomnia/
 
 This video is for educational purposes only and is not medical advice.
 
 Images:
 - Original animation by Inside Your Body
 - Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
-- Alyssa L. Miller / CC BY 2.0 (https://www.flickr.com/photos/34701044@N06/3628914665)
-- Shixart1985 / CC BY 2.0 (https://commons.wikimedia.org/wiki/File:Morning_setting_with_a_banana,_vintage_clock,_and_smartphone_on_a_table_during_bright_daylight.jpg)
-- Wilfredor / CC0 (https://commons.wikimedia.org/wiki/File:Woman_using_a_mobile_phone_on_Praia_do_Forte,_Cabo_Frio,_Brazil.jpg)
-- zoutedrop / CC BY 2.0 (https://www.flickr.com/photos/24028533@N03/2317065892)
-- schmidtgergely / CC BY 2.0 (https://www.flickr.com/photos/22692983@N07/3529604186)
-- cell105 / CC BY 2.0 (https://www.flickr.com/photos/76481380@N00/98055994)
-- Martin Iniguez, Antonio Jimenez-Marin, Asier Erramuzpe, Marian Acera, Beatriz Tijero, Ane Murueta-Goyena, Rocio Del Pino, Tamara Fernandez, Mar Carmona‑Abellan, Alberto Cabrera-Zubizarreta, Juan Carlos Gómez‑Esteban, Jesus M. Cortes & Inigo Gabilondo / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:Key_brain_regions_in_the_central_autonomic_network_(CAN).png)
-- Abhijit Deshpande / CC BY 3.0 (https://commons.wikimedia.org/wiki/File:A_Short_Snack_To_Start_The_Day_(220395147).jpeg)
-- NIH NIAID / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:White_Pulp_(NIH_BioArt_575).png)
-- Shoghi KI, Xu J, Su Y, He J, Rowland D, et al. / CC0 (https://commons.wikimedia.org/wiki/File:PET_scans_of_brain_tumor_using_Sigma-2_Ligands.png)
-- explorebiology / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:XBio_illustration_%E2%80%93_Hippocampus.png)
-- Michael Zanussi / CC BY 3.0 (https://commons.wikimedia.org/wiki/File:Sunrise_Through_The_Window_(161173301).jpeg)
-- Claudio Elias / Public domain (https://commons.wikimedia.org/wiki/File:WallCalendar.jpg)
-- Wonderlane from Seattle, USA / CC0 (https://commons.wikimedia.org/wiki/File:Saraswati,_the_Bodhisattva_goddess_of_the_arts,_literature,_language,_4-armed,_in_the_posture_of_royal_ease,_Mahabuddha_Temple,_Patan,_Kathmandu,_Nepal_(2052359620).jpg)
 ```
 
 ## Tags
-sleep deprivation, 24 hours without sleep, all nighter, what happens when you don't sleep, microsleep, adenosine, amygdala, beta amyloid, sleep science, human body, science explained, inside your body
+sleep deprivation, 24 hours without sleep, all-nighter, what happens when you don't sleep, microsleep, adenosine, caffeine, circadian rhythm, drowsy driving, sleep and memory, glymphatic system, brain, human body, amygdala, beta amyloid, sleep science, science explained, health science, inside your body
 
 ## Image credits
 - Original animation by Inside Your Body
 - Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
-- Alyssa L. Miller / CC BY 2.0 (https://www.flickr.com/photos/34701044@N06/3628914665)
-- Shixart1985 / CC BY 2.0 (https://commons.wikimedia.org/wiki/File:Morning_setting_with_a_banana,_vintage_clock,_and_smartphone_on_a_table_during_bright_daylight.jpg)
-- Wilfredor / CC0 (https://commons.wikimedia.org/wiki/File:Woman_using_a_mobile_phone_on_Praia_do_Forte,_Cabo_Frio,_Brazil.jpg)
-- zoutedrop / CC BY 2.0 (https://www.flickr.com/photos/24028533@N03/2317065892)
-- schmidtgergely / CC BY 2.0 (https://www.flickr.com/photos/22692983@N07/3529604186)
-- cell105 / CC BY 2.0 (https://www.flickr.com/photos/76481380@N00/98055994)
-- Martin Iniguez, Antonio Jimenez-Marin, Asier Erramuzpe, Marian Acera, Beatriz Tijero, Ane Murueta-Goyena, Rocio Del Pino, Tamara Fernandez, Mar Carmona‑Abellan, Alberto Cabrera-Zubizarreta, Juan Carlos Gómez‑Esteban, Jesus M. Cortes & Inigo Gabilondo / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:Key_brain_regions_in_the_central_autonomic_network_(CAN).png)
-- Abhijit Deshpande / CC BY 3.0 (https://commons.wikimedia.org/wiki/File:A_Short_Snack_To_Start_The_Day_(220395147).jpeg)
-- NIH NIAID / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:White_Pulp_(NIH_BioArt_575).png)
-- Shoghi KI, Xu J, Su Y, He J, Rowland D, et al. / CC0 (https://commons.wikimedia.org/wiki/File:PET_scans_of_brain_tumor_using_Sigma-2_Ligands.png)
-- explorebiology / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:XBio_illustration_%E2%80%93_Hippocampus.png)
-- Michael Zanussi / CC BY 3.0 (https://commons.wikimedia.org/wiki/File:Sunrise_Through_The_Window_(161173301).jpeg)
-- Claudio Elias / Public domain (https://commons.wikimedia.org/wiki/File:WallCalendar.jpg)
-- Wonderlane from Seattle, USA / CC0 (https://commons.wikimedia.org/wiki/File:Saraswati,_the_Bodhisattva_goddess_of_the_arts,_literature,_language,_4-armed,_in_the_posture_of_royal_ease,_Mahabuddha_Temple,_Patan,_Kathmandu,_Nepal_(2052359620).jpg)
 
 ## Sources
 - CDC NIOSH - Long work hours training: impairment from fatigue: https://archive.cdc.gov/www_cdc_gov/niosh/emres/longhourstraining/impaired.html
@@ -67,3 +47,11 @@ sleep deprivation, 24 hours without sleep, all nighter, what happens when you do
 - NHLBI - How Sleep Works: Your Sleep/Wake Cycle: https://www.nhlbi.nih.gov/health/sleep/sleep-wake-cycle
 - UC Berkeley News (2007) - Sleep deprivation and the emotional brain, Yoo et al., Current Biology: https://newsarchive.berkeley.edu/news/media/releases/2007/10/22_sleeploss.shtml
 - NIH Intramural Research Program - Lack of sleep may be linked to risk factor for Alzheimer's disease: https://irp.nih.gov/news-and-events/in-the-news/lack-of-sleep-may-be-linked-to-risk-factor-for-alzheimers-disease
+- NCBI StatPearls - Caffeine: https://www.ncbi.nlm.nih.gov/books/NBK519490/
+- Yoo et al., Nature Neuroscience (2007) - A deficit in the ability to form new human memories without sleep: https://pubmed.ncbi.nlm.nih.gov/17293859/
+- NHTSA - Drowsy Driving: https://www.nhtsa.gov/risky-driving/drowsy-driving
+- Nir et al., Nature Medicine (2017) - Selective neuronal lapses precede human cognitive lapses following sleep deprivation: https://doi.org/10.1038/nm.4433
+- Krause et al., Journal of Neuroscience (2019) - The Pain of Sleep Loss: A Brain Characterization in Humans: https://doi.org/10.1523/JNEUROSCI.2408-18.2018
+- Xie et al., Science (2013) - Sleep Drives Metabolite Clearance from the Adult Brain: https://doi.org/10.1126/science.1241224
+- CU Boulder Today (2019) - Catching up on sleep on the weekend doesn't work: https://www.colorado.edu/today/2019/02/28/catching-sleep-weekend-doesnt-work
+- NHS - Insomnia: https://www.nhs.uk/conditions/insomnia/

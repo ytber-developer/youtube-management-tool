@@ -2,6 +2,10 @@ Skip one night of sleep, and by morning your brain performs in some ways like a 
 
 Hour zero. You wake up at seven in the morning, rested. From this moment, a chemical called adenosine starts building up in your brain. Each waking hour adds a little more, and with it, a growing biological need for sleep.
 
+At breakfast, you pour a coffee. Caffeine works by blocking the receptors that adenosine normally plugs into, so your brain can't feel that pressure as strongly. But the adenosine hasn't gone anywhere. Caffeine hides the bill. It doesn't pay it.
+
+Caffeine also lingers in your body for hours. That is why a cup in the late afternoon can still be working at bedtime, making it harder to fall asleep when you finally try.
+
 You also run on an internal clock. A central circadian clock in your brain uses light, darkness, and other cues to tell you when it's time to sleep. In the evening, the sleep hormone melatonin starts to rise.
 
 Normally, those two forces team up at bedtime: lots of sleep pressure, and a clock saying it's night. Tonight, you ignore both. The pressure keeps rising. And the bright screen in your hand doesn't help, because bright light late in the evening can suppress melatonin.
@@ -10,26 +14,44 @@ Hour seventeen. It's midnight. According to the CDC's workplace safety institute
 
 As the night goes on, your thinking slows. You take longer to finish tasks, your reaction time gets slower, and you make more mistakes. Reading the same sentence three times starts to feel normal. And if alcohol enters the picture, even a small amount drags performance down further.
 
+Your memory slips too. In a Harvard study, people kept awake for about thirty five hours tried to learn new material. The hippocampus, your brain's inbox for new memories, was far less active, and later they remembered less than people who had slept.
+
+Somewhere between midnight and six in the morning, your body hits a natural dip in alertness. According to the National Highway Traffic Safety Administration, that's when drowsy driving crashes happen most often, with a second, smaller danger window in the late afternoon.
+
 Then come microsleeps: brief moments of sleep that slip in while you're supposed to be awake. They are brief, and you might not even realize they happened. One moment you're reading, the next, you've lost your place.
+
+Scientists have even caught single brain cells dozing. In a 2017 study, researchers recorded neurons in hospital patients who already had brain electrodes for epilepsy tests. After a sleepless night, just before a mistake, some neurons responded slowly and weakly.
+
+Those sluggish cells came with slow, sleep-like brain waves in the same spot, while other regions kept working normally. So you can sit there, eyes open, looking awake, while a small patch of your brain has briefly gone offline.
 
 Hour twenty-four. Seven in the morning again. Now the CDC comparison gets serious. A full day awake is similar to a blood alcohol level of zero point one zero percent. That's above the zero point zero eight limit for drunk driving in the US.
 
-Your emotions take a hit too. In a study from UC Berkeley and Harvard, people kept awake for about thirty-five hours viewed upsetting images in a brain scanner. Their amygdala, the brain's emotional alarm, was more than sixty percent more reactive than in people who'd slept. Sleep deficiency has also been linked to risk-taking behavior.
+That's why the safest move after an all-nighter is simple: don't drive. Federal safety officials estimate drowsy drivers were involved in about ninety one thousand police-reported crashes in 2017. Drifting over lane lines or hitting rumble strips are signs to pull over.
 
-Normally, the front of your brain, the prefrontal cortex, helps keep that alarm in check. Without sleep, the link between the two weakens. That's part of why small annoyances can feel enormous when you're exhausted. The lead researcher said healthy brains deprived of sleep mimicked some patterns seen in psychiatric conditions.
+Your emotions take a hit too. In a study from UC Berkeley and Harvard, people kept awake for about thirty-five hours viewed upsetting images in a brain scanner. Their amygdala, the brain's emotional alarm, was more than sixty percent more reactive than in people who'd slept.
+
+Normally, the front of your brain, the prefrontal cortex, helps keep that alarm in check. Without sleep, the link between the two weakens. That's part of why small annoyances can feel enormous when you're exhausted, and why sleep deficiency has been linked to risk-taking.
+
+Even pain gets louder. In a UC Berkeley study, one night without sleep lowered people's pain threshold, so heat they normally tolerated started to hurt. Brain scans showed pain-sensing areas ramping up, while regions that help weigh and manage pain went quieter.
 
 Your body chemistry shifts as well. When you don't get enough sleep, levels of ghrelin, a hormone that makes you feel hungry, go up. Levels of leptin, a hormone that helps you feel full, go down.
 
 According to the National Heart, Lung, and Blood Institute, sleep deficiency is also linked to higher than normal blood sugar. And over time, ongoing sleep loss can change the way your immune system responds to germs.
 
-Here's the most surprising part. In a small NIH study, researchers scanned people's brains after a normal night of sleep, then again after a night without it. After just one sleepless night, they saw an increase in beta amyloid, a protein linked to Alzheimer's disease.
+Why does skipping sleep hit the brain so hard? Part of the answer may be cleanup. In a 2013 study in mice, the spaces between brain cells widened by about sixty percent during sleep, letting fluid wash away waste much faster than when awake.
+
+One of the things cleared away is beta amyloid, a protein linked to Alzheimer's disease. In a small NIH study, researchers scanned people's brains after a normal night of sleep, then again after a night without it. After one sleepless night, beta amyloid went up.
 
 The buildup showed up in the hippocampus, a region important for memory, and in the thalamus. The researchers called the finding preliminary, and one rough night doesn't mean disease. But it hints at how closely sleep and brain health are tied.
 
 Meanwhile, that adenosine has been piling up for twenty-four hours, and your internal clock is telling you it's morning. That mismatch can make an all-nighter feel strange: exhausted, yet weirdly wired.
 
-These are the effects of a single night. When short sleep becomes a habit, they add up. According to the National Heart, Lung, and Blood Institute, adults who regularly get seven to eight hours of sleep a night have a lower risk of obesity and high blood pressure.
+So can you just catch up on the weekend? In a University of Colorado study, people who slept too little on weeknights and slept in on weekends still snacked more at night, gained weight, and became less sensitive to insulin. Sleeping in didn't undo it.
 
-So one night without sleep doesn't just leave you tired. It slows your reactions, sharpens your emotional alarm, nudges your hunger, and changes your brain chemistry, all in a single trip around the clock.
+These effects add up when short sleep becomes a habit. According to the National Heart, Lung, and Blood Institute, adults who regularly get seven to eight hours of sleep a night have a lower risk of obesity and high blood pressure.
+
+And if you often struggle to sleep, you don't have to tough it out. The NHS suggests seeing a doctor if changing your habits hasn't helped, if it's gone on for months, or if it's making daily life hard to cope with.
+
+So one night without sleep doesn't just leave you tired. In a single trip around the clock, it slows your reactions, blurs new memories, turns up pain and emotion, nudges your hunger, and leaves your brain's cleanup job unfinished.
 
 Follow Inside Your Body for more of the science of you.

@@ -1,13 +1,55 @@
-What if you fell into a black hole? Let's find out. And let's hope you packed light.
+What if you fell into a black hole? Not near it. Into it. Let's ride all the way down, and let's hope you packed light.
 
-A black hole is matter crushed so tightly that its gravity traps everything, even light. Its edge is called the event horizon. Cross it, and there is no way back.
+A black hole is matter crushed so tightly that its gravity traps everything, even light. Its edge is called the event horizon. It isn't a solid surface you could land on. Cross it, and there is no way back.
 
-Fall into a small black hole, a few times the mass of our Sun, and gravity pulls your feet far harder than your head. You get stretched like a noodle. Scientists really call this spaghettification.
+For a long time, even Albert Einstein doubted these things were real. Then, in 1965, the physicist Roger Penrose proved that black holes are a natural result of Einstein's own theory of gravity. That work later won a Nobel Prize.
 
-But pick a giant, like Sagittarius A star at the center of our galaxy, four million times the mass of the Sun, and the pull is gentle at the edge. You would drift across the horizon and feel nothing at all.
+First, a myth to bust. Black holes are not cosmic vacuum cleaners. If you swapped our Sun for a black hole with the same mass, Earth would get very cold, but every planet would keep circling in its orbit.
 
-To a friend watching from far away, you would never quite make it. Your image would slow down, turn red, and fade, frozen at the edge.
+So you need to pick one and fly to it. The closest black hole we know of sits about fifteen hundred light-years from Earth. Let's pretend your rocket can make that trip.
 
-For you, the fall goes on, toward a point where our laws of physics simply break down. What happens there? Nobody knows yet.
+That nearby one is a stellar-mass black hole. It forms when a giant star, around twenty times heavier than the Sun or more, runs out of fuel and its core collapses. Our galaxy may hide a hundred million of them.
+
+Here's the problem. Near a small black hole, gravity changes fast over short distances. Fall in feet first, and your feet are pulled far harder than your head. You get stretched like a noodle. Scientists really call this spaghettification.
+
+And it happens early. NASA notes that small black holes, up to about thirty times the Sun's mass, have tiny horizons and fierce tidal forces. They can rip you apart before you ever reach the edge.
+
+So let's choose a giant instead. At the center of our galaxy sits Sagittarius A star. Since the early 1990s, astronomers have watched stars whip around it at dizzying speeds, circling something completely invisible.
+
+Those orbits revealed about four million times the mass of the Sun, packed into a region no larger than our solar system. In 2022, telescopes linked across the planet finally captured its picture: a dark shadow inside a ring of glowing gas.
+
+So what would the fall look like? In 2024, NASA ran the trip on a supercomputer. A virtual camera, standing in for a daring astronaut, plunged toward a black hole just like the one in our galaxy.
+
+The camera starts nearly four hundred million miles away. In real time, the fall to the edge takes about three hours, circling the black hole almost twice on the way.
+
+Around you swirls an accretion disk, a flat cloud of gas heated until it glows. Closer in, you see thin bright rings, made of light that has circled the black hole one or more times before reaching your eyes.
+
+As you drop, the whole sky warps. Starlight bends around the black hole, and you see the same stars more than once, copies smeared across twisted space.
+
+Then the event horizon arrives. For this giant, it spans about sixteen million miles. Here's the surprise: because it's so big, you would drift right across the edge without being torn apart. You might feel nothing at all.
+
+But to a friend watching from far away, you would never quite make it. Your image would slow down, grow redder and fainter, and seem to freeze just outside the edge. That's why astronomers once called black holes frozen stars.
+
+Inside, things get truly strange. At the horizon, space itself flows inward at the speed of light. Every path you could take, in every direction, now leads toward the center. Turning around is no longer an option.
+
+And the clock is short. In NASA's simulation, once the camera crosses the horizon, it is spaghettified only about thirteen seconds later. Even a giant stretches you in the end. It just waits until you're inside.
+
+What if you lose your nerve and turn back just in time? NASA ran that version too. An astronaut skims close to the horizon, and slingshots back out. The whole round trip takes about six hours.
+
+When she gets home, she is thirty-six minutes younger than her crew who stayed far away. Time really runs slower near strong gravity. Around a fast-spinning black hole, like the one in the movie Interstellar, she could gain many years.
+
+Black holes can even crash into each other. In 2015, the LIGO detectors felt ripples in space from two black holes, about twenty-nine and thirty-six times the Sun's mass, colliding. About three Suns' worth of mass turned into gravitational waves.
+
+Back to your fall. Where does it end? General relativity predicts a point at the very center, called the singularity, where matter is crushed to infinite density. Our known laws of physics simply stop working there.
+
+Scientists don't know if the singularity is a real thing or just a sign that Einstein's theory has reached its limit. A full answer probably needs gravity and quantum physics combined, and nobody has managed that yet.
+
+Here's the twist. Black holes may not last forever. In 1974, Stephen Hawking calculated that they should slowly leak energy and shrink, until they finally disappear. It's now called Hawking radiation.
+
+For a black hole as heavy as the Sun, that would take vastly longer than the universe has existed so far. And no one has ever detected Hawking radiation. It remains a prediction, still waiting for proof.
+
+So what really becomes of everything that falls in, including you? If a black hole evaporates, is that information gone forever? Physicists have argued about it for about fifty years, and it still isn't settled.
+
+So here's your best plan. Pick a giant, enjoy the three-hour fall, watch the sky bend, and cross the edge in one piece. Then spend your final seconds somewhere no human has ever seen, where physics itself runs out.
 
 Follow Cosmic What If for more mind-bending science.

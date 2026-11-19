@@ -1,70 +1,607 @@
 {
   "channel": "inside-your-body",
+  "style": "anim",
   "number": 2,
   "slug": "why-do-we-yawn",
-  "target_minutes": 1.67,
+  "target_minutes": 6.2,
   "title": "Why Do We Yawn? Science Still Isn't Sure",
   "thumbnail_text": "WHY DO WE YAWN?",
-  "description": "You do it about nine times a day, you started before you were born, and you can catch it from a friend. Here are the leading scientific ideas about why we yawn, and the one that didn't survive testing.\n\nSources:\n- Frontiers in Neuroscience (2013), The thermoregulatory theory of yawning: what we know from over five years of research: https://pmc.ncbi.nlm.nih.gov/articles/PMC3534187/\n- Cleveland Clinic, Yawning: https://my.clevelandclinic.org/health/body/yawning\n\nThis video is for educational purposes only and is not medical advice.",
-  "tags": ["why do we yawn", "yawning", "contagious yawning", "brain cooling", "human body", "neuroscience", "body facts", "science explained", "inside your body"],
-  "sources": [
-    { "title": "Frontiers in Neuroscience (2013) - The thermoregulatory theory of yawning: what we know from over five years of research", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3534187/" },
-    { "title": "Cleveland Clinic - Yawning", "url": "https://my.clevelandclinic.org/health/body/yawning" }
+  "description": "You do it about nine times a day, you started before you were born, and you can catch it from a friend, or even your dog. We slow a yawn down step by step, test the oxygen and boredom myths, follow the evidence that yawns help cool your brain, and dig into why yawns are contagious, including a study that found empathy may not explain who catches them. Plus: when a lot of yawning is worth a chat with your doctor.\n\nSources:\n- Cleveland Clinic - Yawning: https://my.clevelandclinic.org/health/body/yawning\n- Frontiers in Neuroscience (2013) - The thermoregulatory theory of yawning: what we know from over five years of research: https://pmc.ncbi.nlm.nih.gov/articles/PMC3534187/\n- Biology Letters (2016) - Yawn duration predicts brain weight and cortical neuron number in mammals: https://pmc.ncbi.nlm.nih.gov/articles/PMC5095190/\n- PLOS ONE (2011) - Yawn Contagion and Empathy in Homo sapiens: https://pmc.ncbi.nlm.nih.gov/articles/PMC3233580/\n- Biology Letters (2008) - Dogs catch human yawns: https://pmc.ncbi.nlm.nih.gov/articles/PMC2610100/\n- PLOS ONE (2014) - Individual Variation in Contagious Yawning Susceptibility Is Highly Stable and Largely Unexplained by Empathy or Other Known Factors: https://pmc.ncbi.nlm.nih.gov/articles/PMC3954725/\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": [
+    "why do we yawn",
+    "yawning",
+    "contagious yawning",
+    "brain cooling",
+    "why are yawns contagious",
+    "yawning and empathy",
+    "excessive yawning",
+    "do dogs catch yawns",
+    "human body",
+    "neuroscience",
+    "body facts",
+    "science explained",
+    "inside your body"
   ],
+  "sources": [
+    {
+      "title": "Cleveland Clinic - Yawning",
+      "url": "https://my.clevelandclinic.org/health/body/yawning"
+    },
+    {
+      "title": "Frontiers in Neuroscience (2013) - The thermoregulatory theory of yawning: what we know from over five years of research",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3534187/"
+    },
+    {
+      "title": "Biology Letters (2016) - Yawn duration predicts brain weight and cortical neuron number in mammals",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5095190/"
+    },
+    {
+      "title": "PLOS ONE (2011) - Yawn Contagion and Empathy in Homo sapiens",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3233580/"
+    },
+    {
+      "title": "Biology Letters (2008) - Dogs catch human yawns",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2610100/"
+    },
+    {
+      "title": "PLOS ONE (2014) - Individual Variation in Contagious Yawning Susceptibility Is Highly Stable and Largely Unexplained by Empathy or Other Known Factors",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3954725/"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "yawn",
+    "props": [
+      {
+        "icon": "yawning-face",
+        "at": "right",
+        "size": "xl"
+      },
+      {
+        "icon": "red-question-mark",
+        "at": "far-right",
+        "size": "m"
+      }
+    ]
+  },
   "scenes": [
     {
       "narration": "You might yawn just watching this. Scientists still can't fully explain why we do it, but they do have some strong suspects.",
-      "headline": "WHY DO WE <em>YAWN?</em>",
-      "sub": "Science is still investigating",
-      "visual": { "type": "stock", "query": "woman yawning at desk", "note": "person mid-yawn at a work desk" }
+      "anim": {
+        "action": "yawn",
+        "props": [
+          {
+            "icon": "yawning-face",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "room"
+      }
     },
     {
-      "narration": "A yawn is a whole routine. You open your jaw wide, take a long, deep breath, pause, then breathe out. It usually lasts four to seven seconds, and the average adult yawns about nine times a day.",
-      "headline": "ABOUT <em>NINE</em> YAWNS A DAY",
-      "sub": "Each one lasts four to seven seconds",
-      "visual": { "type": "diagram", "spec": "four-step yawn sequence: jaw opens wide, deep inhale, pause, quick exhale, with a timer showing four to seven seconds" }
+      "narration": "Yawning is everywhere. The average adult yawns about nine times a day, and some people yawn up to twenty times, which is normal for them. Your cat does it, your dog does it, and so do birds and even fish.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "cat-face",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "fish",
+            "at": "far-right",
+            "size": "s",
+            "anim": "bob"
+          },
+          {
+            "icon": "bird",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "text": "NINE A DAY"
+      }
     },
     {
-      "narration": "The oldest idea says yawning brings in extra oxygen. It sounds logical, but it failed the test. In a 1987 experiment, people breathed air with extra oxygen or extra carbon dioxide, and their yawning didn't change.",
-      "headline": "THE OXYGEN IDEA <em>FAILED</em>",
-      "sub": "Tested in 1987",
-      "visual": { "type": "stock", "query": "scientist laboratory breathing experiment", "note": "researcher in a lab with breathing equipment" }
+      "narration": "It is also ancient. Yawn-like gaping of the jaw has been spotted across every major group of animals with a backbone. A behavior that widespread has probably been doing an important job for a very long time.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "crocodile",
+            "at": "bubble"
+          },
+          {
+            "icon": "bone",
+            "at": "right",
+            "size": "s"
+          }
+        ]
+      }
     },
     {
-      "narration": "The leading idea today is brain cooling. A deep yawn pulls in cooler air and shifts blood flow through your head, a bit like a radiator. In rats, brain temperature rose just before a yawn and dropped right after.",
-      "headline": "A RADIATOR FOR YOUR <em>BRAIN?</em>",
-      "sub": "The brain cooling hypothesis",
-      "visual": { "type": "science", "query": "human brain blood vessels illustration", "note": "illustration of blood vessels supplying the brain" }
+      "narration": "So what actually happens in a yawn? It usually lasts four to seven seconds. First comes a long breath in, through your nose and then your mouth, followed by a powerful stretch, and finally a quick breath out.",
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "text": "FOUR TO SEVEN SECONDS"
+      }
     },
     {
-      "narration": "There's support in people, too. In Tucson, Arizona, pedestrians were nearly twice as likely to yawn in winter as on scorching summer days, when the outside air was about as warm as their bodies and couldn't cool much.",
-      "headline": "MORE YAWNS IN <em>WINTER</em>",
-      "sub": "When the air can cool you",
-      "visual": { "type": "stock", "query": "people walking city street winter", "note": "pedestrians on a cool, sunny city street" }
+      "narration": "Inside, a lot is moving at once. Your diaphragm and rib muscles pull air in, your lower jaw drops open, the tip of your tongue pulls back, and your voice box slides down in your neck.",
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "lungs",
+            "at": "right",
+            "size": "m",
+            "anim": "grow"
+          },
+          {
+            "icon": "tongue",
+            "at": "left",
+            "size": "s"
+          }
+        ]
+      }
     },
     {
-      "narration": "Then there's the strangest part. Yawns are contagious. Seeing or hearing someone yawn can set you off, and you're more likely to catch one from family and friends than from strangers. Many researchers link this to empathy.",
-      "headline": "YAWNS ARE <em>CONTAGIOUS</em>",
-      "sub": "Especially from people you love",
-      "visual": { "type": "stock", "query": "friends yawning together on couch", "note": "two friends yawning at the same time" }
+      "narration": "At its peak, your throat can widen to three or four times its normal size. Tiny tubes linking your ears to your throat open too, which is why your ears may pop, and why yawning can ease ear pressure on a plane.",
+      "anim": {
+        "action": "yawn",
+        "props": [
+          {
+            "icon": "ear",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "airplane",
+            "at": "top-left",
+            "size": "s",
+            "anim": "approach"
+          }
+        ],
+        "camera": "zoom-in"
+      }
     },
     {
-      "narration": "And yawning starts before you're even born. Babies yawn in the womb about three months into pregnancy. That's one reason the oxygen idea never quite fit: those babies aren't breathing air at all.",
-      "headline": "YAWNING BEFORE <em>BIRTH</em>",
-      "sub": "About three months into pregnancy",
-      "visual": { "type": "science", "query": "fetus ultrasound image", "note": "gentle ultrasound image of a fetus" }
+      "narration": "Many people stretch their arms at the same moment, close their eyes, and get watery eyes as face muscles squeeze the tear glands. Then the tension releases, you breathe out, and there is that oddly satisfying feeling.",
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "left",
+            "size": "s",
+            "anim": "fall"
+          },
+          {
+            "icon": "relieved-face",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "face": "smile"
+      }
     },
     {
-      "narration": "So why do we yawn? Probably for more than one reason: cooling the brain, nudging it awake, maybe keeping a group in sync. The honest answer is that science is still working on it.",
-      "headline": "THE ANSWER IS <em>STILL OPEN</em>",
-      "sub": "Cooling, alertness, social signals",
-      "visual": { "type": "stock", "query": "sleepy man yawning morning coffee", "note": "person yawning in the morning" }
+      "narration": "Yawns also tend to come in little bursts of two or three, each one stronger than the last. So now the big question. What is all this effort actually for?",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "red-question-mark",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          }
+        ],
+        "text": "WHAT IS IT FOR?"
+      }
+    },
+    {
+      "narration": "The oldest idea says yawning brings in extra oxygen. It sounds logical, but it failed the test. In a 1987 experiment, people breathed air with extra oxygen or extra carbon dioxide, and their yawning did not change.",
+      "anim": {
+        "action": "hold-breath",
+        "props": [
+          {
+            "icon": "cross-mark",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "lab",
+        "face": "hold"
+      }
+    },
+    {
+      "narration": "The same researchers had people exercise hard enough to double their breathing rate. Still no change in yawning. Whatever yawns are doing, they seem to be controlled separately from ordinary breathing.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "lungs",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "stopwatch",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "And yawning starts before you are even born. A baby begins yawning in the womb about twelve weeks after conception, around twenty five times a day. Those babies get oxygen through the umbilical cord, not by breathing air.",
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "baby",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "text": "YAWNING BEFORE BIRTH",
+        "face": "sleep"
+      }
+    },
+    {
+      "narration": "Then there is the boredom myth. Tiredness and boredom are the most common triggers, but they are not the only ones. Athletes often yawn right before a big game, and people yawn during stressful moments too.",
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "soccer-ball",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "trophy",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "That fits a pattern. Across many animals, yawns tend to come right before important events and changes in activity. One idea, the arousal hypothesis, says a yawn helps switch your brain into a new state.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "There is some support for that. Your heart rate rises during a yawn, and all that stretching in your face may help you feel more alert. It is like a tiny reset button you press without thinking.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Notice when yawns happen most: just before sleep, and right after waking up. In the evening your brain temperature is near its daily peak, and in the morning it starts rising from its lowest point. That clue points to the leading idea.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "bed",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "alarm-clock",
+            "at": "top-left",
+            "size": "s",
+            "anim": "shake"
+          }
+        ],
+        "bg": "room",
+        "face": "sleep"
+      }
+    },
+    {
+      "narration": "Brain cooling. A deep yawn pulls in a big gulp of cooler air and boosts blood flow through your head and face, working a bit like a radiator for your brain. Scientists call this the thermoregulatory theory.",
+      "anim": {
+        "action": "yawn",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "snowflake",
+            "at": "top-left",
+            "size": "s",
+            "anim": "fall"
+          }
+        ],
+        "text": "BRAIN COOLING"
+      }
+    },
+    {
+      "narration": "The evidence started with rats. Researchers placed tiny temperature probes in their brains and found that brain temperature rose quickly just before a yawn, then dropped by about the same amount right after.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "rat",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "thermometer",
+            "at": "left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "People tested it in a clever way. In a 2007 study, volunteers were shown people yawning. Those who breathed through their nose, or held something cool against their forehead, yawned less. Both tricks help cool the brain.",
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "ice",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "nose",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "Then came a natural test in Tucson, Arizona. Pedestrians were nearly twice as likely to yawn in winter, around room temperature, as in early summer, when the air was about as warm as their bodies and could not cool them much.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "desert",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "text": "TWICE IN WINTER",
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Budgies showed the same window. As the air warmed up, they yawned more. But when it got truly hot, the yawns faded and panting took over. A yawn only cools you if the air is cooler than you.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "parrot",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "hot-face",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "Here is a fun one. In 2016, researchers timed yawns in online videos of mammals, many found on YouTube. Animals with bigger brains and more brain cells tended to yawn longer. Human yawns average about six seconds.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "monkey-face",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "television",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Then there is the strangest part. Yawns are contagious. Seeing or hearing someone yawn can set you off, and so can just reading or thinking about yawning. If you have yawned during this video, that is why.",
+      "anim": {
+        "action": "yawn",
+        "props": [
+          {
+            "icon": "eyes",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "open-book",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "CONTAGIOUS YAWNS"
+      }
+    },
+    {
+      "narration": "Who you catch it from matters. One study watched people yawning in everyday life for a whole year. Contagion was strongest between family members, then friends, then acquaintances, and weakest between strangers.",
+      "anim": {
+        "action": "wave",
+        "props": [
+          {
+            "icon": "people-hugging",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "handshake",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "It even crosses species. In one experiment, twenty one out of twenty nine dogs yawned after watching a person yawn, but none of them yawned when the person made other mouth movements.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "dog-face",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          }
+        ],
+        "bg": "room",
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Many researchers link contagious yawning to empathy. But here is the twist. A study of three hundred twenty eight people found that empathy, intelligence and time of day did not predict who caught yawns. Younger people caught them a bit more.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "bubble"
+          },
+          {
+            "icon": "red-question-mark",
+            "at": "right",
+            "size": "s",
+            "anim": "bob"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Even age explained only about eight percent of the difference. Some people simply never catch yawns, and they do not even feel the urge. Why one person is so easily set off and another is immune is still a mystery.",
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "red-question-mark",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "text": "STILL A MYSTERY",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "For almost everyone, yawning is harmless. But if you find yourself yawning far more than usual for several days, talk to your doctor. And if lots of yawning comes with sudden weakness or numbness in your face, arm or leg, get emergency care.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "stethoscope",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "warning",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "So why do we yawn? Probably for more than one reason: cooling the brain, nudging it awake at moments of change, maybe keeping a group in sync. Science is still working on it.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sparkles",
+            "at": "above",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "smile"
+      }
     },
     {
       "narration": "Follow Inside Your Body for more of the science of you.",
-      "headline": "",
-      "sub": "",
-      "visual": { "type": "outro" }
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
     }
   ]
 }

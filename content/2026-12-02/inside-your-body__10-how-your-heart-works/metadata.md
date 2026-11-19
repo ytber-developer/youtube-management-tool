@@ -23,22 +23,16 @@ Sources:
 This video is for educational purposes only and is not medical advice.
 
 Images:
-- Illustration with Fluent Emoji by Microsoft (https://github.com/microsoft/fluentui-emoji)
-- Kuldeep / CC0 (https://wordpress.org/photos/photo/7246594b85/)
-- Unknown author / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:Anatomical_diagram_depicting_the_veins_Wellcome_L0032947.jpg)
-- OpenStax College / CC BY 3.0 (https://commons.wikimedia.org/wiki/File:2011_Heart_Valves.jpg)
-- BruceBlaus. When using this image in external sources it can be cited as: Blausen.com staff (2014). "Medical gallery of Blausen Medical 2014". WikiJournal of Medicine 1 (2). DOI:10.15347/wjm/2014.010. ISSN 2002-4436. / CC BY 3.0 (https://commons.wikimedia.org/wiki/File:Blausen_0152_CABG_All.png)
+- Original animation by Inside Your Body
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 ```
 
 ## Tags
 heart, how the heart works, heartbeat, cardiac conduction system, sinoatrial node, heart valves, blood flow, circulatory system, anatomy, cardiology, human body, science explained, inside your body
 
 ## Image credits
-- Illustration with Fluent Emoji by Microsoft (https://github.com/microsoft/fluentui-emoji)
-- Kuldeep / CC0 (https://wordpress.org/photos/photo/7246594b85/)
-- Unknown author / CC BY 4.0 (https://commons.wikimedia.org/wiki/File:Anatomical_diagram_depicting_the_veins_Wellcome_L0032947.jpg)
-- OpenStax College / CC BY 3.0 (https://commons.wikimedia.org/wiki/File:2011_Heart_Valves.jpg)
-- BruceBlaus. When using this image in external sources it can be cited as: Blausen.com staff (2014). "Medical gallery of Blausen Medical 2014". WikiJournal of Medicine 1 (2). DOI:10.15347/wjm/2014.010. ISSN 2002-4436. / CC BY 3.0 (https://commons.wikimedia.org/wiki/File:Blausen_0152_CABG_All.png)
+- Original animation by Inside Your Body
+- Icons: Fluent Emoji by Microsoft (MIT License) (https://github.com/microsoft/fluentui-emoji)
 
 ## Sources
 - NHLBI - How the Heart Beats: https://www.nhlbi.nih.gov/health/heart/heart-beats

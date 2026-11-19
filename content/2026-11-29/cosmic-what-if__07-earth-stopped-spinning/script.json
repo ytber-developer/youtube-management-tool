@@ -1,0 +1,694 @@
+{
+  "channel": "cosmic-what-if",
+  "number": 7,
+  "slug": "earth-stopped-spinning",
+  "target_minutes": 7.2,
+  "title": "What If Earth Stopped Spinning? Fast vs. Slow",
+  "thumbnail_text": "EARTH STOPS SPINNING",
+  "description": "Earth carries you east at hundreds of miles per hour without you feeling a thing. What happens if it stops depends on how fast it stops: one version is over in minutes, the other redraws the map of the world, turns a day into a year and strands your satellites. We bust the 'flung into space' myth, visit Venus, the planet that almost did stop, and rewind to a time when a day lasted under ten hours. Then the twist: Earth's spin is changing right now, and your clocks have to keep up.\n\nSources:\n- Astronomy Magazine, What happens if Earth stops rotating?: https://www.astronomy.com/science/what-happens-if-earth-stops-rotating/\n- NASA NSSDC, Earth Fact Sheet: https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html\n- NASA JPL, Earth's Rotation Slows Down: https://www.jpl.nasa.gov/news/earths-rotation-slows-down/\n- Maps on the Web, If the Earth stood still (Esri model): https://mapsontheweb.zoom-maps.com/posts/what-if/if-the-earth-stood-still-the-oceans-would-gradually-migrate-toward-the-poles-and-cause-land-in-the-equatorial-region-to-emerge.html\n- NASA Science, Earth's Moon Facts: https://science.nasa.gov/moon/facts/\n- NASA Science, Venus Facts: https://science.nasa.gov/venus/venus-facts/\n- ESA, Types of orbits: https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits\n- NASA Science, Basics of Space Flight: Launch: https://science.nasa.gov/learn/basics-of-space-flight/chapter14-1/\n- University of Toronto, Astrophysicists reveal why Earth's day was constant for over a billion years: https://www.utoronto.ca/news/astrophysicists-reveal-why-earths-day-was-constant-over-billion-years\n- NASA JPL, Japan Quake May Have Shortened Earth Days, Moved Axis: https://www.jpl.nasa.gov/news/japan-quake-may-have-shortened-earth-days-moved-axis/\n- NIST, Leap Seconds FAQs: https://www.nist.gov/pml/time-and-frequency-division/leap-seconds-faqs",
+  "tags": [
+    "earth stopped spinning",
+    "what if",
+    "earth rotation",
+    "physics",
+    "geography",
+    "equatorial bulge",
+    "day length",
+    "tides",
+    "venus",
+    "tidal locking",
+    "leap second",
+    "geostationary orbit",
+    "earth science",
+    "space",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Astronomy Magazine - What happens if Earth stops rotating?",
+      "url": "https://www.astronomy.com/science/what-happens-if-earth-stops-rotating/"
+    },
+    {
+      "title": "NASA NSSDC - Earth Fact Sheet",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+    },
+    {
+      "title": "NASA JPL - Earth's Rotation Slows Down",
+      "url": "https://www.jpl.nasa.gov/news/earths-rotation-slows-down/"
+    },
+    {
+      "title": "Maps on the Web - If the Earth stood still (Esri model)",
+      "url": "https://mapsontheweb.zoom-maps.com/posts/what-if/if-the-earth-stood-still-the-oceans-would-gradually-migrate-toward-the-poles-and-cause-land-in-the-equatorial-region-to-emerge.html"
+    },
+    {
+      "title": "NASA Science - Earth's Moon Facts",
+      "url": "https://science.nasa.gov/moon/facts/"
+    },
+    {
+      "title": "NASA Science - Venus Facts",
+      "url": "https://science.nasa.gov/venus/venus-facts/"
+    },
+    {
+      "title": "ESA - Types of orbits",
+      "url": "https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits"
+    },
+    {
+      "title": "NASA Science - Basics of Space Flight: Launch",
+      "url": "https://science.nasa.gov/learn/basics-of-space-flight/chapter14-1/"
+    },
+    {
+      "title": "University of Toronto - Astrophysicists reveal why Earth's day was constant for over a billion years",
+      "url": "https://www.utoronto.ca/news/astrophysicists-reveal-why-earths-day-was-constant-over-billion-years"
+    },
+    {
+      "title": "NASA JPL - Japan Quake May Have Shortened Earth Days, Moved Axis",
+      "url": "https://www.jpl.nasa.gov/news/japan-quake-may-have-shortened-earth-days-moved-axis/"
+    },
+    {
+      "title": "NIST - Leap Seconds FAQs",
+      "url": "https://www.nist.gov/pml/time-and-frequency-division/leap-seconds-faqs"
+    }
+  ],
+  "style": "anim",
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "globe-showing-americas",
+        "at": "right",
+        "size": "xl"
+      },
+      {
+        "icon": "water-wave",
+        "at": "left",
+        "size": "m"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "Earth spins so smoothly you never feel it. But what if it stopped? The answer depends on one thing: how fast it stops.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "xl",
+            "anim": "spin"
+          }
+        ],
+        "text": "WHAT IF?",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Right now, a spot on the equator is moving at about one thousand thirty seven miles per hour, carried around by Earth's spin. In New York City, you're moving at almost eight hundred miles per hour. At the North Pole, you're just turning in place.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "dashing-away",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "1,037 MPH",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "So why don't you feel it? Because the motion is smooth and steady. On a cruising jet, you only notice when it speeds up or slows down. A sudden stop would be the ultimate slam on the brakes.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "airplane",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          }
+        ],
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "Scenario one: the solid Earth stops in an instant. The ground would halt, but anything not firmly attached to it would not. You, your house, the air, and the oceans would all keep rushing east at full speed.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "house",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "water-wave",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "text": "INSTANT STOP",
+        "camera": "shake",
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "Near the equator, the atmosphere would scour the surface at more than a thousand miles per hour. That's roughly five times faster than the strongest surface wind ever recorded, and with about twenty five times the force.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "wind-face",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "tornado",
+            "at": "left",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "camera": "shake",
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "The oceans would surge out of their basins and pour across the land. Near the equator, almost nothing on the surface would survive. Your best odds would be close to the poles, where the ground was barely moving to begin with.",
+      "anim": {
+        "action": "swallowed",
+        "props": [
+          {
+            "icon": "water-wave",
+            "at": "right",
+            "size": "xl",
+            "anim": "approach"
+          }
+        ],
+        "face": "shock",
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "You might picture everyone flying off into space. You wouldn't. To escape Earth's gravity, you'd need about twenty five thousand miles per hour. A thousand miles per hour just sends you tumbling east along the ground, with everything else.",
+      "anim": {
+        "action": "fall-toward",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "top",
+            "size": "m"
+          },
+          {
+            "icon": "cross-mark",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "text": "NOT INTO SPACE",
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "Fortunately, nothing we know of could stop a planet that fast. Earth's spin holds an enormous amount of momentum, and there's no brake big enough. So try scenario two: Earth slows down gradually, over a very long time, until it stops.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "bubble",
+            "size": "l"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Here's the surprising part. Earth isn't a perfect sphere. Its spin flings material outward, so the planet bulges at the equator. Stand on the equator, and you're about thirteen miles farther from Earth's center than you would be at either pole.",
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "text": "13-MILE BULGE",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "The oceans are shaped by that spin too, piling up around the middle of the planet. Take the spin away, and gravity pulls the water toward the poles, which now sit lower than the old equatorial bulge.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "water-wave",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Mapping experts at the company Esri modeled exactly this. In their simulation, the water gathers into two vast polar oceans, and a single giant continent rises around the equator, wrapping all the way around the world.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "world-map",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "laptop",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Much of North America would sink beneath a new northern ocean. Meanwhile, the old seafloor near the equator would rise so high above the new sea level that, scientists think, its air would be as thin as on a tall mountain.",
+      "anim": {
+        "action": "hold-breath",
+        "props": [
+          {
+            "icon": "snow-capped-mountain",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "water-wave",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "Then there's the light. If Earth stopped turning completely, a single day would last a whole year. Wherever you lived, you'd get about six months of daylight, followed by about six months of night.",
+      "anim": {
+        "action": "yawn",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "m"
+          },
+          {
+            "icon": "crescent-moon",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "YEAR-LONG DAY",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "And here's a strange detail. Even with no spin, Earth's trip around the Sun would slowly carry the Sun across your sky. Because of the direction we orbit, the Sun would rise in the west and set in the east, once a year.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "sunrise",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "The sunlit side would bake under a Sun that barely moves, while the dark side would freeze for months on end. The air would carry some of that heat around, but you should expect weather far more extreme than anything you've lived through.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "snowflake",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "worry",
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "Even the shape of the weather would change. Today, Earth's rotation twists moving air into the spirals of hurricanes and the curves of the jet streams. Without it, those patterns would break down, replaced by air flowing from the hot side to the cold side.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "cyclone",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "wind-face",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "You don't have to imagine a planet like this. Just look next door at Venus. It turns so slowly that one spin takes two hundred forty three Earth days, longer than its entire year of two hundred twenty five days.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "orange-circle",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "hourglass-done",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "DAY LONGER THAN YEAR",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Venus also spins backward. If you could survive its surface, at about eight hundred seventy two degrees Fahrenheit, you'd watch the Sun rise in the west, and one full day of light and dark would last about one hundred seventeen Earth days.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "sunrise",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "hot-face",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "shock",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "There's also an open question. Earth's magnetic field comes from churning liquid iron in the core, and rotation helps organize that churning. Would the field fade without spin? Nobody knows for sure. Slow-spinning Venus has no internally generated field at all.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "magnet",
+            "at": "bubble",
+            "size": "l"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "OPEN QUESTION",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Your satellite TV and weather maps would suffer, too. Many satellites sit about twenty two thousand miles up, circling exactly as fast as Earth turns, so they seem to hover over one spot. With no spin, that orbit couldn't exist.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "top",
+            "size": "l",
+            "anim": "orbit"
+          },
+          {
+            "icon": "satellite-antenna",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Rockets would lose a free ride as well. A launch pad near the equator is already moving at more than a thousand miles per hour, and NASA notes that speed counts toward reaching orbit. Without spin, every launch would need more fuel.",
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "fire",
+            "at": "bottom-right",
+            "size": "s"
+          }
+        ],
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "Now the twist: Earth really is slowing down. Tides raised by the Moon and Sun act like a brake on the planet. NASA researchers found that a day has grown about forty seven thousandths of a second longer over the past thirty two hundred years.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "l",
+            "anim": "orbit"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Rewind far enough and the change is enormous. When the Moon formed, roughly four and a half billion years ago, astrophysicists think a day on Earth lasted less than ten hours. Billions of years of tidal braking stretched it out.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "full-moon",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "UNDER 10 HOURS",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Strangely, the slowdown once paused. Researchers found that from about two billion to six hundred million years ago, the day held steady near nineteen and a half hours, as the Sun's pull on our atmosphere pushed back.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Tides can even stop a spin entirely, relative to a partner. The Moon is tidally locked. It turns exactly once for every trip around Earth, which is why you only ever see one side of it.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "top",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "text": "TIDALLY LOCKED",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "That braking doesn't just disappear. The spin Earth loses is handed to the Moon, nudging it into a slightly bigger orbit. That's why the Moon is drifting about an inch farther away from you every year.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "l",
+            "anim": "shrink"
+          },
+          {
+            "icon": "straight-ruler",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Even earthquakes nudge the clock. NASA calculated that the magnitude nine earthquake in Japan in 2011 shifted enough of Earth's mass to shorten the day by about one point eight millionths of a second.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "collision",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "stopwatch",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "camera": "shake",
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "Because Earth's spin is never perfectly steady, timekeepers have to correct atomic clocks. Since 1972, a leap second has been added about every year and a half on average, keeping your clock in step with the planet.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "mantelpiece-clock",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "text": "LEAP SECOND",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "And lately the wobble has flipped. Recent measurements suggest Earth has been spinning slightly faster, and Astronomy magazine reports that clocks might even need their first negative leap second, around 2029.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "bubble",
+            "size": "l"
+          },
+          {
+            "icon": "chart-increasing",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "face": "think",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Still, Earth won't stop spinning anytime soon. Long before our planet could come to rest, the Sun itself will have run low on fuel and changed beyond recognition. So the slow stop stays a thought experiment.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "hourglass-done",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "So you can relax. The ground beneath you will keep carrying you east at hundreds of miles per hour, smoothly and silently, just as it has every second of your life.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          }
+        ],
+        "face": "smile",
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

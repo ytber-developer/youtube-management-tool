@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <clipPath id="cer">
+      <path d="M215 300 C 200 210 270 125 390 105 C 510 85 645 110 720 180 C 770 228 772 300 740 345 C 715 378 680 388 640 382 C 600 378 570 388 540 400 C 500 418 430 425 380 412 C 335 400 310 375 300 345 C 275 345 235 335 215 300 Z"/>
+    </clipPath>
+  </defs>
+
+  <g transform="translate(-36 110)">
+    <!-- brainstem -->
+    <path d="M478 400 C 488 450 496 500 500 560 L 552 560 C 550 500 546 440 548 392 Z" fill="#175c7c" stroke="#ffffff" stroke-width="5" stroke-linejoin="round"/>
+    <!-- cerebellum -->
+    <ellipse cx="652" cy="408" rx="88" ry="52" fill="#6f63a8" stroke="#c9b8ff" stroke-width="6"/>
+    <g fill="none" stroke="rgba(201,184,255,0.8)" stroke-width="4" stroke-linecap="round">
+      <path d="M590 400 C 620 390 680 390 725 402"/>
+      <path d="M600 425 C 630 418 680 420 715 428"/>
+    </g>
+    <!-- cerebrum (neocortex) -->
+    <path d="M215 300 C 200 210 270 125 390 105 C 510 85 645 110 720 180 C 770 228 772 300 740 345 C 715 378 680 388 640 382 C 600 378 570 388 540 400 C 500 418 430 425 380 412 C 335 400 310 375 300 345 C 275 345 235 335 215 300 Z"
+          fill="#2a7a80"/>
+    <!-- prefrontal cortex -->
+    <g clip-path="url(#cer)">
+      <ellipse cx="250" cy="225" rx="110" ry="140" fill="rgba(255,224,138,0.55)"/>
+    </g>
+    <path d="M215 300 C 200 210 270 125 390 105 C 510 85 645 110 720 180 C 770 228 772 300 740 345 C 715 378 680 388 640 382 C 600 378 570 388 540 400 C 500 418 430 425 380 412 C 335 400 310 375 300 345 C 275 345 235 335 215 300 Z"
+          fill="none" stroke="#8ee6a8" stroke-width="7" stroke-linejoin="round"/>
+    <g fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="4" stroke-linecap="round">
+      <path d="M300 345 C 360 320 430 300 500 300"/>
+      <path d="M470 98 C 455 160 470 220 452 290"/>
+      <path d="M580 130 C 560 180 600 220 580 270"/>
+      <path d="M670 200 C 650 240 690 270 670 330"/>
+    </g>
+    <!-- hippocampus (deep, medial temporal lobe) -->
+    <path d="M405 362 C 430 340 485 340 520 356 C 542 366 548 384 530 392 C 500 380 458 378 420 384 C 404 386 396 372 405 362 Z" fill="#7fe3ff" stroke="#ffffff" stroke-width="4"/>
+    <!-- amygdala (in front of hippocampus) -->
+    <ellipse cx="380" cy="370" rx="19" ry="16" fill="#ff8a7a" stroke="#ffffff" stroke-width="4"/>
+
+    <!-- network links -->
+    <g fill="none" stroke="#ffffff" stroke-width="4" stroke-dasharray="3 10" stroke-linecap="round" opacity="0.9">
+      <path d="M262 215 C 340 240 420 300 462 352"/>
+      <path d="M462 352 C 500 270 560 220 600 175"/>
+      <path d="M262 215 C 380 150 500 150 600 175"/>
+      <path d="M600 175 C 660 250 670 320 652 400"/>
+      <path d="M380 370 C 330 320 290 270 262 215"/>
+    </g>
+    <g fill="#ffffff">
+      <circle cx="262" cy="215" r="10"/>
+      <circle cx="600" cy="175" r="10"/>
+      <circle cx="652" cy="400" r="10"/>
+    </g>
+  </g>
+
+  <!-- labels -->
+  <g font-size="30" font-weight="800">
+    <text x="40" y="96" fill="#ffe08a">PREFRONTAL</text>
+    <text x="40" y="132" fill="#ffe08a">CORTEX</text>
+    <text x="860" y="110" fill="#8ee6a8" text-anchor="end">NEOCORTEX</text>
+    <text x="40" y="620" fill="#ff8a7a">AMYGDALA</text>
+    <text x="190" y="700" fill="#7fe3ff">HIPPOCAMPUS</text>
+    <text x="860" y="660" fill="#c9b8ff" text-anchor="end">CEREBELLUM</text>
+  </g>
+  <g stroke-width="4" stroke-linecap="round">
+    <line x1="150" y1="146" x2="214" y2="300" stroke="#ffe08a"/>
+    <line x1="740" y1="126" x2="580" y2="275" stroke="#8ee6a8"/>
+    <line x1="130" y1="594" x2="330" y2="482" stroke="#ff8a7a"/>
+    <line x1="350" y1="668" x2="430" y2="496" stroke="#7fe3ff"/>
+    <line x1="740" y1="628" x2="660" y2="560" stroke="#c9b8ff"/>
+  </g>
+</svg>

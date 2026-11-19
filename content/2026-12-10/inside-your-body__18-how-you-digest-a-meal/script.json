@@ -1,0 +1,540 @@
+{
+  "channel": "inside-your-body",
+  "number": 18,
+  "slug": "how-you-digest-a-meal",
+  "style": "anim",
+  "target_minutes": 6.3,
+  "title": "How Your Body Digests a Meal: The 30-Foot Journey",
+  "thumbnail_text": "THE 30-FOOT JOURNEY",
+  "description": "Follow a single slice of pizza on its journey of about thirty feet through your digestive tract: saliva that starts digesting starch, a stomach that churns food into chyme, a small intestine about twenty-two feet long with an inner surface of about half a badminton court, and a large intestine full of helpful bacteria. Find out how long digestion really takes and why your gut has its own nervous system.\n\nSources:\n- NIDDK (NIH) - Your Digestive System & How It Works: https://www.niddk.nih.gov/health-information/digestive-diseases/digestive-system-how-it-works\n- Mayo Clinic - Digestion: How long does it take?: https://www.mayoclinic.org/digestive-system/expert-answers/faq-20058340\n- Cleveland Clinic - Digestive System: https://my.clevelandclinic.org/health/body/7041-digestive-system\n- Cleveland Clinic - Saliva: https://my.clevelandclinic.org/health/body/saliva\n- Helander & Fändriks, Scandinavian Journal of Gastroenterology (2014) - Surface area of the digestive tract, revisited: https://doi.org/10.3109/00365521.2014.898326\n- University of Gothenburg via ScienceDaily (2014) - Surface area of the digestive tract much smaller than previously thought: https://www.sciencedaily.com/releases/2014/04/140423111505.htm\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": [
+    "digestion",
+    "how digestion works",
+    "digestive system",
+    "how long does it take to digest food",
+    "small intestine",
+    "stomach",
+    "gut microbiome",
+    "peristalsis",
+    "enteric nervous system",
+    "nutrition",
+    "human body",
+    "science explained",
+    "inside your body"
+  ],
+  "sources": [
+    {
+      "title": "NIDDK (NIH) - Your Digestive System & How It Works",
+      "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/digestive-system-how-it-works"
+    },
+    {
+      "title": "Mayo Clinic - Digestion: How long does it take?",
+      "url": "https://www.mayoclinic.org/digestive-system/expert-answers/faq-20058340"
+    },
+    {
+      "title": "Cleveland Clinic - Digestive System",
+      "url": "https://my.clevelandclinic.org/health/body/7041-digestive-system"
+    },
+    {
+      "title": "Cleveland Clinic - Saliva",
+      "url": "https://my.clevelandclinic.org/health/body/saliva"
+    },
+    {
+      "title": "Helander & Fändriks, Scandinavian Journal of Gastroenterology (2014) - Surface area of the digestive tract, revisited",
+      "url": "https://doi.org/10.3109/00365521.2014.898326"
+    },
+    {
+      "title": "University of Gothenburg via ScienceDaily (2014) - Surface area of the digestive tract much smaller than previously thought",
+      "url": "https://www.sciencedaily.com/releases/2014/04/140423111505.htm"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "eat",
+    "props": [
+      {
+        "icon": "pizza",
+        "at": "hand"
+      },
+      {
+        "icon": "alarm-clock",
+        "at": "right",
+        "size": "l"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "You just finished lunch. You will never think about it again. But your body has days of work ahead.",
+      "anim": {
+        "action": "eat",
+        "props": [
+          {
+            "icon": "pizza",
+            "at": "hand"
+          },
+          {
+            "icon": "fork-and-knife-with-plate",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "bg": "room",
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Let us follow that one slice of pizza on its whole journey through you. It is a trip of about thirty feet, through a single long tube that runs from your mouth to the other end, with helpers along the way.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "pizza",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "text": "A 30 FOOT JOURNEY"
+      }
+    },
+    {
+      "narration": "Here is the route. Mouth, esophagus, stomach, small intestine, large intestine, and the exit. Doctors call this tube the GI tract. Three helper organs, the liver, pancreas and gallbladder, pour in supplies along the way.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "pizza",
+            "at": "right"
+          },
+          {
+            "icon": "red-apple",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Checkpoint zero happens before you take a bite. Just seeing or smelling food sends signals from your brain that turn on your salivary glands. Your mouth literally waters to get ready.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "pizza",
+            "at": "top-left",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "s",
+            "anim": "fall"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Checkpoint one, your mouth. Your teeth crush the food into smaller pieces. Saliva soaks it, and it carries an enzyme that starts breaking down starches, like the crust, into sugars, while you are still chewing.",
+      "anim": {
+        "action": "eat",
+        "props": [
+          {
+            "icon": "pizza",
+            "at": "hand"
+          },
+          {
+            "icon": "tooth",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "You make a surprising amount of saliva. Cleveland Clinic says most adults produce about half a liter to a liter and a half every day. That is roughly two to six cups, all of it helping you swallow.",
+      "anim": {
+        "action": "drink",
+        "props": [
+          {
+            "icon": "cup-with-straw",
+            "at": "hand"
+          },
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "m",
+            "anim": "fall"
+          }
+        ],
+        "text": "UP TO SIX CUPS"
+      }
+    },
+    {
+      "narration": "Now you swallow. It feels simple, but it is a careful bit of traffic control. A small flap called the epiglottis folds over your windpipe, so the food goes down the right pipe instead of into your lungs.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "lungs",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "stop-sign",
+            "at": "top-left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Checkpoint two, the esophagus, a muscular tube down to your stomach. The food does not just fall. Muscles squeeze behind it and relax in front of it, in a wave that pushes it along. This is called peristalsis.",
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "water-wave",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "text": "PERISTALSIS",
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "That same squeezing wave moves food through your entire digestive tract. It is so dependable that you never have to think about it. At the bottom of the esophagus, a ring of muscle opens just long enough to let the food through.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "gear",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Checkpoint three, the stomach. This is the mixing tank. Its muscular walls churn the food while it adds strong acid and enzymes. Here, the protein in the cheese and toppings starts to break apart.",
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "cheese-wedge",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          }
+        ],
+        "bg": "body",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "After a while, your pizza no longer looks like pizza at all. The stomach turns it into a thick, soupy mixture doctors call chyme. Then it lets it out slowly, a little at a time, into the next section.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "steaming-bowl",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "Your stomach also talks to your brain. Cells in your stomach and small intestine release hormones that tell your brain whether you are hungry or full.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "bubble"
+          },
+          {
+            "icon": "speech-balloon",
+            "at": "right",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Checkpoint four is the star of the show, the small intestine. It is not small at all. Cleveland Clinic says it is about twenty two feet long, the longest part of the whole tract, folded neatly inside your belly.",
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "straight-ruler",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "22 FEET",
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Here the helpers arrive. Your pancreas sends in a juice full of enzymes that break down carbohydrates, fats and proteins. It is like a chemistry team showing up with exactly the right tools.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "test-tube",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "Your liver makes bile, which helps digest fats. Between meals, the gallbladder stores that bile. When you eat, it squeezes it into the small intestine, right when the greasy cheese arrives.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "green-salad",
+            "at": "left",
+            "size": "s"
+          },
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Now the pizza is finally broken into its tiniest parts: simple sugars, amino acids from protein, and fatty acids from fat. And this is where your body actually takes them in. The small intestine absorbs most of the nutrients and water.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "sparkles",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "To do that, the lining is covered in tiny folds and finger shaped bumps. A study from the University of Gothenburg measured the inside surface of the whole digestive tract at about thirty to forty square meters.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "top-left",
+            "size": "m"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "For years, textbooks claimed it was as big as a tennis court. The researchers found it is closer to half a badminton court. Still huge, and almost all of that area belongs to the small intestine.",
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "badminton",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          }
+        ],
+        "text": "HALF A BADMINTON COURT"
+      }
+    },
+    {
+      "narration": "From there, nutrients cross into your blood. Sugars and amino acids travel first to your liver, which stores, processes and sends them out to the rest of your body. Fats take another route, through your lymph system.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "drop-of-blood",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Mayo Clinic says the trip through your stomach and small intestine takes about six to eight hours. So by dinner time, much of your lunch has been taken apart and shipped out as fuel and building blocks.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "text": "6 TO 8 HOURS",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Checkpoint five, the large intestine. What is left is mostly fiber, water and things your body cannot use. The large intestine soaks up water and slowly turns the leftovers into stool. It is the slowest part of the trip.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "hourglass-done",
+            "at": "right",
+            "size": "m"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "And it is crowded. Your gut is home to huge numbers of bacteria, sometimes called your microbiome. In the large intestine, they break down leftover nutrients and even make vitamin K, which your body needs.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "microbe",
+            "at": "left",
+            "size": "s",
+            "anim": "orbit"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Mayo Clinic says food can spend about thirty six hours moving through the colon alone. All together, the full journey, from bite to bathroom, takes roughly two to five days, depending on the person and what they ate.",
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "calendar",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "2 TO 5 DAYS",
+        "bg": "night",
+        "face": "sleep"
+      }
+    },
+    {
+      "narration": "Finally, the rectum stores the stool until you are ready to go. Then the journey ends. Your thirty foot pipeline has turned a slice of pizza into energy, building blocks and vitamins, and sent the rest on its way.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "toilet",
+            "at": "right"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "One more surprise. Your gut has its own nervous system, built right into the walls of the digestive tract. It senses when the walls stretch and adjusts how fast food moves and how much digestive juice is made.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "bubble"
+          },
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "It works with your brain, but it does much of its job on its own. That is why you never have to remember to digest. Your gut runs this whole operation in the background, every single day.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "gear",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Digestion is usually quiet. But if belly pain, heartburn, diarrhea, constipation or trouble swallowing keep coming back or last more than a few days, talk to a doctor. Those are signals worth checking.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "stethoscope",
+            "at": "right"
+          },
+          {
+            "icon": "thermometer",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "So next time you finish a meal, picture the relay race you just started. Saliva, acid, enzymes, bile, a tennis court that turned out to be half a badminton court, and a huge crowd of tiny helpers, all working for you.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "pizza",
+            "at": "right"
+          },
+          {
+            "icon": "microbe",
+            "at": "far-right",
+            "size": "s"
+          },
+          {
+            "icon": "badminton",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

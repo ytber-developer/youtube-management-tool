@@ -1,0 +1,693 @@
+{
+  "channel": "inside-your-body",
+  "number": 7,
+  "slug": "immune-system-fights-a-cold",
+  "target_minutes": 7.2,
+  "title": "How Your Immune System Fights a Cold, Day by Day",
+  "thumbnail_text": "YOUR BODY VS. COLD",
+  "description": "The stuffy nose and sore throat of a cold are mostly your own immune system at work, not damage from the virus. Follow a cold from the first virus landing in your nose to the antibodies that finally win: how it spreads, why your cool nose suits it, when you're most contagious, and why you keep catching new ones. We also test common myths about cold weather, antibiotics and vitamin C, explain what actually helps, and say when a cold is worth a call to the doctor.\n\nSources:\n- CDC, About Common Cold: https://www.cdc.gov/common-cold/about/index.html\n- CDC, Common Cold: Treatment and When to Seek Care: https://www.cdc.gov/common-cold/treatment/index.html\n- CDC, About Rhinoviruses: https://www.cdc.gov/rhinoviruses/about/index.html\n- Clinical Microbiology Reviews (2013), Human Rhinoviruses: https://pmc.ncbi.nlm.nih.gov/articles/PMC3553670/\n- Antiviral Research (2001), The treatment of rhinovirus infections: progress and potential: https://pmc.ncbi.nlm.nih.gov/articles/PMC7125581\n- Yale News (2015), Cold virus replicates better at cooler temperatures: https://news.yale.edu/2015/01/05/cold-virus-replicates-better-cooler-temperatures\n- MedlinePlus, Immune response: https://medlineplus.gov/ency/article/000821.htm\n- Cleveland Clinic, Common Cold (Rhinovirus): Symptoms & Causes: https://my.clevelandclinic.org/health/diseases/12342-common-cold\n- Cleveland Clinic, Fever: https://my.clevelandclinic.org/health/symptoms/10880-fever\n- NHS, Common cold: https://www.nhs.uk/conditions/common-cold/\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": [
+    "common cold",
+    "immune system",
+    "how the immune system works",
+    "rhinovirus",
+    "antibodies",
+    "white blood cells",
+    "interferon",
+    "runny nose",
+    "cold myths",
+    "antibiotics and colds",
+    "vitamin c",
+    "when to see a doctor",
+    "virus",
+    "human body",
+    "immunology",
+    "science explained",
+    "inside your body"
+  ],
+  "sources": [
+    {
+      "title": "CDC - About Common Cold",
+      "url": "https://www.cdc.gov/common-cold/about/index.html"
+    },
+    {
+      "title": "CDC - Common Cold: Treatment and When to Seek Care",
+      "url": "https://www.cdc.gov/common-cold/treatment/index.html"
+    },
+    {
+      "title": "CDC - About Rhinoviruses",
+      "url": "https://www.cdc.gov/rhinoviruses/about/index.html"
+    },
+    {
+      "title": "Clinical Microbiology Reviews (2013) - Human Rhinoviruses",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3553670/"
+    },
+    {
+      "title": "Antiviral Research (2001) - The treatment of rhinovirus infections: progress and potential",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7125581"
+    },
+    {
+      "title": "Yale News (2015) - Cold virus replicates better at cooler temperatures",
+      "url": "https://news.yale.edu/2015/01/05/cold-virus-replicates-better-cooler-temperatures"
+    },
+    {
+      "title": "MedlinePlus - Immune response",
+      "url": "https://medlineplus.gov/ency/article/000821.htm"
+    },
+    {
+      "title": "Cleveland Clinic - Common Cold (Rhinovirus): Symptoms & Causes",
+      "url": "https://my.clevelandclinic.org/health/diseases/12342-common-cold"
+    },
+    {
+      "title": "Cleveland Clinic - Fever",
+      "url": "https://my.clevelandclinic.org/health/symptoms/10880-fever"
+    },
+    {
+      "title": "NHS - Common cold",
+      "url": "https://www.nhs.uk/conditions/common-cold/"
+    }
+  ],
+  "style": "anim",
+  "thumbnail_anim": {
+    "thumbAction": "sick",
+    "props": [
+      {
+        "icon": "microbe",
+        "at": "right",
+        "size": "xl",
+        "anim": "bob"
+      },
+      {
+        "icon": "shield",
+        "at": "left",
+        "size": "m"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "The scratchy throat, the stuffy nose, the endless tissues? Most of that misery isn't the virus hurting you. It's your immune system fighting back.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "roll-of-paper",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "microbe",
+            "at": "left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "face": "sick",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Meet the usual suspect: rhinovirus, the most frequent cause of colds in the United States. Its name comes from the Greek word for nose. But it's far from alone. More than two hundred viruses can cause a cold.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          }
+        ],
+        "text": "RHINOVIRUS",
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "Rhinoviruses were first discovered in the 1950s, by scientists hunting for the cause of the common cold. And the hunt never really ended. Researchers later found a whole extra group of them, with at least fifty more types.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "microscope",
+            "at": "bubble",
+            "size": "l"
+          },
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "That's a big part of why colds are so common. Every year in the United States, adults catch an average of two to three colds, and children often catch even more. Rhinovirus activity tends to rise in early fall and spring.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "calendar",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "sneezing-face",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "text": "2–3 COLDS A YEAR",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "It usually begins with tiny droplets. Someone nearby coughs or sneezes, and the virus floats your way. Or you shake a hand, then touch your eyes, nose, or mouth, and the virus hitches a ride straight to its favorite spot.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "sneezing-face",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "droplet",
+            "at": "top",
+            "size": "s",
+            "anim": "fall"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Your hands matter more than you might think. In experiments, rhinovirus survived on undisturbed skin for about two hours, and it turned up on the hands of forty percent of infected volunteers. That's why washing with soap and water is such common advice.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "soap",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "hand-with-fingers-splayed",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "text": "WASH YOUR HANDS",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Your nose turns out to be a surprisingly good home for the virus. Rhinoviruses grow better in the cooler air passages of your nose than at the warmer temperature deep inside your body. In 2015, Yale researchers found one possible reason why.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "nose",
+            "at": "bubble",
+            "size": "l"
+          },
+          {
+            "icon": "thermometer",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Working with mouse airway cells, they found that at nose temperature, the cells' early antiviral defenses were weaker than at core body temperature. As one scientist put it, the lower the temperature, the lower the innate immune response to viruses seems to be.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "thermometer",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "mouse",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "COLD NOSE",
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "So does cold weather give you a cold? Not by itself. You still need the virus. Colds are more common in winter partly because people crowd together indoors, though that mouse study hints cold air may weaken your defenses too.",
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "snowflake",
+            "at": "right",
+            "size": "l",
+            "anim": "fall"
+          },
+          {
+            "icon": "scarf",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "worry",
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "To get inside, the virus latches onto a docking protein on the surface of the cells that line your nose. Once inside, it hijacks the cell's own machinery to churn out copies of itself, which then go looking for more cells.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "nose",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Here's the surprising part. Only a small share of the cells lining your nose actually get infected, and the virus rarely destroys much tissue. So why do you feel so awful? Because the symptoms are mostly the result of your own immune response.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "shield",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "shock",
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Your first responders belong to your innate immune system, the defense you're born with. Infected cells sense the intruder and release warning molecules called interferons, which help neighboring cells raise their guard against the virus.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "shield",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "police-car-light",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Other chemical messengers call in white blood cells. In people who develop symptoms, white blood cells called neutrophils rise in the blood. In people who are infected but feel fine, that rise isn't seen. The response, not just the virus, tracks how sick you feel.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "drop-of-blood",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "microbe",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Symptoms typically start one to two days after infection, and they often begin with a sore or scratchy throat. On the first day of a cold, that throat is frequently the most bothersome symptom.",
+      "anim": {
+        "action": "drink",
+        "props": [
+          {
+            "icon": "hot-beverage",
+            "at": "hand",
+            "size": "m"
+          }
+        ],
+        "text": "DAY ONE",
+        "face": "sick",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Next comes the flood. Inflammatory substances like bradykinin rise, blood vessels in your nose swell and leak, and you start sneezing and dripping. That mucus is part of your defense, trapping germs and particles so they can be cleared away.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "sneezing-face",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "droplet",
+            "at": "left",
+            "size": "m",
+            "anim": "fall"
+          }
+        ],
+        "camera": "shake",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Some of those immune signals act throughout your body, too. That can bring a headache, mild body aches, and sometimes a fever, a sign that your immune system has switched on. Symptoms usually peak within two to three days of infection.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "thermometer",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "hot-face",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "text": "PEAK SYMPTOMS",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "This is also when you're most contagious. You can pass a cold on a day or two before you feel sick, but you spread it most when symptoms are at their worst, usually the first three days.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "face-with-medical-mask",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "people-hugging",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Meanwhile, a slower but more precise team is gearing up: your adaptive immune system. Instead of reacting to anything suspicious, it learns the specific features of this particular virus and builds a custom response.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "bubble",
+            "size": "l"
+          },
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Some white blood cells, called T cells, attack infected cells directly and help control the whole response. Others, called B cells, turn into plasma cells that pump out antibodies, proteins that latch onto the virus and make it easier to destroy.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "crossed-swords",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "bullseye",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "text": "T CELLS, B CELLS",
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "As infected cells are cleared and antibodies build up, the virus loses ground. Colds usually last less than a week, though some symptoms can linger for up to two weeks.",
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "calendar",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "UNDER A WEEK",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Now for some common myths. Will antibiotics knock out a cold faster? No. Antibiotics work against bacteria, not viruses. The CDC says they won't help you feel better, and taking them when you don't need them can cause side effects.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "pill",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "cross-mark",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "text": "NOT FOR VIRUSES",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "What about vitamin C, zinc or echinacea? According to Cleveland Clinic, researchers haven't found that any of them can prevent colds. In fact, the common cold has no cure at all. It gets better on its own.",
+      "anim": {
+        "action": "eat",
+        "props": [
+          {
+            "icon": "tangerine",
+            "at": "hand",
+            "size": "m"
+          },
+          {
+            "icon": "lemon",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "face": "think",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "So what actually helps while your body does the work? The CDC's list is simple: get plenty of rest, drink plenty of fluids, and try a saline nose spray or steam from a hot shower to ease the stuffiness.",
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "bed",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "potable-water",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "sleep",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "And know when it's more than a simple cold. The CDC says to get medical care for trouble breathing, signs of dehydration, a fever lasting longer than four days, or symptoms that last more than ten days or improve and then get worse.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "stethoscope",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "calendar",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "SEE A DOCTOR",
+        "face": "worry",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Once you recover, a few of those immune cells stick around as memory, ready to respond faster if the same virus shows up again. So why do you still catch another cold next season?",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "shield",
+            "at": "top",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "microbe",
+            "at": "left",
+            "size": "s",
+            "anim": "approach"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Because rhinoviruses come in more than a hundred types, and antibodies against one type give little protection against the others. Add all the other cold viruses, and your immune system keeps meeting strangers.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "microbe",
+            "at": "left",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "text": "100+ TYPES",
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "It's also why there's still no approved vaccine for the common cold. To make one, scientists would need a weak spot shared by most of those types, so a single shot could teach your body to recognize them all.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "syringe",
+            "at": "bubble",
+            "size": "l"
+          },
+          {
+            "icon": "puzzle-piece",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "The good news is that many fights end quietly. According to the CDC, most rhinovirus infections cause no symptoms or only mild ones. Your body often wins without you ever knowing there was a battle.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "trophy",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "And that's the twist. Two people can catch the very same virus, and only one ends up reaching for the tissues. Scientists think much of the difference lies in how strongly each person's immune system reacts.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "roll-of-paper",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "microbe",
+            "at": "left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "face": "grin",
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "So the next time you reach for a tissue, remember what's going on. That sore throat and runny nose are signs of a coordinated defense, with layers of cells and signals working together to clear the virus out.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "roll-of-paper",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "shield",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "smile",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

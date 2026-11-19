@@ -1,0 +1,1073 @@
+{
+  "channel": "inside-your-body",
+  "number": 14,
+  "slug": "how-your-body-ages",
+  "target_minutes": 9.67,
+  "title": "What Really Happens to Your Body as You Age, Decade by Decade",
+  "thumbnail_text": "HOW YOU AGE",
+  "description": "Aging is not one clock ticking down. Some of your abilities peak before you can legally drink, while others keep improving into your late sixties. Here is what changes in your cells, muscles, bones, eyes, ears, heart, skin and brain over a lifetime, and what science says gets better.\n\nSources:\n- Nathan Shock Centers, Biology of Aging: https://nathanshockcenters.org/biology-of-aging\n- Harvard Health Publishing, A guide to combatting sarcopenia and preserving muscle mass as you get older: https://www.harvardhealth.org/healthy-aging-and-longevity/a-guide-to-combatting-sarcopenia-and-preserving-muscle-mass-as-you-get-older\n- MedlinePlus, Aging changes in the bones, muscles, and joints: https://medlineplus.gov/ency/article/004015.htm\n- MedlinePlus, Aging changes in the heart and blood vessels: https://medlineplus.gov/ency/article/004006.htm\n- MedlinePlus, Aging changes in the nervous system: https://medlineplus.gov/ency/article/004023.htm\n- MedlinePlus, Aging changes in skin: https://medlineplus.gov/ency/article/004014.htm\n- National Eye Institute, Presbyopia: https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/presbyopia\n- NIDCD, Age-Related Hearing Loss: https://www.nidcd.nih.gov/health/age-related-hearing-loss\n- Harvard Gazette (2015), Smarter by the minute, sort of: https://news.harvard.edu/gazette/story/2015/03/smarter-by-the-minute-sort-of/\n- The Stanford Daily (2010), Happiness increases with age, study says: https://stanforddaily.com/2010/11/11/happiness-increases-with-age-study-says/\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": [
+    "aging",
+    "how the body ages",
+    "what happens as you age",
+    "telomeres",
+    "cellular senescence",
+    "sarcopenia",
+    "presbyopia",
+    "hearing loss",
+    "aging brain",
+    "biology of aging",
+    "human body",
+    "science explained",
+    "inside your body"
+  ],
+  "sources": [
+    {
+      "title": "Nathan Shock Centers - Biology of Aging",
+      "url": "https://nathanshockcenters.org/biology-of-aging"
+    },
+    {
+      "title": "Harvard Health Publishing - A guide to combatting sarcopenia and preserving muscle mass as you get older",
+      "url": "https://www.harvardhealth.org/healthy-aging-and-longevity/a-guide-to-combatting-sarcopenia-and-preserving-muscle-mass-as-you-get-older"
+    },
+    {
+      "title": "MedlinePlus - Aging changes in the bones, muscles, and joints",
+      "url": "https://medlineplus.gov/ency/article/004015.htm"
+    },
+    {
+      "title": "MedlinePlus - Aging changes in the heart and blood vessels",
+      "url": "https://medlineplus.gov/ency/article/004006.htm"
+    },
+    {
+      "title": "MedlinePlus - Aging changes in the nervous system",
+      "url": "https://medlineplus.gov/ency/article/004023.htm"
+    },
+    {
+      "title": "MedlinePlus - Aging changes in skin",
+      "url": "https://medlineplus.gov/ency/article/004014.htm"
+    },
+    {
+      "title": "National Eye Institute - Presbyopia",
+      "url": "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/presbyopia"
+    },
+    {
+      "title": "NIDCD - Age-Related Hearing Loss",
+      "url": "https://www.nidcd.nih.gov/health/age-related-hearing-loss"
+    },
+    {
+      "title": "Harvard Gazette (2015) - Smarter by the minute, sort of",
+      "url": "https://news.harvard.edu/gazette/story/2015/03/smarter-by-the-minute-sort-of/"
+    },
+    {
+      "title": "The Stanford Daily (2010) - Happiness increases with age, study says",
+      "url": "https://stanforddaily.com/2010/11/11/happiness-increases-with-age-study-says/"
+    }
+  ],
+  "style": "anim",
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "hourglass-not-done",
+        "at": "right",
+        "size": "xl"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "Your brain's processing speed likely peaked around your early twenties. But one of your mental abilities may keep improving into your late sixties.",
+      "headline": "SOME THINGS GET <em>BETTER</em>",
+      "sub": "",
+      "visual": {
+        "type": "stock",
+        "query": "elderly woman solving crossword puzzle",
+        "note": "an older woman happily working on a crossword",
+        "icons": [
+          "older-woman",
+          "puzzle-piece",
+          "brain",
+          "sparkles"
+        ]
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Aging is something every human body does, yet most of us picture it as a single clock ticking down. The real picture is far more interesting. Your body is full of different clocks, running at different speeds, and a few of them run in your favor.",
+      "headline": "NOT ONE CLOCK, <em>MANY</em>",
+      "sub": "",
+      "visual": {
+        "type": "stock",
+        "query": "many different clocks on wall",
+        "note": "a wall covered with many different clocks",
+        "icons": [
+          "mantelpiece-clock",
+          "alarm-clock",
+          "hourglass-not-done",
+          "watch"
+        ]
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "watch",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "MANY CLOCKS",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "To understand those clocks, you have to start small. Very small. Aging begins inside your cells, with a handful of processes scientists call the hallmarks of aging, the core machinery behind how bodies change over time.",
+      "headline": "IT STARTS IN YOUR <em>CELLS</em>",
+      "sub": "The hallmarks of aging",
+      "visual": {
+        "type": "science",
+        "query": "human cells microscopy nucleus stained",
+        "note": "colorful microscope image of human cells"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "microscope",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "The first is damage. By one estimate, the DNA in each of your cells is damaged up to a million times a day. Your cells repair almost all of it. But repair is not perfect, and over a lifetime, small errors slowly pile up.",
+      "headline": "A MILLION HITS A <em>DAY</em>",
+      "sub": "And almost all get repaired",
+      "visual": {
+        "type": "science",
+        "query": "DNA double helix structure illustration",
+        "note": "illustration of the DNA double helix",
+        "icons": [
+          "dna",
+          "collision",
+          "shield",
+          "sparkles"
+        ]
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "dna",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          }
+        ],
+        "text": "A MILLION A DAY",
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "The second is a kind of countdown. At the ends of your chromosomes sit protective caps called telomeres, repeated stretches of DNA that protect the ends of your chromosomes. Telomeres tend to get shorter with age, in people and in other animals like mice.",
+      "headline": "THE <em>TELOMERE</em> COUNTDOWN",
+      "sub": "Protective caps on chromosomes",
+      "visual": {
+        "type": "science",
+        "query": "telomeres chromosomes fluorescent image",
+        "note": "chromosomes with brightly labeled telomere tips",
+        "icons": [
+          "dna",
+          "hourglass-not-done",
+          "scissors",
+          "microscope"
+        ]
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "dna",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "When a telomere gets critically short, the cell notices and permanently switches off its ability to divide. Think of the plastic tip on a shoelace. Once it wears away, the lace starts to fray, so the cell stops dividing altogether.",
+      "headline": "LIKE A <em>SHOELACE</em> TIP",
+      "sub": "",
+      "visual": {
+        "type": "stock",
+        "query": "shoelace aglet close up",
+        "note": "close-up of the plastic tip on a shoelace",
+        "icons": [
+          "athletic-shoe",
+          "dna",
+          "hourglass-not-done",
+          "sparkles"
+        ]
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "running-shoe",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "That leads to the third hallmark, and it is a strange one. Some of those cells that stop dividing do not die. They linger. Scientists call them senescent cells, and they release harmful molecules into the tissue around them.",
+      "headline": "CELLS THAT <em>LINGER</em>",
+      "sub": "Senescent cells",
+      "visual": {
+        "type": "diagram",
+        "spec": "a group of healthy dividing cells with one larger gray senescent cell in the middle releasing small signal particles into its neighbors"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "Add a few more processes. Your stem cells, which rebuild tissue, gradually lose some of their ability to regenerate. And your mitochondria, the power plants in your cells, produce energy along with reactive byproducts. Scientists describe the ideal level of those byproducts as a Goldilocks zone: not too much, and not too little.",
+      "headline": "TIRED <em>REPAIR CREWS</em>",
+      "sub": "Stem cells and mitochondria",
+      "visual": {
+        "type": "science",
+        "query": "mitochondria electron micrograph",
+        "note": "electron microscope image of mitochondria"
+      },
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "low-battery",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "None of this happens overnight, and none of it happens at the same pace in every person. But over decades, these tiny cellular shifts add up to changes you can see and feel. So follow them through a lifetime, starting earlier than you might think.",
+      "headline": "TINY SHIFTS <em>ADD UP</em>",
+      "sub": "",
+      "visual": {
+        "type": "stock",
+        "query": "three generations family portrait",
+        "note": "a family portrait with grandparents, parents and children",
+        "icons": [
+          "older-woman",
+          "person",
+          "baby",
+          "chart-increasing"
+        ]
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "calendar",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Some of your abilities peak remarkably early. One large study of more than forty eight thousand volunteers, published in two thousand fifteen, found that raw processing speed peaks in the late teens and early twenties, and then begins to decline relatively quickly.",
+      "headline": "SPEED PEAKS IN YOUR <em>TWENTIES</em>",
+      "sub": "Processing speed tops out early",
+      "visual": {
+        "type": "stock",
+        "query": "young adults playing fast video game",
+        "note": "young adults focused on a fast-paced game",
+        "icons": [
+          "video-game",
+          "high-voltage",
+          "brain",
+          "stopwatch"
+        ]
+      },
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "PEAK AT 20",
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Working memory, your ability to hold and juggle information in your head, peaks a little later, in the late twenties to early thirties. After that, it declines slowly.",
+      "headline": "WORKING MEMORY PEAKS <em>NEXT</em>",
+      "sub": "Late twenties to early thirties",
+      "visual": {
+        "type": "stock",
+        "query": "person juggling balls",
+        "note": "a person juggling several balls",
+        "icons": [
+          "person-juggling",
+          "brain",
+          "sparkles",
+          "light-bulb"
+        ]
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Your muscles start changing around then, too. For most people, muscle mass begins a gradual decline of about three to five percent each decade, starting around age thirty. Muscle fibers shrink, and some lost muscle tissue may be replaced with tougher, fibrous tissue.",
+      "headline": "MUSCLE STARTS <em>SLIPPING</em>",
+      "sub": "About 3 to 5% per decade",
+      "visual": {
+        "type": "science",
+        "query": "skeletal muscle cross section histology",
+        "note": "microscope cross-section of muscle fibers"
+      },
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "flexed-biceps",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          }
+        ],
+        "text": "3–5% PER DECADE",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Scientists call this age-related muscle loss sarcopenia. Aging itself plays a role, along with hormonal changes and fewer muscle-building proteins. Physical inactivity and some diseases can speed it up.",
+      "headline": "IT HAS A NAME: <em>SARCOPENIA</em>",
+      "sub": "Age-related muscle loss",
+      "visual": {
+        "type": "stock",
+        "query": "older man lifting light dumbbells gym",
+        "note": "an older man working out with light weights",
+        "icons": [
+          "older-man",
+          "flexed-biceps",
+          "person-lifting-weights",
+          "chart-decreasing"
+        ]
+      },
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "couch-and-lamp",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Then, somewhere in your forties, you may notice something odd. Your arms suddenly seem too short. You catch yourself holding your phone farther away to read it. There is a simple reason for this, and almost no one escapes it.",
+      "headline": "WHY YOUR ARMS FEEL <em>SHORT</em>",
+      "sub": "",
+      "visual": {
+        "type": "stock",
+        "query": "man holding phone at arm's length squinting",
+        "note": "a middle-aged person holding a phone at arm's length",
+        "icons": [
+          "mobile-phone",
+          "glasses",
+          "eye",
+          "older-man"
+        ]
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "mobile-phone",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "It is called presbyopia, and it usually begins after age forty five. Inside your eye, the lens has to change shape to focus on things up close. With age, that lens becomes harder and less flexible, so it can no longer focus nearby light correctly. Eventually, everyone gets it.",
+      "headline": "THE <em>LENS</em> STIFFENS",
+      "sub": "Presbyopia, after age 45",
+      "visual": {
+        "type": "science",
+        "query": "human eye anatomy lens cross section",
+        "note": "cross-section illustration of the eye showing the lens"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "glasses",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "eye",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "PRESBYOPIA",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "But here is the first piece of good news. In that same large study, the ability to read other people's emotions peaked in the forties to around age fifty, and did not start to decline significantly until after sixty.",
+      "headline": "READING PEOPLE <em>PEAKS</em> LATER",
+      "sub": "Forties to around fifty",
+      "visual": {
+        "type": "stock",
+        "query": "two middle aged friends talking coffee",
+        "note": "two middle-aged friends in warm conversation over coffee",
+        "icons": [
+          "hot-beverage",
+          "speech-balloon",
+          "brain",
+          "sparkles"
+        ]
+      },
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "smiling-face-with-smiling-eyes",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "text": "GOOD NEWS",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Your bones are changing through these decades too. People lose bone mass and density as they age, especially women after menopause, as minerals like calcium are lost from the skeleton.",
+      "headline": "BONES LOSE <em>DENSITY</em>",
+      "sub": "Especially after menopause",
+      "visual": {
+        "type": "science",
+        "query": "bone trabecular structure micro CT",
+        "note": "the inner honeycomb structure of bone",
+        "icons": [
+          "bone",
+          "chart-decreasing",
+          "magnifying-glass-tilted-left",
+          "glass-of-milk"
+        ]
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "bone",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "glass-of-milk",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "And here is a fun connection. Remember how astronauts grow taller in space because their spines relax? With age, the opposite happens. The discs between your vertebrae gradually lose fluid and become thinner, your trunk shortens, and overall height decreases. Even the arches of your feet can flatten a little, shaving off a bit more.",
+      "headline": "WHY PEOPLE GET <em>SHORTER</em>",
+      "sub": "Spinal discs lose fluid",
+      "visual": {
+        "type": "diagram",
+        "spec": "two side views of a section of spine: younger with thick plump discs between vertebrae, older with thinner discs and slightly shorter overall height"
+      },
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "straight-ruler",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "rocket",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "SHORTER WITH AGE",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Joints change as well. They can stiffen and become less flexible, and the cartilage that cushions them may start to wear away, especially in the hips and knees. That is part of why getting up from the floor can feel different at sixty than it did at twenty.",
+      "headline": "JOINTS <em>STIFFEN</em>",
+      "sub": "Cartilage can wear away",
+      "visual": {
+        "type": "science",
+        "query": "knee joint anatomy cartilage illustration",
+        "note": "anatomy illustration of the knee joint and cartilage"
+      },
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "bone",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "So far, you have seen the changes you can feel. But some of the most important ones are invisible, happening inside the organ that has been beating for you since before you were born.",
+      "headline": "THE <em>INVISIBLE</em> CHANGES",
+      "sub": "",
+      "visual": {
+        "type": "science",
+        "query": "human heart anatomy illustration",
+        "note": "an anatomical illustration of the heart",
+        "icons": [
+          "anatomical-heart",
+          "magnifying-glass-tilted-left",
+          "hourglass-not-done",
+          "drop-of-blood"
+        ]
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "With age, your heart's natural pacemaker, the sinoatrial node, loses some of its cells, which can slightly slow your heart rate. The heart wall thickens, and the heart may fill with blood more slowly.",
+      "headline": "THE PACEMAKER <em>SLOWS</em>",
+      "sub": "Fewer pacemaker cells",
+      "visual": {
+        "type": "diagram",
+        "spec": "heart outline with the sinoatrial node marked and a thicker ventricle wall labeled, comparing younger and older"
+      },
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "stethoscope",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Your largest artery, the aorta, becomes thicker, stiffer and less flexible. That raises blood pressure and makes your heart work harder. And the pressure sensors in your blood vessels become less sensitive, which is one reason some older adults feel dizzy when they stand up quickly.",
+      "headline": "ARTERIES <em>STIFFEN</em>",
+      "sub": "And pressure sensors dull",
+      "visual": {
+        "type": "science",
+        "query": "aorta arteries anatomy illustration",
+        "note": "illustration of the aorta and major arteries",
+        "icons": [
+          "anatomical-heart",
+          "drop-of-blood",
+          "chart-increasing",
+          "hourglass-not-done"
+        ]
+      },
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "dizzy",
+            "at": "above",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "Your skin tells the story on the outside. The outer layer thins, the connective tissue that gives skin strength and stretch weakens, and the cushioning fat underneath shrinks. Sweat and oil glands produce less, so skin gets drier.",
+      "headline": "SKIN GETS <em>THINNER</em>",
+      "sub": "Less collagen, less cushioning",
+      "visual": {
+        "type": "science",
+        "query": "skin layers cross section illustration",
+        "note": "cross-section illustration of skin layers"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "sweat-droplets",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "droplet",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Those skin changes affect more than appearance. With less fat beneath the skin, there is less padding and insulation, so it can be harder to stay warm. And with sweat glands producing less sweat, it becomes easier to overheat. Your built-in thermostat loses some of its range.",
+      "headline": "A LESS PRECISE <em>THERMOSTAT</em>",
+      "sub": "Harder to stay warm or cool",
+      "visual": {
+        "type": "stock",
+        "query": "older woman wrapped in blanket with tea",
+        "note": "an older woman wrapped in a cozy blanket holding a warm drink",
+        "icons": [
+          "older-woman",
+          "thermometer",
+          "hot-beverage",
+          "snowflake"
+        ]
+      },
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "thermometer",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "But here is a surprise. According to MedlinePlus, from the National Library of Medicine, the greatest single factor in how skin ages is not time at all. It is sun exposure. Compare skin that rarely sees the sun with skin that does, and the difference can be striking.",
+      "headline": "THE BIGGEST FACTOR: <em>SUN</em>",
+      "sub": "",
+      "visual": {
+        "type": "stock",
+        "query": "older hands in sunlight close up",
+        "note": "close-up of older hands resting in sunlight",
+        "icons": [
+          "sun",
+          "open-hands",
+          "sunglasses",
+          "warning"
+        ]
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "l"
+          }
+        ],
+        "text": "SUN EXPOSURE",
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Your ears change too. About one in three Americans between sixty five and seventy four has hearing loss, and nearly half of those older than seventy five have difficulty hearing. Changes in the inner ear are common with age, and years of noise exposure add up. Conditions like high blood pressure and diabetes, and some medicines, can also affect hearing.",
+      "headline": "HEARING <em>FADES</em> GRADUALLY",
+      "sub": "One in three, ages 65 to 74",
+      "visual": {
+        "type": "science",
+        "query": "inner ear cochlea anatomy illustration",
+        "note": "anatomy illustration of the inner ear and cochlea"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "ear",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "speaker-high-volume",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Which brings you to the organ people worry about most as they get older. What happens to the brain, the place where your memories, your personality and your sense of self all live?",
+      "headline": "AND THE <em>BRAIN?</em>",
+      "sub": "",
+      "visual": {
+        "type": "science",
+        "query": "human brain illustration top view",
+        "note": "an illustration of the brain seen from above"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "The honest answer is that it does change. With age, the brain loses some nerve cells and shrinks slightly, and nerve signals may travel a little more slowly. Some slowing of thought and memory is a normal part of aging, and it varies widely from person to person.",
+      "headline": "THE BRAIN <em>SLOWS</em> A LITTLE",
+      "sub": "Normal, and highly variable",
+      "visual": {
+        "type": "science",
+        "query": "brain MRI comparison young older",
+        "note": "brain scan images",
+        "icons": [
+          "brain",
+          "turtle",
+          "stopwatch",
+          "sparkles"
+        ]
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "snail",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "But it is important to know what is not normal. Dementia and severe memory loss are not a normal part of aging. They are linked to diseases, such as Alzheimer's disease. Sudden confusion is not normal either, and it is often caused by other illnesses.",
+      "headline": "DEMENTIA IS NOT <em>NORMAL</em> AGING",
+      "sub": "",
+      "visual": {
+        "type": "stock",
+        "query": "older couple talking with doctor",
+        "note": "an older couple having a calm conversation with a doctor",
+        "icons": [
+          "older-man",
+          "health-worker",
+          "brain",
+          "speech-balloon"
+        ]
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "warning",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "brain",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "NOT NORMAL",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Now for the clock that runs the other way. Remember the ability that may keep improving into your late sixties? In the Harvard study, vocabulary, a measure of accumulated knowledge, had no early peak at all. Scores kept rising until about sixty five to seventy. Knowledge, it seems, keeps compounding like interest.",
+      "headline": "VOCABULARY KEEPS <em>GROWING</em>",
+      "sub": "Rising until about 65 to 70",
+      "visual": {
+        "type": "stock",
+        "query": "older man reading newspaper library",
+        "note": "an older man reading in a library",
+        "icons": [
+          "newspaper",
+          "older-man",
+          "books",
+          "chart-increasing"
+        ]
+      },
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "books",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "chart-increasing",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "VOCABULARY KEEPS GROWING",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Older data had suggested vocabulary peaked much earlier. But as the researchers looked at survey data across the decades, the age of peak vocabulary kept moving later, from the early forties in the nineteen seventies and eighties to about sixty five in more recent years.",
+      "headline": "THE PEAK KEEPS <em>MOVING</em>",
+      "sub": "From the forties to sixty five",
+      "visual": {
+        "type": "diagram",
+        "spec": "line chart of the age of peak vocabulary across survey periods, rising from early forties in 1974 to 1987, to about 50, to about 65 in 1998 to 2012"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "chart-increasing",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "And there may be an even bigger surprise. At Stanford University, researchers followed one hundred eighty four people, aged eighteen to ninety four, for ten years. At the start, after five years and after ten years, participants carried pagers for a week and rated their emotions five times a day.",
+      "headline": "THE <em>HAPPINESS</em> STUDY",
+      "sub": "184 people, ten years",
+      "visual": {
+        "type": "stock",
+        "query": "smiling older friends laughing together",
+        "note": "a group of older friends laughing together",
+        "icons": [
+          "grinning-face-with-smiling-eyes",
+          "older-woman",
+          "older-man",
+          "sparkles"
+        ]
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "pager",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "spiral-calendar",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "On average, as people got older, their emotional lives became more positive. The researchers describe it as a shift over time rather than proof of cause and effect. But it pushes against a common assumption, that getting older means getting gloomier.",
+      "headline": "OLDER, AND MORE <em>POSITIVE</em>",
+      "sub": "On average, over ten years",
+      "visual": {
+        "type": "stock",
+        "query": "elderly couple walking in park",
+        "note": "an older couple walking arm in arm through a park",
+        "icons": [
+          "older-man",
+          "older-woman",
+          "deciduous-tree",
+          "smiling-face-with-smiling-eyes"
+        ]
+      },
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "smiling-face-with-smiling-eyes",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "HAPPIER WITH AGE",
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "So what really happens to your body as you age? Your cells collect damage, your telomeres shorten, and some cells stop dividing and linger. Muscles slowly shrink, bones thin, lenses stiffen, arteries harden, and hearing fades.",
+      "headline": "WHAT REALLY <em>CHANGES</em>",
+      "sub": "",
+      "visual": {
+        "type": "diagram",
+        "spec": "a human outline with labeled callouts: cells, muscles, bones, eyes, ears, heart and arteries, skin, brain"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "dna",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "bone",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "But at the same time, your knowledge keeps building, your ability to read other people stays strong for decades, and your emotional life may grow richer. At almost every age, you are getting worse at some things, better at others, and holding steady on the rest.",
+      "headline": "WORSE, BETTER, <em>STEADY</em>",
+      "sub": "At almost every age",
+      "visual": {
+        "type": "diagram",
+        "spec": "three curves across a lifespan from 10 to 90: processing speed peaking early, social skills peaking mid-life, vocabulary rising into the late sixties"
+      },
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "books",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "red-heart",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Aging is not a single clock running down. It is a whole orchestra of clocks, each keeping its own time. And some of the best music, it turns out, comes later in the song.",
+      "headline": "AN ORCHESTRA OF <em>CLOCKS</em>",
+      "sub": "",
+      "visual": {
+        "type": "stock",
+        "query": "grandparent and grandchild laughing outdoors",
+        "note": "a grandparent and grandchild laughing together outdoors",
+        "icons": [
+          "older-woman",
+          "child",
+          "mantelpiece-clock",
+          "musical-notes"
+        ]
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "musical-notes",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "violin",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "ORCHESTRA OF CLOCKS",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "headline": "",
+      "sub": "",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

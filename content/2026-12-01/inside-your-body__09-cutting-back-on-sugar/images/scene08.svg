@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
+<defs><marker id="ah-w" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="26" markerHeight="26" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#ffffff"/></marker><marker id="ah-y" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="26" markerHeight="26" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#ffe08a"/></marker><marker id="ah-c" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="26" markerHeight="26" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#7fe3ff"/></marker><marker id="ah-co" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="26" markerHeight="26" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#ff8a7a"/></marker><marker id="ah-b" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="26" markerHeight="26" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#6fa8ff"/></marker><marker id="ah-r" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="26" markerHeight="26" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#ff6b6b"/></marker><marker id="ah-g" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="26" markerHeight="26" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#8ee6a8"/></marker><marker id="ah-a" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="26" markerHeight="26" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#e3fbff"/></marker></defs>
+
+  <path d="M 310 420 L 300 300 C 290 200, 340 150, 390 170 C 420 182, 440 190, 450 190 C 460 190, 480 182, 510 170 C 560 150, 610 200, 600 300 L 590 420 L 575 600 C 570 650, 530 660, 520 610 L 490 470 C 480 452, 420 452, 410 470 L 380 610 C 370 660, 330 650, 325 600 Z" fill="#fff1c7" stroke="#ffffff" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M 310 420 L 300 300 C 290 200, 340 150, 390 170 C 420 182, 440 190, 450 190 C 460 190, 480 182, 510 170 C 560 150, 610 200, 600 300 L 590 420 L 560 420 L 568 312 C 575 238, 545 205, 510 215 C 480 225, 462 230, 450 230 C 438 230, 420 225, 390 215 C 355 205, 325 238, 332 312 L 340 420 Z" fill="#ffffff"/>
+  <path d="M 398 300 C 402 268, 440 272, 450 280 C 460 272, 498 268, 502 300 L 498 400 C 496 430, 404 430, 402 400 Z" fill="#ff8a7a" opacity="0.85"/>
+  <path d="M 420 420 L 352 600 M 480 420 L 548 600" stroke="#ff8a7a" stroke-width="10" stroke-linecap="round" opacity="0.85"/>
+  <path d="M 150 560 C 230 510, 330 470, 450 490 C 570 470, 670 510, 750 560 C 760 640, 700 690, 450 690 C 200 690, 140 640, 150 560 Z" fill="#e88a86" opacity="0.8" stroke="#ff8a7a" stroke-width="5"/>
+  <!-- acid side -->
+  <g fill="#ff8a7a"><circle cx="150" cy="210" r="13"/><circle cx="190" cy="260" r="13"/><circle cx="130" cy="300" r="13"/><circle cx="175" cy="340" r="13"/><circle cx="140" cy="385" r="13"/></g>
+  <g stroke="#ff8a7a" stroke-width="6" stroke-linecap="round" fill="none">
+    <path d="M 292 245 L 225 225" marker-end="url(#ah-co)"/><path d="M 288 305 L 215 305" marker-end="url(#ah-co)"/><path d="M 292 365 L 225 385" marker-end="url(#ah-co)"/>
+  </g>
+  <rect x="251" y="229" width="22" height="22" rx="4" transform="rotate(45 262 240)" fill="#ffe08a"/><rect x="229" y="294" width="22" height="22" rx="4" transform="rotate(45 240 305)" fill="#ffe08a"/><rect x="247" y="359" width="22" height="22" rx="4" transform="rotate(45 258 370)" fill="#ffe08a"/>
+  <!-- saliva side -->
+  <g fill="rgba(127,227,255,0.45)" stroke="#7fe3ff" stroke-width="4"><circle cx="745" cy="215" r="24"/><circle cx="790" cy="280" r="24"/><circle cx="740" cy="330" r="24"/><circle cx="785" cy="385" r="24"/></g>
+  <g stroke="#7fe3ff" stroke-width="6" stroke-linecap="round" fill="none">
+    <path d="M 690 225 L 618 245" marker-end="url(#ah-c)"/><path d="M 700 305 L 622 305" marker-end="url(#ah-c)"/><path d="M 690 385 L 618 365" marker-end="url(#ah-c)"/>
+  </g>
+  <rect x="669" y="229" width="22" height="22" rx="4" transform="rotate(45 680 240)" fill="#ffe08a"/><rect x="691" y="294" width="22" height="22" rx="4" transform="rotate(45 702 305)" fill="#ffe08a"/><rect x="671" y="359" width="22" height="22" rx="4" transform="rotate(45 682 370)" fill="#ffe08a"/>
+  <text x="450" y="110" text-anchor="middle" font-size="34" font-weight="800" fill="#ffffff" letter-spacing="1">ENAMEL</text>
+  <path d="M 450 122 L 450 182" stroke="#ffffff" stroke-width="4"/>
+  <text x="165" y="160" text-anchor="middle" font-size="34" font-weight="800" fill="#ff8a7a" letter-spacing="1">ACID</text>
+  <text x="760" y="160" text-anchor="middle" font-size="34" font-weight="800" fill="#7fe3ff" letter-spacing="1">SALIVA</text>
+  <text x="190" y="440" text-anchor="middle" font-size="28" font-weight="800" fill="#ffe08a" letter-spacing="1">MINERALS</text><text x="190" y="474" text-anchor="middle" font-size="28" font-weight="800" fill="#ffe08a" letter-spacing="1">LOST</text>
+  <text x="720" y="440" text-anchor="middle" font-size="28" font-weight="800" fill="#ffe08a" letter-spacing="1">MINERALS</text><text x="720" y="474" text-anchor="middle" font-size="28" font-weight="800" fill="#ffe08a" letter-spacing="1">RETURNED</text>
+</svg>

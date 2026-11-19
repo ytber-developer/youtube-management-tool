@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#ffd34d"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c9c3ff"/></marker>
+<radialGradient id="gal"><stop offset="0" stop-color="#ffffff"/><stop offset="0.35" stop-color="#c9c3ff"/><stop offset="1" stop-color="#c9c3ff" stop-opacity="0"/></radialGradient>
+</defs>
+<g font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-weight="800">
+<text x="80" y="66" fill="#ffb347" font-size="32">NOW</text>
+<text x="80" y="386" fill="#ffb347" font-size="32">LATER</text>
+<rect x="60" y="80" width="780" height="220" rx="24" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.25)" stroke-width="4"/>
+<rect x="60" y="400" width="780" height="250" rx="24" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.25)" stroke-width="4"/>
+<g stroke="#c9c3ff" stroke-opacity="0.3" stroke-width="4"><line x1="120" y1="90" x2="120" y2="290"/><line x1="170" y1="90" x2="170" y2="290"/><line x1="220" y1="90" x2="220" y2="290"/><line x1="270" y1="90" x2="270" y2="290"/><line x1="320" y1="90" x2="320" y2="290"/><line x1="370" y1="90" x2="370" y2="290"/><line x1="420" y1="90" x2="420" y2="290"/><line x1="470" y1="90" x2="470" y2="290"/><line x1="520" y1="90" x2="520" y2="290"/><line x1="570" y1="90" x2="570" y2="290"/><line x1="620" y1="90" x2="620" y2="290"/><line x1="670" y1="90" x2="670" y2="290"/><line x1="720" y1="90" x2="720" y2="290"/><line x1="770" y1="90" x2="770" y2="290"/><line x1="820" y1="90" x2="820" y2="290"/><line x1="120" y1="410" x2="120" y2="640"/><line x1="195" y1="410" x2="195" y2="640"/><line x1="270" y1="410" x2="270" y2="640"/><line x1="345" y1="410" x2="345" y2="640"/><line x1="420" y1="410" x2="420" y2="640"/><line x1="495" y1="410" x2="495" y2="640"/><line x1="570" y1="410" x2="570" y2="640"/><line x1="645" y1="410" x2="645" y2="640"/><line x1="720" y1="410" x2="720" y2="640"/><line x1="795" y1="410" x2="795" y2="640"/></g>
+<!-- horizon -->
+<g stroke="#7fe3ff" stroke-width="5" stroke-dasharray="14 10"><line x1="380" y1="86" x2="380" y2="294"/><line x1="380" y1="406" x2="380" y2="644"/></g>
+<!-- galaxies -->
+<g><ellipse cx="120" cy="200" rx="40" ry="16" fill="url(#gal)" transform="rotate(-20 120 200)"/><ellipse cx="570" cy="200" rx="40" ry="16" fill="url(#gal)" transform="rotate(25 570 200)"/>
+<ellipse cx="120" cy="510" rx="40" ry="16" fill="url(#gal)" transform="rotate(-20 120 510)"/><ellipse cx="795" cy="510" rx="40" ry="16" fill="url(#gal)" transform="rotate(25 795 510)"/></g>
+<!-- light -->
+<path d="M545,200 q-8,-14 -16,0 t-16,0 t-16,0 t-16,0 t-16,0 L475,200" fill="none" stroke="#ffd34d" stroke-width="5" stroke-linecap="round" marker-end="url(#ah)"/>
+<path d="M770,510 q-8,-14 -16,0 t-16,0 t-16,0 t-16,0 t-16,0 t-16,0 t-16,0 t-16,0 t-16,0 t-16,0 t-16,0 t-16,0 t-16,0 L545,510" fill="none" stroke="#ffd34d" stroke-width="5" stroke-linecap="round" marker-end="url(#ah)"/>
+<g font-size="28" text-anchor="middle" fill="#ffffff">
+<text x="120" y="160">US</text><text x="590" y="160">GALAXY</text><text x="500" y="256" fill="#ffd34d">LIGHT</text>
+<text x="120" y="470">US</text><text x="760" y="470">GALAXY</text><text x="660" y="560" fill="#ffd34d">LIGHT</text>
+</g>
+<line x1="132" y1="605" x2="528" y2="605" stroke="#c9c3ff" stroke-width="5" marker-start="url(#ah2)" marker-end="url(#ah2)"/>
+<text x="560" y="615" fill="#c9c3ff" font-size="28">GAP GROWS</text>
+<text x="380" y="705" text-anchor="middle" fill="#7fe3ff" font-size="32">COSMIC HORIZON</text>
+</g>
+</svg>

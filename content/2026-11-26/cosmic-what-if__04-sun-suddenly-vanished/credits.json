@@ -1,0 +1,140 @@
+[
+  {
+    "scene": 1,
+    "type": "nasa",
+    "query": "Solar Dynamics Observatory full disk Sun",
+    "file": "images/scene01.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA18169",
+    "title": "Solar Dynamics Observatory Artist Concept",
+    "credit": "NASA/GFSC",
+    "url": "https://images.nasa.gov/details/PIA18169",
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "scene": 2,
+    "type": "nasa",
+    "query": "sunrise over Earth from International Space Station",
+    "file": "images/scene02.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "iss028e007274",
+    "title": "Earth Observation",
+    "credit": "NASA (JSC)",
+    "url": "https://images.nasa.gov/details/iss028e007274",
+    "width": 1920,
+    "height": 1275
+  },
+  {
+    "scene": 3,
+    "type": "nasa",
+    "query": "neutron star merger illustration gravitational waves",
+    "file": "images/scene03.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA21910",
+    "title": "Spitzer Observes Neutron Star Collision",
+    "credit": "NASA/JPL-Caltech",
+    "url": "https://images.nasa.gov/details/PIA21910",
+    "width": 2048,
+    "height": 718
+  },
+  {
+    "scene": 4,
+    "type": "nasa",
+    "query": "Earth at night Black Marble",
+    "file": "images/scene04.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "GSFC_20171208_Archive_e002131",
+    "title": "NASA Blue Marble 2007 West",
+    "credit": "NASA/Goddard Space Flight Center/Reto Stöckli",
+    "url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e002131",
+    "width": 1919,
+    "height": 1919
+  },
+  {
+    "scene": 5,
+    "type": "diagram"
+  },
+  {
+    "scene": 6,
+    "type": "nasa",
+    "query": "Antarctic sea ice from space",
+    "file": "images/scene06.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "GSFC_20171208_Archive_e001514",
+    "title": "IceBridge Survey Flight Over Saunders Island and Wolstenholme Fjord",
+    "credit": "NASA / Michael Studinger",
+    "url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001514",
+    "width": 2400,
+    "height": 1590
+  },
+  {
+    "scene": 7,
+    "type": "nasa",
+    "query": "Earth vegetation global map satellite",
+    "file": "images/scene07.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA26417",
+    "title": "NASA's EMIT Scans the Amazon River in Northern Brazil",
+    "credit": "NASA/JPL-Caltech",
+    "url": "https://images.nasa.gov/details/PIA26417",
+    "width": 1920,
+    "height": 1340
+  },
+  {
+    "scene": 8,
+    "type": "nasa",
+    "query": "Pluto nitrogen ice plains New Horizons",
+    "file": "images/scene08.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA20464",
+    "title": "Pluto Mysterious, Floating Hills",
+    "credit": "NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute",
+    "url": "https://images.nasa.gov/details/PIA20464",
+    "width": 1920,
+    "height": 1152
+  },
+  {
+    "scene": 9,
+    "type": "nasa",
+    "query": "Europa ice surface Galileo",
+    "file": "images/scene09.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA19048",
+    "title": "Europa Stunning Surface",
+    "credit": "NASA/JPL-Caltech/SETI Institute",
+    "url": "https://images.nasa.gov/details/PIA19048",
+    "width": 2300,
+    "height": 1700
+  },
+  {
+    "scene": 10,
+    "type": "nasa",
+    "query": "Iceland volcano from space",
+    "file": "images/scene10.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "GSFC_20171208_Archive_e002017",
+    "title": "Ash plume from Eyjafjallajokull Volcano, Iceland May 6th View [Detail]",
+    "credit": "NASA (GSFC)",
+    "url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e002017",
+    "width": 1626,
+    "height": 1188
+  },
+  {
+    "scene": 11,
+    "type": "nasa",
+    "query": "Sun solar flare SDO",
+    "file": "images/scene11.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "GSFC_20171208_Archive_e001210",
+    "title": "NASA's SDO Shows Images of Significant Solar Flare",
+    "credit": "NASA/SDO",
+    "url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001210",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "scene": 12,
+    "type": "outro"
+  }
+]

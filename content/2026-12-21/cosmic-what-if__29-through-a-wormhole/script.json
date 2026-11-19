@@ -1,0 +1,804 @@
+{
+  "channel": "cosmic-what-if",
+  "style": "anim",
+  "number": 29,
+  "slug": "through-a-wormhole",
+  "target_minutes": 7.4,
+  "title": "What If You Traveled Through a Wormhole? The Real Physics",
+  "thumbnail_text": "INTO A WORMHOLE",
+  "description": "Wormholes are allowed by Einstein's equations, but nobody has ever found one. We plan a hypothetical trip step by step: finding a wormhole, holding it open with exotic matter, what it would look like up close (as in Interstellar), what you'd feel going through, and why a wormhole might double as a time machine. Plus the 2022 quantum computer 'wormhole' and what it really was.\n\nSources:\n- Morris & Thorne, Wormholes in spacetime and their use for interstellar travel: A tool for teaching general relativity, American Journal of Physics 56, 395 (1988): https://doi.org/10.1119/1.15620\n- Morris, Thorne & Yurtsever, Wormholes, Time Machines, and the Weak Energy Condition, Physical Review Letters 61, 1446 (1988): https://doi.org/10.1103/PhysRevLett.61.1446\n- Hawking, Chronology protection conjecture, Physical Review D 46, 603 (1992): https://doi.org/10.1103/PhysRevD.46.603\n- James, von Tunzelmann, Franklin & Thorne, Visualizing Interstellar's Wormhole, American Journal of Physics (2015) (arXiv): https://arxiv.org/abs/1502.03809\n- Caltech INQNET, Traversable wormhole dynamics on a quantum processor (2022): https://inqnet.caltech.edu/wormhole2022/\n- Space.com, What are wormholes?: https://www.space.com/20881-wormholes.html\n- NASA Imagine the Universe, The Nearest Star: https://imagine.gsfc.nasa.gov/features/cosmic/nearest_star_info.html\n- The Nobel Prize in Physics 2017: https://www.nobelprize.org/prizes/physics/2017/summary/",
+  "tags": [
+    "wormhole",
+    "wormholes explained",
+    "einstein rosen bridge",
+    "time travel",
+    "kip thorne",
+    "interstellar",
+    "exotic matter",
+    "general relativity",
+    "space travel",
+    "physics",
+    "what if",
+    "astronomy",
+    "science",
+    "cosmic what if"
+  ],
+  "sources": [
+    {
+      "title": "Morris & Thorne, Wormholes in spacetime and their use for interstellar travel: A tool for teaching general relativity, American Journal of Physics 56, 395 (1988)",
+      "url": "https://doi.org/10.1119/1.15620"
+    },
+    {
+      "title": "Morris, Thorne & Yurtsever, Wormholes, Time Machines, and the Weak Energy Condition, Physical Review Letters 61, 1446 (1988)",
+      "url": "https://doi.org/10.1103/PhysRevLett.61.1446"
+    },
+    {
+      "title": "Hawking, Chronology protection conjecture, Physical Review D 46, 603 (1992)",
+      "url": "https://doi.org/10.1103/PhysRevD.46.603"
+    },
+    {
+      "title": "James, von Tunzelmann, Franklin & Thorne, Visualizing Interstellar's Wormhole, American Journal of Physics (2015) (arXiv)",
+      "url": "https://arxiv.org/abs/1502.03809"
+    },
+    {
+      "title": "Caltech INQNET, Traversable wormhole dynamics on a quantum processor (2022)",
+      "url": "https://inqnet.caltech.edu/wormhole2022/"
+    },
+    {
+      "title": "Space.com, What are wormholes?",
+      "url": "https://www.space.com/20881-wormholes.html"
+    },
+    {
+      "title": "NASA Imagine the Universe, The Nearest Star",
+      "url": "https://imagine.gsfc.nasa.gov/features/cosmic/nearest_star_info.html"
+    },
+    {
+      "title": "The Nobel Prize in Physics 2017",
+      "url": "https://www.nobelprize.org/prizes/physics/2017/summary/"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "fall-toward",
+    "props": [
+      {
+        "icon": "hole",
+        "at": "right",
+        "size": "xl",
+        "anim": "spin"
+      },
+      {
+        "icon": "glowing-star",
+        "at": "top-left",
+        "size": "m",
+        "anim": "pulse"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "What if you stepped into a wormhole here on Earth and stepped out next to another star? What would that trip actually be like?",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "hole",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "glowing-star",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "grin",
+        "bg": "space",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "First, an honest warning. Wormholes are hypothetical. Nobody has ever found one. They're allowed by the math of Einstein's general relativity, but allowed is not the same as real. So think of this as a careful thought experiment.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "warning",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "scroll",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "HYPOTHETICAL"
+      }
+    },
+    {
+      "narration": "The basic idea is simple. Space can bend. A wormhole would be a tunnel through bent space, linking two distant places with a shortcut, like poking a pencil through a folded sheet of paper.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "memo",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "pencil",
+            "at": "top",
+            "size": "s",
+            "anim": "approach"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Why bother? Because space is unbelievably big. The nearest star to the Sun, Proxima Centauri, is about four and a quarter light-years away. Even light, the fastest thing there is, needs more than four years to get there.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "glowing-star",
+            "at": "top",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Our spacecraft are much slower. Voyager One is racing away from the Sun at about seventeen kilometers per second. At that speed, a trip to Proxima would take more than seventy-three thousand years.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "top-left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "bg": "space",
+        "text": "73,000 YEARS"
+      }
+    },
+    {
+      "narration": "A wormhole could shrink that journey to almost nothing, maybe a short stroll. So let's plan your trip, step by step. Step one, and it's a big one: find a wormhole.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "world-map",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "text": "STEP ONE"
+      }
+    },
+    {
+      "narration": "The idea goes back to 1935, when Albert Einstein and physicist Nathan Rosen found bridges in the equations of general relativity, connecting two separate regions of space. They came to be called Einstein-Rosen bridges, or wormholes.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "link",
+            "at": "bubble"
+          },
+          {
+            "icon": "books",
+            "at": "right",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "But there was a catch. Later work showed that this kind of bridge isn't a tunnel you can use. It pinches shut so quickly that not even light could make it from one side to the other.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "hole",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "flashlight",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "shock"
+      }
+    },
+    {
+      "narration": "If you jumped in, you'd be trapped as it collapsed around you. So step two of your plan is much harder: you need a wormhole that stays open long enough for you to cross.",
+      "anim": {
+        "action": "hold-breath",
+        "props": [
+          {
+            "icon": "door",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "stopwatch",
+            "at": "top-left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "text": "STEP TWO"
+      }
+    },
+    {
+      "narration": "In the 1980s, the astronomer Carl Sagan was writing a novel called Contact, and he wanted his heroine to cross space in a believable way. Caltech physicist Kip Thorne decided to take the question seriously.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "books",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "telescope",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "In 1988, Thorne and his student Michael Morris published what a traversable wormhole would need. The answer was startling. To hold the tunnel open, you'd need something called exotic matter.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "scroll",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "text": "EXOTIC MATTER"
+      }
+    },
+    {
+      "narration": "Exotic matter would have negative energy density. Instead of pulling space together the way normal matter and energy do, it would push the throat of the wormhole apart and keep it from slamming shut.",
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "hole",
+            "at": "right",
+            "size": "m",
+            "anim": "grow"
+          },
+          {
+            "icon": "magnet",
+            "at": "left",
+            "size": "s",
+            "anim": "shake"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Does anything like that exist? No known material has negative mass. But quantum physics does allow tiny pockets of negative energy. One example is the Casimir effect, between metal plates placed extremely close together.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "atom-symbol",
+            "at": "bubble"
+          },
+          {
+            "icon": "microscope",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "The problem is scale. Those effects are incredibly small. Nobody knows how to gather enough negative energy to prop open a tunnel big enough for a person, or whether the laws of physics even allow it.",
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "microscope",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "red-question-mark",
+            "at": "top",
+            "size": "s",
+            "anim": "bob"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Where would a wormhole even come from? Some physicists have speculated that tiny ones might flicker in and out of existence at the smallest scales of space, far smaller than an atom, and that someone might one day enlarge one.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "bubbles",
+            "at": "top",
+            "size": "m",
+            "anim": "fade-in"
+          },
+          {
+            "icon": "magic-wand",
+            "at": "right",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "So far, your plan has two impossible-looking steps. But let's say a future civilization pulls them off. Step three: approach the wormhole. What would you actually see?",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "eyes",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "space",
+        "text": "STEP THREE"
+      }
+    },
+    {
+      "narration": "Not a dark hole, and not a swirling tunnel like in cartoons. A wormhole's mouth would most likely look like a sphere, a glowing ball hanging in space.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "crystal-ball",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "star",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Inside that sphere, you'd see a warped picture of the place on the other side: its stars and galaxies, bent and squeezed together, as if you were peering into a crystal ball.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "crystal-ball",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "milky-way",
+            "at": "top",
+            "size": "s",
+            "anim": "fade-in"
+          }
+        ],
+        "bg": "space",
+        "face": "shock"
+      }
+    },
+    {
+      "narration": "That's how the 2014 movie Interstellar showed it. Kip Thorne worked on the film, and the visual effects team traced real paths of light around a wormhole to draw it. They later published the science in a physics journal.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "clapper-board",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "popcorn",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Around the edge of the sphere, light from your own side would bend too, forming a bright circle called an Einstein ring. Behind you, the familiar sky. In front of you, a window to somewhere else.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "ring",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "bg": "space",
+        "text": "EINSTEIN RING"
+      }
+    },
+    {
+      "narration": "Step four: go through. What would you feel? Near a small black hole, tidal forces would stretch you like spaghetti. Morris and Thorne designed their imaginary wormhole so the stretching on a traveler would be no stronger than Earth's gravity.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "black-hole",
+            "at": "left",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "hole",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "space",
+        "text": "STEP FOUR"
+      }
+    },
+    {
+      "narration": "Their design also had no event horizon, the point of no return around a black hole. So unlike a black hole, a wormhole like this would let you come back out the way you went in.",
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "door",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "check-mark-button",
+            "at": "top-left",
+            "size": "s",
+            "anim": "grow"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "In a wormhole built like that, the trip could feel surprisingly ordinary. You'd glide through the throat, the view ahead swelling until it surrounds you, while the sky behind you shrinks to a small sphere.",
+      "anim": {
+        "action": "fall-toward",
+        "props": [
+          {
+            "icon": "hole",
+            "at": "right",
+            "size": "xl",
+            "anim": "grow"
+          },
+          {
+            "icon": "glowing-star",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "space",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "Then you'd drift out the other side. Fresh starlight, a new sun, maybe a strange planet. A journey that would have taken Voyager tens of thousands of years, done in moments.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "space",
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "And a working wormhole would allow two-way traffic. You could send messages home and get replies almost right away, no matter how far apart the two mouths are in ordinary space.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "mobile-phone",
+            "at": "hand"
+          },
+          {
+            "icon": "satellite-antenna",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "One rule for your trip: don't touch the walls. The throat would be lined with that exotic matter, and nobody knows what contact with it would do. Experts also warn about sudden collapse and high radiation.",
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "radioactive",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "warning",
+            "at": "top-left",
+            "size": "s",
+            "anim": "shake"
+          }
+        ],
+        "face": "worry",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Now, the strangest part. Soon after their first paper, Thorne and his colleagues showed something astonishing. If you could move one mouth of a wormhole around, you could, in principle, turn it into a time machine.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "hourglass-done",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "dizzy",
+            "at": "top",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "text": "TIME MACHINE"
+      }
+    },
+    {
+      "narration": "The trick comes from relativity. Moving clocks tick slower. Fly one mouth around at nearly the speed of light and bring it back, and the two ends would age differently. Stepping through could then carry you into the past.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "rocket",
+            "at": "top-left",
+            "size": "s",
+            "anim": "orbit"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "That opens the door to famous paradoxes. What if you went back and stopped yourself from ever building the wormhole in the first place? Physicists take puzzles like that very seriously.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "red-question-mark",
+            "at": "bubble"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "s",
+            "anim": "spin"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Stephen Hawking suspected nature forbids it. In 1992, he proposed the chronology protection conjecture: the idea that the laws of physics prevent time machines from forming, and so keep the universe safe for historians.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "shield",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "scroll",
+            "at": "top-left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "So is anyone studying wormholes for real? In a surprising way, yes. In 2022, physicists used Google's Sycamore quantum computer to run a tiny quantum system that behaves, mathematically, like a traversable wormhole.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "laptop",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "atom-symbol",
+            "at": "top-left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "They put a bit of quantum information into one side and watched it emerge from the other. But it was not a real tunnel through space. It was a model of the physics, running on a chip.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "laptop",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "cross-mark",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "text": "NOT A REAL TUNNEL"
+      }
+    },
+    {
+      "narration": "And the people who think hardest about bent space aren't on the fringe. Kip Thorne went on to share the 2017 Nobel Prize in Physics for helping detect gravitational waves, ripples in spacetime itself.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "trophy",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "water-wave",
+            "at": "left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "So could you travel through a wormhole? The honest answer is that nobody knows if they exist, and holding one open would need a kind of matter no one has ever gathered in useful amounts.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "hole",
+            "at": "bubble"
+          },
+          {
+            "icon": "red-question-mark",
+            "at": "right",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "But the equations haven't said no. And just asking the question has pushed physicists to understand gravity, quantum physics, and even time a little better. For now, the shortcut stays a beautiful maybe.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "top",
+            "size": "l",
+            "anim": "fade-in"
+          },
+          {
+            "icon": "hole",
+            "at": "right",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "night",
+        "camera": "zoom-out"
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,746 @@
+{
+  "channel": "inside-your-body",
+  "number": 26,
+  "slug": "what-laughing-does",
+  "style": "anim",
+  "target_minutes": 7.1,
+  "title": "What Laughing Actually Does to Your Body (It's Not About Jokes)",
+  "thumbnail_text": "WHY YOU LAUGH",
+  "description": "Most laughter has nothing to do with jokes. Follow a single laugh through your body: the breathing bursts that make each ha, the brief workout for your heart, the feel-good opioids released in your brain, and why hearing laughter makes you want to join in. Plus what tickled apes and rats reveal about how old laughter really is.\n\nSources:\n- Mayo Clinic - Stress relief from laughter? It's no joke: https://www.mayoclinic.org/healthy-lifestyle/stress-management/in-depth/stress-relief/art-20044456\n- BrainFacts.org (Society for Neuroscience) - Finding the Truth Behind Funny: https://www.brainfacts.org/Brain-Anatomy-and-Function/Body-Systems/2019/Finding-the-Truth-Behind-Funny-041119\n- Manninen et al. (2017), Journal of Neuroscience - Social Laughter Triggers Endogenous Opioid Release in Humans: https://doi.org/10.1523/JNEUROSCI.0688-16.2017\n- Dunbar et al. (2012), Proceedings of the Royal Society B - Social laughter is correlated with an elevated pain threshold: https://doi.org/10.1098/rspb.2011.1373\n- Warren et al. (2006), Journal of Neuroscience - Positive emotions preferentially engage an auditory-motor mirror system: https://doi.org/10.1523/JNEUROSCI.3907-06.2006\n- Buchowski et al. (2007), International Journal of Obesity - Energy expenditure of genuine laughter: https://www.nature.com/articles/0803353\n- Davila Ross, Owren & Zimmermann (2009), Current Biology - Reconstructing the evolution of laughter in great apes and humans: https://researchportal.port.ac.uk/en/publications/reconstructing-the-evolution-of-laughter-in-great-apes-and-humans/\n- Panksepp & Burgdorf (2003), Physiology & Behavior - Laughing rats and the evolutionary antecedents of human joy?: https://pubmed.ncbi.nlm.nih.gov/12954448/\n- Science News - Tickling apes reveals laughter's origins: https://www.sciencenews.org/article/tickling-apes-reveals-laughters-origins\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": [
+    "laughter",
+    "what laughing does to your body",
+    "why do we laugh",
+    "endorphins",
+    "laughter is contagious",
+    "brain chemistry",
+    "stress relief",
+    "evolution of laughter",
+    "social bonding",
+    "human body",
+    "science explained",
+    "inside your body"
+  ],
+  "sources": [
+    {
+      "title": "Mayo Clinic - Stress relief from laughter? It's no joke",
+      "url": "https://www.mayoclinic.org/healthy-lifestyle/stress-management/in-depth/stress-relief/art-20044456"
+    },
+    {
+      "title": "BrainFacts.org (Society for Neuroscience) - Finding the Truth Behind Funny",
+      "url": "https://www.brainfacts.org/Brain-Anatomy-and-Function/Body-Systems/2019/Finding-the-Truth-Behind-Funny-041119"
+    },
+    {
+      "title": "Manninen et al. (2017), Journal of Neuroscience - Social Laughter Triggers Endogenous Opioid Release in Humans",
+      "url": "https://doi.org/10.1523/JNEUROSCI.0688-16.2017"
+    },
+    {
+      "title": "Dunbar et al. (2012), Proceedings of the Royal Society B - Social laughter is correlated with an elevated pain threshold",
+      "url": "https://doi.org/10.1098/rspb.2011.1373"
+    },
+    {
+      "title": "Warren et al. (2006), Journal of Neuroscience - Positive emotions preferentially engage an auditory-motor mirror system",
+      "url": "https://doi.org/10.1523/JNEUROSCI.3907-06.2006"
+    },
+    {
+      "title": "Buchowski et al. (2007), International Journal of Obesity - Energy expenditure of genuine laughter",
+      "url": "https://www.nature.com/articles/0803353"
+    },
+    {
+      "title": "Davila Ross, Owren & Zimmermann (2009), Current Biology - Reconstructing the evolution of laughter in great apes and humans",
+      "url": "https://researchportal.port.ac.uk/en/publications/reconstructing-the-evolution-of-laughter-in-great-apes-and-humans/"
+    },
+    {
+      "title": "Panksepp & Burgdorf (2003), Physiology & Behavior - Laughing rats and the evolutionary antecedents of human joy?",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12954448/"
+    },
+    {
+      "title": "Science News - Tickling apes reveals laughter's origins",
+      "url": "https://www.sciencenews.org/article/tickling-apes-reveals-laughters-origins"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "cheer",
+    "props": [
+      {
+        "icon": "face-with-tears-of-joy",
+        "at": "right",
+        "size": "l"
+      },
+      {
+        "icon": "brain",
+        "at": "top-left",
+        "size": "m"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "You've probably laughed today. But chances are, you weren't laughing at a joke. So what was your body really doing?",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "face-with-tears-of-joy",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "red-question-mark",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Laughing feels effortless, but it is one of the strangest things your body does. So let's follow a single laugh, from the moment it starts, through your lungs, your heart and your brain, to what it leaves behind.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "lungs",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "brain",
+            "at": "top-left",
+            "size": "s"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Step one is the trigger. You might expect laughter to come mostly from jokes. But the psychologist Robert Provine, who spent years observing real laughter in everyday life, found that laughter rarely follows a joke at all.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "man-detective",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "bubble",
+            "size": "m"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Instead, most laughs pop up in ordinary conversation, whether or not anything funny was said. And laughter usually lands before or after complete phrases, like punctuation, rather than interrupting the middle of a sentence.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "speech-balloon",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "busts-in-silhouette",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Provine also found that people are about thirty times more likely to laugh when they're with others than when they're alone. Laughter, it turns out, is mostly a social signal, a message from you to the people around you.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "people-hugging",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "busts-in-silhouette",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "THIRTY TIMES MORE",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "You can test this yourself. Watch a comedy alone and you might smile quietly. Watch the very same show with friends and you will probably laugh out loud. That is the social side of laughter in action.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "television",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "popcorn",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "room",
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Step two, the laugh begins. Your breathing muscles start squeezing your chest in quick, rhythmic bursts. Each burst pushes out a short puff of air, and your voice box turns it into a ha.",
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "lungs",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "text": "HA HA HA",
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Each of those ha sounds is tiny. Laughter researchers measure a single laugh note at about seventy-five milliseconds, less than a tenth of a second, repeated in a steady, bouncing rhythm.",
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "musical-notes",
+            "at": "top",
+            "size": "s",
+            "anim": "bob"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Notice something about how you breathe when you laugh hard. You are breathing out, again and again, in chopped up pieces, until you run out of air and have to gasp. That outward rhythm is a big clue.",
+      "anim": {
+        "action": "hold-breath",
+        "props": [
+          {
+            "icon": "wind-face",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "face": "hold"
+      }
+    },
+    {
+      "narration": "In 2009, researchers recorded young apes being tickled, chimpanzees, bonobos, gorillas and orangutans, and compared the sounds with tickled human babies. They wanted to know where laughter came from.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "gorilla",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "orangutan",
+            "at": "far-right",
+            "size": "s"
+          },
+          {
+            "icon": "baby",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Ape laughter often sounds more like panting, breathing in and out. But the sounds fit together like a family tree. The team concluded that laughter evolved gradually over roughly the last ten to sixteen million years.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "monkey",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "deciduous-tree",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "text": "MILLIONS OF YEARS",
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Human laughter, they found, is an exaggerated version of that ancient play sound, made almost entirely while breathing out. When you laugh, you are using a signal far older than words.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "monkey-face",
+            "at": "right",
+            "size": "s"
+          },
+          {
+            "icon": "speech-balloon",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "It may run even deeper. The neuroscientist Jaak Panksepp found that rats, when tickled, make high pitched chirps, far too high for human ears to hear. Some scientists see this as a kind of rat laughter.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "rat",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "feather",
+            "at": "top-left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "bg": "lab",
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "In both rats and apes, these sounds show up during play, like wrestling, chasing and tickling. Panksepp argued they are an ancient sign of joy, a way of saying this is fun, we're friends, it's only a game.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "rat",
+            "at": "right",
+            "size": "s",
+            "anim": "bob"
+          },
+          {
+            "icon": "monkey",
+            "at": "left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "park",
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Step three, your heart. As the laugh builds, your heart rate and blood pressure rise a little, a bit like a mini workout. Mayo Clinic describes laughter as first firing up, and then cooling down, your stress response.",
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Mayo Clinic adds that a good laugh boosts your intake of oxygen rich air and stimulates your heart, lungs and muscles. For a few seconds, your whole upper body is working together.",
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "lungs",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Then comes the cool down. After the laughing stops, your heart rate and blood pressure settle, and your muscles relax. Many people describe a loose, calm feeling, as if they had just let out a long sigh.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "relieved-face",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "couch-and-lamp",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Does all that effort burn energy? A little. A 2007 study measured it carefully and found that genuine laughter raised energy use by about ten to twenty percent above resting levels.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "fire",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "text": "TINY WORKOUT"
+      }
+    },
+    {
+      "narration": "That adds up to roughly ten to forty calories for ten to fifteen minutes of laughter a day. Nice, but don't swap your morning walk for a comedy special just yet.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "television",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "running-shoe",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "park",
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Step four, your brain. In 2017, scientists in Finland scanned the brains of men after they had spent half an hour watching comedy clips with close friends. They were looking for the brain's own opioids.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "television",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "These natural opioids, like endorphins, are the body's built in feel good and pain easing chemicals. After social laughter, the scans showed them being released in brain areas involved in pleasure and emotion.",
+      "anim": {
+        "action": "grow",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "text": "FEEL GOOD CHEMICALS"
+      }
+    },
+    {
+      "narration": "The scans showed something else too. People with more opioid receptors in certain brain areas tended to laugh more often. Your brain chemistry may shape how easily you crack up.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "rolling-on-the-floor-laughing",
+            "at": "left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "That fits an earlier finding. In a 2012 study led by the psychologist Robin Dunbar, people who laughed at comedy, both in the lab and at live shows, could withstand more pain afterward than people who watched something serious.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "performing-arts",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "ice",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "MORE LAUGHS, LESS PAIN"
+      }
+    },
+    {
+      "narration": "Pain was measured in a simple, slightly uncomfortable way: how long people could stand a frozen wine cooler sleeve wrapped around their arm. After a good laugh, people tended to last longer.",
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "ice",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "stopwatch",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "hold"
+      }
+    },
+    {
+      "narration": "And it was laughing itself that mattered, not just a good mood. The more people actually laughed, the more their pain tolerance rose. A pleasant but unfunny video didn't have the same effect.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "face-with-tears-of-joy",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "chart-increasing",
+            "at": "left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Step five, the spread. Laughter is contagious, and brain scans hint at why. In a 2006 study, simply hearing laughter activated regions of the brain that prepare the face to move.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "ear",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "loudspeaker",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "CONTAGIOUS"
+      }
+    },
+    {
+      "narration": "Pleasant sounds like laughter, or a triumphant woo hoo, triggered a bigger response in those areas than unpleasant sounds like screaming. Your brain seems especially ready to echo happy noises.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "loudspeaker",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "party-popper",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "In other words, hearing someone laugh quietly warms up the circuits for your own smile, getting you ready to join in. That may help explain why giggles ripple around a room.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "grinning-squinting-face",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "busts-in-silhouette",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Put it all together and a picture emerges. Laughter releases feel good chemicals, it happens mostly with other people, and it spreads from one person to the next. Many researchers think that is exactly the point.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "people-hugging",
+            "at": "bubble",
+            "size": "m"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Dunbar's idea is that laughter helps us bond. Other apes bond by grooming each other, one partner at a time. Humans can laugh together in a group, sharing that warm glow with several friends at once.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "people-hugging",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "monkey",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Over the longer term, Mayo Clinic notes that laughter may help ease pain, lift your mood, and make it easier to cope with difficult situations. Small moments of humor add up.",
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "smiling-face-with-smiling-eyes",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Laughter isn't a medicine, though. It can't replace treatment. If you feel low most days, or stress feels overwhelming, the best step is to talk with a doctor or a mental health professional.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "stethoscope",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "speech-balloon",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "NOT A MEDICINE",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "So the next time you laugh at a friend's perfectly ordinary comment, don't worry that it wasn't funny. Your breath, your heart and your brain are doing exactly what they evolved to do.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "speech-balloon",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "You're not reacting to a joke. You're sending one of the oldest signals there is: I'm with you. And your body rewards you for it, with a rush of feel good chemistry.",
+      "anim": {
+        "action": "wave",
+        "props": [
+          {
+            "icon": "people-hugging",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "text": "I'M WITH YOU",
+        "camera": "zoom-out",
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

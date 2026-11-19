@@ -1,0 +1,701 @@
+{
+  "channel": "inside-your-body",
+  "number": 25,
+  "slug": "why-muscles-cramp",
+  "style": "anim",
+  "target_minutes": 7.0,
+  "title": "Why Do Your Muscles Cramp? The Surprising Answer Is in Your Nerves",
+  "thumbnail_text": "WHY MUSCLES CRAMP",
+  "description": "A muscle cramp can turn your calf into a rock-hard knot in seconds. For years the blame went to dehydration and low salt, but a growing body of research points to something else: tired muscles whose nerve signals get stuck in the on position. Here is how a normal muscle squeeze works, what goes wrong in a cramp, what a famous pickle juice experiment revealed, and what commonly helps.\n\nSources:\n- MedlinePlus - Muscle cramps: https://medlineplus.gov/ency/article/003193.htm\n- NCBI StatPearls - Muscle Cramps: https://www.ncbi.nlm.nih.gov/books/NBK499895/\n- Cleveland Clinic - Muscle Cramps: https://my.clevelandclinic.org/health/symptoms/21190-muscle-cramps\n- Cleveland Clinic - Leg Cramps: https://my.clevelandclinic.org/health/diseases/14170-leg-cramps\n- Cedars-Sinai - All About Muscle Cramps: https://www.cedars-sinai.org/health-topics/all-about-muscle-cramps\n- Schwellnus (2009), Br J Sports Med - Cause of exercise associated muscle cramps: altered neuromuscular control, dehydration or electrolyte depletion?: https://pubmed.ncbi.nlm.nih.gov/18981039/\n- Miller et al. (2010), Med Sci Sports Exerc - Reflex inhibition of electrically induced muscle cramps in hypohydrated humans: https://pubmed.ncbi.nlm.nih.gov/19997012/\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": [
+    "muscle cramps",
+    "leg cramps",
+    "charley horse",
+    "night leg cramps",
+    "why do muscles cramp",
+    "pickle juice",
+    "dehydration",
+    "electrolytes",
+    "nervous system",
+    "human body",
+    "science explained",
+    "inside your body"
+  ],
+  "sources": [
+    {
+      "title": "MedlinePlus - Muscle cramps",
+      "url": "https://medlineplus.gov/ency/article/003193.htm"
+    },
+    {
+      "title": "NCBI StatPearls - Muscle Cramps",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK499895/"
+    },
+    {
+      "title": "Cleveland Clinic - Muscle Cramps",
+      "url": "https://my.clevelandclinic.org/health/symptoms/21190-muscle-cramps"
+    },
+    {
+      "title": "Cleveland Clinic - Leg Cramps",
+      "url": "https://my.clevelandclinic.org/health/diseases/14170-leg-cramps"
+    },
+    {
+      "title": "Cedars-Sinai - All About Muscle Cramps",
+      "url": "https://www.cedars-sinai.org/health-topics/all-about-muscle-cramps"
+    },
+    {
+      "title": "Schwellnus (2009), Br J Sports Med - Cause of exercise associated muscle cramps: altered neuromuscular control, dehydration or electrolyte depletion?",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18981039/"
+    },
+    {
+      "title": "Miller et al. (2010), Med Sci Sports Exerc - Reflex inhibition of electrically induced muscle cramps in hypohydrated humans",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19997012/"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "leg",
+        "at": "right",
+        "size": "l"
+      },
+      {
+        "icon": "high-voltage",
+        "at": "top-left",
+        "size": "m"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "You're asleep, warm and comfortable, when suddenly your calf locks into a rock-hard knot. Why does your own muscle turn against you?",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "leg",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "crescent-moon",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "night",
+        "face": "shock",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "That sudden, painful squeeze is a muscle cramp. It is an involuntary contraction, which means the muscle tightens on its own and refuses to let go. A cramp can last a few seconds, or as long as fifteen minutes.",
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "leg",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "stopwatch",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "INVOLUNTARY",
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "During a cramp, you may even see or feel a hard lump of muscle under your skin. And once it finally lets go, the muscle can stay sore for a while, a reminder of how hard it was squeezing.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "rock",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "sick"
+      }
+    },
+    {
+      "narration": "If it hits your calf, you might know it by an old nickname, the charley horse. Cramps love the calf, the foot and the thigh, but almost any muscle you control can cramp.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "horse",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "foot",
+            "at": "left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "And you are far from alone. A medical review in the NIH's online library reports that night leg cramps affect about forty percent of adults over fifty, and roughly seven percent of kids aged eight to eighteen.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "bed",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "old-woman",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "So what is actually going on inside that knotted muscle? To find out, we first need to look at how a normal muscle squeeze works, and then at what goes wrong.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "flexed-biceps",
+            "at": "bubble",
+            "size": "m"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Every movement you make starts in your brain and spinal cord. Nerve cells called motor neurons send electrical signals down to your muscles. Each signal tells the muscle fibers to contract, to pull tight.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "top-left",
+            "size": "s"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Then the signal stops, and the fibers relax. Squeeze, release, squeeze, release. That smooth on and off rhythm is what lets you walk, type and smile without ever thinking about it.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "running-shoe",
+            "at": "right",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "A cramp is that rhythm getting stuck in the on position. The muscle keeps firing and firing, far harder than you ever asked it to. That is why it feels like a fist clenched inside your leg.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "leg",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "collision",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "text": "STUCK ON",
+        "face": "shock",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "But why would the signal get stuck? Scientists have argued about this for decades. There are a few main suspects, and the way researchers tested them plays out a little like a detective story.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "man-detective",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "bubble",
+            "size": "m"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Suspect number one is water. Many people believe cramps come from dehydration. When you sweat a lot you lose fluid, and MedlinePlus lists dehydration as the most common cause of cramps during sports.",
+      "anim": {
+        "action": "drink",
+        "props": [
+          {
+            "icon": "cup-with-straw",
+            "at": "hand",
+            "size": "m"
+          },
+          {
+            "icon": "sweat-droplets",
+            "at": "top-left",
+            "size": "s",
+            "anim": "fall"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Suspect number two is minerals. Sweat carries away sodium, and your nerves and muscles rely on minerals like sodium, potassium and calcium to send their signals properly. Low levels can make cramps more likely.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "salt",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "banana",
+            "at": "left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "That is why you may have heard that sports drinks or bananas fix cramps. It sounds logical. Nerve signals need the right minerals, and sweaty athletes cramp a lot.",
+      "anim": {
+        "action": "eat",
+        "props": [
+          {
+            "icon": "banana",
+            "at": "hand",
+            "size": "m"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "But when scientists looked closely, the clues did not all line up. If dehydration were the whole story, your whole body would be equally dry. So why does a cramp hit one muscle, instead of all of them at once?",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "red-question-mark",
+            "at": "bubble",
+            "size": "m"
+          },
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "text": "WHY ONE MUSCLE?"
+      }
+    },
+    {
+      "narration": "Researchers also noticed that cramps tend to strike the muscles that are working hardest, the tired ones. A marathon runner usually cramps in the calves and thighs, the muscles doing the running.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "person-running",
+            "at": "far-right",
+            "size": "s"
+          },
+          {
+            "icon": "leg",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "That points to a third suspect, the nervous system itself. A leading idea, laid out in a review in the British Journal of Sports Medicine, is called altered neuromuscular control. It's a mouthful, so let's unpack it.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "NERVE SIGNALS"
+      }
+    },
+    {
+      "narration": "Inside your muscles are tiny sensors. Some act like an accelerator, telling the spinal cord to fire the muscle harder. Others, in the tendons, act like brakes, telling it to ease off before it pulls too hard.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "green-circle",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "stop-sign",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "When a muscle gets tired, the theory goes, that balance tips. The accelerator signals grow louder and the brake signals grow quieter. The motor neurons keep firing, and the muscle locks up.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "battery",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "stop-sign",
+            "at": "top-left",
+            "size": "s",
+            "anim": "fade-in"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "It may also explain a classic trigger. When you lie in bed with your toes pointed, your calf is bunched up and short. In that position, the brake sensors have less to say. Sound familiar?",
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "bed",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "foot",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Now for a clue that helped crack the case, and it comes from a jar of pickles. Athletes and trainers have long claimed that a swig of pickle juice stops a cramp. So researchers decided to test it.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "cucumber",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "jar",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "PICKLE JUICE?"
+      }
+    },
+    {
+      "narration": "In a small study published in 2010, volunteers exercised until they were mildly dehydrated. Then the scientists used a small electrical pulse to trigger a cramp in a muscle of the foot.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "foot",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "Some volunteers then drank a little pickle juice, and others drank plain water. Cramps after pickle juice ended sooner, lasting about eighty-five seconds on average, compared with over two minutes after water.",
+      "anim": {
+        "action": "drink",
+        "props": [
+          {
+            "icon": "cucumber",
+            "at": "hand",
+            "size": "m"
+          },
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "Here is the twist. That was far too quick for the salt to soak into the blood. The researchers checked, and the volunteers' blood barely changed. Whatever stopped the cramp was not about topping up minerals.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "salt",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "drop-of-blood",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "TOO FAST",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "Their best guess is a reflex. The sharp, sour taste may set off nerves in the mouth and throat, which send a message that calms the overexcited motor neurons. A cramp stopped by the nervous system.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "tongue",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top-left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "It was one small study, with just ten people, so it is not the final word. But it fits the nerve theory nicely, and it shows that your mouth and your muscles are more connected than you might think.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "books",
+            "at": "bubble",
+            "size": "m"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "So is water out of the picture? Not entirely. Fluid and mineral loss may still add to the risk for some people. Many scientists now see cramps as having several causes that can stack up.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "balance-scale",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "droplet",
+            "at": "left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Other things can make cramps more likely too. MedlinePlus lists muscle overuse or injury, pregnancy, certain medicines, and some health conditions, such as an underactive thyroid or kidney failure.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "pill",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "clipboard",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "Age plays a part as well. The same NIH review notes that night cramps become much more common as we get older, which is why grandparents tend to know all about them.",
+      "anim": {
+        "action": "yawn",
+        "props": [
+          {
+            "icon": "old-man",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "crescent-moon",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "So what actually helps in the moment? The most common advice is the simplest. Gently stretch the cramping muscle. For a calf cramp, that means pulling your toes up toward your shin.",
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "foot",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "text": "STRETCH IT",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Stretching lengthens the muscle and may wake up those brake sensors in the tendon, helping tell the motor neurons to stand down. Massage, and some warmth while it's tight, can help the muscle relax.",
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "fire",
+            "at": "right",
+            "size": "s",
+            "anim": "pulse"
+          },
+          {
+            "icon": "stop-sign",
+            "at": "left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "For prevention, MedlinePlus suggests stretching regularly, drinking plenty of fluids during exercise, and working out within your ability rather than pushing far past your usual effort.",
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "potable-water",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "running-shoe",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Most cramps are harmless and fade on their own. But talk to a doctor if your cramps are severe, keep coming back, don't ease with stretching, or last a long time. Sometimes they point to another health problem.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "stethoscope",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "woman-health-worker",
+            "at": "far-right",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "So the next time your calf locks up in the middle of the night, remember what is really happening. It's not that your muscle is weak. It's your nerves shouting go, and forgetting to say stop.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "green-circle",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "stop-sign",
+            "at": "left",
+            "size": "m",
+            "anim": "fade-in"
+          }
+        ],
+        "text": "GO WITHOUT STOP",
+        "camera": "zoom-out"
+      }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

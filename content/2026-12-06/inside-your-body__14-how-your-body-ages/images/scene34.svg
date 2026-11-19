@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
+  <!-- ===== body outline ===== -->
+  <!-- legs -->
+  <g stroke-linecap="round">
+    <line x1="415" y1="430" x2="405" y2="700" stroke="#ffffff" stroke-width="58"/>
+    <line x1="485" y1="430" x2="495" y2="700" stroke="#ffffff" stroke-width="58"/>
+    <line x1="415" y1="430" x2="405" y2="700" stroke="#2f7f99" stroke-width="48"/>
+    <line x1="485" y1="430" x2="495" y2="700" stroke="#2f7f99" stroke-width="48"/>
+  <!-- arms -->
+    <line x1="362" y1="236" x2="322" y2="468" stroke="#ffffff" stroke-width="46"/>
+    <line x1="538" y1="236" x2="578" y2="468" stroke="#ffffff" stroke-width="46"/>
+    <line x1="362" y1="236" x2="322" y2="468" stroke="#2f7f99" stroke-width="36"/>
+    <line x1="538" y1="236" x2="578" y2="468" stroke="#2f7f99" stroke-width="36"/>
+  </g>
+  <!-- torso -->
+  <path d="M378 214 Q 450 200 522 214 Q 548 222 548 250 L 532 432 Q 450 452 368 432 L 352 250 Q 352 222 378 214 Z" fill="#2f7f99" stroke="#ffffff" stroke-width="5" stroke-linejoin="round"/>
+  <!-- neck -->
+  <rect x="432" y="180" width="36" height="34" fill="#2f7f99"/>
+  <!-- ears -->
+  <ellipse cx="392" cy="138" rx="11" ry="19" fill="#2f7f99" stroke="#ffffff" stroke-width="4"/>
+  <ellipse cx="508" cy="138" rx="11" ry="19" fill="#2f7f99" stroke="#ffffff" stroke-width="4"/>
+  <!-- head -->
+  <circle cx="450" cy="132" r="58" fill="#2f7f99" stroke="#ffffff" stroke-width="5"/>
+  <path d="M404 118 C 404 90 424 80 450 80 C 476 80 496 90 496 118 Z" fill="#c9b8ff"/>
+  <g fill="#ffffff"><circle cx="430" cy="138" r="6"/><circle cx="470" cy="138" r="6"/></g>
+
+  <!-- inner details -->
+  <!-- heart and arteries -->
+  <path d="M474 300 C 455 284 452 268 464 262 C 472 258 476 264 476 268 C 476 264 482 258 490 262 C 502 268 498 284 474 300 Z" fill="#ff8a7a"/>
+  <path d="M470 300 V 420 M470 330 L 380 340 M470 330 L 520 340" fill="none" stroke="#ff8a7a" stroke-width="5" stroke-linecap="round"/>
+  <!-- biceps -->
+  <ellipse cx="552" cy="318" rx="13" ry="36" transform="rotate(-10 552 318)" fill="#ffb3a8"/>
+  <!-- femur -->
+  <path d="M410 470 L 406 640" stroke="#fff1c7" stroke-width="12" stroke-linecap="round"/>
+  <g fill="#fff1c7"><circle cx="404" cy="468" r="10"/><circle cx="416" cy="472" r="10"/><circle cx="400" cy="642" r="10"/><circle cx="412" cy="642" r="10"/></g>
+  <!-- cells -->
+  <g fill="#8ee6a8" stroke="#ffffff" stroke-width="3">
+    <circle cx="492" cy="530" r="11"/><circle cx="512" cy="546" r="11"/><circle cx="490" cy="556" r="11"/>
+  </g>
+
+  <!-- ===== callouts ===== -->
+  <g stroke="#ffffff" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.85">
+    <path d="M200 100 L 420 100"/>
+    <path d="M150 168 L 380 142"/>
+    <path d="M140 392 L 308 392"/>
+    <path d="M160 562 L 398 562"/>
+    <path d="M760 66 L 476 134"/>
+    <path d="M650 284 L 494 280"/>
+    <path d="M700 380 L 562 330"/>
+    <path d="M740 540 L 524 546"/>
+  </g>
+  <g fill="#ffffff">
+    <circle cx="420" cy="100" r="7"/><circle cx="380" cy="142" r="7"/><circle cx="308" cy="392" r="7"/><circle cx="398" cy="562" r="7"/>
+    <circle cx="476" cy="134" r="7"/><circle cx="494" cy="280" r="7"/><circle cx="562" cy="330" r="7"/><circle cx="524" cy="546" r="7"/>
+  </g>
+  <g font-size="30" font-weight="800">
+    <text x="40" y="110" fill="#c9b8ff">BRAIN</text>
+    <text x="40" y="178" fill="#e3fbff">EARS</text>
+    <text x="40" y="402" fill="#7fe3ff">SKIN</text>
+    <text x="40" y="572" fill="#fff1c7">BONES</text>
+    <text x="860" y="66" fill="#e3fbff" text-anchor="end">EYES</text>
+    <text x="860" y="276" fill="#ff8a7a" text-anchor="end">HEART &amp;</text>
+    <text x="860" y="312" fill="#ff8a7a" text-anchor="end">ARTERIES</text>
+    <text x="860" y="392" fill="#ffb3a8" text-anchor="end">MUSCLES</text>
+    <text x="860" y="552" fill="#8ee6a8" text-anchor="end">CELLS</text>
+  </g>
+</svg>

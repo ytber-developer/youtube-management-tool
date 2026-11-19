@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
+<defs><linearGradient id="j11g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1d3a5" stop-opacity="0.18"/><stop offset="1" stop-color="#ff7a59" stop-opacity="0.55"/></linearGradient><marker id="j11a" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="3.2" markerHeight="3.2" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#ffffff"/></marker><marker id="j11c" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="3.2" markerHeight="3.2" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#7fe3ff"/></marker></defs>
+<rect x="230" y="125" width="630" height="575" rx="26" fill="url(#j11g)"/>
+<ellipse cx="400" cy="221.85256410256412" rx="52" ry="22" fill="#ffffff" fill-opacity="0.85"/>
+<ellipse cx="470" cy="235.85256410256412" rx="52" ry="22" fill="#ffffff" fill-opacity="0.85"/>
+<ellipse cx="540" cy="221.85256410256412" rx="52" ry="22" fill="#ffffff" fill-opacity="0.85"/>
+<ellipse cx="610" cy="235.85256410256412" rx="52" ry="22" fill="#ffffff" fill-opacity="0.85"/>
+<ellipse cx="680" cy="221.85256410256412" rx="52" ry="22" fill="#ffffff" fill-opacity="0.85"/>
+<ellipse cx="750" cy="235.85256410256412" rx="52" ry="22" fill="#ffffff" fill-opacity="0.85"/>
+<ellipse cx="820" cy="221.85256410256412" rx="52" ry="22" fill="#ffffff" fill-opacity="0.85"/>
+<text x="840.0" y="187.9" font-size="32" font-weight="800" fill="#ffffff" text-anchor="end" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >Ammonia clouds</text>
+<ellipse cx="400" cy="339.9935897435897" rx="52" ry="22" fill="#d9a066" fill-opacity="0.95"/>
+<ellipse cx="470" cy="353.9935897435897" rx="52" ry="22" fill="#d9a066" fill-opacity="0.95"/>
+<ellipse cx="540" cy="339.9935897435897" rx="52" ry="22" fill="#d9a066" fill-opacity="0.95"/>
+<ellipse cx="610" cy="353.9935897435897" rx="52" ry="22" fill="#d9a066" fill-opacity="0.95"/>
+<ellipse cx="680" cy="339.9935897435897" rx="52" ry="22" fill="#d9a066" fill-opacity="0.95"/>
+<ellipse cx="750" cy="353.9935897435897" rx="52" ry="22" fill="#d9a066" fill-opacity="0.95"/>
+<ellipse cx="820" cy="339.9935897435897" rx="52" ry="22" fill="#d9a066" fill-opacity="0.95"/>
+<text x="840.0" y="306.0" font-size="32" font-weight="800" fill="#ffffff" text-anchor="end" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >NH4SH clouds</text>
+<ellipse cx="400" cy="479.8974358974359" rx="52" ry="22" fill="#c9c3ff" fill-opacity="0.85"/>
+<ellipse cx="470" cy="493.8974358974359" rx="52" ry="22" fill="#c9c3ff" fill-opacity="0.85"/>
+<ellipse cx="540" cy="479.8974358974359" rx="52" ry="22" fill="#c9c3ff" fill-opacity="0.85"/>
+<ellipse cx="610" cy="493.8974358974359" rx="52" ry="22" fill="#c9c3ff" fill-opacity="0.85"/>
+<ellipse cx="680" cy="479.8974358974359" rx="52" ry="22" fill="#c9c3ff" fill-opacity="0.85"/>
+<ellipse cx="750" cy="493.8974358974359" rx="52" ry="22" fill="#c9c3ff" fill-opacity="0.85"/>
+<ellipse cx="820" cy="479.8974358974359" rx="52" ry="22" fill="#c9c3ff" fill-opacity="0.85"/>
+<text x="840.0" y="445.9" font-size="32" font-weight="800" fill="#ffffff" text-anchor="end" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >Water clouds</text>
+<line x1="310.0" y1="215.0" x2="310.0" y2="638.0" stroke="#7fe3ff" stroke-width="5" stroke-linecap="round" stroke-dasharray="4 14" marker-end="url(#j11c)"/>
+<path d="M280,171 Q310,131 340,171 Z" fill="#7fe3ff" fill-opacity="0.85"/>
+<line x1="282.0" y1="171.0" x2="302.0" y2="197.0" stroke="#7fe3ff" stroke-width="3" stroke-linecap="round" />
+<line x1="338.0" y1="171.0" x2="318.0" y2="197.0" stroke="#7fe3ff" stroke-width="3" stroke-linecap="round" />
+<path d="M296,195 L324,195 L318,213 L302,213 Z" fill="#ffffff"/>
+<circle cx="310" cy="660" r="12" fill="#ff7a59" stroke="#ffffff" stroke-width="4"/>
+<text x="340.0" y="672.0" font-size="32" font-weight="800" fill="#ffffff" text-anchor="start" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >Signal lost</text>
+<line x1="150.0" y1="185.0" x2="150.0" y2="660.0" stroke="#ffffff" stroke-width="5" stroke-linecap="round" marker-start="url(#j11a)" marker-end="url(#j11a)"/>
+<text x="128.0" y="411.5" font-size="38" font-weight="800" fill="#ffffff" text-anchor="end" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >97 mi</text>
+<text x="128.0" y="453.5" font-size="32" font-weight="800" fill="#7fe3ff" text-anchor="end" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >58 min</text>
+<text x="260.0" y="105.0" font-size="32" font-weight="800" fill="#7fe3ff" text-anchor="start" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >Galileo probe</text>
+</svg>

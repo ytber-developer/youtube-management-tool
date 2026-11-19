@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
+  <!-- finger outline -->
+  <rect x="50" y="240" width="800" height="280" rx="140" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.30)" stroke-width="4"/>
+
+  <!-- joint capsule filled with synovial fluid -->
+  <ellipse cx="440" cy="380" rx="150" ry="118" fill="rgba(127,227,255,0.38)" stroke="#7fe3ff" stroke-width="7"/>
+
+  <!-- left bone (rounded head) -->
+  <path d="M90 335 L300 335 C335 335 345 305 380 305 A75 75 0 0 1 380 455 C345 455 335 425 300 425 L90 425 Z" fill="#fff1c7" stroke="#ffffff" stroke-width="4"/>
+  <!-- right bone (cupped base) -->
+  <path d="M810 335 L610 335 C570 335 555 300 510 300 L431 300 A95 95 0 0 1 431 460 L510 460 C555 460 570 425 610 425 L810 425 Z" fill="#fff1c7" stroke="#ffffff" stroke-width="4"/>
+
+  <!-- cartilage caps -->
+  <path d="M380 312 A68 68 0 0 1 380 448" fill="none" stroke="#8ee6a8" stroke-width="12" stroke-linecap="round"/>
+  <path d="M446 306 A102 102 0 0 1 446 454" fill="none" stroke="#8ee6a8" stroke-width="12" stroke-linecap="round"/>
+
+  <!-- bone labels -->
+  <text x="185" y="391" text-anchor="middle" font-size="30" font-weight="800" fill="#0a3f66">BONE</text>
+  <text x="705" y="391" text-anchor="middle" font-size="30" font-weight="800" fill="#0a3f66">BONE</text>
+
+  <!-- leaders -->
+  <g stroke="#ffffff" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M250 182 L405 318"/>
+    <path d="M650 182 L548 296"/>
+    <path d="M440 590 L440 476"/>
+  </g>
+  <circle cx="405" cy="318" r="7" fill="#ffffff"/>
+  <circle cx="548" cy="296" r="7" fill="#ffffff"/>
+  <circle cx="440" cy="476" r="7" fill="#ffffff"/>
+
+  <text x="220" y="165" text-anchor="middle" font-size="34" font-weight="800" fill="#8ee6a8">CARTILAGE</text>
+  <text x="680" y="165" text-anchor="middle" font-size="34" font-weight="800" fill="#7fe3ff">JOINT CAPSULE</text>
+  <text x="440" y="630" text-anchor="middle" font-size="36" font-weight="800" fill="#e3fbff">SYNOVIAL FLUID</text>
+</svg>

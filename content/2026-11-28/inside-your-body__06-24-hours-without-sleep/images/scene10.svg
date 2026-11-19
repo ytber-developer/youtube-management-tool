@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <marker id="ag" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="3" markerHeight="3" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#8ee6a8"/>
+    </marker>
+    <marker id="af" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="rgba(142,230,168,0.45)"/>
+    </marker>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#ff8a7a" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ff8a7a" stop-opacity="0"/>
+    </radialGradient>
+    <!-- brain side view, front facing LEFT in local coords (flipped when used) -->
+    <g id="brain">
+      <path d="M285 222 L300 282" stroke="rgba(227,251,255,0.55)" stroke-width="26" stroke-linecap="round" fill="none"/>
+      <ellipse cx="322" cy="222" rx="48" ry="30" fill="rgba(227,251,255,0.45)" stroke="#e3fbff" stroke-width="4"/>
+      <path d="M40 170 C 20 110, 60 40, 150 30 C 230 15, 330 30, 370 90 C 400 130, 392 180, 350 200 C 320 215, 290 210, 270 220 C 240 235, 200 232, 180 216 C 150 228, 110 232, 80 216 C 56 204, 44 190, 40 170 Z" fill="rgba(227,251,255,0.22)" stroke="#e3fbff" stroke-width="5"/>
+      <g fill="none" stroke="rgba(227,251,255,0.45)" stroke-width="4" stroke-linecap="round">
+        <path d="M170 34 C 180 80, 160 110, 190 150"/>
+        <path d="M250 32 C 240 70, 270 100, 250 140"/>
+        <path d="M320 60 C 300 90, 330 120, 310 160"/>
+        <path d="M100 196 C 140 180, 200 186, 250 176"/>
+      </g>
+    </g>
+  </defs>
+
+  <!-- ===== RESTED (top) ===== -->
+  <use href="#brain" transform="translate(440,40) scale(-1,1)"/>
+  <!-- prefrontal cortex (front) -->
+  <ellipse cx="350" cy="150" rx="52" ry="56" fill="#8ee6a8" opacity="0.6"/>
+  <!-- amygdala -->
+  <ellipse cx="248" cy="222" rx="18" ry="13" fill="#ff8a7a" opacity="0.8"/>
+  <!-- strong link -->
+  <path d="M332 186 Q 300 210 272 218" fill="none" stroke="#8ee6a8" stroke-width="12" stroke-linecap="round" marker-end="url(#ag)"/>
+
+  <!-- ===== SLEEP-DEPRIVED (bottom) ===== -->
+  <use href="#brain" transform="translate(440,410) scale(-1,1)"/>
+  <ellipse cx="350" cy="520" rx="52" ry="56" fill="#8ee6a8" opacity="0.25"/>
+  <circle cx="248" cy="592" r="56" fill="url(#glow)"/>
+  <ellipse cx="248" cy="592" rx="22" ry="16" fill="#ff8a7a" stroke="#ffffff" stroke-width="4"/>
+  <!-- weak link -->
+  <path d="M332 556 Q 300 580 276 588" fill="none" stroke="rgba(142,230,168,0.45)" stroke-width="5" stroke-dasharray="6 10" stroke-linecap="round" marker-end="url(#af)"/>
+
+  <!-- divider -->
+  <line x1="60" y1="365" x2="860" y2="365" stroke="rgba(255,255,255,0.18)" stroke-width="4"/>
+
+  <!-- labels: top -->
+  <g stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.85">
+    <line x1="486" y1="96" x2="392" y2="128"/>
+    <line x1="486" y1="300" x2="262" y2="232"/>
+  </g>
+  <text x="496" y="106" font-size="30" font-weight="800" fill="#8ee6a8">PREFRONTAL CORTEX</text>
+  <text x="496" y="310" font-size="30" font-weight="800" fill="#ff8a7a">AMYGDALA</text>
+  <text x="496" y="186" font-size="36" font-weight="800" fill="#ffffff">RESTED</text>
+  <text x="496" y="228" font-size="28" font-weight="700" fill="#8ee6a8">STRONG LINK</text>
+
+  <!-- labels: bottom -->
+  <text x="496" y="540" font-size="36" font-weight="800" fill="#ffffff">NO SLEEP</text>
+  <text x="496" y="584" font-size="28" font-weight="700" fill="rgba(142,230,168,0.8)">WEAK LINK</text>
+  <text x="496" y="626" font-size="28" font-weight="700" fill="#ff8a7a">BRIGHTER ALARM</text>
+</svg>

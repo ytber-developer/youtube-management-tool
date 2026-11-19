@@ -1,0 +1,77 @@
+What if, tonight, a radio telescope picked up a message from aliens? What would really happen next?
+
+Forget the movies. No spaceships hover over cities. No president speaks in the first hour. The real story would start with one tired astronomer, staring at a screen, thinking: that's weird.
+
+People have been listening for a long time. In 1960, astronomer Frank Drake pointed an eighty-five foot radio dish in Green Bank, West Virginia, at two nearby stars, Tau Ceti and Epsilon Eridani. It was called Project Ozma.
+
+Both stars are about eleven light-years away. Drake tuned in near fourteen hundred twenty megahertz, the natural radio glow of hydrogen, the most common element in the universe. If anyone wanted to be heard, scientists reasoned, they might use it too.
+
+He heard nothing alien. Since then, the search has grown enormously. But so far, the most important skill in this field has been something less exciting: proving that a signal is not aliens.
+
+Step one is always the same question: is it us? Our planet is buzzing with radio from phones, satellites, radar, and aircraft. Almost every exciting blip turns out to be human technology.
+
+Here is a real example. A few years ago, the Parkes radio telescope in Australia, searching for the Breakthrough Listen project, caught a narrow signal that seemed to come from Proxima Centauri, the closest star to our Sun.
+
+It was named BLC One. It lasted for hours and slipped past filters designed to catch interference. The team then spent months on it, including thirty-nine hours of follow-up observations. It never came back.
+
+Team member Sofia Sheikh then found about sixty similar signals, spaced at regular frequency steps that match the oscillators used in ordinary electronic devices. The signal looked uniquely like something from space, but it was made on Earth.
+
+Their conclusion: it was almost certainly interference from human technology, even though they never found the exact source. That is how most alien signals end. Quietly, with a sigh.
+
+Sometimes, a signal turns out to be something new in nature instead. In 1967, graduate student Jocelyn Bell Burnell found radio pulses repeating every one point three three seconds, as regular as a clock.
+
+As a joke, the source was labeled L G M One, for little green men. It turned out to be the first known pulsar, a spinning dead star sweeping a beam across space. Aliens, no. A huge discovery, yes.
+
+And then there is the most famous mystery of all. On August fifteenth, 1977, Ohio State University's Big Ear radio telescope recorded an intense burst from the direction of the constellation Sagittarius.
+
+It lasted about seventy-two seconds, exactly as long as the telescope could watch one point in the sky. Days later, astronomer Jerry Ehman circled it on a printout and wrote one word in the margin: Wow!
+
+Those famous characters, six E Q U J five, are not a code. They are a measure of loudness. At its peak, the letter U meant the signal was about thirty times stronger than the background noise.
+
+The signal sat very close to that same hydrogen frequency. Ehman and others looked again and again, for years. It has never been seen since. One burst, and silence.
+
+In 2024, a team of researchers proposed a natural explanation: a cloud of cold hydrogen gas, suddenly brightened by a powerful outburst from something like a magnetar. It is a serious idea, but it has not been proven.
+
+So let's say your signal survives all of that. It is not a phone, not a satellite, not a pulsar. It repeats. It comes from one spot among the stars. What happens now?
+
+There is actually a plan. The International Academy of Astronautics has a declaration of principles for exactly this moment. It was first written in 1989, and updated again in 2026.
+
+Rule one: confirm it. Ideally, other observatories, using different instruments and different methods, would independently catch the same signal. If only one telescope can see it, it is not a discovery yet.
+
+Rule two: protect the evidence. The data should be kept in tamper-proof records, stored in at least two places far apart. Nobody gets to quietly lose the most important recording in history.
+
+If the evidence is a radio signal, the rules also say to seek international agreement to protect that frequency, so our own transmitters do not drown out the most important channel in the sky.
+
+Rule three: once other scientists agree the signal comes from an extraterrestrial intelligence, tell everyone. The discovery should be announced openly to the public, the scientific community, and the Secretary General of the United Nations.
+
+The people who found it get the chance to make the first public announcement. And if a candidate turns out not to be alien after all, the rules say that should be shared promptly and clearly too.
+
+No secret government vault, at least not by the rules scientists have agreed on. The rules also call for a full report that includes the underlying data, so other scientists can check the work.
+
+Now the hardest part: understanding it. A message would not arrive in English. It might be pictures, math, or something we have never imagined. Decoding it could take years, or never happen at all.
+
+We have practiced. In 2023, a project called A Sign in Space had ESA's ExoMars Trace Gas Orbiter, circling Mars, beam a coded message to Earth, pretending to be aliens.
+
+People around the world tried to crack it. It took about a year before a father and daughter in the United States finally decoded the image. It showed five amino acids, building blocks of life.
+
+And that message was designed by humans, for humans, to be solved. A real alien message, from minds that evolved on another world, could be far harder to read.
+
+Then comes the question everyone will ask: do we answer? The declaration says that a decision to reply should go through international consultation, and that no reply should be sent until those consultations are done.
+
+And distance changes everything. Radio travels at the speed of light. Even the nearest star beyond the Sun is more than four light-years away. Ask a question there, and you wait over eight years for the answer.
+
+A message from a thousand light-years away would have left its senders a thousand years ago. You would be reading a letter from the past. The civilization that wrote it might have changed completely, or be gone.
+
+Here is the twist: we have already sent our own message. In November 1974, the Arecibo radio telescope in Puerto Rico beamed a short signal toward the star cluster Messier Thirteen.
+
+It was one thousand six hundred seventy-nine binary digits, a number made by multiplying two primes, twenty-three and seventy-three. Arranged in a grid, it draws numbers, DNA, a human figure, and our solar system.
+
+Sent at ten bits per second, the whole broadcast lasted less than three minutes. It was designed by Frank Drake, the same astronomer behind Project Ozma, with help from Carl Sagan and others.
+
+The cluster is about twenty-five thousand light-years away. Our message is still on its way, and it will not arrive for tens of thousands of years. Any reply would take just as long to come back.
+
+So somewhere out there, a civilization might be facing this exact situation. A strange signal, a nervous scientist, and a planet arguing over whether to say hello.
+
+So, what if aliens sent us a message? First we would try very hard to prove it was us. Then we would share it with the world, try to read it, and face the slowest conversation in history.
+
+Follow Cosmic What If for more mind-bending science.

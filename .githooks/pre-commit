@@ -1,0 +1,42 @@
+#!/bin/sh
+# Chặn commit lộ dữ liệu nhạy cảm (mật khẩu, mã 2FA, database account...).
+# Được bật tự động qua `npm install` (script "prepare": core.hooksPath=.githooks).
+# Bỏ qua 1 lần (chỉ khi chắc chắn an toàn): git commit --no-verify
+
+fail=0
+
+# 1) File không bao giờ được commit
+blocked=$(git diff --cached --name-only --diff-filter=ACMR | grep -iE '\.(db|db-journal|sqlite3?|sql|bundle|pem|key)$|(^|/)\.env($|\.)|cookies[^/]*\.json$|(^|/)(accounts|proxies)[^/]*\.(csv|txt)$' | grep -vE '\.example$|^frontend/public/templates/')
+if [ -n "$blocked" ]; then
+  echo "❌ Không được commit các file chứa dữ liệu nhạy cảm:"
+  echo "$blocked" | sed 's/^/   - /'
+  echo "   → Bỏ khỏi commit: git restore --staged <file>"
+  fail=1
+fi
+
+# 2) Quét nội dung đang commit
+if command -v gitleaks >/dev/null 2>&1; then
+  if ! gitleaks git --pre-commit --staged --redact --no-banner --log-level warn; then
+    echo "❌ gitleaks phát hiện bí mật trong thay đổi đang commit (xem ở trên)."
+    fail=1
+  fi
+else
+  # Kiểm tra cơ bản khi máy chưa cài gitleaks
+  added=$(git diff --cached -U0 --diff-filter=ACMR | grep '^+' | grep -v '^+++')
+  if echo "$added" | grep -qiE "(password|passwd|pwd)[\"']?[[:space:]]*[:=][[:space:]]*[\"'][^\"']{4,}[\"']"; then
+    echo "❌ Có vẻ đang commit mật khẩu viết thẳng trong code (password: '...')."
+    fail=1
+  fi
+  if echo "$added" | grep -qE "(code_authenticators|secret|totp)[\"']?[[:space:]]*[:=][[:space:]]*[\"'][A-Za-z2-7 ]{16,}[\"']"; then
+    echo "❌ Có vẻ đang commit mã 2FA (TOTP secret)."
+    fail=1
+  fi
+  echo "ℹ️  Cài gitleaks để quét kỹ hơn: https://github.com/gitleaks/gitleaks#installing"
+fi
+
+if [ "$fail" -ne 0 ]; then
+  echo ""
+  echo "Commit bị chặn. Nếu chắc chắn đây là dữ liệu giả/an toàn: git commit --no-verify"
+  exit 1
+fi
+exit 0

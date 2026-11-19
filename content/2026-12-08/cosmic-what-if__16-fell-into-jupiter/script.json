@@ -1,0 +1,567 @@
+{
+  "channel": "cosmic-what-if",
+  "style": "anim",
+  "number": 16,
+  "slug": "fell-into-jupiter",
+  "target_minutes": 6.1,
+  "title": "What If You Fell Into Jupiter? There's No Ground to Stop You",
+  "thumbnail_text": "FALL INTO JUPITER",
+  "description": "Jupiter has no surface, so what happens if you fall in? We follow the path of NASA's Galileo probe through radiation belts, ammonia clouds and hurricane winds, then go deeper than any machine has reported back from, into an ocean of metallic hydrogen and the fuzzy core discovered by NASA's Juno mission.\n\nSources:\n- NASA Science, Jupiter Facts: https://science.nasa.gov/jupiter/jupiter-facts/\n- NASA Science, Galileo Jupiter Atmospheric Probe: https://science.nasa.gov/mission/galileo-jupiter-atmospheric-probe\n- NASA Goddard, Jupiter Fact Sheet: https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html\n- Southwest Research Institute / NASA Juno mission, Inside the Giant: Jupiter's Interior: https://www.missionjuno.swri.edu/jupiter/the-interior/\n- NASA Science, Juno mission: https://science.nasa.gov/mission/juno/",
+  "tags": [
+    "jupiter",
+    "fall into jupiter",
+    "gas giant",
+    "galileo probe",
+    "juno",
+    "great red spot",
+    "metallic hydrogen",
+    "jupiter core",
+    "solar system",
+    "nasa",
+    "astronomy",
+    "space",
+    "science",
+    "what if",
+    "cosmic what if"
+  ],
+  "sources": [
+    {
+      "title": "NASA Science, Jupiter Facts",
+      "url": "https://science.nasa.gov/jupiter/jupiter-facts/"
+    },
+    {
+      "title": "NASA Science, Galileo Jupiter Atmospheric Probe",
+      "url": "https://science.nasa.gov/mission/galileo-jupiter-atmospheric-probe"
+    },
+    {
+      "title": "NASA Goddard, Jupiter Fact Sheet",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html"
+    },
+    {
+      "title": "Southwest Research Institute / NASA Juno mission, Inside the Giant: Jupiter's Interior",
+      "url": "https://www.missionjuno.swri.edu/jupiter/the-interior/"
+    },
+    {
+      "title": "NASA Science, Juno mission",
+      "url": "https://science.nasa.gov/mission/juno/"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "fall-toward",
+    "props": [
+      {
+        "icon": "orange-circle",
+        "at": "right",
+        "size": "xl"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "What if you fell into Jupiter? There's no ground to land on. So where would you actually stop?",
+      "anim": {
+        "action": "fall-toward",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "xl",
+            "anim": "approach"
+          }
+        ],
+        "face": "worry",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "First, the size of what you're falling into. Jupiter is about eleven times wider than Earth. If it were a hollow shell, about one thousand Earths could fit inside. And almost all of it is hydrogen and helium, much like the Sun.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "s"
+          },
+          {
+            "icon": "orange-circle",
+            "at": "right",
+            "size": "xl"
+          }
+        ],
+        "text": "1,000 EARTHS",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Lucky for you, we have a guide. In December 1995, NASA's Galileo spacecraft dropped a small probe into Jupiter's atmosphere. It is still the only probe ever to report back from inside Jupiter's air. We'll follow in its path.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "l",
+            "anim": "fall"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Before you even reach the air, there's a hidden danger. The Galileo probe passed through an intense radiation belt about thirty-one thousand miles above the clouds. Jupiter's powerful magnetic field traps charged particles there, and they would pelt your body.",
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "radioactive",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "magnet",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "worry",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Then comes the speed. Jupiter's gravity is so strong that anything falling from far away picks up enormous speed. The probe slammed into the atmosphere at about one hundred six thousand miles per hour. You would arrive about as fast.",
+      "anim": {
+        "action": "fall-toward",
+        "props": [
+          {
+            "icon": "comet",
+            "at": "right",
+            "size": "l",
+            "anim": "approach"
+          }
+        ],
+        "text": "106,000 MPH",
+        "bg": "space",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "At that speed, air can't get out of the way. It piles up and turns into a glowing shock of hot gas. NASA says temperatures around the probe reached thousands of degrees, hotter than the surface of the Sun.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "fire",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "shock",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Then the braking. About a minute after it hit the atmosphere, the probe was slowing down with a force of two hundred twenty-eight times Earth's gravity. For a human, that would be fatal. So for this trip, imagine you're inside an indestructible suit.",
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "face": "hold",
+        "text": "228 G",
+        "bg": "space",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "Now you're drifting under a parachute, falling into the cloud tops. Up here it's bitterly cold, around minus one hundred sixty degrees Fahrenheit. The sky around you is full of pale clouds made of ammonia ice.",
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "parachute",
+            "at": "above",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "snowflake",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "Jupiter's clouds come in three layers, stacked across about forty-four miles. Ammonia ice on top. Below it, a strange chemical called ammonium hydrosulfide. And deeper still, clouds that may be made of water ice and water vapor.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "cloud",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "ice",
+            "at": "left",
+            "size": "s"
+          },
+          {
+            "icon": "droplet",
+            "at": "bottom-right",
+            "size": "s"
+          }
+        ],
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "You'd also be caught in fierce winds. At Jupiter's equator, they blow at up to three hundred thirty-five miles per hour, faster than the strongest hurricanes on Earth. And the whole planet spins once in under ten hours.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "tornado",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "dashing-away",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "sky",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "Somewhere off in the distance is the Great Red Spot, a storm twice as wide as Earth. People have been watching it for more than three hundred years. NASA's Juno spacecraft found that its roots reach over two hundred miles deep.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "cyclone",
+            "at": "right",
+            "size": "xl",
+            "anim": "spin"
+          }
+        ],
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "Meanwhile, gravity keeps pulling. At the cloud tops, Jupiter's gravity is about two and a half times Earth's. If you weigh one hundred fifty pounds at home, you'd feel like you weigh well over three hundred here.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "flexed-biceps",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "face": "worry",
+        "text": "2.5 TIMES HEAVIER",
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "As you sink, the air around you grows thicker and warmer. The weight of all that gas above you keeps pressing harder. Every mile you fall, the squeeze on your suit gets a little stronger.",
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "cloud",
+            "at": "top",
+            "size": "l"
+          }
+        ],
+        "face": "hold",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "The Galileo probe kept transmitting for fifty-eight minutes. It reached about one hundred twelve miles below where it entered, where the pressure was about twenty-three times the air pressure at sea level on Earth. Then its transmitter failed.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "satellite-antenna",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "stopwatch",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "58 MINUTES",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "That's where our guide goes silent. No human machine has ever reported back from deeper inside Jupiter. From here on, we rely on physics, and on measurements of Jupiter's gravity and magnetic field made by Juno from orbit.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "face": "think",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Here's the strangest part. You never hit a surface. NASA says Jupiter doesn't have a true one. Instead, the gas around you just keeps getting denser and hotter, until it behaves more like a liquid than a gas.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "bubbles",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          }
+        ],
+        "face": "think",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Imagine sinking through an ocean with no top and no clear bottom. There's no splash, no moment where you enter the sea. The hydrogen around you is simply squeezed, mile after mile, until you're swimming through it.",
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "water-wave",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "bubbles",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Thousands of miles down, the temperature climbs to thousands of degrees. Mission scientists estimate the pressure in this outer interior reaches up to about two million times the air pressure on Earth. No suit could survive this, but let's keep going.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "thermometer",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "fire",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "sick",
+        "text": "2 MILLION TIMES",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Now hydrogen does something it can't do on Earth. Under that pressure, its electrons are squeezed loose, and the liquid starts to conduct electricity like a metal. Scientists call it liquid metallic hydrogen.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "face": "shock",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "This metallic hydrogen ocean fills most of Jupiter's interior. It's thought to be hotter than the surface of the Sun, and as it churns, it generates Jupiter's enormous magnetic field, the same field that powers the radiation belt you fell through.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "magnet",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "And at the very center? For decades, scientists pictured a solid ball of rock and metal, like a hidden planet inside the giant. That's what most textbooks showed.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "rock",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Juno changed that picture. Its measurements suggest Jupiter's core is much bigger than expected, and not solid at all. It seems to be partly dissolved, blending into the metallic hydrogen around it. Scientists call it a fuzzy core.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "orange-circle",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "red-question-mark",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "A FUZZY CORE",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Mission estimates put the temperatures there at more than sixteen thousand degrees Celsius, hotter than the surface of the Sun, under more than forty-five million times the air pressure on Earth.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "fire",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "sick",
+        "bg": "space",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "So where would you actually stop? Not on a surface, and not at the core. Long before either, the heat and pressure would destroy any machine and any body. NASA says spacecraft would be crushed or melted trying to land.",
+      "anim": {
+        "action": "swallowed",
+        "props": [
+          {
+            "icon": "orange-circle",
+            "at": "right",
+            "size": "xl"
+          }
+        ],
+        "bg": "space",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "Your atoms would simply mix into Jupiter's hot, dense interior and become part of the planet. That's exactly what happened to the Galileo probe. And in 2003, the Galileo orbiter itself was steered into Jupiter on purpose to end its mission.",
+      "anim": {
+        "action": "hidden",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "m",
+            "anim": "fall"
+          },
+          {
+            "icon": "sparkles",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "It sounds grim, but think about what the little probe achieved. For fifty-eight minutes, a small machine fell into the largest planet in our solar system and told us what it found.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "satellite-antenna",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "trophy",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "grin",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "So you'd never land on Jupiter. You'd just keep falling deeper into the strangest ocean in the solar system, until you became part of it. A planet you can't stand on, only sink into.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "orange-circle",
+            "at": "right",
+            "size": "xl",
+            "anim": "bob"
+          }
+        ],
+        "face": "smile",
+        "bg": "space",
+        "camera": "zoom-out"
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

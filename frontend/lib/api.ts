@@ -693,8 +693,52 @@ export const proxyAPI = {
     request(API_ENDPOINTS.PROXIES.AUTO_ASSIGN, { method: 'POST', body: JSON.stringify({ maxPerProxy }) }),
 };
 
+// ── Content pipeline (/content) — chỉ đọc trạng thái ────────────────────────
+export type ContentStepState = 'done' | 'todo' | 'stale' | 'error';
+export type ContentStepKey = 'script' | 'images' | 'review' | 'slides' | 'preview' | 'voice' | 'final' | 'uploaded';
+
+export interface ContentStatus {
+  steps: Record<ContentStepKey, ContentStepState>;
+  stage: string;
+  stageKey: ContentStepKey | 'done';
+  missingScenes: number[];
+  durationEst: number;
+  errors: string[];
+  uploadedUrl: string | null;
+}
+
+export interface ContentVideo {
+  id: string;
+  date: string;
+  channel: 'cosmic-what-if' | 'inside-your-body';
+  number: number;
+  slug: string;
+  title: string;
+  status: ContentStatus;
+  /** mtime của thumbnail.png, null nếu chưa có */
+  thumbnail: number | null;
+}
+
+export type ContentFile = 'thumbnail.png' | 'final.mp4' | 'captions.srt';
+
+export interface ContentDetail extends ContentVideo {
+  thumbnailText: string;
+  description: string;
+  tags: string[];
+  postTime: { et: string; vn: string };
+  files: Record<ContentFile, number | null>;
+}
+
+export const contentAPI = {
+  list: (): Promise<{ success: boolean; data: ContentVideo[] }> => request(API_ENDPOINTS.CONTENT.LIST),
+  detail: (id: string): Promise<{ success: boolean; data: ContentDetail }> => request(API_ENDPOINTS.CONTENT.DETAIL(id)),
+  /** URL file của video; v = mtime để trình duyệt không dùng bản cũ */
+  fileUrl: (id: string, file: ContentFile, v?: number | null) => buildApiUrl(API_ENDPOINTS.CONTENT.FILE(id, file)) + (v ? `?v=${v}` : ''),
+};
+
 // Export a combined API object
 export const api = {
+  content: contentAPI,
   proxy: proxyAPI,
   watch: watchAPI,
   accounts: accountsAPI,

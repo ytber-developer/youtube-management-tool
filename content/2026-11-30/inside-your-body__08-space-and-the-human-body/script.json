@@ -1,0 +1,693 @@
+{
+  "channel": "inside-your-body",
+  "number": 8,
+  "slug": "space-and-the-human-body",
+  "target_minutes": 7.4,
+  "title": "What Space Does to Your Body (And What Happens When You Come Home)",
+  "thumbnail_text": "SPACE CHANGES YOU",
+  "description": "Within two days in orbit, astronauts can grow up to three percent taller. That is just the start. Here is what weightlessness does to your inner ear, fluids, spine, bones, muscles, heart, immune system, eyes, brain and even your genes, why coming home can be the hardest part, what the first all-civilian crew revealed, and what a trip to Mars would ask of the human body, based on NASA research including the famous Twins Study.\n\nSources:\n- NASA - The Human Body in Space: https://www.nasa.gov/humans-in-space/the-human-body-in-space/\n- NASA - Twins Study Results Published in Science Journal (2019): https://www.nasa.gov/humans-in-space/nasas-twins-study-results-published-in-science-journal/\n- NASA - Twins Study overview: https://www.nasa.gov/humans-in-space/twins-study/\n- NASA - Astronaut Exercise: https://www.nasa.gov/missions/station/iss-research/astronaut-exercise\n- NASA Technical Reports Server - Seated height and spinal elongation in microgravity: https://ntrs.nasa.gov/citations/20090007782\n- NASA Human Research Program - 5 Hazards of Human Spaceflight: https://www.nasa.gov/hrp/hazards/\n- Frontiers in Microbiology (2019) - Herpes Virus Reactivation in Astronauts During Spaceflight and Its Application on Earth: https://www.frontiersin.org/articles/10.3389/fmicb.2019.00016/full\n- npj Microgravity (2020) - Spaceflight associated neuro-ocular syndrome (SANS) and the neuro-ophthalmologic effects of microgravity: a review and an update: https://www.nature.com/articles/s41526-020-0097-9\n- New England Journal of Medicine (2017) - Effects of Spaceflight on Astronaut Brain Structure as Indicated on MRI: https://www.nejm.org/doi/full/10.1056/NEJMoa1705129\n- Nature (2024) - Molecular and physiological changes in the SpaceX Inspiration4 civilian crew: https://www.nature.com/articles/s41586-024-07648-x\n- NHS - Low blood pressure (hypotension): https://www.nhs.uk/conditions/low-blood-pressure-hypotension/\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": [
+    "space",
+    "human body in space",
+    "astronaut",
+    "NASA twins study",
+    "Scott Kelly",
+    "microgravity",
+    "bone loss",
+    "International Space Station",
+    "spaceflight",
+    "Mars mission",
+    "human body",
+    "science explained",
+    "inside your body",
+    "space motion sickness",
+    "SANS",
+    "astronaut eyes",
+    "Inspiration4",
+    "artificial gravity",
+    "immune system in space"
+  ],
+  "sources": [
+    {
+      "title": "NASA - The Human Body in Space",
+      "url": "https://www.nasa.gov/humans-in-space/the-human-body-in-space/"
+    },
+    {
+      "title": "NASA - Twins Study Results Published in Science Journal (2019)",
+      "url": "https://www.nasa.gov/humans-in-space/nasas-twins-study-results-published-in-science-journal/"
+    },
+    {
+      "title": "NASA - Twins Study overview",
+      "url": "https://www.nasa.gov/humans-in-space/twins-study/"
+    },
+    {
+      "title": "NASA - Astronaut Exercise",
+      "url": "https://www.nasa.gov/missions/station/iss-research/astronaut-exercise"
+    },
+    {
+      "title": "NASA Technical Reports Server - Seated height and spinal elongation in microgravity",
+      "url": "https://ntrs.nasa.gov/citations/20090007782"
+    },
+    {
+      "title": "NASA Human Research Program - 5 Hazards of Human Spaceflight",
+      "url": "https://www.nasa.gov/hrp/hazards/"
+    },
+    {
+      "title": "Frontiers in Microbiology (2019) - Herpes Virus Reactivation in Astronauts During Spaceflight and Its Application on Earth",
+      "url": "https://www.frontiersin.org/articles/10.3389/fmicb.2019.00016/full"
+    },
+    {
+      "title": "npj Microgravity (2020) - Spaceflight associated neuro-ocular syndrome (SANS) and the neuro-ophthalmologic effects of microgravity: a review and an update",
+      "url": "https://www.nature.com/articles/s41526-020-0097-9"
+    },
+    {
+      "title": "New England Journal of Medicine (2017) - Effects of Spaceflight on Astronaut Brain Structure as Indicated on MRI",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1705129"
+    },
+    {
+      "title": "Nature (2024) - Molecular and physiological changes in the SpaceX Inspiration4 civilian crew",
+      "url": "https://www.nature.com/articles/s41586-024-07648-x"
+    },
+    {
+      "title": "NHS - Low blood pressure (hypotension)",
+      "url": "https://www.nhs.uk/conditions/low-blood-pressure-hypotension/"
+    }
+  ],
+  "style": "anim",
+  "thumbnail_anim": {
+    "thumbAction": "grow",
+    "props": [
+      {
+        "icon": "straight-ruler",
+        "at": "right",
+        "size": "xl"
+      },
+      {
+        "icon": "rocket",
+        "at": "left",
+        "size": "m"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "Two hundred forty miles above your head, the human body starts rebuilding itself. Within two days, you could even be taller.",
+      "anim": {
+        "action": "grow",
+        "props": [
+          {
+            "icon": "straight-ruler",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "rocket",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "TALLER IN SPACE",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Every system in your body grew up under one constant force: gravity. It pulls your blood toward your feet, presses down on your spine, and loads your bones every time you stand. Now imagine that force switched off.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "bone",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "That is daily life on the International Space Station, which orbits about two hundred forty miles above Earth. Astronauts there are not weightless because gravity is gone. They are falling around the planet nonstop, so their bodies never feel their own weight.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "l",
+            "anim": "orbit"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "text": "ALWAYS FALLING",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "The first days can feel rough. Your inner ear senses balance partly through gravity, and up there its signals stop matching what your eyes see. NASA says this can throw off balance and coordination, and some crew members get space motion sickness.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "ear",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "face-with-spiral-eyes",
+            "at": "top-left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "face": "sick",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "The next change happens fast. On Earth, your body constantly works to keep fluid from pooling in your legs. In orbit, that system keeps pushing upward, with nothing pulling back. So body fluids shift toward your chest and head.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "top",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "drop-of-blood",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "face": "worry",
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Your spine changes too. With no weight pressing down, your back relaxes and lengthens. NASA research found that in as little as two days, a typical crew member can grow up to three percent taller. For a six foot person, that is about two inches.",
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "straight-ruler",
+            "at": "right",
+            "size": "l",
+            "anim": "grow"
+          }
+        ],
+        "text": "3% TALLER",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "But that bonus height is temporary, and it comes with a catch. Your body is a careful accountant. Whatever it stops using, it stops paying to maintain. And in weightlessness, it stops using a lot.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "ledger",
+            "at": "bubble",
+            "size": "l"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Start with your bones. They are living tissue, constantly broken down and rebuilt to match the loads they carry. In space, weight-bearing bones like your hips and legs lose on average one to one and a half percent of their mineral density every month.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "bone",
+            "at": "right",
+            "size": "l",
+            "anim": "shrink"
+          },
+          {
+            "icon": "calendar",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "Over a six month mission, that adds up. And those minerals have to go somewhere. Extra calcium leaves the body through the kidneys, and together with dehydration, that raises the risk of kidney stones.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "rock",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "droplet",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "sick",
+        "text": "KIDNEY STONES",
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Your muscles follow the same logic. On Earth, your legs and back fight gravity all day just to keep you upright. In orbit, they barely work. Without exercise and good nutrition, astronauts lose muscle mass faster than they would on the ground.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "flexed-biceps",
+            "at": "right",
+            "size": "l",
+            "anim": "shrink"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "So astronauts train like it is their job, because it is. Crew members average about two hours of exercise every day, on a treadmill, a stationary bike, and a resistance machine that uses pistons and a flywheel to mimic lifting weights where nothing weighs anything.",
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "bicycle",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "text": "TWO HOURS DAILY",
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "Your immune system shifts too. Stress hormones rise, and immune defenses change. Many of us carry sleeping viruses, like the one behind chickenpox. In studies, about half of shuttle astronauts and sixty percent of station astronauts shed them, usually with no symptoms.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "test-tube",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "SLEEPING VIRUSES WAKE",
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "Bones and muscles you might see coming. But some of the strangest changes happen deep inside your cells. And NASA had the perfect way to measure them: an astronaut with an identical twin.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "dna",
+            "at": "bubble",
+            "size": "l"
+          },
+          {
+            "icon": "busts-in-silhouette",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Astronaut Scott Kelly spent nearly a year aboard the space station. His identical twin, Mark Kelly, also an astronaut, stayed on Earth. Because the brothers share the same genes, ten research teams could compare them and isolate what spaceflight itself had changed.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "busts-in-silhouette",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "rocket",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "THE TWINS STUDY",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Scott's gene activity shifted in orbit as his body adapted. His gut bacteria changed. His telomeres, the protective caps on the ends of chromosomes, behaved in unexpected ways. And researchers saw signs of inflammation and a thickening of the wall of his carotid artery, in his neck.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "dna",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "microbe",
+            "at": "left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "Then there are the eyes. That upward shift of fluid may press on them, and some astronauts come home with changes to their vision. In space, Scott's blood showed higher levels of a protein involved in how the body handles water.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "eye",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "droplet",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "face": "worry",
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Doctors now have a name for this: spaceflight associated neuro-ocular syndrome. It can include swelling where the optic nerve meets the eye, a flattening at the back of the eyeball, and a shift toward farsightedness.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "eye",
+            "at": "above",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "text": "SANS",
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "Even your brain moves. When researchers compared brain scans taken before and after long missions, they found that in most of those astronauts, the brain had shifted slightly upward inside the skull. What that means long term is still being studied.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "bubble",
+            "size": "l",
+            "anim": "bob"
+          }
+        ],
+        "face": "think",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Here is the part most people never think about. For many astronauts, one of the hardest moments of the whole mission is not launch. It is coming home.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "house",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "text": "COMING HOME",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "After months in orbit, your heart and blood vessels have adjusted to a world where blood does not drain toward your feet. Returning astronauts can feel lightheaded when they stand, and some even faint.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "dizzy",
+            "at": "above",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "face": "sick",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "To help, astronauts can wear cuffs on their thighs that keep more blood in the legs. Down here on Earth, if you keep feeling dizzy or faint when you stand up, the NHS advises getting it checked by a doctor.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "stethoscope",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "chair",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Your brain needs time to readjust too. In the Twins Study, Scott's thinking speed and accuracy held steady in orbit, but they dipped after landing, and some of that decline was still there six months later.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "bubble",
+            "size": "l"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "The good news is how much bounces back. About ninety one percent of Scott's gene expression changes returned to normal after he landed. His gut bacteria, weight and immune responses largely recovered, and a flu vaccine he received in space worked just as it should.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "dna",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "syringe",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "91% BOUNCED BACK",
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "A few changes did linger, though, and bone is the slow one. NASA notes that bone lost in space may not fully return, even with rehabilitation. The reassuring part: returning astronauts don't appear to have a higher risk of fractures.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "bone",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Space is no longer only for career astronauts. In 2021, the first all-civilian crew spent three days in orbit. They showed stress responses and balance changes, some like those on long missions, but almost all returned to baseline back on Earth.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "busts-in-silhouette",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "CIVILIAN CREW",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "And one hazard cannot be solved with a treadmill. Space is filled with radiation, including galactic cosmic rays that are very hard to shield against. The health risks are mostly long term, and researchers believe some DNA damage seen in Scott came from radiation exposure.",
+      "anim": {
+        "action": "hidden",
+        "props": [
+          {
+            "icon": "radioactive",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "comet",
+            "at": "top",
+            "size": "s",
+            "anim": "approach"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Now stretch everything you just heard into a trip to Mars. Mars is on average about one hundred forty million miles away, and a message home can take up to twenty minutes each way.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "above",
+            "size": "l",
+            "anim": "approach"
+          },
+          {
+            "icon": "full-moon",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "The trip there takes about six months of weightlessness. On Mars, gravity is only about one third of Earth's, and each day is about thirty seven minutes longer. The whole journey could keep a crew away for roughly three years.",
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "s"
+          },
+          {
+            "icon": "ringed-planet",
+            "at": "top-left",
+            "size": "m"
+          }
+        ],
+        "text": "1/3 GRAVITY",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "No human body has ever been through that. So scientists are testing ideas on the ground, including a NASA bed rest study that asked whether a spinning centrifuge, a kind of artificial gravity, could protect the body from weightlessness.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "bed",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "cyclone",
+            "at": "left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "And that is the real takeaway. Your body is not a fixed machine. It is constantly reading the forces around it and rebuilding itself to match. Take gravity away, and it adapts within days. Bring gravity back, and it slowly adapts again.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "gear",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Which means that right now, just by standing and walking around, you are giving your bones and muscles a reason to stay strong. Gravity is not only holding you down. It is quietly keeping you built.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "flexed-biceps",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "bone",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "text": "STAY STRONG",
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "headline": "",
+      "sub": "",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

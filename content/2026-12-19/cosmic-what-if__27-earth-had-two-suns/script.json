@@ -1,0 +1,748 @@
+{
+  "channel": "cosmic-what-if",
+  "style": "anim",
+  "number": 27,
+  "slug": "earth-had-two-suns",
+  "target_minutes": 7.2,
+  "title": "What If Earth Had Two Suns? Life on a Real Tatooine",
+  "thumbnail_text": "TWO SUNS",
+  "description": "Many Sun-like stars have a partner. So what if ours did? We try it two ways: a Tatooine Earth circling a pair of stars, with double shadows, double sunsets and eclipses of one sun by the other, and an Earth with a distant second sun that turns night into twilight. Along the way: real two-sun planets found by Kepler and TESS, why you can't just add a second Sun, and the Sun's possible lost twin.\n\nSources:\n- NASA JPL, NASA's Kepler Discovery Confirms First Planet Orbiting Two Stars (2011): https://www.jpl.nasa.gov/news/nasas-kepler-discovery-confirms-first-planet-orbiting-two-stars/\n- NASA, NASA's TESS Mission Uncovers Its 1st World With Two Stars (2020): https://www.nasa.gov/feature/goddard/2020/nasa-s-tess-mission-uncovers-its-1st-world-with-two-stars\n- Raghavan et al., A Survey of Stellar Families: Multiplicity of Solar-Type Stars, ApJS 2010 (arXiv): https://arxiv.org/abs/1007.0414\n- Holman & Wiegert, Long-Term Stability of Planets in Binary Systems, AJ 1999 (arXiv): https://arxiv.org/abs/astro-ph/9809315\n- UC Berkeley News, New evidence that all stars are born in pairs (2017): https://news.berkeley.edu/2017/06/13/new-evidence-that-all-stars-are-born-in-pairs/\n- NASA Imagine the Universe, The Nearest Star (Alpha Centauri): https://imagine.gsfc.nasa.gov/features/cosmic/nearest_star_info.html",
+  "tags": [
+    "two suns",
+    "binary stars",
+    "tatooine",
+    "kepler-16b",
+    "circumbinary planet",
+    "alpha centauri",
+    "exoplanets",
+    "double sunset",
+    "tess",
+    "nasa",
+    "what if",
+    "astronomy",
+    "science",
+    "cosmic what if"
+  ],
+  "sources": [
+    {
+      "title": "NASA JPL, NASA's Kepler Discovery Confirms First Planet Orbiting Two Stars (2011)",
+      "url": "https://www.jpl.nasa.gov/news/nasas-kepler-discovery-confirms-first-planet-orbiting-two-stars/"
+    },
+    {
+      "title": "NASA, NASA's TESS Mission Uncovers Its 1st World With Two Stars (2020)",
+      "url": "https://www.nasa.gov/feature/goddard/2020/nasa-s-tess-mission-uncovers-its-1st-world-with-two-stars"
+    },
+    {
+      "title": "Raghavan et al., A Survey of Stellar Families: Multiplicity of Solar-Type Stars, ApJS 2010 (arXiv)",
+      "url": "https://arxiv.org/abs/1007.0414"
+    },
+    {
+      "title": "Holman & Wiegert, Long-Term Stability of Planets in Binary Systems, AJ 1999 (arXiv)",
+      "url": "https://arxiv.org/abs/astro-ph/9809315"
+    },
+    {
+      "title": "UC Berkeley News, New evidence that all stars are born in pairs (2017)",
+      "url": "https://news.berkeley.edu/2017/06/13/new-evidence-that-all-stars-are-born-in-pairs/"
+    },
+    {
+      "title": "NASA Imagine the Universe, The Nearest Star (Alpha Centauri)",
+      "url": "https://imagine.gsfc.nasa.gov/features/cosmic/nearest_star_info.html"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "sun",
+        "at": "top-left",
+        "size": "l",
+        "anim": "pulse"
+      },
+      {
+        "icon": "sun",
+        "at": "right",
+        "size": "l",
+        "anim": "pulse"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "What if you looked out one morning and saw two suns rising instead of one? Could Earth still be a good place to live?",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sun",
+            "at": "top",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "shock",
+        "bg": "sky",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "This isn't pure fantasy. In a big survey of Sun-like stars near us, astronomers found that more than four in ten have at least one companion star. A lonely star like our Sun is common, but it's far from the only option.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "star",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "glowing-star",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "So let's run this experiment two ways. In version one, the second sun is close, and Earth circles both stars together. In version two, the second sun is far away, and Earth stays loyal to just one.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "bubble"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "s",
+            "anim": "spin"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "But first, a warning. You can't simply drop a second sun into our solar system. If a star as heavy as the Sun suddenly appeared right beside it, the gravity pulling on Earth would roughly double.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l",
+            "anim": "grow"
+          },
+          {
+            "icon": "warning",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "camera": "shake",
+        "text": "DOUBLE THE PULL"
+      }
+    },
+    {
+      "narration": "Earth's speed is tuned to the pull of one Sun. With twice the gravity, our planet would be moving too slowly to keep its nearly circular orbit. It would start falling inward, into a stretched, lopsided path.",
+      "anim": {
+        "action": "fall-toward",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "s",
+            "anim": "approach"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Physics says each lap would drag Earth in to about a third of its current distance, closer than Mercury ever gets, then fling it back out. Scorching heat, then deep cold, every single year.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "fire",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "snowflake",
+            "at": "left",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "face": "sick"
+      }
+    },
+    {
+      "narration": "So for this experiment, let's cheat a little. Imagine Earth was born this way, with an orbit that suits two suns from the very beginning. Welcome to version one: the Tatooine world.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "sunset",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "sky",
+        "text": "TATOOINE EARTH"
+      }
+    },
+    {
+      "narration": "Astronomers have found real planets like this. In 2011, NASA's Kepler telescope confirmed Kepler sixteen b, about two hundred light-years away. It circles two stars at once, and takes two hundred twenty-nine days to orbit both.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "telescope",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "ringed-planet",
+            "at": "top",
+            "size": "m",
+            "anim": "orbit"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Its two stars are smaller than our Sun. One has about sixty-nine percent of the Sun's mass, the other only twenty percent. They twirl around each other every forty-one days, like figure skaters.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "orange-circle",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "red-circle",
+            "at": "top-left",
+            "size": "s",
+            "anim": "orbit"
+          }
+        ],
+        "bg": "space",
+        "text": "41-DAY DANCE"
+      }
+    },
+    {
+      "narration": "Kepler sixteen b itself is no paradise. It's about the size of Saturn, cold, and probably half rock and half gas. But as one NASA scientist put it, visitors would see a sky with two suns, just like Luke did.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "snowflake",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "And it isn't alone. In 2019, a student who had just finished his junior year of high school was interning at NASA. About three days in, he spotted a planet circling two stars in data from the TESS telescope.",
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "laptop",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "face": "grin",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "That planet is about six point nine times as wide as Earth, roughly thirteen hundred light-years away. One of its stars is about ten percent heavier than our Sun. The other has about a third of the Sun's mass.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "yellow-circle",
+            "at": "right",
+            "size": "l",
+            "anim": "orbit"
+          },
+          {
+            "icon": "red-circle",
+            "at": "top",
+            "size": "s",
+            "anim": "orbit"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Before that, Kepler had already found twelve planets circling pairs of stars, in ten different systems. So two-sun worlds aren't flukes. They're out there, waiting to be counted.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "hundred-points",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "glowing-star",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "So what would daily life be like on your two-sun Earth? Start with mornings. The suns would rise side by side, or one after the other, depending on where they are in their dance around each other.",
+      "anim": {
+        "action": "yawn",
+        "props": [
+          {
+            "icon": "sunrise",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "sun",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "Every object would cast two shadows. Hold up your hand and you'd see a dark patch where both suns are blocked, and lighter shadows where only one is. Your whole world would get a soft double outline.",
+      "anim": {
+        "action": "wave",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sun",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "sky",
+        "text": "TWO SHADOWS"
+      }
+    },
+    {
+      "narration": "And sunsets would come in pairs. One sun slips below the horizon, the sky stays strangely bright, and then the second one follows it down. Star Wars fans would feel right at home.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "sunset",
+            "at": "right",
+            "size": "l",
+            "anim": "fall"
+          },
+          {
+            "icon": "sun",
+            "at": "far-right",
+            "size": "s",
+            "anim": "fall"
+          }
+        ],
+        "bg": "sky",
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Every so often, the stars would line up and one would pass in front of the other. Astronomers see exactly this when they watch Kepler sixteen: the two stars take turns blocking each other's light.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "orange-circle",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "red-circle",
+            "at": "right",
+            "size": "s",
+            "anim": "approach"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "If your planet lined up the same way, one sun could eclipse the other. The daylight would dim for a while, as if someone slowly turned down the brightness of the sky, and then it would come back.",
+      "anim": {
+        "action": "hidden",
+        "props": [
+          {
+            "icon": "new-moon",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "bg": "sky",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "Where would Earth have to orbit? It depends on the suns. Kepler sixteen b is cold partly because its stars are cooler than ours. Two Sun-like stars, though, would push the comfortable zone for liquid water farther out.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "thermometer",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "droplet",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Distance matters for another reason. Studies of planets in binary systems find that a world circling two stars only stays stable if it keeps well outside the pair. Too close, and their tug of war throws it into chaos.",
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "camera": "shake",
+        "text": "TUG OF WAR"
+      }
+    },
+    {
+      "narration": "Your seasons could get strange too. As the two stars circle each other, the amount of light reaching you would shift a little, adding ripples on top of your normal summers and winters.",
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "sun-behind-cloud",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "snowflake",
+            "at": "top-left",
+            "size": "s",
+            "anim": "fall"
+          }
+        ],
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "Even astronomy gets tricky. On that planet the NASA intern found, the planet crosses in front of its bigger star at uneven intervals, about every ninety-three to ninety-five days, because both stars are moving.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "spiral-calendar",
+            "at": "bubble"
+          },
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "s",
+            "anim": "spin"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Now, version two. This time the second sun is far away, and Earth circles only one star. Our nearest stellar neighbors show how that works. Alpha Centauri A and B are a pair of bright stars orbiting each other.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "glowing-star",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "star",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "They're separated by about twenty-three times the distance from Earth to the Sun, a little more than the distance from our Sun to Uranus. A planet could circle one of them, as long as it stays close to its own star.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "m"
+          },
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          }
+        ],
+        "bg": "space",
+        "text": "23 TIMES FARTHER"
+      }
+    },
+    {
+      "narration": "From a world like that, the second sun would look like a tiny, dazzling point. Far too small to warm you much. But physics says it could shine hundreds of times brighter than our full Moon.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "glowing-star",
+            "at": "top",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "full-moon",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "night",
+        "face": "shock"
+      }
+    },
+    {
+      "narration": "So when that distant sun is on the opposite side of the sky from your main sun, your night wouldn't really be dark. For part of every year, night would feel like a long, eerie twilight.",
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "glowing-star",
+            "at": "top",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "bed",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "night",
+        "face": "sleep"
+      }
+    },
+    {
+      "narration": "Life would have to adapt to all this. Maybe plants would lean toward two sources of light. Maybe animals would evolve to sleep through bright nights, or to hunt by the light of the second sun.",
+      "anim": {
+        "action": "grow",
+        "props": [
+          {
+            "icon": "seedling",
+            "at": "right",
+            "size": "m",
+            "anim": "grow"
+          },
+          {
+            "icon": "lizard",
+            "at": "left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "And here's the twist. Our own Sun might once have had a partner. In 2017, astronomers studying a cloud full of newborn stars concluded that nearly all Sun-like stars may start life with a companion.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sun",
+            "at": "far-right",
+            "size": "s",
+            "anim": "fade-in"
+          }
+        ],
+        "bg": "space",
+        "face": "shock"
+      }
+    },
+    {
+      "narration": "If that's right, the Sun's partner drifted away long ago and mixed in with the other stars of the galaxy. The researchers say their model still needs to be checked in other star-forming clouds.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "dashing-away",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "milky-way",
+            "at": "top",
+            "size": "m",
+            "anim": "fade-in"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "So somewhere in the Milky Way, there might be a star that was born right beside our Sun, now just one face in a crowd of billions. Nobody knows which one it is.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "bubble"
+          },
+          {
+            "icon": "red-question-mark",
+            "at": "right",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "night",
+        "text": "THE LOST TWIN"
+      }
+    },
+    {
+      "narration": "So could Earth have two suns? Yes, as long as it was born that way and orbits at a safe distance. You'd get double shadows, double sunsets, eclipses of one sun by the other, and nights that glow.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sunset",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "Look up tonight. Among the stars you can see, many are really pairs and families, circling each other. A single sun like ours is just one of the ways the universe builds a sky.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "star",
+            "at": "top",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "star",
+            "at": "top-left",
+            "size": "s",
+            "anim": "orbit"
+          }
+        ],
+        "bg": "night",
+        "camera": "zoom-out"
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

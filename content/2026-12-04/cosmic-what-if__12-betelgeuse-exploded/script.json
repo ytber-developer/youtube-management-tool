@@ -1,0 +1,844 @@
+{
+  "channel": "cosmic-what-if",
+  "number": 12,
+  "slug": "betelgeuse-exploded",
+  "target_minutes": 8.33,
+  "title": "What If Betelgeuse Exploded Tonight?",
+  "thumbnail_text": "ORION LOSES A STAR",
+  "description": "Betelgeuse, the red shoulder of Orion, is destined to explode as a supernova, sometime in roughly the next hundred thousand years. Here is what you would actually see, hear about first, and feel if it happened tonight, and why Earth would be completely safe.\n\nSources:\n- Kavli IPMU, Study of supergiant star Betelgeuse recalibrates its mass, radius and distance (Joyce et al. 2020): https://www.ipmu.jp/en/node/8466\n- ESA/Hubble, Hubble sees red supergiant Betelgeuse slowly recovering after blowing its top: https://esahubble.org/images/opo22037a/\n- NASA, NASA Scientists Discover Betelgeuse's Companion Star (2025): https://www.nasa.gov/?p=891099\n- Fermilab, If Betelgeuse goes boom, how DUNE would respond to a nearby supernova: https://news.fnal.gov/2020/10/if-betelgeuse-goes-boom-how-dune-would-respond-to-a-nearby-supernova/\n- Astronomy Magazine, When Betelgeuse goes supernova, what will it look like from Earth?: https://www.astronomy.com/science/when-betelgeuse-goes-supernova-what-will-it-look-like-from-earth/\n- NASA, 2012: Fear No Supernova: https://www.nasa.gov/universe/2012-fear-no-supernova/",
+  "tags": [
+    "betelgeuse",
+    "supernova",
+    "orion",
+    "red supergiant",
+    "what if",
+    "astronomy",
+    "space",
+    "stars",
+    "neutrinos",
+    "great dimming",
+    "hubble",
+    "science",
+    "cosmic what if"
+  ],
+  "sources": [
+    {
+      "title": "Kavli IPMU - Study of supergiant star Betelgeuse recalibrates its mass, radius and distance (Joyce et al. 2020)",
+      "url": "https://www.ipmu.jp/en/node/8466"
+    },
+    {
+      "title": "ESA/Hubble - Hubble sees red supergiant Betelgeuse slowly recovering after blowing its top",
+      "url": "https://esahubble.org/images/opo22037a/"
+    },
+    {
+      "title": "NASA - NASA Scientists Discover Betelgeuse's Companion Star (2025)",
+      "url": "https://www.nasa.gov/?p=891099"
+    },
+    {
+      "title": "Fermilab - If Betelgeuse goes boom, how DUNE would respond to a nearby supernova",
+      "url": "https://news.fnal.gov/2020/10/if-betelgeuse-goes-boom-how-dune-would-respond-to-a-nearby-supernova/"
+    },
+    {
+      "title": "Astronomy Magazine - When Betelgeuse goes supernova, what will it look like from Earth?",
+      "url": "https://www.astronomy.com/science/when-betelgeuse-goes-supernova-what-will-it-look-like-from-earth/"
+    },
+    {
+      "title": "NASA - 2012: Fear No Supernova",
+      "url": "https://www.nasa.gov/universe/2012-fear-no-supernova/"
+    }
+  ],
+  "style": "anim",
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "glowing-star",
+        "at": "right",
+        "size": "xl",
+        "anim": "pulse"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "Look up at Orion on a winter night. That reddish star on his shoulder is going to explode. Here's what tonight would look like.",
+      "headline": "WHAT IF BETELGEUSE <em>EXPLODED?</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "Orion constellation Betelgeuse",
+        "note": "Orion constellation with the red star Betelgeuse at upper left"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "star",
+            "at": "top-left",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "text": "BETELGEUSE",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "First, two promises. This is completely safe for Earth, and you'll see exactly why. And tonight is a thought experiment. Astronomers think Betelgeuse has roughly a hundred thousand years left. It could go in your lifetime, but the odds are it won't.",
+      "headline": "SAFE, AND <em>PROBABLY NOT SOON</em>",
+      "sub": "Likely within about 100,000 years",
+      "visual": {
+        "type": "nasa",
+        "query": "Orion Nebula Hubble",
+        "note": "the Orion Nebula in the same constellation"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "shield",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "To find it, look for Orion's belt, three bright stars in a neat row. In the Northern Hemisphere, Betelgeuse sits above and to the left, glowing a distinct orange red. NASA calls it the tenth brightest star in our night sky, and the closest red supergiant to Earth.",
+      "headline": "FIND <em>ORION'S SHOULDER</em>",
+      "sub": "Up and left of Orion's belt",
+      "visual": {
+        "type": "diagram",
+        "spec": "Star chart of Orion: the three belt stars in a row, Betelgeuse marked in red at upper left as the shoulder, Rigel in blue at lower right"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "star",
+            "at": "top",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "telescope",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Betelgeuse is a red supergiant, one of the biggest stars you can see with your bare eyes. One study puts it at about seven hundred fifty times the width of the Sun. Drop it where our Sun is, and its surface would swallow Mercury, Venus, Earth, and Mars, reaching beyond the asteroid belt.",
+      "headline": "A STAR THAT WOULD <em>SWALLOW MARS</em>",
+      "sub": "About 750 times the Sun's radius",
+      "visual": {
+        "type": "diagram",
+        "spec": "Orbits of Mercury, Venus, Earth, Mars, the asteroid belt and Jupiter drawn to scale, with a red circle for Betelgeuse's surface placed at the Sun's position extending just beyond the asteroid belt"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "red-circle",
+            "at": "right",
+            "size": "xl",
+            "anim": "grow"
+          },
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "750× THE SUN",
+        "bg": "space",
+        "face": "shock"
+      }
+    },
+    {
+      "narration": "Some estimates make it even bigger, reaching all the way out toward the orbit of Jupiter. Either way, it weighs in at roughly sixteen to nineteen times the mass of the Sun, and it is near the end of a life measured in just millions of years.",
+      "headline": "SIXTEEN TO NINETEEN <em>SUNS</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "Betelgeuse ALMA image",
+        "note": "radio image resolving the disk of Betelgeuse"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Stars that heavy burn through their fuel fast. They fuse hydrogen, then helium, then heavier and heavier elements, layer by layer, like an onion. The final layer at the center is iron. And iron is a dead end, because fusing it doesn't release energy. It costs energy.",
+      "headline": "IRON IS A <em>DEAD END</em>",
+      "sub": "",
+      "visual": {
+        "type": "diagram",
+        "spec": "Cutaway of a massive star's onion-like layers: hydrogen outer shell, then helium, carbon, oxygen, neon, silicon, and an iron core at the center"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "onion",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "fire",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "So imagine the moment comes. The iron core, a bit heavier than our entire Sun, can no longer hold itself up. In about a second, it collapses. A ball the size of Earth is crushed into a sphere roughly the size of a city, made almost entirely of neutrons.",
+      "headline": "COLLAPSE IN <em>ONE SECOND</em>",
+      "sub": "Earth-sized core to city-sized neutron star",
+      "visual": {
+        "type": "nasa",
+        "query": "neutron star illustration",
+        "note": "artist illustration of a neutron star"
+      },
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l",
+            "anim": "shrink"
+          },
+          {
+            "icon": "cityscape",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "CORE COLLAPSE",
+        "bg": "space",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "The collapse bounces, and a shock wave blasts outward through the star. It will take hours to reach the surface. But something escapes immediately: an enormous burst of ghostly particles called neutrinos. And here's the strange part. On Earth, they arrive first.",
+      "headline": "THE <em>GHOST PARTICLES</em> COME FIRST",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "supernova explosion illustration",
+        "note": "artist concept of a supernova shock wave"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "collision",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "space",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "Here's how lopsided that is. Almost all of the energy of the collapse leaves as neutrinos, not light. In a few seconds, physicists calculate, they carry away roughly a hundred times more energy than our Sun will give off over its entire ten-billion-year life.",
+      "headline": "<em>A HUNDRED</em> SUN LIFETIMES",
+      "sub": "Released in a few seconds",
+      "visual": {
+        "type": "nasa",
+        "query": "Sun Solar Dynamics Observatory",
+        "note": "full disk of the Sun"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Neutrinos pass through almost anything. Trillions upon trillions of them would stream through your body tonight, and you would feel nothing. But giant detectors buried underground would light up. Physicists expect the future DUNE experiment, deep under South Dakota, could catch around a million of them.",
+      "headline": "A MILLION <em>NEUTRINOS</em>",
+      "sub": "Detected deep underground",
+      "visual": {
+        "type": "nasa",
+        "query": "Super-Kamiokande neutrino detector",
+        "note": "interior of a giant underground neutrino detector lined with sensors"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "sparkles",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "satellite-antenna",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Compare that to Supernova nineteen eighty-seven A, the closest one in modern times, in a small neighbor galaxy about two hundred forty times farther away than Betelgeuse. Detectors around the world caught only about two dozen neutrinos from it.",
+      "headline": "LAST TIME: <em>TWO DOZEN</em>",
+      "sub": "Supernova 1987A",
+      "visual": {
+        "type": "nasa",
+        "query": "SN 1987A Hubble",
+        "note": "Hubble image of Supernova 1987A and its rings"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "star",
+            "at": "bubble",
+            "size": "m"
+          },
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "text": "ONLY TWO DOZEN",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Those detectors could give astronomers up to about twelve hours of warning before the light arrives. An automated network exists for exactly this. Around the world, astronomers' phones would buzz with alerts, and telescopes would swing toward Orion's shoulder, waiting.",
+      "headline": "UP TO <em>TWELVE HOURS</em> OF WARNING",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "Gemini North telescope dome",
+        "note": "large observatory dome opening at night"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "mobile-phone",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "telescope",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "12-HOUR WARNING",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Then the shock wave breaks through the surface, and the light arrives. Simulations by astronomers at UC Santa Barbara suggest Betelgeuse would blaze about as bright as a half Moon for more than three months. But all of that light would come from a single, blinding point.",
+      "headline": "AS BRIGHT AS <em>THE HALF MOON</em>",
+      "sub": "For more than three months",
+      "visual": {
+        "type": "nasa",
+        "query": "half moon",
+        "note": "half Moon in a dark sky"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "glowing-star",
+            "at": "top-left",
+            "size": "xl",
+            "anim": "pulse"
+          },
+          {
+            "icon": "first-quarter-moon",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "night",
+        "camera": "zoom-in",
+        "face": "shock"
+      }
+    },
+    {
+      "narration": "Picture it. A star so bright it casts shadows at night. Orion, the hunter, carrying a dazzling spark on his shoulder. And during the day, you could still see it in a clear blue sky, for roughly a year by one estimate.",
+      "headline": "A STAR <em>IN DAYLIGHT</em>",
+      "sub": "Visible in daytime for about a year",
+      "visual": {
+        "type": "nasa",
+        "query": "daytime Moon blue sky",
+        "note": "bright object visible in a daytime blue sky"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "glowing-star",
+            "at": "top",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "Then it would fade, slowly, over years. For several years it would remain visible to the naked eye at night. And when it finally dims away, Orion would be missing a shoulder. The most famous constellation in the sky would be changed for every human who ever lived after you.",
+      "headline": "ORION <em>LOSES A SHOULDER</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "Orion constellation over observatory",
+        "note": "Orion rising over a telescope dome"
+      },
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "star",
+            "at": "top",
+            "size": "m",
+            "anim": "shrink"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Now, the question everyone asks. Is this dangerous? According to NASA, a supernova would have to explode less than about fifty light-years away to damage Earth's ozone layer. Betelgeuse is around ten times farther than that. There are no nearby stars capable of exploding that close.",
+      "headline": "IS IT <em>DANGEROUS?</em>",
+      "sub": "Danger zone: within about 50 light-years",
+      "visual": {
+        "type": "nasa",
+        "query": "ozone layer Earth limb",
+        "note": "thin blue layer of atmosphere along Earth's edge"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "shield",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "TOTALLY SAFE",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "NASA estimates that one or two supernovas explode somewhere in our galaxy every century. Yet the last one anyone spotted in the Milky Way with the naked eye was more than four hundred years ago. Astronomers think many others were simply hidden behind thick clouds of galactic dust.",
+      "headline": "<em>FOUR HUNDRED</em> YEARS OF WAITING",
+      "sub": "One or two per century in our galaxy",
+      "visual": {
+        "type": "nasa",
+        "query": "Kepler supernova remnant",
+        "note": "remnant of Kepler's supernova of 1604"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "fog",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "So no radiation storm, no extinction, nothing to hide from. Just the most spectacular light show in recorded history. And there's a deeper twist hiding in that word, tonight. Because whatever you see tonight has already happened.",
+      "headline": "A SHOW, <em>NOT A THREAT</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "Milky Way night sky",
+        "note": "Milky Way over a dark landscape"
+      },
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "fireworks",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "text": "NOTHING TO FEAR",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Betelgeuse is roughly five hundred to seven hundred light-years away, depending on which measurement you trust. So the light you see from it tonight left the star centuries ago, somewhere around the late Middle Ages. If you see it explode tonight, it really exploded long before anyone had ever looked through a telescope.",
+      "headline": "IT ALREADY <em>HAPPENED</em>",
+      "sub": "Light that left centuries ago",
+      "visual": {
+        "type": "diagram",
+        "spec": "Timeline from about the year 1400 to today: a light ray leaves Betelgeuse at the left and arrives at Earth at the right, labeled roughly 500 to 700 years of travel"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "castle",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "It's also possible that Betelgeuse has already exploded, and the light just hasn't reached us yet. Astronomers don't think that's likely, because the star doesn't seem to be in its final stage. But we genuinely can't rule it out.",
+      "headline": "IT MAY HAVE <em>ALREADY GONE</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "red supergiant star illustration",
+        "note": "artist illustration of a red supergiant star"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "red-question-mark",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Which brings us to the scare of twenty nineteen. That winter, Betelgeuse suddenly dimmed so much that people could see the difference with their bare eyes. Headlines asked whether it was about to blow. It wasn't. But what had happened turned out to be almost as dramatic.",
+      "headline": "THE <em>GREAT DIMMING</em>",
+      "sub": "Winter 2019 to 2020",
+      "visual": {
+        "type": "nasa",
+        "query": "Betelgeuse dimming Hubble",
+        "note": "illustration of Betelgeuse during the Great Dimming"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "newspaper",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "star",
+            "at": "top-left",
+            "size": "s",
+            "anim": "shake"
+          }
+        ],
+        "text": "THE 2019 DIMMING",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Using the Hubble Space Telescope and other observatories, astronomers found that Betelgeuse had blown off a huge piece of its visible surface. The material drifted away, cooled, and formed a cloud of dust that blocked part of the star's light. Nothing like it had ever been seen on a normal star.",
+      "headline": "IT <em>BLEW ITS TOP</em>",
+      "sub": "A surface mass ejection",
+      "visual": {
+        "type": "nasa",
+        "query": "Betelgeuse surface mass ejection illustration",
+        "note": "illustration of Betelgeuse ejecting a huge plume that cools into dust"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "telescope",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "fog",
+            "at": "top-left",
+            "size": "m",
+            "anim": "fade-in"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Our Sun throws off material too, but its eruptions are many orders of magnitude weaker. The blast even disrupted a steady pulse of brightening and dimming, about every four hundred days, that astronomers had tracked for more than two hundred years.",
+      "headline": "A <em>HEARTBEAT</em> DISRUPTED",
+      "sub": "A 400-day rhythm, tracked for 200 years",
+      "visual": {
+        "type": "nasa",
+        "query": "solar coronal mass ejection SOHO",
+        "note": "coronal mass ejection erupting from the Sun"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "collision",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "So, was that a sign of the end? A twenty twenty study modeling Betelgeuse's pulsations concluded that it is still in an early stage of burning helium in its core, likely more than a hundred thousand years before it explodes. The same study suggested it's smaller and closer than earlier thought.",
+      "headline": "STILL <em>BURNING HELIUM</em>",
+      "sub": "More than 100,000 years left",
+      "visual": {
+        "type": "nasa",
+        "query": "Hubble Betelgeuse ultraviolet",
+        "note": "Hubble ultraviolet image of the disk of Betelgeuse"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "text": "100,000 YEARS LEFT",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "And Betelgeuse had one more secret. In twenty twenty-five, NASA scientists using a camera on the Gemini North telescope in Hawaii found a faint companion star, orbiting very close to its outer edge. It's been nicknamed Siwarha, which means her bracelet.",
+      "headline": "A <em>HIDDEN</em> COMPANION",
+      "sub": "Nicknamed Siwarha, her bracelet",
+      "visual": {
+        "type": "nasa",
+        "query": "Betelgeuse companion star Gemini",
+        "note": "image or illustration of Betelgeuse with its faint companion"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "star",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "ring",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "HER BRACELET",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Astronomers will get their best look at it around November twenty twenty-seven, when it swings out to its widest point. That little star probably has a grim future, because one day the giant beside it will explode.",
+      "headline": "NEXT LOOK: <em>NOVEMBER 2027</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "binary star system illustration",
+        "note": "artist illustration of a large star with a small companion"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "star",
+            "at": "top",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "telescope",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "When it does, the expanding debris will glow for thousands of years. Look at the Crab Nebula, the wreckage of a star whose explosion was recorded by astronomers in the year one thousand fifty-four. It's still expanding, with a spinning neutron star at its heart.",
+      "headline": "WHAT IT <em>LEAVES BEHIND</em>",
+      "sub": "The Crab Nebula, a supernova from 1054",
+      "visual": {
+        "type": "nasa",
+        "query": "Crab Nebula Hubble",
+        "note": "Hubble mosaic of the Crab Nebula"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "crab",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Betelgeuse will probably leave behind a neutron star too, though some astronomers think it could form a black hole. Its debris will carry oxygen, silicon, calcium, and many other elements it spent its whole life building, out into the galaxy.",
+      "headline": "SEEDING <em>THE GALAXY</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "Cassiopeia A Chandra",
+        "note": "colorful supernova remnant Cassiopeia A in X-rays"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "black-hole",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "And that's the real payoff. The oxygen in the air you're breathing right now, and many of the atoms in your body, were made inside massive stars like Betelgeuse and scattered when they died. Supernovas aren't only destroyers. They're how the universe makes things like you.",
+      "headline": "YOU ARE <em>STAR STUFF</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "Pillars of Creation",
+        "note": "Pillars of Creation, gas clouds forming new stars"
+      },
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "wind-face",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "sparkles",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "MADE OF STARS",
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "So next time you see Orion, find that red shoulder and remember what you're looking at: a giant star near the end of its life, glowing with light from centuries ago. One night, maybe not for thousands of years, it will turn into the brightest star anyone has ever seen.",
+      "headline": "ONE NIGHT, <em>IT WILL</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "Orion winter sky",
+        "note": "Orion high in a winter night sky"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "star",
+            "at": "top-left",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "night",
+        "camera": "zoom-out"
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "headline": "",
+      "sub": "",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

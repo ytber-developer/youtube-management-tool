@@ -1,0 +1,544 @@
+{
+  "channel": "inside-your-body",
+  "number": 15,
+  "slug": "what-happens-when-you-sneeze",
+  "style": "anim",
+  "target_minutes": 6.0,
+  "title": "What Happens Inside Your Body When You Sneeze?",
+  "thumbnail_text": "INSIDE A SNEEZE",
+  "description": "A sneeze is over in an instant, but inside you it is a precise, six-step reflex: a nerve alarm in your nose, a decision in your brainstem, a giant breath, a sealed throat and a blast of air that can carry up to forty thousand droplets. We slow it down step by step, test common sneeze myths, and explain why you should never hold one in.\n\nSources:\n- Cleveland Clinic - Sneezing: https://my.clevelandclinic.org/health/articles/sneezing\n- Frontiers in Neuroscience (2025) - The sneeze reflex in physiological and pathological states: a mini review: https://pmc.ncbi.nlm.nih.gov/articles/PMC12098519/\n- Bourouiba, JAMA (2020) - Turbulent Gas Clouds and Respiratory Pathogen Emissions: https://doi.org/10.1001/jama.2020.4756\n- CDC - Healthy Habits: Coughing and Sneezing: https://www.cdc.gov/hygiene/about/coughing-and-sneezing.html\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": [
+    "sneeze",
+    "sneezing",
+    "why do we sneeze",
+    "sneeze reflex",
+    "photic sneeze reflex",
+    "holding in a sneeze",
+    "trigeminal nerve",
+    "respiratory droplets",
+    "allergies",
+    "human body",
+    "health science",
+    "science explained",
+    "inside your body"
+  ],
+  "sources": [
+    {
+      "title": "Cleveland Clinic - Sneezing",
+      "url": "https://my.clevelandclinic.org/health/articles/sneezing"
+    },
+    {
+      "title": "Frontiers in Neuroscience (2025) - The sneeze reflex in physiological and pathological states: a mini review",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12098519/"
+    },
+    {
+      "title": "Bourouiba, JAMA (2020) - Turbulent Gas Clouds and Respiratory Pathogen Emissions",
+      "url": "https://doi.org/10.1001/jama.2020.4756"
+    },
+    {
+      "title": "CDC - Healthy Habits: Coughing and Sneezing",
+      "url": "https://www.cdc.gov/hygiene/about/coughing-and-sneezing.html"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "sneezing-face",
+        "at": "right",
+        "size": "xl"
+      },
+      {
+        "icon": "wind-face",
+        "at": "far-right",
+        "size": "m"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "Right now, one speck of dust could land inside your nose and set off one of the fastest reflexes in your body. Ah... ah...",
+      "anim": {
+        "action": "hold-breath",
+        "props": [
+          {
+            "icon": "sneezing-face",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "room",
+        "face": "hold"
+      }
+    },
+    {
+      "narration": "That is a sneeze, and it feels like it simply happens to you. You cannot choose when a sneeze starts. It is an automatic reflex, run by your nervous system, not by your decisions.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "raised-hand",
+            "at": "right"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "So today we are going to slow one sneeze way down, step by step, like a movie played frame by frame. Then we will test a few famous sneeze myths, and see what happens if you hold one in.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "text": "SNEEZE IN SLOW MOTION"
+      }
+    },
+    {
+      "narration": "Step one is the tickle. The inside of your nose is lined with a soft, moist layer full of nerve endings. When dust, pollen, smoke or a sharp smell like pepper brushes against it, those nerve endings fire.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "nose",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "blossom",
+            "at": "top-left",
+            "size": "s",
+            "anim": "fall"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "The main messenger is the trigeminal nerve, a large nerve that carries feeling from your face. It is the same nerve that lets you feel a breeze on your cheek. Inside your nose, it works like a burglar alarm.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "nose",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "TRIGEMINAL NERVE"
+      }
+    },
+    {
+      "narration": "That alarm races to your brainstem, the control center at the base of your brain that also runs your breathing. Once the signal is strong enough, the decision is made. A sneeze is coming.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "bubble"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Step two is the big breath in. Your diaphragm, the dome of muscle under your lungs, pulls down hard, and the muscles between your ribs lift your chest. That is the famous ah, ah.",
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "lungs",
+            "at": "right",
+            "size": "l",
+            "anim": "grow"
+          }
+        ],
+        "text": "AH... AH..."
+      }
+    },
+    {
+      "narration": "Step three is the squeeze. Muscles in your soft palate tighten, and the uvula at the back of your throat drops down to seal off the passage to your nose. Pressure builds in your chest like a shaken soda bottle.",
+      "anim": {
+        "action": "hold-breath",
+        "props": [
+          {
+            "icon": "bottle-with-popping-cork",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          }
+        ],
+        "camera": "zoom-in",
+        "face": "hold"
+      }
+    },
+    {
+      "narration": "Your eyes squeeze shut too. That is part of the same automatic reflex. With a lot of concentration, some people can sneeze with their eyes open, and no, your eyeballs will not pop out if you try.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "eye",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Step four is the blast. The airway snaps open and the trapped air bursts out through your nose and mouth. Researchers report that the airflow can reach nearly one hundred kilometers per hour, which is around sixty miles per hour.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "sneezing-face",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "wind-face",
+            "at": "far-right",
+            "size": "m",
+            "anim": "approach"
+          }
+        ],
+        "text": "ACHOO!",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "Measurements vary from sneeze to sneeze and person to person. One researcher who films sneezes with high speed cameras, reports peak speeds of roughly thirty to one hundred feet every second.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "racing-car",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "camera",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "Step five is the cloud. A single sneeze can spray up to forty thousand tiny droplets. They do not just fall at your feet. They ride inside a warm, moist puff of air that carries them forward.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "m",
+            "anim": "fall"
+          },
+          {
+            "icon": "cloud",
+            "at": "top",
+            "size": "l",
+            "anim": "bob"
+          }
+        ],
+        "text": "40,000 DROPLETS"
+      }
+    },
+    {
+      "narration": "In that research, the cloud and its smallest droplets could travel roughly twenty three to twenty seven feet, about seven to eight meters, depending on things like humidity and temperature.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "cloud",
+            "at": "far-right",
+            "size": "m",
+            "anim": "approach"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "And that matters, because those droplets can carry viruses and bacteria. Colds, the flu and other infections can spread this way. So a sneeze protects you, but it can also share your germs with everyone nearby.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "face-with-medical-mask",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "sick"
+      }
+    },
+    {
+      "narration": "Which brings us to the point of the whole reflex. A sneeze is your body's emergency eviction system. It rapidly blasts irritants and germs out of your nose before they can travel deeper toward your lungs.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "shield",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "text": "EMERGENCY EVICTION"
+      }
+    },
+    {
+      "narration": "Then comes step six, recovery. Your breathing settles, your eyes open, and the nerve endings in your nose calm down. The whole thing, from tickle to cloud, is over in a moment. Now, let us test some myths.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "check-mark-button",
+            "at": "right"
+          }
+        ],
+        "bg": "room",
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Myth one: your heart stops when you sneeze. It does not. The big pressure change in your chest can briefly nudge your heart rate, and that is completely normal. Your heart keeps beating the entire time.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "cross-mark",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "MYTH ONE"
+      }
+    },
+    {
+      "narration": "Myth two: you can sneeze in your sleep. That one is partly true. You can sneeze during light sleep, but not during deep REM sleep, the dreaming stage. During that stage, the sneeze reflex seems to switch off.",
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "zzz",
+            "at": "above",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "bg": "night",
+        "face": "sleep"
+      }
+    },
+    {
+      "narration": "Here is a strange one. Do you sneeze when you step out into bright sunshine? You are not imagining it. Cleveland Clinic says about one in three people can sneeze from looking at a bright light.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "l",
+            "anim": "spin"
+          }
+        ],
+        "text": "SUN SNEEZE",
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "It is called the photic sneeze reflex, and it tends to run in families. Scientists still do not know exactly how light hitting your eyes ends up triggering a reflex in your nose.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "eye",
+            "at": "bubble"
+          },
+          {
+            "icon": "red-question-mark",
+            "at": "right",
+            "size": "s",
+            "anim": "bob"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Other surprising triggers include cold air, plucking a nose hair, spicy food, and even strong emotions. Allergies to dust, mold, pollen or pet dander are some of the most common reasons people sneeze again and again.",
+      "anim": {
+        "action": "eat",
+        "props": [
+          {
+            "icon": "hot-pepper",
+            "at": "hand"
+          },
+          {
+            "icon": "dog-face",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Now the big question. What if you hold a sneeze in, by pinching your nose and clamping your mouth shut? All that pressure from step three suddenly has nowhere to go. And that is where things can go wrong.",
+      "anim": {
+        "action": "hold-breath",
+        "props": [
+          {
+            "icon": "warning",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "camera": "zoom-in",
+        "face": "hold"
+      }
+    },
+    {
+      "narration": "Doctors at Cleveland Clinic warn that trapping a sneeze can damage blood vessels, cause dizziness, and in rare cases rupture an eardrum or harm your hearing. Their advice is simple. Never try to hold one in.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "ear",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          }
+        ],
+        "text": "DON'T HOLD IT"
+      }
+    },
+    {
+      "narration": "The better move is to let it out safely. The CDC recommends covering sneezes with a tissue, or with your elbow if you do not have one, instead of your bare hands. Then wash your hands soon after.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "roll-of-paper",
+            "at": "right"
+          },
+          {
+            "icon": "soap",
+            "at": "left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Most sneezing is harmless and needs no doctor. But if sneezing comes with a fever, shortness of breath, hives or vomiting, or if it is so constant that it disrupts your daily life, talk to a health professional.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "thermometer",
+            "at": "right"
+          },
+          {
+            "icon": "stethoscope",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "For babies, call a doctor if sneezing comes with fever, coughing, a stuffy nose, or changes in how they sleep or feed. Little noses sneeze a lot, but those extra signs deserve a check.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "baby",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "So the next time you feel that tickle, picture the whole chain. An alarm in your nose, a decision in your brainstem, a giant breath, a sealed throat, and a blast of air that clears the way in an instant.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "nose",
+            "at": "right"
+          },
+          {
+            "icon": "brain",
+            "at": "top-left",
+            "size": "s"
+          },
+          {
+            "icon": "lungs",
+            "at": "far-right",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "It is one of the oldest protective reflexes you have, and it runs perfectly without you ever thinking about it. Just remember to aim it into your elbow. Bless you.",
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "sparkles",
+            "at": "above",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

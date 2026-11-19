@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <clipPath id="cl"><rect x="40" y="280" width="390" height="320"/></clipPath>
+    <clipPath id="cr"><path d="M470 280 H610 C650 280 660 245 700 245 C740 245 745 285 765 288 C785 290 800 280 820 280 H860 V600 H470 Z"/></clipPath>
+  </defs>
+
+  <!-- ===== LEFT: RELAXED ===== -->
+  <g clip-path="url(#cl)">
+    <path d="M40 280 H430 V600 H40 Z" fill="rgba(255,255,255,0.10)"/>
+    <path d="M40 280 H430 V320 H40 Z" fill="rgba(255,224,138,0.35)"/>
+  </g>
+  <rect x="40" y="280" width="390" height="320" rx="0" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="4"/>
+  <line x1="40" y1="280" x2="430" y2="280" stroke="#ffe08a" stroke-width="5"/>
+  <!-- follicle -->
+  <line x1="262" y1="260" x2="140" y2="500" stroke="rgba(227,251,255,0.35)" stroke-width="40" stroke-linecap="round" clip-path="url(#cl)"/>
+  <ellipse cx="140" cy="500" rx="30" ry="26" fill="#e3fbff" opacity="0.7"/>
+  <!-- hair -->
+  <line x1="146" y1="490" x2="330" y2="128" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+  <!-- arrector pili (relaxed, long and thin) -->
+  <ellipse cx="262" cy="357" rx="75" ry="13" transform="rotate(-25.7 262 357)" fill="#ffe08a" stroke="#ffffff" stroke-width="4"/>
+
+  <!-- ===== RIGHT: CONTRACTED ===== -->
+  <g clip-path="url(#cr)">
+    <path d="M470 280 H610 C650 280 660 245 700 245 C740 245 745 285 765 288 C785 290 800 280 820 280 H860 V600 H470 Z" fill="rgba(255,255,255,0.10)"/>
+    <path d="M470 280 H610 C650 280 660 245 700 245 C740 245 745 285 765 288 C785 290 800 280 820 280 H860 V320 H820 C800 320 785 330 765 328 C745 325 740 285 700 285 C660 285 650 320 610 320 H470 Z" fill="rgba(255,224,138,0.35)"/>
+  </g>
+  <path d="M470 280 V600 H860 V280" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="4"/>
+  <path d="M470 280 H610 C650 280 660 245 700 245 C740 245 745 285 765 288 C785 290 800 280 820 280 H860" fill="none" stroke="#ffe08a" stroke-width="5"/>
+  <!-- follicle (more upright) -->
+  <line x1="706" y1="225" x2="630" y2="490" stroke="rgba(227,251,255,0.35)" stroke-width="40" stroke-linecap="round" clip-path="url(#cr)"/>
+  <ellipse cx="630" cy="490" rx="30" ry="26" fill="#e3fbff" opacity="0.7"/>
+  <!-- hair standing up -->
+  <line x1="633" y1="480" x2="745" y2="88" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+  <!-- arrector pili (contracted, short and thick) -->
+  <ellipse cx="713" cy="348" rx="54" ry="22" transform="rotate(-21 713 348)" fill="#ffe08a" stroke="#ffffff" stroke-width="4"/>
+
+  <!-- ===== LABELS ===== -->
+  <text x="60" y="130" font-size="32" font-weight="800" fill="#ffffff">RELAXED</text>
+  <text x="480" y="130" font-size="32" font-weight="800" fill="#ffffff">CONTRACTED</text>
+
+  <text x="345" y="160" font-size="30" font-weight="700" fill="#e3fbff">HAIR</text>
+
+  <text x="480" y="196" font-size="30" font-weight="800" fill="#ffe08a">GOOSEBUMP</text>
+  <line x1="600" y1="210" x2="652" y2="252" stroke="#ffe08a" stroke-width="4" stroke-linecap="round"/>
+
+  <g stroke="#ffffff" stroke-width="4" stroke-linecap="round">
+    <line x1="120" y1="640" x2="138" y2="528"/>
+    <line x1="330" y1="640" x2="280" y2="366"/>
+  </g>
+  <circle cx="280" cy="366" r="6" fill="#ffffff"/>
+  <text x="110" y="680" text-anchor="middle" font-size="30" font-weight="700" fill="#e3fbff">FOLLICLE</text>
+  <text x="335" y="680" text-anchor="middle" font-size="30" font-weight="800" fill="#ffe08a">ARRECTOR PILI</text>
+</svg>

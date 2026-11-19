@@ -1,0 +1,799 @@
+{
+  "channel": "cosmic-what-if",
+  "style": "anim",
+  "number": 28,
+  "slug": "andromeda-collision",
+  "target_minutes": 7.3,
+  "title": "What If the Milky Way and Andromeda Collided? Would You Survive?",
+  "thumbnail_text": "GALAXIES COLLIDE",
+  "description": "The Andromeda galaxy is rushing toward us at about 250,000 miles per hour. We fast-forward billions of years to watch the crash: why almost no stars would collide, what happens to the Sun and to two supermassive black holes, and the giant galaxy that could form. Then the 2025 plot twist: new Hubble and Gaia data give the collision only about a coin-flip chance.\n\nSources:\n- STScI / NASA, NASA's Hubble Shows Milky Way is Destined for Head-on Collision with Andromeda Galaxy (2012): https://www.stsci.edu/contents/news-releases/2012/news-2012-20\n- Astronomy, Hubble shows Milky Way is destined for head-on collision with Andromeda galaxy (2012): https://www.astronomy.com/science/hubble-shows-milky-way-is-destined-for-head-on-collision-with-andromeda-galaxy/\n- STScI / NASA, Apocalypse When? Hubble Casts Doubt on Certainty of Galactic Collision (2025): https://www.stsci.edu/contents/news-releases/2025/news-2025-017\n- Durham University via EurekAlert, New study casts doubt on the likelihood of a Milky Way - Andromeda collision (Sawala et al., Nature Astronomy 2025): https://www.eurekalert.org/news-releases/1085453\n- NASA Hubble, Messier 31 (Andromeda Galaxy): https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-31/\n- ESA/Hubble, heic0512: Hubble finds mysterious disk of blue stars around black hole (Andromeda's black hole mass): https://esahubble.org/news/heic0512/\n- ESO, Astronomers reveal first image of the black hole at the heart of our galaxy (2022): https://www.eso.org/public/news/eso2208-eht-mw/\n- NASA Science, Sun Facts: https://science.nasa.gov/sun/facts/",
+  "tags": [
+    "andromeda",
+    "milky way",
+    "andromeda collision",
+    "galaxy collision",
+    "milkdromeda",
+    "hubble",
+    "gaia",
+    "black hole",
+    "large magellanic cloud",
+    "nasa",
+    "what if",
+    "astronomy",
+    "science",
+    "cosmic what if"
+  ],
+  "sources": [
+    {
+      "title": "STScI / NASA, NASA's Hubble Shows Milky Way is Destined for Head-on Collision with Andromeda Galaxy (2012)",
+      "url": "https://www.stsci.edu/contents/news-releases/2012/news-2012-20"
+    },
+    {
+      "title": "Astronomy, Hubble shows Milky Way is destined for head-on collision with Andromeda galaxy (2012)",
+      "url": "https://www.astronomy.com/science/hubble-shows-milky-way-is-destined-for-head-on-collision-with-andromeda-galaxy/"
+    },
+    {
+      "title": "STScI / NASA, Apocalypse When? Hubble Casts Doubt on Certainty of Galactic Collision (2025)",
+      "url": "https://www.stsci.edu/contents/news-releases/2025/news-2025-017"
+    },
+    {
+      "title": "Durham University via EurekAlert, New study casts doubt on the likelihood of a Milky Way - Andromeda collision (Sawala et al., Nature Astronomy 2025)",
+      "url": "https://www.eurekalert.org/news-releases/1085453"
+    },
+    {
+      "title": "NASA Hubble, Messier 31 (Andromeda Galaxy)",
+      "url": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-31/"
+    },
+    {
+      "title": "ESA/Hubble, heic0512: Hubble finds mysterious disk of blue stars around black hole (Andromeda's black hole mass)",
+      "url": "https://esahubble.org/news/heic0512/"
+    },
+    {
+      "title": "ESO, Astronomers reveal first image of the black hole at the heart of our galaxy (2022)",
+      "url": "https://www.eso.org/public/news/eso2208-eht-mw/"
+    },
+    {
+      "title": "NASA Science, Sun Facts",
+      "url": "https://science.nasa.gov/sun/facts/"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "milky-way",
+        "at": "right",
+        "size": "xl",
+        "anim": "approach"
+      },
+      {
+        "icon": "collision",
+        "at": "top-left",
+        "size": "m",
+        "anim": "pulse"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "What if you could watch our Milky Way smash head-on into the Andromeda galaxy? Would you, and planet Earth, even survive the crash?",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "top",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "collision",
+            "at": "right",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "shock",
+        "bg": "space",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "Start tonight. On a dark, clear night, look for a faint, fuzzy smudge of light. That smudge is the Andromeda galaxy, about two and a half million light-years away. You can see it with your own eyes.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "telescope",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "milky-way",
+            "at": "top-left",
+            "size": "s",
+            "anim": "fade-in"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "The light hitting your eyes left Andromeda about two and a half million years ago. And if your eyes could take in its full glow, it would stretch across the sky about six times as wide as the full Moon.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "full-moon",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "night",
+        "text": "6 FULL MOONS WIDE"
+      }
+    },
+    {
+      "narration": "Here's the unsettling part. Andromeda isn't just sitting there. It's coming toward us at about two hundred fifty thousand miles per hour. Astronomers can tell from tiny shifts in the color of its starlight.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "dashing-away",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "camera": "shake",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "That makes Andromeda unusual. Most galaxies we see are moving away from us as the universe expands. Andromeda is one of the few heading our way, because the gravity between our two galaxies is pulling us together.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "magnet",
+            "at": "bubble"
+          },
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "s",
+            "anim": "approach"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "At that speed, you could fly from New York to Los Angeles in well under a minute. Yet the gap between our galaxies is so vast that closing it still takes billions of years.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "airplane",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "top-left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "In 2012, NASA announced that years of precise Hubble measurements pointed to a head-on collision. The crash would begin about four billion years from now. So let's jump into the future and watch.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "telescope",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "calendar",
+            "at": "top-left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "bg": "space",
+        "text": "4 BILLION YEARS"
+      }
+    },
+    {
+      "narration": "Fast forward almost four billion years. In NASA's artwork of this future, Andromeda's giant spiral fills a huge part of the night sky, and its gravity is starting to bend the Milky Way out of shape.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "top",
+            "size": "xl",
+            "anim": "grow"
+          },
+          {
+            "icon": "cyclone",
+            "at": "right",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "bg": "night",
+        "face": "shock"
+      }
+    },
+    {
+      "narration": "Now, the crash. Two galaxies, each holding billions upon billions of stars, plow straight into each other. Surely this is the end of everything, right? Actually, almost nothing hits anything.",
+      "anim": {
+        "action": "fall-toward",
+        "props": [
+          {
+            "icon": "collision",
+            "at": "right",
+            "size": "l",
+            "anim": "grow"
+          },
+          {
+            "icon": "milky-way",
+            "at": "left",
+            "size": "m",
+            "anim": "approach"
+          }
+        ],
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "Galaxies are mostly empty space. The stars are so far apart that astronomers don't expect individual stars to collide. Instead, they'll be thrown into new orbits around a new galactic center.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "star",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "glowing-star",
+            "at": "top-left",
+            "size": "s",
+            "anim": "orbit"
+          }
+        ],
+        "bg": "space",
+        "text": "NO STARS COLLIDE"
+      }
+    },
+    {
+      "narration": "To feel how empty it is, think about our own neighborhood. The nearest star to the Sun is more than four light-years away. Even light, the fastest thing there is, needs over four years to cross that gap.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "m"
+          },
+          {
+            "icon": "glowing-star",
+            "at": "far-right",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "So the two galaxies would pour through each other like two flocks of birds, the stars sliding past one another without ever touching. It's less like a car crash and more like a slow, enormous dance.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "sparkles",
+            "at": "top",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "dizzy",
+            "at": "right",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "If you were standing on Earth during the crash, you wouldn't feel a thing. No shaking, no impact, no alarm. Every change would happen far too slowly for a single human life to notice.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "hot-beverage",
+            "at": "hand"
+          }
+        ],
+        "bg": "night",
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Our solar system would likely survive too. NASA says the Sun will probably be flung into a new region of the galaxy, but Earth and the rest of the solar system are not expected to be destroyed.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "shield",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Inside the solar system, life would likely go on as usual. The planets would keep circling the Sun, because the Sun's grip on them is far stronger than the gentle pull of stars drifting past at a distance.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Simulations even suggest where we might end up: much farther from the galactic center than we are today. Our cosmic address changes, but our home stays in one piece.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "house",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "round-pushpin",
+            "at": "top",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "space",
+        "text": "NEW ADDRESS"
+      }
+    },
+    {
+      "narration": "What really collides is the gas. Galaxies also hold vast clouds of gas and dust, and those can't slip past each other so easily. Astronomers expect them to slam together and squeeze out bursts of brand new stars.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "cloud",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top",
+            "size": "m",
+            "anim": "grow"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Meanwhile, something enormous is moving at the heart of each galaxy. The black hole at the center of the Milky Way has about four million times the mass of our Sun. Andromeda's is far heavier, around one hundred forty million Suns.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "black-hole",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "black-hole",
+            "at": "left",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "face": "shock",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Astronomers expect the two giants to sink toward the middle of the new galaxy. Gas driven toward the center could feed a black hole, making it blaze with an enormous amount of radiation.",
+      "anim": {
+        "action": "fall-toward",
+        "props": [
+          {
+            "icon": "black-hole",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top",
+            "size": "s",
+            "anim": "shake"
+          }
+        ],
+        "camera": "zoom-in",
+        "text": "FEEDING TIME"
+      }
+    },
+    {
+      "narration": "About two billion years after first contact, the merger would be complete. The two flat spirals would be gone, replaced by one giant, rounded galaxy called an elliptical. Some people have nicknamed it Milkdromeda.",
+      "anim": {
+        "action": "grow",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "xl",
+            "anim": "spin"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Elliptical galaxies like that tend to be full of older stars, with less gas left over for making new ones. After the fireworks, our new home could slowly settle into a calm, glowing ball of aging stars.",
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "glowing-star",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "milky-way",
+            "at": "top-left",
+            "size": "s",
+            "anim": "fade-in"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "And we might not be the only guests. Andromeda's smaller companion, the Triangulum galaxy, may join the collision too. There's even a small chance it hits the Milky Way first.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "milky-way",
+            "at": "top-left",
+            "size": "s",
+            "anim": "orbit"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Andromeda has done this before. NASA notes that one of its small companion galaxies, called M thirty-two, may be the leftover core of a galaxy that once collided with Andromeda.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "bubble"
+          },
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "That was the story for more than a decade. Then, in 2025, a team of astronomers ran the numbers again, combining Hubble data with measurements from Europe's Gaia space telescope. And the future suddenly looked a lot less certain.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "red-question-mark",
+            "at": "top",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "camera": "shake",
+        "text": "PLOT TWIST"
+      }
+    },
+    {
+      "narration": "This time, their simulations included the uncertainty in every measurement. In only about half of their possible futures did the Milky Way and Andromeda collide within the next ten billion years.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "game-die",
+            "at": "bubble"
+          },
+          {
+            "icon": "laptop",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "And a collision within the next five billion years, the old headline prediction, showed up only about two percent of the time. The famous crash went from certain to unlikely, at least on that schedule.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "chart-decreasing",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "cross-mark",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "text": "ONLY 2 PERCENT"
+      }
+    },
+    {
+      "narration": "Why the change? Other galaxies are tugging on us. The Large Magellanic Cloud, a smaller galaxy falling into the Milky Way, has only about fifteen percent of our galaxy's mass, but it pulls hard enough to lower the odds of a crash.",
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "left",
+            "size": "m"
+          },
+          {
+            "icon": "magnet",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Triangulum does the opposite. It nudges Andromeda slightly toward us, raising the odds. It's a cosmic tug of war between several galaxies at once, and for now nobody can say for sure which side wins.",
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "magnet",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "milky-way",
+            "at": "left",
+            "size": "s",
+            "anim": "approach"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "The researchers stress that predicting the far future of galaxies is highly uncertain, and more data from Gaia could sharpen the picture. For now, a merger in the next ten billion years is roughly a coin flip.",
+      "anim": {
+        "action": "hold-breath",
+        "props": [
+          {
+            "icon": "coin",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "milky-way",
+            "at": "top",
+            "size": "s",
+            "anim": "fade-in"
+          }
+        ],
+        "text": "A COIN FLIP"
+      }
+    },
+    {
+      "narration": "And here's the humbling part. Even in the futures where a merger happens, it typically takes eight to ten billion years. By then, the researchers point out, our Sun will have already burned itself out.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "hourglass-done",
+            "at": "top-left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "NASA estimates the Sun has about five billion years or so left before it becomes a white dwarf, a small, dim leftover star. So it's unlikely anyone on Earth will be watching from here.",
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "white-circle",
+            "at": "right",
+            "size": "s",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "m",
+            "anim": "shrink"
+          }
+        ],
+        "bg": "night",
+        "face": "sleep"
+      }
+    },
+    {
+      "narration": "If someone is watching from somewhere, they'll see the slowest crash imaginable, unfolding over billions of years. Each frame of that movie would last longer than all of human history so far.",
+      "anim": {
+        "action": "hidden",
+        "props": [
+          {
+            "icon": "film-frames",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "popcorn",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "So would you survive the Milky Way hitting Andromeda? Almost certainly, if you were around. The stars would sail past each other, your solar system would move to a new address, and your sky would be spectacular.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "top",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "sparkles",
+            "at": "right",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "And maybe it won't happen at all. That faint smudge you can find tonight might be our future partner, or just a neighbor we wave at forever across the dark.",
+      "anim": {
+        "action": "wave",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "top-left",
+            "size": "m",
+            "anim": "fade-in"
+          },
+          {
+            "icon": "star",
+            "at": "right",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "night",
+        "camera": "zoom-out"
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

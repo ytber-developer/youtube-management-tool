@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <marker id="ac" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="3.5" markerHeight="3.5" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#7fe3ff"/>
+    </marker>
+    <marker id="ay" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#ffe08a"/>
+    </marker>
+  </defs>
+
+  <!-- brain (side view, front to the left) -->
+  <g transform="translate(-80 141) scale(0.7)">
+    <path d="M478 400 C 488 450 496 500 500 560 L 552 560 C 550 500 546 440 548 392 Z" fill="rgba(127,227,255,0.55)" stroke="#7fe3ff" stroke-width="7" stroke-linejoin="round"/>
+    <ellipse cx="652" cy="408" rx="88" ry="52" fill="#175c7c" stroke="#ffffff" stroke-width="7"/>
+    <path d="M215 300 C 200 210 270 125 390 105 C 510 85 645 110 720 180 C 770 228 772 300 740 345 C 715 378 680 388 640 382 C 600 378 570 388 540 400 C 500 418 430 425 380 412 C 335 400 310 375 300 345 C 275 345 235 335 215 300 Z"
+          fill="#46807c" stroke="#ffe08a" stroke-width="8" stroke-linejoin="round"/>
+  </g>
+
+  <!-- random signals rising from the brainstem -->
+  <g transform="translate(-24 0)" fill="none" stroke="#7fe3ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M300 420 l-18 -22 l14 -18 l-22 -22 l10 -24" marker-end="url(#ac)"/>
+    <path d="M318 418 l16 -26 l-12 -20 l20 -26 l-6 -30 l14 -22" marker-end="url(#ac)"/>
+    <path d="M286 430 l-36 -12 l8 -22 l-34 -10 l-4 -30" marker-end="url(#ac)"/>
+    <path d="M330 428 l34 -8 l2 -26 l30 -4 l10 -28" marker-end="url(#ac)"/>
+  </g>
+  <g fill="#7fe3ff">
+    <circle cx="160" cy="300" r="8"/>
+    <circle cx="210" cy="250" r="7"/>
+    <circle cx="380" cy="270" r="8"/>
+    <circle cx="300" cy="240" r="6"/>
+    <circle cx="170" cy="345" r="6"/>
+    <circle cx="420" cy="330" r="6"/>
+  </g>
+
+  <!-- labels -->
+  <text x="120" y="170" font-size="32" font-weight="800" fill="#ffe08a">FOREBRAIN</text>
+  <text x="60" y="476" font-size="28" font-weight="800" fill="#7fe3ff">RANDOM</text>
+  <text x="60" y="510" font-size="28" font-weight="800" fill="#7fe3ff">SIGNALS</text>
+  <text x="330" y="574" font-size="30" font-weight="800" fill="#7fe3ff">BRAINSTEM</text>
+  <line x1="326" y1="560" x2="304" y2="536" stroke="#7fe3ff" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- arrow to storyboard -->
+  <path d="M470 300 C 500 300 510 330 530 360" fill="none" stroke="#ffe08a" stroke-width="6" stroke-linecap="round" marker-end="url(#ay)"/>
+
+  <!-- storyboard -->
+  <text x="700" y="128" font-size="34" font-weight="800" fill="#ffffff" text-anchor="middle">STORY</text>
+  <g fill="rgba(255,255,255,0.10)" stroke="#ffffff" stroke-width="5">
+    <rect x="560" y="156" width="280" height="140" rx="18"/>
+    <rect x="560" y="316" width="280" height="140" rx="18"/>
+    <rect x="560" y="476" width="280" height="140" rx="18"/>
+  </g>
+  <g font-size="28" font-weight="800" fill="#ffe08a">
+    <text x="578" y="194">1</text>
+    <text x="578" y="354">2</text>
+    <text x="578" y="514">3</text>
+  </g>
+  <!-- frame 1: house -->
+  <path d="M650 206 L700 172 L750 206" fill="none" stroke="#ffe08a" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+  <rect x="664" y="206" width="72" height="66" rx="6" fill="rgba(255,224,138,0.3)" stroke="#ffe08a" stroke-width="5"/>
+  <rect x="690" y="236" width="20" height="36" rx="4" fill="#ffe08a"/>
+  <!-- frame 2: running figure -->
+  <g fill="none" stroke="#7fe3ff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="712" cy="344" r="14" fill="rgba(127,227,255,0.3)"/>
+    <path d="M706 360 L692 398"/>
+    <path d="M692 398 L716 418 L708 440"/>
+    <path d="M692 398 L672 420 L652 420"/>
+    <path d="M702 372 L728 386 L742 372"/>
+    <path d="M702 372 L680 380 L668 366"/>
+  </g>
+  <g stroke="rgba(127,227,255,0.6)" stroke-width="4" stroke-linecap="round">
+    <line x1="760" y1="360" x2="800" y2="360"/>
+    <line x1="770" y1="384" x2="810" y2="384"/>
+  </g>
+  <!-- frame 3: moon and stars -->
+  <path d="M705 506 A 40 40 0 1 0 735 576 A 32 32 0 1 1 705 506 Z" fill="#c9b8ff"/>
+  <g fill="#ffffff">
+    <circle cx="768" cy="520" r="6"/>
+    <circle cx="790" cy="568" r="5"/>
+    <circle cx="640" cy="548" r="5"/>
+  </g>
+</svg>

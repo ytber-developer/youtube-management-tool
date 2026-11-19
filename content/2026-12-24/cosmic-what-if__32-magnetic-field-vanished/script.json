@@ -1,0 +1,781 @@
+{
+  "channel": "cosmic-what-if",
+  "style": "anim",
+  "number": 32,
+  "slug": "magnetic-field-vanished",
+  "target_minutes": 7.7,
+  "title": "What If Earth's Magnetic Field Disappeared Tomorrow?",
+  "thumbnail_text": "NO MORE SHIELD",
+  "description": "Earth's magnetic field is an invisible shield made by molten iron deep underground. What would happen if it switched off? Not what the disaster movies say. We follow the first second, the first day, the first years and the far future, and look at the time 42,000 years ago when the field nearly did vanish.\n\nSources:\n- NASA Science, Earth's Magnetosphere: Protecting Our Planet from Harmful Space Energy: https://science.nasa.gov/science-research/earth-science/earths-magnetosphere-protecting-our-planet-from-harmful-space-energy/\n- NASA Science, Flip Flop: Why Variations in Earth's Magnetic Field Aren't Causing Today's Climate Change: https://science.nasa.gov/science-research/earth-science/flip-flop-why-variations-in-earths-magnetic-field-arent-causing-todays-climate-change/\n- ESA, Swarm probes weakening of Earth's magnetic field: https://www.esa.int/Applications/Observing_the_Earth/FutureEO/Swarm/Swarm_probes_weakening_of_Earth_s_magnetic_field\n- ESA, Swarm reveals growing weak spot in Earth's magnetic field: https://www.esa.int/Applications/Observing_the_Earth/FutureEO/Swarm/Swarm_reveals_growing_weak_spot_in_Earth_s_magnetic_field\n- UNSW Sydney, Earth's magnetic field broke down 42,000 years ago (on Cooper et al., Science 2021): https://www.unsw.edu.au/news/2021/02/earth-s-magnetic-field-broke-down-42-000-years-ago-and-caused-ma\n- NASA SVS, Solar Wind Strips the Martian Atmosphere (MAVEN): https://svs.gsfc.nasa.gov/4370/\n- NASA Science, Auroras on Mars (MAVEN): https://science.nasa.gov/science-research/planetary-science/11may_aurorasonmars/\n- NASA Science, Venus Facts: https://science.nasa.gov/venus/venus-facts/",
+  "tags": [
+    "earth's magnetic field",
+    "magnetosphere",
+    "magnetic pole reversal",
+    "laschamps",
+    "solar wind",
+    "geomagnetic storm",
+    "south atlantic anomaly",
+    "mars atmosphere",
+    "aurora",
+    "nasa",
+    "what if",
+    "earth science",
+    "science",
+    "cosmic what if"
+  ],
+  "sources": [
+    {
+      "title": "NASA Science, Earth's Magnetosphere: Protecting Our Planet from Harmful Space Energy",
+      "url": "https://science.nasa.gov/science-research/earth-science/earths-magnetosphere-protecting-our-planet-from-harmful-space-energy/"
+    },
+    {
+      "title": "NASA Science, Flip Flop: Why Variations in Earth's Magnetic Field Aren't Causing Today's Climate Change",
+      "url": "https://science.nasa.gov/science-research/earth-science/flip-flop-why-variations-in-earths-magnetic-field-arent-causing-todays-climate-change/"
+    },
+    {
+      "title": "ESA, Swarm probes weakening of Earth's magnetic field",
+      "url": "https://www.esa.int/Applications/Observing_the_Earth/FutureEO/Swarm/Swarm_probes_weakening_of_Earth_s_magnetic_field"
+    },
+    {
+      "title": "ESA, Swarm reveals growing weak spot in Earth's magnetic field",
+      "url": "https://www.esa.int/Applications/Observing_the_Earth/FutureEO/Swarm/Swarm_reveals_growing_weak_spot_in_Earth_s_magnetic_field"
+    },
+    {
+      "title": "UNSW Sydney, Earth's magnetic field broke down 42,000 years ago (on Cooper et al., Science 2021)",
+      "url": "https://www.unsw.edu.au/news/2021/02/earth-s-magnetic-field-broke-down-42-000-years-ago-and-caused-ma"
+    },
+    {
+      "title": "NASA SVS, Solar Wind Strips the Martian Atmosphere (MAVEN)",
+      "url": "https://svs.gsfc.nasa.gov/4370/"
+    },
+    {
+      "title": "NASA Science, Auroras on Mars (MAVEN)",
+      "url": "https://science.nasa.gov/science-research/planetary-science/11may_aurorasonmars/"
+    },
+    {
+      "title": "NASA Science, Venus Facts",
+      "url": "https://science.nasa.gov/venus/venus-facts/"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "magnet",
+        "at": "right",
+        "size": "xl",
+        "anim": "shake"
+      },
+      {
+        "icon": "globe-showing-americas",
+        "at": "top-left",
+        "size": "l"
+      }
+    ],
+    "bg": "space"
+  },
+  "scenes": [
+    {
+      "narration": "What if, tomorrow morning, Earth's magnetic field simply switched off? Would you even notice?",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "magnet",
+            "at": "bubble",
+            "size": "m"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "First, what are we losing? Deep under your feet, the outer core is a layer of molten iron and nickel about fourteen hundred miles thick. As it churns, it acts like a giant electric generator.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "globe-showing-europe-africa",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "fire",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Scientists call it the geodynamo. It wraps our planet in a magnetic bubble called the magnetosphere, squashed on the side facing the Sun and stretched into a long tail on the night side.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "magnet",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "GEODYNAMO",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "That bubble deflects the solar wind, a constant stream of charged particles from the Sun. It also helps hold back blasts from solar storms and cosmic rays from deep space. Now, let's switch it off.",
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "shield",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "sun",
+            "at": "far-right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Even today, the shield is not perfect. NASA says the solar wind opens brief cracks in it every day, letting a little energy leak through, though not enough to cause big problems. Without the field, there would be no cracks, just an open door.",
+      "anim": {
+        "action": "hidden",
+        "props": [
+          {
+            "icon": "shield",
+            "at": "center",
+            "size": "l"
+          },
+          {
+            "icon": "dashing-away",
+            "at": "right",
+            "size": "s",
+            "anim": "approach"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Second one. Nothing explodes. No buildings shake. The sky does not catch fire. Most disaster movies get this completely wrong. You would not feel a thing.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "face": "grin",
+        "text": "SECOND ONE"
+      }
+    },
+    {
+      "narration": "The first sign is quiet. Grab a compass. The needle drifts and wanders, with nothing to line up with. Every compass on Earth just became decoration.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "compass",
+            "at": "hand",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "Some animals would notice before you do. NASA points out that birds, fish, and sea turtles that use Earth's magnetic field to find their way could be affected. Migration routes they have followed for ages would suddenly have no signposts.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "bird",
+            "at": "top",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "turtle",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "fish",
+            "at": "far-right",
+            "size": "s"
+          }
+        ],
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "Day one. What about radiation? Here is the good news. Our thick atmosphere is a shield too. NASA says that even when the field weakens, the atmosphere and magnetosphere still protect the surface, with only a small extra amount reaching the ground.",
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "cloud",
+            "at": "top",
+            "size": "m"
+          },
+          {
+            "icon": "shield",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "face": "smile",
+        "text": "DAY ONE"
+      }
+    },
+    {
+      "narration": "So you would not glow, and you would not get sick walking to work. Without the field, scientists would expect somewhat more particle radiation to sneak down, but the air above you is still doing most of the heavy lifting.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "cloud",
+            "at": "top-left",
+            "size": "s"
+          },
+          {
+            "icon": "house",
+            "at": "right",
+            "size": "m"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Look up, though, and the problems begin. Satellites orbit above most of that atmosphere. Today, they already get hammered in one weak patch of the field, the South Atlantic Anomaly, between South America and Africa.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "top",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "warning",
+            "at": "right",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Inside that patch, the field is noticeably weaker. ESA reports that between 1970 and 2020, its lowest strength dropped from about twenty-four thousand nanoteslas to about twenty-two thousand. The weak spot is getting weaker.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "chart-decreasing",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "world-map",
+            "at": "top-left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "ESA's Swarm satellites have watched that weak spot grow. Spacecraft passing through it face higher doses of radiation, which can cause malfunctions. Now imagine the entire planet becoming one giant South Atlantic Anomaly.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "collision",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "shock",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "And the field is shifting in other places too. Swarm data show it has strengthened over Siberia while weakening over Canada. Since 2020, a region southwest of Africa has been weakening even faster.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "globe-showing-europe-africa",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "top",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "The Van Allen belts, two doughnut-shaped zones of particles trapped by the field, would no longer be held in place. Instead, the solar wind would slam straight into our upper atmosphere.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "cyclone",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "dashing-away",
+            "at": "far-right",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Week one. Then the Sun throws a tantrum. Today, geomagnetic storms can disrupt navigation and damage power grids, even with the shield up. With no magnetosphere at all, engineers would face those blasts with nothing in between.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "electric-plug",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "text": "WEEK ONE"
+      }
+    },
+    {
+      "narration": "GPS signals, radio, and satellite links would be at the mercy of every solar outburst. Astronauts in orbit, who normally fly inside the magnetic bubble, would lose much of their protection.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "astronaut",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "satellite-antenna",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "And the northern lights? On Earth, the field funnels particles toward the poles, which is why auroras glow in rings around the Arctic and Antarctic. Without that funnel, the particles could land almost anywhere.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "night-with-stars",
+            "at": "top",
+            "size": "l",
+            "anim": "fade-in"
+          },
+          {
+            "icon": "sparkles",
+            "at": "right",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "We have seen this on Mars. Mars has no global magnetic field. In December 2014, NASA's MAVEN spacecraft spotted aurora spread widely across its northern hemisphere, not tied to any one place. Scientists nicknamed it the Christmas lights.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "red-circle",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "grin",
+        "text": "CHRISTMAS LIGHTS",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Mars's aurora shone in ultraviolet, invisible to human eyes. But the lesson is clear: without a magnetic field, the sky can light up far from the poles.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "eyes",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "face": "think",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Year one and beyond. Now the big question: would we lose our air? This is where Mars becomes a warning. NASA's MAVEN mission found that the solar wind has stripped away most of the gas Mars ever had.",
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "red-circle",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "wind-face",
+            "at": "far-right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "face": "worry",
+        "text": "YEAR ONE"
+      }
+    },
+    {
+      "narration": "Mars had it worse in one way. The young Sun was far more violent. NASA says the early Sun blasted out much stronger ultraviolet light and solar wind, so atmospheric loss was probably much faster in Mars's distant past.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "sun-with-face",
+            "at": "top-left",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "red-circle",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "face": "shock",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Charged particles in the upper atmosphere get picked up by the solar wind and carried off into space. Others get slammed back into the air, knocking more gas loose. Over ages, a planet's sky can leak away.",
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "cloud",
+            "at": "top",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "dashing-away",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "But hold on. Venus has no magnetic field of its own either, and its atmosphere is crushing, about ninety-three times the pressure at sea level on Earth. Scientists still debate how much a magnetic field really protects an atmosphere.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "hot-face",
+            "at": "bubble",
+            "size": "m"
+          },
+          {
+            "icon": "red-question-mark",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "What most agree on is the timescale. Atmospheric escape like this is slow. Without the field, you would not run out of air in your lifetime. Losing a sky is a story told over very long stretches of geologic time.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "So no field means no instant apocalypse. But here is the twist. Earth's field is not as steady as you might think. It has nearly done this before.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "magnet",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          }
+        ],
+        "face": "shock",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "The field flips. North becomes south and south becomes north. NASA says the poles reversed one hundred eighty-three times in the last eighty-three million years. The last full flip was about seven hundred eighty thousand years ago.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "compass",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "counterclockwise-arrows-button",
+            "at": "top",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "text": "183 FLIPS"
+      }
+    },
+    {
+      "narration": "During a flip, the field does not disappear. It weakens and gets jumbled, and extra magnetic poles can pop up in strange places. The whole process takes hundreds to thousands of years.",
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "magnet",
+            "at": "left",
+            "size": "m"
+          },
+          {
+            "icon": "magnet",
+            "at": "right",
+            "size": "m"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "The closest call came roughly forty-two thousand years ago, during an event called the Laschamps excursion. The poles swapped, then swapped back roughly five hundred years later.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "hourglass-done",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "compass",
+            "at": "top-left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "At its weakest, scientists estimate the field fell to less than six percent of its strength today. That is about as close to a vanished magnetic field as humans have ever lived through.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "chart-decreasing",
+            "at": "right",
+            "size": "l",
+            "anim": "shrink"
+          }
+        ],
+        "face": "shock",
+        "text": "UNDER 6%"
+      }
+    },
+    {
+      "narration": "Did it matter? In 2021, a team studying ancient kauri trees in New Zealand argued that it did. They linked the event to ozone loss, stronger ultraviolet light, shifting weather, and auroras that may have lit up the night.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "seedling",
+            "at": "right",
+            "size": "m",
+            "anim": "grow"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "They even suggested that people may have sheltered in caves. But other scientists are skeptical. NASA notes that ice cores from Antarctica and Greenland show no major changes from that time. The debate is not settled.",
+      "anim": {
+        "action": "hidden",
+        "props": [
+          {
+            "icon": "rock",
+            "at": "center",
+            "size": "l"
+          },
+          {
+            "icon": "ice",
+            "at": "right",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "So, could it happen again? Over the past two hundred years, the field has weakened by about nine percent on average. That sounds alarming, until you hear the rest.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "chart-decreasing",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "face": "worry",
+        "text": "MINUS 9%"
+      }
+    },
+    {
+      "narration": "NASA says today's field is about as strong as it has been in the past hundred thousand years, and about twice its million-year average. Scientists see no sign that a flip is about to happen.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "magnet",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "chart-increasing",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "For the field to vanish for good, the core itself would have to stop churning, and Earth's core is still blazing hot. Mars, smaller and cooler, shows what that future looks like: scientists think its global shield faded long ago.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m"
+          },
+          {
+            "icon": "red-circle",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "So, what if Earth's magnetic field disappeared? Your compass would spin, birds would get lost, satellites would struggle, and the sky would slowly leak. But you, standing under your blanket of air, would be fine.",
+      "anim": {
+        "action": "wave",
+        "props": [
+          {
+            "icon": "shield",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "compass",
+            "at": "top-left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

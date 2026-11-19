@@ -1,0 +1,655 @@
+{
+  "channel": "cosmic-what-if",
+  "number": 4,
+  "slug": "sun-suddenly-vanished",
+  "target_minutes": 6.6,
+  "style": "anim",
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "sun",
+        "at": "right",
+        "size": "xl",
+        "anim": "shrink"
+      }
+    ]
+  },
+  "title": "What If the Sun Suddenly Vanished? Minute by Minute",
+  "thumbnail_text": "THE SUN IS GONE",
+  "description": "If the Sun vanished right now, you wouldn't know for eight minutes, and neither would Earth's orbit, because gravity travels at the speed of light. We follow what happens next, minute by minute and then million year by million year: a black sky, a planet flung into interstellar space, vanishing winds, weaker tides, frozen oceans and falling air. Then we bust the suffocation myth, dive to the deep-sea vents and underground microbes where life could hang on, visit Iceland's volcanic heat, and meet the rogue planets and icy moons that already live this way.\n\nSources:\n- NASA Science - Sun Facts: https://science.nasa.gov/sun/facts/\n- NASA - Earth Fact Sheet: https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html\n- LIGO Caltech - GW170817 press release: https://www.ligo.caltech.edu/page/press-release-gw170817\n- Caltech - If the Sun ceased to exist, how long would mankind survive?: https://experts.caltech.edu/news/caltech-question-month-if-sun-ceased-exist-right-now-how-long-would-mankind-survive-would\n- Popular Science - If the Sun Went Out, How Long Could Life on Earth Survive?: https://www.popsci.com/science/article/2013-07/if-sun-went-out-how-long-could-life-earth-survive/\n- NOAA - Tides and Water Levels: What Causes Tides?: https://oceanservice.noaa.gov/education/tutorial_tides/tides02_cause.html\n- UCAR Center for Science Education - Wind: https://scied.ucar.edu/learning-zone/how-weather-works/wind\n- NOAA - How much oxygen comes from the ocean?: https://oceanservice.noaa.gov/facts/ocean-oxygen.html\n- Woods Hole Oceanographic Institution - Hydrothermal Vents: https://www.whoi.edu/know-your-ocean/ocean-topics/how-the-ocean-works/seafloor-below/hydrothermal-vents/\n- KamLAND Collaboration, Nature Geoscience (2011) - Partial radiogenic heat model for Earth revealed by geoneutrino measurements: https://www.nature.com/articles/ngeo1205\n- NASA Science - What Is an Exoplanet?: https://science.nasa.gov/exoplanets/what-is-an-exoplanet/\n- NASA Science - Europa: https://science.nasa.gov/jupiter/moons/europa/",
+  "tags": [
+    "sun",
+    "what if",
+    "sun disappeared",
+    "space",
+    "astronomy",
+    "gravity",
+    "speed of light",
+    "gravitational waves",
+    "frozen earth",
+    "science",
+    "rogue planet",
+    "hydrothermal vents",
+    "tides",
+    "europa",
+    "what if the sun disappeared",
+    "solar system"
+  ],
+  "sources": [
+    {
+      "title": "NASA Science - Sun Facts",
+      "url": "https://science.nasa.gov/sun/facts/"
+    },
+    {
+      "title": "NASA - Earth Fact Sheet",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+    },
+    {
+      "title": "LIGO Caltech - GW170817 press release",
+      "url": "https://www.ligo.caltech.edu/page/press-release-gw170817"
+    },
+    {
+      "title": "Caltech - If the Sun ceased to exist, how long would mankind survive?",
+      "url": "https://experts.caltech.edu/news/caltech-question-month-if-sun-ceased-exist-right-now-how-long-would-mankind-survive-would"
+    },
+    {
+      "title": "Popular Science - If the Sun Went Out, How Long Could Life on Earth Survive?",
+      "url": "https://www.popsci.com/science/article/2013-07/if-sun-went-out-how-long-could-life-earth-survive/"
+    },
+    {
+      "title": "NOAA - Tides and Water Levels: What Causes Tides?",
+      "url": "https://oceanservice.noaa.gov/education/tutorial_tides/tides02_cause.html"
+    },
+    {
+      "title": "UCAR Center for Science Education - Wind",
+      "url": "https://scied.ucar.edu/learning-zone/how-weather-works/wind"
+    },
+    {
+      "title": "NOAA - How much oxygen comes from the ocean?",
+      "url": "https://oceanservice.noaa.gov/facts/ocean-oxygen.html"
+    },
+    {
+      "title": "Woods Hole Oceanographic Institution - Hydrothermal Vents",
+      "url": "https://www.whoi.edu/know-your-ocean/ocean-topics/how-the-ocean-works/seafloor-below/hydrothermal-vents/"
+    },
+    {
+      "title": "KamLAND Collaboration, Nature Geoscience (2011) - Partial radiogenic heat model for Earth revealed by geoneutrino measurements",
+      "url": "https://www.nature.com/articles/ngeo1205"
+    },
+    {
+      "title": "NASA Science - What Is an Exoplanet?",
+      "url": "https://science.nasa.gov/exoplanets/what-is-an-exoplanet/"
+    },
+    {
+      "title": "NASA Science - Europa",
+      "url": "https://science.nasa.gov/jupiter/moons/europa/"
+    }
+  ],
+  "scenes": [
+    {
+      "narration": "Right now, the Sun disappears. No explosion, no warning. Strangely, for the next eight minutes, you would have no idea.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l",
+            "anim": "shrink"
+          }
+        ],
+        "text": "SUN GONE",
+        "face": "shock",
+        "camera": "zoom-in",
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "That's because sunlight takes about eight minutes and twenty seconds to cross the ninety three million miles to Earth. The light warming your face right now left the Sun more than eight minutes ago. For a little while, you'd be basking in the glow of a star that's gone.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "stopwatch",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "8 MIN 20 SEC",
+        "face": "smile",
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "Here's the part that surprises people. Earth would keep circling that empty spot for the same eight minutes. Einstein's general theory of relativity says changes in gravity are not instant. They ripple outward as gravitational waves, moving at the speed of light.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "s",
+            "anim": "fade-in"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "In 2017, nature ran the test for us. Two neutron stars collided about one hundred thirty million light years away. Their gravitational waves and their flash of light raced across space and arrived within about two seconds of each other.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "collision",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "telescope",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "GRAVITY = LIGHT SPEED"
+      }
+    },
+    {
+      "narration": "Then, at eight minutes and twenty seconds, the sky goes black. The daytime side of Earth plunges into night. The Moon vanishes too, since moonlight is just reflected sunlight. Only the distant stars remain.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "star",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "worry",
+        "camera": "zoom-out",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "On the night side, millions of people would be asleep. They'd wake to their alarms, look outside, and find no sunrise, ever. Bright planets like Venus and Jupiter would go dark as well, because they only shine with borrowed sunlight.",
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "ringed-planet",
+            "at": "top-left",
+            "size": "s",
+            "anim": "fade-in"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "At the same moment, Earth is set free. Our planet has been racing around the Sun at about sixty seven thousand miles per hour. With nothing pulling it inward, it flies off in a straight line toward interstellar space.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "dashing-away",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "67,000 MPH",
+        "camera": "zoom-out"
+      }
+    },
+    {
+      "narration": "And it's not just us. The Sun holds about ninety nine point eight percent of all the mass in our solar system. Without it, every planet, asteroid and comet scatters along its own straight path. The solar system simply comes apart.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "comet",
+            "at": "top-left",
+            "size": "s",
+            "anim": "fade-in"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "One partnership survives. The Moon circles Earth, so our planet's gravity keeps it close. Earth leaves as a pair: a dark world and its dark moon, drifting off together like two travelers who lost the only lamp in the house.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "You'd even notice the change at the beach. Part of every tide comes from the Sun, and according to NOAA, its tide-raising pull is about half as strong as the Moon's. Without it, tides get weaker, and the extra-high spring tides disappear.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "water-wave",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "full-moon",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "WEAKER TIDES",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Next, the weather winds down. Wind exists because the Sun heats some places more than others. Warm air rises, and cooler air rushes in to fill the gap. With no sunlight, that engine shuts off, and the winds slowly fade.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "wind-face",
+            "at": "bubble",
+            "size": "m"
+          },
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "s",
+            "anim": "shrink"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Now the cold. Earth doesn't freeze instantly. Like a hot cup of coffee in a fridge, land, air, and especially oceans hold on to heat for a while. But within about a week, the average surface temperature would drop below zero degrees Fahrenheit.",
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "snowflake",
+            "at": "right",
+            "size": "l",
+            "anim": "fall"
+          },
+          {
+            "icon": "thermometer",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "BELOW 0°F",
+        "face": "worry",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Photosynthesis stops the instant the light does. Most plants would die within a few weeks. Some big trees, with slow metabolisms and stored sugars, might hang on for decades. But the food chain that feeds you would collapse long before that.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "wilted-flower",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "deciduous-tree",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "With plants gone, the plant eaters starve first, then the animals that hunt them. Scavengers might do well for a while, feeding on everything that died. But eventually the cold catches up with them too.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "cow",
+            "at": "right",
+            "size": "m",
+            "anim": "fade-in"
+          },
+          {
+            "icon": "bone",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Here's a common myth: with no plants making oxygen, we'd quickly suffocate. Not so fast. The oxygen in our air has built up over hundreds of millions of years, so there's a huge reserve. The cold and hunger would be the real problems.",
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "wind-face",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "seedling",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "MYTH BUSTED",
+        "face": "smile",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "After about a year, the surface would sit around minus one hundred degrees Fahrenheit. Lakes and rivers lock up. The top of the oceans freezes over. From space, Earth would look like a dark snowball, lit only by starlight.",
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "cold-face",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "ice",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "And yet, the deep ocean would not freeze solid. That surface ice acts like a lid, insulating the water below. Caltech planetary scientist David Stevenson estimates the oceans would stay liquid underneath for hundreds of thousands of years.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "ice",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "water-wave",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Life could hang on down there. In 1977, scientists exploring the Pacific seafloor near the Galapagos Islands found hydrothermal vents: hot springs on the ocean floor, crowded with microbes, tubeworms and shrimp. Their food chain starts with chemistry, not sunlight.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "hot-springs",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "microbe",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "face": "grin",
+        "camera": "zoom-in",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Those vents are powered by Earth's inner heat, and that heat is surprisingly long-lasting. Measurements of ghostly particles called geoneutrinos suggest about half of the heat flowing out of Earth comes from radioactive elements, slowly decaying deep inside.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "radioactive",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "volcano",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Microbes living deep inside Earth's crust would carry on as well. They never needed sunlight in the first place. For them, the end of the Sun might hardly matter. Life on Earth would go quiet, but it wouldn't go out.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "rock",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "grin",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Could people survive? A few, possibly. One idea is living in submarines in the deepest, warmest parts of the ocean. A better option might be sealed habitats powered by nuclear energy or by the heat of volcanoes.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "ship",
+            "at": "bubble",
+            "size": "m"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "One good place to camp out would be Iceland. The island already heats about eighty seven percent of its homes with geothermal energy. University of Rochester astronomer Eric Blackman says people could keep using that volcanic heat for hundreds of years.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "volcano",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "hut",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "GEOTHERMAL HOMES",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Outside, the planet keeps cooling. Over millions of years, the surface sinks toward about minus four hundred degrees Fahrenheit, where Earth's inner heat balances what it loses to space. Long before that, the air itself freezes and falls as frost.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "snowflake",
+            "at": "right",
+            "size": "l",
+            "anim": "fall"
+          },
+          {
+            "icon": "thermometer",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "shock",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Here's the twist: Earth wouldn't be alone out there. NASA says some planets are sunless rogues, wandering through the galaxy in permanent darkness. Our frozen world would simply join them, one more dark planet drifting between the stars.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "milky-way",
+            "at": "top-left",
+            "size": "s",
+            "anim": "fade-in"
+          }
+        ],
+        "text": "ROGUE PLANET",
+        "camera": "zoom-out"
+      }
+    },
+    {
+      "narration": "And an icy world with a hidden ocean isn't science fiction. Jupiter's moon Europa is thought to have a saltwater ocean beneath its ice. NASA launched Europa Clipper in 2024 to find out whether that ocean could support life.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "ice",
+            "at": "top-left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "The good news: the Sun can't actually vanish. Mass doesn't just disappear. Our star is about four and a half billion years old, with about five billion years to go. When it finally changes, it will swell into a red giant, not blink out.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l",
+            "anim": "grow"
+          }
+        ],
+        "face": "grin",
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "And one last surprise. Energy made in the Sun's core takes about one hundred seventy thousand years to work its way outward. So the sunlight on your face is eight minutes old, but its journey began long before the first cities.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "text": "170,000 YEARS",
+        "face": "smile",
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

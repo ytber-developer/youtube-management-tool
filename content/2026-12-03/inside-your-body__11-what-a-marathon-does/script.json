@@ -1,0 +1,863 @@
+{
+  "channel": "inside-your-body",
+  "number": 11,
+  "slug": "what-a-marathon-does",
+  "target_minutes": 7.67,
+  "style": "anim",
+  "title": "What Running 26.2 Miles Does to Your Body, Mile by Mile",
+  "thumbnail_text": "26.2 MILES INSIDE YOU",
+  "description": "A marathon pushes your fuel tanks, your fluid balance, your kidneys and your heart further than almost anything else people do for fun. Follow a runner from the start line to the finish and see what the science says is happening inside, including why the wall hits around mile twenty.\n\nSources:\n- Nutrition Reviews (2018), Fundamentals of glycogen metabolism for coaches and athletes: https://pmc.ncbi.nlm.nih.gov/articles/PMC6019055/\n- Frontiers in Medicine (2017), Exercise-Associated Hyponatremia: 2017 Update: https://pmc.ncbi.nlm.nih.gov/articles/PMC5334560\n- Yale News (2017), Marathon running may cause short-term kidney injury: https://news.yale.edu/2017/03/28/marathon-running-may-cause-short-term-kidney-injury\n- The Hospitalist, Marathon runners are at low risk of cardiac arrest (RACER study, NEJM 2012): https://blogs.the-hospitalist.org/content/marathon-runners-are-low-risk-cardiac-arrest\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": [
+    "marathon",
+    "running",
+    "what a marathon does to your body",
+    "hitting the wall",
+    "glycogen",
+    "endurance exercise",
+    "hyponatremia",
+    "exercise physiology",
+    "kidneys",
+    "heart",
+    "human body",
+    "science explained",
+    "inside your body"
+  ],
+  "sources": [
+    {
+      "title": "Nutrition Reviews (2018) - Fundamentals of glycogen metabolism for coaches and athletes",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6019055/"
+    },
+    {
+      "title": "Frontiers in Medicine (2017) - Exercise-Associated Hyponatremia: 2017 Update",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5334560"
+    },
+    {
+      "title": "Yale News (2017) - Marathon running may cause short-term kidney injury",
+      "url": "https://news.yale.edu/2017/03/28/marathon-running-may-cause-short-term-kidney-injury"
+    },
+    {
+      "title": "The Hospitalist - Marathon runners are at low risk of cardiac arrest (RACER study, NEJM 2012)",
+      "url": "https://blogs.the-hospitalist.org/content/marathon-runners-are-low-risk-cardiac-arrest"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "tired",
+    "props": [
+      {
+        "icon": "brick",
+        "at": "right",
+        "size": "xl"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "Twenty six point two miles. Somewhere around mile twenty, many runners feel like they have hit a wall. Here is what is happening inside them.",
+      "headline": "WHY RUNNERS HIT <em>THE WALL</em>",
+      "sub": "",
+      "visual": {
+        "type": "stock",
+        "query": "tired marathon runner late in race",
+        "note": "a determined runner pushing through fatigue late in a race",
+        "icons": [
+          "person-running",
+          "low-battery",
+          "brick",
+          "hot-face"
+        ]
+      },
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "brick",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "face": "worry",
+        "text": "THE WALL",
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Every year, huge numbers of people take on this distance. In the United States alone, more than half a million people ran a marathon in two thousand fifteen. Most are not elite athletes. They are teachers, nurses and accountants who spent months training for one long morning.",
+      "headline": "HALF A MILLION <em>RUNNERS</em>",
+      "sub": "In one year, in the US",
+      "visual": {
+        "type": "stock",
+        "query": "marathon runners city street crowd",
+        "note": "a crowd of marathon runners filling a city street",
+        "icons": [
+          "person-running",
+          "woman-running",
+          "cityscape",
+          "chequered-flag"
+        ]
+      },
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "running-shirt",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "sports-medal",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "A marathon is a fascinating experiment because it pushes several of your body's systems toward their limits at once: your fuel supply, your water balance, your kidneys and your heart. So follow one runner, mile by mile, and watch each system respond.",
+      "headline": "ONE RACE, FOUR <em>SYSTEMS</em>",
+      "sub": "Fuel, water, kidneys, heart",
+      "visual": {
+        "type": "diagram",
+        "spec": "a marathon course line from start to finish with four icons along it: fuel tank, water drop, kidney, heart"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "droplet",
+            "at": "left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "The starting gun fires. Within seconds, your heart speeds up and your breathing deepens, sending more oxygen to your leg muscles. Those muscles need fuel to keep contracting, step after step, and they have two main tanks to draw from: carbohydrate and fat.",
+      "headline": "MILE ZERO: <em>TWO</em> FUEL TANKS",
+      "sub": "Carbohydrate and fat",
+      "visual": {
+        "type": "stock",
+        "query": "marathon start line runners",
+        "note": "runners surging forward at a marathon start line"
+      },
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "lungs",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "text": "START!",
+        "bg": "park",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "Your carbohydrate tank is called glycogen, chains of glucose packed into your muscles and liver. Your whole body holds roughly six hundred grams of it. About five hundred grams sit in your muscles, and about eighty grams in your liver, which uses its supply to keep your blood sugar steady.",
+      "headline": "THE <em>GLYCOGEN</em> TANK",
+      "sub": "About 600 grams in total",
+      "visual": {
+        "type": "diagram",
+        "spec": "human outline with glycogen stores highlighted: large amount in leg and arm muscles, smaller amount in the liver, with gram labels"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "bread",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "battery",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "600 GRAMS",
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Your fat tank is far bigger, even in very lean runners. But fat has a drawback. Your body breaks it down more slowly. At the faster, harder paces of a race, your muscles lean more heavily on glucose and glycogen, because carbohydrate can be turned into energy quickly.",
+      "headline": "FAT IS BIG BUT <em>SLOW</em>",
+      "sub": "Hard paces burn carbohydrate",
+      "visual": {
+        "type": "science",
+        "query": "adipose tissue fat cells micrograph",
+        "note": "microscope image of fat cells"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "butter",
+            "at": "bubble",
+            "size": "m"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Push the distance far enough, and that balance flips. In ultra-endurance events, which can last many hours or even days, the pace drops low enough that burning fat normally predominates. A marathon sits in a tricky middle zone: long enough to drain glycogen, fast enough to depend on it.",
+      "headline": "THE <em>MARATHON</em> MIDDLE ZONE",
+      "sub": "Too long for glycogen alone",
+      "visual": {
+        "type": "diagram",
+        "spec": "a horizontal scale from sprint to marathon to ultramarathon, showing fuel use shifting from mostly carbohydrate to mostly fat"
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "turtle",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Here is a surprising fact about that glycogen. Every gram of it is stored with at least three grams of water. So your fuel tank is also a water tank. As you burn through glycogen, that water is released.",
+      "headline": "YOUR FUEL IS <em>WET</em>",
+      "sub": "Three grams of water per gram",
+      "visual": {
+        "type": "diagram",
+        "spec": "one glycogen granule surrounded by three water droplets, labeled 1 gram glycogen and at least 3 grams water"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "battery",
+            "at": "left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "By mile ten, things feel good. Your muscles are warm, your stride is smooth, and your body is burning a mix of carbohydrate and fat. But that steady pace is quietly draining your muscle glycogen, and remember, the tank has a bottom.",
+      "headline": "MILE TEN: <em>CRUISING</em>",
+      "sub": "And quietly draining the tank",
+      "visual": {
+        "type": "stock",
+        "query": "runners smiling during race",
+        "note": "runners looking relaxed and steady mid-race"
+      },
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "low-battery",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Meanwhile, you are heating up. Working muscles generate heat, and to dump it, your body sweats. Sweat cools you as it evaporates, but it costs water and some salt. So most runners grab cups at aid stations along the way.",
+      "headline": "THE <em>HEAT</em> BUILDS",
+      "sub": "Sweat cools, but costs water",
+      "visual": {
+        "type": "stock",
+        "query": "marathon water station cups volunteers",
+        "note": "volunteers handing out cups at a race water station",
+        "icons": [
+          "potable-water",
+          "hot-face",
+          "sun",
+          "person-running"
+        ]
+      },
+      "anim": {
+        "action": "drink",
+        "props": [
+          {
+            "icon": "cup-with-straw",
+            "at": "hand",
+            "size": "m"
+          },
+          {
+            "icon": "sweat-droplets",
+            "at": "right",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Now here is something many people get backward. You might think the main fluid danger in a marathon is not drinking enough. But researchers have found that one well-documented risk comes from drinking too much.",
+      "headline": "THE <em>OPPOSITE</em> DANGER",
+      "sub": "",
+      "visual": {
+        "type": "stock",
+        "query": "runner drinking water bottle race",
+        "note": "a runner drinking from a bottle",
+        "icons": [
+          "droplet",
+          "potable-water",
+          "warning",
+          "brain"
+        ]
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "cup-with-straw",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "text": "TOO MUCH WATER"
+      }
+    },
+    {
+      "narration": "It is called exercise-associated hyponatremia, which means the sodium in your blood becomes too diluted. Sodium is a key salt your cells depend on. When blood sodium falls too low, it can become a serious medical emergency.",
+      "headline": "WHEN BLOOD GETS <em>DILUTED</em>",
+      "sub": "Exercise-associated hyponatremia",
+      "visual": {
+        "type": "diagram",
+        "spec": "two beakers of blood: left with normal sodium particles, right with the same particles spread through much more water, labeled diluted"
+      },
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "salt",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "droplet",
+            "at": "left",
+            "size": "s",
+            "anim": "fall"
+          }
+        ],
+        "face": "worry",
+        "text": "HYPONATREMIA"
+      }
+    },
+    {
+      "narration": "A major review describes the main cause as drinking beyond thirst, combined with a hormone called vasopressin. Normally, vasopressin tells your kidneys to hold on to water. During the stress of long exercise, it can stay switched on, so extra water gets retained instead of passed.",
+      "headline": "DRINKING BEYOND <em>THIRST</em>",
+      "sub": "Plus a water-saving hormone",
+      "visual": {
+        "type": "science",
+        "query": "pituitary gland location brain illustration",
+        "note": "the pituitary gland at the base of the brain, which releases vasopressin"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "stop-sign",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Exercise is not the only thing that keeps vasopressin switched on. Heat, nausea and low blood sugar can push it up too, and those tend to pile up late in a long, hot race. And this is not just a runner's problem. Screening studies have found low sodium in triathletes, cyclists, rowers and even rugby players.",
+      "headline": "NOT JUST <em>RUNNERS</em>",
+      "sub": "Heat, nausea and low blood sugar",
+      "visual": {
+        "type": "stock",
+        "query": "triathlon cyclists race road",
+        "note": "cyclists racing during a triathlon",
+        "icons": [
+          "person-biking",
+          "person-swimming",
+          "person-running",
+          "trophy"
+        ]
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "bicycle",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "rugby-football",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Screening studies have found low blood sodium without symptoms in anywhere from about five percent to seventy percent of athletes, depending on the event and when they were tested. That is one reason sports medicine experts now emphasize drinking according to thirst rather than forcing down fixed amounts.",
+      "headline": "LET <em>THIRST</em> GUIDE",
+      "sub": "What sports medicine experts emphasize",
+      "visual": {
+        "type": "stock",
+        "query": "sports medicine tent race finish",
+        "note": "a medical tent near a race finish area",
+        "icons": [
+          "potable-water",
+          "thinking-face",
+          "stethoscope",
+          "droplet"
+        ]
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "bar-chart",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "cup-with-straw",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "DRINK TO THIRST"
+      }
+    },
+    {
+      "narration": "Around mile eighteen, your fuel gauge is dropping fast. And over the next few miles, many runners experience the most famous moment in endurance sport. Their legs turn heavy, their pace collapses, and every step feels like wading through sand.",
+      "headline": "MILE EIGHTEEN: <em>RUNNING LOW</em>",
+      "sub": "",
+      "visual": {
+        "type": "stock",
+        "query": "exhausted runner walking during marathon",
+        "note": "a runner slowing to a walk, looking exhausted",
+        "icons": [
+          "person-walking",
+          "low-battery",
+          "fuel-pump",
+          "hot-face"
+        ]
+      },
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "brick",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "face": "worry",
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Runners call it hitting the wall. Scientists describe the core of it more plainly. The depletion of muscle glycogen causes fatigue. When glycogen runs low, your muscles cannot produce energy fast enough to sustain the same pace.",
+      "headline": "HITTING <em>THE WALL</em>",
+      "sub": "Muscle glycogen runs low",
+      "visual": {
+        "type": "diagram",
+        "spec": "a fuel gauge for muscle glycogen dropping from full at the start line to nearly empty around mile 20"
+      },
+      "anim": {
+        "action": "fall-toward",
+        "props": [
+          {
+            "icon": "brick",
+            "at": "right",
+            "size": "xl",
+            "anim": "approach"
+          }
+        ],
+        "text": "HITTING THE WALL",
+        "bg": "park",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "There is even a mechanism at the cellular level. When glycogen inside a muscle fiber falls very low, the fiber has trouble releasing the calcium it needs to contract, and its power output drops. Your muscle is not refusing to work. It is running short of the means to work hard.",
+      "headline": "A <em>CALCIUM</em> SHORTAGE",
+      "sub": "Inside each muscle fiber",
+      "visual": {
+        "type": "science",
+        "query": "skeletal muscle fiber micrograph",
+        "note": "microscope image of striated muscle fibers"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "microscope",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "left",
+            "size": "s",
+            "anim": "shrink"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "This is also where training shows. Months of endurance training shift your muscles toward burning more fat, which spares precious glycogen for later. That is part of why well-trained runners can hold their pace deeper into the race.",
+      "headline": "TRAINING <em>SPARES</em> FUEL",
+      "sub": "Trained muscles burn more fat",
+      "visual": {
+        "type": "stock",
+        "query": "runner training early morning road",
+        "note": "a runner training alone on a quiet road at dawn",
+        "icons": [
+          "person-running",
+          "sunrise",
+          "battery",
+          "calendar"
+        ]
+      },
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "flexed-biceps",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "butter",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Somehow you push through, and you cross the finish line. The race is over, but inside your body, some of the most interesting changes are only now showing up. Two organs in particular have been working overtime: your kidneys and your heart.",
+      "headline": "THE <em>FINISH</em> LINE",
+      "sub": "",
+      "visual": {
+        "type": "stock",
+        "query": "marathon finish line celebration",
+        "note": "a runner crossing the finish line with arms raised",
+        "icons": [
+          "chequered-flag",
+          "party-popper",
+          "person-running",
+          "sports-medal"
+        ]
+      },
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "chequered-flag",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "In a Yale-led study, researchers took blood and urine samples from runners before and after the Hartford Marathon. Soon after the race, eighty two percent of the runners showed signs of stage one acute kidney injury, the mildest category.",
+      "headline": "KIDNEYS UNDER <em>STRESS</em>",
+      "sub": "82% showed mild stress",
+      "visual": {
+        "type": "science",
+        "query": "kidney anatomy cross section illustration",
+        "note": "cross-section illustration of a kidney"
+      },
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "test-tube",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "82% KIDNEY STRESS",
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "That sounds alarming, but the changes resolved within about two days. Researchers suspect a mix of causes: a sustained rise in body temperature, dehydration, and reduced blood flow to the kidneys. The long-term effects are not yet clear.",
+      "headline": "GONE IN ABOUT <em>TWO DAYS</em>",
+      "sub": "Long-term effects still unclear",
+      "visual": {
+        "type": "diagram",
+        "spec": "timeline: kidney stress marker rising at the finish line and returning to baseline about two days later"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "thermometer",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "droplet",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "The study was small, and the lead researcher said it needs to be investigated further. He also noted that research has shown changes in heart function linked to marathon running. Which brings up the question many people quietly wonder about.",
+      "headline": "WHAT ABOUT THE <em>HEART?</em>",
+      "sub": "",
+      "visual": {
+        "type": "stock",
+        "query": "runner checking heart rate monitor watch",
+        "note": "a runner glancing at a heart rate watch",
+        "icons": [
+          "watch",
+          "beating-heart",
+          "person-running",
+          "chart-increasing"
+        ]
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "bubble",
+            "size": "m"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Is running a marathon dangerous for your heart? Researchers studied about ten point nine million participants in American marathons and half marathons over a decade. They found about one cardiac arrest for every one hundred eighty four thousand participants.",
+      "headline": "ONE IN <em>184,000</em>",
+      "sub": "Cardiac arrest in long races",
+      "visual": {
+        "type": "science",
+        "query": "human heart illustration anatomical",
+        "note": "an anatomical illustration of the heart"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "face": "worry",
+        "text": "1 IN 184,000"
+      }
+    },
+    {
+      "narration": "So the overall risk is low. But it is not zero, and it was higher in full marathons than half marathons, and in men than in women. When a cause could be found, the most common was a thickening of the heart muscle called hypertrophic cardiomyopathy.",
+      "headline": "LOW, BUT NOT <em>ZERO</em>",
+      "sub": "Most often hypertrophic cardiomyopathy",
+      "visual": {
+        "type": "stock",
+        "query": "doctor reviewing heart test results",
+        "note": "a doctor reviewing heart test results with a patient",
+        "icons": [
+          "stethoscope",
+          "anatomical-heart",
+          "clipboard",
+          "check-mark-button"
+        ]
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "bar-chart",
+            "at": "left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "That is why medical teams line marathon courses, and why anyone thinking about training for one is encouraged to talk with a doctor first. Building up gradually, over months, gives every one of these systems time to adapt.",
+      "headline": "TALK TO A <em>DOCTOR</em> FIRST",
+      "sub": "And build up gradually",
+      "visual": {
+        "type": "stock",
+        "query": "patient talking with doctor clinic",
+        "note": "a person talking with a doctor in a clinic",
+        "icons": [
+          "health-worker",
+          "speech-balloon",
+          "anatomical-heart",
+          "clipboard"
+        ]
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "stethoscope",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "ambulance",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "In the hours after the race, your body starts refilling its tanks. Muscles rebuild their glycogen. And because each gram of glycogen pulls water back in with it, part of the weight you lost during the race returns as that fuel is restored.",
+      "headline": "REFILLING THE <em>TANKS</em>",
+      "sub": "Glycogen and water return",
+      "visual": {
+        "type": "stock",
+        "query": "runners resting after race with medals",
+        "note": "runners resting and recovering with finisher medals",
+        "icons": [
+          "sports-medal",
+          "spaghetti",
+          "battery",
+          "bed"
+        ]
+      },
+      "anim": {
+        "action": "eat",
+        "props": [
+          {
+            "icon": "spaghetti",
+            "at": "hand",
+            "size": "m"
+          },
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "So what does a marathon really do to your body? It drains a fuel tank you carry in your muscles. It tests how well you balance water and salt. It briefly stresses your kidneys. And it asks your heart to work hard for hours.",
+      "headline": "WHAT 26.2 MILES <em>REALLY</em> DOES",
+      "sub": "",
+      "visual": {
+        "type": "diagram",
+        "spec": "summary graphic of a runner with four labeled callouts: glycogen drained, water and salt balance, kidneys stressed briefly, heart working for hours"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "battery",
+            "at": "right",
+            "size": "m",
+            "anim": "grow"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "FOUR SYSTEMS"
+      }
+    },
+    {
+      "narration": "And yet, after months of preparation, ordinary bodies cover the distance by the hundreds of thousands. Few things show so clearly that your body is not fixed. Give it time and a steady challenge, and it rebuilds itself to meet it.",
+      "headline": "BODIES THAT <em>ADAPT</em>",
+      "sub": "",
+      "visual": {
+        "type": "stock",
+        "query": "diverse group of runners finishing race",
+        "note": "a diverse group of runners of all ages finishing together",
+        "icons": [
+          "person-running",
+          "woman-running",
+          "flexed-biceps",
+          "sparkles"
+        ]
+      },
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "sports-medal",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          }
+        ],
+        "face": "grin",
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "headline": "",
+      "sub": "",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,752 @@
+{
+  "channel": "inside-your-body",
+  "number": 32,
+  "slug": "how-a-paper-cut-heals",
+  "style": "anim",
+  "target_minutes": 7.7,
+  "title": "Why Paper Cuts Hurt So Much, and How Your Skin Heals Them",
+  "thumbnail_text": "WHY PAPER CUTS HURT",
+  "description": "A paper cut is barely visible, so why does it sting so much? Put a stopwatch on your skin's repair job and watch all four stages: the platelet plug in minutes, the cleanup crew within hours, the skin cells that crawl across the gap over the next few days, and the remodeling that continues for weeks. Plus how dermatologists suggest caring for a small cut, the signs of infection, and when a cut needs a doctor.\n\nSources:\n- The Ohio State University Wexner Medical Center, Why do paper cuts hurt so much?: https://health.osu.edu/health/general-health/why-do-papercuts-hurt\n- Cleveland Clinic, Skin: Layers, Structure and Function: https://my.clevelandclinic.org/health/body/10978-skin\n- Cleveland Clinic, Epidermis: https://my.clevelandclinic.org/health/body/21901-epidermis\n- Current Dermatology Reports (2018), Immunology of Wound Healing: https://pmc.ncbi.nlm.nih.gov/articles/PMC6244748/\n- American Academy of Dermatology, How to treat minor cuts: https://www.aad.org/public/everyday-care/injured-skin/burns/treat-minor-cuts\n- LibreTexts Medicine (James Madison University), Epidermal Wound Healing: https://med.libretexts.org/Courses/James_Madison_University/A_and_P_for_STEM_Educators/04%3A_Integumentary_System/4.05%3A_Wound_Healing/4.5B%3A_Epidermal_Wound_Healing\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": [
+    "paper cut",
+    "why do paper cuts hurt",
+    "wound healing",
+    "how skin heals",
+    "skin layers",
+    "platelets",
+    "white blood cells",
+    "scar",
+    "first aid for cuts",
+    "dermatology",
+    "human body",
+    "science explained",
+    "inside your body"
+  ],
+  "sources": [
+    {
+      "title": "The Ohio State University Wexner Medical Center - Why do paper cuts hurt so much?",
+      "url": "https://health.osu.edu/health/general-health/why-do-papercuts-hurt"
+    },
+    {
+      "title": "Cleveland Clinic - Skin: Layers, Structure and Function",
+      "url": "https://my.clevelandclinic.org/health/body/10978-skin"
+    },
+    {
+      "title": "Cleveland Clinic - Epidermis",
+      "url": "https://my.clevelandclinic.org/health/body/21901-epidermis"
+    },
+    {
+      "title": "Current Dermatology Reports (2018) - Immunology of Wound Healing",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6244748/"
+    },
+    {
+      "title": "American Academy of Dermatology - How to treat minor cuts",
+      "url": "https://www.aad.org/public/everyday-care/injured-skin/burns/treat-minor-cuts"
+    },
+    {
+      "title": "LibreTexts Medicine (James Madison University) - Epidermal Wound Healing",
+      "url": "https://med.libretexts.org/Courses/James_Madison_University/A_and_P_for_STEM_Educators/04%3A_Integumentary_System/4.05%3A_Wound_Healing/4.5B%3A_Epidermal_Wound_Healing"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "page-facing-up",
+        "at": "right",
+        "size": "l",
+        "anim": "shake"
+      },
+      {
+        "icon": "adhesive-bandage",
+        "at": "top-left",
+        "size": "m"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "You grab a sheet of paper and, ouch. A cut you can barely see. Why does it hurt so much, and how does it heal?",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "page-facing-up",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "room",
+        "face": "shock",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "Let's put a stopwatch on it. From the first second to the last few weeks, your skin runs one of the most carefully organized repair jobs in your whole body. And the first crew starts work almost immediately.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "First, what did the paper actually cut? Your skin has three layers. On top is the epidermis, your thin, tough outer shield. Below that is the dermis. And underneath sits a cushioning layer of fat, the hypodermis.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "shield",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "text": "THREE LAYERS"
+      }
+    },
+    {
+      "narration": "The epidermis is constantly renewing itself. New cells form at its base and slowly rise to the surface, where they are shed. It takes about a month for a new cell to make that trip to the top.",
+      "anim": {
+        "action": "grow",
+        "props": [
+          {
+            "icon": "seedling",
+            "at": "right",
+            "size": "m",
+            "anim": "grow"
+          },
+          {
+            "icon": "tear-off-calendar",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "The dermis is the thick part, about ninety percent of your skin's depth. It holds collagen for strength, sweat glands, tiny blood vessels, and nerves that sense heat, itch, softness, and pain.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sweat-droplets",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Now, why the drama? A paper cut is shallow, but it usually lands on a fingertip. Doctors at Ohio State point out that a fingertip cut slices through far more nerve endings than a cut on your back.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "index-pointing-up",
+            "at": "bubble"
+          },
+          {
+            "icon": "page-facing-up",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "So a tiny slice there lights up lots of pain receptors at once. The pain has less to do with the size of the cut, and much more to do with where it happens to be.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "index-pointing-up",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "shock",
+        "text": "LOCATION MATTERS"
+      }
+    },
+    {
+      "narration": "And that sting has a purpose. It makes you guard the finger, so you are less likely to bump it, get dirt in it, or hurt it again. The pain is your body saying, look after this.",
+      "anim": {
+        "action": "hidden",
+        "props": [
+          {
+            "icon": "shield",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "room",
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "That is also why less feeling can be a problem. Doctors note that nerve damage, which some people with diabetes develop, can dull the pain of small cuts, so those cuts may get less care and heal more slowly.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "stethoscope",
+            "at": "top-left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Zero seconds. The paper slips through your outer skin and nicks the dermis, where tiny blood vessels run. Your fingers have a rich supply of them, which is why even a small cut there may bleed a little.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "top-left",
+            "size": "s"
+          },
+          {
+            "icon": "drop-of-blood",
+            "at": "right",
+            "size": "s",
+            "anim": "fall"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Stage one is called hemostasis, which simply means stopping the bleeding. Tiny cell fragments in your blood called platelets rush to the gap and start sticking to the damaged spot, and to each other.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "brick",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "drop-of-blood",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "text": "STOP THE BLEEDING"
+      }
+    },
+    {
+      "narration": "The platelets build a plug, and a sticky protein network weaves through it like a net, firming it into a clot. This first stage plays out over the first few minutes to hours after the injury.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "thread",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Platelets do more than plug the hole. As they gather, they release chemical signals and growth factors. Think of it as a call for backup, an alarm that brings in the next crew and kicks off the repair.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "police-car-light",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "loudspeaker",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "You can help at this stage. Dermatologists suggest washing a small cut gently with mild soap and water, then pressing a clean cloth or gauze on it for one to two minutes, or until it stops bleeding.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "soap",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "bubbles",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Then comes stage two, inflammation. Within hours, the area may look a bit pink, warm, and puffy. That is usually not a problem. It is extra blood flow, delivering white blood cells to the scene.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "fire",
+            "at": "right",
+            "size": "s",
+            "anim": "pulse"
+          },
+          {
+            "icon": "alarm-clock",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "text": "STAGE TWO: CLEANUP"
+      }
+    },
+    {
+      "narration": "First to arrive are neutrophils, your immune system's rapid responders. Their job is cleanup. They go after germs that may have hitched a ride on the paper, and they help clear away damaged debris.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "broom",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "text": "NEUTROPHILS"
+      }
+    },
+    {
+      "narration": "Then bigger cells called macrophages move in. They swallow leftover germs and worn-out neutrophils. Then they switch roles, sending out signals that say, cleanup is finished, time to start rebuilding.",
+      "anim": {
+        "action": "eat",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "hand"
+          },
+          {
+            "icon": "broom",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "body",
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "That handoff matters. Researchers studying wounds that will not heal have linked many of them to cleanup crews that never switch to repair mode. A good repair needs the inflammation to wind down on time.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "handshake",
+            "at": "bubble"
+          },
+          {
+            "icon": "petri-dish",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "face": "think"
+      }
+    },
+    {
+      "narration": "In a typical wound, this cleanup phase takes up roughly the first three days. In a small paper cut, it is usually so mild that you may barely notice it is happening at all.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "spiral-calendar",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "room",
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Stage three is rebuilding, and this is where skin cells called keratinocytes shine. They are the main cells of your epidermis, the ones that make keratin, the tough protein in skin, hair, and nails.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "building-construction",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "bg": "paper",
+        "text": "REBUILD"
+      }
+    },
+    {
+      "narration": "From the edges of the cut, keratinocytes start crawling across the gap, sliding over the wound like a crew pulling a tarp across a field. Bit by bit, they close the opening from the sides inward.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "roll-of-paper",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Deeper down, cells called fibroblasts lay down fresh collagen, a scaffold of strong protein fibers. And new tiny blood vessels sprout, feeding the construction site with oxygen and nutrients.",
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "hammer",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "construction",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Here is where your choices count. The American Academy of Dermatology suggests keeping a small cut covered with petroleum jelly and a clean bandage until it heals, changing the bandage every day.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "adhesive-bandage",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "lotion-bottle",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "room",
+        "text": "COVER IT"
+      }
+    },
+    {
+      "narration": "The bandage helps keep dirt and germs out while the new skin grows underneath. Dermatologists also say there is usually no need for antibiotic cream on a small, clean cut. Petroleum jelly is enough.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "adhesive-bandage",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "cross-mark",
+            "at": "top-left",
+            "size": "s",
+            "anim": "fade-in"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Two to three days. According to Ohio State doctors, that is how long a typical paper cut takes to heal. The crawling skin cells meet in the middle, the gap seals over, and the sting fades.",
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "tear-off-calendar",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "check-mark-button",
+            "at": "top-left",
+            "size": "s",
+            "anim": "fade-in"
+          }
+        ],
+        "bg": "park",
+        "face": "grin",
+        "text": "TWO TO THREE DAYS"
+      }
+    },
+    {
+      "narration": "That is remarkably fast. But if a cut is not getting better, especially if you have diabetes or a weakened immune system, it is worth having a doctor take a look to check for infection.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "stethoscope",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Signs of infection include pus, or redness, swelling, or pain that keeps getting worse instead of better. Those are good reasons to call your doctor or a board-certified dermatologist.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "warning",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "microbe",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "sick"
+      }
+    },
+    {
+      "narration": "And for any cut, get medical care right away if it is longer than three quarters of an inch, deeper than a quarter of an inch, or if it simply will not stop bleeding.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "straight-ruler",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "hospital",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "worry",
+        "text": "WHEN TO GET HELP"
+      }
+    },
+    {
+      "narration": "Weeks later, stage four begins, remodeling. Even after the surface looks healed, work goes on underneath. Quick, temporary collagen is swapped for a stronger kind, and the fibers are reorganized.",
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "wrench",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "spiral-calendar",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper",
+        "text": "REMODELING"
+      }
+    },
+    {
+      "narration": "In bigger wounds, this last phase can carry on for up to a year. And even a fully mature scar only gets back to about eighty percent of the skin's original strength.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "hourglass-done",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "lab",
+        "text": "UP TO A YEAR"
+      }
+    },
+    {
+      "narration": "So why do paper cuts rarely leave a mark? Small, shallow wounds that stay mostly in the epidermis usually heal without a visible scar. Deeper cuts that damage more of the dermis are more likely to scar.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "bubble"
+          },
+          {
+            "icon": "sparkles",
+            "at": "right",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "Your epidermis is brilliant at regenerating, because it is already rebuilding itself every day. It sheds tens of thousands of cells daily and renews itself about once a month. A paper cut is one small extra job.",
+      "anim": {
+        "action": "grow",
+        "props": [
+          {
+            "icon": "sparkles",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "seedling",
+            "at": "top-left",
+            "size": "s",
+            "anim": "grow"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Want fewer paper cuts in the first place? Doctors note that dry or cold skin is more prone to them. Keeping your hands moisturized, and wearing gloves in cold weather, can help.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "lotion-bottle",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "gloves",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "room",
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "So that tiny sting set off a four-stage operation. A plug within minutes, a cleanup crew within hours, a rebuild over days, and a reinforcement project that can run for weeks, all for a cut you could barely see.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "building-construction",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper",
+        "text": "FOUR STAGES"
+      }
+    },
+    {
+      "narration": "Your skin is not just a wrapper. It is a living, self-repairing shield, and it fixes itself more times than you could ever count, almost always without you noticing at all.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "shield",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "adhesive-bandage",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "park",
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

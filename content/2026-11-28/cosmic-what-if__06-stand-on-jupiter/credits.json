@@ -1,0 +1,200 @@
+[
+  {
+    "scene": 1,
+    "type": "nasa",
+    "query": "Jupiter full disk Hubble",
+    "file": "images/scene01.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA00292",
+    "title": "Three Views of Io",
+    "credit": "NASA/JPL/USGS",
+    "url": "https://images.nasa.gov/details/PIA00292",
+    "width": 2600,
+    "height": 1150
+  },
+  {
+    "scene": 2,
+    "type": "nasa",
+    "query": "Jupiter cloud tops Juno JunoCam",
+    "file": "images/scene02.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA26077",
+    "title": "NASA's Juno Mission Images Jupiter's Belts and Zones",
+    "credit": "Image data: NASA/JPL-Caltech/SwRI/MSSS Image processing by Tanya Oleksuik CC BY NC SA 3.0",
+    "url": "https://images.nasa.gov/details/PIA26077",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "scene": 3,
+    "type": "diagram"
+  },
+  {
+    "scene": 4,
+    "type": "nasa",
+    "query": "Galileo probe descent Jupiter atmosphere artist",
+    "file": "images/scene04.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "ARC-1989-AC89-0146-2",
+    "title": "ARC-1989-AC89-0146-2",
+    "credit": "NASA (ARC)",
+    "url": "https://images.nasa.gov/details/ARC-1989-AC89-0146-2",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "scene": 5,
+    "type": "nasa",
+    "query": "Galileo probe heat shield",
+    "file": "images/scene05.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "ARC-1981-AC81-0174",
+    "title": "ARC-1981-AC81-0174",
+    "credit": "NASA (ARC)",
+    "url": "https://images.nasa.gov/details/ARC-1981-AC81-0174",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "scene": 6,
+    "type": "nasa",
+    "query": "Jupiter south pole Juno cyclones",
+    "file": "images/scene06.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA24967",
+    "title": "Jupiter's Polar Vortices Over Five Years",
+    "credit": "NASA/JPL-Caltech/SwRI/ASI/INAF/JIRAM",
+    "url": "https://images.nasa.gov/details/PIA24967",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "scene": 7,
+    "type": "nasa",
+    "query": "Jupiter Great Red Spot Juno",
+    "file": "images/scene07.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA21770",
+    "title": "Juno and the Great Red Spot (Illustration)",
+    "credit": "NASA/JPL-Caltech/SwRI/MSSS/Christopher Go",
+    "url": "https://images.nasa.gov/details/PIA21770",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "scene": 8,
+    "type": "nasa",
+    "query": "Jupiter atmosphere bands Cassini",
+    "file": "images/scene08.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA26076",
+    "title": "Cylindrical Orientation of Jupiter's East-West Jet-Streams",
+    "credit": "NASA/JPL-Caltech/SSI/SWRI/MSSS/ASI/INAF/JIRAM/Björn Jónsson CC BY 3.0",
+    "url": "https://images.nasa.gov/details/PIA26076",
+    "width": 1920,
+    "height": 1304
+  },
+  {
+    "scene": 9,
+    "type": "nasa",
+    "query": "Galilean moons Io Europa Ganymede Callisto",
+    "file": "images/scene09.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA01299",
+    "title": "The Galilean Satellites",
+    "credit": "NASA/JPL/DLR",
+    "url": "https://images.nasa.gov/details/PIA01299",
+    "width": 1870,
+    "height": 635
+  },
+  {
+    "scene": 10,
+    "type": "nasa",
+    "query": "Great Red Spot Voyager 1979",
+    "file": "images/scene10.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA00022",
+    "title": "Jupiter Great Red Spot Mosaic",
+    "credit": "NASA/JPL",
+    "url": "https://images.nasa.gov/details/PIA00022",
+    "width": 1920,
+    "height": 1392
+  },
+  {
+    "scene": 11,
+    "type": "diagram"
+  },
+  {
+    "scene": 12,
+    "type": "nasa",
+    "query": "Galileo probe Jupiter entry illustration",
+    "file": "images/scene12.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "S89-44175",
+    "title": "Labeled line drawing of Galileo spacecraft's atmospheric probe",
+    "credit": "NASA (JSC)",
+    "url": "https://images.nasa.gov/details/S89-44175",
+    "width": 1920,
+    "height": 1535
+  },
+  {
+    "scene": 13,
+    "type": "diagram"
+  },
+  {
+    "scene": 14,
+    "type": "nasa",
+    "query": "Juno spacecraft Jupiter artist concept",
+    "file": "images/scene14.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA13746",
+    "title": "Juno Mission to Jupiter 2010 Artist Concept",
+    "credit": "NASA/JPL",
+    "url": "https://images.nasa.gov/details/PIA13746",
+    "width": 1920,
+    "height": 1600
+  },
+  {
+    "scene": 15,
+    "type": "nasa",
+    "query": "Jupiter aurora Hubble ultraviolet",
+    "file": "images/scene15.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "GSFC_20171208_Archive_e000276",
+    "title": "Hubble Captures Vivid Auroras in Jupiter’s Atmosphere",
+    "credit": "NASA, ESA, and J. Nichols (University of Leicester)",
+    "url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000276",
+    "width": 1920,
+    "height": 1913
+  },
+  {
+    "scene": 16,
+    "type": "nasa",
+    "query": "Jupiter Io shadow transit",
+    "file": "images/scene16.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "GSFC_20171208_Archive_e000795",
+    "title": "Hubble Captures Rare Triple-Moon Conjunction",
+    "credit": "NASA, ESA, and the Hubble Heritage Team (STScI/AURA)",
+    "url": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000795",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "scene": 17,
+    "type": "nasa",
+    "query": "Jupiter crescent Cassini",
+    "file": "images/scene17.jpg",
+    "source": "NASA Image and Video Library",
+    "id": "PIA03451",
+    "title": "Cassini Farewell to Jupiter",
+    "credit": "NASA/JPL/University of Arizona",
+    "url": "https://images.nasa.gov/details/PIA03451",
+    "width": 1349,
+    "height": 1603
+  },
+  {
+    "scene": 18,
+    "type": "outro"
+  }
+]

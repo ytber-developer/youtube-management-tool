@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
+<defs><radialGradient id="o4e" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#7cc4ff"/><stop offset="0.6" stop-color="#4aa3ff"/><stop offset="1" stop-color="#1f5fb0"/></radialGradient><marker id="o4a" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="3.2" markerHeight="3.2" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#ffb347"/></marker><marker id="o4l" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="3.2" markerHeight="3.2" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#c9c3ff"/></marker></defs>
+<circle cx="340" cy="360" r="230" fill="none" stroke="#c9c3ff" stroke-width="4" stroke-dasharray="4 14" stroke-linecap="round" stroke-opacity="0.8"/>
+<path d="M242.8,568.5 A230,230 0 0 0 502.6,522.6" fill="none" stroke="#c9c3ff" stroke-width="5" stroke-linecap="round"/>
+<circle cx="340" cy="360" r="58" fill="none" stroke="#ffd34d" stroke-width="5" stroke-dasharray="10 12" stroke-opacity="0.85"/>
+<text x="340.0" y="372.0" font-size="34" font-weight="800" fill="#ffd34d" text-anchor="middle" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >Sun gone</text>
+<line x1="538.0" y1="487.3" x2="813.8" y2="211.5" stroke="#ffb347" stroke-width="8" stroke-linecap="round" marker-end="url(#o4a)"/>
+<circle cx="502.6" cy="522.6" r="38" fill="url(#o4e)"/>
+<circle cx="564.6" cy="552.6" r="11" fill="#cfcfd6"/>
+<text x="506.6" y="607.6" font-size="36" font-weight="800" fill="#ffffff" text-anchor="middle" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >Earth</text>
+<text x="689.6" y="298.9" font-size="36" font-weight="800" fill="#ffb347" text-anchor="middle" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" transform="rotate(-45.0 689.6 298.9)">67,000 mph</text>
+<text x="166.7" y="595.3" font-size="32" font-weight="700" fill="#c9c3ff" text-anchor="middle" paint-order="stroke" stroke="#160c3c" stroke-width="8" stroke-linejoin="round" >Old orbit</text>
+<text x="860.0" y="725.0" font-size="24" font-weight="600" fill="#c9c3ff" text-anchor="end" >not to scale</text>
+</svg>

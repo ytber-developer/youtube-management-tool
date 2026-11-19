@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760">
+<g font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-weight="800">
+<path d="M290,380 L290,160 A220,220 0 1 1 90.9,473.7 Z" fill="#ffb347" stroke="#120a33" stroke-width="5" stroke-linejoin="round"/>
+<path d="M290,380 L90.9,473.7 A220,220 0 0 1 222.0,170.8 Z" fill="#c9c3ff" fill-opacity="0.75" stroke="#120a33" stroke-width="5" stroke-linejoin="round"/>
+<path d="M290,380 L222.0,170.8 A220,220 0 0 1 290,160 Z" fill="#7fe3ff" stroke="#120a33" stroke-width="5" stroke-linejoin="round"/>
+<g text-anchor="middle" font-size="44">
+<text x="391" y="458" fill="#1a0f3a">≈68%</text>
+<text x="171" y="342" fill="#1a0f3a">27%</text>
+<text x="249" y="128" fill="#7fe3ff" font-size="34">5%</text>
+</g>
+<g font-size="28">
+<rect x="555" y="268" width="32" height="32" rx="8" fill="#ffb347"/><text x="602" y="295" fill="#ffffff">DARK ENERGY</text>
+<rect x="555" y="358" width="32" height="32" rx="8" fill="#c9c3ff" fill-opacity="0.75"/><text x="602" y="385" fill="#ffffff">DARK MATTER</text>
+<rect x="555" y="448" width="32" height="32" rx="8" fill="#7fe3ff"/><text x="602" y="475" fill="#ffffff">NORMAL MATTER</text>
+</g>
+</g>
+</svg>

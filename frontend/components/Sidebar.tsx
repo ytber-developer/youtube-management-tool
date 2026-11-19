@@ -9,7 +9,8 @@ import {
   Upload,
   FileText,
   Settings,
-  Globe
+  Globe,
+  Film
 } from 'lucide-react'
 
 const navigation = [
@@ -18,6 +19,7 @@ const navigation = [
   { name: 'Check AdSense', href: '/check-adsense', icon: FileText },
   { name: 'Tăng lượt xem', href: '/boost-views', icon: PlayCircle },
   { name: 'Video đã tải', href: '/videos', icon: Video },
+  { name: 'Nội dung', href: '/content', icon: Film },
   { name: 'Proxy', href: '/proxies', icon: Globe },
   { name: 'Setup & DB', href: '/setup', icon: Settings },
 ]
@@ -38,7 +40,7 @@ export function Sidebar() {
           {/* Navigation */}
           <nav className="flex-1 px-2 space-y-1">
             {navigation.map((item) => {
-              const isActive = pathname === item.href
+              const isActive = pathname === item.href || pathname.startsWith(item.href + '/')
               const Icon = item.icon
               
               return (

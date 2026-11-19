@@ -48,6 +48,11 @@ export const API_ENDPOINTS = {
     ASSIGN: '/api/v1/proxies/assign',
     AUTO_ASSIGN: '/api/v1/proxies/auto-assign',
   },
+  CONTENT: {
+    LIST: '/api/v1/content',
+    DETAIL: (id: string) => `/api/v1/content/${id}`,
+    FILE: (id: string, file: string) => `/api/v1/content/file/${id}/${file}`,
+  },
   AUTHENTICATOR: '/api/v1/authenticator',
   AUTHENTICATOR_RETRY: (id: number) => `/api/v1/authenticator/retry/${id}`,
   SETUP: {

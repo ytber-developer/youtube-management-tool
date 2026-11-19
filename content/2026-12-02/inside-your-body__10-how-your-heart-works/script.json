@@ -1,0 +1,859 @@
+{
+  "channel": "inside-your-body",
+  "number": 10,
+  "slug": "how-your-heart-works",
+  "target_minutes": 7.0,
+  "style": "anim",
+  "title": "How Your Heart Beats 100,000 Times a Day Without Stopping",
+  "thumbnail_text": "100,000 BEATS A DAY",
+  "description": "Your heart beats over one hundred thousand times a day and pumps more than two thousand gallons of blood, and every beat starts with a tiny electrical spark inside the heart itself. Here is how the two pumps, four valves and built-in pacemaker work together, and what nuclear bomb tests revealed about whether your heart cells ever get replaced.\n\nSources:\n- NHLBI, How the Heart Beats: https://www.nhlbi.nih.gov/health/heart/heart-beats\n- NHLBI, How Blood Flows through the Heart: https://www.nhlbi.nih.gov/health/heart/blood-flow\n- Cleveland Clinic, Heart: Anatomy and Function: https://my.clevelandclinic.org/health/body/21704-heart\n- UCSF Health, How the Heart Works: https://ucsfhealth.org/education/how-the-heart-works\n- Temple Health, 10 Interesting Heart Facts You May Not Know: https://templehealth.org/about/blog/10-interesting-heart-facts-you-may-not-know\n- Karolinska Institutet (2009), Heart cells replaced throughout life: https://news.ki.se/heart-cells-replaced-throughout-life\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": [
+    "heart",
+    "how the heart works",
+    "heartbeat",
+    "cardiac conduction system",
+    "sinoatrial node",
+    "heart valves",
+    "blood flow",
+    "circulatory system",
+    "anatomy",
+    "cardiology",
+    "human body",
+    "science explained",
+    "inside your body"
+  ],
+  "sources": [
+    {
+      "title": "NHLBI - How the Heart Beats",
+      "url": "https://www.nhlbi.nih.gov/health/heart/heart-beats"
+    },
+    {
+      "title": "NHLBI - How Blood Flows through the Heart",
+      "url": "https://www.nhlbi.nih.gov/health/heart/blood-flow"
+    },
+    {
+      "title": "Cleveland Clinic - Heart: Anatomy and Function",
+      "url": "https://my.clevelandclinic.org/health/body/21704-heart"
+    },
+    {
+      "title": "UCSF Health - How the Heart Works",
+      "url": "https://ucsfhealth.org/education/how-the-heart-works"
+    },
+    {
+      "title": "Temple Health - 10 Interesting Heart Facts You May Not Know",
+      "url": "https://templehealth.org/about/blog/10-interesting-heart-facts-you-may-not-know"
+    },
+    {
+      "title": "Karolinska Institutet (2009) - Heart cells replaced throughout life",
+      "url": "https://news.ki.se/heart-cells-replaced-throughout-life"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "anatomical-heart",
+        "at": "right",
+        "size": "xl",
+        "anim": "pulse"
+      },
+      {
+        "icon": "high-voltage",
+        "at": "left",
+        "size": "m"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "Since you woke up this morning, your heart has beaten tens of thousands of times. You never asked it to. So who is in charge?",
+      "headline": "WHO TELLS YOUR HEART <em>TO BEAT?</em>",
+      "sub": "",
+      "visual": {
+        "type": "stock",
+        "query": "person hand on chest heartbeat",
+        "note": "a person resting a hand over their heart",
+        "icons": [
+          "beating-heart",
+          "raised-hand",
+          "red-question-mark",
+          "high-voltage"
+        ]
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "bubble",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "text": "WHO IS IN CHARGE?",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Here is the scale of the job. Your heart beats more than one hundred thousand times a day. Every minute, it pumps about one and a half gallons of blood. By bedtime, that adds up to more than two thousand gallons, enough to fill a small swimming pool.",
+      "headline": "2,000 GALLONS <em>A DAY</em>",
+      "sub": "Over 100,000 beats",
+      "visual": {
+        "type": "stock",
+        "query": "backyard swimming pool water",
+        "note": "a small backyard swimming pool full of water"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "person-swimming",
+            "at": "left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "And it pushes that blood through an enormous network. If you lined up every blood vessel in your body end to end, they would stretch about sixty thousand miles. That is more than twice around the Earth.",
+      "headline": "60,000 MILES OF <em>VESSELS</em>",
+      "sub": "More than twice around Earth",
+      "visual": {
+        "type": "science",
+        "query": "human circulatory system arteries veins illustration",
+        "note": "full-body illustration of arteries and veins"
+      },
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "drop-of-blood",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "60,000 MILES"
+      }
+    },
+    {
+      "narration": "The machine doing all this is surprisingly small. An average adult heart weighs about ten ounces, a little less than a full can of soda, and is about the size of your two hands clasped together. It sits in your chest, just behind and slightly left of your breastbone.",
+      "headline": "A TEN OUNCE <em>ENGINE</em>",
+      "sub": "About two clasped hands",
+      "visual": {
+        "type": "science",
+        "query": "heart position in chest anatomy illustration",
+        "note": "the heart's position in the chest between the lungs",
+        "icons": [
+          "anatomical-heart",
+          "balance-scale",
+          "gear",
+          "drop-of-blood"
+        ]
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "beverage-box",
+            "at": "left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "To understand how it works, you need three ideas: the pumps, the doors, and the spark. Start with the pumps, because the first surprise is that your heart is not really one pump at all.",
+      "headline": "PUMPS, DOORS AND A <em>SPARK</em>",
+      "sub": "",
+      "visual": {
+        "type": "diagram",
+        "spec": "three labeled icons in a row: pumps (heart chambers), doors (valves), spark (electrical signal)"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "It is two pumps, side by side. Your heart has four chambers. On each side, there is an upper chamber called an atrium, which receives blood, and a lower chamber called a ventricle, which pumps it out. The right side and the left side have very different jobs.",
+      "headline": "TWO PUMPS IN <em>ONE</em>",
+      "sub": "Four chambers: two atria, two ventricles",
+      "visual": {
+        "type": "diagram",
+        "spec": "front view of the heart with the four chambers labeled: right atrium, right ventricle, left atrium, left ventricle"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "text": "TWO PUMPS",
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "The right side handles used blood. Oxygen-poor blood returning from your body flows into the right atrium, drops into the right ventricle, and gets pushed out to your lungs. There, your lungs load it with fresh oxygen.",
+      "headline": "RIGHT SIDE: TO THE <em>LUNGS</em>",
+      "sub": "Oxygen-poor blood out",
+      "visual": {
+        "type": "diagram",
+        "spec": "blue arrows showing blood from the body into the right atrium, right ventricle, then the pulmonary artery to the lungs"
+      },
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "lungs",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "drop-of-blood",
+            "at": "left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Then that oxygen-rich blood comes back to the left atrium, drops into the left ventricle, and gets launched into your aorta, the largest artery in your body. From there it travels everywhere, from your brain to your toes.",
+      "headline": "LEFT SIDE: TO <em>EVERYWHERE</em>",
+      "sub": "Oxygen-rich blood out",
+      "visual": {
+        "type": "diagram",
+        "spec": "red arrows showing blood from the lungs into the left atrium, left ventricle, then out through the aorta to the body"
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "drop-of-blood",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "brain",
+            "at": "top",
+            "size": "s"
+          },
+          {
+            "icon": "foot",
+            "at": "far-right",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "That is why the left ventricle is the powerhouse. Sending blood next door to your lungs is easy. Sending it all the way to your feet and back takes far more pressure, and the left ventricle generates the high pressure needed to do it.",
+      "headline": "THE LEFT VENTRICLE <em>POWERHOUSE</em>",
+      "sub": "Built for high pressure",
+      "visual": {
+        "type": "science",
+        "query": "heart cross section ventricle wall anatomy",
+        "note": "cross-section of the heart showing the thick muscular left ventricle",
+        "icons": [
+          "anatomical-heart",
+          "flexed-biceps",
+          "drop-of-blood",
+          "high-voltage"
+        ]
+      },
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "flexed-biceps",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Next, the doors. A pump is useless if blood can slosh backward. So your heart has four valves, flaps of tissue that open to let blood through and snap shut to stop it from flowing back the wrong way.",
+      "headline": "FOUR ONE-WAY <em>DOORS</em>",
+      "sub": "The heart valves",
+      "visual": {
+        "type": "science",
+        "query": "heart valves anatomy illustration",
+        "note": "illustration of the four heart valves",
+        "icons": [
+          "anatomical-heart",
+          "door",
+          "right-arrow",
+          "drop-of-blood"
+        ]
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "door",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "drop-of-blood",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "FOUR VALVES"
+      }
+    },
+    {
+      "narration": "Between each atrium and its ventricle sits a valve: the tricuspid on the right and the mitral on the left. And at each exit there is another: the pulmonary valve, leading to the lungs, and the aortic valve, leading to the body.",
+      "headline": "TRICUSPID, MITRAL, PULMONARY, <em>AORTIC</em>",
+      "sub": "",
+      "visual": {
+        "type": "diagram",
+        "spec": "heart outline with the four valves labeled: tricuspid, pulmonary, mitral, aortic"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "door",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "door",
+            "at": "far-right",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Those doors are what you hear in a heartbeat. The first sound, lub, is the valves between the atria and ventricles closing. The second sound, dub, is the pulmonary and aortic valves closing. Lub, dub. That is the sound of doors shutting, about once a second.",
+      "headline": "LUB-DUB: <em>DOORS</em> SHUTTING",
+      "sub": "The sound of closing valves",
+      "visual": {
+        "type": "stock",
+        "query": "doctor stethoscope listening heart",
+        "note": "a doctor listening with a stethoscope",
+        "icons": [
+          "stethoscope",
+          "anatomical-heart",
+          "door",
+          "speaker-high-volume"
+        ]
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "stethoscope",
+            "at": "left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Pumps and doors explain how blood moves. But they do not explain the most remarkable part. Something has to tell all of that muscle exactly when to squeeze, in the right order, every single second of your life.",
+      "headline": "WHO GIVES THE <em>ORDER?</em>",
+      "sub": "",
+      "visual": {
+        "type": "stock",
+        "query": "metronome close up",
+        "note": "a ticking metronome",
+        "icons": [
+          "high-voltage",
+          "anatomical-heart",
+          "brain",
+          "alarm-clock"
+        ]
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "bubble",
+            "size": "m"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Here is the answer, and it may surprise you. Every heartbeat begins inside the heart itself. Your heart has its own electrical wiring, called the cardiac conduction system, which controls the rate and rhythm of every beat.",
+      "headline": "THE HEART HAS ITS OWN <em>WIRING</em>",
+      "sub": "The cardiac conduction system",
+      "visual": {
+        "type": "diagram",
+        "spec": "heart outline with the electrical conduction pathway highlighted in yellow from top right down to the bottom"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "text": "BUILT-IN WIRING",
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "The spark starts in a small cluster of pacemaker cells called the sinoatrial node, or SA node, tucked into the wall of the right atrium. It fires an electrical signal that spreads across both atria, and they squeeze, pushing blood down into the ventricles.",
+      "headline": "THE SPARK: YOUR <em>SA NODE</em>",
+      "sub": "Your natural pacemaker",
+      "visual": {
+        "type": "diagram",
+        "spec": "close-up of the right atrium with the sinoatrial node marked and an electrical wave spreading across both atria"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "SA NODE",
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Then comes a clever pause. The signal reaches the atrioventricular node, or AV node, between the upper and lower chambers. It slows the signal down slightly, giving the ventricles time to finish filling with blood.",
+      "headline": "A DELIBERATE <em>PAUSE</em>",
+      "sub": "The AV node waits",
+      "visual": {
+        "type": "diagram",
+        "spec": "the electrical signal pausing at the atrioventricular node between atria and ventricles, with a small timer icon"
+      },
+      "anim": {
+        "action": "hold-breath",
+        "props": [
+          {
+            "icon": "pause-button",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Then the signal races down special pathways, the bundle of His, the bundle branches, and the Purkinje fibers, spreading through the walls of the ventricles. They contract, blood surges out, and the whole cycle starts again at the SA node.",
+      "headline": "DOWN THE <em>FAST LANES</em>",
+      "sub": "Bundle branches and Purkinje fibers",
+      "visual": {
+        "type": "science",
+        "query": "cardiac conduction system Purkinje fibers diagram",
+        "note": "illustration of the heart's conduction system",
+        "icons": [
+          "high-voltage",
+          "anatomical-heart",
+          "racing-car",
+          "right-arrow"
+        ]
+      },
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Your nervous system can speed this rhythm up or slow it down, but it does not create it. For a resting adult, a normal rhythm is about sixty to one hundred beats per minute. On average, women's hearts beat about eight beats per minute faster than men's.",
+      "headline": "60 TO 100 BEATS PER <em>MINUTE</em>",
+      "sub": "A normal resting rhythm",
+      "visual": {
+        "type": "stock",
+        "query": "smartwatch heart rate display wrist",
+        "note": "a wrist display showing heart rate",
+        "icons": [
+          "watch",
+          "beating-heart",
+          "stopwatch",
+          "chart-increasing"
+        ]
+      },
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "text": "60–100 BPM",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "So your heart pumps for every organ in your body. But here is a question most people never ask. The heart is a muscle too, working harder than any other. Who feeds the heart?",
+      "headline": "WHO FEEDS THE <em>HEART?</em>",
+      "sub": "",
+      "visual": {
+        "type": "science",
+        "query": "heart muscle tissue micrograph cardiomyocytes",
+        "note": "microscope view of heart muscle cells",
+        "icons": [
+          "anatomical-heart",
+          "drop-of-blood",
+          "red-apple",
+          "sparkles"
+        ]
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "red-question-mark",
+            "at": "bubble",
+            "size": "m"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Surprisingly, not the blood rushing through its chambers. Instead, the heart has its own private supply lines, the coronary arteries. They branch off the aorta right at the start of its journey and wrap around the outside of the heart, delivering oxygen and nutrients to the muscle.",
+      "headline": "ITS OWN <em>SUPPLY LINES</em>",
+      "sub": "The coronary arteries",
+      "visual": {
+        "type": "science",
+        "query": "coronary arteries anatomy illustration",
+        "note": "the coronary arteries wrapping around the surface of the heart"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "drop-of-blood",
+            "at": "left",
+            "size": "s",
+            "anim": "orbit"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Coronary veins then collect the used blood and return it to the right atrium, so it can head to the lungs like everything else. The heart takes care of itself first, before sending a single drop to the rest of you.",
+      "headline": "IT FEEDS <em>ITSELF</em> FIRST",
+      "sub": "",
+      "visual": {
+        "type": "diagram",
+        "spec": "heart surface showing coronary arteries in red branching from the aorta and coronary veins in blue returning to the right atrium"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "lungs",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Now for the last mystery. Your skin replaces itself constantly. So does the lining of your gut. But what about the heart, a muscle that never gets a day off? For a long time, nobody could find out. Then scientists found a clue in an unlikely place: Cold War nuclear tests.",
+      "headline": "DOES YOUR HEART <em>RENEW?</em>",
+      "sub": "",
+      "visual": {
+        "type": "stock",
+        "query": "old laboratory archive vintage science",
+        "note": "vintage scientific instruments in a lab",
+        "icons": [
+          "test-tube",
+          "anatomical-heart",
+          "hourglass-done",
+          "microscope"
+        ]
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "cloud",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Above-ground nuclear tests sharply raised the amount of a form of carbon called carbon fourteen in the atmosphere. That carbon ended up in plants, in food, and in the DNA of every new cell people made. Because the levels changed year by year, a cell's carbon reveals roughly when it was born.",
+      "headline": "A <em>CARBON</em> TIMESTAMP",
+      "sub": "Hidden in your DNA",
+      "visual": {
+        "type": "diagram",
+        "spec": "timeline graph of atmospheric carbon-14 spiking in the 1960s and slowly falling, with a cell icon reading its birth year from the curve"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "dna",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "leafy-green",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "CARBON FOURTEEN",
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "In two thousand nine, researchers at Sweden's Karolinska Institutet used this timestamp on human heart cells. They found that heart muscle cells do renew, but slowly. About one percent are replaced each year at age twenty, falling to about half a percent a year by age seventy five.",
+      "headline": "HEART CELLS RENEW, <em>SLOWLY</em>",
+      "sub": "About one percent a year",
+      "visual": {
+        "type": "science",
+        "query": "DNA double helix illustration",
+        "note": "an illustration of DNA",
+        "icons": [
+          "dna",
+          "anatomical-heart",
+          "seedling",
+          "hourglass-not-done"
+        ]
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "microscope",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "That means most of your heart muscle cells will never be replaced in your lifetime. The heart beating in your chest right now is a mix of cells you were born with and cells formed later. Some of them have been beating, without a break, since before you were born.",
+      "headline": "BEATING SINCE BEFORE <em>BIRTH</em>",
+      "sub": "Most cells are never replaced",
+      "visual": {
+        "type": "stock",
+        "query": "pregnancy ultrasound screen heartbeat",
+        "note": "an ultrasound monitor during pregnancy",
+        "icons": [
+          "baby",
+          "beating-heart",
+          "pregnant-woman",
+          "sparkles"
+        ]
+      },
+      "anim": {
+        "action": "grow",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "baby",
+            "at": "left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "So who is in charge of your heartbeat? Your heart is. Two pumps, four one-way doors, and a tiny cluster of pacemaker cells firing on their own, more than one hundred thousand times a day, for your entire life.",
+      "headline": "YOUR HEART IS IN <em>CHARGE</em>",
+      "sub": "",
+      "visual": {
+        "type": "science",
+        "query": "human heart anatomical illustration front view",
+        "note": "a detailed anatomical illustration of the heart"
+      },
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "left",
+            "size": "s"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Next time you feel your pulse, remember what you are actually feeling: a spark, a pause, a squeeze, and two doors shutting. Over a lifetime, it adds up to billions of beats, and it has not missed its cue yet.",
+      "headline": "A SPARK, A <em>SQUEEZE</em>",
+      "sub": "Billions of beats",
+      "visual": {
+        "type": "stock",
+        "query": "fingers checking pulse on wrist",
+        "note": "two fingers feeling the pulse on a wrist",
+        "icons": [
+          "high-voltage",
+          "beating-heart",
+          "hand-with-fingers-splayed",
+          "stopwatch"
+        ]
+      },
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sparkles",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "BILLIONS OF BEATS",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "headline": "",
+      "sub": "",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

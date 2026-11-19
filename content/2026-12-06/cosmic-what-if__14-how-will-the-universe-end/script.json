@@ -1,0 +1,866 @@
+{
+  "channel": "cosmic-what-if",
+  "number": 14,
+  "slug": "how-will-the-universe-end",
+  "target_minutes": 9.67,
+  "title": "How Will the Universe End? A Trip to the Last Moment of Time",
+  "thumbnail_text": "THE LAST STAR",
+  "description": "Travel forward through time, past the death of the Sun, the last stars and the last black holes, to see how the universe might end. Recent measurements of dark energy suggest the story may not be settled at all.\n\nSources:\n- NASA Science, What Is Dark Energy? Inside Our Accelerating, Expanding Universe: https://science.nasa.gov/dark-energy/\n- ScienceDaily / Berkeley Lab, New DESI results strengthen hints that dark energy may evolve (2025): https://www.sciencedaily.com/releases/2025/03/250320214311.htm\n- University of Western Australia, Astronomers thought the Milky Way was doomed to crash into Andromeda. Now they're not so sure (2025): https://www.uwa.edu.au/news/article/2025/june/astronomers-thought-the-milky-way-was-doomed-to-crash-into-andromeda\n- Adams and Laughlin, A Dying Universe: The Long Term Fate and Evolution of Astrophysical Objects, Reviews of Modern Physics (1997): https://ar5iv.arxiv.org/html/astro-ph/9701131",
+  "tags": [
+    "end of the universe",
+    "heat death",
+    "big rip",
+    "big crunch",
+    "dark energy",
+    "DESI",
+    "cosmology",
+    "far future",
+    "black holes",
+    "hawking radiation",
+    "what if",
+    "astronomy",
+    "science",
+    "cosmic what if"
+  ],
+  "sources": [
+    {
+      "title": "NASA Science - What Is Dark Energy? Inside Our Accelerating, Expanding Universe",
+      "url": "https://science.nasa.gov/dark-energy/"
+    },
+    {
+      "title": "ScienceDaily / Berkeley Lab - New DESI results strengthen hints that dark energy may evolve (2025)",
+      "url": "https://www.sciencedaily.com/releases/2025/03/250320214311.htm"
+    },
+    {
+      "title": "University of Western Australia - Milky Way and Andromeda collision no longer certain (2025)",
+      "url": "https://www.uwa.edu.au/news/article/2025/june/astronomers-thought-the-milky-way-was-doomed-to-crash-into-andromeda"
+    },
+    {
+      "title": "Adams and Laughlin - A Dying Universe, Reviews of Modern Physics (1997)",
+      "url": "https://ar5iv.arxiv.org/html/astro-ph/9701131"
+    }
+  ],
+  "style": "anim",
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "black-hole",
+        "at": "right",
+        "size": "xl",
+        "anim": "spin"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "Everything that has a beginning has an end. The universe began about thirteen point eight billion years ago. So how does it finish?",
+      "headline": "HOW DOES <em>EVERYTHING</em> END?",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "Hubble eXtreme Deep Field",
+        "note": "deep field filled with distant galaxies"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "top",
+            "size": "l"
+          }
+        ],
+        "text": "THE END?",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "To find out, let's take a trip forward in time. Not years or centuries. We'll be skipping billions, then trillions, then numbers so large they barely mean anything. Along the way, the universe will change beyond recognition. And at the end, there's a twist that astronomers are arguing about right now.",
+      "headline": "A TRIP <em>FORWARD</em> IN TIME",
+      "sub": "",
+      "visual": {
+        "type": "diagram",
+        "spec": "A long horizontal timeline on a logarithmic scale, starting at today and passing markers for 1 billion, 1 trillion, 10 to the 40th and 10 to the 100th years"
+      },
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "rocket",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "First stop: our own neighborhood. The Sun is about halfway through its life. As it ages, it slowly gets brighter. Scientists estimate that within roughly a billion years, it will be hot enough to begin boiling away Earth's oceans. Life here has a deadline long before the Sun dies.",
+      "headline": "EARTH HAS A <em>DEADLINE</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "Sun Solar Dynamics Observatory full disk",
+        "note": "the full disk of the Sun"
+      },
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l",
+            "anim": "grow"
+          },
+          {
+            "icon": "water-wave",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "1 BILLION YEARS",
+        "bg": "space",
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "In about five billion years, the Sun runs low on hydrogen in its core and swells into a red giant, big enough to swallow Mercury and Venus. Whether it reaches Earth is still debated. Then it puffs off its outer layers and shrinks into a white dwarf, about half its current mass, roughly the size of Earth.",
+      "headline": "THE SUN BECOMES A <em>RED GIANT</em>",
+      "sub": "In about five billion years",
+      "visual": {
+        "type": "nasa",
+        "query": "planetary nebula Hubble",
+        "note": "glowing shell of gas around a dying Sun-like star"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "xl",
+            "anim": "grow"
+          },
+          {
+            "icon": "white-circle",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "RED GIANT",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Meanwhile, the Andromeda Galaxy is heading our way. For years, astronomers said a collision was all but certain. But a twenty twenty-five study, accounting for the pull of other nearby galaxies, put the odds of a merger in the next ten billion years at only about fifty-fifty.",
+      "headline": "ANDROMEDA: <em>FIFTY-FIFTY</em>",
+      "sub": "Odds of a merger in 10 billion years",
+      "visual": {
+        "type": "nasa",
+        "query": "Andromeda galaxy collision Milky Way illustration",
+        "note": "illustration of Andromeda looming in the night sky"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "l",
+            "anim": "approach"
+          }
+        ],
+        "text": "50-50 ODDS",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Even if it happens, stars are so far apart that direct collisions between them are rare. The two galaxies would slowly blend into one giant, rounded galaxy. Over time, our whole cluster of nearby galaxies is expected to merge like that. But that's not the strangest thing happening in the future sky.",
+      "headline": "GALAXIES <em>BLEND</em>, STARS DON'T CRASH",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "elliptical galaxy Hubble",
+        "note": "giant elliptical galaxy"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "sparkles",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Here's the stranger part. Everything beyond our local group is drifting away, and that drift is speeding up. In nineteen ninety-eight, two teams measuring distant exploding stars discovered that the expansion of the universe is accelerating.",
+      "headline": "THE UNIVERSE IS <em>SPEEDING UP</em>",
+      "sub": "Discovered in 1998",
+      "visual": {
+        "type": "nasa",
+        "query": "Type Ia supernova distant galaxy Hubble",
+        "note": "a distant supernova in its host galaxy"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "far-right",
+            "size": "m",
+            "anim": "shrink"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Whatever is pushing it has a name, dark energy, but nobody knows what it is. NASA estimates it makes up roughly sixty-eight to seventy percent of the universe. According to NASA, the expansion began speeding up about nine billion years after the Big Bang.",
+      "headline": "THE <em>DARK ENERGY</em> PUZZLE",
+      "sub": "About 68 to 70% of the universe",
+      "visual": {
+        "type": "diagram",
+        "spec": "Pie chart of the universe's contents: dark energy about 68 percent, dark matter about 27 percent, normal matter about 5 percent"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "red-question-mark",
+            "at": "bubble",
+            "size": "l"
+          }
+        ],
+        "text": "DARK ENERGY",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "If dark energy stays steady, distant galaxies keep fleeing faster and faster, until their light can never reach us. Eventually, astronomers in our merged galaxy would look out and see nothing but their own stars, surrounded by a dark, empty void.",
+      "headline": "THE OTHER GALAXIES <em>VANISH</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "isolated galaxy dark space",
+        "note": "a lone galaxy surrounded by empty dark space"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "telescope",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Those galaxies won't be destroyed. They'll simply slip over a horizon. The space between us and them stretches so fast that their light can never close the gap. Nothing moves through space faster than light. But space itself is allowed to stretch faster than that.",
+      "headline": "OVER THE <em>COSMIC HORIZON</em>",
+      "sub": "Space itself is stretching",
+      "visual": {
+        "type": "diagram",
+        "spec": "Two galaxies on a stretching grid; a light ray travels between them while the grid lines spread apart faster than the ray advances, labeled cosmic horizon"
+      },
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "far-right",
+            "size": "s",
+            "anim": "shrink"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "And here's a genuinely unsettling idea. The faint afterglow of the Big Bang, the radiation that told us how the universe began, keeps getting stretched too. After several trillion years, it fades into insignificance. Future astronomers might never discover that there was a Big Bang at all.",
+      "headline": "THE EVIDENCE <em>DISAPPEARS</em>",
+      "sub": "The Big Bang's afterglow fades",
+      "visual": {
+        "type": "nasa",
+        "query": "Planck cosmic microwave background",
+        "note": "all-sky map of the cosmic microwave background"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "radio",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          }
+        ],
+        "bg": "space",
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "Let's keep going. Our galaxy is still shining, but it is running out of raw material. New stars form from clouds of gas, and that gas is being used up. In one detailed study of the far future, the supply of star-forming gas runs out after about one to ten trillion years.",
+      "headline": "RUNNING OUT OF <em>GAS</em>",
+      "sub": "In about 1 to 10 trillion years",
+      "visual": {
+        "type": "nasa",
+        "query": "star forming region nebula Hubble",
+        "note": "glowing gas cloud where new stars are forming"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "cloud",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "star",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "The longest survivors will be the smallest stars, red dwarfs. They burn their fuel so slowly that the tiniest ones can last around ten trillion years, hundreds of times the current age of the universe. Not one red dwarf has ever burned out yet. The universe is too young.",
+      "headline": "THE LAST STARS: <em>RED DWARFS</em>",
+      "sub": "Lifetimes of about 10 trillion years",
+      "visual": {
+        "type": "nasa",
+        "query": "red dwarf star illustration",
+        "note": "artist illustration of a small red dwarf star"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "red-circle",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "text": "10 TRILLION YEARS",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Around a hundred trillion years from now, ordinary star formation essentially ends. One by one, the last red dwarfs fade out. And then, for the first time since the early universe, the cosmos goes dark. Astronomers call what follows the Degenerate Era.",
+      "headline": "THE LIGHTS <em>GO OUT</em>",
+      "sub": "About 100 trillion years from now",
+      "visual": {
+        "type": "nasa",
+        "query": "dark nebula Bok globule",
+        "note": "dark cloud blotting out stars"
+      },
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "new-moon",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "DEGENERATE ERA",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "To put that in perspective, squeeze the entire history of the universe so far into a single second. On that scale, the age of shining stars would last about two hours. We are living in the first instant of it.",
+      "headline": "WE'RE IN <em>THE FIRST SECOND</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "Hubble galaxy cluster gravitational lensing",
+        "note": "galaxy cluster full of shining galaxies"
+      },
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "What's left are stellar corpses. White dwarfs slowly cooling toward black. Neutron stars. Brown dwarfs, failed stars that never ignited. And black holes. Every so often, two brown dwarfs collide and briefly spark a new star, a rare flicker in the dark.",
+      "headline": "A UNIVERSE OF <em>CORPSES</em>",
+      "sub": "White dwarfs, neutron stars, black holes",
+      "visual": {
+        "type": "nasa",
+        "query": "white dwarf star Sirius B Hubble",
+        "note": "Sirius A with its tiny white dwarf companion Sirius B"
+      },
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "white-circle",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "black-hole",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Even galaxies don't last. Over immense spans, close passes between dead stars fling many of them out into intergalactic space, on a timescale of roughly ten quintillion years or more. Much of what remains spirals into the central black hole.",
+      "headline": "GALAXIES <em>EVAPORATE</em>",
+      "sub": "About 10 to the 19th years",
+      "visual": {
+        "type": "nasa",
+        "query": "supermassive black hole galaxy center illustration",
+        "note": "illustration of a supermassive black hole at a galaxy's center"
+      },
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "star",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "black-hole",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Then comes a question physics still can't answer. Are protons forever? Some theories predict that protons, the particles at the heart of every atom, eventually decay. Experiments haven't seen it happen, so if they decay at all, it takes far longer than the universe has existed.",
+      "headline": "ARE <em>ATOMS</em> FOREVER?",
+      "sub": "Proton decay: an open question",
+      "visual": {
+        "type": "nasa",
+        "query": "Super-Kamiokande detector",
+        "note": "the giant water tank of a proton decay detector"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "atom-symbol",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "If they do decay, then one estimate puts their typical lifetime around ten to the thirty-seventh power years. Over that time, every white dwarf, every neutron star, every rock and every planet would slowly dissolve into radiation and a thin haze of particles.",
+      "headline": "EVEN ROCK <em>DISSOLVES</em>",
+      "sub": "If protons decay: 10 to the 37th years",
+      "visual": {
+        "type": "nasa",
+        "query": "asteroid field illustration",
+        "note": "drifting rocks in dark space"
+      },
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "By then, the only big things left would be black holes. You might think those, at least, last forever. But Stephen Hawking showed that black holes slowly leak energy, a faint glow now called Hawking radiation. Very, very slowly, they shrink.",
+      "headline": "EVEN BLACK HOLES <em>LEAK</em>",
+      "sub": "Hawking radiation",
+      "visual": {
+        "type": "nasa",
+        "query": "black hole accretion disk visualization",
+        "note": "visualization of a black hole with a glowing disk"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "black-hole",
+            "at": "right",
+            "size": "l",
+            "anim": "shrink"
+          }
+        ],
+        "text": "HAWKING RADIATION",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "How slowly? A black hole the mass of our Sun would take far longer than ten to the sixtieth power years to evaporate. The biggest ones, billions of times heavier, could last around ten to the hundredth power years. That's a one followed by a hundred zeros. A googol.",
+      "headline": "A <em>GOOGOL</em> YEARS",
+      "sub": "A 1 followed by 100 zeros",
+      "visual": {
+        "type": "nasa",
+        "query": "M87 black hole Event Horizon Telescope",
+        "note": "Event Horizon Telescope image of the M87 black hole"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "text": "A GOOGOL YEARS",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "To feel that number, give every atom in the observable universe its own clock, and let each one count off the entire age of the universe. Add them all up, and you'd still fall short of a googol years, by a factor of billions. Each last black hole would end in a final flash, and then be gone.",
+      "headline": "THE <em>FINAL FLASH</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "gamma ray burst illustration",
+        "note": "brief bright flash in dark space"
+      },
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "atom-symbol",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "After that, there's almost nothing. A few scattered particles and faint, ever-stretching radiation, spreading through an ever-larger, colder void. No stars, no planets, no events. Physicists call this the heat death of the universe, or the Big Freeze. Not with a bang, but a long fade.",
+      "headline": "THE <em>BIG FREEZE</em>",
+      "sub": "Also called the heat death",
+      "visual": {
+        "type": "diagram",
+        "spec": "A nearly black panel with a handful of faint scattered dots, labeled 'heat death', and a thermometer reading close to absolute zero"
+      },
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "snowflake",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "text": "BIG FREEZE",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "In a universe like that, nothing ever really happens again. No stars ignite, no planets form, nothing changes in any way you could notice. Some physicists argue that without change, even time itself would lose most of its meaning. The universe would go on, with no one and nothing to tell its story.",
+      "headline": "WHEN <em>NOTHING</em> HAPPENS",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "dark sky empty space stars fading",
+        "note": "nearly empty dark sky with a few faint points of light"
+      },
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "For a couple of decades, that was the favorite answer. But it all depends on dark energy staying constant. And here's the twist I promised. Recent measurements suggest dark energy might not be constant at all.",
+      "headline": "THE <em>TWIST</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "Kitt Peak Mayall telescope",
+        "note": "Mayall telescope dome at Kitt Peak, home of DESI"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "red-exclamation-mark",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "An instrument called DESI, on a telescope in Arizona, has mapped nearly fifteen million galaxies and quasars to trace how the universe expanded over billions of years. In twenty twenty-five, its scientists reported mounting hints that dark energy's influence may be weakening over time.",
+      "headline": "IS DARK ENERGY <em>WEAKENING?</em>",
+      "sub": "DESI: nearly 15 million galaxies and quasars",
+      "visual": {
+        "type": "nasa",
+        "query": "galaxy map large scale structure cosmic web",
+        "note": "three-dimensional map of the cosmic web of galaxies"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "telescope",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "milky-way",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "That isn't a discovery yet. Physicists measure confidence in units called sigma, and five sigma is the usual bar for a discovery. Depending on which other data you combine with DESI's, the evidence lands between about two point eight and four point two sigma. Strong hints, not proof.",
+      "headline": "STRONG HINTS, <em>NOT PROOF</em>",
+      "sub": "2.8 to 4.2 sigma; discovery needs 5",
+      "visual": {
+        "type": "diagram",
+        "spec": "A horizontal confidence bar from 0 to 5 sigma, with a shaded band from 2.8 to 4.2 labeled DESI hints, and a line at 5 labeled discovery"
+      },
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "bar-chart",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Why does it matter so much? Because dark energy decides the ending. If it stays constant, you get the long freeze. If it weakens enough, some models allow the expansion to slow, stop, and maybe even reverse, pulling everything back together in a Big Crunch.",
+      "headline": "OR A <em>BIG CRUNCH?</em>",
+      "sub": "",
+      "visual": {
+        "type": "diagram",
+        "spec": "Graph of the size of the universe over time with three futures branching from today: steady growth labeled Big Freeze, a curve that turns over and falls labeled Big Crunch, and a curve shooting upward labeled Big Rip"
+      },
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "l",
+            "anim": "shrink"
+          }
+        ],
+        "text": "BIG CRUNCH",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "And if dark energy did the opposite, growing stronger over time, you'd get the most violent ending of all, the Big Rip. Galaxies would be torn apart, then solar systems, then planets, and finally atoms themselves. The current hints point toward weakening, which makes a Rip look less likely.",
+      "headline": "OR THE <em>BIG RIP</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "galaxy torn apart tidal Hubble",
+        "note": "galaxy being stretched and pulled apart"
+      },
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "collision",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "text": "BIG RIP",
+        "bg": "space",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "There's one more possibility, and it's the strangest. Some physicists think the empty space of our universe might not be in its most stable state. If a tiny bubble of a more stable kind of space ever formed, it could spread outward at nearly the speed of light, rewriting the laws of physics as it went.",
+      "headline": "THE STRANGEST ENDING: <em>VACUUM DECAY</em>",
+      "sub": "",
+      "visual": {
+        "type": "diagram",
+        "spec": "A glowing expanding sphere inside a field of galaxies, labeled bubble of true vacuum, with arrows pointing outward"
+      },
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "bubbles",
+            "at": "right",
+            "size": "l",
+            "anim": "grow"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "Nobody knows if that can happen at all, and if it can, it may be so unlikely that it never does. You'd never see it coming, and there's no reason to lose sleep over it. But it's a reminder that we don't fully understand even empty space.",
+      "headline": "NO REASON TO <em>LOSE SLEEP</em>",
+      "sub": "A purely theoretical possibility",
+      "visual": {
+        "type": "nasa",
+        "query": "Hubble Ultra Deep Field infrared",
+        "note": "deep field of galaxies"
+      },
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "bubbles",
+            "at": "far-right",
+            "size": "s"
+          }
+        ],
+        "bg": "night",
+        "face": "sleep"
+      }
+    },
+    {
+      "narration": "So, how will the universe end? Freeze, crunch, rip, or something no one has thought of yet. The honest answer is that we don't know, and the measurements that will tell us are being made right now, in your lifetime.",
+      "headline": "THE HONEST ANSWER: <em>WE DON'T KNOW</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "Vera Rubin Observatory",
+        "note": "large survey telescope observatory at dusk"
+      },
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "red-question-mark",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "DESI keeps mapping. NASA's Nancy Grace Roman Space Telescope is designed to explore how dark energy behaves and has changed over time. Within the next several years, we may learn whether the hints are real, and with them, which ending the universe is heading toward.",
+      "headline": "THE ANSWER IS <em>COMING</em>",
+      "sub": "NASA's Roman Space Telescope",
+      "visual": {
+        "type": "nasa",
+        "query": "Nancy Grace Roman Space Telescope",
+        "note": "illustration of the Roman Space Telescope"
+      },
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "telescope",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "satellite",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "And here's the thought to take with you. On the scale of that whole journey, we live in a tiny sliver of time when stars still shine, galaxies are still visible, and the light of the Big Bang can still be seen. We arrived at exactly the moment when the universe can still tell its own story.",
+      "headline": "WE LIVE IN <em>THE BRIGHT PART</em>",
+      "sub": "",
+      "visual": {
+        "type": "nasa",
+        "query": "Milky Way over Earth horizon from space station",
+        "note": "the Milky Way above Earth's glowing horizon"
+      },
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "star",
+            "at": "top-left",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "night",
+        "camera": "zoom-out"
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "headline": "",
+      "sub": "",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

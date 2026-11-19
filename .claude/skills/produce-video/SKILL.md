@@ -24,7 +24,7 @@ The `/content` page is **read-only**: status table + a detail page per video wit
 
 ## Single steps
 
-`npm run content -- <command> <target>` — target is an id (`2026-11-23/cosmic-what-if__01-fell-into-a-black-hole`), a date, a folder prefix, or `all`.
+`npm run content -- <command> <target>` — target is an id (`2026-11-25/cosmic-what-if__03-hole-through-the-earth`), a date, a folder prefix, or `all`.
 
 | Command | Produces | Notes |
 |---|---|---|

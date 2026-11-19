@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * npm run content -- <lệnh> <đích>
- *   đích: id video (2026-11-23/cosmic-what-if__01-...), ngày (2026-11-23), hoặc "all"
+ *   đích: id video (2026-11-25/cosmic-what-if__03-...), ngày (2026-11-25), hoặc "all"
  *   lệnh: check (các lệnh khác được đăng ký thêm ở COMMANDS)
  */
 const fs = require('fs');

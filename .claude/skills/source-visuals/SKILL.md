@@ -79,7 +79,7 @@ The slide renderer puts the SVG on the right side over the channel's `diagramBg`
 - One idea per diagram. Proportions and balances must match the narration (a scale "in balance" is drawn level).
 - **Only label what a source states.** No guessed years, ranges or numbers.
 
-Look at an existing one first, e.g. `content/2026-11-23/inside-your-body__01-hold-your-breath/images/scene03.svg`.
+Look at an existing one first, e.g. `content/2026-11-25/cosmic-what-if__03-hole-through-the-earth/images/scene03.svg`.
 
 ## Common mistakes
 

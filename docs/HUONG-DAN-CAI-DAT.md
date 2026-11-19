@@ -320,7 +320,7 @@ Làm lần lượt. Bước nào lỗi thì xem [mục 13](#13-xử-lý-sự-c�
 
 5. **Build thử 1 video** (kiểm tra cả slide, giọng đọc, render):
    ```bash
-   npm run content -- build 2026-11-23/cosmic-what-if__01-fell-into-a-black-hole
+   npm run content -- build 2026-11-25/cosmic-what-if__03-hole-through-the-earth
    ```
    - Nếu đã chép `content/` từ máy cũ: in `đã đủ` (không cần làm gì).
    - Nếu chưa: tool chạy đủ các bước, khoảng 2–5 phút, rồi in `✅ … final.mp4`.
@@ -355,7 +355,7 @@ Trang `/content` chỉ để xem (trạng thái + nội dung đăng YouTube), kh
 | `npm run content -- uploaded <id> <link>` | Đánh dấu video đã đăng (link `-` để bỏ) |
 | `npm run content:search -- "từ khoá" --sheet out.jpg` | Tìm ảnh để chọn tay |
 
-`<mục tiêu>` là một id video (ví dụ `2026-11-23/cosmic-what-if__01-fell-into-a-black-hole`), một ngày (`2026-11-23`), hoặc `all`.
+`<mục tiêu>` là một id video (ví dụ `2026-11-25/cosmic-what-if__03-hole-through-the-earth`), một ngày (`2026-11-25`), hoặc `all`.
 
 ### Chạy dài (build nhiều video)
 
@@ -381,7 +381,7 @@ Trên Windows, chỉnh *Settings → System → Power* để máy không ngủ, 
 
 ## 12. Tuỳ chọn nâng cao (biến môi trường)
 
-Đặt trước lệnh (macOS/Linux), ví dụ `REVOICE=1 npm run content -- voice 2026-11-23`. Trên Windows PowerShell: `$env:REVOICE=1; npm run content -- voice 2026-11-23`.
+Đặt trước lệnh (macOS/Linux), ví dụ `REVOICE=1 npm run content -- voice 2026-11-25`. Trên Windows PowerShell: `$env:REVOICE=1; npm run content -- voice 2026-11-25`.
 
 | Biến | Tác dụng |
 |---|---|

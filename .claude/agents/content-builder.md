@@ -14,7 +14,7 @@ You run the content pipeline for this repo and report results. You do not write 
 - Single steps: `npm run -s content -- <check|images|slides|thumb|package|preview|voice|render> <target>`
 - Tests: `npm run -s test:content`
 
-Targets: a full id `2026-11-23/cosmic-what-if__01-fell-into-a-black-hole`, a date `2026-11-23`, or `all`.
+Targets: a full id `2026-11-25/cosmic-what-if__03-hole-through-the-earth`, a date `2026-11-25`, or `all`.
 
 ## How to work
 

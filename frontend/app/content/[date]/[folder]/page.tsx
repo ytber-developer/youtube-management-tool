@@ -20,12 +20,16 @@ function CopyBtn({ text, label = 'Copy' }: { text: string; label?: string }) {
   );
 }
 
-function Field({ label, copy, children }: { label: string; copy?: string; children: React.ReactNode }) {
+// "kola superdeep borehole" → "#kolasuperdeepborehole"; YouTube bỏ qua mọi hashtag nếu có quá 15
+const toHashtags = (tags: string[]) =>
+  Array.from(new Set(tags.map(t => t.replace(/[^a-zA-Z0-9]+/g, '')).filter(Boolean))).slice(0, 15).map(t => `#${t}`).join(' ');
+
+function Field({ label, copy, actions, children }: { label: string; copy?: string; actions?: React.ReactNode; children: React.ReactNode }) {
   return (
     <section className="bg-white border rounded-lg">
       <div className="flex items-center justify-between px-4 py-2 border-b">
         <h2 className="font-semibold text-sm text-gray-800">{label}</h2>
-        {copy !== undefined && <CopyBtn text={copy} />}
+        <div className="flex gap-2">{actions}{copy !== undefined && <CopyBtn text={copy} />}</div>
       </div>
       <div className="p-4 text-sm">{children}</div>
     </section>
@@ -118,9 +122,12 @@ export default function ContentDetailPage() {
         <div className="text-xs text-gray-400 mt-2">{d.description.length}/5000 ký tự</div>
       </Field>
 
-      <Field label="Tags" copy={d.tags.join(', ')}>
+      <Field label="Tags" actions={<><CopyBtn text={toHashtags(d.tags)} label="Copy #hashtag" /><CopyBtn text={d.tags.join(', ')} label="Copy tags" /></>}>
         <div className="flex flex-wrap gap-1">{d.tags.map(t => <span key={t} className="px-2 py-0.5 bg-gray-100 rounded text-xs">{t}</span>)}</div>
-        <div className="text-xs text-gray-400 mt-2">{d.tags.join(', ').length}/500 ký tự</div>
+        <div className="text-xs text-gray-500 mt-3 break-words">{toHashtags(d.tags)}</div>
+        <div className="text-xs text-gray-400 mt-2">
+          <b>Copy #hashtag</b> → dán vào cuối ô Description · <b>Copy tags</b> → dán vào ô Tags (Show more) · {d.tags.join(', ').length}/500 ký tự
+        </div>
       </Field>
     </div>
   );

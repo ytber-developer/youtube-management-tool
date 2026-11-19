@@ -44,6 +44,7 @@ const COMMANDS = {
   },
   async preview(id, dir) {
     const r = await require('./lib/video').renderPreview(dir);
+    if (r.skipped) { console.log(`⏭️  ${id}  video hoạt hình — không có preview`); return true; }
     console.log(`✅ ${id}  preview.mp4 ${r.duration.toFixed(1)}s`);
     return true;
   },

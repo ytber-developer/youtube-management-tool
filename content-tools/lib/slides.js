@@ -100,4 +100,7 @@ async function renderVideo(dir, { onProgress = () => {}, browser } = {}) {
   return { todo, count: files.length };
 }
 
-module.exports = { renderVideo };
+// Video hoạt hình không dùng slide
+const renderAny = (dir, opts) => (require('./video').animStyle(dir) ? Promise.resolve({ todo: 0, count: 0, skipped: 'anim' }) : renderVideo(dir, opts));
+
+module.exports = { renderVideo: renderAny };

@@ -53,4 +53,7 @@ async function render(dir, { browser } = {}) {
   }
 }
 
-module.exports = { render };
+// Video hoạt hình: thumbnail vẽ bằng nhân vật (lib/animate.js)
+const renderAny = (dir, opts) => (require('./video').animStyle(dir) ? require('./animate').renderThumb(dir) : render(dir, opts));
+
+module.exports = { render: renderAny };

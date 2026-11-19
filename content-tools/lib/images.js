@@ -267,6 +267,7 @@ async function fetchOne(v, used, out) {
  */
 async function fetchForVideo(dir, { onProgress = () => {}, onlyMissing = true, ai = true, illustrate = process.env.ILLUSTRATE !== '0' } = {}) {
   const script = JSON.parse(fs.readFileSync(path.join(dir, 'script.json'), 'utf8'));
+  if (script.style === 'anim') return { ok: true, missing: [], skipped: 'anim' }; // hoạt hình: không lấy ảnh
   const imgDir = path.join(dir, 'images'); fs.mkdirSync(imgDir, { recursive: true });
   const credFile = path.join(dir, 'credits.json');
   const old = fs.existsSync(credFile) ? JSON.parse(fs.readFileSync(credFile, 'utf8')) : [];

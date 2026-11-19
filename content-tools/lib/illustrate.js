@@ -145,4 +145,4 @@ async function renderBatch(jobs, channel, onProgress = () => {}) {
   return done;
 }
 
-module.exports = { keywords, pickIcons, creditFor, renderBatch, iconExists };
+module.exports = { keywords, pickIcons, creditFor, renderBatch, iconExists, svgOf };

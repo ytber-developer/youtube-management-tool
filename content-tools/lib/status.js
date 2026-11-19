@@ -44,6 +44,16 @@ function videoStatus(dir) {
   const fresh = (file, after) => (!fs.existsSync(file) ? 'todo' : mtime(file) >= after ? 'done' : 'stale');
 
   const voiceFile = path.join(dir, 'voice.mp3');
+  if (script.style === 'anim') { // hoạt hình: không có ảnh/slide/preview; video cuối phụ thuộc kịch bản + giọng
+    missingScenes.length = 0; imagesNeed = 0;
+    const anim = {
+      script: check.ok ? 'done' : 'error', images: 'done', review: review.imagesReviewed ? 'done' : 'todo', slides: 'done', preview: 'done',
+      voice: fs.existsSync(voiceFile) ? 'done' : 'todo',
+      final: fresh(path.join(dir, 'final.mp4'), Math.max(mtime(path.join(dir, 'script.json')), mtime(voiceFile))),
+      uploaded: review.uploadedUrl ? 'done' : 'todo',
+    };
+    return finish(anim);
+  }
   const steps = {
     script: check.ok ? 'done' : 'error',
     images: missingScenes.length ? 'todo' : 'done',
@@ -54,6 +64,9 @@ function videoStatus(dir) {
     final: fresh(path.join(dir, 'final.mp4'), Math.max(slidesNewest, mtime(voiceFile))),
     uploaded: review.uploadedUrl ? 'done' : 'todo',
   };
+  return finish(steps);
+
+  function finish(steps) {
   const pending = STAGES.find(([k]) => steps[k] !== 'done');
   const totalWords = scenes.reduce((a, s) => a + words(s.narration || ''), 0);
   return {
@@ -68,6 +81,7 @@ function videoStatus(dir) {
     hasThumbnail: fs.existsSync(path.join(dir, 'thumbnail.png')),
     uploadedUrl: review.uploadedUrl || null,
   };
+  }
 }
 
 module.exports = { videoStatus, STAGES };

@@ -23,7 +23,9 @@ function creditLines(credits) {
 
 function metadataMarkdown(script, credits, { date }) {
   const ch = CHANNELS[script.channel] || {};
-  const lines = creditLines(credits);
+  const lines = creditLines(script.style === 'anim'
+    ? [{ credit: `Original animation by ${(CHANNELS[script.channel] || {}).name || 'the channel'}` }, { credit: 'Icons: Fluent Emoji by Microsoft (MIT License)', url: 'https://github.com/microsoft/fluentui-emoji' }, ...credits]
+    : credits);
   const description = script.description.trim() + (lines.length ? `\n\nImages:\n${lines.join('\n')}` : '');
   const chars = narrationText(script).length;
   const minutes = (script.scenes.reduce((a, s) => a + words(s.narration), 0) / CHANNELS.WPM).toFixed(1);

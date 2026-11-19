@@ -132,8 +132,12 @@ async function render(dir, { mode, onProgress = () => {} }) {
   return { video: out, srt: mode === 'final' ? path.join(dir, 'captions.srt') : null, duration: total };
 }
 
+// Video hoạt hình (script.style === 'anim') dựng bằng lib/animate.js; không có preview
+const animStyle = (dir) => { try { return JSON.parse(fs.readFileSync(path.join(dir, 'script.json'), 'utf8')).style === 'anim'; } catch { return false; } };
+
 module.exports = {
-  renderPreview: (dir, opts = {}) => render(dir, { ...opts, mode: 'preview' }),
-  renderFinal: (dir, opts = {}) => render(dir, { ...opts, mode: 'final' }),
+  renderPreview: (dir, opts = {}) => (animStyle(dir) ? Promise.resolve({ skipped: 'anim' }) : render(dir, { ...opts, mode: 'preview' })),
+  renderFinal: (dir, opts = {}) => (animStyle(dir) ? require('./animate').renderFinal(dir, opts) : render(dir, { ...opts, mode: 'final' })),
+  animStyle,
   sceneSentences,
 };

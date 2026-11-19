@@ -16,7 +16,7 @@
 - Narration speed for estimates: 163 words/minute. Word count tolerance ±7% of `target_minutes × 163`.
 - Allowed image licenses: NASA, Public Domain, CC0, CC BY (any version), Pixabay Content License. Never BY-SA, NC, ND.
 - Gitignored inside `content/`: `images/*.jpg`, `slides/`, `thumbnail.png`, `preview.mp4`, `voice.mp3`, `final.mp4`, `captions.srt`, `caps/`. Tracked: `script.json`, `credits.json`, `narration.txt`, `metadata.md`, `review.json`, `images/*.svg`, `content/schedule.json`.
-- API only reads/writes inside `content/`; no shell command built from request input. Commits as `ytber-developer <thuanlv0410@gmail.com>`.
+- API only reads/writes inside `content/`; no shell command built from request input. Commits use the repo's configured git identity (`ytber-developer`).
 - Slides 1920×1080, thumbnails 1280×720, video H.264 30 fps + AAC.
 
 ## Review Focus

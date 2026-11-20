@@ -1,13 +1,13 @@
 /**
  * Video hoạt hình nhân vật (script.style === "anim"): mỗi cảnh có `anim` = { action, props[], face, text, bg, camera }.
- * voice.mp3 → canh câu (silencedetect + DP) → mốc thời gian từng cảnh → Chrome vẽ từng khung (anim/stage.js +
+ * voice.mp3 → mốc câu (voice.timings.json, dự phòng silencedetect + DP) → mốc thời gian từng cảnh → Chrome vẽ từng khung (anim/stage.js +
  * anim/character.js) → JPEG đẩy thẳng vào ffmpeg → final.mp4 + captions.srt. Thumbnail: renderThumb().
  */
 const fs = require('fs');
 const path = require('path');
 const { spawn } = require('child_process');
 const { launchBrowser } = require('./theme');
-const { detectPauses, alignSentences } = require('./align');
+const { sentenceTimings } = require('./align');
 const { sceneSentences } = require('./video');
 const { buildCues, toSrt } = require('./captions');
 const { CAPTION_DISPLAY } = require('./channels');
@@ -58,9 +58,8 @@ async function renderFinal(dir, { onProgress = () => {} } = {}) {
   const voice = path.join(dir, 'voice.mp3');
   if (!fs.existsSync(voice)) throw new Error('Chưa có voice.mp3');
   onProgress(0.02, 'canh câu');
-  const { pauses, duration } = await detectPauses(voice);
   const flat = sceneSentences(script);
-  const timings = alignSentences(flat.map(s => s.text), pauses, duration);
+  const { timings, duration } = await sentenceTimings(dir, flat.map(s => s.text), voice);
   const { scenes, total } = timeline(script, timings, duration);
   const display = (txt) => CAPTION_DISPLAY.reduce((a, [re, rep]) => a.replace(re, rep), txt);
   const cues = buildCues(flat.map(s => display(s.text)), timings);

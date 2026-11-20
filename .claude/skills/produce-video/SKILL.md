@@ -59,7 +59,7 @@ npm run content:setup -- tts   # voice only
 
 ## Voices (Kokoro, Apache-2.0, offline)
 
-Set per channel in `content-tools/lib/channels.js` (`ttsVoice`, optional `ttsSpeed`). Current: Cosmic `am_michael`, Body `af_heart`. Others: `af_bella`, `af_nicole`, `am_fenrir`, `am_puck`. Kokoro reads each sentence separately with fixed gaps (0.35 s sentence, 0.8 s scene) so caption alignment is exact. Kokoro reads a bit slower than 163 wpm → videos run ~10–20% longer than `target_minutes`; raise `ttsSpeed` (e.g. 1.1) if that matters.
+Set per channel in `content-tools/lib/channels.js` (`ttsVoice`, optional `ttsSpeed`). Current: Cosmic `am_michael`, Body `af_heart`. Others: `af_bella`, `af_nicole`, `am_fenrir`, `am_puck`. Kokoro reads each sentence separately, trims its own trailing silence, inserts fixed gaps (0.5 s sentence, 0.9 s scene) and writes the exact start/end of every sentence to `voice.timings.json`; `render` uses that file, so captions match the voice exactly. Voices made before this file existed (or hand-recorded ElevenLabs takes) fall back to silence detection, which drifts on long videos — re-voice them with `REVOICE=1`. Kokoro reads a bit slower than 163 wpm → videos run ~10–20% longer than `target_minutes`; raise `ttsSpeed` (e.g. 1.1) if that matters.
 
 ElevenLabs is optional: save the take as the video's `voice.mp3` (convert m4a/wav with `ffmpeg -i take.m4a -codec:a libmp3lame -q:a 2 voice.mp3`), then `npm run content -- render <id>`.
 
@@ -79,7 +79,7 @@ ElevenLabs is optional: save the take as the video's `voice.mp3` (convert m4a/wa
 | AI images never appear, scenes stay missing | `.venv-img` missing → `npm run content:setup -- img`; Windows without NVIDIA → hand-fix scenes |
 | Mac runs out of memory during AI images | close Chrome/other apps; 16 GB is the minimum |
 | ffmpeg "No such filter: drawtext/subtitles" | Expected — captions are PNG overlays. Don't add those filters. |
-| Captions drift | voice skipped/merged sentences or narration changed after recording → `REVOICE=1 npm run content -- voice <id>` |
+| Captions drift | no `voice.timings.json` next to voice.mp3 (old or hand-recorded voice), or narration changed after voicing → `REVOICE=1 npm run content -- voice <id>` |
 | `build` stops "Còn thiếu ảnh cảnh …" | no free image → fix per source-visuals (pin / Commons / SVG); AI only if the user enables `AI_IMAGES=1` |
 | UI shows nothing | backend `PORT` (.env) ≠ frontend `NEXT_PUBLIC_API_URL` |
 | Upload rejected | only real audio .mp3/.m4a/.wav ≤ 50 MB (checked with ffprobe) |

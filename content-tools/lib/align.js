@@ -1,10 +1,15 @@
 /**
- * Canh thời gian từng câu theo giọng đọc thật, không cần API:
+ * Mốc thời gian từng câu của giọng đọc:
+ *  - sentenceTimings: ưu tiên voice.timings.json (Kokoro ghi lúc tạo giọng — chính xác, xem tts.js);
+ *    không có / lời đã khác (giọng cũ, giọng thu tay) → đo khoảng lặng rồi canh:
  *  - detectPauses: ffmpeg silencedetect tìm các khoảng lặng
  *  - alignSentences: quy hoạch động chọn N-1 khoảng lặng (theo thứ tự) làm ranh giới câu,
  *    gần nhất với mốc dự kiến (tỉ lệ theo số ký tự), ưu tiên khoảng lặng dài.
- *    Thiếu khoảng lặng → dùng mốc dự kiến (ranh giới "ảo").
+ *    Thiếu khoảng lặng → dùng mốc dự kiến (ranh giới "ảo"). Cách này hay lệch ở video dài
+ *    (Kokoro tự thêm im lặng ~1s sau câu, ngắt ở dấu phẩy ≥0.3s) — chỉ là dự phòng.
  */
+const fs = require('fs');
+const path = require('path');
 const { execFile } = require('child_process');
 
 const LAMBDA = 2;      // thưởng cho khoảng lặng dài (s² trên mỗi giây lặng)
@@ -84,4 +89,25 @@ function estimateTimings(sentences, wpm = 163, gap = 0.35) {
   });
 }
 
-module.exports = { splitSentences, detectPauses, alignSentences, estimateTimings };
+/** voice.timings.json của thư mục video, chỉ khi còn khớp đúng từng câu với kịch bản hiện tại; không thì null */
+function loadTimings(dir, sentences) {
+  const file = path.join(dir, 'voice.timings.json');
+  if (!fs.existsSync(file)) return null;
+  let data;
+  try { data = JSON.parse(fs.readFileSync(file, 'utf8')); } catch { return null; }
+  if (!Array.isArray(data.timings) || !Array.isArray(data.sentences)) return null;
+  if (data.timings.length !== sentences.length || data.sentences.some((s, i) => s !== sentences[i])) return null;
+  const timings = data.timings.map(x => ({ start: +x.start, end: +x.end }));
+  if (timings.some((x, i) => !(x.end > x.start) || (i > 0 && x.start < timings[i - 1].end))) return null;
+  return { timings, duration: +data.duration || timings[timings.length - 1].end };
+}
+
+/** Mốc câu để render: { timings, duration, source: 'timings' | 'silence' } */
+async function sentenceTimings(dir, sentences, voiceFile = path.join(dir, 'voice.mp3')) {
+  const exact = loadTimings(dir, sentences);
+  if (exact) return { ...exact, source: 'timings' };
+  const { pauses, duration } = await detectPauses(voiceFile);
+  return { timings: alignSentences(sentences, pauses, duration), duration, source: 'silence' };
+}
+
+module.exports = { splitSentences, detectPauses, alignSentences, estimateTimings, loadTimings, sentenceTimings };

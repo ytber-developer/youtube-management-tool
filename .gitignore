@@ -22,6 +22,8 @@ content/**/thumbnail.png
 content/**/preview.mp4
 content/**/voice.mp3
 content/**/voice.txt
+content/**/voice.timings.json
+content/**/voice.part.timings.json
 content/**/final.mp4
 content/**/captions.srt
 .superpowers/
@@ -55,3 +57,7 @@ frontend/.env.*
 /accounts*.csv
 /proxies*.txt
 content/**/.anim-thumb
+
+# Log chạy local + file quét tạm của docs
+logs/
+docs/codebase/.codebase-scan.txt

@@ -2,7 +2,38 @@ const test = require('node:test');
 const assert = require('node:assert');
 const path = require('path');
 const fs = require('fs');
+const os = require('os');
 const align = require('../lib/align');
+
+function timingsDir(sentences, timings, duration) {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'timings-'));
+  fs.writeFileSync(path.join(dir, 'voice.timings.json'), JSON.stringify({ sentences, timings, duration }));
+  return dir;
+}
+
+test('loadTimings returns the exact timings only while the sentences still match', () => {
+  const sentences = ['One.', 'Two.'];
+  const dir = timingsDir(sentences, [{ start: 0.3, end: 1.2 }, { start: 1.7, end: 2.9 }], 3.0);
+  const r = align.loadTimings(dir, sentences);
+  assert.deepStrictEqual(r.timings, [{ start: 0.3, end: 1.2 }, { start: 1.7, end: 2.9 }]);
+  assert.strictEqual(r.duration, 3.0);
+  assert.strictEqual(align.loadTimings(dir, ['One.', 'Two!']), null, 'narration edited after voicing');
+  assert.strictEqual(align.loadTimings(dir, ['One.']), null, 'sentence count changed');
+  assert.strictEqual(align.loadTimings(path.join(dir, 'missing'), sentences), null, 'no file (hand-recorded voice)');
+});
+
+test('loadTimings rejects overlapping or empty timings', () => {
+  const dir = timingsDir(['A.', 'B.'], [{ start: 0, end: 2 }, { start: 1.5, end: 3 }], 3);
+  assert.strictEqual(align.loadTimings(dir, ['A.', 'B.']), null);
+});
+
+test('sentenceTimings prefers the exact timings over silence detection', async () => {
+  const dir = timingsDir(['A.', 'B.'], [{ start: 0.3, end: 1 }, { start: 1.5, end: 2 }], 2.2);
+  const r = await align.sentenceTimings(dir, ['A.', 'B.'], path.join(dir, 'does-not-exist.mp3'));
+  assert.strictEqual(r.source, 'timings');
+  assert.strictEqual(r.duration, 2.2);
+  assert.strictEqual(r.timings.length, 2);
+});
 
 const script = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'fixtures/2026-11-23/cosmic-what-if__01-fell-into-a-black-hole/script.json'), 'utf8'));
 const TEXT = script.scenes.map(s => s.narration).join(' ');

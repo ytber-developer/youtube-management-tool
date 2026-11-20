@@ -18,3 +18,8 @@ test('buildJob uses the channel voice unless one is given', () => {
   assert.strictEqual(buildJob({ ...script, channel: 'inside-your-body' }, '/tmp/v.wav').voice, 'af_heart');
   assert.strictEqual(buildJob(script, '/tmp/v.wav', { voice: 'am_fenrir', speed: 0.95 }).voice, 'am_fenrir');
 });
+
+test('buildJob asks Kokoro for per-sentence timings when given a path', () => {
+  assert.strictEqual(buildJob(script, '/tmp/v.wav').timings, null);
+  assert.strictEqual(buildJob(script, '/tmp/v.wav', { timings: '/tmp/v.timings.json' }).timings, '/tmp/v.timings.json');
+});

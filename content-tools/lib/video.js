@@ -1,7 +1,7 @@
 /**
  * Ghép video từ slides + phụ đề (+ giọng đọc):
  *   renderPreview(dir) → preview.mp4 (chưa lồng tiếng, thời lượng ước tính 163 từ/phút, phụ đề ước tính)
- *   renderFinal(dir)   → final.mp4 + captions.srt (cần voice.mp3; canh câu theo khoảng lặng thật)
+ *   renderFinal(dir)   → final.mp4 + captions.srt (cần voice.mp3; mốc câu từ voice.timings.json, dự phòng canh theo khoảng lặng)
  * Mỗi cảnh zoom chậm (xen kẽ vào/ra), chuyển cảnh mờ 0.6s ở ranh giới cảnh, phụ đề PNG trong suốt,
  * cảnh outro không in phụ đề (vẫn có trong SRT), giữ thêm 1.2s cuối.
  */
@@ -65,10 +65,10 @@ async function render(dir, { mode, onProgress = () => {} }) {
   let timings, total;
   if (mode === 'final') {
     if (!fs.existsSync(voice)) throw new Error('Chưa có voice.mp3');
-    onProgress(0.02, 'phân tích giọng đọc');
-    const { pauses, duration } = await align.detectPauses(voice);
-    timings = align.alignSentences(sents.map(s => s.text), pauses, duration);
-    total = duration + TAIL;
+    onProgress(0.02, 'canh câu');
+    const r = await align.sentenceTimings(dir, sents.map(s => s.text), voice);
+    timings = r.timings;
+    total = r.duration + TAIL;
   } else {
     timings = align.estimateTimings(sents.map(s => s.text));
     total = timings[timings.length - 1].end + TAIL;

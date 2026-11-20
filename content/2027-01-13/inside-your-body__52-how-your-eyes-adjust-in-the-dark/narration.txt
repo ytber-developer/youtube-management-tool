@@ -1,0 +1,65 @@
+You walk into a dark theater and cannot see a single seat. Minutes later, you can see the whole room. How?
+
+Let's follow you. You step in from a sunny afternoon. The lobby was bright. The theater is nearly black. For a few moments, you are practically blind, and you shuffle forward with your hands out.
+
+That moment of blindness is real, and it has a name. Scientists call the gradual recovery dark adaptation. It is your eyes changing their settings from daytime mode to nighttime mode.
+
+To understand it, meet the back of your eye. The retina is a thin layer of tissue lined with light-sensing cells called photoreceptors. They turn light into electrical signals that your brain reads as vision.
+
+There are two main types. Cones handle bright light and fine detail, and they work fast. Rods handle dim light. Your eyes are really running two different systems, and the one you use depends on how much light there is.
+
+In bright daylight, your cones do most of the work. They are packed most densely at the center of your retina, the spot you use to read this sentence. That is why you can see sharp detail and color in the sun.
+
+Rods are the night specialists. A science writer at Scientific American notes that rods can respond reliably to a single particle of light, called a photon. That is about as sensitive as a light detector can possibly be.
+
+So why did you go blind in that theater? Because after bright light, your rods were not ready. They had been switched off by the daylight, and they needed time to recover before they could help.
+
+Here is the key. Rods use a light-sensitive pigment called rhodopsin. A medical review describes it as built from a protein plus a form of vitamin A. When light hits it, the pigment changes shape and is said to be bleached.
+
+A bleached pigment cannot catch light until it is rebuilt. Bright daylight bleaches a lot of rhodopsin. So when you walk into the dark, your rods are mostly empty, like a camera with no film.
+
+The rebuilding takes time. Scientists measuring the retina found that the time course of dark adaptation matched the time course of rhodopsin regeneration. As the pigment returns, your night vision returns with it.
+
+Back in the theater, the first few minutes belong to your cones. They adapt quickly, so after a short while you can make out the glow of the screen and the dim outline of the aisle.
+
+Then, somewhere around five to eight minutes in, something clicks. The rods begin to take over. Researchers call this switch the rod-cone break, and it is when sensitivity starts to improve a lot.
+
+Now seats appear. You see rows, then faces, then the floor steps. Your eyes keep getting more sensitive, minute after minute, and you did not have to do anything but wait.
+
+So how long until you are fully adapted? Scientific American says dark adaptation typically takes between twenty and thirty minutes to reach its maximum, depending on how bright your surroundings were before.
+
+Other measurements show it can run even longer. In one classic test, the curve of sensitivity kept dropping until about forty minutes in the dark, after a very bright light. So the exact time depends on the situation.
+
+Why so slow? Scientific American suggests the probable reason is the rate at which retinal, a vitamin A relative, reaches the photoreceptors. Rebuilding pigment is a chemical delivery job, and it cannot be rushed.
+
+Now for the part you can see in a mirror. In the dark, your pupils open wider. The pupil is the black circle in the middle of your eye, and a muscle in the iris makes it larger to let in more light.
+
+Here is a number. A perception course at New York University notes the pupil ranges from about one or two millimeters to about eight millimeters across, letting in roughly sixteen to sixty-four times more light.
+
+But that same source adds a twist. Only a small part of dark adaptation is due to the pupil. Most of the improvement comes from the retina itself, from the rods and their rebuilt pigment.
+
+Think of it as two dials. The pupil is a quick, small dial that opens in seconds. The retina is a big, slow dial that keeps turning for many minutes. You need both to see well at night.
+
+Rods also have a color preference. Their sensitivity peaks around five hundred seven nanometers, in the blue-green part of the spectrum, while cones peak nearer yellow-green. In dim light, green objects can look brightest.
+
+Now let's talk about red light. Maybe you have seen a dim red flashlight used to read star charts at night. There is a reason people choose it, and it comes back to how rods respond to different colors.
+
+Researchers who study dark adaptation report that at very long, deep red wavelengths, rods and cones have similar sensitivity, and the rod-cone break disappears. In other words, deep red is a color rods barely care about.
+
+So the idea, which scientists consider reasonable, is that dim red light bleaches less of your rhodopsin than white or blue light does. It lets you read a map without wiping out your night vision.
+
+That is why stargazers give their eyes time, and why a sudden bright light is annoying: it can set your night vision back. If you want to see the Milky Way, patience really does matter.
+
+Sometimes the system does not work as it should. Night blindness means poor vision at night or in dim light, and it can make walking through a dark room or driving after dark hard.
+
+MedlinePlus lists several causes, including cataracts, nearsightedness, certain medicines, and, rarely, a lack of vitamin A. Some causes are treatable and some are inherited, so the cause matters.
+
+So when should you see a doctor? If your trouble seeing in dim light keeps happening or affects your daily life, MedlinePlus says to contact an eye doctor, and to avoid night driving until the doctor approves.
+
+Keep in mind that taking in more vitamin A on your own is not the answer. Too much can be harmful, so ask a health provider before using any supplement. An eye exam can find the real cause.
+
+So here is what happened in that theater. Your cones helped first. Your pupils opened. Your rods rebuilt their pigment, and slowly, over about twenty to thirty minutes, the dark became readable.
+
+The next time you step into a dark room, remember that your eyes are quietly doing chemistry. Give them a few minutes, skip the bright screen, and the night will slowly come into focus.
+
+Follow Inside Your Body for more of the science of you.

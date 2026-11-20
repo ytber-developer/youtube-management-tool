@@ -1,0 +1,729 @@
+{
+  "channel": "cosmic-what-if",
+  "style": "anim",
+  "number": 48,
+  "slug": "sun-ran-out-of-fuel",
+  "target_minutes": 6.8,
+  "title": "What If the Sun Ran Out of Fuel? Red Giant to White Dwarf",
+  "thumbnail_text": "SUN RUNS OUT",
+  "description": "The Sun will not last forever. We follow its real future, step by step, from a slowly brightening Sun that boils Earth's oceans, to a swollen red giant, to a glowing nebula and a faint white dwarf. We also look at how the habitable zone moves outward and which numbers scientists are sure about and which they are not.\n\nSources:\n- NASA Science, Life and Death of Stars: Aging Into Gianthood: https://science.nasa.gov/exoplanets/resources/life-and-death/chapter-6/\n- Wikipedia, Sun: https://en.wikipedia.org/wiki/Sun\n- Wikipedia, Future of Earth: https://en.wikipedia.org/wiki/Future_of_Earth\n- Wikipedia, White dwarf: https://en.wikipedia.org/wiki/White_dwarf\n- Wikipedia, Circumstellar habitable zone: https://en.wikipedia.org/wiki/Circumstellar_habitable_zone",
+  "tags": [
+    "sun",
+    "what if",
+    "red giant",
+    "white dwarf",
+    "habitable zone",
+    "end of the sun",
+    "future of earth",
+    "stellar evolution",
+    "nuclear fusion",
+    "planetary nebula",
+    "astronomy",
+    "science",
+    "cosmic what if"
+  ],
+  "sources": [
+    {
+      "title": "NASA Science, Life and Death of Stars: Aging Into Gianthood",
+      "url": "https://science.nasa.gov/exoplanets/resources/life-and-death/chapter-6/"
+    },
+    {
+      "title": "Wikipedia, Sun",
+      "url": "https://en.wikipedia.org/wiki/Sun"
+    },
+    {
+      "title": "Wikipedia, Future of Earth",
+      "url": "https://en.wikipedia.org/wiki/Future_of_Earth"
+    },
+    {
+      "title": "Wikipedia, White dwarf",
+      "url": "https://en.wikipedia.org/wiki/White_dwarf"
+    },
+    {
+      "title": "Wikipedia, Circumstellar habitable zone",
+      "url": "https://en.wikipedia.org/wiki/Circumstellar_habitable_zone"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "sun",
+        "at": "right",
+        "size": "xl",
+        "anim": "pulse"
+      },
+      {
+        "icon": "fire",
+        "at": "top-left",
+        "size": "l",
+        "anim": "pulse"
+      }
+    ],
+    "bg": "space"
+  },
+  "scenes": [
+    {
+      "narration": "What if the Sun ran out of fuel? Would the lights just go out, or is the real story far stranger?",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "battery",
+            "at": "top-left",
+            "size": "s",
+            "anim": "shrink"
+          }
+        ],
+        "face": "shock"
+      }
+    },
+    {
+      "narration": "Good news first. The Sun is about four point six billion years old, and it is only roughly halfway through its main life. Nothing will happen tomorrow, next year, or even in a million years.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "calendar",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "grin",
+        "text": "HALFWAY THROUGH"
+      }
+    },
+    {
+      "narration": "Here is how it works. Deep in the core, the Sun fuses hydrogen into helium. That turns more than four billion kilograms of matter into energy every single second. It is a nuclear furnace.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "xl",
+            "anim": "pulse"
+          },
+          {
+            "icon": "fire",
+            "at": "bottom-right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "smile",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "That sounds like a lot, and it is, about four million tonnes every second. But the Sun is huge. So far it has used up only about three hundredths of one percent of its mass.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "balance-scale",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "m",
+            "anim": "shrink"
+          }
+        ],
+        "face": "think",
+        "text": "TINY FRACTION"
+      }
+    },
+    {
+      "narration": "Eventually the hydrogen in the core runs out. Scientists say that happens in about five billion years, and NASA puts the start of the red giant stage at about six. Fusion in the core stops, and the core contracts.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "battery",
+            "at": "right",
+            "size": "l",
+            "anim": "shrink"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "left",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "face": "worry",
+        "text": "5 BILLION YEARS"
+      }
+    },
+    {
+      "narration": "But Earth's trouble starts much sooner. The Sun is slowly getting brighter, by about one percent every one hundred ten million years. You will not notice that in a lifetime, but over geologic time, it adds up.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "m",
+            "anim": "grow"
+          },
+          {
+            "icon": "thermometer",
+            "at": "right",
+            "size": "m",
+            "anim": "grow"
+          }
+        ],
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "In about one billion years, the Sun will be around ten percent brighter. That could trigger a moist greenhouse, where the oceans start to evaporate. Estimates say the seas are lost in about one to one and a half billion years.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "hot-face",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "face": "sick",
+        "text": "OCEANS EVAPORATE"
+      }
+    },
+    {
+      "narration": "Even earlier, in roughly six hundred million years, carbon dioxide in the air could fall too low for the most common kind of plant photosynthesis. Crops and forests as we know them would struggle.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "seedling",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "cloud",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "By about two point eight billion years, models put Earth's average surface temperature near four hundred twenty two kelvin. That is about one hundred forty nine degrees Celsius, hotter than boiling water.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "thermometer",
+            "at": "right",
+            "size": "l",
+            "anim": "grow"
+          },
+          {
+            "icon": "hot-face",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "sick",
+        "text": "149 DEGREES C"
+      }
+    },
+    {
+      "narration": "Scientists call the zone where liquid water can last on a planet the habitable zone. As the Sun brightens, that zone moves outward. The early Sun was only about seventy five percent as bright as now.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "center",
+            "size": "s"
+          },
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "face": "think",
+        "text": "THE HABITABLE ZONE"
+      }
+    },
+    {
+      "narration": "Continued brightening will eventually put Earth outside the Sun's habitable zone, and that happens before the red giant stage. So long before anything dramatic happens to the Sun itself, Earth stops being a comfortable home.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "Now fast forward to the end of the Sun's main life. When the core hydrogen is gone, hydrogen keeps burning in a shell around it. The outer layers swell, first into a subgiant, and then a red giant.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "xl",
+            "anim": "grow"
+          },
+          {
+            "icon": "fire",
+            "at": "bottom-right",
+            "size": "m"
+          }
+        ],
+        "face": "shock",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "This expansion takes about two billion years. At its peak, the Sun may shine more than one thousand times brighter than today, and be about two hundred fifty six times wider, roughly one point two times Earth's distance.",
+      "anim": {
+        "action": "grow",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "center",
+            "size": "xl",
+            "anim": "grow"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "bottom-right",
+            "size": "s"
+          }
+        ],
+        "face": "shock",
+        "text": "256 TIMES WIDER"
+      }
+    },
+    {
+      "narration": "Mercury and Venus are expected to be swallowed. Mars is expected to survive. And Earth? NASA says its fate is less certain, and that recent models suggest it probably will not survive intact.",
+      "anim": {
+        "action": "swallowed",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "xl",
+            "anim": "grow"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "s",
+            "anim": "shrink"
+          }
+        ],
+        "face": "shock",
+        "text": "EARTH'S FATE?"
+      }
+    },
+    {
+      "narration": "Some estimates say Earth could be engulfed in about seven point six billion years, but that number is uncertain. A 2026 study even suggests Earth may survive. Either way, it would not be a place for living things.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "fire",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "think",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "Why might Earth escape? The Sun sheds a lot of mass as a red giant, roughly a third in one estimate, so its gravity weakens and the planets' orbits drift outward. Earth's orbit could grow to at most one point five times its current size.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "NASA's version says the outer planets will move out to about twice their current distance. Neptune, now about thirty times Earth's distance from the Sun, would settle near sixty. The whole solar system gets bigger.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "smile",
+        "text": "NEPTUNE MOVES OUT"
+      }
+    },
+    {
+      "narration": "From any surviving world, the sky would be dominated by a giant, glowing red disc. NASA notes the Sun could grow big enough to fill the sky. It would look like the end of the world, because it would be.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "top",
+            "size": "xl",
+            "anim": "grow"
+          }
+        ],
+        "face": "shock",
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "Then comes the helium flash. The core becomes hot enough to ignite helium, and in minutes about six percent of the core turns into carbon. The Sun briefly shrinks to about ten times its current size.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l",
+            "anim": "shrink"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "left",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "shock",
+        "text": "HELIUM FLASH",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "After that, helium burns quietly in the core for about one hundred million years. Models give the Sun a calmer stretch here. During this time, the habitable zone moves much farther out.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "In fact, one study estimates that a habitable zone around the Sun, in this stage, would sit at roughly seven to twenty two times Earth's distance, and last about one billion years. Ice would melt where it never has before.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "snowflake",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "droplet",
+            "at": "left",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "face": "smile",
+        "text": "ICE MELTS"
+      }
+    },
+    {
+      "narration": "Would moons like Titan become warm paradises? In temperature terms, maybe. But intense stellar winds would likely strip the thin atmospheres of such small worlds, so one analysis concludes Titan would not be habitable after all.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "cloud",
+            "at": "left",
+            "size": "m",
+            "anim": "fade-in"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "Then the Sun enters one last unstable phase, the asymptotic giant branch. Its brightness can reach about five thousand times today's level. The Sun puffs and pulses, and the outer layers are blown into space.",
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "shock"
+      }
+    },
+    {
+      "narration": "About half the Sun's mass is shed as a glowing shell of gas, a planetary nebula. It spreads out and fades in about ten thousand years, which is only a blink on these timescales.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "sparkles",
+            "at": "right",
+            "size": "xl",
+            "anim": "grow"
+          },
+          {
+            "icon": "star",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "grin",
+        "text": "PLANETARY NEBULA"
+      }
+    },
+    {
+      "narration": "What remains in the middle is a white dwarf. It has about fifty four percent of the Sun's present mass, mostly carbon and oxygen, but it is only roughly Earth-sized. Squeezed that tightly, it is incredibly dense.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "star",
+            "at": "center",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "bottom-right",
+            "size": "s"
+          }
+        ],
+        "face": "smile",
+        "text": "WHITE DWARF"
+      }
+    },
+    {
+      "narration": "How dense? Scientists compare it to about one tonne in every cubic centimeter. A piece the size of a sugar cube would weigh about a tonne, roughly like a small car. It cannot fuse anything anymore.",
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "cookie",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "balance-scale",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "shock"
+      }
+    },
+    {
+      "narration": "No fusion means no new fuel. A white dwarf shines only from leftover heat, and it slowly cools and fades over trillions of years. The oldest known white dwarfs still glow at a few thousand kelvin.",
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "star",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "snowflake",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "sleep",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Could a planet still be habitable there? One astronomer argues that white dwarfs might support a relatively brief habitable zone, with planets moving in close. But that is a theory, and it would be a very odd place to live.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "star",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "ringed-planet",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "Why no supernova? The Sun is not massive enough to become a neutron star or black hole. Stars like it end as quiet white dwarfs, and in many trillions of years may fade into a cold black dwarf, though none exist yet.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "star",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          }
+        ],
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "So the Sun's story runs in order. Brighter in hundreds of millions of years, oceans lost in about a billion, red giant in five to six billion, then a nebula, then a white dwarf that cools for trillions of years.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "calendar",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "smile",
+        "text": "BILLIONS OF YEARS"
+      }
+    },
+    {
+      "narration": "So, what if the Sun ran out of fuel? It would not simply go dark. First Earth would overheat, then the Sun would swell into a red giant, then collapse into a glowing white dwarf that slowly fades away.",
+      "anim": {
+        "action": "wave",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "star",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

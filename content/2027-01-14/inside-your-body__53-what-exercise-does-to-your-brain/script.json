@@ -1,0 +1,749 @@
+{
+  "channel": "inside-your-body",
+  "number": 53,
+  "slug": "what-exercise-does-to-your-brain",
+  "style": "anim",
+  "target_minutes": 7.1,
+  "title": "What Exercise Does to Your Brain (It Starts After One Workout)",
+  "thumbnail_text": "EXERCISE REWIRES YOU",
+  "description": "Exercise is not only for your muscles. Follow one brisk walk to see what the research says about blood flow to the brain, a growth-supporting protein called BDNF, the hippocampus and memory, mood and the so-called runner's high (which scientists now think is more than just endorphins), plus what the CDC and the World Health Organization suggest for how much activity adults need. An honest look at what is solid and what is still uncertain.\n\nSources:\n- CDC, Adult Physical Activity Guidelines: https://www.cdc.gov/physical-activity-basics/guidelines/adults.html\n- CDC, Benefits of Physical Activity: https://www.cdc.gov/physical-activity-basics/benefits/index.html\n- WHO, Physical activity fact sheet: https://www.who.int/news-room/fact-sheets/detail/physical-activity\n- PNAS (2011), Exercise training increases size of hippocampus and improves memory: https://pubmed.ncbi.nlm.nih.gov/21282661/\n- Brain Research (2026), Acute cardiovascular exercise and circulating neurotrophic factors in humans: A systematic review and meta-analysis: https://pubmed.ncbi.nlm.nih.gov/42276185/\n- The Neuroscientist (2026), The Neurochemical Orchestra of the Runner's High: https://pubmed.ncbi.nlm.nih.gov/42097982/\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": [
+    "exercise and the brain",
+    "what exercise does to your brain",
+    "BDNF",
+    "hippocampus",
+    "runner's high",
+    "exercise and memory",
+    "exercise and mood",
+    "physical activity guidelines",
+    "brain health",
+    "human body",
+    "science explained",
+    "inside your body"
+  ],
+  "sources": [
+    {
+      "title": "CDC, Adult Physical Activity Guidelines",
+      "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html"
+    },
+    {
+      "title": "CDC, Benefits of Physical Activity",
+      "url": "https://www.cdc.gov/physical-activity-basics/benefits/index.html"
+    },
+    {
+      "title": "WHO, Physical activity fact sheet",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/physical-activity"
+    },
+    {
+      "title": "PNAS (2011), Exercise training increases size of hippocampus and improves memory",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21282661/"
+    },
+    {
+      "title": "Brain Research (2026), Acute cardiovascular exercise and circulating neurotrophic factors in humans: A systematic review and meta-analysis",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42276185/"
+    },
+    {
+      "title": "The Neuroscientist (2026), The Neurochemical Orchestra of the Runner's High",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42097982/"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "run",
+    "props": [
+      {
+        "icon": "person-running",
+        "at": "right",
+        "size": "l",
+        "anim": "bob"
+      },
+      {
+        "icon": "brain",
+        "at": "top-left",
+        "size": "m",
+        "anim": "pulse"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "You take a walk to clear your head, and it works. Your thoughts sharpen and your mood lifts. What is exercise doing to your brain?",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "person-walking",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "brain",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "park",
+        "face": "think",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "Let's follow you on a brisk walk. You lace up your shoes, step outside, and your body switches into motion. Your heart speeds up, your breathing deepens, and your muscles start asking for more fuel.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "running-shoe",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "bg": "park",
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Most people think of exercise as something for the heart, lungs, and muscles. But the CDC says some brain benefits of physical activity happen right away, after a single session of moderate-to-vigorous activity.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "text": "BRAIN BENEFITS NOW"
+      }
+    },
+    {
+      "narration": "Here is the first thing that changes. Your heart pumps harder, and more blood flows through your body. Researchers who study the brain note that physical activity training increases blood flow, called perfusion, in the hippocampus.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "brain",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "text": "MORE BLOOD FLOW"
+      }
+    },
+    {
+      "narration": "The hippocampus is a seahorse-shaped region deep in your brain that plays a big role in forming new memories. Think of it as the brain's librarian, filing the day's events so you can find them later.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "books",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "text": "THE HIPPOCAMPUS"
+      }
+    },
+    {
+      "narration": "Keep moving, and something chemical happens too. Exercise is linked with a protein called B D N F, short for brain-derived neurotrophic factor. Scientists think it helps support the growth and survival of nerve cells.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "person-running",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "park",
+        "face": "grin",
+        "text": "B D N F"
+      }
+    },
+    {
+      "narration": "Think of B D N F as fertilizer for the brain. It is not literal, but it is a handy picture. A protein that helps brain cells grow, form connections, and adapt is exactly what you want around when you are learning.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "seedling",
+            "at": "right",
+            "size": "m",
+            "anim": "grow"
+          },
+          {
+            "icon": "brain",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Here is the science behind that. A 2026 review pooled twenty-two studies with six hundred twenty-eight healthy adults and found a moderate, short-lived rise in blood levels of B D N F after a single bout of aerobic exercise.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "bar-chart",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "stopwatch",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "face": "shock",
+        "text": "22 STUDIES"
+      }
+    },
+    {
+      "narration": "But scientists are careful here. The rise was larger after moderate-to-vigorous effort, and larger in younger adults. And a blood measurement is not the same as measuring the brain itself, so the full picture is still being worked out.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "droplet",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "face": "think"
+      }
+    },
+    {
+      "narration": "The same review found the evidence for two other growth-related chemicals was too limited and inconsistent to draw conclusions. That is how real science works. Some results are solid, and some are still maybe.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "red-question-mark",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "bar-chart",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "Now the big long-term result. In a randomized trial with one hundred twenty older adults, aerobic exercise training increased the size of the hippocampus by about two percent and improved spatial memory.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "trophy",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "brain",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "lab",
+        "face": "grin",
+        "text": "HIPPOCAMPUS GREW 2%"
+      }
+    },
+    {
+      "narration": "That is notable because the hippocampus normally shrinks in late adulthood. The researchers said the two percent gain effectively reversed one to two years of age-related loss. The group that did not train saw declines instead.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "calendar",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "down-arrow",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "face": "shock",
+        "text": "REVERSED 1-2 YEARS"
+      }
+    },
+    {
+      "narration": "The study also found that larger hippocampus volume went along with higher blood levels of B D N F. That fits the idea that this protein is one piece of the puzzle, though it does not prove it is the only piece.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "bar-chart",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "seedling",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "Next, mood. Ask a regular walker or runner, and many will say they feel better afterward. The CDC says adults may feel less anxious for a short time after activity, and that regular activity can lower the risk of depression.",
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "smiling-face-with-sunglasses",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "bg": "park",
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "You have probably heard of the runner's high, a feeling of calm happiness during or after a long run. For years, people explained it as endorphins, the body's natural pain relievers released during effort.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "person-running",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "park",
+        "face": "grin",
+        "text": "RUNNER'S HIGH"
+      }
+    },
+    {
+      "narration": "But recent research is more nuanced. A 2026 review says moderate-intensity endurance exercise reliably raises circulating endocannabinoids, natural molecules in your own body, which track with feelings of calm and reduced pain.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "red-question-mark",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "lab",
+        "face": "think"
+      }
+    },
+    {
+      "narration": "The review's conclusion is that the runner's high appears to be a team effort. Endorphins, endocannabinoids, serotonin, dopamine, and others all seem to play parts. It is not a single chemical switch, and not everyone feels it.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "musical-note",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "text": "A TEAM EFFORT"
+      }
+    },
+    {
+      "narration": "So if you have never felt a runner's high, nothing is wrong with you. Research suggests it is not guaranteed, and it may show up more with longer, steadier effort. A better mood after a walk still counts.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "footprints",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "park",
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "What about thinking? The CDC says regular physical activity can help adults keep their thinking, learning, and judgment skills sharp as they age, and that children aged six to thirteen show improved thinking after being active.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "books",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "brain",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "room",
+        "face": "smile",
+        "text": "SHARPER THINKING"
+      }
+    },
+    {
+      "narration": "So a walk before a test, or a brisk break in the middle of a long work day, is not wasted time. It may help your brain take in and hold on to information. The evidence is strongest for regular, repeated activity.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "books",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Activity can even help you sleep. The CDC says physical activity can help you sleep better, and WHO says regular activity is linked with better sleep. And since sleep consolidates memory, the benefits may stack.",
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "bed",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "crescent-moon",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "night",
+        "face": "sleep"
+      }
+    },
+    {
+      "narration": "So how much activity do health agencies suggest? For adults, the CDC guideline is at least one hundred fifty minutes of moderate-intensity aerobic activity each week. That works out to about thirty minutes a day, five days a week.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "tear-off-calendar",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "stopwatch",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "text": "150 MINUTES A WEEK"
+      }
+    },
+    {
+      "narration": "If you prefer harder workouts, the CDC says seventy-five minutes of vigorous activity per week counts, or an equivalent mix. It also suggests muscle-strengthening on two or more days a week, working all the major muscle groups.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "person-lifting-weights",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "flexed-biceps",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "text": "STRENGTH TWICE A WEEK"
+      }
+    },
+    {
+      "narration": "The World Health Organization gives the same one hundred fifty minute target, and adds a line that matters: any amount of physical activity is better than none. You do not have to be perfect to benefit.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "trophy",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "check-mark-button",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "room",
+        "face": "smile",
+        "text": "SOME BEATS NONE"
+      }
+    },
+    {
+      "narration": "The WHO also says about thirty-one percent of adults worldwide, roughly one point eight billion people, do not meet the one hundred fifty minute guideline. If that is you, you are far from alone.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "bar-chart",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "face": "shock",
+        "text": "31% DON'T MEET IT"
+      }
+    },
+    {
+      "narration": "The CDC adds that going beyond the guideline provides extra health benefits. But for most people, the best exercise plan is the one you will actually do, so pick something you enjoy and start small.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "bicycle",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "park",
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Walking, dancing, cycling, swimming, gardening, and playing with kids can all count. Moderate-intensity usually means you are breathing harder but can still talk. It should feel like effort, not like punishment.",
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "soccer-ball",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "person-walking",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "park",
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "A word of caution, because this is a science video, not a personal prescription. Everyone starts from a different place. If you have a health condition, are pregnant, or have not been active for a while, talk with a doctor about what is right for you.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "stethoscope",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "calendar",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "room",
+        "face": "smile",
+        "text": "ASK YOUR DOCTOR"
+      }
+    },
+    {
+      "narration": "Also stop and get medical help if exercise brings chest pain, severe shortness of breath, dizziness, or fainting. Those are not signs to push through. They are signs that your body is asking for a professional to take a look.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "stethoscope",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "room",
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "And remember what we do not know. Many exercise studies are small or short, and brain effects vary from person to person. Scientists are still learning how much, what kind, and how often works best for the brain.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "brain",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "face": "think"
+      }
+    },
+    {
+      "narration": "So here is the story. Exercise sends more blood to your brain, raises a growth-supporting protein, and releases a mix of mood chemicals. Over months, it may even help protect the hippocampus, your memory hub.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "The next time you walk, jog, or dance, remember that your muscles are not the only thing getting stronger. Your brain is taking part too, and it will quietly thank you tomorrow.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "person-running",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "brain",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "park",
+        "face": "grin",
+        "text": "YOUR BRAIN JOINS IN"
+      }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

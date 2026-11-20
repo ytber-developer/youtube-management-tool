@@ -1,0 +1,651 @@
+{
+  "channel": "cosmic-what-if",
+  "style": "anim",
+  "number": 42,
+  "slug": "shrunk-to-an-atom",
+  "target_minutes": 6.4,
+  "title": "What If You Shrank to the Size of an Atom?",
+  "thumbnail_text": "SHRUNK TO AN ATOM",
+  "description": "You press the shrink button and keep going: past a hair, a cell, and into a single atom. What would you really find? A fuzzy electron cloud instead of tiny planets, a nucleus tens of thousands of times smaller than the atom, quantum rules that stop you from sinking through the floor, and a very honest answer about what we can and cannot say.\n\nSources:\n- Wikipedia, Atom: https://en.wikipedia.org/wiki/Atom\n- Wikipedia, Atomic orbital: https://en.wikipedia.org/wiki/Atomic_orbital\n- Wikipedia, Atomic nucleus: https://en.wikipedia.org/wiki/Atomic_nucleus",
+  "tags": [
+    "what if you shrank to the size of an atom",
+    "atom",
+    "electron cloud",
+    "nucleus",
+    "quantum physics",
+    "quarks",
+    "pauli exclusion principle",
+    "empty space atoms",
+    "size of an atom",
+    "what if",
+    "physics",
+    "science",
+    "cosmic what if"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia, Atom",
+      "url": "https://en.wikipedia.org/wiki/Atom"
+    },
+    {
+      "title": "Wikipedia, Atomic orbital",
+      "url": "https://en.wikipedia.org/wiki/Atomic_orbital"
+    },
+    {
+      "title": "Wikipedia, Atomic nucleus",
+      "url": "https://en.wikipedia.org/wiki/Atomic_nucleus"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "shrink",
+    "props": [
+      {
+        "icon": "atom-symbol",
+        "at": "right",
+        "size": "xl",
+        "anim": "spin"
+      },
+      {
+        "icon": "microscope",
+        "at": "top-left",
+        "size": "l",
+        "anim": "bob"
+      }
+    ],
+    "bg": "space"
+  },
+  "scenes": [
+    {
+      "narration": "What if you shrank, smaller and smaller, until you were the size of a single atom?",
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "atom-symbol",
+            "at": "right",
+            "size": "xl",
+            "anim": "pulse"
+          },
+          {
+            "icon": "microscope",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "face": "shock"
+      }
+    },
+    {
+      "narration": "Fair warning. This trip is a thought experiment. Real atoms are so strange that no movie gets it right. But we can follow the science honestly, and the truth is weirder than any cartoon.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "atom-symbol",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Start at your normal size, holding one human hair. That hair is about one million carbon atoms wide. Let that sink in. One million atoms, side by side, just to cross a single hair.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "dna",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "think",
+        "text": "ONE MILLION ATOMS"
+      }
+    },
+    {
+      "narration": "So you press the shrink button. You pass the width of a hair, then a grain of dust, then a single cell. The world below you keeps rearranging itself into smaller and smaller pieces.",
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "microscope",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "microbe",
+            "at": "left",
+            "size": "m",
+            "anim": "grow"
+          }
+        ],
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "Eventually you hit the bottom of the ladder: atoms. A typical atom is about one hundred picometers across. That is one ten-billionth of a meter, and your whole body is built from them.",
+      "anim": {
+        "action": "fall-toward",
+        "props": [
+          {
+            "icon": "atom-symbol",
+            "at": "right",
+            "size": "xl",
+            "anim": "grow"
+          }
+        ],
+        "text": "ONE ATOM",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "How many of them are there? A single diamond of one carat holds about ten thousand billion billion carbon atoms. That is a one with twenty-two zeros after it, in something you can hold between two fingers.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "sparkles",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "magnifying-glass-tilted-right",
+            "at": "left",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "face": "shock",
+        "text": "TEN BILLION TRILLION"
+      }
+    },
+    {
+      "narration": "Now you are standing in front of one carbon atom, ready to step in. What do you see? Here is the first honest surprise. You do not see a tiny solar system, with electrons orbiting like little planets.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "atom-symbol",
+            "at": "bubble",
+            "size": "m"
+          },
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "s",
+            "anim": "orbit"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "That picture is a popular old idea, and it is wrong. Electrons do not travel along neat paths. Instead, physicists describe them with an atomic orbital, a mathematical map of where you are likely to find the electron.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "puzzle-piece",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "crystal-ball",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "So the electron is more like a fuzzy cloud than a dot. Scientists call it an electron cloud. Some clouds are round, like a ball. Others are shaped like two lobes, like a dumbbell, pointing along different directions.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "sparkles",
+            "at": "right",
+            "size": "xl",
+            "anim": "pulse"
+          },
+          {
+            "icon": "ghost",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "face": "smile",
+        "text": "ELECTRON CLOUD"
+      }
+    },
+    {
+      "narration": "Step inside, and the cloud is thinnest in the places the electron hardly ever goes. Nothing flows by like wind. There is no solid surface to stand on, and no floor. The ground you were hoping for does not exist.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "m",
+            "anim": "fade-in"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "face": "worry",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Why can't the electron just fall into the middle? A rule of quantum physics gets in the way. Squeezing an electron into a smaller space forces it to move around more wildly, which costs it energy. So it settles in a balance.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "magnet",
+            "at": "bubble",
+            "size": "m"
+          },
+          {
+            "icon": "gear",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "Another rule, the Pauli exclusion principle, says an orbital can hold at most two electrons, and they must spin in opposite ways. That rule is a big reason atoms have layers, and why matter does not simply collapse.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "balance-scale",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "puzzle-piece",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "text": "PAULI RULE"
+      }
+    },
+    {
+      "narration": "And here is a real twist. When you lean on a wall, your hand never actually touches it. The electron clouds of your atoms and the wall's atoms push back on each other, and that push is what you feel as solid.",
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "brick",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "text": "NOTHING TOUCHES"
+      }
+    },
+    {
+      "narration": "Okay, now let us look for the middle. Somewhere in the center of this cloud is the nucleus. You search, and search, and then find it: a tiny dot, so small you almost miss it.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "The nucleus is about tens of thousands of times smaller across than the whole atom. Scientists say an atom is roughly twenty-seven thousand to sixty thousand times wider than its nucleus, depending on the element.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "atom-symbol",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "bar-chart",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "TINY NUCLEUS"
+      }
+    },
+    {
+      "narration": "Try a picture. If the nucleus were the size of a marble, the atom around it would stretch for a few hundred meters, wider than several football fields. And that space is mostly empty, apart from the electron cloud.",
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "crystal-ball",
+            "at": "right",
+            "size": "s"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "far-right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "face": "grin",
+        "text": "MARBLE VERSUS STADIUM"
+      }
+    },
+    {
+      "narration": "This is where the old saying comes from, that you are mostly empty space. It is a good one-liner, but be careful. The space is not nothing. It is filled by the electron cloud and by the forces between charged particles.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "ghost",
+            "at": "right",
+            "size": "m",
+            "anim": "fade-in"
+          },
+          {
+            "icon": "thinking-face",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "Now the surprise about weight. More than ninety-nine percent of the atom's mass sits in that tiny nucleus. A proton is about eighteen hundred thirty-six times heavier than an electron, so the cloud is light as a feather.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "balance-scale",
+            "at": "right",
+            "size": "xl",
+            "anim": "shake"
+          }
+        ],
+        "face": "shock",
+        "text": "99.94 PERCENT"
+      }
+    },
+    {
+      "narration": "Move in even closer, to the very middle. The nucleus is built from protons and neutrons, held together by the strong nuclear force. That force is mighty, but it reaches only a few femtometers, a very short distance.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "magnet",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "atom-symbol",
+            "at": "left",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "text": "STRONG FORCE",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "Zoom in again, and even protons are not the end. A proton is made of three smaller particles called quarks, two up quarks and one down quark. A neutron has one up quark and two down quarks.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "puzzle-piece",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "text": "THREE QUARKS"
+      }
+    },
+    {
+      "narration": "Electrons, on the other hand, seem to have no inner pieces at all. As far as scientists can tell, they are not made of anything smaller. So the cloud around you is made of a different kind of thing.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "glowing-star",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "eyes",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "What would it feel like to be there? Honestly, nobody knows, because feeling and seeing depend on light and forces that behave very differently at this scale. At this size, it would be nothing like walking.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "ghost",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "thinking-face",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "worry",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Even your senses would give out. Your eyes need light waves, and light waves are far bigger than an atom. A lone atom would be a blur of probability, and you would be one too.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "eyes",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "light-bulb",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "shock"
+      }
+    },
+    {
+      "narration": "In fact, quantum physics says an electron's exact position can never be pinned down. You would not see a particle sitting still. You would see likelihoods, a cloud that can only tell you where the electron is likely to be.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "dizzy",
+            "at": "top-left",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "sparkles",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "face": "shock",
+        "text": "LIKELY, NOT EXACT"
+      }
+    },
+    {
+      "narration": "Then comes a mind-bender. Your body is built from billions upon billions of atoms. If you really were just one atom wide, there would be no room left for a brain, or for thoughts.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "m",
+            "anim": "fade-in"
+          },
+          {
+            "icon": "puzzle-piece",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "sick"
+      }
+    },
+    {
+      "narration": "That is the honest ending of the trip. At atom size, nothing like a human could exist. You exist only because countless atoms, each following these strange rules, add up to something big enough to think.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "dna",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "atom-symbol",
+            "at": "top-left",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "So the next time you sit in a chair, remember this. The chair is not pushing you from a hard surface. It is a crowd of electron clouds, held in place by quantum rules, politely refusing to overlap.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "hot-beverage",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "atom-symbol",
+            "at": "bottom-right",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "So, what if you shrank to the size of an atom? You would find a fuzzy cloud, a nucleus thousands of times smaller than the atom, and rules that make solid things possible. It would be the strangest trip ever.",
+      "anim": {
+        "action": "wave",
+        "props": [
+          {
+            "icon": "atom-symbol",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "milky-way",
+            "at": "bottom-right",
+            "size": "s"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

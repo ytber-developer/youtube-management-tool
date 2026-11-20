@@ -1,0 +1,710 @@
+{
+  "channel": "cosmic-what-if",
+  "style": "anim",
+  "number": 41,
+  "slug": "a-day-on-mercury",
+  "target_minutes": 6.4,
+  "title": "What If You Spent a Day on Mercury? The Sun Goes Backward",
+  "thumbnail_text": "A DAY ON MERCURY",
+  "description": "A day on Mercury lasts about 176 Earth days, which is two Mercury years. The sunrise can stop and reverse, the afternoon heat reaches about 430 degrees Celsius, and the night drops to about minus 180. And yet there is ice hiding in the dark at the poles. We walk through one very long day on the closest planet to the Sun.\n\nSources:\n- Wikipedia, Mercury (planet): https://en.wikipedia.org/wiki/Mercury_(planet)\n- NASA Science, Mercury Facts: https://science.nasa.gov/mercury/facts/\n- Wikipedia, Spin-orbit resonance: https://en.wikipedia.org/wiki/Spin%E2%80%93orbit_resonance",
+  "tags": [
+    "mercury",
+    "a day on mercury",
+    "what if you lived on mercury",
+    "mercury day length",
+    "spin orbit resonance",
+    "mercury ice",
+    "closest planet to the sun",
+    "solar system",
+    "what if",
+    "astronomy",
+    "science",
+    "cosmic what if"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia, Mercury (planet)",
+      "url": "https://en.wikipedia.org/wiki/Mercury_(planet)"
+    },
+    {
+      "title": "NASA Science, Mercury Facts",
+      "url": "https://science.nasa.gov/mercury/facts/"
+    },
+    {
+      "title": "Wikipedia, Spin-orbit resonance",
+      "url": "https://en.wikipedia.org/wiki/Spin%E2%80%93orbit_resonance"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "sun",
+        "at": "right",
+        "size": "xl",
+        "anim": "pulse"
+      },
+      {
+        "icon": "thermometer",
+        "at": "top-left",
+        "size": "l",
+        "anim": "shake"
+      }
+    ],
+    "bg": "space"
+  },
+  "scenes": [
+    {
+      "narration": "What if you spent one whole day on Mercury, the closest planet to the Sun?",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "xl",
+            "anim": "pulse"
+          },
+          {
+            "icon": "hot-face",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "face": "shock"
+      }
+    },
+    {
+      "narration": "Before you pack, here is the catch. A day on Mercury does not last twenty-four hours. It does not last a week. A single sunrise-to-sunrise day there lasts about one hundred seventy-six Earth days.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "That is longer than a Mercury year, which is only about eighty-eight Earth days. So on Mercury, a day lasts roughly two years. Let's find out how that strange math works, and whether you would survive it.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "l",
+            "anim": "orbit"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "text": "ONE DAY, TWO YEARS"
+      }
+    },
+    {
+      "narration": "First, the landing. Mercury is the smallest planet in our solar system, with a radius of about twenty-four hundred forty kilometers. That is only a little more than one third of Earth's width.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "rocket",
+            "at": "top-left",
+            "size": "m",
+            "anim": "approach"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "You step out, and the gravity feels gentle. Mercury's surface gravity is about thirty-eight percent of Earth's, so you would bounce along like an astronaut, and a heavy backpack would feel light.",
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "rock",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "38 PERCENT GRAVITY"
+      }
+    },
+    {
+      "narration": "Look up, and the sky is black, even in daytime. Mercury has no real atmosphere, only a super thin exosphere made mostly of oxygen, sodium, hydrogen, helium and potassium. You could not breathe it, and it would not even stop a sound.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "sparkles",
+            "at": "top",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "new-moon-face",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "face": "shock"
+      }
+    },
+    {
+      "narration": "Now, the Sun. Mercury is on average about fifty-eight million kilometers from it, and at its closest only about forty-six million. So the Sun hangs in the sky looking far bigger than it does from home.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "xl",
+            "anim": "grow"
+          }
+        ],
+        "face": "shock",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "Here is where the day gets weird. Mercury spins slowly, one full turn in about fifty-nine Earth days. And it circles the Sun in eighty-eight. Put those together, and you get a three to two dance.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "text": "3:2 DANCE"
+      }
+    },
+    {
+      "narration": "Scientists call it a spin-orbit resonance. Mercury turns exactly three times for every two trips around the Sun. Astronomers once thought it kept one face to the Sun, like the Moon does to Earth, until radar measurements in nineteen sixty-five showed otherwise.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "telescope",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "satellite-antenna",
+            "at": "left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Do the math. Three spins for every two orbits means one sunrise to the next takes two full orbits. Two times eighty-eight is one hundred seventy-six. That is the length of a Mercury day.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "ringed-planet",
+            "at": "left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "face": "grin",
+        "text": "TWO YEARS"
+      }
+    },
+    {
+      "narration": "That is why a sunrise takes forever. Each trip around the Sun, a spot on Mercury only gets halfway through its day. It takes two full years to see the Sun come back to the same place in your sky.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "sleep"
+      }
+    },
+    {
+      "narration": "Now watch the morning. The Sun creeps up over the horizon, and it is already scorching. Then, at certain spots on Mercury, something spooky happens. The Sun stops climbing.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l",
+            "anim": "grow"
+          }
+        ],
+        "text": "SUNRISE"
+      }
+    },
+    {
+      "narration": "It pauses. Then it slides backward toward the horizon, pauses again, and finally rises once more. Near its closest point to the Sun, Mercury's orbital speed briefly beats its spin, so the Sun appears to reverse in your sky.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "xl",
+            "anim": "fall"
+          },
+          {
+            "icon": "dizzy",
+            "at": "top-left",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "face": "shock",
+        "text": "THE SUN REVERSES",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "Why does it happen? Mercury's orbit is a stretched oval, from about forty-six million kilometers out to about seventy million. Near the closest point it speeds up, and for a short while its orbital motion beats its spin.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "l",
+            "anim": "orbit"
+          },
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "Imagine that. A sunrise, a sunset, and a second sunrise, all in a row. Nothing on Earth can prepare you for a sky that changes its mind.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Okay, now the heat. By midday, the surface can reach about four hundred thirty degrees Celsius, around eight hundred degrees Fahrenheit. That is far hotter than any kitchen oven.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "thermometer",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "hot-face",
+            "at": "top-left",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "fire",
+            "at": "bottom-right",
+            "size": "m"
+          }
+        ],
+        "face": "sick",
+        "text": "430 °C"
+      }
+    },
+    {
+      "narration": "Your suit would need serious cooling, and you would need shade whenever you could find it. With no air to carry heat away, the ground cooks you from below, and the Sun cooks you from above.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "fire",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "hot-face",
+            "at": "top-left",
+            "size": "m"
+          }
+        ],
+        "face": "sick",
+        "text": "NO SHADE"
+      }
+    },
+    {
+      "narration": "But hold on, because that is only half of the story. The Sun does not stay up forever. Eventually, after about eighty-eight Earth days, it finally sets, and the sky goes black again.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "new-moon-face",
+            "at": "top-left",
+            "size": "m",
+            "anim": "fade-in"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Then the cold arrives, fast. Without an atmosphere to hold in warmth, heat leaks straight into space. At night, the temperature plunges to about minus one hundred eighty degrees Celsius.",
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "cold-face",
+            "at": "top-left",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "snowflake",
+            "at": "right",
+            "size": "xl",
+            "anim": "pulse"
+          }
+        ],
+        "face": "worry",
+        "text": "−180 °C"
+      }
+    },
+    {
+      "narration": "That is a swing of about six hundred degrees in one day. Few places in the solar system have such a violent temperature difference, and it is all because Mercury has no thick air blanket to soften it.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "thermometer",
+            "at": "right",
+            "size": "xl",
+            "anim": "shake"
+          },
+          {
+            "icon": "snowflake",
+            "at": "left",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "fire",
+            "at": "top-left",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Even on the planet's sunny side, the poles stay chilly. Scientists say temperatures near the poles never rise above about minus ninety-three degrees Celsius, so a little patch of cold hides at both ends of the planet.",
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "snowflake",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "cold-face",
+            "at": "top-left",
+            "size": "m"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "Another night worth knowing about: it is long. Your night lasts for months. Staring at the stars, you would wait a very long time for dawn.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "new-moon-face",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "glowing-star",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "sleep",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "But now for the twist. On this scorched planet, there is ice. At the north and south poles, there are deep craters whose floors never see sunlight, and they stay colder than about minus one hundred seventy degrees Celsius.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "ice",
+            "at": "right",
+            "size": "xl",
+            "anim": "pulse"
+          },
+          {
+            "icon": "snowflake",
+            "at": "top-left",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "text": "ICE ON MERCURY"
+      }
+    },
+    {
+      "narration": "Because the craters are always in shadow, the cold never lifts. Scientists estimate they may hold between one hundred billion and one trillion metric tons of water ice, frozen in the dark for ages.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "ice",
+            "at": "left",
+            "size": "m"
+          },
+          {
+            "icon": "cold-face",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "NASA's MESSENGER spacecraft helped confirm the polar ice before its mission ended in twenty fifteen. Real water ice, on the planet closest to the Sun. Nature loves a plot twist.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "l",
+            "anim": "orbit"
+          },
+          {
+            "icon": "ice",
+            "at": "left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "The rest of Mercury is battered and bare. Its surface is covered in craters, like our Moon, because there is no weather and no air to wear them away. Its magnetic field is only about one percent as strong as Earth's.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "rock",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "magnet",
+            "at": "left",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "text": "CRATERS EVERYWHERE"
+      }
+    },
+    {
+      "narration": "So if you did spend a day on Mercury, here is the schedule. Morning heat, a reversing sunrise, a blazing noon that lasts weeks, a long evening, and then a freezing night that lasts for months.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "m"
+          },
+          {
+            "icon": "full-moon",
+            "at": "far-right",
+            "size": "s"
+          }
+        ],
+        "text": "MERCURY DAY"
+      }
+    },
+    {
+      "narration": "In the end, no one could survive it without a lot of technology. But the cold, shadowed poles hold ice, which makes them the most tempting places to look.",
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "ice",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "rocket",
+            "at": "left",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "thermometer",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Right now, spacecraft are doing the exploring for us. BepiColombo is heading to Mercury to study its surface, its core and its magnetic field up close. Many of its mysteries still wait to be solved.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "xl",
+            "anim": "orbit"
+          },
+          {
+            "icon": "ringed-planet",
+            "at": "top-left",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "So what if you spent a day on Mercury? You would get a reversing sunrise, an oven by day, a freezer by night, and ice hiding in the dark. And you would still be only halfway through a single day.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "ringed-planet",
+            "at": "top-left",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "ice",
+            "at": "bottom-right",
+            "size": "s"
+          }
+        ],
+        "face": "grin",
+        "text": "ONE LONG DAY"
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

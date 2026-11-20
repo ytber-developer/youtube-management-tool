@@ -1,0 +1,676 @@
+{
+  "channel": "inside-your-body",
+  "number": 38,
+  "slug": "how-your-kidneys-clean-blood",
+  "style": "anim",
+  "target_minutes": 6.2,
+  "title": "How Your Kidneys Clean Your Blood: 180 Liters a Day",
+  "thumbnail_text": "180 LITERS A DAY",
+  "description": "Two fist-sized organs filter about one hundred eighty liters of fluid every day, and then take almost all of it back. Follow a drop of blood through a nephron to see how the glomerulus filters, how the tubules reclaim water, salt, and sugar, why only about one to two liters ends up as urine, and how your kidneys also make hormones that control blood pressure, red blood cells, and calcium. Plus when changes are worth mentioning to a doctor.\n\nSources:\n- NIDDK (NIH) - Your Kidneys & How They Work: https://www.niddk.nih.gov/health-information/kidney-disease/kidneys-how-they-work\n- MSD Manual Consumer Version - Kidneys: https://www.msdmanuals.com/home/kidney-and-urinary-tract-disorders/biology-of-the-kidneys-and-urinary-tract/kidneys\n- OpenStax Anatomy and Physiology - Physiology of Urine Formation: https://openstax.org/books/anatomy-and-physiology/pages/25-5-physiology-of-urine-formation\n- Cleveland Clinic - Kidneys: https://my.clevelandclinic.org/health/body/21824-kidney\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": [
+    "how kidneys work",
+    "kidneys clean blood",
+    "nephron",
+    "glomerulus",
+    "urine",
+    "kidney filtration",
+    "how urine is made",
+    "erythropoietin",
+    "renin",
+    "human body",
+    "science explained",
+    "inside your body"
+  ],
+  "sources": [
+    {
+      "title": "NIDDK (NIH) - Your Kidneys & How They Work",
+      "url": "https://www.niddk.nih.gov/health-information/kidney-disease/kidneys-how-they-work"
+    },
+    {
+      "title": "MSD Manual Consumer Version - Kidneys",
+      "url": "https://www.msdmanuals.com/home/kidney-and-urinary-tract-disorders/biology-of-the-kidneys-and-urinary-tract/kidneys"
+    },
+    {
+      "title": "OpenStax Anatomy and Physiology - Physiology of Urine Formation",
+      "url": "https://openstax.org/books/anatomy-and-physiology/pages/25-5-physiology-of-urine-formation"
+    },
+    {
+      "title": "Cleveland Clinic - Kidneys",
+      "url": "https://my.clevelandclinic.org/health/body/21824-kidney"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "present",
+    "props": [
+      {
+        "icon": "droplet",
+        "at": "right",
+        "size": "l",
+        "anim": "bob"
+      },
+      {
+        "icon": "sparkles",
+        "at": "top-left",
+        "size": "m",
+        "anim": "pulse"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "Your kidneys filter about one hundred eighty liters of fluid every day, yet only one or two liters become urine. Where does the rest go?",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          }
+        ],
+        "face": "shock",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "Meet your kidneys. You have two of them, bean shaped and about the size of a fist, tucked below your rib cage on either side of your spine. They are quiet, and they never take a day off.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "sparkles",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "body",
+        "text": "TWO FIST-SIZED FILTERS"
+      }
+    },
+    {
+      "narration": "Each kidney is about four to five inches long and weighs about one hundred fifty grams. The filtering units sit in the outer layer, called the cortex, while the tubules wind through both the cortex and the deeper medulla.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Their job is not just to make urine. They clean your blood, balance water and salts, and make hormones. NIDDK describes them as the body's filtering system, working around the clock.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "Blood reaches them in a hurry. At rest, the arteries to your kidneys deliver just over a liter of blood every minute, so all of your blood passes through them roughly once an hour.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "drop-of-blood",
+            "at": "right",
+            "size": "l",
+            "anim": "approach"
+          },
+          {
+            "icon": "stopwatch",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "text": "ALL YOUR BLOOD, HOURLY"
+      }
+    },
+    {
+      "narration": "Inside each kidney are about one million tiny filtering units called nephrons. Two kidneys, two million nephrons, and each one is a complete little cleaning plant.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "shock",
+        "bg": "lab",
+        "text": "TWO MILLION NEPHRONS"
+      }
+    },
+    {
+      "narration": "Each nephron has two main parts. First comes a tangle of tiny blood vessels called the glomerulus. Then comes a long, winding tube called the tubule. Let us follow a drop of blood through.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "puzzle-piece",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "Blood enters the glomerulus under high pressure. That pressure squeezes fluid out through tiny pores in the vessel walls, like water pushed through a coffee filter.",
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "bucket",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Blood cells and large molecules, such as proteins, are too big to fit through those pores, so they stay in the blood. What squeezes through is a clear fluid called filtrate.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "shield",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "body",
+        "text": "THE FILTER"
+      }
+    },
+    {
+      "narration": "And there is a lot of filtrate. In a healthy adult, about one hundred eighty liters, roughly forty-seven gallons, is filtered into the kidney tubules each day.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "water-wave",
+            "at": "right",
+            "size": "xl",
+            "anim": "pulse"
+          }
+        ],
+        "face": "shock",
+        "bg": "body",
+        "text": "180 LITERS A DAY"
+      }
+    },
+    {
+      "narration": "Wait. If you lost all of that, your body would run dry fast. Luckily, the tubule is not just a drain. It is a recycling system that takes back what your body needs.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "bubble"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "Think of the whole nephron as a very picky sorting machine. Everything gets pushed through first, then your body takes back what is useful and lets the waste go.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "puzzle-piece",
+            "at": "bubble"
+          }
+        ],
+        "face": "think",
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "The first stretch, the proximal tubule, does the heaviest work. It pulls most of the sodium, water, and glucose back into your blood. Sugar and salt are valuable, so your body keeps them.",
+      "anim": {
+        "action": "grow",
+        "props": [
+          {
+            "icon": "salt",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "droplet",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "text": "KEEP THE GOOD STUFF"
+      }
+    },
+    {
+      "narration": "Next, the fluid enters a hairpin-shaped section called the loop of Henle. It pumps out sodium, potassium, and chloride, which leaves the remaining fluid more dilute.",
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "water-wave",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "magnet",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "Then comes the distal tubule, which fine-tunes the mix. It swaps most of the remaining sodium for potassium and acid, so your blood chemistry stays in a narrow, healthy range.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "lemon",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "salt",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "think",
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "Finally, the fluid reaches the collecting ducts, and here is where your hormones step in. A hormone from the pituitary gland, called antidiuretic hormone, controls how much water gets taken back.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "droplet",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Drink a lot of water, and less of the hormone is needed, so more water is left in your urine. Go without water for a while, and the kidneys hold on to water and make more concentrated urine.",
+      "anim": {
+        "action": "drink",
+        "props": [
+          {
+            "icon": "cup-with-straw",
+            "at": "hand"
+          },
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "m",
+            "anim": "fade-in"
+          }
+        ],
+        "bg": "park",
+        "text": "WATER BALANCE"
+      }
+    },
+    {
+      "narration": "So by the end, about ninety-nine percent of that filtered fluid has gone back to your blood. Only roughly one to two liters leaves the body each day as urine.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "toilet",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "grin",
+        "bg": "room",
+        "text": "1 TO 2 LITERS"
+      }
+    },
+    {
+      "narration": "What is in that urine? Waste products your body does not need. One example is urea, a waste made when your body breaks down protein. It is not reabsorbed, so it leaves with the urine.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "test-tube",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "Your kidneys also remove acid made by your body's cells, and they keep the levels of sodium, calcium, phosphorus, and potassium in your blood within healthy limits.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "lemon",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "salt",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "text": "KEEPING BALANCE"
+      }
+    },
+    {
+      "narration": "The kidneys also help control blood pressure through salt. Getting rid of extra sodium helps keep pressure in check, while holding on to too much sodium tends to push pressure up. It is a careful balancing act.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "salt",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "room",
+        "text": "SALT AND PRESSURE"
+      }
+    },
+    {
+      "narration": "That balance matters for your heart, nerves, and muscles. They all rely on salts staying at the right level. Your kidneys are quietly guarding that level every minute of every day.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "smile",
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Now the hormone side. When your blood pressure falls, your kidneys release a protein called renin. It switches on a chain of signals that helps raise blood pressure back up.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "drop-of-blood",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "shock",
+        "bg": "body",
+        "text": "RENIN RAISES PRESSURE"
+      }
+    },
+    {
+      "narration": "Your kidneys also make a hormone called erythropoietin. It travels to your bone marrow and tells it to make more red blood cells, the cells that carry oxygen around your body.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "bone",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "drop-of-blood",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "body",
+        "text": "MAKING RED CELLS"
+      }
+    },
+    {
+      "narration": "And they turn vitamin D into its active form, called calcitriol. Active vitamin D helps your gut absorb calcium and phosphorus, which your bones need to stay strong.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "bone",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "sky"
+      }
+    },
+    {
+      "narration": "So your kidneys help control blood pressure, make red blood cells, and keep bones healthy, all from two organs that weigh roughly one hundred fifty grams each.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "sparkles",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Here is a reassuring fact. One healthy kidney can do all the work normally done by two. That is why some people live well with one kidney, and why a person can donate one.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "red-heart",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          }
+        ],
+        "face": "grin",
+        "bg": "room",
+        "text": "ONE CAN DO IT"
+      }
+    },
+    {
+      "narration": "Because kidneys have so much spare capacity, kidney trouble can be quiet at first. So pay attention if you notice big changes in how often you urinate, or unusual swelling.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "warning",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "stethoscope",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "worry",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "If you do notice those changes, or you have a condition like diabetes or high blood pressure, ask your doctor about a kidney check. Simple blood and urine tests can show how well your kidneys are working.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "stethoscope",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "clipboard",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "room",
+        "text": "ASK YOUR DOCTOR"
+      }
+    },
+    {
+      "narration": "And how much water you should drink depends on you, your health, and your medicines. If you have a heart or kidney condition, follow your doctor's advice instead of general rules.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "cup-with-straw",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "telephone-receiver",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "So here is the full journey: blood arrives, a hundred and eighty liters of fluid is filtered, almost all of it is reclaimed, and a small, precise amount leaves as urine.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Next time you take a drink of water, picture it in a nephron: filtered, checked, and almost all of it taken back, all by two quiet workers you never have to think about.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "sparkles",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "red-heart",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

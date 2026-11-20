@@ -1,0 +1,729 @@
+{
+  "channel": "inside-your-body",
+  "number": 43,
+  "slug": "what-stress-does-to-your-body",
+  "style": "anim",
+  "target_minutes": 6.5,
+  "title": "What Stress Does to Your Body (and How It Resets)",
+  "thumbnail_text": "STRESS INSIDE YOUR BODY",
+  "description": "Why does your heart pound when you are stressed? Follow the stress response step by step: the amygdala alarm, adrenaline's fight-or-flight surge, and cortisol as steady backup. See what short-term versus long-term stress does to the body, how breathing, movement, sleep and support help your body reset, and when it is time to ask a professional for help.\n\nSources:\n- Harvard Health, Understanding the stress response: https://www.harvardhealth.org/staying-healthy/understanding-the-stress-response\n- NIMH (NIH), I'm So Stressed Out! Fact Sheet: https://www.nimh.nih.gov/health/publications/stress\n- Cleveland Clinic, Cortisol: https://my.clevelandclinic.org/health/articles/22187-cortisol\n- Lumen Learning (Waymaker Psychology), Stress and the Body: https://courses.lumenlearning.com/waymaker-psychology/chapter/stress-and-the-body\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": [
+    "stress",
+    "what stress does to your body",
+    "fight or flight",
+    "adrenaline",
+    "cortisol",
+    "stress response",
+    "how to reduce stress",
+    "stress and sleep",
+    "human body",
+    "science explained",
+    "inside your body"
+  ],
+  "sources": [
+    {
+      "title": "Harvard Health, Understanding the stress response",
+      "url": "https://www.harvardhealth.org/staying-healthy/understanding-the-stress-response"
+    },
+    {
+      "title": "NIMH (NIH), I'm So Stressed Out! Fact Sheet",
+      "url": "https://www.nimh.nih.gov/health/publications/stress"
+    },
+    {
+      "title": "Cleveland Clinic, Cortisol",
+      "url": "https://my.clevelandclinic.org/health/articles/22187-cortisol"
+    },
+    {
+      "title": "Lumen Learning (Waymaker Psychology), Stress and the Body",
+      "url": "https://courses.lumenlearning.com/waymaker-psychology/chapter/stress-and-the-body"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "high-voltage",
+        "at": "right",
+        "size": "l",
+        "anim": "pulse"
+      },
+      {
+        "icon": "anatomical-heart",
+        "at": "top-left",
+        "size": "m",
+        "anim": "bob"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "A car swerves toward you. Before you even think, your heart is pounding. What just happened inside your body?",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "automobile",
+            "at": "right",
+            "size": "l",
+            "anim": "approach"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "face": "shock",
+        "camera": "shake",
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Stress is your body's way of getting ready for a challenge. It is not a flaw. It is a built-in survival system, and it starts the moment your brain decides something might be a threat.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "shield",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "brain",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "paper",
+        "text": "SURVIVAL SYSTEM"
+      }
+    },
+    {
+      "narration": "Harvard Health explains it begins in the amygdala, a brain region involved in emotional processing. When it senses danger, it sends a distress signal to the hypothalamus, which acts like a command center.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "alarm-clock",
+            "at": "top-left",
+            "size": "s",
+            "anim": "shake"
+          }
+        ],
+        "bg": "body",
+        "text": "AMYGDALA ALARM"
+      }
+    },
+    {
+      "narration": "The hypothalamus uses your autonomic nervous system, the part that works without you thinking about it, to direct your body's stress reactions. Harvard compares the sympathetic side to a gas pedal.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "police-car-light",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "brain",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Within moments, your adrenal glands, small glands that sit on top of your kidneys, release adrenaline. Scientists also call it epinephrine, the classic fight or flight hormone.",
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "text": "ADRENALINE"
+      }
+    },
+    {
+      "narration": "Adrenaline speeds up your heart, raises your pulse and blood pressure, and opens your airways so you can take in more air. It also releases sugar and fats into your blood for quick energy.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "lungs",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "body",
+        "face": "shock"
+      }
+    },
+    {
+      "narration": "That is why your heart pounds, your breathing speeds up, and your hands may feel shaky or sweaty. Your body is not malfunctioning. It is doing exactly what it evolved to do.",
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "sweat-droplets",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "anxious-face-with-sweat",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "worry",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "This is the fight or flight response. Your body is ready to stand your ground or run for safety. It is a fast, automatic reaction.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "flexed-biceps",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "running-shoe",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "grin",
+        "bg": "park",
+        "text": "FIGHT OR FLIGHT"
+      }
+    },
+    {
+      "narration": "Meanwhile, a second, slower system joins in. Harvard Health calls it the HPA axis, made of the hypothalamus, the pituitary gland, and the adrenal glands. If your brain still sees a threat, this axis keeps the stress response going.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "gear",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "brain",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "text": "THE HPA AXIS"
+      }
+    },
+    {
+      "narration": "Its main messenger is cortisol. Cleveland Clinic says cortisol is released during acute and chronic stress, usually following adrenaline, and it prompts your liver to release sugar for quick energy.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "droplet",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "text": "CORTISOL"
+      }
+    },
+    {
+      "narration": "A textbook from Lumen Learning describes the HPA axis as working much more slowly than the sympathetic nervous system. So think of adrenaline as the fast alarm, and cortisol as the steady backup power.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "left",
+            "size": "s"
+          },
+          {
+            "icon": "battery",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "In short bursts, cortisol is helpful. That same textbook notes it can provide extra energy, temporarily improve immune function by reducing inflammation, and even lower pain sensitivity. Stress, in small doses, is useful.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "battery",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "thumbs-up",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "grin",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Cortisol is not only about stress. Cleveland Clinic says it helps regulate how you use blood sugar, limits inflammation, plays a part in blood pressure, and helps set your sleep and wake cycle.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "droplet",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper",
+        "text": "CORTISOL RHYTHM"
+      }
+    },
+    {
+      "narration": "It follows a daily rhythm too. Cleveland Clinic notes that cortisol is typically lowest in the evening and peaks in the morning, just before you wake up.",
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "sunrise",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "bed",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "sleep",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Now, what happens when the danger passes? The parasympathetic nervous system, which Harvard Health calls the brake, takes over. It promotes rest and digest and calms the body back down.",
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "leaf-fluttering-in-wind",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "check-mark-button",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "smile",
+        "bg": "park",
+        "text": "THE BRAKE"
+      }
+    },
+    {
+      "narration": "In a healthy cycle, stress rises, you deal with it, and then your body resets. Heart rate slows, breathing settles, and cortisol falls. Short stress followed by real recovery is how this system is meant to work.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "smile",
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "But modern life is different. Instead of one swerving car, there are emails, deadlines, and worries that never quite stop. Your brain can read all of that as a threat, and the gas pedal stays pressed.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "laptop",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "bell",
+            "at": "top-left",
+            "size": "s",
+            "anim": "shake"
+          }
+        ],
+        "face": "worry",
+        "bg": "room",
+        "text": "STRESS THAT STAYS"
+      }
+    },
+    {
+      "narration": "The National Institute of Mental Health says a stressor can be one-time or short-term, or it can happen repeatedly over a long time. It is the long, repeated kind that can start to wear on your body.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "calendar",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "repeat-button",
+            "at": "top-left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Harvard describes chronic low-level stress as an engine idling too high for too long. The HPA axis keeps running, and your body never fully gets the message that it is safe to relax.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "automobile",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "fire",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "worry",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "According to the NIMH, ongoing stress and anxiety can cause sleep problems and affect the immune, digestive, cardiovascular, and reproductive systems. They can also cause headaches, body pain, high blood pressure, tension, and loss of sleep.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "nauseated-face",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "face-with-thermometer",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "sick",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "The Lumen textbook adds that sustained high cortisol is linked with a weaker immune system, and one study tied work stress to a higher chance of catching a cold.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "sneezing-face",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "shield",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "sick",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "The key thing is that these effects build up over time, and they can be reversed. Your body is built to recover. The point is to give it regular chances to switch the brake on, even for a few minutes at a time.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "seedling",
+            "at": "right",
+            "size": "m",
+            "anim": "grow"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "smile",
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "So how do you hit the brake? Harvard Health lists relaxation techniques like deep abdominal breathing, focusing on a calming word, visualization, yoga, and tai chi. These are all ways of calming the body on purpose.",
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "person-in-lotus-position",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "wind-face",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "face": "smile",
+        "bg": "park",
+        "text": "DEEP BELLY BREATHING"
+      }
+    },
+    {
+      "narration": "Here is a simple one. Breathe in slowly through your nose so your belly rises, then breathe out gently, a little slower than you breathed in. Repeat for a minute or two, and notice how your shoulders drop. This is not a cure, just a gentle nudge toward the brake.",
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "lungs",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "leaf-fluttering-in-wind",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "face": "smile",
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Movement helps too. Harvard mentions brisk walking and social support as ways to counter stress, and NIMH suggests exercise and regular, healthy meals. Moving your body gives all that stress energy somewhere to go.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "person-running",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "face": "grin",
+        "bg": "park",
+        "text": "MOVE YOUR BODY"
+      }
+    },
+    {
+      "narration": "Sleep may be the most powerful reset of all. NIMH recommends a consistent sleep routine, and it also suggests limiting excess caffeine, since caffeine can keep the body feeling wired when you want to calm down.",
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "bed",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "hot-beverage",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "sleep",
+        "bg": "night",
+        "text": "SLEEP RESETS YOU"
+      }
+    },
+    {
+      "narration": "Friends and family matter more than you might think. Leaning on supportive people is on the NIMH list of ways to cope, and so is keeping a journal and challenging negative or unhelpful thoughts.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "people-hugging",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "memo",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "smile",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "When should you get help? The NIMH says to seek a professional if you struggle to cope, if symptoms persist, or if stress interferes with daily life, makes you avoid things, or always seems present.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "hospital",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "stethoscope",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "smile",
+        "bg": "room",
+        "text": "WHEN TO GET HELP"
+      }
+    },
+    {
+      "narration": "That is not a weakness, it is a smart move, like seeing a doctor for a cough that will not go away. Talking therapy, and sometimes medicine, help many people, and a professional can guide that choice.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "woman-health-worker",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "speech-balloon",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "face": "smile",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "If you are ever in immediate distress or thinking about hurting yourself, call, text, or chat with the nine eight eight Suicide and Crisis Lifeline in the United States right away. You deserve help, and it is free.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "red-heart",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "mobile-phone",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "face": "worry",
+        "bg": "night",
+        "text": "988 LIFELINE"
+      }
+    },
+    {
+      "narration": "So stress is not your enemy. It is a fast alarm and a steady backup power, built to protect you. The trick is to let the brake do its job, and to ask for help when the engine never slows down.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "shield",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "face": "smile",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,751 @@
+{
+  "channel": "cosmic-what-if",
+  "style": "anim",
+  "number": 46,
+  "slug": "riding-voyager-out-of-the-solar-system",
+  "target_minutes": 6.7,
+  "title": "What If You Rode Voyager 1 Out of the Solar System?",
+  "thumbnail_text": "RIDE VOYAGER 1",
+  "description": "Voyager 1 left Earth in 1977 and is now the farthest spacecraft humans have ever made. Using real NASA data, we ride along: past the Pale Blue Dot, through the heliopause into interstellar space, to a signal that now takes about a day to arrive. Along the way we look at the Golden Record, the fading power, and the long road to the next stars.\n\nSources:\n- Wikipedia, Voyager 1: https://en.wikipedia.org/wiki/Voyager_1\n- NASA Science, Voyager 1: https://science.nasa.gov/mission/voyager/voyager-1/\n- Wikipedia, Gliese 445: https://en.wikipedia.org/wiki/Gliese_445\n- NASA Science, Oort Cloud: https://science.nasa.gov/solar-system/oort-cloud/",
+  "tags": [
+    "voyager 1",
+    "what if",
+    "interstellar space",
+    "heliopause",
+    "golden record",
+    "pale blue dot",
+    "solar system",
+    "nasa",
+    "space probe",
+    "proxima centauri",
+    "astronomy",
+    "science",
+    "cosmic what if"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia, Voyager 1",
+      "url": "https://en.wikipedia.org/wiki/Voyager_1"
+    },
+    {
+      "title": "NASA Science, Voyager 1",
+      "url": "https://science.nasa.gov/mission/voyager/voyager-1/"
+    },
+    {
+      "title": "Wikipedia, Gliese 445",
+      "url": "https://en.wikipedia.org/wiki/Gliese_445"
+    },
+    {
+      "title": "NASA Science, Oort Cloud",
+      "url": "https://science.nasa.gov/solar-system/oort-cloud/"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "satellite",
+        "at": "right",
+        "size": "xl",
+        "anim": "bob"
+      },
+      {
+        "icon": "milky-way",
+        "at": "top-left",
+        "size": "l",
+        "anim": "pulse"
+      }
+    ],
+    "bg": "space"
+  },
+  "scenes": [
+    {
+      "narration": "What if you could ride Voyager one out of the solar system? How far would you go, and what would you see?",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "satellite",
+            "at": "top-left",
+            "size": "s",
+            "anim": "orbit"
+          }
+        ],
+        "face": "shock"
+      }
+    },
+    {
+      "narration": "Voyager one is the most distant spacecraft humans have ever built. It left Earth in 1977, and it is still sending messages home. Today, you climb aboard for the longest road trip in history.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "grin",
+        "text": "LONGEST ROAD TRIP"
+      }
+    },
+    {
+      "narration": "Launch day. A Titan rocket thunders away from Cape Canaveral, Florida, on September fifth, 1977. You grip a long metal arm and hold on tight, because this ride will never stop.",
+      "anim": {
+        "action": "hold-breath",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "xl",
+            "anim": "approach"
+          },
+          {
+            "icon": "fire",
+            "at": "bottom-right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "shock",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "Your engine room is odd. Three small nuclear power generators supplied about four hundred seventy watts at launch, roughly a handful of old-fashioned light bulbs. That is all the electricity the whole spacecraft gets.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "light-bulb",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "battery",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "The speed is huge. Relative to the Sun, Voyager one moves at about seventeen kilometers every second. That is roughly sixty one thousand kilometers per hour, and it does not slow down.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "dashing-away",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "grin",
+        "text": "17 KM PER SECOND",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "Years go by. Then, on February fourteenth, 1990, controllers ask Voyager to turn its camera around. It takes a family portrait of the planets from about six billion kilometers away.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "telescope",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "In that picture, Earth is a tiny speck of light. People call it the Pale Blue Dot. You look back from your seat and see your whole home, all of history, inside a single pixel.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "s",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "smile",
+        "text": "PALE BLUE DOT"
+      }
+    },
+    {
+      "narration": "In December 2004, something changes. The solar wind, a stream of particles blowing out from the Sun, suddenly slows down. Scientists call this the termination shock, and Voyager one enters a region called the heliosheath.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          }
+        ],
+        "face": "shock",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "All of this lies inside the heliosphere. That is a giant bubble filled with energetic particles and magnetic fields from the Sun. Its outer edge is called the heliopause, and it is your next big milestone.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sparkles",
+            "at": "center",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "smile",
+        "text": "THE HELIOPAUSE"
+      }
+    },
+    {
+      "narration": "On August twenty fifth, 2012, Voyager one crosses it, about one hundred twenty one astronomical units from the Sun. One unit is the distance from Earth to the Sun, so you are one hundred twenty one times farther.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "grin",
+        "text": "121 TIMES FARTHER"
+      }
+    },
+    {
+      "narration": "Nobody felt a bump. There is no wall, no sign, no flash. Instruments noticed the change in the surrounding gas, and scientists needed about another year before they were sure the crossing had happened.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "magnifying-glass-tilted-right",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "It made Voyager one the first spacecraft ever to enter interstellar space. Since then, it has been measuring the space between the stars, a place no instrument from Earth had ever tasted before.",
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "star",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "grin",
+        "text": "INTERSTELLAR SPACE"
+      }
+    },
+    {
+      "narration": "But careful, this is not the same as leaving the solar system. The Sun's gravity still rules out here. Scientists think a giant shell of icy objects, called the Oort cloud, surrounds the Sun and planets, far beyond Voyager.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "m"
+          },
+          {
+            "icon": "comet",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "snowflake",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "Notice the timeline. The termination shock came in December 2004, and the heliopause came in August 2012. So the region between them took nearly eight years to cross, even at this blistering speed. The Sun's influence stretches a very long way.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "face": "think",
+        "text": "EIGHT YEARS TO CROSS"
+      }
+    },
+    {
+      "narration": "So how far have you come? As of November 2026, about one hundred seventy three astronomical units. That is roughly twenty six billion kilometers, or sixteen billion miles, from the Sun.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "straight-ruler",
+            "at": "top",
+            "size": "m"
+          }
+        ],
+        "face": "smile",
+        "text": "173 TIMES EARTH-SUN"
+      }
+    },
+    {
+      "narration": "Radio signals now take close to a full day to reach Voyager one. NASA expects it to pass one light-day from Earth around November 2026. Say hello, and you wait a full day for it to arrive, then another for the reply.",
+      "anim": {
+        "action": "wave",
+        "props": [
+          {
+            "icon": "satellite-antenna",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "alarm-clock",
+            "at": "left",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "face": "smile",
+        "text": "ONE LIGHT-DAY"
+      }
+    },
+    {
+      "narration": "Compare that with the Pale Blue Dot photo, taken from about six billion kilometers. Today, Voyager one is more than four times farther away. Earth is still a point, but now a far fainter one.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "s"
+          },
+          {
+            "icon": "star",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "think",
+        "camera": "zoom-out"
+      }
+    },
+    {
+      "narration": "What is the view like? Mostly dark. Scientists say the Sun would still be the brightest point in the sky, but only a point, like a star. There are no planets to see, and no scenery.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          },
+          {
+            "icon": "star",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "face": "think",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "But you are not alone. Strapped to the side is a message for anyone who might find it. It is a thirty centimeter gold-plated copper disc, a record, called the Golden Record.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "optical-disk",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          }
+        ],
+        "face": "grin",
+        "text": "GOLDEN RECORD"
+      }
+    },
+    {
+      "narration": "On it are greetings in fifty five languages, and thirty five sounds from Earth. Think of the noises of a planet, packed on a disc, saying hello across the dark.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "musical-note",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "optical-disk",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "There are ninety minutes of music, too, and one hundred fifteen pictures of Earth and its people. It is a time capsule, made in 1977, that might outlast every building on our planet.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "musical-note",
+            "at": "top",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "optical-disk",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "face": "grin",
+        "text": "115 PICTURES"
+      }
+    },
+    {
+      "narration": "Meanwhile, the spacecraft is getting tired. Its power generators fade over time, and engineers have turned off some instruments to save energy. As of 2026, only two are still operating: the plasma wave system and the magnetometer.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "battery",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "satellite",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "Engineers think the power may last until about 2036, to send back engineering data. After that, Voyager one goes silent. But it keeps flying, with no engine needed, for as long as anyone can imagine.",
+      "anim": {
+        "action": "yawn",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "satellite",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "worry",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Power is running low, so engineers make hard choices. The cosmic ray instrument was turned off in 2025, and another, the low-energy particle detector, was switched off in April 2026, though it can be reactivated if needed.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "battery",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "So where does the road lead? The nearest star system, Proxima Centauri, is about four point two light-years away. At the speed Voyager had in 2012, reaching it would take about seventy three thousand, seven hundred seventy five years.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "star",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "rocket",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "think",
+        "text": "73,775 YEARS"
+      }
+    },
+    {
+      "narration": "In fact, it will not go to Proxima at all. In about forty thousand years, Voyager one is expected to pass within about one point six light-years of a star called Gliese four four five.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "star",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "rocket",
+            "at": "left",
+            "size": "m",
+            "anim": "approach"
+          }
+        ],
+        "face": "smile",
+        "text": "GLIESE 445"
+      }
+    },
+    {
+      "narration": "Gliese four four five is rushing toward the Sun at about one hundred eleven kilometers every second. That is far faster than Voyager's seventeen, which is why the star does most of the work in this meeting.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "star",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "dashing-away",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "That star is about seventeen light-years from Earth today. It is moving toward the Sun, so by the time Voyager gets near, the star will be about three and a half light-years from us.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "star",
+            "at": "far-right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "Do not expect a landing, though. It is a passing glance. Voyager one will drift by Gliese four four five, at a distance far bigger than any planet's orbit, and keep on moving through the galaxy.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "xl",
+            "anim": "bob"
+          },
+          {
+            "icon": "rocket",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "smile",
+        "camera": "zoom-out"
+      }
+    },
+    {
+      "narration": "Forty thousand years is hard to picture. It is far longer than written history, and you would live through none of it. Voyager does not mind. It does not need a pilot, only physics.",
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "alarm-clock",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "sleep"
+      }
+    },
+    {
+      "narration": "Still, the ride shows something wonderful. A machine built by people in the 1970s is now twenty six billion kilometers away, sending science home, and carrying a message to the stars.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "So, what if you rode Voyager one out of the solar system? You would cross the heliopause, pass the Pale Blue Dot, carry a golden greeting, and drift for tens of thousands of years toward the stars.",
+      "anim": {
+        "action": "wave",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "star",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          },
+          {
+            "icon": "optical-disk",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

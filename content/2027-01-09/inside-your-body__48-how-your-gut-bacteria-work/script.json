@@ -1,0 +1,725 @@
+{
+  "channel": "inside-your-body",
+  "number": 48,
+  "slug": "how-your-gut-bacteria-work",
+  "style": "anim",
+  "target_minutes": 6.8,
+  "title": "How Your Gut Bacteria Work: Do They Really Outnumber Your Cells?",
+  "thumbnail_text": "TRILLIONS OF ROOMMATES",
+  "description": "Your gut is home to trillions of microbes. Learn why the old ten-to-one myth was wrong and what scientists estimate now, how gut bacteria ferment fiber, help make vitamins, train your immune system, and may talk to your brain. We also separate solid findings from hype, and say when to talk with a doctor about stomach or bowel problems.\n\nSources:\n- Cleveland Clinic - What Is Your Gut Microbiome?: https://my.clevelandclinic.org/health/body/25201-gut-microbiome\n- Cleveland Clinic - What Is the Gut-Brain Connection?: https://my.clevelandclinic.org/health/body/the-gut-brain-connection\n- Cell (2016) - Revised estimates for the number of human and bacteria cells in the body (PMC): https://pmc.ncbi.nlm.nih.gov/articles/PMC4991899/\n- Scientific American - Scientists Bust Myth That Our Bodies Have More Bacteria Than Human Cells: https://www.scientificamerican.com/article/scientists-bust-myth-that-our-bodies-have-more-bacteria-than-human-cells/\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": [
+    "gut bacteria",
+    "how your gut bacteria work",
+    "microbiome",
+    "gut microbiome",
+    "gut health",
+    "gut brain connection",
+    "fiber",
+    "short chain fatty acids",
+    "do bacteria outnumber human cells",
+    "probiotics",
+    "human body",
+    "science explained",
+    "inside your body"
+  ],
+  "sources": [
+    {
+      "title": "Cleveland Clinic - What Is Your Gut Microbiome?",
+      "url": "https://my.clevelandclinic.org/health/body/25201-gut-microbiome"
+    },
+    {
+      "title": "Cleveland Clinic - What Is the Gut-Brain Connection?",
+      "url": "https://my.clevelandclinic.org/health/body/the-gut-brain-connection"
+    },
+    {
+      "title": "Cell (2016) - Revised estimates for the number of human and bacteria cells in the body (PMC)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4991899/"
+    },
+    {
+      "title": "Scientific American - Scientists Bust Myth That Our Bodies Have More Bacteria Than Human Cells",
+      "url": "https://www.scientificamerican.com/article/scientists-bust-myth-that-our-bodies-have-more-bacteria-than-human-cells/"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "microbe",
+        "at": "right",
+        "size": "xl",
+        "anim": "bob"
+      },
+      {
+        "icon": "green-salad",
+        "at": "top-left",
+        "size": "m"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "Right now, trillions of tiny living things are riding along inside you, and you are better off because of them.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "bg": "body",
+        "face": "shock",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "Imagine shrinking down and sliding into your large intestine. It is warm, dark, and crowded. Billions of microbes are floating by, busy at work, and most of them are not harmful at all. They are your roommates.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "microbe",
+            "at": "left",
+            "size": "s",
+            "anim": "orbit"
+          }
+        ],
+        "bg": "body",
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Together they are called your gut microbiome. Cleveland Clinic describes it as an ecosystem of trillions of microbes, including more than a thousand species of bacteria, plus viruses and fungi. Most of them live in your colon.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "microbe",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "top-left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "bg": "body",
+        "text": "YOUR MICROBIOME"
+      }
+    },
+    {
+      "narration": "You may have heard that bacteria outnumber your own cells ten to one. That number turned out to be a myth. It traces back to a rough estimate made in 1972, and it was repeated for decades.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "bar-chart",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "cross-mark",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "lab",
+        "face": "shock",
+        "text": "TEN TO ONE MYTH"
+      }
+    },
+    {
+      "narration": "In 2016, scientists recounted using better data. For a typical adult man, they estimated about thirty trillion human cells and about thirty-eight trillion bacteria. That is roughly one to one, not ten to one.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "balance-scale",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "abacus",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "face": "think",
+        "text": "ABOUT ONE TO ONE"
+      }
+    },
+    {
+      "narration": "Even that estimate comes with wide uncertainty, about a quarter either way. One person might carry half as many bacteria, or twice as many. So the honest answer is that the two counts are roughly equal.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "balance-scale",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "face": "think",
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "Here is a fun twist. Most of your own cells are red blood cells, which are tiny. Count only your cells with a nucleus, and the bacteria could outnumber you about ten to one. The answer depends on how you count.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "drop-of-blood",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "abacus",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "face": "grin",
+        "text": "DEPENDS HOW YOU COUNT"
+      }
+    },
+    {
+      "narration": "Those counts include only bacteria. Cleveland Clinic notes that your gut also hosts viruses, fungi, and other microbes, so the full crowd is even bigger. Scientists are still learning what all of these guests are doing.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "microscope",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "microbe",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "lab",
+        "face": "think"
+      }
+    },
+    {
+      "narration": "The whole bacterial crowd is surprisingly light. The researchers estimated that all of your bacteria together weigh only about two hundred grams, a bit under half a pound. Tiny weight, huge influence.",
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "person-lifting-weights",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "feather",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "face": "smile",
+        "text": "LIGHT BUT MIGHTY"
+      }
+    },
+    {
+      "narration": "So what do these lodgers actually do? Let us start with dinner. Your own body cannot break down many plant fibers. Cleveland Clinic says gut microbes break down fibers and complex carbohydrates that you cannot digest on your own.",
+      "anim": {
+        "action": "eat",
+        "props": [
+          {
+            "icon": "broccoli",
+            "at": "hand",
+            "size": "m"
+          },
+          {
+            "icon": "carrot",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "room",
+        "face": "grin",
+        "text": "DINNER FOR TWO"
+      }
+    },
+    {
+      "narration": "Where does this happen? Fiber passes through your stomach and small intestine mostly untouched. It arrives in the colon, where Cleveland Clinic says most of your microbes live, and that is where the feast begins.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "pot-of-food",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "microbe",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "body",
+        "face": "grin",
+        "text": "THE FEAST BEGINS"
+      }
+    },
+    {
+      "narration": "This breakdown is called fermentation. As the microbes ferment fiber, they release helpful molecules called short-chain fatty acids. Think of them as the thank-you gifts the bacteria leave behind after a meal.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "wrapped-gift",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "fire",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "face": "smile",
+        "text": "FERMENTATION"
+      }
+    },
+    {
+      "narration": "Those short-chain fatty acids help maintain the gut barrier, the thin wall that keeps the outside world out, and help reduce inflammation. That is one reason nutrition experts like a variety of plant fibers.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "brick",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "shield",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "face": "think",
+        "text": "A STRONGER BARRIER"
+      }
+    },
+    {
+      "narration": "A varied microbiome likes a varied menu. Cleveland Clinic recommends whole grains, vegetables, and fruits, and notes that diets high in sugar and saturated fat favor less helpful microbes. Processed foods tend to be short on fiber.",
+      "anim": {
+        "action": "eat",
+        "props": [
+          {
+            "icon": "green-salad",
+            "at": "hand",
+            "size": "m"
+          },
+          {
+            "icon": "bread",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "room",
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Next, vitamins. Cleveland Clinic says gut bacteria make enzymes needed to produce several vitamins, including B-one, folate, B-twelve, and vitamin K. Scientists are still working out how much of these you actually absorb.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "pill",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "bg": "lab",
+        "face": "think",
+        "text": "BACTERIA MAKE VITAMINS"
+      }
+    },
+    {
+      "narration": "That means your microbes are a small vitamin factory. But do not skip your own food. Eating a balanced diet is still the main way you get nutrients, and the microbes are best thought of as helpers.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "factory",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "tangerine",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "They also act as bodyguards. Cleveland Clinic says friendly microbes help keep potentially harmful ones in check. A crowd of good bacteria leaves less room and fewer snacks for troublemakers to move in.",
+      "anim": {
+        "action": "hold-breath",
+        "props": [
+          {
+            "icon": "shield",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "microbe",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "face": "worry",
+        "text": "FRIENDLY BODYGUARDS"
+      }
+    },
+    {
+      "narration": "And here is something surprising. Cleveland Clinic says up to eighty percent of your immune cells are in your gut. It makes sense: your gut is a doorway between the inside of your body and the outside world.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "door",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "shield",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "face": "shock",
+        "text": "UP TO 80 PERCENT"
+      }
+    },
+    {
+      "narration": "Your microbes help train those immune cells to tell harmful invaders from harmless things like food. Think of it as school for the immune system, with the bacteria as the teachers. Learning goes on for years.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "school",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "books",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "face": "think",
+        "text": "IMMUNE SCHOOL"
+      }
+    },
+    {
+      "narration": "This training starts early. Scientists believe the microbiome begins to settle in during infancy, and that it helps build the gut's immune system and later helps maintain it. Many details are still being studied.",
+      "anim": {
+        "action": "grow",
+        "props": [
+          {
+            "icon": "baby",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "seedling",
+            "at": "top-left",
+            "size": "s",
+            "anim": "grow"
+          }
+        ],
+        "bg": "room",
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Now the biggest question: can your gut talk to your brain? Cleveland Clinic says yes, in a sense. Your gut has its own web of more than five hundred million neurons, sometimes called the second brain.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "face": "think",
+        "text": "THE SECOND BRAIN"
+      }
+    },
+    {
+      "narration": "In fact, your gut holds more nerve cells than anywhere else in the body outside the brain. It can run many digestive jobs on its own, somewhat independently of your brain, like a small control room in your belly.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "face": "think"
+      }
+    },
+    {
+      "narration": "The vagus nerve is the main link between the gut's nervous system and your brain. It carries news about what is happening in your belly upward, and sends instructions back down.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "butterfly",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "telephone",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "face": "smile",
+        "text": "THE VAGUS NERVE"
+      }
+    },
+    {
+      "narration": "Gut microbes also produce or help produce chemical messengers, called neurotransmitters, that carry signals between your gut and your brain. Some bacteria can even make or stimulate serotonin, a chemical linked with mood.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "envelope",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "brain",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "face": "think"
+      }
+    },
+    {
+      "narration": "But be careful here. Cleveland Clinic says studies suggest this crosstalk may influence many functions, but treatments aimed at the microbiome have mostly been tested in animals. In people, results are still mixed but intriguing.",
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "mouse-face",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "red-question-mark",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "lab",
+        "face": "think",
+        "text": "STILL BEING STUDIED"
+      }
+    },
+    {
+      "narration": "So no one can yet say that fixing your gut bacteria will fix your mood. That is an exciting area, and not a settled one. Beware of anyone who promises a quick cure from a bottle.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "warning",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "pill",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "What can you do? Fiber-rich foods, whole grains, fruits, and vegetables feed a diverse microbiome. Variety seems to matter more than any single food. These are general healthy-eating ideas, not a treatment for any condition.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "green-salad",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "red-apple",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "room",
+        "face": "grin",
+        "text": "EAT THE RAINBOW"
+      }
+    },
+    {
+      "narration": "If you have ongoing stomach or bowel problems, such as long-lasting pain, changes in how you go to the bathroom, or unexplained weight loss, talk with a doctor. Please do not try to fix it alone with supplements.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "stethoscope",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "clipboard",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "face": "smile",
+        "text": "TALK TO A DOCTOR"
+      }
+    },
+    {
+      "narration": "Let us zoom out. You are a walking ecosystem, with roughly as many bacterial cells as human cells, all working in a partnership that has taken millions of years to form. Nobody does this alone.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "microbe",
+            "at": "top-left",
+            "size": "s",
+            "anim": "orbit"
+          }
+        ],
+        "bg": "body",
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Remember the key points. The old ten to one number was a myth, microbes ferment fiber, help make vitamins, train your immune system, and may chat with your brain, though that last part is still being explored.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "clipboard",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "face": "smile",
+        "text": "THE BIG PICTURE"
+      }
+    },
+    {
+      "narration": "So tonight, when you eat a plate of vegetables, remember you are cooking for two, or really for trillions. Your tiny roommates are counting on you, and the whole team benefits from a well-fed gut.",
+      "anim": {
+        "action": "wave",
+        "props": [
+          {
+            "icon": "fork-and-knife-with-plate",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "microbe",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "room",
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

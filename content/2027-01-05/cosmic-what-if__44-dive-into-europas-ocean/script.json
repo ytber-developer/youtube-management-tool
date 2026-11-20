@@ -1,0 +1,724 @@
+{
+  "channel": "cosmic-what-if",
+  "style": "anim",
+  "number": 44,
+  "slug": "dive-into-europas-ocean",
+  "target_minutes": 6.5,
+  "title": "What If You Dived Into Europa's Ocean? What We Know",
+  "thumbnail_text": "DIVE INTO EUROPA",
+  "description": "Beneath the frozen shell of Jupiter's moon Europa may lie an ocean with two to three times as much water as all of Earth's oceans. What if you dived in? We go through the ice, past deadly radiation and weak gravity, into a dark salty sea, ask whether hydrothermal vents could support life, and follow NASA's Europa Clipper on its way to find out.\n\nSources:\n- Wikipedia, Europa (moon): https://en.wikipedia.org/wiki/Europa_(moon)\n- Wikipedia, Europa Clipper: https://en.wikipedia.org/wiki/Europa_Clipper\n- NASA Science, Europa (New Horizons image): https://science.nasa.gov/jupiter-moons/europa/",
+  "tags": [
+    "europa",
+    "europa ocean",
+    "dive into europa",
+    "europa clipper",
+    "life on europa",
+    "jupiter moon",
+    "hydrothermal vents",
+    "icy moon",
+    "ocean worlds",
+    "alien life",
+    "what if",
+    "astronomy",
+    "science",
+    "cosmic what if"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia, Europa (moon)",
+      "url": "https://en.wikipedia.org/wiki/Europa_(moon)"
+    },
+    {
+      "title": "Wikipedia, Europa Clipper",
+      "url": "https://en.wikipedia.org/wiki/Europa_Clipper"
+    },
+    {
+      "title": "NASA Science, Europa (New Horizons image)",
+      "url": "https://science.nasa.gov/jupiter-moons/europa/"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "swallowed",
+    "props": [
+      {
+        "icon": "droplet",
+        "at": "right",
+        "size": "xl",
+        "anim": "pulse"
+      },
+      {
+        "icon": "diving-mask",
+        "at": "top-left",
+        "size": "l",
+        "anim": "bob"
+      }
+    ],
+    "bg": "night"
+  },
+  "scenes": [
+    {
+      "narration": "What if you dived into the hidden ocean of Europa, a moon of Jupiter, and swam where no human has ever been?",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "diving-mask",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "ringed-planet",
+            "at": "top-left",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "face": "shock"
+      }
+    },
+    {
+      "narration": "Europa is a frozen world, about three thousand one hundred thirty kilometers across, roughly the size of our Moon. From space it looks like a cracked white billiard ball, streaked with long brownish lines.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "xl",
+            "anim": "spin"
+          },
+          {
+            "icon": "snowflake",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "But scientists think that under all that ice hides a vast, liquid ocean. Salty water, sloshing in the dark, around a giant planet. It is one of the best places we know to look for life beyond Earth.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "xl",
+            "anim": "pulse"
+          },
+          {
+            "icon": "fish",
+            "at": "left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "face": "grin",
+        "text": "HIDDEN OCEAN"
+      }
+    },
+    {
+      "narration": "First problem: getting there. Europa orbits Jupiter, and Jupiter's radiation is brutal. At Europa's surface the dose is about five sieverts per day, which would be lethal to a person within a single day.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "ringed-planet",
+            "at": "top-left",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "face": "worry",
+        "text": "DEADLY RADIATION"
+      }
+    },
+    {
+      "narration": "So your spacecraft needs a thick shield. You land, step out in your suit, and feel the weak gravity. Europa pulls with only about thirteen percent of Earth's gravity, so you would bounce like a feather.",
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "rock",
+            "at": "left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "text": "13 PERCENT GRAVITY"
+      }
+    },
+    {
+      "narration": "It is also freezing. The average surface temperature is about minus one hundred seventy-one degrees Celsius. Europa's air is almost nothing, only a whisper of gas, with a pressure about a trillionth of Earth's.",
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "cold-face",
+            "at": "top-left",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "snowflake",
+            "at": "right",
+            "size": "xl",
+            "anim": "pulse"
+          }
+        ],
+        "face": "worry",
+        "text": "−171 °C"
+      }
+    },
+    {
+      "narration": "The ground under your boots is solid ice, hard as rock at those temperatures. And below it is the ice shell. How thick is it? Scientists estimate it at about ten to thirty kilometers.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "ice",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "mountain",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "ICE SHELL"
+      }
+    },
+    {
+      "narration": "Hmm. Ten to thirty kilometers is a long way down. And it is uncertain. Some models say the shell could be much thinner, only a few kilometers thick, so the real answer is still being argued.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "ice",
+            "at": "right",
+            "size": "xl",
+            "anim": "grow"
+          },
+          {
+            "icon": "thinking-face",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "So here comes the tech. You lower a robotic melting probe, a hot, drill-like machine that melts a narrow tunnel straight down. The ice closes behind it. It will take a very long time.",
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "wrench",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "fire",
+            "at": "left",
+            "size": "s",
+            "anim": "pulse"
+          },
+          {
+            "icon": "flashlight",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "text": "MELTING DOWN"
+      }
+    },
+    {
+      "narration": "Along the way, you pass cracks and ridges. Europa's surface is fractured everywhere, which is why scientists wonder what stirs below. You squeeze past blocks of ice, thinking about how far there is still to go.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "snowflake",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "eyes",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Finally, you break through. Whoosh! There is the ocean, a huge, dark, cold sea of salty water. No sunlight reaches this far down, and your lights are the only thing you can see by.",
+      "anim": {
+        "action": "swallowed",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "xl",
+            "anim": "grow"
+          },
+          {
+            "icon": "flashlight",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "shock",
+        "text": "BREAKTHROUGH",
+        "bg": "night",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "How deep is it? Scientists think Europa's ocean may be about one hundred kilometers deep. Europa is a small moon, yet its sea may be incredibly deep. And that is a lot of water to dive through, in total darkness.",
+      "anim": {
+        "action": "fall-toward",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "xl",
+            "anim": "fall"
+          },
+          {
+            "icon": "diving-mask",
+            "at": "left",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "text": "100 KILOMETERS DEEP",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "And it holds a staggering amount of water. Europa is much smaller than Earth, but estimates say its ocean could hold about two to three times as much water as all of Earth's oceans combined.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "droplet",
+            "at": "left",
+            "size": "xl",
+            "anim": "grow"
+          }
+        ],
+        "face": "shock",
+        "text": "2–3 × EARTH"
+      }
+    },
+    {
+      "narration": "So you swim. The weak gravity means the water is not pushed down as hard, but the sheer depth still means serious pressure. Your suit would be a tiny submarine, built to survive crushing squeeze in the black.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "diving-mask",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "droplet",
+            "at": "left",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "worry",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Europa is not entirely unknown. In nineteen ninety-seven, NASA's Galileo spacecraft passed within about two hundred six kilometers of its surface. Europa has been a tempting mystery for a long time, and a close look has been waiting ever since.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "l",
+            "anim": "orbit"
+          },
+          {
+            "icon": "full-moon",
+            "at": "left",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "text": "GALILEO, 1997"
+      }
+    },
+    {
+      "narration": "Is the water salty? Scientists think so. Telescopes see a hint of sodium chloride, ordinary table salt, on the surface, and it could have come up from below. So the sea may taste a lot like ours.",
+      "anim": {
+        "action": "drink",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "hand",
+            "size": "m"
+          },
+          {
+            "icon": "fish",
+            "at": "right",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "face": "sick",
+        "text": "SALTY SEA"
+      }
+    },
+    {
+      "narration": "What drives this strange sea? Part of the answer is Jupiter. Its giant gravity squeezes and stretches Europa as it orbits. This tidal flexing makes heat, and heat keeps the water liquid beneath the frozen lid.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "xl",
+            "anim": "spin"
+          },
+          {
+            "icon": "fire",
+            "at": "left",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "text": "TIDAL HEAT"
+      }
+    },
+    {
+      "narration": "Now we reach the big idea: hydrothermal vents. On Earth, hot springs on the ocean floor feed whole ecosystems that never see the Sun. Scientists wonder if Europa's rocky seafloor could have something similar.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "volcano",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "fire",
+            "at": "top-left",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "text": "HYDROTHERMAL VENTS",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "If the seafloor is hot enough, tidal flexing could power chimneys of warm, mineral-rich water. This is still a hypothesis. No one has seen a Europan vent, so it is a very good question, not an answer.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "volcano",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "thinking-face",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "So could anything live down here? Here is the honest truth. We do not know. No one has found life on Europa. But a salty ocean, heat and rock together are ingredients that scientists find exciting.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "tropical-fish",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "thinking-face",
+            "at": "top-left",
+            "size": "s"
+          },
+          {
+            "icon": "microbe",
+            "at": "left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "think",
+        "text": "ANYONE HOME?"
+      }
+    },
+    {
+      "narration": "If something swam by, it would likely be tiny, like microbes. Spotting an octopus is probably dreaming, fun as it sounds. And the science says microbes are still a big if.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "octopus",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "jellyfish",
+            "at": "left",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Back to your dive. You look up and see only black. Somewhere above, kilometers of ice separate you from space. The loneliest place to be: a tiny light, in an ocean bigger than all of Earth's seas.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "flashlight",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "worry",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Another clue: plumes. In twenty twelve, the Hubble telescope may have seen a plume of water vapor rising up to about two hundred kilometers above Europa. Later work suggests typical plumes are smaller.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "l",
+            "anim": "fall"
+          },
+          {
+            "icon": "telescope",
+            "at": "left",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "text": "WATER PLUMES"
+      }
+    },
+    {
+      "narration": "If plumes are real, a spacecraft could simply fly through one and taste the ocean, without any drilling. That is one reason scientists are so interested. Europa might be shooting samples into space for us.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "sparkles",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "satellite",
+            "at": "top-left",
+            "size": "m",
+            "anim": "approach"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "And a spacecraft is on its way. NASA's Europa Clipper launched on October fourteenth, twenty twenty-four, on a Falcon Heavy rocket. Its trip to Jupiter covers about two point nine billion kilometers.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "xl",
+            "anim": "approach"
+          },
+          {
+            "icon": "ringed-planet",
+            "at": "top-left",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "face": "grin",
+        "text": "EUROPA CLIPPER"
+      }
+    },
+    {
+      "narration": "It is due to arrive around Jupiter in April twenty thirty, and begin its flybys of Europa in March twenty thirty-one. It will not orbit Europa itself. Instead, it will make dozens of close flybys.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "l",
+            "anim": "orbit"
+          },
+          {
+            "icon": "ringed-planet",
+            "at": "top-left",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "text": "DOZENS OF FLYBYS"
+      }
+    },
+    {
+      "narration": "At closest, Clipper will pass about twenty-five kilometers above the surface. Its electronics sit inside a vault with aluminum walls nine millimeters thick, to take the radiation it will absorb.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Its radar, called REASON, can look down through the ice shell, up to about thirty kilometers deep. That means it may map where the ice meets the ocean, and find whether lakes hide inside.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "satellite-antenna",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "left",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "text": "ICE-PENETRATING RADAR"
+      }
+    },
+    {
+      "narration": "Importantly, Clipper will not search for life directly. Its goal is to explore Europa and judge whether it is habitable, and to help pick a landing site for a possible future lander.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "telescope",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "puzzle-piece",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "So what if you dived into Europa's ocean? You would pass through kilometers of ice, into a salty sea with more water than Earth's, maybe warmed by hidden vents. We cannot go yet, but we are on our way.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "diving-mask",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "droplet",
+            "at": "left",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "grin",
+        "text": "DIVE INTO EUROPA"
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

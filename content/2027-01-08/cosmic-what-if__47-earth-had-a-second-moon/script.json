@@ -1,0 +1,754 @@
+{
+  "channel": "cosmic-what-if",
+  "style": "anim",
+  "number": 47,
+  "slug": "earth-had-a-second-moon",
+  "target_minutes": 6.7,
+  "title": "What If Earth Had a Second Moon? Tides, Orbits and Mini-Moons",
+  "thumbnail_text": "SECOND MOON?",
+  "description": "Could Earth have two Moons? We look at the Hill sphere that limits where a moon can live, how tides would change, and the real objects that already follow Earth: quasi-moons like Kamo'oalewa and temporary mini-moons such as 2024 PT5.\n\nSources:\n- Wikipedia, Hill sphere: https://en.wikipedia.org/wiki/Hill_sphere\n- Wikipedia, 469219 Kamoʻoalewa: https://en.wikipedia.org/wiki/469219_Kamo%CA%BBoalewa\n- Wikipedia, Quasi-satellite: https://en.wikipedia.org/wiki/Quasi-satellite\n- Wikipedia, Minimoon: https://en.wikipedia.org/wiki/Minimoon\n- Wikipedia, 2024 PT5: https://en.wikipedia.org/wiki/2024_PT5\n- NOAA, Tides and Water Levels: What Causes Tides: https://oceanservice.noaa.gov/education/tutorial_tides/tides02_cause.html\n- Wikipedia, Tidal acceleration: https://en.wikipedia.org/wiki/Tidal_acceleration",
+  "tags": [
+    "second moon",
+    "what if",
+    "earth",
+    "moon",
+    "tides",
+    "quasi moon",
+    "kamooalewa",
+    "mini moon",
+    "hill sphere",
+    "2024 pt5",
+    "astronomy",
+    "science",
+    "cosmic what if"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia, Hill sphere",
+      "url": "https://en.wikipedia.org/wiki/Hill_sphere"
+    },
+    {
+      "title": "Wikipedia, 469219 Kamoʻoalewa",
+      "url": "https://en.wikipedia.org/wiki/469219_Kamo%CA%BBoalewa"
+    },
+    {
+      "title": "Wikipedia, Quasi-satellite",
+      "url": "https://en.wikipedia.org/wiki/Quasi-satellite"
+    },
+    {
+      "title": "Wikipedia, Minimoon",
+      "url": "https://en.wikipedia.org/wiki/Minimoon"
+    },
+    {
+      "title": "Wikipedia, 2024 PT5",
+      "url": "https://en.wikipedia.org/wiki/2024_PT5"
+    },
+    {
+      "title": "NOAA, Tides and Water Levels: What Causes Tides",
+      "url": "https://oceanservice.noaa.gov/education/tutorial_tides/tides02_cause.html"
+    },
+    {
+      "title": "Wikipedia, Tidal acceleration",
+      "url": "https://en.wikipedia.org/wiki/Tidal_acceleration"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "full-moon",
+        "at": "right",
+        "size": "xl",
+        "anim": "bob"
+      },
+      {
+        "icon": "new-moon",
+        "at": "top-left",
+        "size": "l",
+        "anim": "pulse"
+      }
+    ],
+    "bg": "space"
+  },
+  "scenes": [
+    {
+      "narration": "What if Earth had a second Moon? Would the night sky look different, and would the oceans go wild?",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "new-moon",
+            "at": "top-left",
+            "size": "m",
+            "anim": "fade-in"
+          }
+        ],
+        "face": "shock"
+      }
+    },
+    {
+      "narration": "First, meet the Moon we already have. It is about three thousand, four hundred seventy four kilometers wide, with roughly one eighty first of Earth's mass. It circles us at an average of about three hundred seventy eight thousand kilometers.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "l",
+            "anim": "orbit"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "smile",
+        "text": "ONE MOON"
+      }
+    },
+    {
+      "narration": "Its biggest job is tides. The Moon's gravity pulls ocean water into two bulges, so most places get two high tides a day. Each high tide comes roughly every twelve hours and twenty five minutes.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "water-wave",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "full-moon",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "smile",
+        "text": "TWO TIDES A DAY"
+      }
+    },
+    {
+      "narration": "The Sun matters too, but less. Even though the Sun is far more massive, it is so far away that its tide-raising effect is only about half of the Moon's. The Moon is the boss of the tides.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "When the Sun, Moon, and Earth line up, at new and full moon, their pulls add together and we get spring tides, with higher highs and lower lows. A quarter of the way between, they partly cancel.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "m"
+          },
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "water-wave",
+            "at": "bottom-right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "face": "smile",
+        "text": "SPRING TIDES"
+      }
+    },
+    {
+      "narration": "Now add a second Moon. Where could it even go? Earth only controls a bubble of space called the Hill sphere, about one point five million kilometers wide in radius, roughly three point eight Moon distances.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m"
+          },
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          }
+        ],
+        "face": "think",
+        "text": "THE HILL SPHERE"
+      }
+    },
+    {
+      "narration": "Outside that bubble, the Sun's gravity wins, and an object just goes off orbiting the Sun. So any true second Moon must stay inside the bubble, in an orbit that two large neighbors would keep tugging on.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "center",
+            "size": "m"
+          },
+          {
+            "icon": "sun",
+            "at": "far-right",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "Models of such crowded systems often end badly. Many scientists think two large moons close together would either crash into each other or toss one out, over a long time. Stability is hard for a pair.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "full-moon",
+            "at": "left",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "worry",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "But suppose a stable second Moon did exist. In a simple model, the Moon alone lifts the ocean about fifty four centimeters, and the Sun about twenty five. A second Moon would add its own pull, and tides could grow much bigger.",
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "water-wave",
+            "at": "right",
+            "size": "l",
+            "anim": "grow"
+          },
+          {
+            "icon": "full-moon",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "shock",
+        "text": "BIGGER TIDES"
+      }
+    },
+    {
+      "narration": "Real coasts can already be dramatic. In the Bay of Fundy, in Canada, tides have been measured at over sixteen meters between low and high water. Add another Moon, and harbors around the world might need a new design.",
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "sailboat",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "water-wave",
+            "at": "bottom-right",
+            "size": "l",
+            "anim": "bob"
+          }
+        ],
+        "face": "shock",
+        "text": "16 METER TIDES"
+      }
+    },
+    {
+      "narration": "The tides also steal energy. The Moon is drifting away from Earth by about three point eight centimeters every year, and tidal friction lengthens our day by a little under two milliseconds every hundred years.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "full-moon",
+            "at": "left",
+            "size": "s",
+            "anim": "shrink"
+          }
+        ],
+        "face": "think",
+        "text": "MOON DRIFTS AWAY"
+      }
+    },
+    {
+      "narration": "Then there is the night sky. Two Moons would show two sets of phases, sometimes a crescent and a full disc together. Moonlit nights could be brighter, and eclipses far more complicated.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "crescent-moon",
+            "at": "left",
+            "size": "m"
+          },
+          {
+            "icon": "star",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "smile",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "A true second Moon is probably not going to happen. But here is the surprise. Earth already has cosmic companions, small rocks that follow us around. Scientists call some of them quasi-moons.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "comet",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "A quasi-satellite orbits the Sun in step with Earth, taking the same time, but it stays close to us for many years. Researchers list eight known Earth quasi-satellites as of 2025. They are not real moons.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "sparkles",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "comet",
+            "at": "left",
+            "size": "m",
+            "anim": "orbit"
+          }
+        ],
+        "face": "smile",
+        "text": "QUASI-MOONS"
+      }
+    },
+    {
+      "narration": "The best known is Kah-mo-oh-ah-leh-wah. It was found on April twenty seventh, 2016, by the Pan-STARRS telescope on Haleakala, in Hawaii. It is one of the strangest neighbors we know.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "telescope",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "rock",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "face": "grin",
+        "text": "KAMO'OALEWA"
+      }
+    },
+    {
+      "narration": "It is small. Estimates say tens of meters across, about twenty seven meters in one list, though a 2026 study with the James Webb telescope suggests about eighteen. That is a rock the size of a house, not a world.",
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "rock",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "telescope",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "It stays between about thirty eight and one hundred times the Moon's distance from Earth. Its closest known approach was about twelve million kilometers, in 1923. It has been Earth's companion for more than a century.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "rock",
+            "at": "right",
+            "size": "s",
+            "anim": "orbit"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m"
+          },
+          {
+            "icon": "full-moon",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "face": "smile",
+        "text": "100 YEARS OF COMPANY"
+      }
+    },
+    {
+      "narration": "Its path around the Sun takes about one year, so it keeps pace with us. From Earth, it appears to loop around us over time, even though it is really circling the Sun, with Earth's gravity only nudging it.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "rock",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "sun",
+            "at": "far-right",
+            "size": "s",
+            "anim": "pulse"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "Where did it come from? Scientists think it may be a piece of the Moon, thrown out by an ancient impact. One idea points to Giordano Bruno crater on the far side. But that is not confirmed, and new data argue against it.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "bubble",
+            "size": "m"
+          },
+          {
+            "icon": "rock",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "China's Tianwen two spacecraft launched in May 2025 and was due to reach Kah-mo-oh-ah-leh-wah in July 2026. It plans to collect a sample and head home, starting around April 2027, so scientists can test the Moon idea.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "rock",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "grin",
+        "text": "TIANWEN-2"
+      }
+    },
+    {
+      "narration": "Quasi-moons are not stable forever. Their orbits lie outside Earth's Hill sphere, so over time they drift into other motions, leave our neighborhood, and may come back later. Kah-mo-oh-ah-leh-wah should stay for several hundred years.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "rock",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "left",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "Then there are mini-moons, small space rocks that Earth briefly captures. They orbit us for about ten months on average, then return to circling the Sun. Models say at least one meter-sized rock is probably orbiting Earth at any time.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "rock",
+            "at": "right",
+            "size": "s",
+            "anim": "orbit"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "face": "smile",
+        "text": "MINI-MOONS"
+      }
+    },
+    {
+      "narration": "One was 2006 R H one twenty. At first, astronomers thought it was a rocket stage from the Apollo missions, but it turned out to be an asteroid. It orbited Earth for about thirteen months and may return after twenty one years.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "left",
+            "size": "m"
+          },
+          {
+            "icon": "rock",
+            "at": "right",
+            "size": "s",
+            "anim": "orbit"
+          },
+          {
+            "icon": "magnifying-glass-tilted-right",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Another, 2020 C D three, orbited Earth from 2018 to May 2020. It was only about one to six meters wide, too small to see easily. Sky surveys found it because astronomers were searching carefully.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "telescope",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "rock",
+            "at": "left",
+            "size": "s",
+            "anim": "orbit"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "And in 2024 came 2024 P T five, found on August seventh by a telescope in South Africa. It was about eleven meters wide, and Earth held it from September twenty ninth to November twenty fifth, almost two months.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "rock",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "telescope",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "grin",
+        "text": "2024 PT5"
+      }
+    },
+    {
+      "narration": "Its light looked a lot like lunar rock, so scientists concluded it is probably a piece of the Moon, blasted off by an old impact. It should visit again around 2084, for about forty three days.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "rock",
+            "at": "left",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "calendar",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Researchers say 2024 P T five mostly orbited the Sun, so it should not even be called a true mini-moon. The line between a visitor and a satellite is blurry, and even the experts argue about it.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "magnifying-glass-tilted-right",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "rock",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "Why do we have only one big Moon? The leading idea says a Mars-sized planet, called Theia, hit the young Earth. The debris merged into the Moon. A second giant impact like that would have been a very rare accident.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "fire",
+            "at": "left",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "shock",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "The Moon has no moon of its own either. Its Hill sphere reaches only about sixty thousand kilometers, one sixth of the way to Earth. A tiny moon would have to stay inside that small bubble.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "face": "think",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "So, what if Earth had a second Moon? A big one would be unstable, and tides might be wild. But we already have tiny rock companions, from Kah-mo-oh-ah-leh-wah to temporary mini-moons, keeping Earth company.",
+      "anim": {
+        "action": "wave",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "rock",
+            "at": "top-left",
+            "size": "s",
+            "anim": "orbit"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

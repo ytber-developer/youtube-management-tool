@@ -1,0 +1,647 @@
+{
+  "channel": "cosmic-what-if",
+  "style": "anim",
+  "number": 38,
+  "slug": "gamma-ray-burst-hits-earth",
+  "target_minutes": 6.2,
+  "title": "What If a Gamma-Ray Burst Hit Earth? Ozone, Extinction, and Odds",
+  "thumbnail_text": "GAMMA-RAY BURST",
+  "description": "Gamma-ray bursts are the brightest explosions we know. What if one went off close to home, with its jet aimed at Earth? We explain what causes a burst, how it could strip the ozone layer, why scientists once suggested a burst helped cause the Ordovician extinction, why that idea is unproven, and how rare the real danger is.\n\nSources:\n- Wikipedia, Gamma-ray burst: https://en.wikipedia.org/wiki/Gamma-ray_burst\n- Wikipedia, Gamma-ray burst progenitors: https://en.wikipedia.org/wiki/Gamma-ray_burst_progenitors\n- Wikipedia, Ordovician-Silurian extinction events: https://en.wikipedia.org/wiki/Ordovician%E2%80%93Silurian_extinction_events\n- Wikipedia, GRB 221009A: https://en.wikipedia.org/wiki/GRB_221009A\n- Wikipedia, Ozone depletion: https://en.wikipedia.org/wiki/Ozone_depletion",
+  "tags": [
+    "gamma ray burst",
+    "what if a gamma ray burst hit earth",
+    "ozone layer",
+    "ordovician extinction",
+    "grb 221009a",
+    "the boat",
+    "hypernova",
+    "what if",
+    "mass extinction",
+    "astronomy",
+    "science",
+    "space",
+    "cosmic what if"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia, Gamma-ray burst",
+      "url": "https://en.wikipedia.org/wiki/Gamma-ray_burst"
+    },
+    {
+      "title": "Wikipedia, Gamma-ray burst progenitors",
+      "url": "https://en.wikipedia.org/wiki/Gamma-ray_burst_progenitors"
+    },
+    {
+      "title": "Wikipedia, Ordovician-Silurian extinction events",
+      "url": "https://en.wikipedia.org/wiki/Ordovician%E2%80%93Silurian_extinction_events"
+    },
+    {
+      "title": "Wikipedia, GRB 221009A",
+      "url": "https://en.wikipedia.org/wiki/GRB_221009A"
+    },
+    {
+      "title": "Wikipedia, Ozone depletion",
+      "url": "https://en.wikipedia.org/wiki/Ozone_depletion"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "high-voltage",
+        "at": "right",
+        "size": "xl",
+        "anim": "pulse"
+      },
+      {
+        "icon": "globe-showing-americas",
+        "at": "top-left",
+        "size": "l",
+        "anim": "bob"
+      }
+    ],
+    "bg": "night"
+  },
+  "scenes": [
+    {
+      "narration": "What if a nearby star exploded, and a gamma-ray burst, the most powerful flash since the Big Bang, hit Earth?",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "star",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "left",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "shock",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Gamma-ray bursts are brief flashes of high-energy light. Satellites catch about one every day. They last anywhere from a few milliseconds to hours, and in that brief moment, they are among the most energetic events we know.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "top",
+            "size": "s",
+            "anim": "orbit"
+          },
+          {
+            "icon": "star",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "think",
+        "text": "1 PER DAY"
+      }
+    },
+    {
+      "narration": "The good news is that they are all very far away. Most come from galaxies billions of light-years away, and none from inside our own Milky Way has ever been recorded. So today, we are safe.",
+      "anim": {
+        "action": "wave",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "smile",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "But scientists ask a fair question: what if one went off close to home? To see the answer, we first need to know what makes a burst, and why it is so dangerous.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "magnifying-glass-tilted-right",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "Long bursts, lasting more than two seconds, are linked to the death of a giant star. When its core collapses, it can form a black hole, which launches two narrow jets at almost the speed of light.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "star",
+            "at": "right",
+            "size": "l",
+            "anim": "shrink"
+          },
+          {
+            "icon": "black-hole",
+            "at": "left",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "shock",
+        "text": "DYING GIANT STAR"
+      }
+    },
+    {
+      "narration": "Short bursts, lasting under about two seconds, are linked to something different: two neutron stars crashing together. In 2017, astronomers saw one of these, along with ripples in space called gravitational waves.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "star",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "star",
+            "at": "left",
+            "size": "m",
+            "anim": "approach"
+          }
+        ],
+        "face": "shock",
+        "text": "NEUTRON STAR CRASH"
+      }
+    },
+    {
+      "narration": "The key is the jets. A burst does not shine in all directions. Its energy is squeezed into narrow beams, like a flashlight instead of a light bulb. That is why only a small share of bursts are aimed at Earth.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "flashlight",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "left",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "think",
+        "text": "NARROW BEAMS"
+      }
+    },
+    {
+      "narration": "Now, how likely is one in our galaxy? Estimates suggest a long burst happens in a galaxy like the Milky Way once every ten thousand to a million years. And most would miss us completely.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "bar-chart",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "think",
+        "text": "1 IN 10,000 YEARS?",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Still, if one went off close enough, with its jet pointed at us, it could be bad. Scientists say a burst within a few thousand light-years of Earth could seriously damage our atmosphere.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "star",
+            "at": "top-left",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "face": "worry",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "The burst itself would last only seconds to minutes. If it was strong enough, one side of the planet would get a huge blast of gamma rays, while the other side, facing away, would be in the dark.",
+      "anim": {
+        "action": "hold-breath",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "left",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "hold",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "But the real damage would probably not come from gamma rays on the ground, since the air absorbs most of them. Instead, the blast would hit the high atmosphere, and start to change its chemistry.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "cloud",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top",
+            "size": "m",
+            "anim": "fall"
+          }
+        ],
+        "face": "shock"
+      }
+    },
+    {
+      "narration": "The energy would probably split nitrogen in the air, and form nitrogen oxides. And these gases are bad news for the ozone layer, because nitric oxide acts like a catalyst, breaking ozone molecules apart again and again.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "think",
+        "text": "NITROGEN OXIDES"
+      }
+    },
+    {
+      "narration": "Why does that matter? Ozone is the only atmospheric gas that absorbs UV-B light. Without enough of it, much more ultraviolet light from the Sun would reach the ground, and cause damage to living things.",
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "shield",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "face": "sick",
+        "text": "NO OZONE SHIELD"
+      }
+    },
+    {
+      "narration": "Scientists think that after a nearby burst, the ozone layer could be thinned for years. One study suggests a burst could remove about half of it. We already know that the Antarctic ozone hole is a similar warning.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "left",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "face": "worry",
+        "text": "HALF OF OZONE?"
+      }
+    },
+    {
+      "narration": "For people, the extra ultraviolet light would mean more sunburn, more skin damage, and more eye problems. We could protect ourselves with hats, shade, and sunscreen. But the bigger risk would be to the food web.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "sunglasses",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "sun",
+            "at": "top",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "sick"
+      }
+    },
+    {
+      "narration": "Tiny floating plants and animals in the sea, called plankton, live near the surface where the Sun's light reaches. Ultraviolet light harms them. And much of the ocean food web depends on them.",
+      "anim": {
+        "action": "drink",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "fish",
+            "at": "left",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "face": "shock",
+        "text": "PLANKTON AT RISK"
+      }
+    },
+    {
+      "narration": "On land, crops, trees, and grass would also be stressed by ultraviolet light, especially at first. Farms would be hit, and food would become harder to find. The effects would spread through ecosystems like ripples in a pond.",
+      "anim": {
+        "action": "eat",
+        "props": [
+          {
+            "icon": "seedling",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "herb",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "Is there any evidence this has happened before? One idea says yes. About four hundred forty-five million years ago, the Late Ordovician extinction wiped out roughly eighty-five percent of marine species.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "fish",
+            "at": "right",
+            "size": "m",
+            "anim": "fall"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "left",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "face": "shock",
+        "text": "445 MILLION YEARS AGO"
+      }
+    },
+    {
+      "narration": "In 2003, a study proposed that a gamma-ray burst from a hypernova may have stripped about half the ozone layer, and hit plankton hardest. It is a clever idea, with a big problem: there is no clear proof.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "magnifying-glass-tilted-right",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "bone",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "think",
+        "text": "CLEVER, BUT UNPROVEN"
+      }
+    },
+    {
+      "narration": "In fact, other causes are better supported. The extinction came in two pulses, and is usually linked to a big ice age that lowered sea levels, and later to a shortage of oxygen in the oceans.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "snowflake",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "droplet",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "So the honest answer is that nobody knows. A burst might have played a part, or not at all. Science often works like this: an idea is exciting, but we keep it as a hypothesis until proof arrives.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "puzzle-piece",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "What about the burst that made headlines? On October ninth, 2022, satellites detected GRB two two one zero zero nine A. It is nicknamed the BOAT, for Brightest Of All Time. It is the brightest ever recorded.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "telescope",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "satellite",
+            "at": "top",
+            "size": "s",
+            "anim": "orbit"
+          },
+          {
+            "icon": "star",
+            "at": "left",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "grin",
+        "text": "THE BOAT",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Its light left its home galaxy about one point nine billion years ago, and still it was strong enough to disturb Earth's upper atmosphere for several hours, and to disrupt some long-wave radio signals.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "satellite-antenna",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "Even so, it only disturbed the upper atmosphere for a few hours. That is the reassuring part. A burst this powerful, from billions of light-years away, can touch our sky, but it was no danger to us.",
+      "anim": {
+        "action": "wave",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "shield",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Astronomers estimate that an event as bright as the BOAT may only happen about once in ten thousand years. So we were lucky to catch one with modern telescopes.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "face": "think",
+        "text": "ONCE IN 10,000 YEARS"
+      }
+    },
+    {
+      "narration": "What about stars close by that might become bursts? Long bursts seem to need very massive, fast-spinning stars, at least about forty times the Sun's mass, with little heavy elements. Such stars are rare, and rarely nearby.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "star",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "telescope",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "Today, space telescopes watch the sky all the time, so we would see a burst the moment it arrived. We can't stop one, but we can study them, and learn how they shape the universe.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "top",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "telescope",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "So, what if a gamma-ray burst hit Earth? The sky might look normal for a moment, then the ozone layer would be damaged for years. The chance is very, very small, and the science is fascinating.",
+      "anim": {
+        "action": "wave",
+        "props": [
+          {
+            "icon": "star",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

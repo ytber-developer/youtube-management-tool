@@ -1,0 +1,665 @@
+{
+  "channel": "inside-your-body",
+  "number": 40,
+  "slug": "how-your-sense-of-smell-works",
+  "style": "anim",
+  "target_minutes": 6.3,
+  "title": "How Your Sense of Smell Works (and Why Smells Bring Back Memories)",
+  "thumbnail_text": "WHY SMELL TRIGGERS MEMORY",
+  "description": "Why does one whiff of a scent bring back a whole memory? Follow a smell from your nose to your brain: about four hundred types of olfactory receptors, the olfactory bulb, and its direct link to the parts of the brain that handle emotion and memory. Plus why a cold dulls your sense of smell, why a smell fades when you stay with it, and when a lasting change is worth asking a doctor about.\n\nSources:\n- NIDCD (NIH), Smell Disorders: https://www.nidcd.nih.gov/health/smell-disorders\n- Dana Foundation, The Senses: Smell and Taste: https://dana.org/article/the-senses-smell-and-taste/\n- Cleveland Clinic, Anosmia (Loss of Sense of Smell): https://my.clevelandclinic.org/health/diseases/21859-anosmia-loss-of-sense-of-smell\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": [
+    "sense of smell",
+    "how smell works",
+    "olfactory bulb",
+    "olfactory receptors",
+    "smell and memory",
+    "why colds dull smell",
+    "anosmia",
+    "limbic system",
+    "human body",
+    "science explained",
+    "inside your body"
+  ],
+  "sources": [
+    {
+      "title": "NIDCD (NIH), Smell Disorders",
+      "url": "https://www.nidcd.nih.gov/health/smell-disorders"
+    },
+    {
+      "title": "Dana Foundation, The Senses: Smell and Taste",
+      "url": "https://dana.org/article/the-senses-smell-and-taste/"
+    },
+    {
+      "title": "Cleveland Clinic, Anosmia (Loss of Sense of Smell)",
+      "url": "https://my.clevelandclinic.org/health/diseases/21859-anosmia-loss-of-sense-of-smell"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "nose",
+        "at": "right",
+        "size": "l",
+        "anim": "pulse"
+      },
+      {
+        "icon": "bouquet",
+        "at": "top-left",
+        "size": "m",
+        "anim": "bob"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "One whiff of a stranger's perfume, and suddenly you are eight years old in your grandmother's kitchen. How does a smell do that?",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "bouquet",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "house-with-garden",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "face": "shock",
+        "camera": "zoom-in",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Smell is a quiet sense. You rarely think about it, yet it is working every second you breathe, reading the chemistry of the air around you and sending reports straight to your brain.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "nose",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "dashing-away",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Here is how it starts. Every smell is made of tiny molecules floating in the air. When you breathe in through your nose, some of those molecules drift up toward a small patch of tissue high inside it.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "wind-face",
+            "at": "left",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "nose",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "That patch holds your olfactory sensory neurons. According to the National Institute on Deafness and Other Communication Disorders, each one of these neurons carries just one kind of odor receptor.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "nose",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "text": "ONE RECEPTOR EACH"
+      }
+    },
+    {
+      "narration": "Think of each receptor as a lock, and each odor molecule as a key. When a molecule fits, the neuron fires, and an electrical signal heads off toward the brain.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "puzzle-piece",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "How many kinds of locks do you have? The Dana Foundation says about four hundred types of olfactory receptors, and calls that number a good estimate. So scientists are still counting a little.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "puzzle-piece",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "text": "ABOUT 400 TYPES",
+        "bg": "lab",
+        "face": "shock"
+      }
+    },
+    {
+      "narration": "Four hundred sounds small next to the number of smells in the world. Yet each odor usually switches on a whole combination of receptors, rather than just one, a bit like pressing several piano keys at once.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "musical-notes",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "That is why your nose can tell apart so many scents. Older estimates said about ten thousand. Newer thinking suggests it could be vastly more, perhaps even a trillion, but scientists treat that figure as tentative.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "sparkles",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "nose",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "paper",
+        "text": "MANY SMELLS"
+      }
+    },
+    {
+      "narration": "Once a neuron fires, its signal travels up a thin nerve to the olfactory bulb. This little structure sits on the underside of the front of your brain, just above your nose.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "nose",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "text": "OLFACTORY BULB"
+      }
+    },
+    {
+      "narration": "The bulb works like a sorting office. Signals from neurons that share the same receptor type are gathered together, and the bulb then passes patterns onward to the brain's smell cortex for further processing.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "page-facing-up",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Notice how fast this is. The Dana Foundation says smell signals are processed in only two or three synapses, in about a tenth of a second. From sniff to sensation, almost no delay.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "park",
+        "text": "ONE TENTH SECOND"
+      }
+    },
+    {
+      "narration": "And here is the part that explains your grandmother's kitchen. The olfactory bulb connects directly to the limbic system, a set of brain regions that helps handle emotion and memory.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "red-heart",
+            "at": "above",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "body",
+        "text": "SMELL, MEMORY, EMOTION"
+      }
+    },
+    {
+      "narration": "Other senses take a longer route. Smell has a short cut into the parts of the brain tied to feelings. That may be why scents can bring back a moment so vividly, before you even know why.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "candle",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "face": "think",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "The Dana Foundation notes that smells can quickly trigger fear or desire, and that they are strongly linked to emotionally charged memories. Your nose is a very personal time machine.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "grin",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "There is a second way smells reach you. Odors also travel from the back of your mouth up through a channel into your nose, which is why chewing releases the aroma of your food.",
+      "anim": {
+        "action": "drink",
+        "props": [
+          {
+            "icon": "hot-beverage",
+            "at": "hand",
+            "size": "m"
+          },
+          {
+            "icon": "nose",
+            "at": "right",
+            "size": "s"
+          }
+        ],
+        "bg": "room",
+        "text": "AROMA FROM INSIDE"
+      }
+    },
+    {
+      "narration": "Scientists call this the smell you get from inside, and it is a big reason that flavor feels so rich. Much of what you call taste is really smell.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "mouth",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "Now, the classic problem. You catch a cold, and suddenly your dinner tastes like cardboard. What happened to your taste? In fact, your taste is mostly fine. It is your sense of smell that took the hit.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "face-with-thermometer",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "sneezing-face",
+            "at": "top-left",
+            "size": "s",
+            "anim": "shake"
+          }
+        ],
+        "face": "sick",
+        "bg": "room",
+        "text": "COLD, DULL SMELL"
+      }
+    },
+    {
+      "narration": "A cold or flu can block that channel from the throat to the nose. The NIDCD explains that when odors cannot reach the sensory cells, food tastes bland, since so much of flavor comes from smell.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "nose",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "face-with-medical-mask",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "sick",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Swelling and mucus get in the way, so the odor molecules never make it to the neurons that read them. The sensors are still there. They just cannot get the message.",
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "nose",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "worry",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "The reassuring news from Cleveland Clinic is that smell loss from a cold or flu typically clears up within a few days. Smell usually returns once the underlying problem goes away.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "check-mark-button",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "smile",
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "What about the opposite problem? You walk into a bakery and the smell is wonderful. Ten minutes later, you hardly notice it. Your nose has not broken. Your brain is tuning out the news that never changes.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "cookie",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "bread",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "bg": "park",
+        "text": "SMELL FADES"
+      }
+    },
+    {
+      "narration": "Many scientists describe this as the sense adapting. A steady smell tells you nothing new, so the signal fades into the background and makes room for something that might matter, such as smoke.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "fire",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "face": "think",
+        "bg": "paper"
+      }
+    },
+    {
+      "narration": "Step outside for a minute, breathe some fresh air, and walk back in. The smell returns, almost as strong as before. That is your sense of smell resetting, one of the best free experiments you can run.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "house-with-garden",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "wind-face",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Smell can also change with age. The NIDCD reports that smell problems become more common as we get older, and that between one and two percent of North Americans report a problem with their sense of smell.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "older-person",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "nose",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "room",
+        "text": "ONE TO TWO PERCENT"
+      }
+    },
+    {
+      "narration": "Why does that matter? Smell does more than make life pleasant. It helps you notice smoke, gas, and spoiled food. Because those warnings are easy to miss, a weak sense of smell is worth taking seriously.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "fire",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "warning",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "face": "worry",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "The NIDCD says a smell disorder can sometimes be an early sign of conditions such as Parkinson's disease, Alzheimer's disease, or multiple sclerosis. That does not mean a stuffy nose predicts anything. It means lasting changes deserve attention.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "stethoscope",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "warning",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "worry",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "So here is the simple guideline. If your sense of smell is reduced for a long time, or it does not come back after an illness clears, talk with your doctor. It is nothing to fear, and it is easy to check.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "hospital",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "stethoscope",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "smile",
+        "bg": "room",
+        "text": "LASTING? ASK A DOCTOR"
+      }
+    },
+    {
+      "narration": "A doctor who specializes in ears, nose, and throat can look inside your nose, review your health history, and run a simple smell test, so you get real answers.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "stethoscope",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "So the next time you smell rain on a hot street, notice what happens. Four hundred types of receptors, one quick trip through the bulb, and a short cut to the parts of your brain that hold feelings.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "droplet",
+            "at": "right",
+            "size": "m",
+            "anim": "fall"
+          },
+          {
+            "icon": "nose",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "grin",
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "Smell is not just a nose trick. It is chemistry turned into memory, a lock-and-key system that connects the air around you to the story of your life, all in about a tenth of a second.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "nose",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "bg": "night",
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

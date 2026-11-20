@@ -1,0 +1,724 @@
+{
+  "channel": "inside-your-body",
+  "number": 46,
+  "slug": "how-your-lungs-work",
+  "style": "anim",
+  "target_minutes": 6.7,
+  "title": "How Your Lungs Work: 480 Million Tiny Air Sacs and One Muscle",
+  "thumbnail_text": "480 MILLION AIR SACS",
+  "description": "Follow a single breath from your nose down a branching tree of airways to hundreds of millions of tiny air sacs, see how oxygen and carbon dioxide trade places, how your diaphragm pulls air in, why breathing runs on autopilot, and roughly how much air you move in a day. Plus the breathing signs that mean it is time to see a doctor.\n\nSources:\n- BioNumbers (Harvard) - Number of alveoli in lung (Ochs et al., 2004): https://bionumbers.hms.harvard.edu/bionumber.aspx?id=101476\n- Cleveland Clinic - Lungs: https://my.clevelandclinic.org/health/body/8960-lungs\n- American Lung Association - How Your Lungs Work: https://www.lung.org/lung-health-diseases/how-lungs-work\n- NHLBI (NIH) - How the Lungs Work: What Breathing Does for the Body: https://www.nhlbi.nih.gov/health/lungs/breathing-benefits\n- NHLBI (NIH) - How Your Body Controls Breathing: https://www.nhlbi.nih.gov/health/lungs/body-controls-breathing\n- The physics of human breathing: flow, timing, volume, and pressure parameters (PMC): https://pmc.ncbi.nlm.nih.gov/articles/PMC8672270/\n- MedlinePlus - Breathing difficulty: https://medlineplus.gov/ency/article/003075.htm\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": [
+    "how your lungs work",
+    "lungs",
+    "alveoli",
+    "how breathing works",
+    "diaphragm",
+    "gas exchange",
+    "oxygen and carbon dioxide",
+    "why breathing is automatic",
+    "respiratory system",
+    "how many breaths a day",
+    "human body",
+    "science explained",
+    "inside your body"
+  ],
+  "sources": [
+    {
+      "title": "BioNumbers (Harvard) - Number of alveoli in lung (Ochs et al., 2004)",
+      "url": "https://bionumbers.hms.harvard.edu/bionumber.aspx?id=101476"
+    },
+    {
+      "title": "Cleveland Clinic - Lungs",
+      "url": "https://my.clevelandclinic.org/health/body/8960-lungs"
+    },
+    {
+      "title": "American Lung Association - How Your Lungs Work",
+      "url": "https://www.lung.org/lung-health-diseases/how-lungs-work"
+    },
+    {
+      "title": "NHLBI (NIH) - How the Lungs Work: What Breathing Does for the Body",
+      "url": "https://www.nhlbi.nih.gov/health/lungs/breathing-benefits"
+    },
+    {
+      "title": "NHLBI (NIH) - How Your Body Controls Breathing",
+      "url": "https://www.nhlbi.nih.gov/health/lungs/body-controls-breathing"
+    },
+    {
+      "title": "The physics of human breathing: flow, timing, volume, and pressure parameters (PMC)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8672270/"
+    },
+    {
+      "title": "MedlinePlus - Breathing difficulty",
+      "url": "https://medlineplus.gov/ency/article/003075.htm"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "breathe",
+    "props": [
+      {
+        "icon": "lungs",
+        "at": "right",
+        "size": "xl",
+        "anim": "pulse"
+      },
+      {
+        "icon": "grapes",
+        "at": "top-left",
+        "size": "m",
+        "anim": "bob"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "You will take at least seventeen thousand breaths today without thinking about a single one. How do your lungs pull this off?",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "lungs",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "dashing-away",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "body",
+        "face": "shock",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "Take a slow breath in right now. Notice the cool air at your nose, the gentle lift of your chest, and then the easy release. You just ran one of the busiest machines in your body.",
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "nose",
+            "at": "top-left",
+            "size": "s"
+          },
+          {
+            "icon": "lungs",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "face": "smile",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Your lungs have one big job: swap gases. They pull oxygen from the air into your blood, and they send carbon dioxide, a waste product your cells make, back out. Every cell in your body depends on that trade.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "lungs",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "droplet",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "text": "THE BIG SWAP"
+      }
+    },
+    {
+      "narration": "Let us follow one breath from the outside. Air enters through your nose or mouth, then travels down the windpipe, which doctors call the trachea. This is the start of a branching tube system.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "nose",
+            "at": "left",
+            "size": "s"
+          },
+          {
+            "icon": "tornado",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "body",
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Near your chest, the trachea splits into two main tubes called bronchi, one for each lung. Your right lung has three sections, called lobes, and your left lung has two.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "lungs",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "anatomical-heart",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "body",
+        "text": "THREE PLUS TWO"
+      }
+    },
+    {
+      "narration": "Each bronchus then splits again and again into narrower branches. The American Lung Association says the smallest tubes, the bronchioles, divide into thousands of even smaller passages. Picture an upside-down tree growing inside your chest.",
+      "anim": {
+        "action": "grow",
+        "props": [
+          {
+            "icon": "deciduous-tree",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "herb",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "face": "think",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "At the very end of every twig hang tiny clusters of air sacs called alveoli. Cleveland Clinic compares them to little grapes. This is where the real magic happens, and where the whole tree has been heading.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "grapes",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          }
+        ],
+        "bg": "body",
+        "face": "grin",
+        "text": "AIR SACS"
+      }
+    },
+    {
+      "narration": "How many alveoli do you have? A careful study in 2004 counted them in adult lungs and found about four hundred eighty million in a pair. People varied widely, from about two hundred seventy million to nearly eight hundred million.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "abacus",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "face": "shock",
+        "text": "480 MILLION"
+      }
+    },
+    {
+      "narration": "Because people vary so much, scientists treat it as a good estimate, not an exact number. The safe summary is hundreds of millions of tiny sacs.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "bar-chart",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "Why so many tiny sacs instead of two big balloons? Many small sacs pack far more surface into the same space. More surface means more room for oxygen to slip through, which is exactly what a busy body needs.",
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "balloon",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "puzzle-piece",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "face": "think",
+        "text": "MORE SURFACE"
+      }
+    },
+    {
+      "narration": "The wall of each alveolus is incredibly thin, and a web of tiny blood vessels called capillaries wraps around it. Oxygen crosses that thin wall into the blood, while carbon dioxide crosses the other way.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "drop-of-blood",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Once in the blood, oxygen hops onto a protein called hemoglobin inside red blood cells, according to the National Heart, Lung, and Blood Institute. The red cells then ride toward your heart.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "drop-of-blood",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "red-heart",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "The oxygen-rich blood returns to the left side of your heart through the pulmonary veins, and your heart pumps it out to every cell. Your cells use it to make energy, and make carbon dioxide in return.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "face": "grin",
+        "text": "ENERGY"
+      }
+    },
+    {
+      "narration": "That carbon dioxide travels back to the right side of the heart, then through the pulmonary artery to the lungs, where it slips into the alveoli. Your next breath out carries it away. The loop never stops.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "recycling-symbol",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "lungs",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "face": "smile",
+        "text": "ONE FULL LOOP"
+      }
+    },
+    {
+      "narration": "But how does air actually move in? Your lungs do not pump themselves. Most of the work is done by a dome-shaped muscle beneath them, your diaphragm.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "flexed-biceps",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "body",
+        "face": "grin",
+        "text": "THE DIAPHRAGM"
+      }
+    },
+    {
+      "narration": "When your diaphragm tightens, it flattens and moves downward. Muscles between your ribs lift the rib cage up and out. Your chest space grows, the lungs expand, and air flows in.",
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "lungs",
+            "at": "right",
+            "size": "l",
+            "anim": "grow"
+          },
+          {
+            "icon": "downwards-button",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "body",
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Breathing out at rest takes no effort at all. The diaphragm and rib muscles simply relax, your chest gets smaller, and the lungs spring back like a stretched balloon letting go. The air flows out on its own.",
+      "anim": {
+        "action": "breathe",
+        "props": [
+          {
+            "icon": "balloon",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "dashing-away",
+            "at": "top-left",
+            "size": "s",
+            "anim": "fade-in"
+          }
+        ],
+        "face": "smile",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "During exercise, things change. Your belly muscles help push the diaphragm upward to force air out faster, and you breathe quicker and deeper. That is why a hard run makes your belly and chest work together.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "person-running",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "fire",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "park",
+        "face": "grin",
+        "text": "BREATHING HARDER"
+      }
+    },
+    {
+      "narration": "Notice that your lungs and heart are partners. Every breath is only useful because your blood is waiting to carry the oxygen onward, so the two organs always work as a team.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "anatomical-heart",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "handshake",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Now the big question: why do you never have to remember to breathe? NHLBI explains that your autonomic nervous system, the part that works without thought, usually handles it. Your breathing needs no thinking.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sleeping-face",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "face": "think",
+        "text": "NO THINKING NEEDED"
+      }
+    },
+    {
+      "narration": "Sensors in your brain and near your blood vessels keep checking the carbon dioxide and oxygen in your blood. They report to breathing centers in your brain, which adjust your pace. Even while you sleep, they keep working.",
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "crescent-moon",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "bg": "night",
+        "face": "sleep"
+      }
+    },
+    {
+      "narration": "Other sensors help too. Sensors in your airways detect irritants and can trigger a cough or a sneeze to clear them. Sensors in your muscles and joints notice movement and may speed your breathing when you start to exercise.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "sneezing-face",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "dashing-away",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "shock",
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Yet breathing is special, because you can take over when you want. You can hold your breath, sing a long note, or sigh on purpose. Your brain hands you the controls, then quietly takes them back.",
+      "anim": {
+        "action": "hold-breath",
+        "props": [
+          {
+            "icon": "musical-note",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "microphone",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "hold",
+        "text": "YOU CAN TAKE OVER"
+      }
+    },
+    {
+      "narration": "How fast does it all go? Cleveland Clinic says adults breathe twelve to twenty times a minute. Over a full day, that adds up to roughly seventeen thousand to nearly twenty-nine thousand breaths. Your lungs never take a day off.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "calendar",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "park",
+        "face": "smile",
+        "text": "12 TO 20 BREATHS"
+      }
+    },
+    {
+      "narration": "And how much air is that? In one physics review, a resting adult takes about half a liter per breath, twelve times a minute, which is about six liters a minute. Over a day, that is roughly eight thousand six hundred liters, and real numbers vary from person to person.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "water-pistol",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "abacus",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "text": "8,600 LITERS A DAY"
+      }
+    },
+    {
+      "narration": "The American Lung Association notes that you can live about two weeks without food and two days without water, but only about two minutes without air. That is why your body guards its breathing so closely.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "bread",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "droplet",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "worry",
+        "text": "TWO MINUTES"
+      }
+    },
+    {
+      "narration": "Most of the time, your lungs run quietly in the background. But some breathing changes deserve attention, so let us talk plainly about when to see a doctor. These are signs worth taking seriously.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "stethoscope",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "lungs",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "face": "smile",
+        "text": "SEE A DOCTOR"
+      }
+    },
+    {
+      "narration": "MedlinePlus says to call nine one one or go to the emergency room if breathing trouble starts suddenly, or is so bad that it interferes with talking, or if someone stops breathing. Do not wait to see if it passes.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "ambulance",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "police-car-light",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "shock",
+        "bg": "park",
+        "text": "CALL 911"
+      }
+    },
+    {
+      "narration": "Book an appointment if shortness of breath comes with chest pain, fever, or wheezing, if it happens after only slight activity or while you rest, or if it wakes you at night. Many causes are treatable.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "calendar",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "stethoscope",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "face": "think"
+      }
+    },
+    {
+      "narration": "Think of your lungs as a tree, a pump, and a marketplace all in one. Air travels down branches, a muscle moves it, and hundreds of millions of tiny sacs trade oxygen for carbon dioxide.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "deciduous-tree",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "lungs",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "body",
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "And the best part is that it all runs on autopilot. So next time you take a deep breath, enjoy it. Billions of cells are thanking your lungs, your diaphragm, and your clever brain.",
+      "anim": {
+        "action": "wave",
+        "props": [
+          {
+            "icon": "lungs",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "bg": "park",
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

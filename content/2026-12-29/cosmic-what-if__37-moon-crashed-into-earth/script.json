@@ -1,0 +1,642 @@
+{
+  "channel": "cosmic-what-if",
+  "style": "anim",
+  "number": 37,
+  "slug": "moon-crashed-into-earth",
+  "target_minutes": 6.1,
+  "title": "What If the Moon Crashed Into Earth? The Real Science",
+  "thumbnail_text": "MOON CRASHES",
+  "description": "What would happen if the Moon stopped circling and started to fall? We follow it day by day: giant tides, the Roche limit, a broken Moon turning into a glittering ring, and a rain of rocks. Then we look at the real story: the Moon was probably born from a giant impact, 4.5 billion years ago.\n\nSources:\n- NASA Science, Moon Facts: https://science.nasa.gov/moon/facts/\n- Wikipedia, Roche limit: https://en.wikipedia.org/wiki/Roche_limit\n- Wikipedia, Giant-impact hypothesis: https://en.wikipedia.org/wiki/Giant-impact_hypothesis\n- NOAA National Ocean Service, Tides and water levels: https://oceanservice.noaa.gov/facts/tides.html\n- Wikipedia, Tidal acceleration: https://en.wikipedia.org/wiki/Tidal_acceleration\n- NASA, Earth Fact Sheet: https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+  "tags": [
+    "moon falls to earth",
+    "what if the moon crashed into earth",
+    "roche limit",
+    "tides",
+    "giant impact hypothesis",
+    "theia",
+    "planetary ring",
+    "what if",
+    "moon",
+    "astronomy",
+    "science",
+    "space",
+    "cosmic what if"
+  ],
+  "sources": [
+    {
+      "title": "NASA Science, Moon Facts",
+      "url": "https://science.nasa.gov/moon/facts/"
+    },
+    {
+      "title": "Wikipedia, Roche limit",
+      "url": "https://en.wikipedia.org/wiki/Roche_limit"
+    },
+    {
+      "title": "Wikipedia, Giant-impact hypothesis",
+      "url": "https://en.wikipedia.org/wiki/Giant-impact_hypothesis"
+    },
+    {
+      "title": "NOAA National Ocean Service, Tides and water levels",
+      "url": "https://oceanservice.noaa.gov/facts/tides.html"
+    },
+    {
+      "title": "Wikipedia, Tidal acceleration",
+      "url": "https://en.wikipedia.org/wiki/Tidal_acceleration"
+    },
+    {
+      "title": "NASA, Earth Fact Sheet",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "full-moon",
+        "at": "right",
+        "size": "xl",
+        "anim": "approach"
+      },
+      {
+        "icon": "globe-showing-americas",
+        "at": "top-left",
+        "size": "l",
+        "anim": "bob"
+      }
+    ],
+    "bg": "night"
+  },
+  "scenes": [
+    {
+      "narration": "What if the Moon lost its orbit and started falling straight toward Earth? What would you see, and how long would we have?",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "l",
+            "anim": "approach"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "shock",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Right now, the Moon floats about three hundred eighty-four thousand kilometers away. That is roughly thirty Earths lined up in a row. It circles us once every twenty-seven days, and it never falls, because it is moving sideways fast.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "smile",
+        "text": "384,400 KM"
+      }
+    },
+    {
+      "narration": "Like Earth around the Sun, the Moon is always falling toward us, but it is also moving sideways so quickly that it keeps missing. Gravity bends its path into a circle, again and again.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "s",
+            "anim": "orbit"
+          },
+          {
+            "icon": "full-moon",
+            "at": "top-left",
+            "size": "m"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "Now imagine something stops that sideways motion. A quick honesty check: nothing known can do this. But it is a fun thought experiment, and it shows how the Moon quietly shapes our world.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "With no sideways speed, the Moon would just fall straight down. A simple physics estimate says the fall would take about five days. It would start slowly, then speed up, as Earth's gravity gets stronger.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "full-moon",
+            "at": "top",
+            "size": "m",
+            "anim": "fall"
+          }
+        ],
+        "face": "worry",
+        "text": "5 DAYS TO FALL"
+      }
+    },
+    {
+      "narration": "On day one, you would barely notice. The Moon would look a little bigger, and slightly brighter. Tides would begin to rise a little higher. NOAA says tides are caused by the gravitational pull of the Moon and the Sun.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "top",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "water-wave",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "By day three, the change is clear. The Moon looks huge in the sky, taking up much more room than usual. Tides would be much stronger, because the Moon's pull rises quickly as it gets closer.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "top",
+            "size": "l",
+            "anim": "approach"
+          },
+          {
+            "icon": "water-wave",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "face": "shock",
+        "text": "HUGE TIDES",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "Coastal cities would be in trouble. Seas would swell higher and higher, pushing water far inland, over streets, harbors, and farms. Low coasts would simply disappear under the water.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "water-wave",
+            "at": "right",
+            "size": "xl",
+            "anim": "grow"
+          },
+          {
+            "icon": "house",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "shock",
+        "text": "OCEANS RISE"
+      }
+    },
+    {
+      "narration": "And the sea would not be the only thing moving. The solid Earth also bends a little under the Moon's pull. As the Moon came close, scientists think there could be many more earthquakes, and more volcanic activity.",
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "volcano",
+            "at": "right",
+            "size": "m",
+            "anim": "shake"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "Now we reach the dangerous distance, called the Roche limit. This is the point where the pull of a planet's gravity can tear a moon apart, because it pulls harder on the near side than on the far side.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "ringed-planet",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "think",
+        "text": "ROCHE LIMIT"
+      }
+    },
+    {
+      "narration": "For the Moon and Earth, the Roche limit is somewhere around nine thousand to eighteen thousand kilometers from Earth's center, depending on how solid the Moon is. That is about twenty times closer than the Moon is today.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "bar-chart",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "full-moon",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "think",
+        "text": "18,000 KM"
+      }
+    },
+    {
+      "narration": "Inside that line, the Moon's own gravity cannot hold it together any more. A moon that crosses it is pulled into pieces. The same thing happened to comet Shoemaker-Levy nine, near Jupiter, in 1992.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "comet",
+            "at": "right",
+            "size": "m",
+            "anim": "fall"
+          },
+          {
+            "icon": "ringed-planet",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "shock"
+      }
+    },
+    {
+      "narration": "It broke into fragments, and in 1994 those fragments crashed into Jupiter, one after another. That is a real, observed example of a world torn apart by gravity. Now picture the Moon, instead of a comet.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "comet",
+            "at": "right",
+            "size": "m",
+            "anim": "fall"
+          },
+          {
+            "icon": "ringed-planet",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "shock",
+        "text": "TORN APART"
+      }
+    },
+    {
+      "narration": "Our Moon would stretch, crack, and split into a stream of huge boulders. First, it would probably heat up, since Earth's pull would flex it again and again. Then the cracks would open. Pieces would come loose and spread out.",
+      "anim": {
+        "action": "stretch",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "fire",
+            "at": "left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "shock",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "Soon, the Moon would no longer be a ball. It would be a bright, glittering river of rock, curling around Earth. Most planetary rings in our solar system are found inside their planet's Roche limit, for just this reason.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "star",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "smile",
+        "text": "A NEW RING"
+      }
+    },
+    {
+      "narration": "For a short while, Earth would have a ring, like Saturn. At night, you could see a wide, bright band across the sky, far brighter than any star. It would be beautiful, and also very dangerous.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "xl",
+            "anim": "bob"
+          },
+          {
+            "icon": "star",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "smile",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "Some rocks would slam into Earth. Many of them would burn up in the air as huge meteors, and others would hit the surface. Think of the largest meteor shower ever, lasting for days, with no place to hide.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "comet",
+            "at": "right",
+            "size": "m",
+            "anim": "fall"
+          },
+          {
+            "icon": "fire",
+            "at": "left",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "shock",
+        "text": "ROCK RAIN"
+      }
+    },
+    {
+      "narration": "Not every piece would fall right away. Some would stay in orbit and keep colliding, and lose speed. Over time, many would come down, and the sky would be filled with dust, smoke, and heat for a very long time.",
+      "anim": {
+        "action": "hold-breath",
+        "props": [
+          {
+            "icon": "fire",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "cloud",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "hold"
+      }
+    },
+    {
+      "narration": "Life on the surface would suffer. Scientists would expect fires, scorching heat, and dust clouds that block the Sun. Many species might not survive, and humans would need to hide deep underground.",
+      "anim": {
+        "action": "sick",
+        "props": [
+          {
+            "icon": "house",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "fire",
+            "at": "left",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "thermometer",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "face": "sick",
+        "text": "MASS EXTINCTION?"
+      }
+    },
+    {
+      "narration": "Afterward, Earth would be missing something. The Moon is slowly drifting away from us, about three point eight centimeters a year, because of tides. Without it, tides would come only from the Sun, and be far weaker.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "s",
+            "anim": "fade-in"
+          },
+          {
+            "icon": "water-wave",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "But wait. This story is not as strange as it sounds, because the Moon was probably born from a disaster just like this. About four and a half billion years ago, a Mars-sized planet named Theia hit the young Earth.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m"
+          },
+          {
+            "icon": "collision",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "face": "shock",
+        "text": "THEIA"
+      }
+    },
+    {
+      "narration": "The giant impact threw hot rock into orbit. Computer simulations suggest about twenty percent of Theia's mass formed a ring of debris, and about half of that gathered together to become the Moon.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "collision",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "ringed-planet",
+            "at": "left",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "face": "think",
+        "text": "GIANT IMPACT"
+      }
+    },
+    {
+      "narration": "Our Moon, in other words, may have started as a ring. Now we imagine it going back to being one. In the early days, Earth also spun much faster, with a day that lasted only about five hours.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "alarm-clock",
+            "at": "left",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Evidence for this idea comes from Apollo rocks. Their oxygen is almost identical to Earth's, as if the Moon and Earth share the same ingredients. The Moon's small iron core fits the story too.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "rocket",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Early on, the Moon was much closer. George Darwin worked this out long ago, and later laser measurements confirmed the Moon is drifting away. So the Moon was once close, and is now far.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "grin",
+        "text": "MOON DRIFTING AWAY"
+      }
+    },
+    {
+      "narration": "Today the Moon helps shape our tides, and our nights. We do not need to worry about it falling, because nothing is pushing it that way.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "So, what if the Moon fell toward Earth? In about five days, it would reach the Roche limit, break into a ring, and rain rock on the planet. Luckily, it is far away, drifting safely out into space.",
+      "anim": {
+        "action": "wave",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

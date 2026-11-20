@@ -1,0 +1,637 @@
+{
+  "channel": "inside-your-body",
+  "number": 36,
+  "slug": "how-hair-grows",
+  "style": "anim",
+  "target_minutes": 6.1,
+  "title": "How Hair Grows (and Why It Turns Gray) Explained",
+  "thumbnail_text": "WHY HAIR TURNS GRAY",
+  "description": "You have roughly one hundred thousand hairs on your scalp, and every one of them is on its own schedule. See how a hair follicle builds a hair, how the growth cycle moves from anagen to catagen to telogen, how fast hair grows, why losing about a hundred hairs a day is normal, and what is really happening inside the follicle when hair turns gray. Plus when thinning or sudden hair loss is worth mentioning to a doctor.\n\nSources:\n- Natarelli et al. (2023), J Clin Med - Integrative and Mechanistic Approach to the Hair Growth Cycle and Hair Loss: https://pmc.ncbi.nlm.nih.gov/articles/PMC9917549/\n- Chen et al. (2022), Frontiers in Physiology - Hair Graying Regulators Beyond Hair Follicle: https://pmc.ncbi.nlm.nih.gov/articles/PMC8908028/\n- Yardman-Frank & Fisher, Pigmentation review (PMC): https://pmc.ncbi.nlm.nih.gov/articles/PMC8218595\n- MedlinePlus (NIH) - Hair Loss: https://medlineplus.gov/hairloss.html\n- Cleveland Clinic - Skin: Layers, Structure and Function: https://my.clevelandclinic.org/health/body/10978-skin\n\nThis video is for educational purposes only and is not medical advice.",
+  "tags": [
+    "how hair grows",
+    "hair growth cycle",
+    "why hair turns gray",
+    "gray hair",
+    "hair follicle",
+    "anagen",
+    "telogen",
+    "hair shedding",
+    "how fast does hair grow",
+    "hair loss",
+    "human body",
+    "science explained",
+    "inside your body"
+  ],
+  "sources": [
+    {
+      "title": "Natarelli et al. (2023), J Clin Med - Integrative and Mechanistic Approach to the Hair Growth Cycle and Hair Loss",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9917549/"
+    },
+    {
+      "title": "Chen et al. (2022), Frontiers in Physiology - Hair Graying Regulators Beyond Hair Follicle",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8908028/"
+    },
+    {
+      "title": "Yardman-Frank & Fisher, Pigmentation review (PMC)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8218595"
+    },
+    {
+      "title": "MedlinePlus (NIH) - Hair Loss",
+      "url": "https://medlineplus.gov/hairloss.html"
+    },
+    {
+      "title": "Cleveland Clinic - Skin: Layers, Structure and Function",
+      "url": "https://my.clevelandclinic.org/health/body/10978-skin"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "scissors",
+        "at": "right",
+        "size": "l",
+        "anim": "bob"
+      },
+      {
+        "icon": "sparkles",
+        "at": "top-left",
+        "size": "m",
+        "anim": "pulse"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "narration": "You have about one hundred thousand hairs on your head, and you lose some every single day. So why are you not bald yet?",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "scissors",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          }
+        ],
+        "face": "shock",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "The answer is that every hair lives its own tiny life, with a birth, a long growth spurt, a rest, and a goodbye. Let us follow one hair from the very start.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "seedling",
+            "at": "right",
+            "size": "m",
+            "anim": "grow"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "It starts in a pocket in your skin called a follicle. The root of each hair is anchored in the dermis, the thick middle layer of your skin, deep below the surface.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "hand-with-fingers-splayed",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "body",
+        "text": "THE FOLLICLE"
+      }
+    },
+    {
+      "narration": "At the bottom of the follicle is the hair bulb. There, busy matrix cells divide again and again, and the hair shaft is built from them, a little at a time.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "seedling",
+            "at": "right",
+            "size": "m",
+            "anim": "grow"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Beneath the bulb sits a tiny cluster of cells called the dermal papilla. It acts like a foreman, controlling how many matrix cells are working, which helps set how thick a hair will be.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "brain",
+            "at": "bubble"
+          }
+        ],
+        "face": "think",
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Pigment cells called melanocytes sit among the matrix cells and feed color into the growing hair. The same pigment, melanin, helps set the color of your skin and eyes.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "eyes",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "Now the cycle. Every follicle moves through phases on its own schedule, like one tiny clock among a hundred thousand. Scientists name the main phases anagen, catagen, and telogen.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "l",
+            "anim": "shake"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "lab",
+        "text": "THREE PHASES"
+      }
+    },
+    {
+      "narration": "Anagen is the growth phase. On the scalp it can last about two to eight years, which is why head hair can grow so long. On an eyebrow, it lasts only a couple of months.",
+      "anim": {
+        "action": "grow",
+        "props": [
+          {
+            "icon": "seedling",
+            "at": "right",
+            "size": "l",
+            "anim": "grow"
+          }
+        ],
+        "bg": "park",
+        "text": "ANAGEN: GROWING"
+      }
+    },
+    {
+      "narration": "That difference explains a lot. Your eyebrows stop at a short length because their growth phase ends quickly, while the hair on your head keeps going for years.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "calendar",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "scissors",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "How fast does it go? About one centimeter a month, roughly a half inch. Over a year, that adds up to about five inches, if the hair is allowed to keep growing.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "park",
+        "text": "HALF INCH A MONTH"
+      }
+    },
+    {
+      "narration": "Then comes catagen, a short transition lasting about two weeks. Growth winds down, and the lower part of the follicle shrinks back. Think of it as the hair clocking out for the day.",
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "fallen-leaf",
+            "at": "top-left",
+            "size": "s",
+            "anim": "fall"
+          }
+        ],
+        "bg": "body",
+        "text": "CATAGEN: WINDING DOWN"
+      }
+    },
+    {
+      "narration": "Next is telogen, the resting phase. It lasts about two to three months. The hair stays in place, but the follicle is quiet, getting ready for a new start.",
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "sleeping-face",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "calendar",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "sleep",
+        "bg": "night",
+        "text": "TELOGEN: RESTING"
+      }
+    },
+    {
+      "narration": "At the end of telogen, the old hair falls out and a new one begins to grow from the same follicle. Scientists call that shedding step exogen, and then the cycle starts all over again.",
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "seedling",
+            "at": "right",
+            "size": "l",
+            "anim": "grow"
+          },
+          {
+            "icon": "fallen-leaf",
+            "at": "top-left",
+            "size": "s",
+            "anim": "fall"
+          }
+        ],
+        "bg": "park"
+      }
+    },
+    {
+      "narration": "A single follicle goes through this cycle about ten to thirty times in a lifetime. So the hair on your head is not the hair you were born with. It is the latest of many generations.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "baby",
+            "at": "bubble"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "Here is the reassuring part. Because each follicle runs on its own clock, only about nine percent of your scalp hairs are in the resting phase at any moment. Most are busy growing.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "sparkles",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "seedling",
+            "at": "top-left",
+            "size": "s",
+            "anim": "grow"
+          }
+        ],
+        "face": "smile",
+        "text": "MOST ARE GROWING"
+      }
+    },
+    {
+      "narration": "That is why losing hair every day is normal. MedlinePlus says you lose up to one hundred hairs from your scalp daily, and in most people, the hairs that shed grow back.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "fallen-leaf",
+            "at": "right",
+            "size": "l",
+            "anim": "fall"
+          },
+          {
+            "icon": "hand-with-fingers-splayed",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "room",
+        "text": "UP TO 100 DAILY"
+      }
+    },
+    {
+      "narration": "So a few strands on your brush, in the shower drain, or on your pillow is not a warning sign. It is simply the cycle doing its job, one follicle at a time.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "yarn",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Now the big mystery. Why does hair turn gray? It is not that gray ink gets added. Gray hair is hair that has lost its pigment, because the color-making cells have stopped working.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "old-woman",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "shock",
+        "bg": "room",
+        "text": "WHY GRAY?"
+      }
+    },
+    {
+      "narration": "Here is how color normally works. Special melanocyte stem cells live in a part of the follicle called the bulge. At the start of each growth phase, they wake up and multiply.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "seedling",
+            "at": "right",
+            "size": "m",
+            "anim": "grow"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Some of those stem cells travel down to the bulb and turn into melanocytes. These make melanin, and the pigment flows into the growing hair like ink into a pen.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "paintbrush",
+            "at": "right",
+            "size": "l",
+            "anim": "approach"
+          }
+        ],
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Near the end of the growth phase, pigment production stops, and the old melanocytes die off. But some stem cells survive in a resting state, ready to make fresh melanocytes next time.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "face": "sleep",
+        "bg": "body"
+      }
+    },
+    {
+      "narration": "Graying, researchers think, happens when that pool of stem cells shrinks or stops working well. With too few left, a new hair comes in without pigment. What drives that loss is still not fully understood.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "old-man",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "magnifying-glass-tilted-left",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "think",
+        "bg": "lab",
+        "text": "STEM CELLS RUN LOW"
+      }
+    },
+    {
+      "narration": "In one human study, these stem cells were plentiful in scalp follicles at ages twenty to thirty, moderate at forty to sixty, and nearly gone by seventy to ninety.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "calendar",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "That matches what most of us notice in the mirror: more gray as the years go by. Graying before the age of thirty is called premature graying. It is a very common thing to notice.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "older-person",
+            "at": "right",
+            "size": "m"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "What about stress turning hair gray? There is real science here, mostly in mice. Stress activates nerves that release a chemical that pushes many stem cells to use themselves up, and that loss is permanent.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "high-voltage",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "brain",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "worry",
+        "text": "STRESS AND GRAY"
+      }
+    },
+    {
+      "narration": "One review noted that stress woke up about half of the stem cells in that niche, compared with only about six percent during normal hair cycling. The human evidence is still thinner, so scientists stay cautious.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "bubble"
+          }
+        ],
+        "face": "think",
+        "bg": "lab"
+      }
+    },
+    {
+      "narration": "Sometimes graying has a medical cause. Low vitamin B twelve and an underactive thyroid are two examples, and in those cases, treating the cause can bring color back. That is one reason to ask a doctor.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "stethoscope",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "pill",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "More generally, hair loss can come from thyroid problems, diabetes, certain medicines, stress, poor nutrition, or family history, says MedlinePlus. Treatment depends on the cause, and many causes are treatable.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "clipboard",
+            "at": "right",
+            "size": "l"
+          }
+        ],
+        "bg": "room"
+      }
+    },
+    {
+      "narration": "Talk to a doctor if hair is falling out suddenly, in patches, or in much larger amounts than usual, or if it comes with other symptoms like tiredness or weight changes. Your doctor can look for the cause.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "stethoscope",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "telephone-receiver",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "bg": "room",
+        "text": "SEE A DOCTOR"
+      }
+    },
+    {
+      "narration": "So here is the story of one hair: built in a follicle, grown for years, a short transition, a rest, and then out the door so a new one can begin.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "seedling",
+            "at": "right",
+            "size": "l",
+            "anim": "grow"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Next time you spot a stray hair on your sleeve, give it a nod. It lived a full life, and a brand new one is already on its way.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "sparkles",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "bg": "room",
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Follow Inside Your Body for more of the science of you.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

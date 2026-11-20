@@ -1,0 +1,759 @@
+{
+  "channel": "cosmic-what-if",
+  "style": "anim",
+  "number": 45,
+  "slug": "fly-through-the-asteroid-belt",
+  "target_minutes": 6.6,
+  "title": "What If You Flew Through the Asteroid Belt? It's Mostly Empty",
+  "thumbnail_text": "BELT: SAFE?",
+  "description": "In the movies, the asteroid belt is a storm of tumbling boulders. In real life, it is mostly empty space. Using real data from Pioneer 10, Dawn, and NASA and other sources, we fly a spaceship through the belt between Mars and Jupiter and look at how far apart the rocks really are, why all of them together weigh less than the Moon, what the giant Ceres is like, and why probes cross the belt without getting hit.\n\nSources:\n- Wikipedia, Asteroid belt: https://en.wikipedia.org/wiki/Asteroid_belt\n- NASA Science, Asteroids: https://science.nasa.gov/solar-system/asteroids/\n- NASA Science, Ceres Facts: https://science.nasa.gov/dwarf-planets/ceres/facts/\n- Wikipedia, Pioneer 10: https://en.wikipedia.org/wiki/Pioneer_10",
+  "tags": [
+    "asteroid belt",
+    "what if",
+    "asteroids",
+    "ceres",
+    "pioneer 10",
+    "mars and jupiter",
+    "space travel",
+    "solar system",
+    "dawn spacecraft",
+    "vesta",
+    "astronomy",
+    "science",
+    "cosmic what if"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia, Asteroid belt",
+      "url": "https://en.wikipedia.org/wiki/Asteroid_belt"
+    },
+    {
+      "title": "NASA Science, Asteroids",
+      "url": "https://science.nasa.gov/solar-system/asteroids/"
+    },
+    {
+      "title": "NASA Science, Ceres Facts",
+      "url": "https://science.nasa.gov/dwarf-planets/ceres/facts/"
+    },
+    {
+      "title": "Wikipedia, Pioneer 10",
+      "url": "https://en.wikipedia.org/wiki/Pioneer_10"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "rocket",
+        "at": "right",
+        "size": "xl",
+        "anim": "bob"
+      },
+      {
+        "icon": "rock",
+        "at": "top-left",
+        "size": "l",
+        "anim": "bob"
+      }
+    ],
+    "bg": "space"
+  },
+  "scenes": [
+    {
+      "narration": "What if you flew a spaceship through the asteroid belt? Would rocks come flying at you from every direction?",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "l",
+            "anim": "approach"
+          },
+          {
+            "icon": "rock",
+            "at": "top-left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "face": "shock"
+      }
+    },
+    {
+      "narration": "In the movies, the asteroid belt is a deadly storm of tumbling boulders. The pilot swerves left and right, sweating, while rocks flash past the window. It looks thrilling. But is any of it real?",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "rock",
+            "at": "bubble",
+            "size": "m"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "Let's find out. You climb into a small spacecraft, strap in, and point the nose away from the Sun, past Mars. The belt is waiting out there, between the orbits of Mars and Jupiter.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "ringed-planet",
+            "at": "far-right",
+            "size": "s"
+          }
+        ],
+        "text": "MARS TO JUPITER"
+      }
+    },
+    {
+      "narration": "Scientists describe the belt as a wide ring around the Sun. Its busiest core runs from roughly two to a little over three times Earth's distance from the Sun. That is a gigantic doughnut of space.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "top",
+            "size": "s",
+            "anim": "orbit"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "The belt even has gaps. Jupiter's gravity tugs on orbits at certain distances, and scientists call the emptied lanes Kirkwood gaps. The belt's inner edge sits at one of these, about two times Earth's distance from the Sun.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "face": "think",
+        "text": "KIRKWOOD GAPS"
+      }
+    },
+    {
+      "narration": "And it holds a lot of rocks. An infrared survey suggests somewhere between seven hundred thousand and one point seven million asteroids wider than one kilometer. Plus countless smaller ones.",
+      "anim": {
+        "action": "jump",
+        "props": [
+          {
+            "icon": "rock",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "comet",
+            "at": "top-left",
+            "size": "s",
+            "anim": "fade-in"
+          }
+        ],
+        "face": "shock"
+      }
+    },
+    {
+      "narration": "That sounds crowded. So here is the surprise. Add up every asteroid in the belt, big and small, and the total mass is only about three percent of the Moon's. All that, and less than a single Moon.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "balance-scale",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "text": "LESS THAN THE MOON"
+      }
+    },
+    {
+      "narration": "Now think about the space. The belt is enormously wide, so those rocks spread out thin. On average, neighbors are roughly six hundred thousand miles apart. That is about two and a half times the distance from Earth to the Moon.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "rock",
+            "at": "right",
+            "size": "s"
+          },
+          {
+            "icon": "rock",
+            "at": "far-right",
+            "size": "s"
+          },
+          {
+            "icon": "full-moon",
+            "at": "left",
+            "size": "s"
+          },
+          {
+            "icon": "straight-ruler",
+            "at": "top",
+            "size": "m"
+          }
+        ],
+        "text": "600,000 MILES APART"
+      }
+    },
+    {
+      "narration": "So picture the real belt. Not a crowded highway, but a vast, thin cloud of rocks, each one alone in an ocean of dark. Distances here are so big that crowding is almost impossible.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "rock",
+            "at": "right",
+            "size": "s"
+          },
+          {
+            "icon": "rock",
+            "at": "far-right",
+            "size": "s"
+          },
+          {
+            "icon": "rock",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "smile",
+        "camera": "zoom-out"
+      }
+    },
+    {
+      "narration": "Imagine standing on one asteroid. Your nearest neighbor would usually be a very long way off, nothing but a faint dot of light. Most of the belt is simply empty, quiet space.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "rock",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "star",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "So how would your flight really look? Not like a movie. You would cruise for months with nothing close to the window. Rocks are out there, but you would need a map to find them.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "desktop-computer",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "smile",
+        "bg": "night"
+      }
+    },
+    {
+      "narration": "This is not just a guess, because humans have done it. Pioneer ten launched in March 1972, and it was the first spacecraft to cross the belt. It flew in during July 1972.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "l",
+            "anim": "approach"
+          },
+          {
+            "icon": "calendar",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "face": "grin",
+        "text": "PIONEER 10"
+      }
+    },
+    {
+      "narration": "Nobody knew for sure what it would find. Pioneer ten spent about seven months inside the belt, leaving around February 1973. And it came out the other side just fine.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "far-right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "top",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "face": "smile",
+        "camera": "zoom-out"
+      }
+    },
+    {
+      "narration": "It even counted the danger. Its instruments found no fragments larger than a millimeter, fewer than expected. Tiny dust grains did increase about threefold, but dust that small is not a big threat.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "magnifying-glass-tilted-right",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "Here is the twist. The scary part of that trip was not the belt. It was Jupiter. Pioneer ten reached it in December 1973, and its radiation was about ten times higher than planners predicted, which caused false commands.",
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "xl",
+            "anim": "pulse"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "left",
+            "size": "m",
+            "anim": "shake"
+          }
+        ],
+        "face": "shock",
+        "text": "JUPITER WAS WORSE",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "Other probes followed, and many uncrewed spacecraft have crossed the belt without incident. They flew straight through, bound for Jupiter and beyond, and rocks were never the problem.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "rocket",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Some spacecraft go there on purpose. NASA's Dawn probe stayed for a while at both Vesta and Ceres, arriving at Ceres in 2015. Dawn did not dodge rocks. It parked beside them and studied them up close.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "l",
+            "anim": "orbit"
+          },
+          {
+            "icon": "rock",
+            "at": "far-right",
+            "size": "m"
+          }
+        ],
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Vesta is one of the biggest asteroids, about five hundred thirty kilometers across. That is big enough to feel like a small world, yet its neighbors are almost always very far away.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "rock",
+            "at": "right",
+            "size": "xl",
+            "anim": "bob"
+          },
+          {
+            "icon": "star",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "face": "smile",
+        "text": "VESTA"
+      }
+    },
+    {
+      "narration": "Then there is Ceres, the giant of the belt. Its radius is about four hundred seventy six kilometers, so it is nearly a thousand kilometers wide. It is large enough to count as a dwarf planet.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "xl",
+            "anim": "bob"
+          },
+          {
+            "icon": "telescope",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "CERES"
+      }
+    },
+    {
+      "narration": "Ceres spins once every nine hours, so a day there flies by. But a year is long. One trip around the Sun takes about sixteen hundred eighty two Earth days, or four point six years.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "sun",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "smile",
+        "text": "NINE HOUR DAY"
+      }
+    },
+    {
+      "narration": "Ceres is a heavyweight, too. Estimates say it holds somewhere between a quarter and about two fifths of all the mass in the belt. One round world carries a big share of the whole ring.",
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "full-moon",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "balance-scale",
+            "at": "far-right",
+            "size": "s"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "So where did the idea of a deadly belt come from? Partly from diagrams, where the rocks are drawn big so you can see them. On a true scale map, every asteroid would shrink to a tiny speck.",
+      "anim": {
+        "action": "shrink",
+        "props": [
+          {
+            "icon": "rock",
+            "at": "right",
+            "size": "m",
+            "anim": "shrink"
+          },
+          {
+            "icon": "magnifying-glass-tilted-right",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "Does that mean the belt is perfectly safe? Not quite. Asteroids do sometimes collide, and scientists think that is how many of the smaller pieces came to exist over a very long time.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "rock",
+            "at": "right",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "rock",
+            "at": "left",
+            "size": "m",
+            "anim": "approach"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "worry",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "But collisions are rare, because of those huge gaps. For a spacecraft, the chance of hitting an asteroid is tiny. Scientists estimate the odds are less than one in a billion.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "bullseye",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "grin",
+        "text": "ONE IN A BILLION"
+      }
+    },
+    {
+      "narration": "The real challenges are different. Out there, sunlight is much weaker, so solar panels collect less power. Engineers must plan carefully for power, heat, and a very long, quiet trip.",
+      "anim": {
+        "action": "shiver",
+        "props": [
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "s"
+          },
+          {
+            "icon": "snowflake",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "Radio is another problem. Signals take time to cross all that distance, so you could not ask Earth for quick help. You would fly the ship yourself, with careful plans made ahead of time.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "satellite-antenna",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "far-right",
+            "size": "s"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "Your engine matters too. Reaching the belt takes a lot of fuel, and slowing down to visit one rock takes even more. Cruising through is far easier than stopping at a particular asteroid.",
+      "anim": {
+        "action": "tired",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "high-voltage",
+            "at": "left",
+            "size": "s"
+          },
+          {
+            "icon": "battery",
+            "at": "top",
+            "size": "s"
+          }
+        ],
+        "face": "worry"
+      }
+    },
+    {
+      "narration": "Say you do want to stop. You pick a small asteroid, with gravity so weak you could almost float away. You would tie your ship down and step out very gently.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "rock",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "anchor",
+            "at": "left",
+            "size": "s"
+          },
+          {
+            "icon": "rocket",
+            "at": "far-right",
+            "size": "s"
+          }
+        ],
+        "face": "smile",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "More visitors are coming. NASA's Psyche spacecraft is already headed toward the belt, so the quiet ring between Mars and Jupiter is soon going to have more robots than rocks nearby.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "rocket",
+            "at": "top-left",
+            "size": "s",
+            "anim": "approach"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Because the belt holds so little, scientists think it is leftover building material. Rocks that never joined into a planet, probably stirred up long ago by giant Jupiter nearby.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "rock",
+            "at": "left",
+            "size": "m",
+            "anim": "orbit"
+          }
+        ],
+        "face": "think",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "That gives the belt a new meaning. It is not a wall. It is a time capsule, a thin ring of leftovers from the early Solar System, with a tiny mass and enormous space around every piece.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "hourglass-not-done",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top",
+            "size": "s",
+            "anim": "pulse"
+          },
+          {
+            "icon": "milky-way",
+            "at": "far-right",
+            "size": "s"
+          }
+        ],
+        "face": "smile",
+        "text": "TIME CAPSULE"
+      }
+    },
+    {
+      "narration": "So, what if you flew through the asteroid belt? You would see mostly black sky, a few faint dots, and the long quiet of space. No explosions. No swerving. Just months of calm cruising, and a story that is far better than the movies.",
+      "anim": {
+        "action": "wave",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "star",
+            "at": "top-left",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

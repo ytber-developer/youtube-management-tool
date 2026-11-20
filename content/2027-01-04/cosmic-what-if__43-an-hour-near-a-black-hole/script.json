@@ -1,0 +1,732 @@
+{
+  "channel": "cosmic-what-if",
+  "style": "anim",
+  "number": 43,
+  "slug": "an-hour-near-a-black-hole",
+  "target_minutes": 6.5,
+  "title": "What If You Spent One Hour Near a Black Hole?",
+  "thumbnail_text": "HOUR = 7 YEARS",
+  "description": "Spend one hour near a giant black hole, and gravity can slow your clock so much that years pass back home. Using real relativity, from Pound-Rebka and GPS to Kip Thorne's Gargantua in Interstellar, we work out how time dilation really works, what it would feel like, how much time passes far away, and where the movie stretches the science.\n\nSources:\n- Wikipedia, Gravitational time dilation: https://en.wikipedia.org/wiki/Gravitational_time_dilation\n- Wikipedia, Time dilation: https://en.wikipedia.org/wiki/Time_dilation\n- Space.com, The Science of Interstellar (book excerpt by Kip Thorne): https://space.com/28077-science-of-interstellar-book-excerpt.html\n- Wikipedia, Interstellar (film): https://en.wikipedia.org/wiki/Interstellar_(film)\n- Wikipedia, Supermassive black hole: https://en.wikipedia.org/wiki/Supermassive_black_hole",
+  "tags": [
+    "black hole",
+    "time dilation",
+    "gravitational time dilation",
+    "what if you spent an hour near a black hole",
+    "interstellar",
+    "gargantua",
+    "kip thorne",
+    "general relativity",
+    "einstein",
+    "one hour seven years",
+    "what if",
+    "physics",
+    "science",
+    "cosmic what if"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia, Gravitational time dilation",
+      "url": "https://en.wikipedia.org/wiki/Gravitational_time_dilation"
+    },
+    {
+      "title": "Wikipedia, Time dilation",
+      "url": "https://en.wikipedia.org/wiki/Time_dilation"
+    },
+    {
+      "title": "Space.com, The Science of Interstellar (book excerpt by Kip Thorne)",
+      "url": "https://space.com/28077-science-of-interstellar-book-excerpt.html"
+    },
+    {
+      "title": "Wikipedia, Interstellar (film)",
+      "url": "https://en.wikipedia.org/wiki/Interstellar_(film)"
+    },
+    {
+      "title": "Wikipedia, Supermassive black hole",
+      "url": "https://en.wikipedia.org/wiki/Supermassive_black_hole"
+    }
+  ],
+  "thumbnail_anim": {
+    "thumbAction": "shocked",
+    "props": [
+      {
+        "icon": "black-hole",
+        "at": "right",
+        "size": "xl",
+        "anim": "spin"
+      },
+      {
+        "icon": "alarm-clock",
+        "at": "top-left",
+        "size": "l",
+        "anim": "shake"
+      }
+    ],
+    "bg": "space"
+  },
+  "scenes": [
+    {
+      "narration": "What if you spent one hour near a giant black hole, and came home to find years had passed?",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "black-hole",
+            "at": "right",
+            "size": "xl",
+            "anim": "spin"
+          },
+          {
+            "icon": "alarm-clock",
+            "at": "top-left",
+            "size": "m",
+            "anim": "shake"
+          }
+        ],
+        "face": "shock"
+      }
+    },
+    {
+      "narration": "Forget falling in. This time, you stay safely outside, in a steady orbit, close enough to feel something stranger than danger. You feel time itself slow down.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "black-hole",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "rocket",
+            "at": "left",
+            "size": "m",
+            "anim": "orbit"
+          }
+        ],
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "It sounds like science fiction, but it is real physics. Einstein's general relativity says gravity slows time. The stronger the gravity where you are, the slower your clock ticks compared with someone far away.",
+      "anim": {
+        "action": "present",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "balance-scale",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "text": "GRAVITY SLOWS TIME"
+      }
+    },
+    {
+      "narration": "We have measured this on Earth. In nineteen fifty-nine, the Pound-Rebka experiment confirmed that clocks run differently at different heights in gravity. A clock down low ticks a tiny bit slower than one up high.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "m"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "It even matters in your pocket. GPS satellites have clocks that run at a slightly different rate than clocks on the ground, so engineers correct them. Without that fix, your map would drift off course.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "satellite",
+            "at": "right",
+            "size": "l",
+            "anim": "orbit"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "text": "GPS CORRECTION"
+      }
+    },
+    {
+      "narration": "Scientists have even calculated that Earth's core is about two and a half years younger than its crust, out of roughly four and a half billion years. A lot of time, with a little difference.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "globe-showing-americas",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "hourglass-done",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Now turn the dial way up. A black hole has a lot more gravity packed into a very small place, so time slows by far more. Right at the edge, the math says the slowdown grows without limit.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "black-hole",
+            "at": "right",
+            "size": "xl",
+            "anim": "pulse"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "top-left",
+            "size": "m",
+            "anim": "shake"
+          }
+        ],
+        "face": "shock",
+        "text": "TIME SLOWS MORE"
+      }
+    },
+    {
+      "narration": "Here is the cinematic version. In the movie Interstellar, director Christopher Nolan wanted a planet where one hour equals seven years back on Earth. Physicist Kip Thorne, the film's science adviser, had to work out if that could be real.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "video-camera",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "ringed-planet",
+            "at": "left",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "text": "ONE HOUR, SEVEN YEARS"
+      }
+    },
+    {
+      "narration": "Working through the equations, Thorne found a way. It is not easy. The trick needs a huge, fast-spinning black hole, which the film calls Gargantua.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "thinking-face",
+            "at": "bubble",
+            "size": "m"
+          },
+          {
+            "icon": "black-hole",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "How big is Gargantua? Thorne calculated it must have at least one hundred million times the mass of our Sun. For comparison, the black hole at the center of our galaxy has about four million Suns.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "black-hole",
+            "at": "right",
+            "size": "xl",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sun",
+            "at": "left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "text": "100 MILLION SUNS"
+      }
+    },
+    {
+      "narration": "Its event horizon, the point of no return, would be gigantic. The radius would be about a hundred fifty million kilometers, roughly the distance from Earth to the Sun. It could swallow our entire orbit.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "black-hole",
+            "at": "right",
+            "size": "xl",
+            "anim": "grow"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "s",
+            "anim": "orbit"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "m"
+          }
+        ],
+        "camera": "zoom-out"
+      }
+    },
+    {
+      "narration": "And it has to spin. Thorne says Gargantua must spin just below the maximum possible rate, short by only one part in a hundred trillion. Spin lets a spaceship orbit much closer, where time slows more.",
+      "anim": {
+        "action": "spin",
+        "props": [
+          {
+            "icon": "black-hole",
+            "at": "right",
+            "size": "xl",
+            "anim": "spin"
+          },
+          {
+            "icon": "dizzy",
+            "at": "top-left",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "text": "MAX SPIN"
+      }
+    },
+    {
+      "narration": "So imagine your ship, at that edge. You are circling Gargantua once an hour, covering about a billion kilometers in that hour. That is close to the speed of light.",
+      "anim": {
+        "action": "run",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "m",
+            "anim": "orbit"
+          },
+          {
+            "icon": "black-hole",
+            "at": "center",
+            "size": "xl",
+            "anim": "spin"
+          }
+        ],
+        "text": "NEAR LIGHT SPEED",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "Another surprise is how gentle it can feel. For a really big black hole, tidal forces at the horizon are much weaker. For a ten million Sun hole, it would be about like standing on Earth.",
+      "anim": {
+        "action": "exercise",
+        "props": [
+          {
+            "icon": "black-hole",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "balance-scale",
+            "at": "left",
+            "size": "s",
+            "anim": "bob"
+          }
+        ],
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "In the film, the accretion disk, the glowing ring of gas, is described as anemic and cool, about as hot as the surface of the Sun. Thorne chose that so the visitors would not be zapped by X-rays.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "fire",
+            "at": "right",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sun",
+            "at": "top-left",
+            "size": "s"
+          },
+          {
+            "icon": "ringed-planet",
+            "at": "bottom-right",
+            "size": "m",
+            "anim": "spin"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "Now we land on the strange part. Time slows for you, not for the rest of the universe. Your clock, your heartbeat and your coffee cooling all feel perfectly normal, minute by minute.",
+      "anim": {
+        "action": "sit",
+        "props": [
+          {
+            "icon": "hot-beverage",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "alarm-clock",
+            "at": "left",
+            "size": "m"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "You would feel nothing odd. You would not see the clock on your wrist slow down. Time near a black hole feels exactly like time anywhere else, and the weirdness only shows up when you compare notes.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "eyes",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "grin"
+      }
+    },
+    {
+      "narration": "Let's compare notes. You stay for one hour. Far away, on a planet like Earth, seven years go by. You step outside for a coffee break, and your friends are in a very different life.",
+      "anim": {
+        "action": "sleep",
+        "props": [
+          {
+            "icon": "alarm-clock",
+            "at": "right",
+            "size": "l"
+          },
+          {
+            "icon": "hourglass-not-done",
+            "at": "left",
+            "size": "m",
+            "anim": "spin"
+          },
+          {
+            "icon": "calendar",
+            "at": "top-left",
+            "size": "m",
+            "anim": "fade-in"
+          }
+        ],
+        "text": "SEVEN YEARS"
+      }
+    },
+    {
+      "narration": "Stay for a whole day, twenty-four of those hours, and one hundred sixty-eight years go by out there. That would be a lot of birthdays missed, and a lot of new faces back home.",
+      "anim": {
+        "action": "shocked",
+        "props": [
+          {
+            "icon": "calendar",
+            "at": "right",
+            "size": "xl",
+            "anim": "shake"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "shock",
+        "camera": "zoom-in"
+      }
+    },
+    {
+      "narration": "What would you see, looking back at your home world? Everything would seem sped up, like a movie on fast-forward. And as the years pile up, you would watch the whole universe age around you.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "telescope",
+            "at": "right",
+            "size": "l",
+            "anim": "bob"
+          },
+          {
+            "icon": "sparkles",
+            "at": "top-left",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "globe-showing-americas",
+            "at": "far-right",
+            "size": "s",
+            "anim": "spin"
+          }
+        ],
+        "text": "FAST-FORWARD"
+      }
+    },
+    {
+      "narration": "Messages would be stretched, too. Light climbing out of strong gravity loses energy, an effect called gravitational redshift, which Pound and Rebka also confirmed. Calls from your ship would arrive stretched, faint and slow.",
+      "anim": {
+        "action": "talk",
+        "props": [
+          {
+            "icon": "satellite-antenna",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "telephone-receiver",
+            "at": "left",
+            "size": "m",
+            "anim": "shake"
+          }
+        ],
+        "text": "STRETCHED SIGNALS"
+      }
+    },
+    {
+      "narration": "Back at your ship, nothing seems wrong at all. There is just a simple rule: the closer you hover, the slower your time moves compared with everyone else. Go farther away, and the difference shrinks.",
+      "anim": {
+        "action": "float",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "m",
+            "anim": "bob"
+          },
+          {
+            "icon": "black-hole",
+            "at": "left",
+            "size": "m",
+            "anim": "spin"
+          }
+        ],
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "In the movie, one planet orbits Gargantua, and the crew pays a terrible price for a short visit. Twenty-three years pass for the ship waiting above. The film shows how a brief hour can cost a lifetime.",
+      "anim": {
+        "action": "walk",
+        "props": [
+          {
+            "icon": "ringed-planet",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "rocket",
+            "at": "top-left",
+            "size": "m",
+            "anim": "orbit"
+          }
+        ],
+        "face": "worry",
+        "text": "23 YEARS"
+      }
+    },
+    {
+      "narration": "The movie planet also has gigantic tidal waves, one of which kills a crew member. That is drama, not a prediction. The story mixes real physics with Hollywood storytelling, and that is fine, as long as we know which is which.",
+      "anim": {
+        "action": "fall-toward",
+        "props": [
+          {
+            "icon": "water-wave",
+            "at": "right",
+            "size": "xl",
+            "anim": "grow"
+          },
+          {
+            "icon": "face-with-head-bandage",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "shock",
+        "text": "TIDAL WAVE",
+        "camera": "shake"
+      }
+    },
+    {
+      "narration": "Is a planet that close even possible? Thorne says it needs very special conditions, an enormous black hole spinning almost as fast as nature allows. Real black holes are much messier than a movie.",
+      "anim": {
+        "action": "think",
+        "props": [
+          {
+            "icon": "black-hole",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "puzzle-piece",
+            "at": "top-left",
+            "size": "s"
+          }
+        ],
+        "face": "think"
+      }
+    },
+    {
+      "narration": "But the time slowing is real. We have measured it in labs, on airplanes and on satellites. Hafele and Keating flew atomic clocks around the world in nineteen seventy-one, and the clocks came back with slightly different times.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "rocket",
+            "at": "right",
+            "size": "m",
+            "anim": "fade-in"
+          },
+          {
+            "icon": "stopwatch",
+            "at": "left",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "face": "grin",
+        "text": "CLOCKS ON PLANES"
+      }
+    },
+    {
+      "narration": "The differences were tiny, tens to hundreds of billionths of a second. But they matched Einstein's predictions, and each test confirmed the same lesson: where you are, and how fast you move, changes how fast your clock ticks.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "stopwatch",
+            "at": "right",
+            "size": "l",
+            "anim": "pulse"
+          },
+          {
+            "icon": "bar-chart",
+            "at": "left",
+            "size": "s"
+          }
+        ],
+        "face": "smile"
+      }
+    },
+    {
+      "narration": "Real black holes are out there to study. The monster in the galaxy M eighty-seven has about six and a half billion Suns, and it was the first one ever imaged, in two thousand nineteen.",
+      "anim": {
+        "action": "look-up",
+        "props": [
+          {
+            "icon": "black-hole",
+            "at": "right",
+            "size": "xl",
+            "anim": "pulse"
+          },
+          {
+            "icon": "telescope",
+            "at": "left",
+            "size": "m",
+            "anim": "bob"
+          }
+        ],
+        "text": "FIRST IMAGE",
+        "bg": "space"
+      }
+    },
+    {
+      "narration": "The black hole in our own Milky Way, called Sagittarius A star, has about four million Suns. That is much smaller than Gargantua, but plenty of gravity to bend the paths of the stars around it.",
+      "anim": {
+        "action": "point",
+        "props": [
+          {
+            "icon": "milky-way",
+            "at": "right",
+            "size": "l",
+            "anim": "spin"
+          },
+          {
+            "icon": "black-hole",
+            "at": "top-left",
+            "size": "m",
+            "anim": "pulse"
+          }
+        ]
+      }
+    },
+    {
+      "narration": "So what if you spent an hour near a black hole? Your hour would feel normal. But the universe would race ahead, years at a time, while you barely blink. That is time travel to the future, courtesy of gravity.",
+      "anim": {
+        "action": "cheer",
+        "props": [
+          {
+            "icon": "black-hole",
+            "at": "right",
+            "size": "xl",
+            "anim": "spin"
+          },
+          {
+            "icon": "alarm-clock",
+            "at": "top-left",
+            "size": "m",
+            "anim": "pulse"
+          },
+          {
+            "icon": "sparkles",
+            "at": "bottom-right",
+            "size": "s",
+            "anim": "pulse"
+          }
+        ],
+        "face": "grin",
+        "text": "FUTURE TRAVEL"
+      }
+    },
+    {
+      "narration": "Follow Cosmic What If for more mind-bending science.",
+      "visual": {
+        "type": "outro"
+      },
+      "anim": {
+        "action": "wave",
+        "outro": true
+      }
+    }
+  ]
+}

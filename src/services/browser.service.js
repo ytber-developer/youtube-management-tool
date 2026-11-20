@@ -252,9 +252,9 @@ class BrowserService {
           '--no-default-browser-check',
           '--disable-features=TranslateUI,ChromeWhatsNewUI',
           // Language
-          '--lang=en-US,en',
-          // User agent — kept in sync with recent Chrome stable to avoid version mismatch detection
-          `--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36`
+          '--lang=en-US,en'
+          // Không ép --user-agent: Chrome vẫn gửi Client Hints (Sec-CH-UA) với version thật,
+          // UA giả lệch version là dấu hiệu bot rõ ràng → Google bắt CAPTCHA.
         ];
 
         // By default, avoid adding sandbox-disabling flags when launching the real Google Chrome on macOS
@@ -508,10 +508,16 @@ class BrowserService {
    * This is extracted from createPage to be reusable for existing pages
    */
   async applyAntiDetection(page) {
-    // Set realistic user agent (latest Chrome on macOS)
-    await page.setUserAgent(
-      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-    );
+    // Dùng UA thật của Chrome đang chạy (chỉ bỏ dấu "HeadlessChrome" khi chạy headless)
+    // để khớp với Client Hints — UA hardcode lệch version là lý do Google bắt CAPTCHA.
+    try {
+      const realUA = await page.browser().userAgent();
+      if (realUA.includes('HeadlessChrome')) {
+        await page.setUserAgent(realUA.replace('HeadlessChrome', 'Chrome'));
+      }
+    } catch (e) {
+      // ignore — giữ UA mặc định của Chrome
+    }
 
     // Set viewport to match common screen resolutions
     await page.setViewport({

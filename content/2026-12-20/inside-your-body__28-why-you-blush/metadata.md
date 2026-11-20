@@ -3,7 +3,7 @@
 - **Kênh:** Inside Your Body · **Video #28** · **Ngày đăng:** 2026-12-20
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-21)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 6882 ký tự · khoảng 7.3 phút
-- **Thumbnail text:** WHY YOU BLUSH
+- **Thumbnail text:** YOU CAN'T FAKE IT
 
 ## Title
 Why Do You Blush? The Hidden Purpose of a Red Face

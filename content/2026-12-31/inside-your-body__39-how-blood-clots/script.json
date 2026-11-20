@@ -4,8 +4,8 @@
   "slug": "how-blood-clots",
   "style": "anim",
   "target_minutes": 6.2,
-  "title": "How Your Blood Clots: Platelets, Fibrin, and Scabs Explained",
-  "thumbnail_text": "HOW BLOOD CLOTS",
+  "title": "How Your Blood Knows When to Clot",
+  "thumbnail_text": "SELF-SEALING BLOOD",
   "description": "A tiny cut stops bleeding in minutes, and you never have to think about it. Watch the three steps your body uses to seal a leak: blood vessels squeeze, platelets pile up into a plug, and a mesh of fibrin locks it in place. Learn what the clotting cascade is, why vitamin K matters, how your body keeps clots from spreading and then dissolves them, why clots are protective but can become risky in the wrong place, and the warning signs that call for medical help.\n\nSources:\n- MSD Manual Professional Version - Overview of Hemostasis: https://www.msdmanuals.com/professional/hematology-and-oncology/hemostasis/overview-of-hemostasis\n- NHLBI (NIH) - Clotting Disorders: https://www.nhlbi.nih.gov/health/clotting-disorders\n- NHS - Blood Clots (Deep Vein Thrombosis): https://www.nhs.uk/conditions/blood-clots/\n- MedlinePlus (NIH) - Vitamin K: https://medlineplus.gov/ency/article/002407.htm\n- Cleveland Clinic - Vitamin K: https://health.clevelandclinic.org/vitamin-k\n\nThis video is for educational purposes only and is not medical advice.",
   "tags": [
     "how blood clots",
@@ -45,7 +45,7 @@
     }
   ],
   "thumbnail_anim": {
-    "thumbAction": "shocked",
+    "thumbAction": "point",
     "props": [
       {
         "icon": "adhesive-bandage",

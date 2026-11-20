@@ -1,4 +1,4 @@
-# What Exercise Does to Your Brain (It Starts After One Workout)
+# What Exercise Does to Your Brain (After One Workout)
 
 - **Kênh:** Inside Your Body · **Video #53** · **Ngày đăng:** 2027-01-14
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2027-01-15)
@@ -6,7 +6,7 @@
 - **Thumbnail text:** EXERCISE REWIRES YOU
 
 ## Title
-What Exercise Does to Your Brain (It Starts After One Workout)
+What Exercise Does to Your Brain (After One Workout)
 
 ## Description (copy nguyên khối)
 ```

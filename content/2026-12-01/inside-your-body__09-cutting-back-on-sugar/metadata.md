@@ -1,12 +1,12 @@
-# What Happens Inside You When You Cut Back on Added Sugar
+# What Happens Inside You When You Cut Back on Sugar
 
 - **Kênh:** Inside Your Body · **Video #9** · **Ngày đăng:** 2026-12-01
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-02)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 5958 ký tự · khoảng 6.3 phút
-- **Thumbnail text:** LESS SUGAR, THEN?
+- **Thumbnail text:** WHAT CHANGES FIRST
 
 ## Title
-What Happens Inside You When You Cut Back on Added Sugar
+What Happens Inside You When You Cut Back on Sugar
 
 ## Description (copy nguyên khối)
 ```

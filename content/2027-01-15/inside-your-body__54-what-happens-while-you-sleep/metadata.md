@@ -3,7 +3,7 @@
 - **Kênh:** Inside Your Body · **Video #54** · **Ngày đăng:** 2027-01-15
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2027-01-16)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 6507 ký tự · khoảng 7.2 phút
-- **Thumbnail text:** YOUR NIGHT, EXPLAINED
+- **Thumbnail text:** 4 STAGES, 90 MINUTES
 
 ## Title
 What Happens in Your Brain While You Sleep, Stage by Stage

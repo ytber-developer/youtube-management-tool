@@ -1,12 +1,12 @@
-# How Big Is the Universe, Really? Zooming Out Step by Step
+# How Big Is the Universe, Really? Step by Step
 
 - **Kênh:** Cosmic What If · **Video #5** · **Ngày đăng:** 2026-11-27
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-11-28)
 - **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 6451 ký tự · khoảng 7.0 phút
-- **Thumbnail text:** HOW BIG IS IT?
+- **Thumbnail text:** 93 BILLION LIGHT-YEARS
 
 ## Title
-How Big Is the Universe, Really? Zooming Out Step by Step
+How Big Is the Universe, Really? Step by Step
 
 ## Description (copy nguyên khối)
 ```

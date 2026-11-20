@@ -1,4 +1,4 @@
-# How Will the Universe End? A Trip to the Last Moment of Time
+# How Will the Universe End? The Last Moment of Time
 
 - **Kênh:** Cosmic What If · **Video #14** · **Ngày đăng:** 2026-12-06
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-07)
@@ -6,7 +6,7 @@
 - **Thumbnail text:** THE LAST STAR
 
 ## Title
-How Will the Universe End? A Trip to the Last Moment of Time
+How Will the Universe End? The Last Moment of Time
 
 ## Description (copy nguyên khối)
 ```

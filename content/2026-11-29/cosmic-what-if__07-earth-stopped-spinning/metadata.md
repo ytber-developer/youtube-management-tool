@@ -3,7 +3,7 @@
 - **Kênh:** Cosmic What If · **Video #7** · **Ngày đăng:** 2026-11-29
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-11-30)
 - **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 6825 ký tự · khoảng 7.3 phút
-- **Thumbnail text:** EARTH STOPS SPINNING
+- **Thumbnail text:** 1,000 MPH SIDEWAYS
 
 ## Title
 What If Earth Stopped Spinning? Fast vs. Slow

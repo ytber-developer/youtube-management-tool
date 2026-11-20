@@ -3,8 +3,8 @@
   "number": 14,
   "slug": "how-your-body-ages",
   "target_minutes": 9.67,
-  "title": "What Really Happens to Your Body as You Age, Decade by Decade",
-  "thumbnail_text": "HOW YOU AGE",
+  "title": "How Your Body Ages, Decade by Decade",
+  "thumbnail_text": "WHAT AGES FIRST",
   "description": "Aging is not one clock ticking down. Some of your abilities peak before you can legally drink, while others keep improving into your late sixties. Here is what changes in your cells, muscles, bones, eyes, ears, heart, skin and brain over a lifetime, and what science says gets better.\n\nSources:\n- Nathan Shock Centers, Biology of Aging: https://nathanshockcenters.org/biology-of-aging\n- Harvard Health Publishing, A guide to combatting sarcopenia and preserving muscle mass as you get older: https://www.harvardhealth.org/healthy-aging-and-longevity/a-guide-to-combatting-sarcopenia-and-preserving-muscle-mass-as-you-get-older\n- MedlinePlus, Aging changes in the bones, muscles, and joints: https://medlineplus.gov/ency/article/004015.htm\n- MedlinePlus, Aging changes in the heart and blood vessels: https://medlineplus.gov/ency/article/004006.htm\n- MedlinePlus, Aging changes in the nervous system: https://medlineplus.gov/ency/article/004023.htm\n- MedlinePlus, Aging changes in skin: https://medlineplus.gov/ency/article/004014.htm\n- National Eye Institute, Presbyopia: https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/presbyopia\n- NIDCD, Age-Related Hearing Loss: https://www.nidcd.nih.gov/health/age-related-hearing-loss\n- Harvard Gazette (2015), Smarter by the minute, sort of: https://news.harvard.edu/gazette/story/2015/03/smarter-by-the-minute-sort-of/\n- The Stanford Daily (2010), Happiness increases with age, study says: https://stanforddaily.com/2010/11/11/happiness-increases-with-age-study-says/\n\nThis video is for educational purposes only and is not medical advice.",
   "tags": [
     "aging",
@@ -65,7 +65,7 @@
   ],
   "style": "anim",
   "thumbnail_anim": {
-    "thumbAction": "shocked",
+    "thumbAction": "think",
     "props": [
       {
         "icon": "hourglass-not-done",

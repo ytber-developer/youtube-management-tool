@@ -3,7 +3,7 @@
 - **Kênh:** Inside Your Body · **Video #7** · **Ngày đăng:** 2026-11-29
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-11-30)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 6646 ký tự · khoảng 7.1 phút
-- **Thumbnail text:** YOUR BODY VS. COLD
+- **Thumbnail text:** 7 DAYS OF WAR
 
 ## Title
 How Your Immune System Fights a Cold, Day by Day

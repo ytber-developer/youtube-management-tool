@@ -3,7 +3,7 @@
 - **Kênh:** Inside Your Body · **Video #19** · **Ngày đăng:** 2026-12-11
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-12)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 5885 ký tự · khoảng 6.4 phút
-- **Thumbnail text:** BRAIN FREEZE EXPLAINED
+- **Thumbnail text:** STOP IT IN SECONDS
 
 ## Title
 Why You Get Brain Freeze (And How to Stop It Fast)

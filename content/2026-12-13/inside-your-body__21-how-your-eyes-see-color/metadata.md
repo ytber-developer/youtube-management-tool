@@ -3,7 +3,7 @@
 - **Kênh:** Inside Your Body · **Video #21** · **Ngày đăng:** 2026-12-13
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-14)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 6063 ký tự · khoảng 6.5 phút
-- **Thumbnail text:** COLOR IS IN YOU
+- **Thumbnail text:** YOUR BRAIN MAKES COLOR
 
 ## Title
 How Your Eyes See Color (It's Not What You Think)

@@ -4,8 +4,8 @@
   "slug": "how-your-sense-of-smell-works",
   "style": "anim",
   "target_minutes": 6.3,
-  "title": "How Your Sense of Smell Works (and Why Smells Bring Back Memories)",
-  "thumbnail_text": "WHY SMELL TRIGGERS MEMORY",
+  "title": "Why a Smell Can Bring Back a Memory Instantly",
+  "thumbnail_text": "A SHORTCUT TO MEMORY",
   "description": "Why does one whiff of a scent bring back a whole memory? Follow a smell from your nose to your brain: about four hundred types of olfactory receptors, the olfactory bulb, and its direct link to the parts of the brain that handle emotion and memory. Plus why a cold dulls your sense of smell, why a smell fades when you stay with it, and when a lasting change is worth asking a doctor about.\n\nSources:\n- NIDCD (NIH), Smell Disorders: https://www.nidcd.nih.gov/health/smell-disorders\n- Dana Foundation, The Senses: Smell and Taste: https://dana.org/article/the-senses-smell-and-taste/\n- Cleveland Clinic, Anosmia (Loss of Sense of Smell): https://my.clevelandclinic.org/health/diseases/21859-anosmia-loss-of-sense-of-smell\n\nThis video is for educational purposes only and is not medical advice.",
   "tags": [
     "sense of smell",
@@ -35,7 +35,7 @@
     }
   ],
   "thumbnail_anim": {
-    "thumbAction": "shocked",
+    "thumbAction": "think",
     "props": [
       {
         "icon": "nose",

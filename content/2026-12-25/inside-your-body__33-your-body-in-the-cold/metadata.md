@@ -1,12 +1,12 @@
-# What the Cold Does to Your Body: 5 Defenses Against Freezing
+# 5 Ways Your Body Fights the Cold (Before You Freeze)
 
 - **Kênh:** Inside Your Body · **Video #33** · **Ngày đăng:** 2026-12-25
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-26)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 6826 ký tự · khoảng 7.4 phút
-- **Thumbnail text:** YOUR BODY VS COLD
+- **Thumbnail text:** 5 DEFENSES
 
 ## Title
-What the Cold Does to Your Body: 5 Defenses Against Freezing
+5 Ways Your Body Fights the Cold (Before You Freeze)
 
 ## Description (copy nguyên khối)
 ```

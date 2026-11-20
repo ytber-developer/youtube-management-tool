@@ -1,12 +1,12 @@
-# Why Do Your Muscles Cramp? The Surprising Answer Is in Your Nerves
+# Why Your Muscles Cramp (It's Your Nerves, Not Your Muscles)
 
 - **Kênh:** Inside Your Body · **Video #25** · **Ngày đăng:** 2026-12-17
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-18)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 6432 ký tự · khoảng 6.9 phút
-- **Thumbnail text:** WHY MUSCLES CRAMP
+- **Thumbnail text:** BLAME YOUR NERVES
 
 ## Title
-Why Do Your Muscles Cramp? The Surprising Answer Is in Your Nerves
+Why Your Muscles Cramp (It's Your Nerves, Not Your Muscles)
 
 ## Description (copy nguyên khối)
 ```

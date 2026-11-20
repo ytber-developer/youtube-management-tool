@@ -5,7 +5,7 @@
   "slug": "earth-in-a-billion-years",
   "target_minutes": 7.1,
   "title": "What If You Visited Earth in One Billion Years?",
-  "thumbnail_text": "EARTH IN 1 BILLION",
+  "thumbnail_text": "OCEANS BOIL AWAY",
   "description": "Earth is about four and a half billion years old, and its future is shaped by one slow fact: the Sun keeps getting brighter. What would you find if a time machine dropped you on our planet one billion years from now? Using published climate models, including the classic work of Caldeira and Kasting, we look at the oceans, the plants, the oxygen in the air, and plate tectonics, and we explain why scientists disagree on the exact dates. These are model predictions, not certainties, and the real timeline could be shorter or longer.\n\nSources:\n- Wikipedia, Future of Earth: https://en.wikipedia.org/wiki/Future_of_Earth\n- Caldeira and Kasting, The life span of the biosphere revisited (Nature, 1992), abstract at Penn State: https://pure.psu.edu/en/publications/the-life-span-of-the-biosphere-revisited/\n- NASA Science, Earth facts: https://science.nasa.gov/earth/facts/",
   "tags": [
     "earth in a billion years",
@@ -38,7 +38,7 @@
     }
   ],
   "thumbnail_anim": {
-    "thumbAction": "shocked",
+    "thumbAction": "look-up",
     "props": [
       {
         "icon": "globe-showing-americas",

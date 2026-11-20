@@ -3,7 +3,7 @@
 - **Kênh:** Inside Your Body · **Video #44** · **Ngày đăng:** 2027-01-05
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2027-01-06)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 6180 ký tự · khoảng 6.6 phút
-- **Thumbnail text:** WHY DOES PAIN HURT?
+- **Thumbnail text:** MADE IN YOUR BRAIN
 
 ## Title
 How Pain Works: Why Your Body Hurts (and Why It Fades)

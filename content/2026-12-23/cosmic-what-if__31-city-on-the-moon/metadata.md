@@ -1,4 +1,4 @@
-# What If We Built a City on the Moon? Here's What It Would Take
+# What If We Built a City on the Moon?
 
 - **Kênh:** Cosmic What If · **Video #31** · **Ngày đăng:** 2026-12-23
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-24)
@@ -6,7 +6,7 @@
 - **Thumbnail text:** CITY ON THE MOON
 
 ## Title
-What If We Built a City on the Moon? Here's What It Would Take
+What If We Built a City on the Moon?
 
 ## Description (copy nguyên khối)
 ```

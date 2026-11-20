@@ -4,8 +4,8 @@
   "slug": "why-your-stomach-growls",
   "style": "anim",
   "target_minutes": 6.7,
-  "title": "Why Does Your Stomach Growl? It's Not Just Hunger",
-  "thumbnail_text": "WHY IT GROWLS",
+  "title": "Why Does Your Stomach Growl?",
+  "thumbnail_text": "IT'S NOT HUNGER",
   "description": "That loud growl in a quiet room has a name: borborygmi. Follow the clues to find out what really makes the noise, why your gut runs a cleaning wave about every ninety to one hundred twenty minutes when you have not eaten, how the hormone motilin links that wave to hunger, and why doctors worry more about a silent belly than a noisy one.\n\nSources:\n- Harvard Health Publishing - Stomach growling and other digestive noise: https://www.health.harvard.edu/digestive-health/stomach-growling-and-other-digestive-noise\n- MedlinePlus - Abdominal sounds: https://medlineplus.gov/ency/article/003137.htm\n- Deloose et al. (2012), The migrating motor complex: control mechanisms and its role in health and disease, Nat Rev Gastroenterol Hepatol: https://pubmed.ncbi.nlm.nih.gov/22450306/\n- Takahashi (2013), Interdigestive migrating motor complex: its mechanism and clinical importance, J Smooth Muscle Res: https://pmc.ncbi.nlm.nih.gov/articles/PMC5137267/\n- Tack et al. (2016), Motilin-induced gastric contractions signal hunger in man, Gut: https://pubmed.ncbi.nlm.nih.gov/25539673/\n\nThis video is for educational purposes only and is not medical advice.",
   "tags": [
     "stomach growling",
@@ -44,7 +44,7 @@
     }
   ],
   "thumbnail_anim": {
-    "thumbAction": "shocked",
+    "thumbAction": "eat",
     "props": [
       {
         "icon": "speaker-high-volume",

@@ -1,12 +1,12 @@
-# What Space Does to Your Body (And What Happens When You Come Home)
+# What Space Does to Your Body, and What Earth Undoes
 
 - **Kênh:** Inside Your Body · **Video #8** · **Ngày đăng:** 2026-11-30
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-01)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 7142 ký tự · khoảng 7.5 phút
-- **Thumbnail text:** SPACE CHANGES YOU
+- **Thumbnail text:** YOUR BONES SHRINK
 
 ## Title
-What Space Does to Your Body (And What Happens When You Come Home)
+What Space Does to Your Body, and What Earth Undoes
 
 ## Description (copy nguyên khối)
 ```

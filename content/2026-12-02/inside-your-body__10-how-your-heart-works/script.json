@@ -2,9 +2,9 @@
   "channel": "inside-your-body",
   "number": 10,
   "slug": "how-your-heart-works",
-  "target_minutes": 7.0,
+  "target_minutes": 7,
   "style": "anim",
-  "title": "How Your Heart Beats 100,000 Times a Day Without Stopping",
+  "title": "Why Your Heart Never Gets Tired",
   "thumbnail_text": "100,000 BEATS A DAY",
   "description": "Your heart beats over one hundred thousand times a day and pumps more than two thousand gallons of blood, and every beat starts with a tiny electrical spark inside the heart itself. Here is how the two pumps, four valves and built-in pacemaker work together, and what nuclear bomb tests revealed about whether your heart cells ever get replaced.\n\nSources:\n- NHLBI, How the Heart Beats: https://www.nhlbi.nih.gov/health/heart/heart-beats\n- NHLBI, How Blood Flows through the Heart: https://www.nhlbi.nih.gov/health/heart/blood-flow\n- Cleveland Clinic, Heart: Anatomy and Function: https://my.clevelandclinic.org/health/body/21704-heart\n- UCSF Health, How the Heart Works: https://ucsfhealth.org/education/how-the-heart-works\n- Temple Health, 10 Interesting Heart Facts You May Not Know: https://templehealth.org/about/blog/10-interesting-heart-facts-you-may-not-know\n- Karolinska Institutet (2009), Heart cells replaced throughout life: https://news.ki.se/heart-cells-replaced-throughout-life\n\nThis video is for educational purposes only and is not medical advice.",
   "tags": [
@@ -49,7 +49,7 @@
     }
   ],
   "thumbnail_anim": {
-    "thumbAction": "shocked",
+    "thumbAction": "exercise",
     "props": [
       {
         "icon": "anatomical-heart",

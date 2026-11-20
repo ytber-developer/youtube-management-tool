@@ -102,7 +102,7 @@
   const mix = (a, b, k) => window.Char.mix(a, b, k);
 
   function actor(an, k, t, dur, target) {
-    const base = { x: 0.3 * W, y: 0.72 * H, rot: 0, scale: U * (an.big ? 1.25 : 1), dir: 1, face: an.face, stretch: 1, alpha: 1, pose: P().stand, fx: null };
+    const base = { x: 0.3 * W, y: 0.72 * H, rot: 0, scale: U * (an.big === true ? 1.25 : an.big || 1), dir: 1, face: an.face, stretch: 1, alpha: 1, pose: P().stand, fx: null };
     const bob = Math.sin(t * 2.2) * 3 * U;
     const cyc = (a, b, hz) => mix(P()[a], P()[b], 0.5 + 0.5 * Math.sin(t * hz * Math.PI * 2));
     const tx = target ? target.x : 0.7 * W, ty = target ? target.y : 0.48 * H;

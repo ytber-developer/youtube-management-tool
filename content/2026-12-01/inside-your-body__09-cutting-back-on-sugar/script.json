@@ -4,8 +4,8 @@
   "slug": "cutting-back-on-sugar",
   "target_minutes": 6.33,
   "style": "anim",
-  "title": "What Happens Inside You When You Cut Back on Added Sugar",
-  "thumbnail_text": "LESS SUGAR, THEN?",
+  "title": "What Happens Inside You When You Cut Back on Sugar",
+  "thumbnail_text": "WHAT CHANGES FIRST",
   "description": "The average American adult eats about seventeen teaspoons of added sugar a day. Follow that sugar through your mouth, your bloodstream and your liver, and see what science says changes when there is less of it, including a surprising shift in how sweet things taste.\n\nSources:\n- CDC, Get the Facts: Added Sugars: https://www.cdc.gov/nutrition/php/data-research/added-sugars.html\n- Harvard T.H. Chan School of Public Health, The Nutrition Source, Dietary Guidelines for Americans 2025-2030: https://nutritionsource.hsph.harvard.edu/2026/01/09/dietary-guidelines-for-americans-2025-2030-progress-on-added-sugar-protein-hype-saturated-fat-contradictions/\n- NIDDK, Insulin Resistance and Prediabetes: https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/prediabetes-insulin-resistance\n- Nutrients (2017), Fructose Consumption, Lipogenesis, and Non-Alcoholic Fatty Liver Disease: https://pmc.ncbi.nlm.nih.gov/articles/PMC5622741\n- Monell Center via EurekAlert (2015), Low-sugar diet makes foods taste sweeter: https://www.eurekalert.org/news-releases/613619\n- NIDCR, Tooth Decay: https://www.nidcr.nih.gov/health-info/tooth-decay\n\nThis video is for educational purposes only and is not medical advice.",
   "tags": [
     "added sugar",
@@ -49,7 +49,7 @@
     }
   ],
   "thumbnail_anim": {
-    "thumbAction": "shocked",
+    "thumbAction": "think",
     "props": [
       {
         "icon": "candy",

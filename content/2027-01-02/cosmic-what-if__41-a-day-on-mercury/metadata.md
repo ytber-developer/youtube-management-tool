@@ -1,12 +1,12 @@
-# What If You Spent a Day on Mercury? The Sun Goes Backward
+# What If You Spent a Day on Mercury?
 
 - **Kênh:** Cosmic What If · **Video #41** · **Ngày đăng:** 2027-01-02
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2027-01-03)
 - **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 5836 ký tự · khoảng 6.3 phút
-- **Thumbnail text:** A DAY ON MERCURY
+- **Thumbnail text:** THE SUN GOES BACKWARD
 
 ## Title
-What If You Spent a Day on Mercury? The Sun Goes Backward
+What If You Spent a Day on Mercury?
 
 ## Description (copy nguyên khối)
 ```

@@ -1,12 +1,12 @@
-# What If Dark Matter Vanished? What Is It, Really?
+# What Is Dark Matter? And What If It Vanished?
 
 - **Kênh:** Cosmic What If · **Video #40** · **Ngày đăng:** 2027-01-01
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2027-01-02)
 - **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 5948 ký tự · khoảng 6.4 phút
-- **Thumbnail text:** WHAT IS DARK MATTER?
+- **Thumbnail text:** 85% IS MISSING
 
 ## Title
-What If Dark Matter Vanished? What Is It, Really?
+What Is Dark Matter? And What If It Vanished?
 
 ## Description (copy nguyên khối)
 ```

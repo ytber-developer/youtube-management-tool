@@ -3,7 +3,7 @@
 - **Kênh:** Cosmic What If · **Video #4** · **Ngày đăng:** 2026-11-26
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-11-27)
 - **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 6315 ký tự · khoảng 6.6 phút
-- **Thumbnail text:** THE SUN IS GONE
+- **Thumbnail text:** 8 MINUTES LEFT
 
 ## Title
 What If the Sun Suddenly Vanished? Minute by Minute

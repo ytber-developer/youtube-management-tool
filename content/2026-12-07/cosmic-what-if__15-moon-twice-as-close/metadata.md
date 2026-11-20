@@ -3,7 +3,7 @@
 - **Kênh:** Cosmic What If · **Video #15** · **Ngày đăng:** 2026-12-07
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-08)
 - **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 5481 ký tự · khoảng 6.1 phút
-- **Thumbnail text:** MOON TWICE AS CLOSE
+- **Thumbnail text:** TIDES 8X HIGHER
 
 ## Title
 What If the Moon Were Twice as Close to Earth?

@@ -1,4 +1,4 @@
-# What 24 Hours Without Sleep Does to Your Body and Brain
+# What 24 Hours Without Sleep Does to Your Brain
 
 - **Kênh:** Inside Your Body · **Video #6** · **Ngày đăng:** 2026-11-28
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-11-29)
@@ -6,7 +6,7 @@
 - **Thumbnail text:** 24 HOURS AWAKE
 
 ## Title
-What 24 Hours Without Sleep Does to Your Body and Brain
+What 24 Hours Without Sleep Does to Your Brain
 
 ## Description (copy nguyên khối)
 ```

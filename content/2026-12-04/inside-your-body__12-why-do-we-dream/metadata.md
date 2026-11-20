@@ -1,12 +1,12 @@
-# Why Do We Dream? What Science Knows, and What It Doesn't
+# Why Do We Dream? Science Still Isn't Sure
 
 - **Kênh:** Inside Your Body · **Video #12** · **Ngày đăng:** 2026-12-04
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-05)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 7892 ký tự · khoảng 8.1 phút
-- **Thumbnail text:** WHY DO WE DREAM?
+- **Thumbnail text:** NOBODY KNOWS WHY
 
 ## Title
-Why Do We Dream? What Science Knows, and What It Doesn't
+Why Do We Dream? Science Still Isn't Sure
 
 ## Description (copy nguyên khối)
 ```

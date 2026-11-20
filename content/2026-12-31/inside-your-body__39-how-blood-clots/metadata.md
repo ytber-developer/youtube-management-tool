@@ -1,12 +1,12 @@
-# How Your Blood Clots: Platelets, Fibrin, and Scabs Explained
+# How Your Blood Knows When to Clot
 
 - **Kênh:** Inside Your Body · **Video #39** · **Ngày đăng:** 2026-12-31
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2027-01-01)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 5639 ký tự · khoảng 6.2 phút
-- **Thumbnail text:** HOW BLOOD CLOTS
+- **Thumbnail text:** SELF-SEALING BLOOD
 
 ## Title
-How Your Blood Clots: Platelets, Fibrin, and Scabs Explained
+How Your Blood Knows When to Clot
 
 ## Description (copy nguyên khối)
 ```

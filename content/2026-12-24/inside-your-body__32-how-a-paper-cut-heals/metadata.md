@@ -3,7 +3,7 @@
 - **Kênh:** Inside Your Body · **Video #32** · **Ngày đăng:** 2026-12-24
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-25)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 6769 ký tự · khoảng 7.5 phút
-- **Thumbnail text:** WHY PAPER CUTS HURT
+- **Thumbnail text:** TINY CUT, HUGE PAIN
 
 ## Title
 Why Paper Cuts Hurt So Much, and How Your Skin Heals Them

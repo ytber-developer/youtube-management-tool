@@ -1,12 +1,12 @@
-# What If the Milky Way and Andromeda Collided? Would You Survive?
+# What If the Milky Way and Andromeda Collided?
 
 - **Kênh:** Cosmic What If · **Video #28** · **Ngày đăng:** 2026-12-20
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-21)
 - **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 6766 ký tự · khoảng 7.3 phút
-- **Thumbnail text:** GALAXIES COLLIDE
+- **Thumbnail text:** NOTHING HITS ANYTHING
 
 ## Title
-What If the Milky Way and Andromeda Collided? Would You Survive?
+What If the Milky Way and Andromeda Collided?
 
 ## Description (copy nguyên khối)
 ```

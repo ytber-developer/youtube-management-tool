@@ -1,4 +1,4 @@
-# What Running 26.2 Miles Does to Your Body, Mile by Mile
+# What a Marathon Does to Your Body, Mile by Mile
 
 - **Kênh:** Inside Your Body · **Video #11** · **Ngày đăng:** 2026-12-03
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-04)
@@ -6,7 +6,7 @@
 - **Thumbnail text:** 26.2 MILES INSIDE YOU
 
 ## Title
-What Running 26.2 Miles Does to Your Body, Mile by Mile
+What a Marathon Does to Your Body, Mile by Mile
 
 ## Description (copy nguyên khối)
 ```

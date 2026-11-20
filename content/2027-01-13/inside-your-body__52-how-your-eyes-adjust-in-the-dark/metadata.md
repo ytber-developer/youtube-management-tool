@@ -3,7 +3,7 @@
 - **Kênh:** Inside Your Body · **Video #52** · **Ngày đăng:** 2027-01-13
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2027-01-14)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 6427 ký tự · khoảng 7.0 phút
-- **Thumbnail text:** SEEING IN THE DARK
+- **Thumbnail text:** 30 MINUTES TO ADJUST
 
 ## Title
 How Your Eyes Adjust in the Dark (and Why Red Light Helps)

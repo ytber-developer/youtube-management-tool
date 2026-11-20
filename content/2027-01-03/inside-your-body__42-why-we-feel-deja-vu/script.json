@@ -4,8 +4,8 @@
   "slug": "why-we-feel-deja-vu",
   "style": "anim",
   "target_minutes": 6.4,
-  "title": "Why Do We Feel Déjà Vu? What Scientists Think Is Going On",
-  "thumbnail_text": "BRAIN'S FAMILIARITY GLITCH",
+  "title": "Why Déjà Vu Happens (What Scientists Think)",
+  "thumbnail_text": "A MEMORY GLITCH",
   "description": "Why does a brand-new place suddenly feel familiar? Explore what scientists think causes déjà vu: memory misfires, hidden similarity to scenes you forgot, and the temporal lobe's role in familiarity. Learn how common it is, what is still unknown, and exactly when frequent or unusual episodes are worth a doctor visit.\n\nSources:\n- Illman et al. (2012), Epilepsy Research and Treatment, Déjà experiences in temporal lobe epilepsy: https://pmc.ncbi.nlm.nih.gov/articles/PMC3420423\n- Cleveland Clinic, Déjà vu: what it is and when it may be cause for concern: https://health.clevelandclinic.org/deja-vu-what-it-is-and-when-it-may-be-cause-for-concern\n- Scientific American, What causes the feeling of déjà vu?: https://www.scientificamerican.com/article/what-causes-the-feeling-of-deja-vu/\n- Brain Health, Déjà vu and epilepsy: https://www.brainhealth.com/explore/neurology-explained/deja-vu-epilepsy\n\nThis video is for educational purposes only and is not medical advice.",
   "tags": [
     "deja vu",
@@ -39,7 +39,7 @@
     }
   ],
   "thumbnail_anim": {
-    "thumbAction": "shocked",
+    "thumbAction": "think",
     "props": [
       {
         "icon": "eyes",

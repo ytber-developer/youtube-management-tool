@@ -1,12 +1,12 @@
-# Why Does Your Stomach Growl? It's Not Just Hunger
+# Why Does Your Stomach Growl?
 
 - **Kênh:** Inside Your Body · **Video #22** · **Ngày đăng:** 2026-12-14
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-15)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 6346 ký tự · khoảng 6.8 phút
-- **Thumbnail text:** WHY IT GROWLS
+- **Thumbnail text:** IT'S NOT HUNGER
 
 ## Title
-Why Does Your Stomach Growl? It's Not Just Hunger
+Why Does Your Stomach Growl?
 
 ## Description (copy nguyên khối)
 ```

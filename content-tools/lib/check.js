@@ -40,7 +40,17 @@ function validateScript(script) {
   });
 
   if ((script.title || '').length > 70) errors.push(`title is ${script.title.length} chars (max 70)`);
+  else if ((script.title || '').length > 60) warnings.push(`title is ${script.title.length} chars — YouTube cuts titles at ~60 on phones, put the hook first`);
   if (words(script.thumbnail_text) > 4) errors.push('thumbnail_text has more than 4 words');
+  // Thumbnail chữ phải bổ sung cho title (cú twist / con số), không lặp lại title
+  const tw = new Set((script.title || '').toLowerCase().match(/[a-z0-9'-]{3,}/g) || []);
+  const shared = ((script.thumbnail_text || '').toLowerCase().match(/[a-z0-9'-]{3,}/g) || []).filter(w => tw.has(w) && !['you', 'your', 'the', 'what', 'why', 'how', 'and'].includes(w));
+  if (shared.length >= 3) warnings.push(`thumbnail_text repeats the title (${shared.join(' ')}) — show the twist or a number instead`);
+  if (script.thumbnail_anim) {
+    const { ACTIONS, validateAnim } = require('./animspec');
+    if (script.thumbnail_anim.thumbAction && !ACTIONS.includes(script.thumbnail_anim.thumbAction)) errors.push(`thumbnail_anim: unknown thumbAction "${script.thumbnail_anim.thumbAction}"`);
+    for (const e of validateAnim({ action: 'shocked', props: script.thumbnail_anim.props })) errors.push(`thumbnail_anim: ${e}`);
+  }
   if (!Array.isArray(script.sources) || script.sources.length < 2) errors.push('needs at least 2 sources');
   if (ch?.disclaimer && !(script.description || '').trim().endsWith(ch.disclaimer)) {
     errors.push('description must end with the medical disclaimer');

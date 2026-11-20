@@ -3,9 +3,9 @@
   "number": 52,
   "slug": "how-your-eyes-adjust-in-the-dark",
   "style": "anim",
-  "target_minutes": 7.0,
+  "target_minutes": 7,
   "title": "How Your Eyes Adjust in the Dark (and Why Red Light Helps)",
-  "thumbnail_text": "SEEING IN THE DARK",
+  "thumbnail_text": "30 MINUTES TO ADJUST",
   "description": "Step into a dark movie theater and you are nearly blind, then slowly the room appears. Follow that moment to see how rods and cones divide the work, how the pigment rhodopsin is rebuilt, why full dark adaptation can take about twenty to thirty minutes, what your pupils really contribute, and why dim red light is used by people who want to keep their night vision. Plus when trouble seeing in dim light is worth an eye exam.\n\nSources:\n- NCBI StatPearls (2022), Physiology, Night Vision: https://pubmed.ncbi.nlm.nih.gov/31424830/\n- Scientific American, Experts: Eyes Adjust to Darkness: https://www.scientificamerican.com/article/experts-eyes-adjust-to-darkness/\n- Webvision (University of Pittsburgh), Light and Dark Adaptation: https://www.webvision.pitt.edu/book/part-viii-psychophysics-of-vision/light-and-dark-adaptation/\n- NYU Center for Neural Science, Perception lecture notes: Light/Dark Adaptation: https://www.cns.nyu.edu/~david/courses/perception/lecturenotes/light-adapt/light-adapt.html\n- MedlinePlus (NIH), Night blindness: https://medlineplus.gov/ency/article/003039.htm\n\nThis video is for educational purposes only and is not medical advice.",
   "tags": [
     "dark adaptation",
@@ -44,7 +44,7 @@
     }
   ],
   "thumbnail_anim": {
-    "thumbAction": "shocked",
+    "thumbAction": "look-up",
     "props": [
       {
         "icon": "eyes",

@@ -1,12 +1,12 @@
-# Why Do We Get Hiccups? The Mystery Science Still Can't Solve
+# Why Do We Hiccup? Nobody Knows for Sure
 
 - **Kênh:** Inside Your Body · **Video #16** · **Ngày đăng:** 2026-12-08
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-09)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 5814 ký tự · khoảng 6.3 phút
-- **Thumbnail text:** WHY HICCUPS?
+- **Thumbnail text:** STILL UNSOLVED
 
 ## Title
-Why Do We Get Hiccups? The Mystery Science Still Can't Solve
+Why Do We Hiccup? Nobody Knows for Sure
 
 ## Description (copy nguyên khối)
 ```

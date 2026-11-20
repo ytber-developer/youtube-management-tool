@@ -1,12 +1,12 @@
-# What If You Flew Through the Asteroid Belt? It's Mostly Empty
+# What If You Flew Through the Asteroid Belt?
 
 - **Kênh:** Cosmic What If · **Video #45** · **Ngày đăng:** 2027-01-06
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2027-01-07)
 - **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 6058 ký tự · khoảng 6.7 phút
-- **Thumbnail text:** BELT: SAFE?
+- **Thumbnail text:** MOSTLY EMPTY
 
 ## Title
-What If You Flew Through the Asteroid Belt? It's Mostly Empty
+What If You Flew Through the Asteroid Belt?
 
 ## Description (copy nguyên khối)
 ```

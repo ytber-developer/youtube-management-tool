@@ -1,4 +1,4 @@
-# Where Your Memories Live, and Why They Change Every Time You Remember
+# Your Memory Changes Every Time You Remember
 
 - **Kênh:** Inside Your Body · **Video #13** · **Ngày đăng:** 2026-12-05
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-06)
@@ -6,7 +6,7 @@
 - **Thumbnail text:** YOUR MEMORY LIES
 
 ## Title
-Where Your Memories Live, and Why They Change Every Time You Remember
+Your Memory Changes Every Time You Remember
 
 ## Description (copy nguyên khối)
 ```

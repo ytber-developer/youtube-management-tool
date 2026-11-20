@@ -1,12 +1,12 @@
-# How Your Sense of Smell Works (and Why Smells Bring Back Memories)
+# Why a Smell Can Bring Back a Memory Instantly
 
 - **Kênh:** Inside Your Body · **Video #40** · **Ngày đăng:** 2027-01-01
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2027-01-02)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 5756 ký tự · khoảng 6.3 phút
-- **Thumbnail text:** WHY SMELL TRIGGERS MEMORY
+- **Thumbnail text:** A SHORTCUT TO MEMORY
 
 ## Title
-How Your Sense of Smell Works (and Why Smells Bring Back Memories)
+Why a Smell Can Bring Back a Memory Instantly
 
 ## Description (copy nguyên khối)
 ```

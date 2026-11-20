@@ -82,8 +82,9 @@ Fix every error and read every warning. Don't loosen the checker to pass a scrip
 4. **Write for the ear**: short sentences, numbers as words, spell out what TTS mispronounces ("Sagittarius A star"). Add the on-screen spelling to `CAPTION_DISPLAY` in `content-tools/lib/channels.js`.
 5. **Every fact has a source** in `sources`. If you can't source it, cut it.
 6. **Headlines are the slide text**, not a summary of the narration: punchy, ALL CAPS, the `<em>` word is the payoff.
-7. **Title**: curiosity + plain words a US viewer searches for. No clickbait the video doesn't pay off.
-8. Aim for 30–45 words per middle scene (the checker's hard limits are 20–60). Longer videos get more scenes, not longer ones.
+7. **Title**: curiosity + plain words a US viewer searches for. No clickbait the video doesn't pay off. Aim for **≤ 60 characters** (phones cut longer ones) with the hook in the first 40: a "What if…?" or "Why…?" question, or a surprising claim ("Your Memory Changes Every Time You Remember"). No colon lists ("…: Platelets, Fibrin, and Scabs"), no "Explained" / "How X Works:" openers, and don't give the answer away in the title — save it for the thumbnail.
+8. **Thumbnail text** (`thumbnail_text`, 2–4 words) must *add* to the title, never repeat it: the twist, the stake, or one number ("HOUR = 7 YEARS", "TONGUE MAP IS FAKE", "15 SECONDS AWAKE", "FEVER ON PURPOSE"). Labels like "SNORING EXPLAINED" or "HOW BLOOD CLOTS" are not hooks. Pick a `thumbnail_anim.thumbAction` that acts out the premise (`shrink`, `hold-breath`, `look-up`, `think`, `sick`…); use `shocked` for at most one video in three so the channel page doesn't look like one repeated frame. The main prop (`at: "right"`) should show the subject or the outcome, not a generic object.
+9. Aim for 30–45 words per middle scene (the checker's hard limits are 20–60). Longer videos get more scenes, not longer ones.
 
 ## After editing
 

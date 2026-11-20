@@ -4,8 +4,8 @@
   "number": 40,
   "slug": "what-is-dark-matter",
   "target_minutes": 6.3,
-  "title": "What If Dark Matter Vanished? What Is It, Really?",
-  "thumbnail_text": "WHAT IS DARK MATTER?",
+  "title": "What Is Dark Matter? And What If It Vanished?",
+  "thumbnail_text": "85% IS MISSING",
   "description": "Most of the matter in the universe is invisible, and nobody has caught it yet. What if it vanished tonight? We follow the clues: galaxy rotation curves that refuse to slow down, the Bullet Cluster collision where the gravity went somewhere the gas did not, lensing rings, and a long list of suspects scientists have already crossed off.\n\nSources:\n- Wikipedia, Dark matter: https://en.wikipedia.org/wiki/Dark_matter\n- Wikipedia, Galaxy rotation curve: https://en.wikipedia.org/wiki/Galaxy_rotation_curve\n- Wikipedia, Bullet Cluster: https://en.wikipedia.org/wiki/Bullet_Cluster\n- NASA, Hubble sees a ring of dark matter (CL0024+17): https://science.nasa.gov/universe/dark-matter/",
   "tags": [
     "dark matter",
@@ -42,7 +42,7 @@
     }
   ],
   "thumbnail_anim": {
-    "thumbAction": "shocked",
+    "thumbAction": "think",
     "props": [
       {
         "icon": "ghost",

@@ -1,12 +1,12 @@
-# How Your Skin Works: The Body Armor That Renews Itself Every Month
+# Your Skin Replaces Itself Every Month. Here's How
 
 - **Kênh:** Inside Your Body · **Video #35** · **Ngày đăng:** 2026-12-27
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-28)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 5551 ký tự · khoảng 6.1 phút
-- **Thumbnail text:** YOUR SKIN RENEWS
+- **Thumbnail text:** YOUR BODY ARMOR
 
 ## Title
-How Your Skin Works: The Body Armor That Renews Itself Every Month
+Your Skin Replaces Itself Every Month. Here's How
 
 ## Description (copy nguyên khối)
 ```

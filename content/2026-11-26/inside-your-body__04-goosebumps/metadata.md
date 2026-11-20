@@ -1,12 +1,12 @@
-# Why Do We Get Goosebumps? The Answer Is Hair-Raising
+# Why You Get Goosebumps (You Don't Need Them Anymore)
 
 - **Kênh:** Inside Your Body · **Video #4** · **Ngày đăng:** 2026-11-26
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-11-27)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 6337 ký tự · khoảng 6.7 phút
-- **Thumbnail text:** WHY GOOSEBUMPS?
+- **Thumbnail text:** A LEFTOVER REFLEX
 
 ## Title
-Why Do We Get Goosebumps? The Answer Is Hair-Raising
+Why You Get Goosebumps (You Don't Need Them Anymore)
 
 ## Description (copy nguyên khối)
 ```

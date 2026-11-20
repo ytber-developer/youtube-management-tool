@@ -3,7 +3,7 @@
 - **Kênh:** Inside Your Body · **Video #20** · **Ngày đăng:** 2026-12-12
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-13)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 5765 ký tự · khoảng 6.3 phút
-- **Thumbnail text:** WHY WE CRY
+- **Thumbnail text:** 3 KINDS OF TEARS
 
 ## Title
 What Happens to Your Body When You Cry?

@@ -3,7 +3,7 @@
 - **Kênh:** Cosmic What If · **Video #34** · **Ngày đăng:** 2026-12-26
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-27)
 - **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 7548 ký tự · khoảng 7.9 phút
-- **Thumbnail text:** ALIEN MESSAGE?
+- **Thumbnail text:** WHO ANSWERS FIRST?
 
 ## Title
 What If Aliens Sent Us a Message? What Would Really Happen

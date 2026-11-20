@@ -1,4 +1,4 @@
-# How Jet Lag Scrambles Your Body Clock (and Why Flying East Is Worse)
+# How Jet Lag Scrambles Your Body Clock (East Is Worse)
 
 - **Kênh:** Inside Your Body · **Video #34** · **Ngày đăng:** 2026-12-26
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-27)
@@ -6,7 +6,7 @@
 - **Thumbnail text:** WHY EAST IS WORSE
 
 ## Title
-How Jet Lag Scrambles Your Body Clock (and Why Flying East Is Worse)
+How Jet Lag Scrambles Your Body Clock (East Is Worse)
 
 ## Description (copy nguyên khối)
 ```

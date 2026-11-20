@@ -3,7 +3,7 @@
 - **Kênh:** Cosmic What If · **Video #48** · **Ngày đăng:** 2027-01-09
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2027-01-10)
 - **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 6381 ký tự · khoảng 7.0 phút
-- **Thumbnail text:** SUN RUNS OUT
+- **Thumbnail text:** 5 BILLION YEARS LEFT
 
 ## Title
 What If the Sun Ran Out of Fuel? Red Giant to White Dwarf

@@ -3,7 +3,7 @@
 - **Kênh:** Cosmic What If · **Video #19** · **Ngày đăng:** 2026-12-11
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-12)
 - **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 5897 ký tự · khoảng 6.4 phút
-- **Thumbnail text:** TRIP TO PROXIMA B
+- **Thumbnail text:** 4.2 LIGHT-YEARS
 
 ## Title
 What If You Traveled to Proxima b, the Nearest Exoplanet?

@@ -1,12 +1,12 @@
-# How Hair Grows (and Why It Turns Gray) Explained
+# Why Your Hair Turns Gray, and How It Grows
 
 - **Kênh:** Inside Your Body · **Video #36** · **Ngày đăng:** 2026-12-28
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-29)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 5476 ký tự · khoảng 6.2 phút
-- **Thumbnail text:** WHY HAIR TURNS GRAY
+- **Thumbnail text:** RUNS OUT OF COLOR
 
 ## Title
-How Hair Grows (and Why It Turns Gray) Explained
+Why Your Hair Turns Gray, and How It Grows
 
 ## Description (copy nguyên khối)
 ```

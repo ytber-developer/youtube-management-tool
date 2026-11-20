@@ -1,4 +1,4 @@
-# How Your Brain Learns New Skills (and Why Sleep and Spacing Matter)
+# How Your Brain Learns a Skill (and Why Sleep Locks It In)
 
 - **Kênh:** Inside Your Body · **Video #50** · **Ngày đăng:** 2027-01-11
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2027-01-12)
@@ -6,7 +6,7 @@
 - **Thumbnail text:** SLEEP LOCKS IT IN
 
 ## Title
-How Your Brain Learns New Skills (and Why Sleep and Spacing Matter)
+How Your Brain Learns a Skill (and Why Sleep Locks It In)
 
 ## Description (copy nguyên khối)
 ```

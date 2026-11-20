@@ -3,7 +3,7 @@
 - **Kênh:** Cosmic What If · **Video #51** · **Ngày đăng:** 2027-01-12
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2027-01-13)
 - **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 6575 ký tự · khoảng 6.9 phút
-- **Thumbnail text:** FIRST SECOND
+- **Thumbnail text:** THE FIRST SECOND
 
 ## Title
 What If You Could Watch the First Second of the Universe?

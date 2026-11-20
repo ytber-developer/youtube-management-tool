@@ -1,12 +1,12 @@
-# What If the Sun Became a Black Hole? Earth Wouldn't Fall In
+# What If the Sun Became a Black Hole?
 
 - **Kênh:** Cosmic What If · **Video #18** · **Ngày đăng:** 2026-12-10
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-11)
 - **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 5745 ký tự · khoảng 6.3 phút
-- **Thumbnail text:** SUN TURNS BLACK HOLE
+- **Thumbnail text:** EARTH WOULDN'T FALL
 
 ## Title
-What If the Sun Became a Black Hole? Earth Wouldn't Fall In
+What If the Sun Became a Black Hole?
 
 ## Description (copy nguyên khối)
 ```

@@ -3,7 +3,7 @@
 - **Kênh:** Cosmic What If · **Video #46** · **Ngày đăng:** 2027-01-07
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2027-01-08)
 - **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 6344 ký tự · khoảng 6.8 phút
-- **Thumbnail text:** RIDE VOYAGER 1
+- **Thumbnail text:** ONE-WAY TICKET
 
 ## Title
 What If You Rode Voyager 1 Out of the Solar System?

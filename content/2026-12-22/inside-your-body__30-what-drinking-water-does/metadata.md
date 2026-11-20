@@ -1,4 +1,4 @@
-# What Happens Inside Your Body After You Drink a Glass of Water
+# What One Glass of Water Does Inside Your Body
 
 - **Kênh:** Inside Your Body · **Video #30** · **Ngày đăng:** 2026-12-22
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-23)
@@ -6,7 +6,7 @@
 - **Thumbnail text:** ONE SIP OF WATER
 
 ## Title
-What Happens Inside Your Body After You Drink a Glass of Water
+What One Glass of Water Does Inside Your Body
 
 ## Description (copy nguyên khối)
 ```

@@ -3,9 +3,9 @@
   "style": "anim",
   "number": 25,
   "slug": "solar-superflare",
-  "target_minutes": 7.0,
+  "target_minutes": 7,
   "title": "What If a Solar Superflare Hit Earth Today?",
-  "thumbnail_text": "SUPERFLARE HITS EARTH",
+  "thumbnail_text": "GRID GOES DARK",
   "description": "A superflare from the Sun would arrive in eight minutes, light up the sky with auroras, and then go after the power grid. We follow the first days hour by hour, from radio blackouts and satellite failures to months without electricity, and look at the 1859 Carrington Event, the 1989 Quebec blackout, the 2012 near miss, and new evidence that Sun-like stars blast out superflares about once a century.\n\nSources:\n- NASA, Solar Flares FAQs: https://science.nasa.gov/blogs/solar-cycle-25/2022/06/10/solar-flares-faqs\n- NASA Science, Near Miss: The Solar Superstorm of July 2012: https://science.nasa.gov/science-news/science-at-nasa/2014/23jul_superstorm/\n- NOAA NESDIS, When Solar Storms Attack: Space Weather and Our Infrastructure: https://www.nesdis.noaa.gov/news/when-solar-storms-attack-space-weather-and-our-infrastructure\n- NOAA Space Weather Prediction Center, Coronal Mass Ejections: https://www.spaceweather.gov/phenomena/coronal-mass-ejections\n- Max Planck Society, Solar Superflares once per Century (Vasilyev et al., Science 2024): https://www.mpg.de/23854476/solar-superflares-once-per-century\n- Astronomy, Sept. 2, 1859: The Carrington Event peaks: https://www.astronomy.com/today-in-the-history-of-astronomy/sept-2-1859-the-carrington-event-peaks/\n- Space.com, SpaceX says a geomagnetic storm just doomed 40 Starlink internet satellites: https://www.space.com/spacex-starlink-satellites-lost-geomagnetic-storm\n- Uusitalo et al., Solar superstorm of AD 774 recorded subannually by Arctic tree rings, Nature Communications 2018: https://www.nature.com/articles/s41467-018-05883-1",
   "tags": [
     "solar flare",

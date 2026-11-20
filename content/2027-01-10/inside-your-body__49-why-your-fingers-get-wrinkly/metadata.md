@@ -1,12 +1,12 @@
-# Why Your Fingers Get Wrinkly in Water (It's Not What You Think)
+# Why Your Fingers Wrinkle in Water (Your Nerves Do It)
 
 - **Kênh:** Inside Your Body · **Video #49** · **Ngày đăng:** 2027-01-10
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2027-01-11)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 6612 ký tự · khoảng 6.9 phút
-- **Thumbnail text:** NOT JUST WATER
+- **Thumbnail text:** YOUR NERVES DO IT
 
 ## Title
-Why Your Fingers Get Wrinkly in Water (It's Not What You Think)
+Why Your Fingers Wrinkle in Water (Your Nerves Do It)
 
 ## Description (copy nguyên khối)
 ```

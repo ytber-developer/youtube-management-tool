@@ -3,8 +3,8 @@
   "number": 8,
   "slug": "space-and-the-human-body",
   "target_minutes": 7.4,
-  "title": "What Space Does to Your Body (And What Happens When You Come Home)",
-  "thumbnail_text": "SPACE CHANGES YOU",
+  "title": "What Space Does to Your Body, and What Earth Undoes",
+  "thumbnail_text": "YOUR BONES SHRINK",
   "description": "Within two days in orbit, astronauts can grow up to three percent taller. That is just the start. Here is what weightlessness does to your inner ear, fluids, spine, bones, muscles, heart, immune system, eyes, brain and even your genes, why coming home can be the hardest part, what the first all-civilian crew revealed, and what a trip to Mars would ask of the human body, based on NASA research including the famous Twins Study.\n\nSources:\n- NASA - The Human Body in Space: https://www.nasa.gov/humans-in-space/the-human-body-in-space/\n- NASA - Twins Study Results Published in Science Journal (2019): https://www.nasa.gov/humans-in-space/nasas-twins-study-results-published-in-science-journal/\n- NASA - Twins Study overview: https://www.nasa.gov/humans-in-space/twins-study/\n- NASA - Astronaut Exercise: https://www.nasa.gov/missions/station/iss-research/astronaut-exercise\n- NASA Technical Reports Server - Seated height and spinal elongation in microgravity: https://ntrs.nasa.gov/citations/20090007782\n- NASA Human Research Program - 5 Hazards of Human Spaceflight: https://www.nasa.gov/hrp/hazards/\n- Frontiers in Microbiology (2019) - Herpes Virus Reactivation in Astronauts During Spaceflight and Its Application on Earth: https://www.frontiersin.org/articles/10.3389/fmicb.2019.00016/full\n- npj Microgravity (2020) - Spaceflight associated neuro-ocular syndrome (SANS) and the neuro-ophthalmologic effects of microgravity: a review and an update: https://www.nature.com/articles/s41526-020-0097-9\n- New England Journal of Medicine (2017) - Effects of Spaceflight on Astronaut Brain Structure as Indicated on MRI: https://www.nejm.org/doi/full/10.1056/NEJMoa1705129\n- Nature (2024) - Molecular and physiological changes in the SpaceX Inspiration4 civilian crew: https://www.nature.com/articles/s41586-024-07648-x\n- NHS - Low blood pressure (hypotension): https://www.nhs.uk/conditions/low-blood-pressure-hypotension/\n\nThis video is for educational purposes only and is not medical advice.",
   "tags": [
     "space",
@@ -75,7 +75,7 @@
   ],
   "style": "anim",
   "thumbnail_anim": {
-    "thumbAction": "grow",
+    "thumbAction": "shrink",
     "props": [
       {
         "icon": "straight-ruler",

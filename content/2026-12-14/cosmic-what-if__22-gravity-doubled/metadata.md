@@ -3,7 +3,7 @@
 - **Kênh:** Cosmic What If · **Video #22** · **Ngày đăng:** 2026-12-14
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-15)
 - **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 6528 ký tự · khoảng 7.0 phút
-- **Thumbnail text:** DOUBLE GRAVITY
+- **Thumbnail text:** TWICE YOUR WEIGHT
 
 ## Title
 What If Earth's Gravity Suddenly Doubled?

@@ -1,12 +1,12 @@
-# What If You Fell Into Jupiter? There's No Ground to Stop You
+# What If You Fell Into Jupiter? (There's No Ground)
 
 - **Kênh:** Cosmic What If · **Video #16** · **Ngày đăng:** 2026-12-08
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-09)
 - **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 5882 ký tự · khoảng 6.2 phút
-- **Thumbnail text:** FALL INTO JUPITER
+- **Thumbnail text:** NO BOTTOM
 
 ## Title
-What If You Fell Into Jupiter? There's No Ground to Stop You
+What If You Fell Into Jupiter? (There's No Ground)
 
 ## Description (copy nguyên khối)
 ```

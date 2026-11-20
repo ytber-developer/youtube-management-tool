@@ -5,7 +5,7 @@
   "target_minutes": 6.6,
   "style": "anim",
   "thumbnail_anim": {
-    "thumbAction": "shocked",
+    "thumbAction": "look-up",
     "props": [
       {
         "icon": "sun",
@@ -16,7 +16,7 @@
     ]
   },
   "title": "What If the Sun Suddenly Vanished? Minute by Minute",
-  "thumbnail_text": "THE SUN IS GONE",
+  "thumbnail_text": "8 MINUTES LEFT",
   "description": "If the Sun vanished right now, you wouldn't know for eight minutes, and neither would Earth's orbit, because gravity travels at the speed of light. We follow what happens next, minute by minute and then million year by million year: a black sky, a planet flung into interstellar space, vanishing winds, weaker tides, frozen oceans and falling air. Then we bust the suffocation myth, dive to the deep-sea vents and underground microbes where life could hang on, visit Iceland's volcanic heat, and meet the rogue planets and icy moons that already live this way.\n\nSources:\n- NASA Science - Sun Facts: https://science.nasa.gov/sun/facts/\n- NASA - Earth Fact Sheet: https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html\n- LIGO Caltech - GW170817 press release: https://www.ligo.caltech.edu/page/press-release-gw170817\n- Caltech - If the Sun ceased to exist, how long would mankind survive?: https://experts.caltech.edu/news/caltech-question-month-if-sun-ceased-exist-right-now-how-long-would-mankind-survive-would\n- Popular Science - If the Sun Went Out, How Long Could Life on Earth Survive?: https://www.popsci.com/science/article/2013-07/if-sun-went-out-how-long-could-life-earth-survive/\n- NOAA - Tides and Water Levels: What Causes Tides?: https://oceanservice.noaa.gov/education/tutorial_tides/tides02_cause.html\n- UCAR Center for Science Education - Wind: https://scied.ucar.edu/learning-zone/how-weather-works/wind\n- NOAA - How much oxygen comes from the ocean?: https://oceanservice.noaa.gov/facts/ocean-oxygen.html\n- Woods Hole Oceanographic Institution - Hydrothermal Vents: https://www.whoi.edu/know-your-ocean/ocean-topics/how-the-ocean-works/seafloor-below/hydrothermal-vents/\n- KamLAND Collaboration, Nature Geoscience (2011) - Partial radiogenic heat model for Earth revealed by geoneutrino measurements: https://www.nature.com/articles/ngeo1205\n- NASA Science - What Is an Exoplanet?: https://science.nasa.gov/exoplanets/what-is-an-exoplanet/\n- NASA Science - Europa: https://science.nasa.gov/jupiter/moons/europa/",
   "tags": [
     "sun",

@@ -1,12 +1,12 @@
-# Why Do We Feel Déjà Vu? What Scientists Think Is Going On
+# Why Déjà Vu Happens (What Scientists Think)
 
 - **Kênh:** Inside Your Body · **Video #42** · **Ngày đăng:** 2027-01-03
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2027-01-04)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 5987 ký tự · khoảng 6.4 phút
-- **Thumbnail text:** BRAIN'S FAMILIARITY GLITCH
+- **Thumbnail text:** A MEMORY GLITCH
 
 ## Title
-Why Do We Feel Déjà Vu? What Scientists Think Is Going On
+Why Déjà Vu Happens (What Scientists Think)
 
 ## Description (copy nguyên khối)
 ```

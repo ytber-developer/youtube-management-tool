@@ -5,7 +5,7 @@
   "slug": "sun-ran-out-of-fuel",
   "target_minutes": 6.8,
   "title": "What If the Sun Ran Out of Fuel? Red Giant to White Dwarf",
-  "thumbnail_text": "SUN RUNS OUT",
+  "thumbnail_text": "5 BILLION YEARS LEFT",
   "description": "The Sun will not last forever. We follow its real future, step by step, from a slowly brightening Sun that boils Earth's oceans, to a swollen red giant, to a glowing nebula and a faint white dwarf. We also look at how the habitable zone moves outward and which numbers scientists are sure about and which they are not.\n\nSources:\n- NASA Science, Life and Death of Stars: Aging Into Gianthood: https://science.nasa.gov/exoplanets/resources/life-and-death/chapter-6/\n- Wikipedia, Sun: https://en.wikipedia.org/wiki/Sun\n- Wikipedia, Future of Earth: https://en.wikipedia.org/wiki/Future_of_Earth\n- Wikipedia, White dwarf: https://en.wikipedia.org/wiki/White_dwarf\n- Wikipedia, Circumstellar habitable zone: https://en.wikipedia.org/wiki/Circumstellar_habitable_zone",
   "tags": [
     "sun",
@@ -45,7 +45,7 @@
     }
   ],
   "thumbnail_anim": {
-    "thumbAction": "shocked",
+    "thumbAction": "look-up",
     "props": [
       {
         "icon": "sun",

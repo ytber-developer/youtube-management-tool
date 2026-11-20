@@ -1,4 +1,4 @@
-# How Your Kidneys Clean Your Blood: 180 Liters a Day
+# How Your Kidneys Clean Your Blood, Nonstop
 
 - **Kênh:** Inside Your Body · **Video #38** · **Ngày đăng:** 2026-12-30
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-31)
@@ -6,7 +6,7 @@
 - **Thumbnail text:** 180 LITERS A DAY
 
 ## Title
-How Your Kidneys Clean Your Blood: 180 Liters a Day
+How Your Kidneys Clean Your Blood, Nonstop
 
 ## Description (copy nguyên khối)
 ```

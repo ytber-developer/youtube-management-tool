@@ -3,7 +3,7 @@
 - **Kênh:** Cosmic What If · **Video #52** · **Ngày đăng:** 2027-01-13
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2027-01-14)
 - **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 6507 ký tự · khoảng 6.9 phút
-- **Thumbnail text:** DYSON SPHERE
+- **Thumbnail text:** WRAP THE SUN
 
 ## Title
 What If We Built a Dyson Sphere Around the Sun?

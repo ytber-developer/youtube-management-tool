@@ -3,9 +3,9 @@
   "number": 51,
   "slug": "why-we-snore",
   "style": "anim",
-  "target_minutes": 7.0,
+  "target_minutes": 7,
   "title": "Why Do We Snore? What Your Throat Is Doing at Night",
-  "thumbnail_text": "SNORING EXPLAINED",
+  "thumbnail_text": "THE FLAPPING SOUND",
   "description": "Why do we snore, and when is it a sign to see a doctor? Follow one night of sleep to see how relaxed, narrowed throat tissue vibrates in moving air, how sleeping on your back, congestion, alcohol and tiredness can turn up the volume, and when loud snoring may point to obstructive sleep apnea. Plus the simple, everyday ideas people try, and the signs that mean it is time to ask a professional.\n\nSources:\n- NHS, Snoring: https://www.nhs.uk/conditions/snoring/\n- Cleveland Clinic, Snoring: https://my.clevelandclinic.org/health/symptoms/15580-snoring\n- NHS, Sleep apnoea: https://www.nhs.uk/conditions/sleep-apnoea/\n- NHLBI (NIH), Sleep Apnea: https://www.nhlbi.nih.gov/health/sleep-apnea\n- CDC, About Sleep: https://www.cdc.gov/sleep/about/index.html\n\nThis video is for educational purposes only and is not medical advice.",
   "tags": [
     "why do we snore",
@@ -44,7 +44,7 @@
     }
   ],
   "thumbnail_anim": {
-    "thumbAction": "shocked",
+    "thumbAction": "sleep",
     "props": [
       {
         "icon": "loudspeaker",

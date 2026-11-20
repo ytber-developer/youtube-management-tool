@@ -1,4 +1,4 @@
-# What If Earth Flew Off Its Orbit? A Straight Line Into the Dark
+# What If Earth Flew Off Its Orbit? Into the Dark
 
 - **Kênh:** Cosmic What If · **Video #35** · **Ngày đăng:** 2026-12-27
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-28)
@@ -6,7 +6,7 @@
 - **Thumbnail text:** EARTH FLIES AWAY
 
 ## Title
-What If Earth Flew Off Its Orbit? A Straight Line Into the Dark
+What If Earth Flew Off Its Orbit? Into the Dark
 
 ## Description (copy nguyên khối)
 ```

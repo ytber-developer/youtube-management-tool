@@ -1,12 +1,12 @@
-# What If Earth Spun Twice as Fast? 12-Hour Days and Wild Storms
+# What If Earth Spun Twice as Fast? 12-Hour Days
 
 - **Kênh:** Cosmic What If · **Video #39** · **Ngày đăng:** 2026-12-31
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2027-01-01)
 - **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 5886 ký tự · khoảng 6.2 phút
-- **Thumbnail text:** EARTH SPINS FASTER
+- **Thumbnail text:** 12-HOUR DAYS
 
 ## Title
-What If Earth Spun Twice as Fast? 12-Hour Days and Wild Storms
+What If Earth Spun Twice as Fast? 12-Hour Days
 
 ## Description (copy nguyên khối)
 ```

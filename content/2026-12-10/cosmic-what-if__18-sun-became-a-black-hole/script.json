@@ -4,8 +4,8 @@
   "number": 18,
   "slug": "sun-became-a-black-hole",
   "target_minutes": 6.3,
-  "title": "What If the Sun Became a Black Hole? Earth Wouldn't Fall In",
-  "thumbnail_text": "SUN TURNS BLACK HOLE",
+  "title": "What If the Sun Became a Black Hole?",
+  "thumbnail_text": "EARTH WOULDN'T FALL",
   "description": "Crush the Sun into a black hole of the same mass and Earth would not get sucked in. It would keep orbiting exactly as before, in total darkness. We follow the first eight minutes, the long freeze that comes after, what could survive, what you would see if you flew to the black hole, and why the real Sun will never become one.\n\nSources:\n- NASA Imagine the Universe, Black Holes: what if the Sun were replaced by a black hole: https://imagine.gsfc.nasa.gov/educators/blackholes/imagine/page26.html\n- NASA Science, Sun Facts: https://science.nasa.gov/sun/facts/\n- NASA Science, Types of Black Holes: https://science.nasa.gov/universe/black-holes/types/\n- NASA Science, Black Hole Anatomy: https://science.nasa.gov/universe/black-holes/anatomy/\n- NASA Science, Voyager 1: What Is a Light-Day?: https://science.nasa.gov/mission/voyager/voyager-1/voyager-1-what-is-a-light-day/\n- Astronomy Magazine, How much space does a black hole take up?: https://www.astronomy.com/science/how-much-space-does-a-black-hole-take-up/\n- Popular Science, If The Sun Went Out, How Long Would Life On Earth Survive? (2013): https://www.popsci.com/science/article/2013-07/if-sun-went-out-how-long-could-life-earth-survive/\n- NASA Science, Earth's Moon: Facts: https://science.nasa.gov/moon/facts/\n- NOAA, Tides and Water Levels: What Causes Tides?: https://oceanservice.noaa.gov/education/tutorial_tides/tides02_cause.html",
   "tags": [
     "black hole",
@@ -63,7 +63,7 @@
     }
   ],
   "thumbnail_anim": {
-    "thumbAction": "shocked",
+    "thumbAction": "think",
     "props": [
       {
         "icon": "black-hole",

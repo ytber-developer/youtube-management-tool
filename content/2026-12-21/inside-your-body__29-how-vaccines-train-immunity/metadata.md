@@ -3,7 +3,7 @@
 - **Kênh:** Inside Your Body · **Video #29** · **Ngày đăng:** 2026-12-21
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-22)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 7067 ký tự · khoảng 7.5 phút
-- **Thumbnail text:** TRAINING YOUR IMMUNITY
+- **Thumbnail text:** A DRESS REHEARSAL
 
 ## Title
 How Vaccines Train Your Immune System, Step by Step

@@ -3,7 +3,7 @@
 - **Kênh:** Cosmic What If · **Video #25** · **Ngày đăng:** 2026-12-17
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-18)
 - **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 6791 ký tự · khoảng 7.2 phút
-- **Thumbnail text:** SUPERFLARE HITS EARTH
+- **Thumbnail text:** GRID GOES DARK
 
 ## Title
 What If a Solar Superflare Hit Earth Today?

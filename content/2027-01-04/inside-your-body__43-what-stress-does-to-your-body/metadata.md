@@ -3,7 +3,7 @@
 - **Kênh:** Inside Your Body · **Video #43** · **Ngày đăng:** 2027-01-04
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2027-01-05)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 6164 ký tự · khoảng 6.5 phút
-- **Thumbnail text:** STRESS INSIDE YOUR BODY
+- **Thumbnail text:** THE OFF SWITCH
 
 ## Title
 What Stress Does to Your Body (and How It Resets)

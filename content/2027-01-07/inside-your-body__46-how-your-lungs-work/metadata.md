@@ -1,4 +1,4 @@
-# How Your Lungs Work: 480 Million Tiny Air Sacs and One Muscle
+# How Your Lungs Work, Breath by Breath
 
 - **Kênh:** Inside Your Body · **Video #46** · **Ngày đăng:** 2027-01-07
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2027-01-08)
@@ -6,7 +6,7 @@
 - **Thumbnail text:** 480 MILLION AIR SACS
 
 ## Title
-How Your Lungs Work: 480 Million Tiny Air Sacs and One Muscle
+How Your Lungs Work, Breath by Breath
 
 ## Description (copy nguyên khối)
 ```

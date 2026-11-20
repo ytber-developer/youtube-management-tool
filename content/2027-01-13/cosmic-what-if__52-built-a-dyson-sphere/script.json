@@ -3,9 +3,9 @@
   "style": "anim",
   "number": 52,
   "slug": "built-a-dyson-sphere",
-  "target_minutes": 7.0,
+  "target_minutes": 7,
   "title": "What If We Built a Dyson Sphere Around the Sun?",
-  "thumbnail_text": "DYSON SPHERE",
+  "thumbnail_text": "WRAP THE SUN",
   "description": "A Dyson sphere is one of the boldest ideas in science: surround a star with machines and capture its power. How much energy is that, how much material would you need, and why do scientists say a solid shell would never work? We follow the idea from Freeman Dyson's 1960 paper and the Kardashev scale to swarms of solar collectors, Mercury as a building site, and the strange dimming of Tabby's Star, which briefly made headlines as a possible alien megastructure. It is all speculative, and we say so where the science runs out.\n\nSources:\n- Wikipedia, Dyson sphere: https://en.wikipedia.org/wiki/Dyson_sphere\n- Wikipedia, Kardashev scale: https://en.wikipedia.org/wiki/Kardashev_scale\n- Wikipedia, Tabby's Star: https://en.wikipedia.org/wiki/Tabby%27s_Star\n- NASA NSSDC, Sun Fact Sheet: https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html\n- NASA NSSDC, Mercury Fact Sheet: https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html\n- Space.com, How to Build a Dyson Swarm: https://www.space.com/38031-how-to-build-a-dyson-swarm.html",
   "tags": [
     "dyson sphere",

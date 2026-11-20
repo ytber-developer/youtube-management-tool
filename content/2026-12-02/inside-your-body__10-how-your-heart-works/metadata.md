@@ -1,4 +1,4 @@
-# How Your Heart Beats 100,000 Times a Day Without Stopping
+# Why Your Heart Never Gets Tired
 
 - **Kênh:** Inside Your Body · **Video #10** · **Ngày đăng:** 2026-12-02
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-03)
@@ -6,7 +6,7 @@
 - **Thumbnail text:** 100,000 BEATS A DAY
 
 ## Title
-How Your Heart Beats 100,000 Times a Day Without Stopping
+Why Your Heart Never Gets Tired
 
 ## Description (copy nguyên khối)
 ```

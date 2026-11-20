@@ -1,4 +1,4 @@
-# How Your Gut Bacteria Work: Do They Really Outnumber Your Cells?
+# Do Your Gut Bacteria Really Outnumber Your Cells?
 
 - **Kênh:** Inside Your Body · **Video #48** · **Ngày đăng:** 2027-01-09
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2027-01-10)
@@ -6,7 +6,7 @@
 - **Thumbnail text:** TRILLIONS OF ROOMMATES
 
 ## Title
-How Your Gut Bacteria Work: Do They Really Outnumber Your Cells?
+Do Your Gut Bacteria Really Outnumber Your Cells?
 
 ## Description (copy nguyên khối)
 ```

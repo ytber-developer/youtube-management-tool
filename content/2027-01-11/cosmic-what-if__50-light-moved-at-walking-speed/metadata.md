@@ -1,12 +1,12 @@
-# What If Light Only Moved at Walking Speed? A Thought Experiment
+# What If Light Moved at Walking Speed?
 
 - **Kênh:** Cosmic What If · **Video #50** · **Ngày đăng:** 2027-01-11
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2027-01-12)
 - **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 6534 ký tự · khoảng 7.1 phút
-- **Thumbnail text:** SLOW LIGHT?
+- **Thumbnail text:** LIGHT AT 3 MPH
 
 ## Title
-What If Light Only Moved at Walking Speed? A Thought Experiment
+What If Light Moved at Walking Speed?
 
 ## Description (copy nguyên khối)
 ```

@@ -3,9 +3,9 @@
   "number": 25,
   "slug": "why-muscles-cramp",
   "style": "anim",
-  "target_minutes": 7.0,
-  "title": "Why Do Your Muscles Cramp? The Surprising Answer Is in Your Nerves",
-  "thumbnail_text": "WHY MUSCLES CRAMP",
+  "target_minutes": 7,
+  "title": "Why Your Muscles Cramp (It's Your Nerves, Not Your Muscles)",
+  "thumbnail_text": "BLAME YOUR NERVES",
   "description": "A muscle cramp can turn your calf into a rock-hard knot in seconds. For years the blame went to dehydration and low salt, but a growing body of research points to something else: tired muscles whose nerve signals get stuck in the on position. Here is how a normal muscle squeeze works, what goes wrong in a cramp, what a famous pickle juice experiment revealed, and what commonly helps.\n\nSources:\n- MedlinePlus - Muscle cramps: https://medlineplus.gov/ency/article/003193.htm\n- NCBI StatPearls - Muscle Cramps: https://www.ncbi.nlm.nih.gov/books/NBK499895/\n- Cleveland Clinic - Muscle Cramps: https://my.clevelandclinic.org/health/symptoms/21190-muscle-cramps\n- Cleveland Clinic - Leg Cramps: https://my.clevelandclinic.org/health/diseases/14170-leg-cramps\n- Cedars-Sinai - All About Muscle Cramps: https://www.cedars-sinai.org/health-topics/all-about-muscle-cramps\n- Schwellnus (2009), Br J Sports Med - Cause of exercise associated muscle cramps: altered neuromuscular control, dehydration or electrolyte depletion?: https://pubmed.ncbi.nlm.nih.gov/18981039/\n- Miller et al. (2010), Med Sci Sports Exerc - Reflex inhibition of electrically induced muscle cramps in hypohydrated humans: https://pubmed.ncbi.nlm.nih.gov/19997012/\n\nThis video is for educational purposes only and is not medical advice.",
   "tags": [
     "muscle cramps",
@@ -52,7 +52,7 @@
     }
   ],
   "thumbnail_anim": {
-    "thumbAction": "shocked",
+    "thumbAction": "exercise",
     "props": [
       {
         "icon": "leg",

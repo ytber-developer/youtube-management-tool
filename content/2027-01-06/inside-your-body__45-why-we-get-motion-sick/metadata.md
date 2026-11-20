@@ -1,12 +1,12 @@
-# Why Reading in a Car Makes You Sick (and Drivers Don't Get It)
+# Why Reading in a Car Makes You Sick (but Not the Driver)
 
 - **Kênh:** Inside Your Body · **Video #45** · **Ngày đăng:** 2027-01-06
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2027-01-07)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 6133 ký tự · khoảng 6.6 phút
-- **Thumbnail text:** SICK IN THE CAR
+- **Thumbnail text:** BRAIN SUSPECTS POISON
 
 ## Title
-Why Reading in a Car Makes You Sick (and Drivers Don't Get It)
+Why Reading in a Car Makes You Sick (but Not the Driver)
 
 ## Description (copy nguyên khối)
 ```

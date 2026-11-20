@@ -3,7 +3,7 @@
 - **Kênh:** Inside Your Body · **Video #17** · **Ngày đăng:** 2026-12-09
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-10)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 5836 ký tự · khoảng 6.4 phút
-- **Thumbnail text:** SUNBURN HOUR BY HOUR
+- **Thumbnail text:** YOUR CELLS SELF-DESTRUCT
 
 ## Title
 What a Sunburn Really Does to Your Skin, Hour by Hour

@@ -1,12 +1,12 @@
-# What If a Gamma-Ray Burst Hit Earth? Ozone, Extinction, and Odds
+# What If a Gamma-Ray Burst Hit Earth? The Real Odds
 
 - **Kênh:** Cosmic What If · **Video #38** · **Ngày đăng:** 2026-12-30
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-31)
 - **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 5581 ký tự · khoảng 6.1 phút
-- **Thumbnail text:** GAMMA-RAY BURST
+- **Thumbnail text:** THE DEADLIEST BLAST
 
 ## Title
-What If a Gamma-Ray Burst Hit Earth? Ozone, Extinction, and Odds
+What If a Gamma-Ray Burst Hit Earth? The Real Odds
 
 ## Description (copy nguyên khối)
 ```

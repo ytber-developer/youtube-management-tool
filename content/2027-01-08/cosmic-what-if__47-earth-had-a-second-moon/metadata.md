@@ -1,4 +1,4 @@
-# What If Earth Had a Second Moon? Tides, Orbits and Mini-Moons
+# What If Earth Had a Second Moon? (It Has Mini-Moons)
 
 - **Kênh:** Cosmic What If · **Video #47** · **Ngày đăng:** 2027-01-08
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2027-01-09)
@@ -6,7 +6,7 @@
 - **Thumbnail text:** SECOND MOON?
 
 ## Title
-What If Earth Had a Second Moon? Tides, Orbits and Mini-Moons
+What If Earth Had a Second Moon? (It Has Mini-Moons)
 
 ## Description (copy nguyên khối)
 ```

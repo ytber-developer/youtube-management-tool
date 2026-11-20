@@ -112,7 +112,12 @@ async function renderThumb(dir) {
   const script = JSON.parse(fs.readFileSync(path.join(dir, 'script.json'), 'utf8'));
   const look = LOOK[script.channel] || LOOK['cosmic-what-if'];
   const hero = script.thumbnail_anim || script.scenes.find(s => s.anim?.props?.length)?.anim || { action: 'shocked' };
-  const anim = { ...hero, action: hero.thumbAction || 'shocked', text: null, camera: 'none', big: true };
+  // Thumbnail xem ở cỡ nhỏ: nhân vật to gấp rưỡi, đạo cụ chính cỡ xl, không chữ cảnh
+  const heroProps = hero.props || [];
+  let main = heroProps.findIndex(p => !p.at || ['right', 'center', 'far-right'].includes(p.at));
+  if (main < 0) main = 0;
+  const props = heroProps.map((p, i) => (i === main ? { ...p, size: 'xl' } : p));
+  const anim = { ...hero, props, action: hero.thumbAction || 'shocked', text: null, camera: 'none', big: 1.4 };
   const images = await loadImages((anim.props || []).map(p => p.icon).filter(n => n !== 'black-hole'));
   const out = path.join(dir, 'thumbnail.png');
   const browser = await launchBrowser();
@@ -129,9 +134,10 @@ async function renderThumb(dir) {
       const c = document.getElementById('c'), x = c.getContext('2d');
       const words = cfg.thumbText.toUpperCase().split(/\s+/);
       const lines = words.length > 2 ? [words.slice(0, Math.ceil(words.length / 2)).join(' '), words.slice(Math.ceil(words.length / 2)).join(' ')] : [words.join(' ')];
-      x.font = '900 104px "Avenir Next", "Helvetica Neue", Arial, sans-serif'; x.textAlign = 'right'; x.textBaseline = 'top'; x.lineJoin = 'round';
+      const px = lines.length === 1 && lines[0].length <= 14 ? 124 : 104;
+      x.font = `900 ${px}px "Avenir Next", "Helvetica Neue", Arial, sans-serif`; x.textAlign = 'right'; x.textBaseline = 'top'; x.lineJoin = 'round';
       lines.forEach((l, i) => {
-        const y = 40 + i * 112, last = i === lines.length - 1;
+        const y = 40 + i * (px + 8), last = i === lines.length - 1;
         x.lineWidth = 18; x.strokeStyle = '#151515'; x.strokeText(l, 1240, y);
         x.fillStyle = last ? cfg.accent : '#ffffff'; x.fillText(l, 1240, y);
       });

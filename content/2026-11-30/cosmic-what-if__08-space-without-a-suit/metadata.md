@@ -3,7 +3,7 @@
 - **Kênh:** Cosmic What If · **Video #8** · **Ngày đăng:** 2026-11-30
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-01)
 - **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 7069 ký tự · khoảng 7.5 phút
-- **Thumbnail text:** NO SPACESUIT?
+- **Thumbnail text:** 15 SECONDS AWAKE
 
 ## Title
 What Happens to You in Space Without a Spacesuit?

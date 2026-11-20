@@ -1,12 +1,12 @@
-# What Really Happens to Your Body as You Age, Decade by Decade
+# How Your Body Ages, Decade by Decade
 
 - **Kênh:** Inside Your Body · **Video #14** · **Ngày đăng:** 2026-12-06
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-07)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 8919 ký tự · khoảng 9.3 phút
-- **Thumbnail text:** HOW YOU AGE
+- **Thumbnail text:** WHAT AGES FIRST
 
 ## Title
-What Really Happens to Your Body as You Age, Decade by Decade
+How Your Body Ages, Decade by Decade
 
 ## Description (copy nguyên khối)
 ```

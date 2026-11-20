@@ -3,7 +3,7 @@
 - **Kênh:** Cosmic What If · **Video #30** · **Ngày đăng:** 2026-12-22
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-23)
 - **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 6819 ký tự · khoảng 7.4 phút
-- **Thumbnail text:** MARS DUST STORM
+- **Thumbnail text:** YOU'D BARELY FEEL IT
 
 ## Title
 What If You Were Caught in a Martian Dust Storm?

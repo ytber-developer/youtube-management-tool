@@ -3,7 +3,7 @@
 - **Kênh:** Inside Your Body · **Video #31** · **Ngày đăng:** 2026-12-23
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-24)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 6879 ký tự · khoảng 7.6 phút
-- **Thumbnail text:** YOUR EARS BALANCE YOU
+- **Thumbnail text:** TRY THE 4 TESTS
 
 ## Title
 How Your Ears Keep You Balanced (Try These 4 Simple Tests)

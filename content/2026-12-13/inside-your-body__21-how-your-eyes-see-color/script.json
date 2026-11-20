@@ -5,7 +5,7 @@
   "style": "anim",
   "target_minutes": 6.6,
   "title": "How Your Eyes See Color (It's Not What You Think)",
-  "thumbnail_text": "COLOR IS IN YOU",
+  "thumbnail_text": "YOUR BRAIN MAKES COLOR",
   "description": "A red strawberry is not really red. Follow one beam of sunlight from the Sun to your retina and brain: why rods are color blind, how three types of cones and a little comparing create about a million colors, why some people see fewer colors, and the rare people who may see many more.\n\nSources:\n- NASA Science - Visible Light: https://science.nasa.gov/ems/09_visiblelight/\n- Cleveland Clinic - Photoreceptors (Rods and Cones): https://my.clevelandclinic.org/health/body/photoreceptors-rods-and-cones\n- National Eye Institute - Color Blindness: https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/color-blindness\n- StatPearls (NCBI Bookshelf) - Physiology, Color Perception: https://www.ncbi.nlm.nih.gov/books/NBK544355/\n\nThis video is for educational purposes only and is not medical advice.",
   "tags": [
     "color vision",
@@ -41,7 +41,7 @@
     }
   ],
   "thumbnail_anim": {
-    "thumbAction": "shocked",
+    "thumbAction": "look-up",
     "props": [
       {
         "icon": "strawberry",

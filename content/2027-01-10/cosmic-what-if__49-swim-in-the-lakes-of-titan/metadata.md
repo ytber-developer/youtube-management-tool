@@ -3,7 +3,7 @@
 - **Kênh:** Cosmic What If · **Video #49** · **Ngày đăng:** 2027-01-10
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2027-01-11)
 - **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 6288 ký tự · khoảng 6.8 phút
-- **Thumbnail text:** SWIM ON TITAN
+- **Thumbnail text:** -290°F SWIM
 
 ## Title
 What If You Swam in the Methane Lakes of Titan?

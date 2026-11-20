@@ -3,7 +3,7 @@
 - **Kênh:** Cosmic What If · **Video #54** · **Ngày đăng:** 2027-01-15
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2027-01-16)
 - **Giọng đọc:** Adam (ElevenLabs) — trầm, chắc · **Lời đọc:** 6761 ký tự · khoảng 7.2 phút
-- **Thumbnail text:** FROZEN EARTH
+- **Thumbnail text:** ICE AT THE EQUATOR
 
 ## Title
 What If Earth Froze Solid? The Snowball Earth Mystery

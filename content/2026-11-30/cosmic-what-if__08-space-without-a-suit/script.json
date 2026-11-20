@@ -4,7 +4,7 @@
   "slug": "space-without-a-suit",
   "target_minutes": 7.4,
   "title": "What Happens to You in Space Without a Spacesuit?",
-  "thumbnail_text": "NO SPACESUIT?",
+  "thumbnail_text": "15 SECONDS AWAKE",
   "description": "Movies say you'd explode or freeze solid in seconds. The real answer, pieced together from NASA research, old animal studies and a few frightening accidents, is stranger. Second by second, we follow what would happen to your lungs, blood, mouth and skin, why your saliva would boil while your mouth goes ice cold at the same time, how long you would stay awake, how long rescuers would have, which famous movie got it right, and the skintight spacesuit of the future that grew out of all this.\n\nSources:\n- NASA Imagine the Universe - Ask an Astrophysicist: unprotected human body in vacuum: https://imagine.gsfc.nasa.gov/ask_astro/space_travel.html\n- NASA - What Is a Spacesuit?: https://www.nasa.gov/humans-in-space/what-is-a-spacesuit/\n- Astronomy Magazine - Remembering the crew of Soyuz 11, the only astronauts to die in space: https://astronomy.com/news/2021/06/remembering-the-crew-of-soyuz-11-the-only-astronauts-to-die-in-space\n- NASA Technical Reports Server - Bioastronautics Data Book, Second Edition (NASA SP-3006): https://ntrs.nasa.gov/citations/19730006364\n- Geoffrey A. Landis - Human Exposure to Vacuum: http://www.geoffreylandis.com/vacuum.html\n- MIT News (2014) - Shrink-wrapping spacesuits: https://news.mit.edu/2014/second-skin-spacesuits-0918",
   "tags": [
     "space without a spacesuit",
@@ -53,7 +53,7 @@
   ],
   "style": "anim",
   "thumbnail_anim": {
-    "thumbAction": "shocked",
+    "thumbAction": "hold-breath",
     "props": [
       {
         "icon": "astronaut",

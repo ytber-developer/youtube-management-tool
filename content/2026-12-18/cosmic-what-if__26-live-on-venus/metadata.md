@@ -1,4 +1,4 @@
-# What If You Tried to Live on Venus? Hell Below, Home in the Clouds
+# What If You Lived on Venus? Hell Below, Home in the Clouds
 
 - **Kênh:** Cosmic What If · **Video #26** · **Ngày đăng:** 2026-12-18
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-19)
@@ -6,7 +6,7 @@
 - **Thumbnail text:** LIVE ON VENUS?
 
 ## Title
-What If You Tried to Live on Venus? Hell Below, Home in the Clouds
+What If You Lived on Venus? Hell Below, Home in the Clouds
 
 ## Description (copy nguyên khối)
 ```

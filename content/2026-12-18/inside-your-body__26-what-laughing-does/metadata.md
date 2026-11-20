@@ -1,12 +1,12 @@
-# What Laughing Actually Does to Your Body (It's Not About Jokes)
+# What Laughing Actually Does to Your Body
 
 - **Kênh:** Inside Your Body · **Video #26** · **Ngày đăng:** 2026-12-18
 - **Giờ đăng gợi ý:** 12:00 PM ET (00:00 giờ VN ngày 2026-12-19)
 - **Giọng đọc:** Chưa chọn — giọng ấm, rõ ràng (chọn trên ElevenLabs rồi ghi lại ở đây) · **Lời đọc:** 6701 ký tự · khoảng 7.1 phút
-- **Thumbnail text:** WHY YOU LAUGH
+- **Thumbnail text:** NOT ABOUT JOKES
 
 ## Title
-What Laughing Actually Does to Your Body (It's Not About Jokes)
+What Laughing Actually Does to Your Body
 
 ## Description (copy nguyên khối)
 ```

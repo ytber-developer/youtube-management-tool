@@ -111,13 +111,17 @@ async function renderFinal(dir, { onProgress = () => {} } = {}) {
 async function renderThumb(dir) {
   const script = JSON.parse(fs.readFileSync(path.join(dir, 'script.json'), 'utf8'));
   const look = LOOK[script.channel] || LOOK['cosmic-what-if'];
-  const hero = script.thumbnail_anim || script.scenes.find(s => s.anim?.props?.length)?.anim || { action: 'shocked' };
-  // Thumbnail xem ở cỡ nhỏ: nhân vật to gấp rưỡi, đạo cụ chính cỡ xl, không chữ cảnh
-  const heroProps = hero.props || [];
+  const sceneHero = script.scenes.find(s => s.anim?.props?.length)?.anim;
+  const hero = script.thumbnail_anim || sceneHero || { action: 'shocked' };
+  // Thumbnail xem ở cỡ nhỏ: nhân vật to, đạo cụ chính cỡ xl, không chữ cảnh.
+  // thumbnail_anim không có props → mượn đạo cụ của cảnh đầu tiên có props (không để thumbnail trống).
+  const heroProps = hero.props?.length ? hero.props : (sceneHero?.props || []);
   let main = heroProps.findIndex(p => !p.at || ['right', 'center', 'far-right'].includes(p.at));
   if (main < 0) main = 0;
   const props = heroProps.map((p, i) => (i === main ? { ...p, size: 'xl' } : p));
-  const anim = { ...hero, props, action: hero.thumbAction || 'shocked', text: null, camera: 'none', big: 1.4 };
+  const anim = { ...hero, props, action: hero.thumbAction || 'shocked', text: null, camera: 'none' };
+  // "think" có bong bóng suy nghĩ trên đầu → thu nhỏ một chút để không đè lên chữ
+  anim.big = anim.action === 'think' ? 1.15 : 1.4;
   const images = await loadImages((anim.props || []).map(p => p.icon).filter(n => n !== 'black-hole'));
   const out = path.join(dir, 'thumbnail.png');
   const browser = await launchBrowser();

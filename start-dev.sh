@@ -35,6 +35,11 @@ cleanup() {
 
 trap cleanup SIGINT SIGTERM
 
+# Cổng thật: backend đọc PORT trong .env (mặc định 3000); frontend Next.js chạy ở 3000 (hoặc cổng kế tiếp nếu 3000 bận)
+ENV_PORT=$(grep -E "^PORT=" .env 2>/dev/null | tail -1 | cut -d= -f2 | tr -d "\"\r ")
+BACKEND_PORT=${PORT:-${ENV_PORT:-3000}}
+FRONTEND_PORT=3000
+
 # Start backend
 echo ""
 echo -e "${BLUE}🔧 Starting Backend Server (with auto-reload)...${NC}"
@@ -51,7 +56,7 @@ if ! kill -0 $BACKEND_PID 2>/dev/null; then
     exit 1
 fi
 
-echo -e "${GREEN}✅ Backend running on http://localhost:3000${NC}"
+echo -e "${GREEN}✅ Backend running on http://localhost:${BACKEND_PORT}${NC}"
 
 # Start frontend if directory exists
 if [ -d "frontend" ]; then
@@ -75,7 +80,7 @@ if [ -d "frontend" ]; then
     if ! kill -0 $FRONTEND_PID 2>/dev/null; then
         echo -e "${RED}❌ Frontend failed to start. Check for errors above.${NC}"
     else
-        echo -e "${GREEN}✅ Frontend running on http://localhost:3001${NC}"
+        echo -e "${GREEN}✅ Frontend running on http://localhost:${FRONTEND_PORT}${NC}"
     fi
 else
     echo -e "${BLUE}ℹ️  Frontend directory not found, running backend only${NC}"
@@ -87,9 +92,9 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 echo -e "${GREEN}✅ YouTube Automation Tool is running!${NC}"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
-echo -e "${BLUE}📊 Backend API:${NC}  http://localhost:3000"
+echo -e "${BLUE}📊 Backend API:${NC}  http://localhost:${BACKEND_PORT}"
 if [ -d "frontend" ]; then
-    echo -e "${BLUE}🎨 Frontend UI:${NC}  http://localhost:3001"
+    echo -e "${BLUE}🎨 Frontend UI:${NC}  http://localhost:${FRONTEND_PORT}"
 fi
 echo ""
 echo -e "${BLUE}📚 Documentation:${NC}"

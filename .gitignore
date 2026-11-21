@@ -15,22 +15,7 @@ fb-cookies.json
 node_modules/
 tool_ytb.db
 # ── Content pipeline: media dựng lại được / người dùng tạo hằng ngày (không đưa lên git) ──
-content/**/images/*.jpg
-content/**/slides/
-content/**/caps/
-content/**/thumbnail.png
-content/**/preview.mp4
-content/**/voice.mp3
-content/**/voice.txt
-content/**/voice.timings.json
-content/**/voice.part.timings.json
-content/**/final.mp4
-content/**/captions.srt
 .superpowers/
-content/**/images/*.alt
-content/**/*.part.mp4
-content/**/*.part.mp3
-content/**/*.part.wav
 
 # Giọng đọc Kokoro (môi trường Python + mô hình tải về)
 .venv-tts/
@@ -57,8 +42,15 @@ frontend/.env.*
 # Danh sách account, proxy xuất ra từ tool
 /accounts*.csv
 /proxies*.txt
-content/**/.anim-thumb
 
 # Log chạy local + file quét tạm của docs
 logs/
 docs/codebase/.codebase-scan.txt
+
+# Nội dung (kịch bản, media, ảnh bìa): không đưa vào git
+content/
+content-vi/
+content-ls/
+content-short/
+content-long/
+export/

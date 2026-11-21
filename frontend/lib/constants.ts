@@ -5,6 +5,8 @@ export const API_ENDPOINTS = {
     LIST: '/api/v1/accounts',
     EXPORT: '/api/v1/accounts/export',
     OPEN_BROWSER: (id: number) => `/api/v1/accounts/${id}/open-browser`,
+    FINGERPRINT: (id: number) => `/api/v1/accounts/${id}/fingerprint`,
+    FINGERPRINT_REGENERATE: (id: number) => `/api/v1/accounts/${id}/fingerprint/regenerate`,
     DELETE: (id: number) => `/api/v1/accounts/${id}`,
     DELETE_ALL: '/api/v1/accounts',
     DELETE_BULK: '/api/v1/accounts/bulk'
@@ -52,6 +54,13 @@ export const API_ENDPOINTS = {
     LIST: '/api/v1/content',
     DETAIL: (id: string) => `/api/v1/content/${id}`,
     FILE: (id: string, file: string) => `/api/v1/content/file/${id}/${file}`,
+    UPLOAD: '/api/v1/content/upload',
+    UPLOAD_CANCEL: (id: string) => `/api/v1/content/upload/${id}`,
+  },
+  FBPAGE: {
+    POSTS: '/api/v1/fbpage/posts',
+    POST: (id: string) => `/api/v1/fbpage/posts/${id}`,
+    VIDEO: (id: string) => `/api/v1/fbpage/posts/${id}/video`,
   },
   AUTHENTICATOR: '/api/v1/authenticator',
   AUTHENTICATOR_RETRY: (id: number) => `/api/v1/authenticator/retry/${id}`,

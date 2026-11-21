@@ -10,7 +10,8 @@ import {
   FileText,
   Settings,
   Globe,
-  Film
+  Film,
+  Facebook
 } from 'lucide-react'
 
 const navigation = [
@@ -20,6 +21,7 @@ const navigation = [
   { name: 'Tăng lượt xem', href: '/boost-views', icon: PlayCircle },
   { name: 'Video đã tải', href: '/videos', icon: Video },
   { name: 'Nội dung', href: '/content', icon: Film },
+  { name: 'Page Facebook', href: '/fb-page', icon: Facebook },
   { name: 'Proxy', href: '/proxies', icon: Globe },
   { name: 'Setup & DB', href: '/setup', icon: Settings },
 ]

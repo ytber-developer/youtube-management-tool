@@ -104,6 +104,23 @@ const UploadedVideo = sequelize.define('UploadedVideo', {
     type: DataTypes.DATE,
     allowNull: true,
     comment: 'Timestamp when video was uploaded to YouTube'
+  },
+  content_id: {
+    type: DataTypes.STRING(200),
+    allowNull: true,
+    comment: 'ID video content (<date>/<folder>) nếu upload từ trang /content'
+  },
+  thumbnail_path: {
+    type: DataTypes.TEXT,
+    allowNull: true,
+    comment: 'Ảnh thumbnail tải lên cùng video (tuỳ chọn)'
+  },
+  tags: {
+    type: DataTypes.TEXT,
+    allowNull: true,
+    comment: 'JSON mảng tags',
+    get() { try { const v = JSON.parse(this.getDataValue('tags')); return Array.isArray(v) ? v : []; } catch { return []; } },
+    set(val) { this.setDataValue('tags', Array.isArray(val) && val.length ? JSON.stringify(val) : null); }
   }
 }, {
   tableName: 'uploaded_videos',

@@ -5,6 +5,7 @@ const { AccountYoutube, UploadedVideo } = require('../models');
 const path = require('path');
 const fs = require('fs');
 const crypto = require('crypto');
+const { pause } = require('../helpers/human.helper');
 
 // Import helper services
 const uiHelper = require('./youtube/youtube.upload.ui.service');
@@ -35,7 +36,8 @@ class YoutubeUploadService {
       description = '',
       visibility = 'public',
       tags = [],
-      scheduleDate = null
+      scheduleDate = null,
+      thumbnailPath = null
     } = videoDetails;
 
     const {
@@ -93,7 +95,7 @@ class YoutubeUploadService {
         waitUntil: 'networkidle2',
         timeout: 60000
       });
-      await new Promise(r => setTimeout(r, 3000));
+      await pause(1500, 3000);
 
       // Check xem có bị redirect về login page không
       const currentUrl = page.url();
@@ -120,12 +122,14 @@ class YoutubeUploadService {
       // BƯỚC 3: Dismiss popups (nếu có)
       await uiHelper.dismissPermissionsPopup(page);
 
-      // BƯỚC 4: Mở dialog upload
+      // BƯỚC 4: Mở dialog upload (đang ở Studio rồi → bấm Create, không tải lại trang)
       console.log('📤 Đang mở dialog upload...');
+      await pause(800, 2000);
       await uiHelper.clickCreateButton(page);
 
       // BƯỚC 5: Upload file
       console.log('📁 Đang upload file video...');
+      await pause(500, 1500);
       await uiHelper.selectVideoFile(page, videoPath);
 
       // BƯỚC 6: Đợi upload và form sẵn sàng
@@ -134,10 +138,12 @@ class YoutubeUploadService {
 
       // BƯỚC 7: Nhập thông tin video
       console.log('📝 Đang nhập thông tin video...');
-      await formHelper.fillVideoDetails(page, { title, description, tags });
+      await pause(1000, 2500);
+      await formHelper.fillVideoDetails(page, { title, description, tags, thumbnailPath });
 
       // BƯỚC 8: Thiết lập visibility
       console.log('🔒 Đang thiết lập visibility...');
+      await pause(800, 2000);
       const visibilityResult = await visibilityHelper.setVisibility(page, visibility, scheduleDate);
       
       if (!visibilityResult.success) {
@@ -170,15 +176,8 @@ class YoutubeUploadService {
         await browser.close();
         console.log('🗑️  Closed browser completely');
       } else {
-        // KEEP PAGE OPEN for reuse: navigate away instead of closing the tab.
-        // Closing the page may cause the service to close the entire browser if it was the last tracked tab.
-        try {
-          await page.goto('https://studio.youtube.com', { waitUntil: 'networkidle2', timeout: 15000 }).catch(() => {});
-          console.log('♻️  Kept upload tab open and navigated back to Studio for reuse');
-        } catch (navErr) {
-          // Fallback: just do nothing and keep the page instance alive
-          console.log('⚠️ Could not navigate back to Studio, keeping tab open for reuse');
-        }
+        // Giữ nguyên tab Studio đang mở (không tải lại trang); lần upload sau sẽ tự vào Studio khi cần.
+        console.log('♻️  Giữ Chrome và tab Studio mở sau khi upload');
       }
 
       result = {

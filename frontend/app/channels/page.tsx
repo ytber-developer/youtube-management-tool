@@ -1,9 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { RefreshCw, Search, ChevronLeft, ChevronRight, ExternalLink, Upload, X, FileText, RotateCw, Download, Chrome, Image as ImageIcon, Edit2, Check, Copy } from 'lucide-react';
+import { RefreshCw, Search, ChevronLeft, ChevronRight, ExternalLink, Upload, X, FileText, RotateCw, Download, Chrome, Image as ImageIcon, Edit2, Check, Copy, Fingerprint } from 'lucide-react';
 import { buildApiUrl, API_ENDPOINTS } from '@/lib/constants';
-import { accountsAPI } from '@/lib/api';
+import { accountsAPI, AccountFingerprint } from '@/lib/api';
 
 interface Channel {
   id: number;
@@ -34,6 +34,18 @@ export default function ListChannelsPage() {
   
   // Import Modal
   const [showImportModal, setShowImportModal] = useState(false);
+  // Fingerprint của profile đang xem (modal)
+  const [fp, setFp] = useState<{ id: number; data: AccountFingerprint | null; error?: string; busy?: boolean } | null>(null);
+  const showFingerprint = async (id: number) => {
+    setFp({ id, data: null, busy: true });
+    try { setFp({ id, data: (await accountsAPI.getFingerprint(id)).data }); }
+    catch (e: any) { setFp({ id, data: null, error: e.message || 'Lỗi' }); }
+  };
+  const regenFingerprint = async (id: number) => {
+    setFp(f => f && { ...f, busy: true, error: undefined });
+    try { setFp({ id, data: (await accountsAPI.regenerateFingerprint(id)).data }); }
+    catch (e: any) { setFp(f => f && { ...f, busy: false, error: e.message || 'Lỗi' }); }
+  };
   const [csvFile, setCsvFile] = useState<File | null>(null);
   const [importing, setImporting] = useState(false);
   const [importError, setImportError] = useState('');
@@ -888,6 +900,13 @@ export default function ListChannelsPage() {
                         <Chrome size={12} className={openingBrowserId === channel.id ? 'animate-pulse' : ''} />
                         {openingBrowserId === channel.id ? 'Opening...' : 'Open'}
                       </button>
+                      <button
+                        onClick={() => showFingerprint(channel.id)}
+                        className="ml-1 inline-flex items-center px-1.5 py-1 text-xs bg-gray-100 text-gray-700 rounded hover:bg-gray-200 transition-colors"
+                        title="Fingerprint trình duyệt của profile này"
+                      >
+                        <Fingerprint size={12} />
+                      </button>
                     </td>
                     <td className="px-4 py-2.5 text-center">
                       <div className="flex items-center justify-center gap-1">
@@ -948,6 +967,43 @@ export default function ListChannelsPage() {
       </div>
 
       {/* Import Modal */}
+      {fp && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" onClick={() => setFp(null)}>
+          <div className="bg-white rounded-lg shadow-xl w-full max-w-lg p-5 space-y-3" onClick={e => e.stopPropagation()}>
+            <div className="flex items-center justify-between">
+              <h3 className="font-semibold flex items-center gap-2"><Fingerprint size={16} />Fingerprint trình duyệt</h3>
+              <button onClick={() => setFp(null)} className="text-gray-400 hover:text-gray-600"><X size={18} /></button>
+            </div>
+            {fp.busy && !fp.data && <div className="text-sm text-gray-500">Đang tải...</div>}
+            {fp.error && <div className="text-sm text-red-600">{fp.error}</div>}
+            {fp.data && (
+              <>
+                <div className="text-xs text-gray-500">{fp.data.email}</div>
+                <table className="w-full text-sm">
+                  <tbody className="[&_td]:py-1 [&_td:first-child]:text-gray-500 [&_td:first-child]:w-36">
+                    <tr><td>Màn hình</td><td>{fp.data.screen.width}×{fp.data.screen.height} @{fp.data.screen.pixelRatio}x · cửa sổ {fp.data.window.width}×{fp.data.window.height}</td></tr>
+                    <tr><td>CPU / RAM</td><td>{fp.data.hardwareConcurrency} nhân · {fp.data.deviceMemory} GB</td></tr>
+                    <tr><td>GPU (WebGL)</td><td className="break-words">{fp.data.webgl.renderer}</td></tr>
+                    <tr><td>Ngôn ngữ</td><td>{fp.data.languages.join(', ')}</td></tr>
+                    <tr><td>Múi giờ</td><td>{fp.data.timezone || 'theo máy thật (gán proxy có nước → tự đổi)'}</td></tr>
+                    <tr><td>Tạo lúc</td><td>{new Date(fp.data.createdAt).toLocaleString('vi-VN')}</td></tr>
+                  </tbody>
+                </table>
+                <p className="text-xs text-gray-500">
+                  Giá trị cố định cho profile này, lần nào mở cũng giống nhau. User-Agent giữ nguyên Chrome thật (giả UA làm lệch Client Hints → Google bắt CAPTCHA).
+                  Chỉ sinh lại khi tài khoản đã bị Google đánh dấu; phải đóng trình duyệt của tài khoản trước.
+                </p>
+                <div className="flex justify-end">
+                  <button onClick={() => regenFingerprint(fp.id)} disabled={fp.busy} className="px-3 py-1.5 text-sm rounded border bg-white hover:bg-gray-50 disabled:opacity-50">
+                    {fp.busy ? 'Đang sinh...' : 'Sinh fingerprint mới'}
+                  </button>
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+      )}
+
       {showImportModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-xl shadow-2xl max-w-md w-full">

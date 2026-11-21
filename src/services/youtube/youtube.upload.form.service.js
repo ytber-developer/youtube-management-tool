@@ -1,4 +1,5 @@
 const { cleanTitle, cleanDescription } = require('../../helpers/video.metadata.helper');
+const { pause, humanClick, pasteText } = require('../../helpers/human.helper');
 
 /**
  * Service xử lý form nhập thông tin video (title, description, audience)
@@ -7,23 +8,118 @@ class YoutubeUploadFormService {
   /**
    * Nhập thông tin video (title, description, tags)
    */
-  async fillVideoDetails(page, { title, description, tags }) {
+  async fillVideoDetails(page, { title, description, tags, thumbnailPath }) {
     console.log('📝 Bắt đầu nhập thông tin video...');
-    await new Promise(r => setTimeout(r, 3000));
+    await pause(2000, 3500);
 
     // ========== BƯỚC 1: NHẬP TITLE ==========
     await this.fillTitle(page, title);
-    await new Promise(r => setTimeout(r, 1000));
+    await pause(700, 1600);
 
     // ========== BƯỚC 2: NHẬP DESCRIPTION ==========
     await this.fillDescription(page, description);
-    await new Promise(r => setTimeout(r, 1000));
+    await pause(700, 1600);
+
+    // ========== BƯỚC 2b: THUMBNAIL (tuỳ chọn, không làm hỏng upload nếu thất bại) ==========
+    if (thumbnailPath) {
+      await this.uploadThumbnail(page, thumbnailPath).catch(e => console.log(`⚠️ Bỏ qua thumbnail: ${e.message}`));
+      await pause(800, 1500);
+    }
 
     // ========== BƯỚC 3: SCROLL XUỐNG VÀ CHỌN "NOT MADE FOR KIDS" ==========
     await this.selectAudience(page);
-    await new Promise(r => setTimeout(r, 2000));
+    await pause(1200, 2200);
+
+    // ========== BƯỚC 4: TAGS (trong "Show more", tuỳ chọn) ==========
+    if (Array.isArray(tags) && tags.length) {
+      await this.fillTags(page, tags).catch(e => console.log(`⚠️ Bỏ qua tags: ${e.message}`));
+      await pause(800, 1500);
+    }
 
     console.log('✅ Hoàn tất nhập thông tin video');
+  }
+
+  /**
+   * Tải thumbnail tuỳ chỉnh ở bước Details. Kênh chưa xác minh số điện thoại không được phép → chỉ cảnh báo.
+   */
+  async uploadThumbnail(page, thumbnailPath) {
+    const fs = require('fs');
+    if (!fs.existsSync(thumbnailPath)) throw new Error(`Không thấy file ${thumbnailPath}`);
+    console.log('🖼️  Đang tải thumbnail...');
+
+    await page.evaluate(() => {
+      const el = document.querySelector('ytcp-thumbnails-compact-editor, ytcp-thumbnail-uploader, #thumbnails-container');
+      if (el) el.scrollIntoView({ block: 'center' });
+    });
+    await new Promise(r => setTimeout(r, 1000));
+
+    // Studio hay đổi DOM → thử nhiều selector, input ảnh (accept image) đứng cuối
+    const selectors = [
+      'ytcp-thumbnails-compact-editor input[type="file"]',
+      'ytcp-thumbnail-uploader input[type="file"]',
+      'input#file-loader[type="file"]',
+      'ytcp-video-metadata-editor input[type="file"][accept*="image"]',
+    ];
+    let input = null;
+    for (const sel of selectors) {
+      input = await page.$(sel);
+      if (input) { console.log(`   input thumbnail: ${sel}`); break; }
+    }
+    if (!input) {
+      const blocked = await page.evaluate(() => /verify|xác minh/i.test((document.querySelector('ytcp-thumbnails-compact-editor, #thumbnails-container') || {}).innerText || ''));
+      throw new Error(blocked ? 'kênh cần xác minh số điện thoại mới được dùng thumbnail tuỳ chỉnh' : 'không tìm thấy ô tải thumbnail');
+    }
+    await input.uploadFile(thumbnailPath);
+    await new Promise(r => setTimeout(r, 4000));
+
+    const state = await page.evaluate(() => {
+      const box = document.querySelector('ytcp-thumbnails-compact-editor, #thumbnails-container');
+      const txt = (box && box.innerText) || '';
+      return { hasImg: !!(box && box.querySelector('img[src^="blob:"], img[src^="data:"], img[src*="ytimg"]')), verify: /verify your account|xác minh/i.test(txt) };
+    });
+    if (state.verify) throw new Error('kênh cần xác minh số điện thoại mới được dùng thumbnail tuỳ chỉnh');
+    console.log(state.hasImg ? '✅ Đã tải thumbnail' : '⚠️ Đã gửi thumbnail nhưng chưa thấy ảnh hiện (Studio có thể còn xử lý)');
+  }
+
+  /**
+   * Nhập tags: bấm "Show more" rồi gõ vào ô Tags, phân cách bằng dấu phẩy (YouTube giới hạn 500 ký tự)
+   */
+  async fillTags(page, tags) {
+    const clean = [];
+    let len = 0;
+    for (const t of tags.map(x => String(x).replace(/[<>,]/g, ' ').trim()).filter(Boolean)) {
+      if (len + t.length + 1 > 500) break;
+      clean.push(t); len += t.length + 1;
+    }
+    if (!clean.length) return;
+    console.log(`🏷️  Đang nhập ${clean.length} tags...`);
+
+    // "Show more" mở phần nâng cao (tags nằm trong đó); nếu đã mở thì ô tags có sẵn
+    const hasInput = () => page.$('#tags-container input, ytcp-chip-bar input#text-input, ytcp-form-input-container#tags-container #text-input');
+    if (!(await hasInput())) {
+      const opened = await page.evaluate(() => {
+        const btn = document.querySelector('ytcp-video-metadata-editor #toggle-button, #toggle-button')
+          || [...document.querySelectorAll('ytcp-button, button')].find(b => /show more|hiển thị thêm/i.test(b.textContent || ''));
+        if (!btn) return false;
+        btn.scrollIntoView({ block: 'center' }); btn.click(); return true;
+      });
+      if (!opened) throw new Error('không tìm thấy nút "Show more"');
+      await new Promise(r => setTimeout(r, 2000));
+    }
+    const input = await hasInput();
+    if (!input) throw new Error('không tìm thấy ô Tags');
+    if (!(await humanClick(page, input))) await input.click();
+    await pause(300, 600);
+    await pasteText(page, clean.join(',') + ',');
+    await pause(800, 1400);
+    const countChips = () => page.evaluate(() => document.querySelectorAll('#tags-container ytcp-chip, ytcp-chip-bar ytcp-chip').length);
+    let chips = await countChips();
+    if (!chips) { // ô tags không tách chip khi dán → gõ nhanh
+      await page.keyboard.type(clean.join(',') + ',', { delay: 15 });
+      await pause(600, 1000);
+      chips = await countChips();
+    }
+    console.log(chips ? `✅ Đã nhập tags (${chips} chip)` : '⚠️ Đã nhập tags nhưng không thấy chip nào');
   }
 
   /**
@@ -50,41 +146,20 @@ class YoutubeUploadFormService {
     }
 
     if (titleTextbox) {
-      // PHƯƠNG PHÁP: Triple-click để select all -> Delete -> Type new text
-      // Triple-click là cách tự nhiên nhất để select all text trong contenteditable
+      // Bấm vào ô (chuột người thật) → chọn hết chữ cũ → dán tiêu đề một lần, như Ctrl+V
+      if (!(await humanClick(page, titleTextbox))) await titleTextbox.click();
+      await pause(300, 700);
+      await pasteText(page, finalTitle, { replace: true });
+      await pause(300, 700);
 
-      // Bước 1: Click vào textbox để focus
-      await titleTextbox.click();
-      await new Promise(r => setTimeout(r, 300));
-
-      // Bước 2: Triple-click để select all text
-      await titleTextbox.click({ clickCount: 3 });
-      await new Promise(r => setTimeout(r, 300));
-
-      // Bước 3: Nhấn Delete/Backspace để xóa text đã select
-      await page.keyboard.press('Backspace');
-      await new Promise(r => setTimeout(r, 300));
-
-      // Bước 4: Kiểm tra đã xóa chưa, nếu chưa thì thử Ctrl+A
-      const afterDelete = await page.evaluate(el => el.textContent, titleTextbox);
-      if (afterDelete && afterDelete.length > 0) {
-        await titleTextbox.click();
-        await new Promise(r => setTimeout(r, 200));
-
-        // Select all bằng keyboard shortcut
-        const isMac = process.platform === 'darwin';
-        await page.keyboard.down(isMac ? 'Meta' : 'Control');
-        await page.keyboard.press('a');
-        await page.keyboard.up(isMac ? 'Meta' : 'Control');
-        await new Promise(r => setTimeout(r, 200));
-
+      // Kiểm tra lại; nếu Studio không nhận sự kiện dán thì gõ nhanh
+      const got = await page.evaluate(el => (el.textContent || '').trim(), titleTextbox);
+      if (got !== finalTitle.trim()) {
+        console.log('   ⚠️ Dán tiêu đề không khớp, gõ lại...');
+        await titleTextbox.click({ clickCount: 3 });
         await page.keyboard.press('Backspace');
-        await new Promise(r => setTimeout(r, 300));
+        await page.keyboard.type(finalTitle, { delay: 15 });
       }
-
-      // Bước 5: Type title mới
-      await page.keyboard.type(finalTitle, { delay: 30 });
-
       console.log(`✅ Đã nhập title: "${finalTitle}"`);
     } else {
       console.log('⚠️ Không tìm thấy title textbox');
@@ -104,39 +179,25 @@ class YoutubeUploadFormService {
     console.log('📝 Đang nhập description...');
     console.log(`   Description preview: "${finalDescription.substring(0, 100)}${finalDescription.length > 100 ? '...' : ''}"`);
 
-    // Click vào description để focus
-    const descTextbox = await page.$('#description-textarea #textbox');
-    if (descTextbox) {
-      // Click 2 lần để chắc chắn focus
-      await descTextbox.click();
-      await new Promise(r => setTimeout(r, 300));
-      await descTextbox.click();
-      await new Promise(r => setTimeout(r, 500));
-
-      // Gõ description (giữ nguyên xuống dòng)
-      await page.keyboard.type(finalDescription, { delay: 30 });
-      console.log(`✅ Đã nhập description (${finalDescription.length} ký tự)`);
-    } else {
-      console.log('⚠️ Không tìm thấy description textbox, thử selector khác...');
-
-      // Thử click bằng evaluate
-      const clicked = await page.evaluate(() => {
-        const descArea = document.querySelector('#description-textarea');
-        const textbox = descArea?.querySelector('#textbox');
-        if (textbox) {
-          textbox.click();
-          textbox.focus();
-          return true;
-        }
-        return false;
-      });
-
-      if (clicked) {
-        await new Promise(r => setTimeout(r, 500));
-        await page.keyboard.type(finalDescription, { delay: 30 });
-        console.log(`✅ Đã nhập description (fallback) (${finalDescription.length} ký tự)`);
-      }
+    // Bấm vào ô mô tả rồi dán nguyên khối (giữ xuống dòng), không gõ từng ký tự
+    let descTextbox = await page.$('#description-textarea #textbox');
+    if (!descTextbox) {
+      descTextbox = await page.$('ytcp-video-description #textbox, #description-container #textbox');
     }
+    if (!descTextbox) {
+      console.log('⚠️ Không tìm thấy description textbox');
+      return;
+    }
+    if (!(await humanClick(page, descTextbox))) await descTextbox.click();
+    await pause(300, 700);
+    await pasteText(page, finalDescription, { replace: true });
+    await pause(400, 900);
+    const got = await page.evaluate(el => (el.textContent || '').trim().length, descTextbox);
+    if (got < Math.min(20, finalDescription.trim().length)) {
+      console.log('   ⚠️ Dán mô tả không vào, gõ nhanh...');
+      await page.keyboard.type(finalDescription, { delay: 5 });
+    }
+    console.log(`✅ Đã nhập description (${finalDescription.length} ký tự)`);
   }
 
   /**
@@ -200,8 +261,8 @@ class YoutubeUploadFormService {
     const audienceRadio = await page.$('tp-yt-paper-radio-button[name="NOT_MADE_FOR_KIDS"]');
     if (audienceRadio) {
       await audienceRadio.scrollIntoViewIfNeeded();
-      await new Promise(r => setTimeout(r, 500));
-      await audienceRadio.click();
+      await pause(400, 900);
+      if (!(await humanClick(page, audienceRadio))) await audienceRadio.click();
       notForKidsClicked = true;
       console.log('   ✅ Clicked NOT_MADE_FOR_KIDS radio (method 1)');
     }

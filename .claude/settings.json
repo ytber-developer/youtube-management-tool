@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run test:content)",
+      "Bash(npm run -s test:content)",
+      "Bash(npm run -s content -- check:*)",
+      "Bash(npm run -s content -- preview:*)",
+      "WebSearch"
+    ]
+  }
+}

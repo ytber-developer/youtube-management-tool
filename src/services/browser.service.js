@@ -28,7 +28,13 @@ process.on('unhandledRejection', (reason) => {
 // We override navigator.webdriver via evaluateOnNewDocument instead (see launchBrowser).
 const stealth = StealthPlugin();
 stealth.enabledEvasions.delete('navigator.webdriver');
+// Ba evasion này gán cùng một giá trị cho mọi profile (4 nhân, Intel Iris, en-US) → mọi tài khoản trông
+// như một máy. fingerprint.service thay bằng giá trị riêng, cố định cho từng profile.
+stealth.enabledEvasions.delete('navigator.hardwareConcurrency');
+stealth.enabledEvasions.delete('navigator.languages');
+stealth.enabledEvasions.delete('webgl.vendor');
 puppeteer.use(stealth);
+const fingerprintService = require('./fingerprint.service');
 
 class BrowserService {
   constructor() {
@@ -59,6 +65,144 @@ class BrowserService {
       this.activeBrowsers.delete(email);
       return false;
     }
+  }
+
+  /**
+   * Nối lại Chrome đang chạy với profile này (mở từ phiên backend trước).
+   * Puppeteer khởi động Chrome với --remote-debugging-port=0, Chrome ghi cổng + đường dẫn WebSocket
+   * vào <profile>/DevToolsActivePort. File còn mà Chrome đã tắt → xoá file, trả về null.
+   * @returns {Promise<import('puppeteer').Browser|null>}
+   */
+  async reconnectExisting(email, profileDir) {
+    const fs = require('fs');
+    const path = require('path');
+    const portFile = path.join(profileDir, 'DevToolsActivePort');
+    if (!fs.existsSync(portFile)) return null;
+    let endpoint;
+    try {
+      const [port, wsPath] = fs.readFileSync(portFile, 'utf8').trim().split(/\r?\n/);
+      if (!/^\d+$/.test((port || '').trim()) || !wsPath) return null;
+      endpoint = `ws://127.0.0.1:${port.trim()}${wsPath.trim()}`;
+    } catch (e) {
+      return null;
+    }
+    try {
+      const browser = await puppeteer.connect({ browserWSEndpoint: endpoint, defaultViewport: null });
+      return browser;
+    } catch (e) {
+      // Chrome đã tắt (hoặc không phải Chrome của tool) → file cũ, bỏ đi để lần sau khỏi thử
+      try { fs.unlinkSync(portFile); } catch (_) { /* bỏ qua */ }
+      return null;
+    }
+  }
+
+  /**
+   * Tắt mọi tiến trình Chrome đang dùng thư mục profile này (khi không nối lại được).
+   * @returns {number} số tiến trình đã gửi lệnh tắt
+   */
+  killChromeUsingProfile(profileDir) {
+    const { execSync } = require('child_process');
+    if (!profileDir) return 0;
+    try {
+      if (process.platform === 'win32') {
+        const dir = profileDir.replace(/'/g, "''");
+        const ps = `$p = Get-CimInstance Win32_Process -Filter "Name='chrome.exe'" | Where-Object { $_.CommandLine -like '*--user-data-dir=${dir}*' }; ` +
+          `$p | ForEach-Object { Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue }; ($p | Measure-Object).Count`;
+        const out = execSync(`powershell -NoProfile -NonInteractive -Command "${ps.replace(/"/g, '\\"')}"`, { stdio: ['ignore', 'pipe', 'ignore'] });
+        return parseInt(String(out).trim(), 10) || 0;
+      }
+      // macOS/Linux: pkill theo chuỗi tham số, chỉ khớp đúng thư mục này
+      const pattern = `--user-data-dir=${profileDir}( |$)`;
+      let count = 0;
+      try {
+        const out = execSync(`pgrep -f -- ${JSON.stringify(pattern)}`, { stdio: ['ignore', 'pipe', 'ignore'] });
+        count = String(out).trim().split('\n').filter(Boolean).length;
+      } catch (_) { /* không có tiến trình nào */ }
+      if (count) {
+        try { execSync(`pkill -f -- ${JSON.stringify(pattern)}`, { stdio: 'ignore' }); } catch (_) { /* pkill trả 1 nếu không còn gì */ }
+      }
+      return count;
+    } catch (e) {
+      console.warn('⚠️ Không tắt được Chrome cũ:', e.message);
+      return 0;
+    }
+  }
+
+  /**
+   * Nhận một Chrome đã kết nối lại làm browser của email: gắn lại webdriver/fingerprint cho các tab
+   * (script "on new document" của phiên trước mất khi CDP ngắt, chỉ có hiệu lực từ lần điều hướng tới),
+   * dùng tab đầu tiên, đóng tab thừa, ghi vào activeBrowsers như browser tự mở.
+   */
+  async adoptBrowser(browser, { email, fp, proxyId }) {
+    let pages = [];
+    try { pages = await browser.pages(); } catch (_) { pages = []; }
+    let page = pages[0];
+    if (!page) {
+      page = await browser.newPage();
+      pages = [page];
+    }
+    for (const p of pages) {
+      try {
+        await p.evaluateOnNewDocument(() => {
+          Object.defineProperty(navigator, 'webdriver', { get: () => false });
+          delete navigator.__proto__.webdriver;
+        });
+        if (fp) await fingerprintService.apply(p, fp);
+      } catch (_) { /* tab đã đóng */ }
+    }
+    if (pages.length > 1) {
+      console.log(`🧹 Closing ${pages.length - 1} extra tabs...`);
+      for (const p of pages.slice(1)) { try { await p.close(); } catch (_) { /* bỏ qua */ } }
+    }
+    this._attachCookieAutosave(page, browser, email);
+    this._addSaveCookiesHelper(browser);
+    this.activeBrowsers.set(email, { browser, pages: [page], proxyId: proxyId || null, fingerprint: fp });
+    browser.on('disconnected', () => {
+      console.log(`🔴 Browser closed for [${email}]`);
+      this.activeBrowsers.delete(email);
+    });
+    console.log(`🔗 Nối lại Chrome đang mở của [${email}] (tab: ${page.url() || 'about:blank'}) thay vì mở Chrome mới`);
+    return { browser, page, isNewBrowser: false };
+  }
+
+  /** Tự lưu cookie khi tab điều hướng tới các trang Google/YouTube quan trọng (giới hạn 10 s/lần) */
+  _attachCookieAutosave(page, browser, email) {
+    if (!this._lastSavedCookies) this._lastSavedCookies = new Map();
+    page.on('framenavigated', async (frame) => {
+      try {
+        const url = frame.url();
+        if (!url) return;
+        const keyHosts = ['studio.youtube.com', 'myaccount.google.com', 'accounts.google.com', 'youtube.com'];
+        if (!keyHosts.some(h => url.includes(h))) return;
+        const last = this._lastSavedCookies.get(email) || 0;
+        const now = Date.now();
+        if (now - last < 10000) return;
+        this._lastSavedCookies.set(email, now);
+        if (browser && typeof browser.saveProfileCookies === 'function') {
+          const saved = await browser.saveProfileCookies(email);
+          if (saved) console.log(`💾 Auto-saved cookies for ${email} after navigation to ${url}`);
+        }
+      } catch (e) {
+        // bỏ qua
+      }
+    });
+  }
+
+  /** Gắn browser.saveProfileCookies(email): lưu cookie của tab đầu vào profile */
+  _addSaveCookiesHelper(browser) {
+    browser.saveProfileCookies = async function (emailToSave) {
+      try {
+        if (!emailToSave) return false;
+        const pages = await browser.pages();
+        if (!pages || pages.length === 0) return false;
+        const cookies = await pages[0].cookies();
+        sessionService.saveCookies(emailToSave, cookies);
+        return true;
+      } catch (err) {
+        console.error('❌ Failed to save profile cookies:', err.message);
+        return false;
+      }
+    };
   }
 
   /**
@@ -101,7 +245,7 @@ class BrowserService {
       if (isActive) {
         console.log(`🔄 Browser already open for [${email}], reusing first tab...`);
         const browserInfo = this.activeBrowsers.get(email);
-        const page = await this.createPage(browserInfo.browser);
+        const page = await this.createPage(browserInfo.browser, browserInfo.fingerprint);
         browserInfo.pages.push(page);
         
         // ALWAYS use the first tab to avoid Google detection issues
@@ -110,7 +254,7 @@ class BrowserService {
         
         if (pages.length === 0) {
           console.log('⚠️ No pages found, creating first page...');
-          const page = await this.createPage(browserInfo.browser);
+          const page = await this.createPage(browserInfo.browser, browserInfo.fingerprint);
           browserInfo.pages = [page];
           return {
             browser: browserInfo.browser,
@@ -244,15 +388,18 @@ class BrowserService {
           }
         }
 
+        // Fingerprint riêng, cố định cho profile này (kích thước cửa sổ, ngôn ngữ, múi giờ theo proxy, GPU, CPU…)
+        const fp = email ? fingerprintService.withProxy(fingerprintService.getOrCreate(email), proxyRecord) : null;
+        if (fp) console.log(`🪪 Fingerprint [${email}]: ${fingerprintService.describe(fp)}`);
+
         // Build args dynamically so we can avoid adding sandbox/unupported flags on macOS system Chrome
         const baseArgs = [
           '--disable-dev-shm-usage',
-          '--window-size=1200,900',
           '--no-first-run',
           '--no-default-browser-check',
           '--disable-features=TranslateUI,ChromeWhatsNewUI',
-          // Language
-          '--lang=en-US,en'
+          // Kích thước cửa sổ + ngôn ngữ theo fingerprint (không có email → mặc định)
+          ...(fp ? fingerprintService.launchArgs(fp) : ['--window-size=1200,900', '--lang=en-US,en'])
           // Không ép --user-agent: Chrome vẫn gửi Client Hints (Sec-CH-UA) với version thật,
           // UA giả lệch version là dấu hiệu bot rõ ràng → Google bắt CAPTCHA.
         ];
@@ -338,6 +485,23 @@ class BrowserService {
         // Preserve for cleanup handling later
         launchOptions._tempProfilePath = tempProfilePath;
 
+        // Chrome của profile này còn chạy từ phiên trước (backend restart trong khi Chrome được
+        // giữ mở sau upload)? Mở Chrome mới cùng profile sẽ lỗi "Opening in existing browser session",
+        // nên nối lại vào Chrome đó qua cổng DevTools nó đã ghi trong profile.
+        if (email && userDataDirToUse === sessionService.getProfilePath(email)) {
+          const existing = await this.reconnectExisting(email, userDataDirToUse);
+          if (existing) {
+            if (proxyRecord) {
+              // Chrome cũ có thể trỏ vào proxy bridge của tiến trình trước (đã chết) → đóng để mở lại với proxy mới
+              console.log(`🔁 [${email}] Chrome cũ còn mở nhưng account dùng proxy → đóng để mở lại...`);
+              await existing.close().catch(() => {});
+              await new Promise(r => setTimeout(r, 1500));
+            } else {
+              return await this.adoptBrowser(existing, { email, fp, proxyId: wantedProxyId });
+            }
+          }
+        }
+
         // Dọn bản sao video YouTube Studio còn sót trong IndexedDB (từ các lần
         // upload bị đóng browser/crash giữa chừng). Chỉ làm khi tiến trình này
         // không có browser nào đang mở với profile đó.
@@ -367,49 +531,19 @@ class BrowserService {
             Object.defineProperty(navigator, 'webdriver', { get: () => false });
             delete navigator.__proto__.webdriver;
           });
+          if (fp) await fingerprintService.apply(page, fp);
 
           // Auto-save cookies when navigating to important Google/YouTube pages (throttled)
-          try {
-            if (!this._lastSavedCookies) this._lastSavedCookies = new Map();
-            page.on('framenavigated', async (frame) => {
-              try {
-                const url = frame.url();
-                if (!url) return;
-                const keyHosts = ['studio.youtube.com', 'myaccount.google.com', 'accounts.google.com', 'youtube.com'];
-                const matched = keyHosts.some(h => url.includes(h));
-                if (!matched) return;
-                
-                const last = this._lastSavedCookies.get(email) || 0;
-                const now = Date.now();
-                // Throttle saves to once every 10 seconds per profile
-                if (now - last < 10000) return;
-                this._lastSavedCookies.set(email, now);
-                
-                // Attempt to save cookies for this profile
-                if (browser && typeof browser.saveProfileCookies === 'function') {
-                  try {
-                    const saved = await browser.saveProfileCookies(email);
-                    if (saved) console.log(`💾 Auto-saved cookies for ${email} after navigation to ${url}`);
-                  } catch (e) {
-                    console.warn('⚠️ Auto-save cookies failed:', e.message);
-                  }
-                }
-              } catch (e) {
-                // ignore
-              }
-            });
-          } catch (e) {
-            // ignore
-          }
-
-         }
+          if (email) this._attachCookieAutosave(page, browser, email);
+        }
 
         // Track browser and page
         if (email) {
           this.activeBrowsers.set(email, {
             browser: browser,
             pages: [page],
-            proxyId: wantedProxyId
+            proxyId: wantedProxyId,
+            fingerprint: fp
           });
 
           // Attempt to load saved cookies for this profile, if any
@@ -418,22 +552,14 @@ class BrowserService {
             if (savedCookies && Array.isArray(savedCookies) && savedCookies.length > 0) {
               console.log(`🔁 Loading saved cookies for ${email} (${savedCookies.length} cookies)`);
               try {
-                // Best-effort: navigate to cookie domain before setting cookies
-                try {
+                // Cookie có `domain`/`url` thì setCookie đặt thẳng được, không cần mở trang trước
+                // (bỏ lượt goto youtube.com cũ → đỡ một lần tải trang mỗi khi mở browser)
+                const needNav = savedCookies.some(c => !c.domain && !c.url);
+                if (needNav) {
                   const firstCookie = savedCookies.find(c => c.domain || c.url);
-                  if (firstCookie) {
-                    const domain = firstCookie.domain ? (firstCookie.domain.startsWith('.') ? firstCookie.domain.slice(1) : firstCookie.domain) : null;
-                    const url = firstCookie.url || (domain ? `https://${domain}/` : null);
-                    if (url) {
-                      try {
-                        await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 8000 });
-                      } catch (navErr) {
-                        // ignore navigation errors
-                      }
-                    }
-                  }
-                } catch (e) {
-                  // ignore
+                  const domain = firstCookie && firstCookie.domain ? firstCookie.domain.replace(/^\./, '') : null;
+                  const url = (firstCookie && firstCookie.url) || (domain ? `https://${domain}/` : null);
+                  if (url) await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 8000 }).catch(() => {});
                 }
 
                 // Set cookies on the page
@@ -469,21 +595,7 @@ class BrowserService {
         console.log(`✅ Browser launched successfully`);
 
         // After launch, provide a helper to save cookies after successful login
-        const self = this;
-        browser.saveProfileCookies = async function(emailToSave) {
-          try {
-            if (!emailToSave) return false;
-            const pages = await browser.pages();
-            if (!pages || pages.length === 0) return false;
-            const targetPage = pages[0];
-            const cookies = await targetPage.cookies();
-            sessionService.saveCookies(emailToSave, cookies);
-            return true;
-          } catch (err) {
-            console.error('❌ Failed to save profile cookies:', err.message);
-            return false;
-          }
-        };
+        this._addSaveCookiesHelper(browser);
 
         return {
           browser: browser,
@@ -493,6 +605,13 @@ class BrowserService {
       } catch (error) {
         console.error(`❌ Browser launch attempt ${attempt}/${retries} failed: ${error.message}`);
         if (attempt < retries) {
+          // Chrome khác đang giữ profile này mà không nối được qua DevTools (mở tay, hoặc cổng đã đổi)
+          // → thử lại y nguyên sẽ lỗi tiếp; tắt Chrome đó trước.
+          if (email && /existing browser session/i.test(error.message)) {
+            const killed = this.killChromeUsingProfile(sessionService.getProfilePath(email));
+            console.log(`🧹 Tắt ${killed} tiến trình Chrome đang giữ profile [${email}] để mở lại`);
+            await new Promise(r => setTimeout(r, 1500));
+          }
           console.log(`   Retrying in 2 seconds...`);
           await new Promise(r => setTimeout(r, 2000));
         } else {
@@ -706,9 +825,10 @@ class BrowserService {
     });
   }
 
-  async createPage(browser) {
+  async createPage(browser, fingerprint = null) {
     const page = await browser.newPage();
-    // await this.applyAntiDetection(page);
+    // tab mới không kế thừa evaluateOnNewDocument → áp lại fingerprint
+    if (fingerprint) await fingerprintService.apply(page, fingerprint);
     return page;
   }
 

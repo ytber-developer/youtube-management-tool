@@ -20,7 +20,7 @@ npm run content -- build <id|date|all>
 - Kokoro writes `voice.txt` (the exact narration it read). When the script's narration no longer matches it, status shows the voice as stale ("Chờ lồng tiếng (cũ)") and `build` re-voices automatically. Edits to title/tags/anim don't trigger this. A voice without `voice.txt` (hand-made) is never re-voiced automatically.
 - Run long batches in the background; `build all` takes hours.
 
-The `/content` page is **read-only**: status table + a detail page per video with everything to post (video, thumbnail, title, description, tags, captions, post time, copy buttons). Every action runs from chat through `npm run content`.
+The `/content` page shows status (table + a detail page per video with everything to post: video, thumbnail, title, description, tags, captions, post time, copy buttons) and has one action: **auto-upload to YouTube** through the tool's own Chrome automation (see Daily routine). Build actions run from chat through `npm run content`.
 
 ## Single steps
 
@@ -68,8 +68,8 @@ ElevenLabs is optional: save the take as the video's `voice.mp3` (convert m4a/wa
 1. Open today's two videos on `/content`. If not built: `npm run content -- build <date>`.
 2. Watch `final.mp4`. Check every scene with the purple **AI** badge; reject → fix per source-visuals, rebuild.
 3. (Slide-style videos only) after looking at every slide, set `"imagesReviewed": true` in the video's `review.json`. Animated videos skip this step.
-4. Upload with title/description/tags copied from the detail page + `thumbnail.png` + `captions.srt`, scheduled 12:00 PM ET.
-5. Mark it posted: `npm run content -- uploaded <id> https://youtu.be/…` (`-` instead of the link un-marks it).
+4. Upload. Either automatic — on `/content` pick the YouTube account for each channel and press **Đăng N video sẵn sàng** (or **Đăng video này** on the detail page); the tool opens that account's Chrome profile, uploads final.mp4 with thumbnail, title, description, tags, "not made for kids", and schedules it public at the chosen time (detail page picker "Công khai lúc", default 12:00 PM ET of the post date; a past time publishes immediately). The upload starts as soon as you press the button; the bulk button queues the channel's ready videos back-to-back (one at a time, ~10 min each, each at its own default post time; YouTube limits new channels to roughly 10–15 uploads a day). Or manual — copy title/description/tags from the detail page + `thumbnail.png` + `captions.srt`.
+5. Automatic uploads mark the video posted by themselves (`review.json.uploadedUrl`). Manual ones: `npm run content -- uploaded <id> https://youtu.be/…` (`-` un-marks). If an upload shows "upload lỗi", the error text is on the detail page and a screenshot is in `uploads/error-*.png`; fix (usually login/2FA or the channel needs phone verification for custom thumbnails — thumbnails and tags are best-effort and never fail the upload) and press **Thử lại**. Captions are not uploaded automatically; add `captions.srt` in Studio if wanted. After the upload the account's Chrome window stays open on Studio (by request); the next upload reuses it.
 
 ## Troubleshooting
 

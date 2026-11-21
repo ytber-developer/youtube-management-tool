@@ -47,6 +47,11 @@ router.post('/:id/open-browser', accountsController.openBrowserWithProfile);
  */
 router.post('/:id/close-browser', accountsController.closeBrowser);
 
+/** @route GET  /api/v1/accounts/:id/fingerprint             Fingerprint cố định của profile (browser-profiles/<slug>/fingerprint.json) */
+router.get('/:id/fingerprint', accountsController.getFingerprint);
+/** @route POST /api/v1/accounts/:id/fingerprint/regenerate  Sinh fingerprint mới (đóng browser trước) */
+router.post('/:id/fingerprint/regenerate', accountsController.regenerateFingerprint);
+
 /**
  * @route   PUT /api/v1/accounts/:id/avatar-url
  * @desc    Update avatar URL for account

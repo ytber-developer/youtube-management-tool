@@ -124,7 +124,7 @@ async function cronTick() {
       return;
     }
 
-    await uploadVideo(video, account, campaign.options || {});
+    await uploadVideo(video, account, (campaign && campaign.options) || {});
 
     // If video belonged to a campaign, mark campaign done when no pending videos remain
     if (campaign) {
@@ -210,12 +210,16 @@ async function uploadVideo(video, account, options) {
         title: video.title,
         description: video.video_description,
         visibility: options.visibility || video.video_visibility || 'public',
-        scheduleDate: options.scheduleDate || video.schedule_date
+        scheduleDate: options.scheduleDate || video.schedule_date,
+        tags: video.tags,
+        thumbnailPath: video.thumbnail_path
       },
-      { closeBrowser: true }
+      // Video content: giữ Chrome mở sau khi upload (người dùng muốn xem/đăng tiếp); campaign thường: đóng như cũ
+      { closeBrowser: !video.content_id }
     );
 
-    if (options.deleteAfterUpload !== false) {
+    // Video content (content/<date>/<folder>/final.mp4) là file nguồn của pipeline → không bao giờ xoá
+    if (options.deleteAfterUpload !== false && !video.content_id) {
       _deleteFile(filePath);
     }
 
@@ -224,10 +228,14 @@ async function uploadVideo(video, account, options) {
         status: 'completed',
         video_url: uploadResult.data?.videoUrl,
         uploaded_at: new Date(),
-        local_file_path: null,
+        local_file_path: video.content_id ? filePath : null,
         error_message: null
       });
       console.log(`   ✅ Uploaded: ${uploadResult.data?.videoUrl}`);
+      if (video.content_id) {
+        // lazy require: content.upload.service require ngược lại module này
+        await require('./content.upload.service').onUploaded(video).catch(e => console.warn(`⚠️ [Content] ${e.message}`));
+      }
     } else {
       const errMsg = uploadResult.error || uploadResult.message;
       await video.update({ status: 'failed', error_message: errMsg });
@@ -235,7 +243,7 @@ async function uploadVideo(video, account, options) {
     }
 
   } catch (err) {
-    if (options.deleteAfterUpload !== false) {
+    if (options.deleteAfterUpload !== false && !video.content_id) {
       _deleteFile(filePath);
     }
     await video.update({ status: 'failed', error_message: err.message });
@@ -318,10 +326,15 @@ async function createUploadCampaign({ name, accountId, email, videos, options = 
   return campaign;
 }
 
+/** Chạy một tick ngay (sau khi vừa xếp video vào hàng đợi) thay vì đợi cron 2 phút */
+function triggerTick() {
+  setImmediate(() => cronTick().catch(e => console.error('❌ [UploadQueue] tick error:', e.message)));
+}
+
 function startUploadCron() {
   if (cronJob) return;
   cronJob = cron.schedule('*/2 * * * *', cronTick);
   console.log('✅ Upload queue cron started (every 2 minutes)');
 }
 
-module.exports = { startUploadCron, recoverStuckUploads, createUploadCampaign };
+module.exports = { startUploadCron, recoverStuckUploads, createUploadCampaign, triggerTick, toVNString, vnNow };

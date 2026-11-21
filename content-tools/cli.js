@@ -77,11 +77,8 @@ const COMMANDS = {
   async uploaded(id, dir) {
     const url = process.argv[4];
     if (!url) { console.error('Cần link: npm run content -- uploaded <id> https://youtu.be/…'); return false; }
-    if (url !== '-' && !/^https:\/\/(youtu\.be|(www\.)?youtube\.com)\//.test(url)) { console.error(`❌ Không phải link YouTube: ${url}`); return false; }
-    const file = path.join(dir, 'review.json');
-    const review = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8')) : {};
-    if (url === '-') delete review.uploadedUrl; else review.uploadedUrl = url;
-    fs.writeFileSync(file, JSON.stringify(review, null, 2) + '\n');
+    try { require('./lib/uploaded').markUploaded(dir, url); }
+    catch (e) { console.error(`❌ ${e.message}`); return false; }
     console.log(`✅ ${id}  ${url === '-' ? 'bỏ đánh dấu đã đăng' : `đã đăng: ${url}`}`);
     return true;
   },

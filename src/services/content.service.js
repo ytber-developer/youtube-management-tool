@@ -1,6 +1,6 @@
 /**
- * Content pipeline cho trang /content: chỉ đọc — danh sách video + trạng thái, và chi tiết để đăng YouTube.
- * Mọi thao tác (build, giọng, render, đánh dấu đã đăng) chạy qua `npm run content -- …` (AI gọi).
+ * Content pipeline cho trang /content: danh sách video + trạng thái, chi tiết để đăng YouTube, và trạng thái hàng đợi
+ * tự đăng (content.upload.service). Build/giọng/render vẫn chạy qua `npm run content -- …` (AI gọi).
  */
 const fs = require('fs');
 const path = require('path');
@@ -23,21 +23,28 @@ function summary(id) {
     thumbnail: fs.existsSync(thumb) ? Math.round(fs.statSync(thumb).mtimeMs) : null };
 }
 
-const list = () => paths.listVideoIds().map(summary);
+/** Danh sách + bản ghi hàng đợi tự đăng (`upload`, null nếu chưa xếp hàng) */
+async function list() {
+  const uploads = await require('./content.upload.service').statusMap();
+  return paths.listVideoIds().map(id => ({ ...summary(id), upload: uploads[id] || null }));
+}
 
 /** Mọi thứ cần để đăng YouTube: tiêu đề, mô tả nguyên khối, tags, giờ đăng, file (mtime để chống cache) */
-function detail(id) {
+async function detail(id) {
   const dir = paths.resolveVideoDir(id);
   const raw = readJson(path.join(dir, 'script.json'), {});
   const script = raw && typeof raw === 'object' ? raw : {};
   const credits = readJson(path.join(dir, 'credits.json'), []);
   const mtime = (f) => (fs.existsSync(path.join(dir, f)) ? Math.round(fs.statSync(path.join(dir, f)).mtimeMs) : null);
+  const uploads = await require('./content.upload.service').statusMap([id]);
   return {
     ...summary(id),
+    upload: uploads[id] || null,
     thumbnailText: script.thumbnail_text || '',
     description: pack.youtubeDescription(script, Array.isArray(credits) ? credits : []),
     tags: Array.isArray(script.tags) ? script.tags : [],
     postTime: pack.postTime(paths.parseId(id).date),
+    postAt: require('./content.upload.service').postInstant(paths.parseId(id).date).toISOString(),
     files: Object.fromEntries(FILES.map(f => [f, mtime(f)])),
   };
 }

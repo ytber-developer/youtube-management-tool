@@ -262,8 +262,25 @@ export const watchAPI = {
   },
 };
 
+/** Fingerprint trình duyệt cố định của một profile */
+export interface AccountFingerprint {
+  email: string;
+  summary: string;
+  createdAt: string;
+  screen: { width: number; height: number; pixelRatio: number };
+  window: { width: number; height: number };
+  hardwareConcurrency: number;
+  deviceMemory: number;
+  webgl: { vendor: string; renderer: string };
+  languages: string[];
+  timezone: string | null;
+}
+
 // Accounts API
 export const accountsAPI = {
+  getFingerprint: (id: number): Promise<{ success: boolean; data: AccountFingerprint }> => request(API_ENDPOINTS.ACCOUNTS.FINGERPRINT(id)),
+  regenerateFingerprint: (id: number): Promise<{ success: boolean; message: string; data: AccountFingerprint }> =>
+    request(API_ENDPOINTS.ACCOUNTS.FINGERPRINT_REGENERATE(id), { method: 'POST' }),
   // Get accounts with pagination and search
   getAccounts: (params?: { 
     page?: number; 
@@ -707,6 +724,21 @@ export interface ContentStatus {
   uploadedUrl: string | null;
 }
 
+/** Bản ghi hàng đợi tự đăng YouTube của một video content (null = chưa xếp hàng) */
+export interface ContentUpload {
+  id: number;
+  status: 'pending' | 'downloading' | 'downloaded' | 'uploading' | 'completed' | 'failed' | 'skipped';
+  email: string;
+  error: string | null;
+  videoUrl: string | null;
+  /** giờ công khai trên YouTube (ISO), null = đăng ngay */
+  scheduleDate: string | null;
+  /** khi nào hàng đợi bắt đầu upload (ISO), null = ngay khi tới lượt */
+  scheduledStartAt: string | null;
+  uploadedAt: string | null;
+  attempts: number;
+}
+
 export interface ContentVideo {
   id: string;
   date: string;
@@ -717,6 +749,7 @@ export interface ContentVideo {
   status: ContentStatus;
   /** mtime của thumbnail.png, null nếu chưa có */
   thumbnail: number | null;
+  upload: ContentUpload | null;
 }
 
 export type ContentFile = 'thumbnail.png' | 'final.mp4' | 'captions.srt';
@@ -726,6 +759,8 @@ export interface ContentDetail extends ContentVideo {
   description: string;
   tags: string[];
   postTime: { et: string; vn: string };
+  /** giờ công khai mặc định (12:00 PM ET ngày đăng) dạng ISO */
+  postAt: string;
   files: Record<ContentFile, number | null>;
 }
 
@@ -734,11 +769,62 @@ export const contentAPI = {
   detail: (id: string): Promise<{ success: boolean; data: ContentDetail }> => request(API_ENDPOINTS.CONTENT.DETAIL(id)),
   /** URL file của video; v = mtime để trình duyệt không dùng bản cũ */
   fileUrl: (id: string, file: ContentFile, v?: number | null) => buildApiUrl(API_ENDPOINTS.CONTENT.FILE(id, file)) + (v ? `?v=${v}` : ''),
+  /** Xếp video vào hàng đợi tự đăng (upload bắt đầu ngay); scheduleAt = giờ công khai (ISO), bỏ trống = 12:00 PM ET ngày đăng */
+  queueUpload: (ids: string[], accountId: number, scheduleAt?: string | null):
+    Promise<{ success: boolean; message: string; data: { queued: ContentUpload[]; skipped: { id: string; reason: string }[] } }> =>
+    request(API_ENDPOINTS.CONTENT.UPLOAD, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ids, accountId, scheduleAt: scheduleAt || null }) }),
+  cancelUpload: (id: string): Promise<{ success: boolean; message: string }> =>
+    request(API_ENDPOINTS.CONTENT.UPLOAD_CANCEL(id), { method: 'DELETE' }),
+};
+
+// ── Page Facebook (/fb-page) — bài đăng đọc từ content-vi/ ───────────────────
+export type FbPostStage = 'planned' | 'written' | 'checked' | 'ready' | 'posted';
+
+export interface FbPost {
+  /** <date>/<slug>; null = mới có trong lịch, chưa viết */
+  id: string | null;
+  date: string;
+  title: string;
+  area: string;
+  format: 'reels' | 'photo';
+  hook: string;
+  hashtags: string[];
+  factChecked: boolean;
+  note: string;
+  posted: { url: string | null; at: string | null } | null;
+  video: { mtime: number; size: number } | null;
+  stage: FbPostStage;
+  /** hướng nội dung trong lịch (chỉ có khi lấy từ calendar.md) */
+  answer?: string;
+}
+
+export interface FbPostDetail extends FbPost {
+  script: string;
+  narration: string;
+  caption: string;
+  sources: string;
+  imageSources: string;
+}
+
+export interface FbPostPatch {
+  factChecked?: boolean;
+  postedUrl?: string | null;
+  postedAt?: string | null;
+  note?: string;
+}
+
+export const fbPageAPI = {
+  list: (): Promise<{ success: boolean; data: FbPost[] }> => request(API_ENDPOINTS.FBPAGE.POSTS),
+  detail: (id: string): Promise<{ success: boolean; data: FbPostDetail }> => request(API_ENDPOINTS.FBPAGE.POST(id)),
+  update: (id: string, patch: FbPostPatch): Promise<{ success: boolean; message: string; data: FbPostDetail }> =>
+    request(API_ENDPOINTS.FBPAGE.POST(id), { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(patch) }),
+  videoUrl: (id: string, v?: number | null) => buildApiUrl(API_ENDPOINTS.FBPAGE.VIDEO(id)) + (v ? `?v=${v}` : ''),
 };
 
 // Export a combined API object
 export const api = {
   content: contentAPI,
+  fbPage: fbPageAPI,
   proxy: proxyAPI,
   watch: watchAPI,
   accounts: accountsAPI,

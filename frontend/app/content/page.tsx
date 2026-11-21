@@ -1,13 +1,14 @@
 'use client';
 
-// Trang /content chỉ hiển thị trạng thái. Mọi thao tác (viết kịch bản, build, giọng, đánh dấu đã đăng)
-// chạy qua chat AI → `npm run content -- …`; trang tự cập nhật theo file trên đĩa.
+// Trang /content: trạng thái từng video (tự cập nhật theo file trên đĩa) + tự đăng YouTube các video đã sẵn sàng.
+// Viết kịch bản, build, giọng vẫn chạy qua chat AI → `npm run content -- …`.
 // Bố cục: mỗi hàng là một ngày đăng, mỗi cột là một kênh.
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
-import { Film, Loader2, ExternalLink, ImageOff } from 'lucide-react';
+import { Film, Loader2, ExternalLink, ImageOff, Upload } from 'lucide-react';
 import { contentAPI, ContentVideo } from '@/lib/api';
 import { CHANNEL, DOT, DOT_TEXT, StepDots, StageBadge, ChannelBadge, fmtDuration, fmtDate } from '@/components/ContentStatus';
+import { useAccounts, useChannelAccount, AccountSelect, UploadBadge, canQueue } from '@/components/ContentUpload';
 
 const REFRESH_MS = 15000;
 const CHANNELS = Object.keys(CHANNEL);
@@ -28,7 +29,7 @@ function VideoCard({ v }: { v: ContentVideo }) {
         {v.status.errors.length > 0 && <div className="text-xs text-red-600 line-clamp-2">{v.status.errors.slice(0, 2).join(' · ')}{v.status.errors.length > 2 ? ` (+${v.status.errors.length - 2})` : ''}</div>}
         {v.status.missingScenes.length > 0 && <div className="text-xs text-red-600">thiếu ảnh cảnh {v.status.missingScenes.join(', ')}</div>}
         <div className="mt-auto flex flex-wrap items-center justify-between gap-2">
-          <StageBadge status={v.status} />
+          <span className="flex items-center gap-1.5"><StageBadge status={v.status} /><UploadBadge upload={v.upload} /></span>
           <div className="flex items-center gap-2">
             {v.status.uploadedUrl && <ExternalLink className="w-3.5 h-3.5 text-blue-600" aria-label="đã có link YouTube" />}
             <StepDots status={v.status} />
@@ -39,7 +40,60 @@ function VideoCard({ v }: { v: ContentVideo }) {
   );
 }
 
+/** Một kênh trong bảng "Tự đăng": chọn tài khoản + nút xếp mọi video sẵn sàng của kênh vào hàng đợi */
+function ChannelUploader({ channel, videos, accounts, onQueued }: {
+  channel: string; videos: ContentVideo[]; accounts: { id: number; email: string; channelName?: string }[]; onQueued: () => void;
+}) {
+  const [accountId, setAccountId] = useChannelAccount(channel);
+  const [confirm, setConfirm] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [msg, setMsg] = useState('');
+  const ready = videos.filter(v => canQueue(v.status.stageKey, v.upload));
+  const queued = videos.filter(v => v.upload && ['pending', 'uploading', 'downloading', 'downloaded'].includes(v.upload.status)).length;
+  const account = accounts.find(a => a.id === accountId);
+
+  const run = async () => {
+    if (!accountId || !ready.length) return;
+    setBusy(true); setMsg('');
+    try {
+      const r = await contentAPI.queueUpload(ready.map(v => v.id), accountId);
+      const skipped = r.data.skipped.length ? ` · bỏ qua ${r.data.skipped.length}: ${r.data.skipped.slice(0, 3).map(x => x.reason).join('; ')}` : '';
+      setMsg(`${r.message}${skipped}`);
+      onQueued();
+    } catch (e: any) { setMsg(e.message || 'Lỗi'); }
+    finally { setBusy(false); setConfirm(false); }
+  };
+
+  return (
+    <div className="flex flex-col gap-2 min-w-0">
+      <div className="flex flex-wrap items-center gap-2">
+        <ChannelBadge channel={channel} />
+        <AccountSelect accounts={accounts} value={accountId} onChange={setAccountId} className="flex-1 min-w-[200px]" />
+      </div>
+      <div className="flex flex-wrap items-center gap-2 text-xs text-gray-600">
+        {!confirm ? (
+          <button onClick={() => setConfirm(true)} disabled={!accountId || !ready.length || busy}
+            className="inline-flex items-center gap-1 px-3 py-1.5 rounded bg-blue-600 text-white text-sm font-medium disabled:opacity-40 hover:bg-blue-700">
+            <Upload className="w-4 h-4" />Đăng {ready.length} video sẵn sàng
+          </button>
+        ) : (
+          <span className="inline-flex flex-wrap items-center gap-2">
+            <span className="text-gray-800">Upload <b>{ready.length}</b> video bằng <b>{account?.email}</b>, mỗi video công khai 12:00 PM ET ngày đăng của nó?</span>
+            <button onClick={run} disabled={busy} className="px-3 py-1 rounded bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 disabled:opacity-40">
+              {busy ? <Loader2 className="w-4 h-4 animate-spin inline" /> : 'Đăng'}
+            </button>
+            <button onClick={() => setConfirm(false)} disabled={busy} className="px-3 py-1 rounded border text-sm bg-white hover:bg-gray-50">Huỷ</button>
+          </span>
+        )}
+        {queued > 0 && <span>{queued} đang trong hàng đợi</span>}
+      </div>
+      {msg && <div className="text-xs text-gray-700">{msg}</div>}
+    </div>
+  );
+}
+
 export default function ContentStatusPage() {
+  const { accounts, error: accErr } = useAccounts();
   const [videos, setVideos] = useState<ContentVideo[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -111,6 +165,21 @@ export default function ContentStatusPage() {
       </div>
 
       {error && <div className="p-3 rounded border border-red-200 bg-red-50 text-red-800 text-sm">{error}</div>}
+
+      {/* Tự đăng YouTube: tool mở Chrome của tài khoản, upload final.mp4 + thumbnail + tiêu đề/mô tả/tags, hẹn giờ công khai 12:00 PM ET */}
+      <section className="bg-white border rounded-lg p-4 space-y-3">
+        <h2 className="font-semibold text-sm text-gray-800 flex items-center gap-2"><Upload className="w-4 h-4 text-blue-600" />Tự đăng YouTube</h2>
+        <p className="text-xs text-gray-500">
+          Bấm Đăng → tool mở Chrome của tài khoản và upload ngay, từng video một, hẹn công khai 12:00 PM ET ngày đăng. Muốn chọn giờ khác thì vào trang chi tiết video.
+          Upload xong tự ghi link vào video. Tài khoản phải đã đăng nhập và có kênh.
+        </p>
+        {accErr && <div className="text-xs text-red-600">{accErr}</div>}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {CHANNELS.map(ch => (
+            <ChannelUploader key={ch} channel={ch} videos={videos.filter(v => v.channel === ch)} accounts={accounts} onQueued={load} />
+          ))}
+        </div>
+      </section>
 
       {/* Tiêu đề cột kênh (ẩn trên màn hình hẹp, khi đó mỗi thẻ có nhãn kênh riêng) */}
       <div className="hidden md:grid grid-cols-[96px_1fr_1fr] gap-3 sticky top-0 z-10 bg-gray-50/95 backdrop-blur py-2 border-b">

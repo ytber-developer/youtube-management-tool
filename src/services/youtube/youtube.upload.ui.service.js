@@ -1,4 +1,5 @@
 const path = require('path');
+const { pause, humanClick } = require('../../helpers/human.helper');
 
 /**
  * Service xử lý các tương tác UI trong quá trình upload YouTube
@@ -98,29 +99,23 @@ class YoutubeUploadUiService {
       // ignore
     }
 
-    // Try navigating to Studio root (not /upload) and then open upload via UI
-    try {
-      await page.goto('https://studio.youtube.com', { waitUntil: 'networkidle2', timeout: 15000 });
-      // Give UI a moment to stabilize
-      await page.waitForTimeout(2000);
-
-      // If the file input is already present on the Studio page, return early
-      const fileInputHandle = await page.$('input[type="file"]');
-      if (fileInputHandle) {
-        console.log('✅ Studio page loaded and file input is present');
-        return;
+    // Chỉ tải Studio nếu đang ở trang khác (orchestrator đã vào Studio rồi → không reload thêm lần nào)
+    if (!/studio\.youtube\.com/.test(page.url() || '')) {
+      try {
+        await page.goto('https://studio.youtube.com', { waitUntil: 'networkidle2', timeout: 30000 });
+        await pause(1500, 3000);
+      } catch (err) {
+        console.log('⚠️ Navigation to Studio root failed, falling back to click flow:', err.message);
       }
-
-      // Otherwise continue to click flow below to open the upload dialog
-    } catch (err) {
-      console.log('⚠️ Navigation to Studio root failed, falling back to click flow:', err.message);
-      // fallthrough to original click flow
+    }
+    // Dialog upload đã mở sẵn (vd Studio nhớ trạng thái) → không cần bấm gì
+    if (await page.$('ytcp-uploads-dialog input[type="file"]')) {
+      console.log('✅ Dialog upload đã mở sẵn');
+      return;
     }
 
-    console.log('🔍 Đang tìm nút Create/Upload (fallback click flow)...');
-
-    // Đợi trang load hoàn toàn
-    await new Promise(r => setTimeout(r, 3000));
+    console.log('🔍 Đang tìm nút Create/Upload...');
+    await pause(800, 1800);
 
     // Phương pháp 1: Tìm nút Create bằng nhiều selector
     const createButtonSelectors = [
@@ -137,13 +132,13 @@ class YoutubeUploadUiService {
 
     let clicked = false;
 
-    // Thử click bằng selector
+    // Thử click bằng selector (đưa chuột tới nút rồi bấm, như người thật)
     for (const selector of createButtonSelectors) {
       try {
         const element = await page.$(selector);
         if (element) {
           console.log(`   Tìm thấy nút với selector: ${selector}`);
-          await element.click();
+          if (!(await humanClick(page, element))) await element.click();
           clicked = true;
           console.log('✅ Đã click nút Create');
           break;
@@ -182,7 +177,7 @@ class YoutubeUploadUiService {
     }
 
     // Đợi để xem YouTube mở gì (dialog hoặc menu)
-    await new Promise(r => setTimeout(r, 2000));
+    await pause(1500, 2500);
 
     console.log('🔍 Kiểm tra xem dialog upload đã mở chưa...');
 
@@ -229,7 +224,7 @@ class YoutubeUploadUiService {
         if (element) {
           const text = await page.evaluate(el => el.textContent, element);
           console.log(`   Tìm thấy menu item: "${(text || '').trim()}"`);
-          await element.click();
+          if (!(await humanClick(page, element))) await element.click();
           uploadClicked = true;
           break;
         }

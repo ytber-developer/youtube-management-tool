@@ -721,3 +721,31 @@ exports.deleteAccount = async (req, res) => {
     return res.status(500).json({ success: false, message: 'Failed to delete account', error: error.message });
   }
 };
+
+/** GET /accounts/:id/fingerprint — fingerprint cố định của profile (sinh nếu chưa có) */
+exports.getFingerprint = async (req, res) => {
+  try {
+    const account = await AccountYoutube.findByPk(req.params.id);
+    if (!account) return res.status(404).json({ success: false, message: 'Không tìm thấy tài khoản' });
+    const fingerprintService = require('../services/fingerprint.service');
+    const proxyService = require('../services/proxy.service');
+    const proxy = await proxyService.getProxyForEmail(account.email).catch(() => null);
+    const fp = fingerprintService.withProxy(fingerprintService.getOrCreate(account.email), proxy);
+    res.json({ success: true, data: { ...fp, summary: fingerprintService.describe(fp), email: account.email } });
+  } catch (e) { res.status(500).json({ success: false, message: e.message }); }
+};
+
+/** POST /accounts/:id/fingerprint/regenerate — sinh fingerprint mới (chỉ khi tài khoản bị đánh dấu; phải đóng browser trước) */
+exports.regenerateFingerprint = async (req, res) => {
+  try {
+    const account = await AccountYoutube.findByPk(req.params.id);
+    if (!account) return res.status(404).json({ success: false, message: 'Không tìm thấy tài khoản' });
+    const browserService = require('../services/browser.service');
+    if (await browserService.isBrowserActive(account.email)) {
+      return res.status(409).json({ success: false, message: 'Đóng trình duyệt của tài khoản này trước khi đổi fingerprint' });
+    }
+    const fingerprintService = require('../services/fingerprint.service');
+    const fp = fingerprintService.regenerate(account.email);
+    res.json({ success: true, message: 'Đã sinh fingerprint mới', data: { ...fp, summary: fingerprintService.describe(fp), email: account.email } });
+  } catch (e) { res.status(500).json({ success: false, message: e.message }); }
+};
